@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Таро · Справочник значений карт</title>
+<meta name="description" content="Справочник трактовок всех 78 карт Таро (колода Уэйта): прямые и перевёрнутые значения, любовь, карьера, здоровье, эзотерика.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E✦%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <h1 class="site-title"><span class="title-star">✦</span> Таро <span class="title-sub">справочник значений</span></h1>
+    <p class="site-tagline">78 карт колоды Уэйта · прямое и перевёрнутое положения</p>
+    <div class="search-wrap">
+      <input type="search" id="search" placeholder="Поиск: название или ключевое слово…" autocomplete="off">
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Фильтр по мастям">
+  <div class="tabs-inner" id="tabs">
+    <button class="tab active" data-suit="major">
+      <span class="tab-icon">✧</span> Старшие арканы
+    </button>
+    <button class="tab" data-suit="wands">
+      <span class="tab-icon">🪄</span> Жезлы
+    </button>
+    <button class="tab" data-suit="cups">
+      <span class="tab-icon">🏆</span> Кубки
+    </button>
+    <button class="tab" data-suit="swords">
+      <span class="tab-icon">⚔</span> Мечи
+    </button>
+    <button class="tab" data-suit="pentacles">
+      <span class="tab-icon">🪙</span> Пентакли
+    </button>
+  </div>
+</nav>
+
+<main class="deck-wrap">
+  <div class="deck" id="deck"><!-- карточки рендерятся скриптом --></div>
+  <p class="empty-msg" id="emptyMsg" hidden>Ничего не найдено. Попробуйте другое слово.</p>
+</main>
+
+<footer class="site-footer">
+  <p>Справочник значений карт Таро · колода Universal Waite</p>
+  <p class="footer-note">Материалы носят справочный и развлекательный характер</p>
+</footer>
+
+<!-- Модальное окно карты -->
+<div class="modal-backdrop" id="modal" aria-hidden="true">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <button class="modal-close" id="modalClose" aria-label="Закрыть">✕</button>
+
+    <div class="modal-head">
+      <div class="card-scene">
+        <img id="mImg" src="" alt="" draggable="false">
+      </div>
+      <div class="head-info">
+        <p class="m-arcana" id="mArcana"></p>
+        <h2 class="m-title" id="mTitle"></h2>
+        <p class="m-en" id="mEn"></p>
+        <p class="m-meta" id="mMeta"></p>
+      </div>
+    </div>
+
+    <div class="pos-tabs" id="posTabs">
+      <button class="pos-tab active" data-pos="upright">Прямое</button>
+      <button class="pos-tab" data-pos="reversed">Перевёрнутое</button>
+      <button class="pos-tab pos-tab-school" data-pos="roman">✦ Школа Пана Романа</button>
+    </div>
+
+    <div class="m-content" id="mContent"><!-- контент рендерится скриптом --></div>
+  </div>
+</div>
+
+<script src="js/data.js?v=3"></script>
+<script src="js/data_roman.js?v=3"></script>
+<script src="js/app.js?v=3"></script>
+</body>
+</html>

@@ -1,0 +1,557 @@
+/* ═══════════════ Таро · Справочник значений ═══════════════ */
+
+:root {
+  --bg-deep: #0d0a1a;
+  --bg-panel: #17122b;
+  --bg-card: #1e1836;
+  --bg-hover: #262046;
+  --gold: #d4af37;
+  --gold-bright: #f0cf6e;
+  --gold-dim: rgba(212, 175, 55, .35);
+  --text: #e8e2f2;
+  --text-dim: #9c92b8;
+  --accent-purple: #7c5cbf;
+  --shadow: 0 8px 32px rgba(0, 0, 0, .45);
+  --radius: 14px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: radial-gradient(ellipse at 50% -20%, #241b45 0%, var(--bg-deep) 55%);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ─── Звёздное небо ─── */
+.stars, .stars2 {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: .55;
+}
+.stars {
+  background-image:
+    radial-gradient(1.4px 1.4px at 12% 22%, #fff8 50%, transparent 51%),
+    radial-gradient(1px 1px at 34% 68%, #ffd97a99 50%, transparent 51%),
+    radial-gradient(1.2px 1.2px at 56% 12%, #fff7 50%, transparent 51%),
+    radial-gradient(.8px .8px at 71% 44%, #fff6 50%, transparent 51%),
+    radial-gradient(1.3px 1.3px at 83% 76%, #ffe9b066 50%, transparent 51%),
+    radial-gradient(1px 1px at 22% 84%, #fff5 50%, transparent 51%),
+    radial-gradient(1.1px 1.1px at 92% 28%, #fff7 50%, transparent 51%),
+    radial-gradient(.9px .9px at 45% 38%, #ffd97a66 50%, transparent 51%),
+    radial-gradient(1.2px 1.2px at 64% 90%, #fff6 50%, transparent 51%),
+    radial-gradient(1px 1px at 8% 52%, #fff5 50%, transparent 51%);
+}
+.stars2 {
+  animation: twinkle 7s ease-in-out infinite alternate;
+  opacity: .35;
+}
+@keyframes twinkle { from { opacity: .18; } to { opacity: .5; } }
+
+/* ─── Шапка ─── */
+.site-header {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 48px 16px 28px;
+  background: linear-gradient(180deg, rgba(124, 92, 191, .12), transparent);
+}
+.header-inner { max-width: 900px; margin: 0 auto; }
+
+.site-title {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-weight: 700;
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  letter-spacing: .06em;
+  color: var(--gold-bright);
+  text-shadow: 0 0 24px rgba(212, 175, 55, .35), 0 2px 8px rgba(0, 0, 0, .6);
+}
+.title-star { display: inline-block; animation: pulse-star 3.5s ease-in-out infinite; }
+@keyframes pulse-star {
+  0%, 100% { transform: scale(1); opacity: .85; }
+  50% { transform: scale(1.18); opacity: 1; }
+}
+.title-sub {
+  display: block;
+  font-size: clamp(.85rem, 2.4vw, 1.05rem);
+  font-weight: 500;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-top: 6px;
+}
+.site-tagline {
+  color: var(--text-dim);
+  font-size: .95rem;
+  margin-top: 10px;
+}
+
+.search-wrap { max-width: 520px; margin: 22px auto 0; }
+#search {
+  width: 100%;
+  padding: 13px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--gold-dim);
+  background: rgba(23, 18, 43, .85);
+  color: var(--text);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color .25s, box-shadow .25s;
+}
+#search::placeholder { color: var(--text-dim); }
+#search:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, .15), 0 0 18px rgba(212, 175, 55, .12);
+}
+
+/* ─── Вкладки мастей ─── */
+.tabs {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(12px);
+  background: rgba(13, 10, 26, .82);
+  border-bottom: 1px solid rgba(212, 175, 55, .15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .35);
+}
+.tabs-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 6px;
+  padding: 10px 12px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tabs-inner::-webkit-scrollbar { display: none; }
+
+.tab {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-dim);
+  font-size: .95rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all .25s;
+}
+.tab:hover { color: var(--text); background: rgba(255, 255, 255, .05); }
+.tab.active {
+  color: var(--gold-bright);
+  border-color: var(--gold-dim);
+  background: linear-gradient(135deg, rgba(212, 175, 55, .14), rgba(124, 92, 191, .14));
+  box-shadow: inset 0 0 14px rgba(212, 175, 55, .08);
+}
+.tab-icon { font-size: 1rem; }
+
+/* ─── Сетка карт ─── */
+.deck-wrap { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 30px 16px 60px; }
+
+.deck {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 18px;
+}
+
+.card-tile {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--bg-card);
+  border: 1px solid rgba(212, 175, 55, .18);
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  animation: rise .5s ease both;
+}
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+.card-tile:hover, .card-tile:focus-visible {
+  transform: translateY(-6px) scale(1.02);
+  border-color: var(--gold);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .5), 0 0 22px rgba(212, 175, 55, .18);
+  outline: none;
+}
+.card-tile img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 400 / 640;
+  object-fit: cover;
+}
+.tile-name {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 22px 10px 10px;
+  background: linear-gradient(transparent, rgba(10, 7, 20, .94));
+  text-align: center;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  font-size: 1.06rem;
+  letter-spacing: .03em;
+  color: var(--gold-bright);
+}
+.tile-num {
+  position: absolute;
+  top: 8px; left: 8px;
+  min-width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: rgba(10, 7, 20, .78);
+  border: 1px solid var(--gold-dim);
+  color: var(--gold);
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.empty-msg { text-align: center; color: var(--text-dim); padding: 40px 0; }
+
+/* ─── Модальное окно ─── */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 24px 14px;
+  background: rgba(5, 3, 12, .82);
+  backdrop-filter: blur(6px);
+  overflow-y: auto;
+}
+.modal-backdrop.open { display: flex; animation: fade .25s ease; }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+
+.modal-card {
+  position: relative;
+  width: min(760px, 100%);
+  background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212, 175, 55, .28);
+  border-radius: 20px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124, 92, 191, .15);
+  padding: 26px 22px 30px;
+  animation: slide-up .35s cubic-bezier(.2, .9, .3, 1.2);
+}
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(36px); }
+  to { opacity: 1; transform: none; }
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px; right: 14px;
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--gold-dim);
+  background: rgba(13, 10, 26, .8);
+  color: var(--text-dim);
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all .25s;
+  z-index: 5;
+}
+.modal-close:hover { color: var(--gold-bright); border-color: var(--gold); transform: rotate(90deg); }
+
+/* Шапка модалки */
+.modal-head {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Карта в шапке модалки */
+.card-scene { flex-shrink: 0; }
+.card-scene img {
+  width: 132px;
+  aspect-ratio: 400 / 640;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid var(--gold-dim);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, .55);
+  transition: transform .45s cubic-bezier(.35, .9, .3, 1);
+}
+/* Перевёрнутое положение — крутим само изображение */
+.card-scene img.reversed { transform: rotate(180deg); }
+
+.head-info { min-width: 0; }
+.m-arcana {
+  font-size: .8rem;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--accent-purple);
+  margin-bottom: 4px;
+}
+.m-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem);
+  color: var(--gold-bright);
+  line-height: 1.15;
+}
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+
+/* Вкладки положений */
+.pos-tabs {
+  display: flex;
+  gap: 6px;
+  border-bottom: 1px solid rgba(212, 175, 55, .18);
+  margin-bottom: 18px;
+}
+.pos-tab {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-dim);
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all .25s;
+}
+.pos-tab:hover { color: var(--text); }
+.pos-tab.active {
+  color: var(--gold-bright);
+  border-bottom-color: var(--gold);
+  text-shadow: 0 0 12px rgba(212, 175, 55, .4);
+}
+
+/* ─── Школа Пана Романа ─── */
+.pos-tab-school { margin-left: auto; color: var(--accent-purple); font-weight: 600; }
+.pos-tab-school:hover { color: #cdbef0; }
+.pos-tab-school.active {
+  color: #cdbef0;
+  border-bottom-color: var(--accent-purple);
+  text-shadow: 0 0 12px rgba(124, 92, 191, .55);
+}
+
+.roman-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: #cdbef0;
+  margin: 22px 0 4px;
+}
+.roman-subtitle::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(124, 92, 191, .45), transparent);
+}
+.roman-content .info-section h3 {
+  color: #b7a5e8;
+  font-size: 1.08rem;
+}
+.roman-note { color: var(--text-dim); font-size: .9rem; }
+
+.roman-details {
+  border: 1px solid rgba(124, 92, 191, .3);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: rgba(124, 92, 191, .07);
+  overflow: hidden;
+}
+.roman-details summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.12rem;
+  font-weight: 600;
+  letter-spacing: .03em;
+  color: #cdbef0;
+  user-select: none;
+  transition: background .2s;
+}
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after {
+  content: '▾';
+  margin-left: auto;
+  color: var(--accent-purple);
+  transition: transform .25s;
+  flex-shrink: 0;
+}
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124, 92, 191, .12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body {
+  padding: 4px 16px 14px;
+  border-top: 1px solid rgba(124, 92, 191, .18);
+  animation: rd-fade .25s ease;
+}
+@keyframes rd-fade { from { opacity: 0; } to { opacity: 1; } }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+
+/* Астроблок школы Романа */
+.roman-astro {
+  margin: 14px 0 4px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(124, 92, 191, .3);
+  background: rgba(124, 92, 191, .1);
+  font-size: .9rem;
+  color: var(--text);
+  line-height: 1.55;
+}
+.ra-label {
+  display: block;
+  font-size: .72rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--accent-purple);
+  margin-bottom: 3px;
+}
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic {
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px dashed rgba(124, 92, 191, .3);
+  font-size: .82rem;
+  color: var(--text-dim);
+}
+
+/* Секция контента */
+.pos-content { animation: fade .3s ease; }
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.kw {
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: rgba(124, 92, 191, .16);
+  border: 1px solid rgba(124, 92, 191, .4);
+  color: #cdbef0;
+  font-size: .85rem;
+}
+.short-value {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.18rem;
+  font-style: italic;
+  color: var(--gold-bright);
+  padding: 12px 18px;
+  border-left: 3px solid var(--gold);
+  background: rgba(212, 175, 55, .06);
+  border-radius: 0 10px 10px 0;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.info-section { margin-bottom: 20px; }
+.info-section h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.22rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--gold);
+  margin-bottom: 7px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.info-section h3::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold-dim), transparent);
+}
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+
+/* ─── Подвал ─── */
+.site-footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 26px 16px 34px;
+  color: var(--text-dim);
+  font-size: .88rem;
+  border-top: 1px solid rgba(212, 175, 55, .1);
+}
+.footer-note { opacity: .65; font-size: .8rem; margin-top: 4px; }
+
+/* ─── Адаптив: мобильные устройства ─── */
+@media (max-width: 640px) {
+  body { line-height: 1.55; }
+
+  /* Шапка компактнее */
+  .site-header { padding: 26px 12px 18px; }
+  .site-tagline { font-size: .85rem; }
+  .search-wrap { margin-top: 16px; }
+
+  /* Поиск: 16px чтобы iOS не зумил при фокусе, крупные тач-зоны */
+  #search {
+    font-size: 16px;
+    padding: 11px 16px;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .tab { padding: 9px 15px; font-size: .88rem; -webkit-tap-highlight-color: transparent; }
+
+  /* Сетка: карты крупнее, 3 в ряд на типичном телефоне */
+  .deck-wrap { padding: 18px 10px 44px; }
+  .deck { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 10px; }
+  .tile-name { font-size: .84rem; padding: 14px 6px 7px; }
+  .tile-num { min-width: 22px; height: 22px; font-size: .72rem; top: 5px; left: 5px; }
+  .card-tile:hover, .card-tile:focus-visible { transform: none; } /* нет hover на таче */
+
+  /* Модалка: во весь экран, скролл тела модалки */
+  .modal-backdrop { padding: 0; align-items: stretch; }
+  .modal-card {
+    width: 100%;
+    max-width: none;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid rgba(212, 175, 55, .28);
+    padding: 54px 14px 30px;
+    animation: slide-up .3s cubic-bezier(.2, .9, .3, 1.1);
+  }
+  .modal-close { top: 8px; right: 8px; width: 40px; height: 40px; background: rgba(13, 10, 26, .92); }
+
+  /* Шапка модалки: карта слева, текст справа (перенос вниз на узких) */
+  .modal-head { flex-wrap: wrap; gap: 14px; margin-bottom: 14px; }
+  .card-scene img { width: 96px; }
+  .m-title { font-size: 1.45rem; }
+  .m-en { font-size: .85rem; }
+  .m-meta { font-size: .82rem; }
+
+  .pos-tab { flex: 1; text-align: center; padding: 11px 8px; font-size: .95rem; }
+  .pos-tab-school { flex: 0 0 auto; margin-left: 0; }
+  .info-section p { font-size: .93rem; }
+  .rd-body p { font-size: .9rem; }
+}
+
+/* Совсем узкие экраны (<360px): карта модалки переезжает вверх */
+@media (max-width: 360px) {
+  .modal-head { justify-content: center; text-align: center; }
+  .card-scene img { width: 110px; }
+  .head-info { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

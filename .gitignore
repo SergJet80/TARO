@@ -1,0 +1,12 @@
+# служебное
+.DS_Store
+Thumbs.db
+
+# сырые транскрипты лекций (исходники конвейера, тяжёлые; SUMMARY.md остаются в репо)
+research/panroman/**/*.txt
+
+# временные файлы
+*.pyc
+__pycache__/
+.venv/
+venv/

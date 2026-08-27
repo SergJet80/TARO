@@ -1,0 +1,228 @@
+{
+ "major": [
+  {
+   "id": "QKZOysKhGb0",
+   "title": "0. THE JESTER | Major Arcana Meanings | Pan Roman Tarot School 2020",
+   "n": 0,
+   "slug": "fool"
+  },
+  {
+   "id": "oQrAytQ_VMo",
+   "title": "1. THE MAGICIAN | Major Arcana Meanings | Roman’s Tarot School 2021",
+   "n": 1,
+   "slug": "magician"
+  },
+  {
+   "id": "hPU_kpuPdiw",
+   "title": "2. ВЫСШАЯ ЖРИЦА | Значения Старших арканов | Школа Таро пана Романа 2021",
+   "n": 2,
+   "slug": "priestess"
+  },
+  {
+   "id": "LKyD96-BYgQ",
+   "title": "3. ИМПЕРАТРИЦА | Значения Старших арканов | Школа Таро пана Романа 2021",
+   "n": 3,
+   "slug": "empress"
+  },
+  {
+   "id": "Cc7SBlkoqLs",
+   "title": "4. ИМПЕРАТОР | Значения Старших арканов | Школа Таро пана Романа 2021",
+   "n": 4,
+   "slug": "emperor"
+  },
+  {
+   "id": "gL3N3e30TjY",
+   "title": "5. The Hierophant | Major Arcana Meanings | Sir Roman's Tarot School 2021",
+   "n": 5,
+   "slug": "hierophant"
+  },
+  {
+   "id": "IuINWdgr4B4",
+   "title": "6. ВЛЮБЛЕННЫЕ | Значения Старших арканов | Школа Таро пана Романа 2021",
+   "n": 6,
+   "slug": "lovers"
+  },
+  {
+   "id": "awMzjGBya-k",
+   "title": "7. Колесница | Значения Старших арканов | Школа Таро пана Романа 2021",
+   "n": 7,
+   "slug": "chariot"
+  },
+  {
+   "id": "0qjipRpjhwo",
+   "title": "8. СИЛА | Значения Старших арканов | Школа Таро пана Романа 2021",
+   "n": 8,
+   "slug": "strength"
+  },
+  {
+   "id": "MKmhMwSyapw",
+   "title": "9. ОТШЕЛЬНИК | Значения Старших арканов | Школа Таро пана Романа 2021",
+   "n": 9,
+   "slug": "hermit"
+  },
+  {
+   "id": "APjdknY6dFI",
+   "title": "10. WHEEL OF FORTUNE | Major Arcana Meanings | Pan Roman Tarot School 2021",
+   "n": 10,
+   "slug": "wheel-of-fortune"
+  },
+  {
+   "id": "4XWIUmhae-w",
+   "title": "11. ПРАВОСУДИЕ | Значения Старших арканов | Школа Таро пана Романа 2021",
+   "n": 11,
+   "slug": "justice"
+  },
+  {
+   "id": "P0cPY7mdXog",
+   "title": "12. ПОВЕШЕННЫЙ | Значения Старших арканов | Школа Таро пана Романа 2021",
+   "n": 12,
+   "slug": "hanged-man"
+  },
+  {
+   "id": "-3tpl-tkKIU",
+   "title": "13. DEATH | Major Arcana Meanings | Pan Roman's Tarot School 2021",
+   "n": 13,
+   "slug": "death"
+  },
+  {
+   "id": "1_K0SS3Ais4",
+   "title": "14. Temperance | Major Arcana Meanings | Pan Roman's Tarot School 2021",
+   "n": 14,
+   "slug": "temperance"
+  },
+  {
+   "id": "rlr15jcFZgA",
+   "title": "15. ДЬЯВОЛ | Значения Старших арканов | Школа Таро пана Романа 2021",
+   "n": 15,
+   "slug": "devil"
+  },
+  {
+   "id": "08DJySaxZ3A",
+   "title": "16. THE TOWER | Major Arcana Meanings | Pan Roman's Tarot School 2021",
+   "n": 16,
+   "slug": "tower"
+  },
+  {
+   "id": "PBe5IfY4L-Q",
+   "title": "17. ЗВЕЗДА | Значения Старших арканов | Школа Таро пана Романа 2021",
+   "n": 17,
+   "slug": "star"
+  },
+  {
+   "id": "fLE4kCxd84E",
+   "title": "18. ЛУНА | Значения Старших арканов | Школа Таро пана Романа 2021",
+   "n": 18,
+   "slug": "moon"
+  },
+  {
+   "id": "Rsvtfa-HpbY",
+   "title": "19. СОЛНЦЕ | Значения Старших арканов | Школа Таро пана Романа 2021",
+   "n": 19,
+   "slug": "sun"
+  },
+  {
+   "id": "EFLDEVw3yLk",
+   "title": "20. JUDGMENT | Major Arcana Meanings | Pan Roman's Tarot School 2021",
+   "n": 20,
+   "slug": "judgement"
+  },
+  {
+   "id": "LK6dDw6p_hs",
+   "title": "21. МИР | Значения Старших арканов | Школа Таро пана Романа 2021",
+   "n": 21,
+   "slug": "world"
+  },
+  {
+   "id": "1fELMKAoBvo",
+   "title": "Первый пример онлайн лекции. Школа Таро пана Романа. Императрица и Император, примеры раскладов.",
+   "n": null,
+   "slug": null
+  }
+ ],
+ "minor": [
+  {
+   "id": "FI6FDgCkiEo",
+   "title": "ТУЗЫ | Значения МЛАДШИХ арканов | Школа Таро пана Романа 2021",
+   "rank": 1,
+   "slug": "aces"
+  },
+  {
+   "id": "P9VJNRZ7-5o",
+   "title": "ДВОЙКИ | Значения МЛАДШИХ арканов | Школа Таро пана Романа 2021",
+   "rank": 2,
+   "slug": "twos"
+  },
+  {
+   "id": "uPAJl5JSJNY",
+   "title": "ТРОЙКИ | Значения МЛАДШИХ арканов | Школа Таро пана Романа 2021",
+   "rank": 3,
+   "slug": "threes"
+  },
+  {
+   "id": "G2WJlEAjI08",
+   "title": "ЧЕТВЕРКИ | Значения МЛАДШИХ арканов | Школа Таро пана Романа 2021\"",
+   "rank": 4,
+   "slug": "fours"
+  },
+  {
+   "id": "JBqV7hPtLxg",
+   "title": "ПЯТЕРКИ | Значения МЛАДШИХ арканов | Школа Таро пана Романа 2021",
+   "rank": 5,
+   "slug": "fives"
+  },
+  {
+   "id": "xL7MivWumAM",
+   "title": "ШЕСТЕРКИ | Значения МЛАДШИХ арканов | Школа Таро пана Романа 2021",
+   "rank": 6,
+   "slug": "sixes"
+  },
+  {
+   "id": "DLlegE_21uw",
+   "title": "СЕМЕРКИ | Значения МЛАДШИХ арканов | Школа Таро пана Романа 2021",
+   "rank": 7,
+   "slug": "sevens"
+  },
+  {
+   "id": "jTyfbxR3y1M",
+   "title": "EIGHTS | Minor Arcana Meanings | Pan Roman's Tarot School 2021",
+   "rank": 8,
+   "slug": "eights"
+  },
+  {
+   "id": "kItf3E4sD3s",
+   "title": "ДЕВЯТКИ | Значения МЛАДШИХ арканов | Школа Таро пана Романа 2021",
+   "rank": 9,
+   "slug": "nines"
+  },
+  {
+   "id": "CWtp8FUbcwk",
+   "title": "ДЕСЯТКИ | Значения МЛАДШИХ арканов | Школа Таро пана Романа 2021",
+   "rank": 10,
+   "slug": "tens"
+  },
+  {
+   "id": "WE57MlVxDdA",
+   "title": "ПАЖИ | Значения МЛАДШИХ арканов | Школа Таро пана Романа 2021",
+   "rank": 11,
+   "slug": "pages"
+  },
+  {
+   "id": "DFI4Bx7cr5A",
+   "title": "РЫЦАРИ | Значения МЛАДШИХ арканов | Школа Таро пана Романа 2021",
+   "rank": 12,
+   "slug": "knights"
+  },
+  {
+   "id": "jJVUgb64mFU",
+   "title": "КОРОЛЕВЫ | Значения МЛАДШИХ арканов | Школа Таро пана Романа 2021",
+   "rank": 13,
+   "slug": "queens"
+  },
+  {
+   "id": "xRbE21obrKA",
+   "title": "КОРОЛИ | Значения МЛАДШИХ арканов | Школа Таро пана Романа 2021",
+   "rank": 14,
+   "slug": "kings"
+  }
+ ]
+}
