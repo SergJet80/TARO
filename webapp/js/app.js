@@ -173,17 +173,21 @@ function renderRoman(card) {
   const html = ['<div class="pos-content roman-content">'];
 
   if (!data) {
+    const isNine = card.id.endsWith('-nine');
     html.push(`<div class="roman-empty">
-      <p class="short-value">Для этой карты школа Пана Романа пока не готова.</p>
-      <p class="roman-note">Сейчас материалы школы есть только для старших арканов — младшие в работе.</p>
+      ${isNine
+        ? `<p class="short-value">В школе Пана Романа отдельная лекция о Девятках не проводилась.</p>
+           <p class="roman-note">Известно из лекций смежных рангов: после рывка восьмёрки девятка — пауза, осмотр результатов и накопление сил перед десяткой.</p>`
+        : `<p class="short-value">Для этой карты материалы школы Пана Романа пока не готовы.</p>`}
     </div>`);
     html.push('</div>');
     document.getElementById('mContent').innerHTML = html.join('');
     return;
   }
 
-  /* Упрощённая версия */
-  html.push('<h3 class="roman-subtitle"><span>🌿</span> Кратко и просто</h3>');
+  /* Простая часть */
+  const isMinor = !card.id.startsWith('major');
+  html.push(`<h3 class="roman-subtitle"><span>🌿</span> ${isMinor ? 'Как школа читает этот ранг' : 'Кратко и просто'}</h3>`);
   for (const b of data.simple) {
     html.push(`<div class="info-section"><h3>${b.t}</h3>${para(b.x)}</div>`);
   }
@@ -198,7 +202,7 @@ function renderRoman(card) {
   }
 
   /* Развёрнутая версия — аккордеон, «Суть карты» открыта по умолчанию */
-  html.push('<h3 class="roman-subtitle"><span>📜</span> Развёрнуто — выжимки лекций</h3>');
+  html.push(`<h3 class="roman-subtitle"><span>📜</span> ${isMinor ? 'Развёрнуто — из лекции по рангу' : 'Развёрнуто — выжимки лекций'}</h3>`);
   for (const [sec, icon] of ROMAN_SECTIONS_FULL) {
     const text = data.full[sec];
     if (!text) continue;
