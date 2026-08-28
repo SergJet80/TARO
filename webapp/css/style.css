@@ -555,3 +555,47 @@ body {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+/* ─── Главное меню разделов (Таро / Астрология) v1.7 ─── */
+.main-nav {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding: 18px 16px 0;
+}
+.main-nav-inner {
+  display: flex;
+  gap: 6px;
+  background: rgba(23, 18, 43, .75);
+  border: 1px solid rgba(212, 175, 55, .22);
+  border-radius: 999px;
+  padding: 5px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, .35);
+}
+.main-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 22px;
+  border-radius: 999px;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  text-decoration: none;
+  letter-spacing: .03em;
+  transition: color .2s ease, background .2s ease, box-shadow .2s ease;
+  white-space: nowrap;
+}
+.main-nav a:hover { color: var(--gold-bright); background: rgba(212, 175, 55, .08); }
+.main-nav a.mn-active {
+  color: var(--gold-bright);
+  background: linear-gradient(180deg, rgba(212, 175, 55, .22), rgba(124, 92, 191, .18));
+  box-shadow: 0 0 18px rgba(212, 175, 55, .18), inset 0 0 0 1px rgba(212, 175, 55, .3);
+}
+.main-nav .mn-icon { font-size: 1.05em; }
+
+@media (max-width: 420px) {
+  .main-nav a { padding: 9px 14px; font-size: .95rem; gap: 6px; }
+}
