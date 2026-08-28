@@ -29,6 +29,34 @@
   background: rgba(23, 18, 43, .5);
 }
 
+/* ─── Баннер «Колесо Зодиака» на главной астрологии ─── */
+.wheel-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: fit-content;
+  margin: 0 auto 30px;
+  padding: 16px 26px;
+  background: linear-gradient(135deg, rgba(124, 92, 191, .22), rgba(23, 18, 43, .9));
+  border: 1px solid rgba(212, 175, 55, .4);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--text);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+  max-width: 620px;
+  text-align: center;
+}
+.wheel-banner:hover {
+  transform: translateY(-3px);
+  border-color: rgba(212, 175, 55, .75);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, .45), 0 0 20px rgba(212, 175, 55, .15);
+}
+.wb-icon { font-size: 1.9rem; flex: 0 0 auto; }
+.wb-text { font-size: .98rem; line-height: 1.5; }
+.wb-text strong { color: var(--gold-bright); display: block; font-size: 1.12rem; margin-bottom: 2px; }
+.wb-arrow { color: var(--gold); font-size: 1.3rem; flex: 0 0 auto; }
+
 /* ─── Сетка карточек знаков (по 3 в ряд, компактные, надпись над картинкой) ─── */
 .signs-grid {
   display: grid;
