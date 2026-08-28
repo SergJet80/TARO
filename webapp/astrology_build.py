@@ -158,7 +158,10 @@ def page_title(name):
 def page_desc(name):
     return f"Характеристика знака Зодиака {name}: характер, сильные и слабые стороны, отношения, работа и деньги."
 
-def head(title, desc, rel, v):
+def head(title, desc, root, v):
+    # root — путь от текущей страницы к корню webapp/ (где лежат css/, fonts/, astrology/)
+    # для astrology/index.html  root = "../"
+    # для astrology/<slug>/index.html root = "../../"
     return f"""<!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -168,19 +171,20 @@ def head(title, desc, rel, v):
 <meta name="description" content="{desc}">
 <meta name="robots" content="noindex">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="{rel}fonts/fonts.css">
-<link rel="stylesheet" href="{rel}css/style.css?v={v}">
-<link rel="stylesheet" href="{rel}css/astrology.css?v={v}">
+<link rel="stylesheet" href="{root}fonts/fonts.css">
+<link rel="stylesheet" href="{root}css/style.css?v={v}">
+<link rel="stylesheet" href="{root}css/astrology.css?v={v}">
 </head>
 """
 
-def nav(rel, active):
+def nav(root, active):
+    # root — путь от текущей страницы к корню webapp/
     taro = ' class="mn-active"' if active == 'taro' else ''
     astro = ' class="mn-active"' if active == 'astro' else ''
     return f"""<nav class="main-nav" aria-label="Разделы">
   <div class="main-nav-inner">
-    <a href="{rel}index.html"{taro}><span class="mn-icon">✦</span> Таро</a>
-    <a href="{rel}astrology/index.html"{astro}><span class="mn-icon">♄</span> Астрология</a>
+    <a href="{root}index.html"{taro}><span class="mn-icon">✦</span> Таро</a>
+    <a href="{root}astrology/index.html"{astro}><span class="mn-icon">♄</span> Астрология</a>
   </div>
 </nav>
 """
@@ -190,15 +194,15 @@ def build_index():
     cards = []
     for slug, name, sym, sub, _ in SIGNS:
         cards.append(f"""    <a class="sign-card" href="{slug}/">
-      <div class="sign-card-img"><img src="img/signs/{slug}-preview.jpg" alt="Знак Зодиака {name} — мистическая иллюстрация" loading="lazy"></div>
       <div class="sign-card-body">
         <span class="sign-sym">{sym}</span>
         <h2 class="sign-name">{name}</h2>
         <p class="sign-sub">{sub}</p>
       </div>
+      <div class="sign-card-img"><img src="img/signs/{slug}-preview.jpg" alt="Знак Зодиака {name} — мистическая иллюстрация" loading="lazy"></div>
     </a>""")
     cards_html = "\n".join(cards)
-    return f"""{head("Знаки Зодиака · Астрология", "Обобщённые описания всех 12 знаков Зодиака: характер, сильные и слабые стороны, любовь, работа, внутренние противоречия.", "", "1.7")}
+    return f"""{head("Знаки Зодиака · Астрология", "Обобщённые описания всех 12 знаков Зодиака: характер, сильные и слабые стороны, любовь, работа, внутренние противоречия.", "../", "1.7")}
 <body>
 
 <div class="stars" aria-hidden="true"></div>
@@ -230,8 +234,8 @@ def build_index():
 """
 
 def build_sign(idx, slug, name, sym, sub, blocks):
-    """Страница одного знака."""
-    rel = "../"
+    """Страница одного знака (located in astrology/<slug>/)."""
+    root = "../../"          # путь до корня webapp/ для CSS, шрифтов и main-nav
     prev_slug = ORDER[idx - 1] if idx > 0 else ORDER[-1]
     next_slug = ORDER[idx + 1] if idx < len(ORDER) - 1 else ORDER[0]
     prev_name = next(s for s in SIGNS if s[0] == prev_slug)[1]
@@ -245,13 +249,13 @@ def build_sign(idx, slug, name, sym, sub, blocks):
     </section>""")
     secs_html = "\n".join(secs)
 
-    return f"""{head(page_title(name), page_desc(name), rel, "1.7")}
+    return f"""{head(page_title(name), page_desc(name), root, "1.7")}
 <body>
 
 <div class="stars" aria-hidden="true"></div>
 <div class="stars stars2" aria-hidden="true"></div>
 
-{nav(rel, "astro")}
+{nav(root, "astro")}
 
 <header class="site-header">
   <div class="header-inner">
@@ -262,7 +266,7 @@ def build_sign(idx, slug, name, sym, sub, blocks):
 
 <main class="sign-page">
   <div class="sign-hero">
-    <img src="img/signs/{slug}.jpg" alt="Знак Зодиака {name} — мистическая иллюстрация" loading="lazy" class="sign-hero-img">
+    <img src="../img/signs/{slug}.jpg" alt="Знак Зодиака {name} — мистическая иллюстрация" loading="lazy" class="sign-hero-img">
   </div>
 
   <div class="sign-blocks">

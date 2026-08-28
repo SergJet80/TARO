@@ -29,11 +29,11 @@
   background: rgba(23, 18, 43, .5);
 }
 
-/* ─── Сетка карточек знаков ─── */
+/* ─── Сетка карточек знаков (по 3 в ряд, компактные, надпись над картинкой) ─── */
 .signs-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 .sign-card {
   display: flex;
@@ -51,8 +51,18 @@
   border-color: rgba(212, 175, 55, .5);
   box-shadow: 0 12px 34px rgba(0, 0, 0, .5), 0 0 20px rgba(212, 175, 55, .12);
 }
+.sign-card-body {
+  order: 1;
+  padding: 14px 12px 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
 .sign-card-img {
-  aspect-ratio: 3 / 4;
+  order: 2;
+  aspect-ratio: 3 / 3.4;
   overflow: hidden;
   background: #0f0b22;
 }
@@ -64,31 +74,22 @@
   transition: transform .35s ease;
 }
 .sign-card:hover .sign-card-img img { transform: scale(1.05); }
-.sign-card-body {
-  padding: 16px 16px 18px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  flex: 1;
-}
 .sign-sym {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: var(--gold-bright);
   line-height: 1;
 }
 .sign-name {
   font-family: 'Cormorant Garamond', 'Georgia', serif;
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--text);
   letter-spacing: .03em;
 }
 .sign-sub {
-  font-size: .82rem;
+  font-size: .8rem;
   color: var(--text-dim);
-  line-height: 1.45;
+  line-height: 1.4;
 }
 
 /* ─── Страница знака ─── */
@@ -163,7 +164,7 @@
 
 /* ─── Адаптив: 3 → 2 карточки ─── */
 @media (max-width: 900px) {
-  .signs-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .signs-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
 }
 @media (max-width: 640px) {
   .signs-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
