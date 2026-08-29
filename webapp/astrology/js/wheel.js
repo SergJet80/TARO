@@ -1,7 +1,7 @@
-// ═══════════════ Колесо Зодиака — логика (v1.8) ═══════════════
-// Структура (по описанию структуры колеса): внешнее кольцо — месяц+даты по дуге,
-// сектора — символ знака + глифы планет; в центре — карта активного старшего аркана.
-// Кодовые слова и горизонтальные названия убраны с колеса (они в панели внизу).
+// ═══════════════ Колесо Зодиака — логика (v1.9) ═══════════════
+// Структура по описанию: внешний обод — месяцы (сдвинуты на половину сектора, по одному),
+// числа куспидов в углах секторов, символ знака + глифы планет в секторе,
+// в центре — карта(ы) старшего аркана. Кодовые слова и надписи — только в панели снизу.
 
 (function () {
   "use strict";
@@ -15,18 +15,28 @@
 
   var NS = "http://www.w3.org/2000/svg";
   var VB = 620, CX = VB / 2, CY = VB / 2;
-  var R_OUT = 296;      // внешний радиус
-  var R_CARD = 132;     // радиус отверстия в центре под карту
+  var R_OUT = 296;
+  var R_CARD = 132;
   var CARDPATH = "../img/cards/";
+
+  // Названия месяцев по порядку (старт: март у Овна)
+  var MONTHS = ["Март","Апрель","Май","Июнь","Июль","Август",
+                "Сентябрь","Октябрь","Ноябрь","Декабрь","Январь","Февраль"];
 
   function polar(r, ang) { return [CX + r * Math.cos(ang), CY + r * Math.sin(ang)]; }
 
-  // дуга между двумя углами (описывает окружность по часовой)
   function arcPath(r, a0, a1) {
     var p0 = polar(r, a0), p1 = polar(r, a1);
     var large = (a1 - a0) > Math.PI ? 1 : 0;
     return "M" + p0[0] + " " + p0[1] +
            "A" + r + " " + r + " 0 " + large + " 1 " + p1[0] + " " + p1[1];
+  }
+
+  // извлечь два куспид-числа из строки дат вида "20/21 марта – 20/21 апреля"
+  function cuspNumbers(dates) {
+    var m = dates.match(/(\d{1,2})\/(\d{1,2})/);
+    if (m) { var a = parseInt(m[1],10), b = parseInt(m[2],10); return a < b ? [a,b] : [b,a]; }
+    return [20, 21];
   }
 
   function buildSVG() {
@@ -41,27 +51,44 @@
       return e;
     }
 
-    // ─── Центральная зона: круглая подложка под активную карту ───
-    el("circle", { cx: CX, cy: CY, r: R_CARD + 6, fill: "#0d0a1a", stroke: "rgba(212,175,55,.45)", "stroke-width": "2" });
+    // ─── Центральная зона под карту(ы) ───
+    el("circle", { cx: CX, cy: CY, r: R_CARD + 8, fill: "#0d0a1a", stroke: "rgba(212,175,55,.45)", "stroke-width": "2" });
+    el("image", { id: "centerCardA", x: CX - 34, y: CY - 50, width: 68, height: 100, href: "", preserveAspectRatio: "xMidYMid meet" });
+    el("image", { id: "centerCardB", x: CX - 34, y: CY - 50, width: 68, height: 100, href: "", preserveAspectRatio: "xMidYMid meet" });
 
-    // изображение активной карты (в центре), будет обновляться selectSign
-    var img = el("image", { id: "centerCard", x: CX - 62, y: CY - 92, width: 124, height: 184, href: "", preserveAspectRatio: "xMidYMid meet" });
-    img.setAttribute("xlink:href", "");
-    // обводка-рамка карты
-    // (clip нет — карта вписывается по высоте)
+    // ─── Обод месяцев (сдвинут на полсектора) ───
+    // месяц i должен быть по центру на границе sect[i-1]/sect[i]... в оригинале месяц
+    // (напр. Март) стоит на стыке Рыб и Овна. Т.к. Овен = индекс 0, Рыбы = индекс 11,
+    // граница верх (12 часов) = -PI/2. Каждый месяц центрируем в этой точке, шаг SEG.
+    for (var mm = 0; mm < TOTAL; mm++) {
+      var mCenter = -Math.PI / 2 + mm * SEG;        // центр месяца (на границе знаков)
+      var ma0 = mCenter - SEG / 2;
+      var ma1 = mCenter + SEG / 2;
+      var mr = R_OUT - 16;
+      var pid = "zMonth" + mm;
+      el("path", { id: pid, d: arcPath(mr, ma0, ma1), fill: "none", stroke: "none" });
+      var txt = el("text", { "class": "z-month", "pointer-events": "none" });
+      var tp = el("textPath", { href: "#" + pid, startOffset: "50%", "text-anchor": "middle" });
+      tp.textContent = MONTHS[mm];
+      txt.appendChild(tp);
+      // линия-разделитель месяца (радиус)
+      var pm0 = polar(R_OUT - 6, mCenter), pm1 = polar(R_CARD + 40, mCenter);
+      el("line", { x1: pm0[0], y1: pm0[1], x2: pm1[0], y2: pm1[1],
+                   stroke: "rgba(212,175,55,.12)", "stroke-width": "1" });
+    }
 
-    // ─── Сектора ───
+    // ─── Сектора знаков + символ + планеты + куспид-числа по углам ───
     for (var i = 0; i < TOTAL; i++) {
       var a0 = -Math.PI / 2 + i * SEG;
       var a1 = a0 + SEG;
       var mid = a0 + SEG / 2;
 
-      // 1) сектор внешнего кольца (от R_OUT до R_CARD+30)
-      var rIn = R_CARD + 34;
+      // сектор
+      var rIn = R_CARD + 42;
       var p0o = polar(R_OUT, a0), p1o = polar(R_OUT, a1);
       var p0i = polar(rIn, a0), p1i = polar(rIn, a1);
       var large = SEG > Math.PI ? 1 : 0;
-      var path = el("path", {
+      el("path", {
         d: "M" + p0o[0] + " " + p0o[1] +
            "A" + R_OUT + " " + R_OUT + " 0 " + large + " 1 " + p1o[0] + " " + p1o[1] +
            "L" + p1i[0] + " " + p1i[1] +
@@ -69,55 +96,58 @@
         "class": "z-seg", "data-i": i
       });
 
-      // 2) символ знака — по центру сектора (крупно)
-      var pm = polar((R_OUT + rIn) / 2 + 6, mid);
-      el("text", { x: pm[0], y: pm[1], "text-anchor": "middle", "dominant-baseline": "central", "class": "z-sym", "data-i": i }).textContent = SIGNS[i].sym;
+      // символ знака
+      var pm = polar((R_OUT + rIn) / 2 + 10, mid);
+      el("text", { x: pm[0], y: pm[1], "text-anchor": "middle", "dominant-baseline": "central",
+                   "class": "z-sym", "data-i": i }).textContent = SIGNS[i].sym;
 
-      // 3) глифы планет — чуть ближе к центру под символом
-      var pp = polar((R_OUT + rIn) / 2 - 34, mid);
-      el("text", { x: pp[0], y: pp[1], "text-anchor": "middle", "dominant-baseline": "central", "class": "z-planets", "data-i": i }).textContent = SIGNS[i].planetsGlyph;
+      // глифы планет
+      var pp = polar((R_OUT + rIn) / 2 - 30, mid);
+      el("text", { x: pp[0], y: pp[1], "text-anchor": "middle", "dominant-baseline": "central",
+                   "class": "z-planets", "data-i": i }).textContent = SIGNS[i].planetsGlyph;
 
-      // 4) месяц + дата по дуге (внешняя кромка сектора)
-      //    путь-дуга для textPath (в середине кольца месяца)
-      var mr = R_OUT - 20;
-      var arc = arcPath(mr, a0, a1);
-      var pid = "zArc" + i;
-      el("path", { id: pid, d: arc, fill: "none", stroke: "none" });
-      var txt = el("text", { "class": "z-month", "pointer-events": "none" });
-      var tp = el("textPath", { href: "#" + pid, startOffset: "50%", "text-anchor": "middle" });
-      tp.textContent = SIGNS[i].month;
-      txt.appendChild(tp);
-
-      // 5) даты — чуть ближе к центру чем месяц, по дуге
-      var dr = R_OUT - 42;
-      var arcD = arcPath(dr, a0, a1);
-      var pidD = "zArcD" + i;
-      el("path", { id: pidD, d: arcD, fill: "none", stroke: "none" });
-      var txtD = el("text", { "class": "z-dates", "pointer-events": "none" });
-      var tpD = el("textPath", { href: "#" + pidD, startOffset: "50%", "text-anchor": "middle" });
-      tpD.textContent = SIGNS[i].dates;
-      txtD.appendChild(tpD);
+      // куспид-числа в углах сектора (на внешнем ободе, у границ)
+      var nums = cuspNumbers(SIGNS[i].dates);
+      var cR = R_OUT - 38;
+      // ближний угол (a0) — число nums[0], дальний (a1) — nums[1]
+      var pn0 = polar(cR, a0 + SEG * 0.08);
+      var pn1 = polar(cR, a1 - SEG * 0.08);
+      el("text", { x: pn0[0], y: pn0[1], "text-anchor": "middle", "dominant-baseline": "central",
+                   "class": "z-cusp", "data-i": i }).textContent = nums[0];
+      el("text", { x: pn1[0], y: pn1[1], "text-anchor": "middle", "dominant-baseline": "central",
+                   "class": "z-cusp", "data-i": i }).textContent = nums[1];
     }
 
-    // декоративные границы колец
+    // декоративные границы
     el("circle", { cx: CX, cy: CY, r: R_OUT, fill: "none", stroke: "rgba(212,175,55,.4)", "stroke-width": "2" });
-    el("circle", { cx: CX, cy: CY, r: R_CARD + 34, fill: "none", stroke: "rgba(212,175,55,.3)", "stroke-width": "1.5" });
-    el("circle", { cx: CX, cy: CY, r: R_CARD + 6, fill: "none", stroke: "rgba(212,175,55,.35)", "stroke-width": "1.5" });
-
-    // название активного аркана под картой в центре
-    el("text", { x: CX, y: CY + 118, "text-anchor": "middle", "dominant-baseline": "central", "class": "z-center-card-name", id: "centerCardName" });
+    el("circle", { cx: CX, cy: CY, r: R_CARD + 42, fill: "none", stroke: "rgba(212,175,55,.3)", "stroke-width": "1.5" });
+    el("circle", { cx: CX, cy: CY, r: R_CARD + 8, fill: "none", stroke: "rgba(212,175,55,.35)", "stroke-width": "1.5" });
   }
 
-  // Обновление центральной карты
+  // ─── Центральная карта(ы) ───
   function setCenterCard(i) {
     var s = SIGNS[i];
-    var img = document.getElementById("centerCard");
-    if (img) {
-      img.setAttribute("href", CARDPATH + s.cardFile);
-      img.setAttribute("xlink:href", CARDPATH + s.cardFile);
+    var imgA = document.getElementById("centerCardA");
+    var imgB = document.getElementById("centerCardB");
+    if (!imgA) return;
+    var hasB = !!s.cardFile2;
+
+    if (hasB) {
+      // две карты рядом
+      imgA.setAttribute("x", CX - 68); imgA.setAttribute("width", 56); imgA.setAttribute("height", 88); imgA.setAttribute("y", CY - 44);
+      imgA.setAttribute("href", CARDPATH + s.cardFile);
+      imgA.setAttribute("xlink:href", CARDPATH + s.cardFile);
+      imgB.setAttribute("x", CX + 12); imgB.setAttribute("width", 56); imgB.setAttribute("height", 88); imgB.setAttribute("y", CY - 44);
+      imgB.setAttribute("href", CARDPATH + s.cardFile2);
+      imgB.setAttribute("xlink:href", CARDPATH + s.cardFile2);
+      imgB.setAttribute("opacity", "1");
+    } else {
+      // одна карта по центру
+      imgA.setAttribute("x", CX - 45); imgA.setAttribute("width", 90); imgA.setAttribute("height", 132); imgA.setAttribute("y", CY - 66);
+      imgA.setAttribute("href", CARDPATH + s.cardFile);
+      imgA.setAttribute("xlink:href", CARDPATH + s.cardFile);
+      imgB.setAttribute("opacity", "0");
     }
-    var nm = document.getElementById("centerCardName");
-    if (nm) nm.textContent = s.name + " · " + s.arcans;
   }
 
   function renderDetail(i) {
