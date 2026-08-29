@@ -56,25 +56,30 @@
     el("image", { id: "centerCardA", x: CX - 34, y: CY - 50, width: 68, height: 100, href: "", preserveAspectRatio: "xMidYMid meet" });
     el("image", { id: "centerCardB", x: CX - 34, y: CY - 50, width: 68, height: 100, href: "", preserveAspectRatio: "xMidYMid meet" });
 
-    // ─── Обод месяцев (сдвинут на полсектора) ───
-    // месяц i должен быть по центру на границе sect[i-1]/sect[i]... в оригинале месяц
-    // (напр. Март) стоит на стыке Рыб и Овна. Т.к. Овен = индекс 0, Рыбы = индекс 11,
-    // граница верх (12 часов) = -PI/2. Каждый месяц центрируем в этой точке, шаг SEG.
-    for (var mm = 0; mm < TOTAL; mm++) {
-      var mCenter = -Math.PI / 2 + mm * SEG;        // центр месяца (на границе знаков)
-      var ma0 = mCenter - SEG / 2;
-      var ma1 = mCenter + SEG / 2;
-      var mr = R_OUT - 16;
-      var pid = "zMonth" + mm;
+    // ─── Обод месяцев (в каждый сектор синхронно, по центру дуги) ───
+    for (var i = 0; i < TOTAL; i++) {
+      var mid = -Math.PI / 2 + i * SEG + SEG / 2;
+      var ma0 = mid - SEG * 0.42;
+      var ma1 = mid + SEG * 0.42;
+      var mr = R_OUT - 14;
+      var pid = "zMonth" + i;
       el("path", { id: pid, d: arcPath(mr, ma0, ma1), fill: "none", stroke: "none" });
       var txt = el("text", { "class": "z-month", "pointer-events": "none" });
       var tp = el("textPath", { href: "#" + pid, startOffset: "50%", "text-anchor": "middle" });
-      tp.textContent = MONTHS[mm];
+      tp.textContent = MONTHS[i];
       txt.appendChild(tp);
-      // линия-разделитель месяца (радиус)
-      var pm0 = polar(R_OUT - 6, mCenter), pm1 = polar(R_CARD + 40, mCenter);
-      el("line", { x1: pm0[0], y1: pm0[1], x2: pm1[0], y2: pm1[1],
-                   stroke: "rgba(212,175,55,.12)", "stroke-width": "1" });
+    }
+
+    // ─── Кружки возраста (шкала 7..84) на линиях куспидов ───
+    // возрастной ряд: [84,7,14,21,28,35,42,49,56,63,70,77] на границах секторов
+    var ageNums = [84, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77];
+    for (var ag = 0; ag < TOTAL; ag++) {
+      var lineAng = -Math.PI / 2 + ag * SEG;   // линия куспида перед сектором ag
+      var pr = (R_CARD + 42 + R_OUT) / 2;      // середина кольца секторов
+      var pnt = polar(pr, lineAng);
+      var circ = el("circle", { cx: pnt[0], cy: pnt[1], r: 15, "class": "z-age-dot" });
+      el("text", { x: pnt[0], y: pnt[1], "text-anchor": "middle", "dominant-baseline": "central",
+                   "class": "z-age-num" }).textContent = ageNums[ag];
     }
 
     // ─── Сектора знаков + символ + планеты + куспид-числа по углам ───

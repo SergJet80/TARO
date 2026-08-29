@@ -95,6 +95,17 @@
   font-size: 12px;
   font-weight: 600;
 }
+/* Кружки возраста (шкала 7-84) на линиях куспидов */
+.z-age-dot {
+  fill: rgba(13, 10, 26, .92);
+  stroke: rgba(212, 175, 55, .55);
+  stroke-width: 1.6;
+}
+.z-age-num {
+  fill: var(--gold-bright);
+  font-size: 12px;
+  font-weight: 700;
+}
 .z-center-sym { fill: var(--gold-bright); font-size: 58px; font-weight: 700; }
 .z-center-name {
   fill: var(--text);
@@ -247,6 +258,8 @@
   .z-planets { font-size: 10px; }
   .z-month { font-size: 9px; }
   .z-cusp { font-size: 8px; }
+  .z-age-dot { r: 9px; }
+  .z-age-num { font-size: 8px; }
   .zd-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
   .z-detail { padding: 18px 16px; }
 }
