@@ -165,9 +165,9 @@ INDEX_TMPL = """<!DOCTYPE html>
 <meta name="description" content="Планеты в астрологии: Солнце, Луна, Меркурий, Венера, Марс, Юпитер, Сатурн, Уран, Нептун, Плутон, Хирон, Прозерпина — энергии, сильные и теневые стороны.">
 <meta name="robots" content="noindex">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%E2%98%89%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="../fonts/fonts.css">
-<link rel="stylesheet" href="../css/style.css{v}">
-<link rel="stylesheet" href="../css/astrology.css{v}">
+<link rel="stylesheet" href="../../fonts/fonts.css">
+<link rel="stylesheet" href="../../css/style.css{v}">
+<link rel="stylesheet" href="../../css/astrology.css{v}">
 </head>
 <body>
 
@@ -221,9 +221,9 @@ PAGE_TMPL = """<!DOCTYPE html>
 <meta name="description" content="Планета {name} в астрологии: энергия, влияние на жизнь, сильные и теневые стороны.">
 <meta name="robots" content="noindex">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E{sym_url}%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="../../fonts/fonts.css">
-<link rel="stylesheet" href="../../css/style.css{v}">
-<link rel="stylesheet" href="../../css/astrology.css{v}">
+<link rel="stylesheet" href="../../../fonts/fonts.css">
+<link rel="stylesheet" href="../../../css/style.css{v}">
+<link rel="stylesheet" href="../../../css/astrology.css{v}">
 </head>
 <body>
 
@@ -232,8 +232,8 @@ PAGE_TMPL = """<!DOCTYPE html>
 
 <nav class="main-nav" aria-label="Разделы">
   <div class="main-nav-inner">
-    <a href="../../index.html"><span class="mn-icon">✦</span> Таро</a>
-    <a href="../../astrology/index.html" class="mn-active"><span class="mn-icon">♄</span> Астрология</a>
+    <a href="../../../../index.html"><span class="mn-icon">✦</span> Таро</a>
+    <a href="../../../astrology/index.html" class="mn-active"><span class="mn-icon">♄</span> Астрология</a>
   </div>
 </nav>
 
@@ -246,7 +246,7 @@ PAGE_TMPL = """<!DOCTYPE html>
 
 <main class="sign-page">
   <div class="sign-hero">
-    <img src="../img/planets/{img}" alt="{alt}" loading="lazy" class="sign-hero-img">
+    <img src="../../img/planets/{img}" alt="{alt}" loading="lazy" class="sign-hero-img">
   </div>
 
   <div class="sign-blocks">
