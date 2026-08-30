@@ -56,32 +56,6 @@
     el("image", { id: "centerCardA", x: CX - 34, y: CY - 50, width: 68, height: 100, href: "", preserveAspectRatio: "xMidYMid meet" });
     el("image", { id: "centerCardB", x: CX - 34, y: CY - 50, width: 68, height: 100, href: "", preserveAspectRatio: "xMidYMid meet" });
 
-    // ─── Обод месяцев (в каждый сектор синхронно, по центру дуги) ───
-    for (var i = 0; i < TOTAL; i++) {
-      var mid = -Math.PI / 2 + i * SEG + SEG / 2;
-      var ma0 = mid - SEG * 0.42;
-      var ma1 = mid + SEG * 0.42;
-      var mr = R_OUT - 14;
-      var pid = "zMonth" + i;
-      el("path", { id: pid, d: arcPath(mr, ma0, ma1), fill: "none", stroke: "none" });
-      var txt = el("text", { "class": "z-month", "pointer-events": "none" });
-      var tp = el("textPath", { href: "#" + pid, startOffset: "50%", "text-anchor": "middle" });
-      tp.textContent = MONTHS[i];
-      txt.appendChild(tp);
-    }
-
-    // ─── Кружки возраста (шкала 7..84) на линиях куспидов ───
-    // возрастной ряд: [84,7,14,21,28,35,42,49,56,63,70,77] на границах секторов
-    var ageNums = [84, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77];
-    for (var ag = 0; ag < TOTAL; ag++) {
-      var lineAng = -Math.PI / 2 + ag * SEG;   // линия куспида перед сектором ag
-      var pr = (R_CARD + 42 + R_OUT) / 2;      // середина кольца секторов
-      var pnt = polar(pr, lineAng);
-      var circ = el("circle", { cx: pnt[0], cy: pnt[1], r: 15, "class": "z-age-dot" });
-      el("text", { x: pnt[0], y: pnt[1], "text-anchor": "middle", "dominant-baseline": "central",
-                   "class": "z-age-num" }).textContent = ageNums[ag];
-    }
-
     // ─── Сектора знаков + символ + планеты + куспид-числа по углам ───
     for (var i = 0; i < TOTAL; i++) {
       var a0 = -Math.PI / 2 + i * SEG;
@@ -122,6 +96,34 @@
       el("text", { x: pn1[0], y: pn1[1], "text-anchor": "middle", "dominant-baseline": "central",
                    "class": "z-cusp", "data-i": i }).textContent = nums[1];
     }
+
+    // ─── Обод месяцев (СВОЁ смещённое колесо: месяц на границе знака) ───
+    // месяц i стоит на куспиде-границе перед сектором i (убрали +SEG/2 → сдвиг на полсектора)
+    for (var i = 0; i < TOTAL; i++) {
+      var mid = -Math.PI / 2 + i * SEG;
+      var ma0 = mid - SEG * 0.42;
+      var ma1 = mid + SEG * 0.42;
+      var mr = R_OUT - 14;
+      var pid = "zMonth" + i;
+      el("path", { id: pid, d: arcPath(mr, ma0, ma1), fill: "none", stroke: "none" });
+      var txt = el("text", { "class": "z-month", "pointer-events": "none" });
+      var tp = el("textPath", { href: "#" + pid, startOffset: "50%", "text-anchor": "middle" });
+      tp.textContent = MONTHS[i];
+      txt.appendChild(tp);
+    }
+
+    // ─── Кружки возраста (шкала 7..84) на линиях куспидов ───
+    // возрастной ряд: [84,7,14,21,28,35,42,49,56,63,70,77] на границах секторов
+    var ageNums = [84, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77];
+    for (var ag = 0; ag < TOTAL; ag++) {
+      var lineAng = -Math.PI / 2 + ag * SEG;   // линия куспида перед сектором ag
+      var pr = R_CARD + 42;                    // в САМОМ низу секторов, у внутренней границы (над картами)
+      var pnt = polar(pr, lineAng);
+      var circ = el("circle", { cx: pnt[0], cy: pnt[1], r: 15, "class": "z-age-dot" });
+      el("text", { x: pnt[0], y: pnt[1], "text-anchor": "middle", "dominant-baseline": "central",
+                   "class": "z-age-num" }).textContent = ageNums[ag];
+    }
+
 
     // декоративные границы
     el("circle", { cx: CX, cy: CY, r: R_OUT, fill: "none", stroke: "rgba(212,175,55,.4)", "stroke-width": "2" });

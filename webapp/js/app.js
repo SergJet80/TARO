@@ -173,12 +173,8 @@ function renderRoman(card) {
   const html = ['<div class="pos-content roman-content">'];
 
   if (!data) {
-    const isNine = card.id.endsWith('-nine');
     html.push(`<div class="roman-empty">
-      ${isNine
-        ? `<p class="short-value">В школе Пана Романа отдельная лекция о Девятках не проводилась.</p>
-           <p class="roman-note">Известно из лекций смежных рангов: после рывка восьмёрки девятка — пауза, осмотр результатов и накопление сил перед десяткой.</p>`
-        : `<p class="short-value">Для этой карты материалы школы Пана Романа пока не готовы.</p>`}
+      <p class="short-value">Для этой карты материалы школы Пана Романа пока не готовы.</p>
     </div>`);
     html.push('</div>');
     document.getElementById('mContent').innerHTML = html.join('');
