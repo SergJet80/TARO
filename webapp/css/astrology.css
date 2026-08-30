@@ -190,6 +190,39 @@
   border-color: rgba(212, 175, 55, .35);
 }
 
+/* ─── Переключатель подразделов (Знаки / Планеты / Колесо) ─── */
+.section-switch {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 26px;
+}
+.ss-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 20px;
+  border: 1px solid rgba(212, 175, 55, .3);
+  border-radius: 999px;
+  background: rgba(23, 18, 43, .6);
+  color: var(--text-dim);
+  font-size: .92rem;
+  text-decoration: none;
+  transition: all .2s ease;
+}
+.ss-btn:hover {
+  border-color: rgba(212, 175, 55, .6);
+  color: var(--gold-bright);
+  transform: translateY(-1px);
+}
+.ss-btn.ss-active {
+  background: linear-gradient(135deg, rgba(124, 92, 191, .35), rgba(23, 18, 43, .85));
+  border-color: rgba(212, 175, 55, .75);
+  color: var(--gold-bright);
+  font-weight: 600;
+}
+
 /* ─── Адаптив: 3 → 2 карточки ─── */
 @media (max-width: 900px) {
   .signs-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
