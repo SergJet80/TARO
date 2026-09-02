@@ -1,0 +1,341 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Генератор раздела «Руны» (Старший Футарк, 24 руны).
+Источник контента: data/runes.json (собран из предоставленного Markdown, без правок смысла).
+Запуск:  python3 runes_build.py   (из каталога webapp/)
+Создаёт: runes/index.html и runes/<id>/index.html
+"""
+import json
+import html
+import os
+import re
+
+WEBAPP = os.path.dirname(os.path.abspath(__file__))
+DATA = os.path.join(WEBAPP, 'data', 'runes.json')
+CSS_V = '2.6'
+
+with open(DATA, encoding='utf-8') as f:
+    SRC = json.load(f)
+
+RUNES = SRC['runes']
+INTRO = SRC['intro']
+TAIL = SRC['tail']
+
+# ── вспомогательные ──────────────────────────────────────────────────────────
+
+def esc(s):
+    return html.escape(s or '', quote=False)
+
+def paras(text):
+    """Текст → список абзацев (по пустым строкам)."""
+    return [p.strip() for p in (text or '').split('\n\n') if p.strip()]
+
+def kv_to_items(text):
+    """Список вида '- Ключ: значение' → [(ключ, значение)]."""
+    out = []
+    for line in (text or '').splitlines():
+        m = re.match(r'- (.+?): (.+)', line.strip())
+        if m:
+            out.append((m.group(1), m.group(2)))
+    return out
+
+def bold_inline(text):
+    """**bold** → <strong>, остальное экранируем."""
+    parts = re.split(r'(\*\*.+?\*\*)', text or '')
+    out = []
+    for p in parts:
+        if p.startswith('**') and p.endswith('**'):
+            out.append('<strong>' + esc(p[2:-2]) + '</strong>')
+        else:
+            out.append(esc(p))
+    return ''.join(out)
+
+def section_html(title, inner, extra=''):
+    cls = 'sign-sec' + ((' ' + extra) if extra else '')
+    return f'      <section class="{cls}">\n        <h2 class="sec-title">{esc(title)}</h2>\n{inner}\n      </section>'
+
+def ps(text):
+    return '\n'.join(f'        <p>{bold_inline(p)}</p>' for p in paras(text))
+
+def ul_items(items):
+    if not items:
+        return ''
+    lis = '\n'.join(f'          <li><strong>{esc(k)}:</strong> {bold_inline(v)}</li>' for k, v in items)
+    return f'        <ul class="rune-list">\n{lis}\n        </ul>'
+
+# ── page shells ──────────────────────────────────────────────────────────────
+
+def shell(title, desc, css_prefix, nav_prefix, active, body):
+    return f'''<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{esc(title)}</title>
+<meta name="description" content="{esc(desc)}">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%E1%9A%A0%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="{css_prefix}fonts/fonts.css">
+<link rel="stylesheet" href="{css_prefix}css/style.css?v={CSS_V}">
+<link rel="stylesheet" href="{css_prefix}css/astrology.css?v={CSS_V}">
+<link rel="stylesheet" href="{css_prefix}css/runes.css?v={CSS_V}">
+</head>
+
+<body>
+
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+
+<nav class="main-nav" aria-label="Разделы">
+  <div class="main-nav-inner">
+    <a href="{nav_prefix}index.html"><span class="mn-icon">✦</span> Таро</a>
+    <a href="{nav_prefix}astrology/index.html"><span class="mn-icon">♄</span> Астрология</a>
+    <a href="{nav_prefix}runes/index.html"{' class="mn-active"' if active == 'runes' else ''}><span class="mn-icon">ᚠ</span> Руны</a>
+  </div>
+</nav>
+
+{body}
+</body>
+</html>
+'''
+
+FOOTER = '''<footer class="site-footer">
+  <p>Руны · Старший Футарк — справочник значений</p>
+  <p class="footer-note">Материалы носят справочный и развлекательный характер</p>
+</footer>'''
+
+# ── index раздела ────────────────────────────────────────────────────────────
+
+def rune_card(r):
+    return f'''    <a class="sign-card rune-card" href="{r['id']}/" data-aett="{esc(r['aett'])}" data-search="{esc((r['name'] + ' ' + r['nameRu'] + ' ' + ' '.join(r['keywords']) + ' ' + r['short']).lower())}">
+      <div class="sign-card-body">
+        <span class="sign-sym rune-sym">{r['symbol']}</span>
+        <h2 class="sign-name">{esc(r['nameRu'])}</h2>
+        <p class="sign-sub">{esc(r['literal'])}</p>
+        <p class="rune-kw">{esc(' · '.join(r['keywords'][:4]))}</p>
+      </div>
+      <div class="sign-card-img"><img src="{r['image']}" alt="Руна {esc(r['name'])} ({esc(r['nameRu'])}) — мистическая иллюстрация" loading="lazy"></div>
+    </a>'''
+
+def build_index():
+    cards = '\n'.join(rune_card(r) for r in RUNES)
+    body = f'''<header class="site-header">
+  <div class="header-inner">
+    <h1 class="site-title"><span class="title-star">ᚠ</span> Руны <span class="title-sub">Старший Футарк</span></h1>
+    <p class="site-tagline">24 руны · значение, мантика, магия, диагностика</p>
+    <div class="search-wrap">
+      <input type="search" id="search" placeholder="Поиск: деньги, защита, дорога, конфликт…" autocomplete="off">
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Фильтр по аттам">
+  <div class="tabs-inner" id="tabs">
+    <button class="tab active" data-aett="">ᛝ Все</button>
+    <button class="tab" data-aett="I атт">I атт · Фрейя</button>
+    <button class="tab" data-aett="II атт">II атт · Хагаль</button>
+    <button class="tab" data-aett="III атт">III атт · Тюр</button>
+  </div>
+</nav>
+
+<main class="astro-wrap runes-wrap">
+  <p class="astro-into">{esc(INTRO)}</p>
+
+  <div class="signs-grid" id="deck">
+{cards}
+  </div>
+  <p class="empty-msg" id="emptyMsg" hidden>Ничего не найдено. Попробуйте другое слово.</p>
+</main>
+
+{FOOTER}
+
+<script>
+(function() {{
+  var inp = document.getElementById('search');
+  var tabs = document.getElementById('tabs');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#deck .rune-card'));
+  var empty = document.getElementById('emptyMsg');
+  var aett = '';
+  function apply() {{
+    var q = inp.value.trim().toLowerCase();
+    var shown = 0;
+    cards.forEach(function(c) {{
+      var ok = (!aett || c.dataset.aett === aett) && (!q || c.dataset.search.indexOf(q) !== -1);
+      c.style.display = ok ? '' : 'none';
+      if (ok) shown++;
+    }});
+    empty.hidden = shown > 0;
+  }}
+  inp.addEventListener('input', apply);
+  tabs.addEventListener('click', function(e) {{
+    var b = e.target.closest('.tab');
+    if (!b) return;
+    tabs.querySelectorAll('.tab').forEach(function(t) {{ t.classList.remove('active'); }});
+    b.classList.add('active');
+    aett = b.dataset.aett;
+    apply();
+  }});
+}})();
+</script>'''
+    out = shell('Руны — Старший Футарк · Справочник значений',
+                'Справочник всех 24 рун Старшего Футарка: значение, историческая основа, мантика, магия, сочетания и диагностика.',
+                '../', '../', 'runes', body)
+    with open(os.path.join(WEBAPP, 'runes', 'index.html'), 'w', encoding='utf-8') as f:
+        f.write(out)
+
+# ── страница руны ────────────────────────────────────────────────────────────
+
+def tabbed(r):
+    t = []
+
+    # ✦ Значение
+    s = []
+    s.append(section_html('Краткая суть', ps(r['short'])))
+    s.append(section_html('Историческая традиция',
+        ps(r['history']) + (ul_items([('Ключевые значения', ', '.join(r['keywords']))]) if r['keywords'] else '')))
+    dv = r['divination']
+    dv_html = ul_items([
+        ('Положительное проявление', dv.get('positive', '')),
+        ('Негативное проявление', dv.get('negative', '')),
+        ('Совет', dv.get('advice', '')),
+        ('Предупреждение', dv.get('warning', '')),
+        ('Итог ситуации', dv.get('outcome', '')),
+    ])
+    s.append(section_html('Современная мантика', '<p class="rune-layer-note">Мантические значения относятся к современной рунической практике.</p>' + (dv_html or ps(r['divination'].get('general','')))))
+    s.append(section_html('Психологическое состояние', ps(r['psychology'])))
+    s.append(section_html('Духовное значение', ps(r['spiritual'])))
+    s.append(section_html('Прямое и перевёрнутое положение', ps(r['reversedNote'])))
+    s.append(section_html('Отличия трактовок разных школ', ps(r['schools'])))
+    s.append(section_html('Итог', ps(r['summary'])))
+    t.append(('✦', 'Значение', s))
+
+    # ♥ Отношения и сферы
+    s = []
+    sph = r['spheres']
+    order = ['Финансы', 'Работа', 'Отношения', 'Семья и быт']
+    s.append(section_html('Финансы', ps(sph.get('Финансы', ''))))
+    s.append(section_html('Работа', ps(sph.get('Работа', ''))))
+    s.append(section_html('Отношения', ps(sph.get('Отношения', ''))))
+    s.append(section_html('Семья и быт', ps(sph.get('Семья и быт', ''))))
+    per = r['person']
+    s.append(section_html('Руна как характеристика человека',
+        ps(per.get('general', '')) + ul_items([('Мысли', per.get('thoughts', '')),
+                                               ('Чувства', per.get('feelings', '')),
+                                               ('Действия', per.get('actions', ''))])))
+    t.append(('♥', 'Сферы жизни', s))
+
+    # ◈ Магия
+    s = []
+    mag = r['magic']
+    s.append(section_html('Современное магическое значение',
+        '<p class="rune-layer-note">Это современная эзотерическая практика, а не исторически подтверждённая традиция.</p>'
+        + ul_items(list(mag.items()))))
+    s.append(section_html('Руна в формулах и ставах', ps(r['formulas'])))
+    t.append(('◈', 'Магия', s))
+
+    # ᛉ Диагностика
+    d = r['diagnostics']
+    s = []
+    s.append(section_html('Эзотерическая трактовка',
+        f'<p class="rune-layer-note">В современной эзотерической трактовке</p>' + ps(d.get('esoteric', '')), 'diag-eso'))
+    s.append(section_html('Возможное бытовое объяснение',
+        f'<p class="rune-layer-note">Альтернативное объяснение</p>' + ps(d.get('household', '')), 'diag-house'))
+    t.append(('ᛉ', 'Диагностика', s))
+
+    # ⛓ Сочетания
+    s = []
+    combs = r['combinations']
+    if combs:
+        items = [(f"{c['rune1'].capitalize()} + {c['rune2'].capitalize()}", c['interpretation']) for c in combs]
+        s.append(section_html('Характерные сочетания', ul_items(items)))
+    s.append(section_html('Руна в формулах и ставах', ps(r['formulas'])))
+    t.append(('⛓', 'Сочетания', s))
+
+    return t
+
+def build_rune_page(r, prev, nxt):
+    tabs = tabbed(r)
+    tab_btns = '\n'.join(
+        f'      <button class="rt-btn{" active" if i == 0 else ""}" data-tab="{i}">{icon} {esc(label)}</button>'
+        for i, (icon, label, _) in enumerate(tabs))
+    tab_panes = []
+    for i, (icon, label, secs) in enumerate(tabs):
+        inner = '\n'.join(secs)
+        tab_panes.append(f'    <div class="rt-pane{" active" if i == 0 else ""}" data-pane="{i}">\n{inner}\n    </div>')
+    panes = '\n'.join(tab_panes)
+
+    # prev / next
+    def nb(other, arrow, before):
+        if other:
+            align = '' if before else ' <span>→</span>'
+            return f'    <a class="sign-nav-btn" href="../{other["id"]}/">{arrow} {esc(other["nameRu"])}{align}</a>'
+        return f'    <a class="sign-nav-btn" style="visibility:hidden" href="#">{arrow} ·</a>'
+
+    body = f'''<header class="site-header">
+  <div class="header-inner">
+    <h1 class="site-title"><span class="title-star rune-hero-sym">{r['symbol']}</span> {esc(r['nameRu'])} <span class="title-sub">{esc(r['name'])}</span></h1>
+    <p class="sign-hero-sub">{esc(r['aett'])} · звук «{esc(r['sound'])}» · {esc(r['literal'])}</p>
+  </div>
+</header>
+
+<main class="sign-page rune-page">
+  <div class="sign-hero">
+    <img src="../{r['image']}" alt="Руна {esc(r['name'])} ({esc(r['nameRu'])}) — мистическая иллюстрация" class="sign-hero-img">
+  </div>
+
+  <p class="rune-short">{bold_inline(r['short'])}</p>
+
+  <nav class="rune-tabs" aria-label="Разделы руны">
+{tab_btns}
+  </nav>
+
+  <div class="sign-blocks" id="runePanes">
+{panes}
+  </div>
+
+  <p class="astro-disclaimer">Мантические, магические и диагностические значения относятся к современной рунической практике. Историческая часть опирается на рунические поэмы и эпиграфику. Материалы носят справочный и развлекательный характер.</p>
+
+  <nav class="sign-nav" aria-label="Навигация по рунам">
+{nb(prev, '←', True)}
+    <a class="sign-nav-btn back" href="../index.html">ᚠ Все руны</a>
+{nb(nxt, '', False) if nxt else '    <a class="sign-nav-btn" style="visibility:hidden" href="#">→ ·</a>'}
+  </nav>
+</main>
+
+{FOOTER}
+
+<script>
+(function() {{
+  var bar = document.querySelector('.rune-tabs');
+  var btns = Array.prototype.slice.call(bar.querySelectorAll('.rt-btn'));
+  var panes = Array.prototype.slice.call(document.querySelectorAll('#runePanes .rt-pane'));
+  bar.addEventListener('click', function(e) {{
+    var b = e.target.closest('.rt-btn');
+    if (!b) return;
+    btns.forEach(function(x) {{ x.classList.remove('active'); }});
+    panes.forEach(function(x) {{ x.classList.remove('active'); }});
+    b.classList.add('active');
+    var p = panes.filter(function(x) {{ return x.dataset.pane === b.dataset.tab; }})[0];
+    if (p) p.classList.add('active');
+  }});
+}})();
+</script>'''
+    title = f"{r['name']} ({r['nameRu']}) — значение руны | Справочник"
+    desc = r['short'][:160]
+    out = shell(title, desc, '../../', '../../', 'runes', body)
+    os.makedirs(os.path.join(WEBAPP, 'runes', r['id']), exist_ok=True)
+    with open(os.path.join(WEBAPP, 'runes', r['id'], 'index.html'), 'w', encoding='utf-8') as f:
+        f.write(out)
+
+# ── main ─────────────────────────────────────────────────────────────────────
+
+def main():
+    build_index()
+    for i, r in enumerate(RUNES):
+        prev = RUNES[i - 1] if i > 0 else None
+        nxt = RUNES[i + 1] if i < len(RUNES) - 1 else None
+        build_rune_page(r, prev, nxt)
+    print(f'OK: index + {len(RUNES)} rune pages, css v{CSS_V}')
+
+if __name__ == '__main__':
+    main()
