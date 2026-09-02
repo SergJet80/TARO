@@ -20,7 +20,7 @@ with open(DATA, encoding='utf-8') as f:
 
 RUNES = SRC['runes']
 INTRO = SRC['intro']
-TAIL = SRC['tail']
+TAIL = SRC.get('tail', '')
 
 # ── вспомогательные ──────────────────────────────────────────────────────────
 
@@ -140,6 +140,12 @@ def build_index():
 
 <main class="astro-wrap runes-wrap">
   <p class="astro-into">{esc(INTRO)}</p>
+
+  <a class="wheel-banner" href="rasclady/">
+    <span class="wb-icon">🎲</span>
+    <span class="wb-text"><strong>Расклады и таблица</strong> — диагностика на 1/3/7 рун, сводная шпаргалка, магия по категориям</span>
+    <span class="wb-arrow">→</span>
+  </a>
 
   <div class="signs-grid" id="deck">
 {cards}
@@ -327,15 +333,146 @@ def build_rune_page(r, prev, nxt):
     with open(os.path.join(WEBAPP, 'runes', r['id'], 'index.html'), 'w', encoding='utf-8') as f:
         f.write(out)
 
+# ── Markdown-фрагменты → HTML ────────────────────────────────────────────────
+
+def md_inline(text):
+    """**bold**, *italic* → HTML, остальное экранируем."""
+    s = bold_inline(text)
+    # single *italic* (не путать с уже обработанным **)
+    parts = re.split(r'(\*[^*]+\*)', s)
+    out = []
+    for part in parts:
+        if part.startswith('*') and part.endswith('*') and len(part) > 2 and not part.startswith('**'):
+            out.append('<em>' + part[1:-1] + '</em>')
+        else:
+            out.append(part)
+    return ''.join(out)
+
+def md_to_html(text):
+    """Простой конвертер: заголовки, абзацы, списки, таблицы, нумерованные списки."""
+    lines = text.splitlines()
+    out, i = [], 0
+    while i < len(lines):
+        line = lines[i]
+        if line.startswith('### '):
+            out.append(f'<h3 class="rd-h3">{md_inline(line[4:].strip())}</h3>')
+        elif line.startswith('## '):
+            out.append(f'<h3 class="rd-h2">{md_inline(line[3:].strip())}</h3>')
+        elif line.startswith('# '):
+            out.append(f'<h3 class="rd-h1">{md_inline(line[2:].strip())}</h3>')
+        elif line.strip().startswith('|'):
+            # таблица
+            rows = []
+            while i < len(lines) and lines[i].strip().startswith('|'):
+                cells = [c.strip() for c in lines[i].strip().strip('|').split('|')]
+                if not all(re.fullmatch(r':?-+:?', c) for c in cells):
+                    rows.append(cells)
+                i += 1
+            i -= 1
+            if rows:
+                head = rows[0]
+                t = ['<div class="rune-table-wrap"><table class="rune-table"><thead><tr>']
+                t += [f'<th>{md_inline(c)}</th>' for c in head]
+                t.append('</tr></thead><tbody>')
+                for row in rows[1:]:
+                    t.append('<tr>' + ''.join(f'<td>{md_inline(c)}</td>' for c in row) + '</tr>')
+                t.append('</tbody></table></div>')
+                out.append(''.join(t))
+        elif re.match(r'^\d+\. ', line.strip()):
+            items = []
+            while i < len(lines) and re.match(r'^\d+\. ', lines[i].strip()):
+                items.append(re.sub(r'^\d+\. ', '', lines[i].strip()))
+                i += 1
+            i -= 1
+            out.append('<ol class="rune-ol">' + ''.join(f'<li>{md_inline(x)}</li>' for x in items) + '</ol>')
+        elif line.strip().startswith('- '):
+            items = []
+            while i < len(lines) and lines[i].strip().startswith('- '):
+                items.append(lines[i].strip()[2:])
+                i += 1
+            i -= 1
+            out.append('<ul class="rune-ul">' + ''.join(f'<li>{md_inline(x)}</li>' for x in items) + '</ul>')
+        elif line.strip():
+            para = [line]
+            while i + 1 < len(lines) and lines[i+1].strip() and not re.match(r'^(#|\||\d+\. |- )', lines[i+1].strip()):
+                i += 1
+                para.append(lines[i])
+            out.append('<p>' + md_inline(' '.join(para)) + '</p>')
+        i += 1
+    return '\n'.join(out)
+
+# ── страница «Расклады и таблица» ────────────────────────────────────────────
+
+def build_rasclady():
+    sec = SRC['sections']
+    tabs = [
+        ('🎲', 'Расклады', md_to_html(sec['rasclady'])),
+        ('▦', 'Сводная таблица', md_to_html(sec['table'])),
+        ('⚒', 'Магия по категориям', md_to_html(sec['magicCats'])),
+        ('📜', 'Источники', md_to_html(sec['outro'])),
+    ]
+    btns = '\n'.join(f'      <button class="rt-btn{" active" if i == 0 else ""}" data-tab="{i}">{icon} {esc(label)}</button>'
+                     for i, (icon, label, _) in enumerate(tabs))
+    panes = '\n'.join(f'    <div class="rt-pane{" active" if i == 0 else ""}" data-pane="{i}">\n{html_}\n    </div>'
+                      for i, (icon, label, html_) in enumerate(tabs))
+    body = f'''<header class="site-header">
+  <div class="header-inner">
+    <h1 class="site-title"><span class="title-star">🎲</span> Расклады <span class="title-sub">и сводная таблица</span></h1>
+    <p class="site-tagline">Диагностика · шпаргалка по 24 рунам · магический функционал</p>
+  </div>
+</header>
+
+<main class="sign-page rune-page">
+  <nav class="rune-tabs" aria-label="Разделы">
+{btns}
+  </nav>
+
+  <div class="sign-blocks" id="runePanes">
+{panes}
+  </div>
+
+  <p class="astro-disclaimer">Описанное — современная эзотерическая практика и справочный материал, а не исторически подтверждённая система древних германцев. Материалы носят справочный и развлекательный характер.</p>
+
+  <nav class="sign-nav" aria-label="Навигация">
+    <a class="sign-nav-btn back" href="index.html">ᚠ Все руны</a>
+  </nav>
+</main>
+
+{FOOTER}
+
+<script>
+(function() {{
+  var bar = document.querySelector('.rune-tabs');
+  var btns = Array.prototype.slice.call(bar.querySelectorAll('.rt-btn'));
+  var panes = Array.prototype.slice.call(document.querySelectorAll('#runePanes .rt-pane'));
+  bar.addEventListener('click', function(e) {{
+    var b = e.target.closest('.rt-btn');
+    if (!b) return;
+    btns.forEach(function(x) {{ x.classList.remove('active'); }});
+    panes.forEach(function(x) {{ x.classList.remove('active'); }});
+    b.classList.add('active');
+    var p = panes.filter(function(x) {{ return x.dataset.pane === b.dataset.tab; }})[0];
+    if (p) p.classList.add('active');
+  }});
+}})();
+</script>'''
+    out = shell('Расклады и сводная таблица рун | Справочник Старшего Футарка',
+                'Руническая диагностика: расклады на одну, три и семь рун, сводная таблица 24 рун, магический функционал по категориям, источники и методология.',
+                '../../', '../../', 'runes', body)
+    os.makedirs(os.path.join(WEBAPP, 'runes', 'rasclady'), exist_ok=True)
+    with open(os.path.join(WEBAPP, 'runes', 'rasclady', 'index.html'), 'w', encoding='utf-8') as f:
+        f.write(out)
+
 # ── main ─────────────────────────────────────────────────────────────────────
 
 def main():
     build_index()
+    build_rasclady()
     for i, r in enumerate(RUNES):
         prev = RUNES[i - 1] if i > 0 else None
         nxt = RUNES[i + 1] if i < len(RUNES) - 1 else None
         build_rune_page(r, prev, nxt)
-    print(f'OK: index + {len(RUNES)} rune pages, css v{CSS_V}')
+    print(f'OK: index + rasclady + {len(RUNES)} rune pages, css v{CSS_V}')
 
 if __name__ == '__main__':
     main()

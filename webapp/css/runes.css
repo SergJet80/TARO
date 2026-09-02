@@ -105,6 +105,64 @@
   border-left: 3px solid rgba(124, 92, 191, .55);
 }
 
+/* ─── Страница «Расклады»: md-конвертация ─── */
+.rd-h1, .rd-h2, .rd-h3 {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  color: var(--gold-bright);
+  letter-spacing: .03em;
+  margin: 18px 0 8px;
+}
+.rd-h1 { font-size: 1.35rem; }
+.rd-h2 { font-size: 1.2rem; }
+.rd-h3 { font-size: 1.05rem; color: var(--gold); }
+.rt-pane > p { color: var(--text); line-height: 1.72; font-size: .98rem; }
+.rune-ul, .rune-ol {
+  color: var(--text);
+  line-height: 1.7;
+  font-size: .98rem;
+  padding-left: 22px;
+  margin: 8px 0;
+  display: grid;
+  gap: 6px;
+}
+.rune-ul li::marker { color: var(--gold); }
+.rune-ol li::marker { color: var(--gold); }
+
+/* ─── Сводная таблица ─── */
+.rune-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(212, 175, 55, .2);
+  border-radius: var(--radius);
+  background: rgba(23, 18, 43, .5);
+}
+.rune-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .84rem;
+  line-height: 1.55;
+  min-width: 640px;
+}
+.rune-table th {
+  position: sticky;
+  top: 0;
+  background: rgba(23, 18, 43, .95);
+  color: var(--gold-bright);
+  font-weight: 600;
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(212, 175, 55, .4);
+  white-space: nowrap;
+}
+.rune-table td {
+  padding: 9px 12px;
+  color: var(--text);
+  border-bottom: 1px solid rgba(212, 175, 55, .1);
+  vertical-align: top;
+}
+.rune-table tr:last-child td { border-bottom: none; }
+.rune-table td:first-child { color: var(--gold-bright); white-space: nowrap; font-weight: 600; }
+.rune-table tbody tr:hover { background: rgba(124, 92, 191, .12); }
+
 /* ─── Адаптив ─── */
 @media (max-width: 640px) {
   .rt-btn { padding: 7px 13px; font-size: .82rem; }
