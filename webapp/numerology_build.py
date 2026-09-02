@@ -136,6 +136,7 @@ def shell(title, desc, css_prefix, nav_prefix, active, body):
 <link rel="stylesheet" href="{css_prefix}fonts/fonts.css">
 <link rel="stylesheet" href="{css_prefix}css/style.css?v={CSS_V}">
 <link rel="stylesheet" href="{css_prefix}css/astrology.css?v={CSS_V}">
+<link rel="stylesheet" href="{css_prefix}css/runes.css?v={CSS_V}">
 <link rel="stylesheet" href="{css_prefix}css/numerology.css?v={CSS_V}">
 </head>
 
