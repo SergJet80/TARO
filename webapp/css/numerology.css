@@ -1,0 +1,72 @@
+/* Нумерология и масти Таро — v2.7 */
+
+/* формула / заметки-выноски */
+.num-callout {
+  border-left: 3px solid var(--accent, #c9a227);
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 0 10px 10px 0;
+  padding: 12px 16px;
+  margin: 14px 0;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.num-callout strong { color: var(--accent, #c9a227); }
+
+.num-layer-note {
+  font-size: 0.86rem;
+  opacity: 0.7;
+  font-style: italic;
+  margin: 10px 0;
+}
+
+/* карточки значений */
+.num-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.03);
+}
+.num-card-head {
+  font-weight: 700;
+  color: var(--accent, #c9a227);
+  margin-bottom: 4px;
+}
+.num-card-body { line-height: 1.55; }
+
+/* таблицы */
+.num-table-wrap {
+  overflow-x: auto;
+  margin: 14px 0;
+  -webkit-overflow-scrolling: touch;
+}
+.num-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+.num-table th, .num-table td {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.45;
+}
+.num-table th {
+  background: rgba(255, 255, 255, 0.06);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.num-table tbody tr:nth-child(odd) { background: rgba(255, 255, 255, 0.02); }
+.num-cheat th { position: sticky; top: 0; }
+
+/* алгоритм */
+.num-ol { padding-left: 22px; margin: 12px 0; }
+.num-ol li { margin: 8px 0; line-height: 1.55; }
+
+/* источники */
+.num-src { font-size: 0.88rem; opacity: 0.85; margin: 6px 0; line-height: 1.5; }
+
+/* секции чисел: небольшая отбивка между числами */
+.num-num-sec { border-top: 1px solid rgba(255, 255, 255, 0.07); padding-top: 18px; }
+.num-num-sec:first-child { border-top: none; padding-top: 0; }
