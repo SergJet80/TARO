@@ -139,6 +139,11 @@ function renderPosition() {
   html.push(`<div class="pos-content">`);
   html.push(`<div class="kw-row">${p.keywords.map(k => `<span class="kw">${k}</span>`).join('')}</div>`);
   html.push(`<p class="short-value">${p.short}</p>`);
+  if (p.gd) {
+    html.push(`<div class="gd-block"><div class="gd-head">По ордену «Золотая Заря»</div>`
+      + `<p class="gd-title">«${p.gd.title_en}» — ${p.gd.title_ru}</p>`
+      + `<p class="gd-why">${p.gd.why}</p></div>`);
+  }
   for (const [key, title, icon] of SECTION_META) {
     html.push(`<div class="info-section"><h3><span>${icon}</span> ${title}</h3><p>${p[key]}</p></div>`);
   }

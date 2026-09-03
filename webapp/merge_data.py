@@ -2,7 +2,7 @@
 """Слияние JSON-частей в js/data.js + финальная валидация всех 78 карт."""
 import json, os, sys
 
-ROOT = "/home/serg/projects/tarot-guide"
+ROOT = "/home/serg/projects/Project-TARO/webapp"
 DATA = os.path.join(ROOT, "data")
 
 PARTS = [

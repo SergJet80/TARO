@@ -460,6 +460,30 @@ body {
   margin-bottom: 20px;
   line-height: 1.5;
 }
+/* Блок Golden Dawn (числовые МА) */
+.gd-block {
+  padding: 12px 18px;
+  border-left: 3px solid var(--gold-dim, #9a7b2f);
+  background: rgba(212, 175, 55, .045);
+  border-radius: 0 10px 10px 0;
+  margin-bottom: 20px;
+}
+.gd-head {
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--gold-dim, #9a7b2f);
+  margin-bottom: 6px;
+}
+.gd-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--gold-bright);
+  margin-bottom: 5px;
+}
+.gd-why { font-size: .95rem; color: var(--text); line-height: 1.55; }
+
 .info-section { margin-bottom: 20px; }
 .info-section h3 {
   font-family: 'Cormorant Garamond', Georgia, serif;
