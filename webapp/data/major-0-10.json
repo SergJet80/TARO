@@ -6,7 +6,7 @@
     "type": "major",
     "suit": null,
     "number": 0,
-    "img": "major-00-fool.jpg",
+    "img": "major-00-fool.webp",
     "element": "Воздух",
     "astro": "Уран",
     "upright": {
@@ -52,7 +52,7 @@
     "type": "major",
     "suit": null,
     "number": 1,
-    "img": "major-01-magician.jpg",
+    "img": "major-01-magician.webp",
     "element": "Воздух",
     "astro": "Меркурий",
     "upright": {
@@ -98,7 +98,7 @@
     "type": "major",
     "suit": null,
     "number": 2,
-    "img": "major-02-high-priestess.jpg",
+    "img": "major-02-high-priestess.webp",
     "element": "Вода",
     "astro": "Луна",
     "upright": {
@@ -144,7 +144,7 @@
     "type": "major",
     "suit": null,
     "number": 3,
-    "img": "major-03-empress.jpg",
+    "img": "major-03-empress.webp",
     "element": "Земля",
     "astro": "Венера",
     "upright": {
@@ -190,7 +190,7 @@
     "type": "major",
     "suit": null,
     "number": 4,
-    "img": "major-04-emperor.jpg",
+    "img": "major-04-emperor.webp",
     "element": "Огонь",
     "astro": "Овен",
     "upright": {
@@ -236,7 +236,7 @@
     "type": "major",
     "suit": null,
     "number": 5,
-    "img": "major-05-hierophant.jpg",
+    "img": "major-05-hierophant.webp",
     "element": "Земля",
     "astro": "Телец",
     "upright": {
@@ -282,7 +282,7 @@
     "type": "major",
     "suit": null,
     "number": 6,
-    "img": "major-06-lovers.jpg",
+    "img": "major-06-lovers.webp",
     "element": "Воздух",
     "astro": "Близнецы",
     "upright": {
@@ -328,7 +328,7 @@
     "type": "major",
     "suit": null,
     "number": 7,
-    "img": "major-07-chariot.jpg",
+    "img": "major-07-chariot.webp",
     "element": "Вода",
     "astro": "Рак",
     "upright": {
@@ -374,7 +374,7 @@
     "type": "major",
     "suit": null,
     "number": 8,
-    "img": "major-08-strength.jpg",
+    "img": "major-08-strength.webp",
     "element": "Огонь",
     "astro": "Лев",
     "upright": {
@@ -420,7 +420,7 @@
     "type": "major",
     "suit": null,
     "number": 9,
-    "img": "major-09-hermit.jpg",
+    "img": "major-09-hermit.webp",
     "element": "Земля",
     "astro": "Дева",
     "upright": {
@@ -466,7 +466,7 @@
     "type": "major",
     "suit": null,
     "number": 10,
-    "img": "major-10-wheel-of-fortune.jpg",
+    "img": "major-10-wheel-of-fortune.webp",
     "element": "Огонь",
     "astro": "Юпитер",
     "upright": {

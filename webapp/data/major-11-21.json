@@ -6,7 +6,7 @@
     "type": "major",
     "suit": null,
     "number": 11,
-    "img": "major-11-justice.jpg",
+    "img": "major-11-justice.webp",
     "element": "Воздух",
     "astro": "Весы",
     "upright": {
@@ -52,7 +52,7 @@
     "type": "major",
     "suit": null,
     "number": 12,
-    "img": "major-12-hanged-man.jpg",
+    "img": "major-12-hanged-man.webp",
     "element": "Вода",
     "astro": "Нептун",
     "upright": {
@@ -97,7 +97,7 @@
     "type": "major",
     "suit": null,
     "number": 13,
-    "img": "major-13-death.jpg",
+    "img": "major-13-death.webp",
     "element": "Вода",
     "astro": "Скорпион",
     "upright": {
@@ -142,7 +142,7 @@
     "type": "major",
     "suit": null,
     "number": 14,
-    "img": "major-14-temperance.jpg",
+    "img": "major-14-temperance.webp",
     "element": "Огонь",
     "astro": "Стрелец",
     "upright": {
@@ -187,7 +187,7 @@
     "type": "major",
     "suit": null,
     "number": 15,
-    "img": "major-15-devil.jpg",
+    "img": "major-15-devil.webp",
     "element": "Земля",
     "astro": "Козерог",
     "upright": {
@@ -233,7 +233,7 @@
     "type": "major",
     "suit": null,
     "number": 16,
-    "img": "major-16-tower.jpg",
+    "img": "major-16-tower.webp",
     "element": "Огонь",
     "astro": "Марс",
     "upright": {
@@ -278,7 +278,7 @@
     "type": "major",
     "suit": null,
     "number": 17,
-    "img": "major-17-star.jpg",
+    "img": "major-17-star.webp",
     "element": "Воздух",
     "astro": "Водолей",
     "upright": {
@@ -323,7 +323,7 @@
     "type": "major",
     "suit": null,
     "number": 18,
-    "img": "major-18-moon.jpg",
+    "img": "major-18-moon.webp",
     "element": "Вода",
     "astro": "Рыбы",
     "upright": {
@@ -368,7 +368,7 @@
     "type": "major",
     "suit": null,
     "number": 19,
-    "img": "major-19-sun.jpg",
+    "img": "major-19-sun.webp",
     "element": "Огонь",
     "astro": "Солнце",
     "upright": {
@@ -413,7 +413,7 @@
     "type": "major",
     "suit": null,
     "number": 20,
-    "img": "major-20-judgement.jpg",
+    "img": "major-20-judgement.webp",
     "element": "Огонь",
     "astro": "Плутон",
     "upright": {
@@ -458,7 +458,7 @@
     "type": "major",
     "suit": null,
     "number": 21,
-    "img": "major-21-world.jpg",
+    "img": "major-21-world.webp",
     "element": "Земля",
     "astro": "Сатурн",
     "upright": {

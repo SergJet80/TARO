@@ -462,27 +462,39 @@ body {
 }
 /* Блок Golden Dawn (числовые МА) */
 .gd-block {
-  padding: 12px 18px;
-  border-left: 3px solid var(--gold-dim, #9a7b2f);
-  background: rgba(212, 175, 55, .045);
-  border-radius: 0 10px 10px 0;
-  margin-bottom: 20px;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative;
+  padding: 16px 18px;
+  border: 1px solid rgba(240, 201, 79, .5);
+  border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212, 175, 55, .18), rgba(124, 92, 191, .12));
+  border-radius: 0 12px 12px 0;
+  margin: 0 0 22px;
+  color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212, 175, 55, .08), 0 7px 22px rgba(0, 0, 0, .2);
+  scroll-margin-top: 16px;
 }
 .gd-head {
-  font-size: .8rem;
+  font-size: .86rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .12em;
-  color: var(--gold-dim, #9a7b2f);
-  margin-bottom: 6px;
+  color: var(--gold-bright);
+  margin-bottom: 8px;
 }
+.gd-symbol { display: inline-block; margin-right: 5px; }
 .gd-title {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
+  font-weight: 600;
   font-style: italic;
   color: var(--gold-bright);
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 }
-.gd-why { font-size: .95rem; color: var(--text); line-height: 1.55; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.gd-missing { border-color: #d77; background: rgba(170, 45, 45, .18); }
 
 .info-section { margin-bottom: 20px; }
 .info-section h3 {
@@ -557,23 +569,25 @@ body {
   .modal-close { top: 8px; right: 8px; width: 40px; height: 40px; background: rgba(13, 10, 26, .92); }
 
   /* Шапка модалки: карта слева, текст справа (перенос вниз на узких) */
-  .modal-head { flex-wrap: wrap; gap: 14px; margin-bottom: 14px; }
-  .card-scene img { width: 96px; }
+  .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .card-scene img { width: 76px; }
   .m-title { font-size: 1.45rem; }
   .m-en { font-size: .85rem; }
   .m-meta { font-size: .82rem; }
 
   .pos-tab { flex: 1; text-align: center; padding: 11px 8px; font-size: .95rem; }
   .pos-tab-school { flex: 0 0 auto; margin-left: 0; }
+  .gd-block { padding: 14px; border-left-width: 4px; }
   .info-section p { font-size: .93rem; }
   .rd-body p { font-size: .9rem; }
 }
 
-/* Совсем узкие экраны (<360px): карта модалки переезжает вверх */
+/* Совсем узкие экраны: сохраняем компактную шапку, чтобы трактовка была выше. */
 @media (max-width: 360px) {
-  .modal-head { justify-content: center; text-align: center; }
-  .card-scene img { width: 110px; }
-  .head-info { width: 100%; }
+  .modal-head { text-align: left; gap: 10px; }
+  .card-scene img { width: 68px; }
+  .m-title { font-size: 1.3rem; }
+  .m-meta { font-size: .76rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

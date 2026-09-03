@@ -10,19 +10,19 @@ PLANETY = os.path.join(BASE, "astrology", "planety")
 
 # slug, имя, символ, подзаголовок, alt, картинка
 PLANETS = [
-    ("solnce",   "Солнце",    "☉", "Воля, жизненная сила, центр личности", "Планета Солнце — мистическая иллюстрация", "sun.jpg"),
-    ("luna",     "Луна",      "☽", "Чувства, интуиция, внутренняя безопасность", "Планета Луна — мистическая иллюстрация", "moon.jpg"),
-    ("merkurij", "Меркурий",  "☿", "Разум, речь, связь и информация", "Планета Меркурий — мистическая иллюстрация", "mercury.jpg"),
-    ("venera",   "Венера",    "♀", "Любовь, ценности, притяжение", "Планета Венера — мистическая иллюстрация", "venus.jpg"),
-    ("zemlja",   "Земля",     "⊕", "Воплощение, тело, опора", "Планета Земля — мистическая иллюстрация", "earth.jpg"),
-    ("mars",     "Марс",      "♂", "Действие, страсть, воля к победе", "Планета Марс — мистическая иллюстрация", "mars.jpg"),
-    ("jupiter",  "Юпитер",    "♃", "Рост, вера, удача, смысл", "Планета Юпитер — мистическая иллюстрация", "jupiter.jpg"),
-    ("saturn",   "Сатурн",    "♄", "Структура, дисциплина, зрелость", "Планета Сатурн — мистическая иллюстрация", "saturn.jpg"),
-    ("uran",     "Уран",      "♅", "Свобода, озарение, пробуждение", "Планета Уран — мистическая иллюстрация", "uranus.jpg"),
-    ("neptun",   "Нептун",    "♆", "Вдохновение, мистика, растворение границ", "Планета Нептун — мистическая иллюстрация", "neptune.jpg"),
-    ("pluton",   "Плутон",    "♇", "Трансформация, глубина, сила", "Планета Плутон — мистическая иллюстрация", "pluto.jpg"),
-    ("hiron",    "Хирон",     "⚷", "Раненый целитель, исцеление", "Планета Хирон — мистическая иллюстрация", "chiron.jpg"),
-    ("prozerpina", "Прозерпина", "⚷", "Тонкое преображение, очищение", "Планета Прозерпина — мистическая иллюстрация", "prozerpina.jpg"),
+    ("solnce",   "Солнце",    "☉", "Воля, жизненная сила, центр личности", "Планета Солнце — мистическая иллюстрация", "sun.webp"),
+    ("luna",     "Луна",      "☽", "Чувства, интуиция, внутренняя безопасность", "Планета Луна — мистическая иллюстрация", "moon.webp"),
+    ("merkurij", "Меркурий",  "☿", "Разум, речь, связь и информация", "Планета Меркурий — мистическая иллюстрация", "mercury.webp"),
+    ("venera",   "Венера",    "♀", "Любовь, ценности, притяжение", "Планета Венера — мистическая иллюстрация", "venus.webp"),
+    ("zemlja",   "Земля",     "⊕", "Воплощение, тело, опора", "Планета Земля — мистическая иллюстрация", "earth.webp"),
+    ("mars",     "Марс",      "♂", "Действие, страсть, воля к победе", "Планета Марс — мистическая иллюстрация", "mars.webp"),
+    ("jupiter",  "Юпитер",    "♃", "Рост, вера, удача, смысл", "Планета Юпитер — мистическая иллюстрация", "jupiter.webp"),
+    ("saturn",   "Сатурн",    "♄", "Структура, дисциплина, зрелость", "Планета Сатурн — мистическая иллюстрация", "saturn.webp"),
+    ("uran",     "Уран",      "♅", "Свобода, озарение, пробуждение", "Планета Уран — мистическая иллюстрация", "uranus.webp"),
+    ("neptun",   "Нептун",    "♆", "Вдохновение, мистика, растворение границ", "Планета Нептун — мистическая иллюстрация", "neptune.webp"),
+    ("pluton",   "Плутон",    "♇", "Трансформация, глубина, сила", "Планета Плутон — мистическая иллюстрация", "pluto.webp"),
+    ("hiron",    "Хирон",     "⚷", "Раненый целитель, исцеление", "Планета Хирон — мистическая иллюстрация", "chiron.webp"),
+    ("prozerpina", "Прозерпина", "⚷", "Тонкое преображение, очищение", "Планета Прозерпина — мистическая иллюстрация", "prozerpina.webp"),
 ]
 
 # slug -> список секций (заголовок, текст). Одна секция = один блок.
@@ -138,20 +138,20 @@ DISCLAIMER_INDEX = ("Прозерпина — гипотетическая эз�
                     "однако в традиционной астрологии их условно объединяют с планетами как значимые факторы карты. "
                     "Описания носят символический характер и не являются научным объяснением личности или судьбы.")
 
-V = "?v=2.1"
+V = "?v=3.0"
 
 def cards_html(current_slug):
     out = []
     for slug, name, sym, sub, alt, img in PLANETS:
         active = " pn-active" if slug == current_slug else ""
         out.append(
-            f'    <a class="sign-card{active}" href="{slug}/">\n'
+            f'    <a class="sign-card{active}" href="{slug}/index.html">\n'
             f'      <div class="sign-card-body">\n'
             f'        <span class="sign-sym">{sym}</span>\n'
             f'        <h2 class="sign-name">{name}</h2>\n'
             f'        <p class="sign-sub">{sub}</p>\n'
             f'      </div>\n'
-            f'      <div class="sign-card-img"><img src="../img/planets/{img.replace(".jpg", "-preview.jpg")}" alt="{alt}" loading="lazy"></div>\n'
+            f'      <div class="sign-card-img"><img src="../img/planets/{img.replace(".webp", "-preview.webp")}" alt="{alt}" loading="lazy"></div>\n'
             f'    </a>'
         )
     return "\n".join(out)
@@ -163,9 +163,8 @@ INDEX_TMPL = """<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Планеты · Астрология</title>
 <meta name="description" content="Планеты в астрологии: Солнце, Луна, Меркурий, Венера, Марс, Юпитер, Сатурн, Уран, Нептун, Плутон, Хирон, Прозерпина — энергии, сильные и теневые стороны.">
-<meta name="robots" content="noindex">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%E2%98%89%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="../../fonts/fonts.css">
+<link rel="stylesheet" href="../../fonts/fonts.css{v}">
 <link rel="stylesheet" href="../../css/style.css{v}">
 <link rel="stylesheet" href="../../css/astrology.css{v}">
 </head>
@@ -178,6 +177,8 @@ INDEX_TMPL = """<!DOCTYPE html>
   <div class="main-nav-inner">
     <a href="../../index.html"><span class="mn-icon">✦</span> Таро</a>
     <a href="../index.html" class="mn-active"><span class="mn-icon">♄</span> Астрология</a>
+    <a href="../../runes/index.html"><span class="mn-icon">ᚠ</span> Руны</a>
+    <a href="../../numerology/index.html"><span class="mn-icon">❿</span> Теория</a>
   </div>
 </nav>
 
@@ -219,9 +220,8 @@ PAGE_TMPL = """<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{name} — планета · Астрология</title>
 <meta name="description" content="Планета {name} в астрологии: энергия, влияние на жизнь, сильные и теневые стороны.">
-<meta name="robots" content="noindex">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E{sym_url}%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="../../../fonts/fonts.css">
+<link rel="stylesheet" href="../../../fonts/fonts.css{v}">
 <link rel="stylesheet" href="../../../css/style.css{v}">
 <link rel="stylesheet" href="../../../css/astrology.css{v}">
 </head>
@@ -232,8 +232,10 @@ PAGE_TMPL = """<!DOCTYPE html>
 
 <nav class="main-nav" aria-label="Разделы">
   <div class="main-nav-inner">
-    <a href="../../../../index.html"><span class="mn-icon">✦</span> Таро</a>
+    <a href="../../../index.html"><span class="mn-icon">✦</span> Таро</a>
     <a href="../../../astrology/index.html" class="mn-active"><span class="mn-icon">♄</span> Астрология</a>
+    <a href="../../../runes/index.html"><span class="mn-icon">ᚠ</span> Руны</a>
+    <a href="../../../numerology/index.html"><span class="mn-icon">❿</span> Теория</a>
   </div>
 </nav>
 
@@ -245,6 +247,12 @@ PAGE_TMPL = """<!DOCTYPE html>
 </header>
 
 <main class="sign-page">
+  <div class="section-switch">
+    <a class="ss-btn" href="../../index.html">♈ Знаки Зодиака</a>
+    <a class="ss-btn ss-active" href="../index.html">☉ Планеты</a>
+    <a class="ss-btn" href="../../wheel.html">🎡 Колесо</a>
+  </div>
+
   <div class="sign-hero">
     <img src="../../img/planets/{img}" alt="{alt}" loading="lazy" class="sign-hero-img">
   </div>
@@ -256,9 +264,9 @@ PAGE_TMPL = """<!DOCTYPE html>
   <p class="astro-disclaimer">Описание носит символический характер и не является научным объяснением личности или судьбы. Проявление планеты в реальной карте зависит от знака, дома и аспектов.</p>
 
   <nav class="sign-nav" aria-label="Навигация по планетам">
-    <a class="sign-nav-btn" href="../{prev}/"><span>←</span> {prev_name}</a>
+    <a class="sign-nav-btn" href="../{prev}/index.html"><span>←</span> {prev_name}</a>
     <a class="sign-nav-btn back" href="../index.html">☉ Все планеты</a>
-    <a class="sign-nav-btn" href="../{next}/">{next_name} <span>→</span></a>
+    <a class="sign-nav-btn" href="../{next}/index.html">{next_name} <span>→</span></a>
   </nav>
 </main>
 

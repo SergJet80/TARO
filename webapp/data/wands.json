@@ -6,7 +6,7 @@
   "type": "minor",
   "suit": "wands",
   "number": 1,
-  "img": "wands-ace.jpg",
+  "img": "wands-ace.webp",
   "element": "Огонь",
   "astro": null,
   "upright": {
@@ -61,7 +61,7 @@
   "type": "minor",
   "suit": "wands",
   "number": 2,
-  "img": "wands-two.jpg",
+  "img": "wands-two.webp",
   "element": "Огонь",
   "astro": "Марс в Овне",
   "upright": {
@@ -115,7 +115,7 @@
   "type": "minor",
   "suit": "wands",
   "number": 3,
-  "img": "wands-three.jpg",
+  "img": "wands-three.webp",
   "element": "Огонь",
   "astro": "Солнце в Овне",
   "upright": {
@@ -169,7 +169,7 @@
   "type": "minor",
   "suit": "wands",
   "number": 4,
-  "img": "wands-four.jpg",
+  "img": "wands-four.webp",
   "element": "Огонь",
   "astro": "Венера в Овне",
   "upright": {
@@ -223,7 +223,7 @@
   "type": "minor",
   "suit": "wands",
   "number": 5,
-  "img": "wands-five.jpg",
+  "img": "wands-five.webp",
   "element": "Огонь",
   "astro": "Сатурн во Льве",
   "upright": {
@@ -277,7 +277,7 @@
   "type": "minor",
   "suit": "wands",
   "number": 6,
-  "img": "wands-six.jpg",
+  "img": "wands-six.webp",
   "element": "Огонь",
   "astro": "Юпитер во Льве",
   "upright": {
@@ -332,7 +332,7 @@
   "type": "minor",
   "suit": "wands",
   "number": 7,
-  "img": "wands-seven.jpg",
+  "img": "wands-seven.webp",
   "element": "Огонь",
   "astro": "Марс во Льве",
   "upright": {
@@ -386,7 +386,7 @@
   "type": "minor",
   "suit": "wands",
   "number": 8,
-  "img": "wands-eight.jpg",
+  "img": "wands-eight.webp",
   "element": "Огонь",
   "astro": "Меркурий в Стрельце",
   "upright": {
@@ -441,7 +441,7 @@
   "type": "minor",
   "suit": "wands",
   "number": 9,
-  "img": "wands-nine.jpg",
+  "img": "wands-nine.webp",
   "element": "Огонь",
   "astro": "Луна в Стрельце",
   "upright": {
@@ -496,7 +496,7 @@
   "type": "minor",
   "suit": "wands",
   "number": 10,
-  "img": "wands-ten.jpg",
+  "img": "wands-ten.webp",
   "element": "Огонь",
   "astro": "Сатурн в Стрельце",
   "upright": {
@@ -550,7 +550,7 @@
   "type": "minor",
   "suit": "wands",
   "number": null,
-  "img": "wands-page.jpg",
+  "img": "wands-page.webp",
   "element": "Огонь",
   "astro": null,
   "upright": {
@@ -595,7 +595,7 @@
   "type": "minor",
   "suit": "wands",
   "number": null,
-  "img": "wands-knight.jpg",
+  "img": "wands-knight.webp",
   "element": "Огонь",
   "astro": null,
   "upright": {
@@ -640,7 +640,7 @@
   "type": "minor",
   "suit": "wands",
   "number": null,
-  "img": "wands-queen.jpg",
+  "img": "wands-queen.webp",
   "element": "Огонь",
   "astro": null,
   "upright": {
@@ -685,7 +685,7 @@
   "type": "minor",
   "suit": "wands",
   "number": null,
-  "img": "wands-king.jpg",
+  "img": "wands-king.webp",
   "element": "Огонь",
   "astro": null,
   "upright": {

@@ -13,7 +13,7 @@ import re
 
 WEBAPP = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(WEBAPP, 'data', 'runes.json')
-CSS_V = '2.6'
+CSS_V = '3.0'
 
 with open(DATA, encoding='utf-8') as f:
     SRC = json.load(f)
@@ -75,7 +75,7 @@ def shell(title, desc, css_prefix, nav_prefix, active, body):
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%E1%9A%A0%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="{css_prefix}fonts/fonts.css">
+<link rel="stylesheet" href="{css_prefix}fonts/fonts.css?v={CSS_V}">
 <link rel="stylesheet" href="{css_prefix}css/style.css?v={CSS_V}">
 <link rel="stylesheet" href="{css_prefix}css/astrology.css?v={CSS_V}">
 <link rel="stylesheet" href="{css_prefix}css/runes.css?v={CSS_V}">
@@ -91,6 +91,7 @@ def shell(title, desc, css_prefix, nav_prefix, active, body):
     <a href="{nav_prefix}index.html"><span class="mn-icon">✦</span> Таро</a>
     <a href="{nav_prefix}astrology/index.html"><span class="mn-icon">♄</span> Астрология</a>
     <a href="{nav_prefix}runes/index.html"{' class="mn-active"' if active == 'runes' else ''}><span class="mn-icon">ᚠ</span> Руны</a>
+    <a href="{nav_prefix}numerology/index.html"><span class="mn-icon">❿</span> Теория</a>
   </div>
 </nav>
 
@@ -107,7 +108,7 @@ FOOTER = '''<footer class="site-footer">
 # ── index раздела ────────────────────────────────────────────────────────────
 
 def rune_card(r):
-    return f'''    <a class="sign-card rune-card" href="{r['id']}/" data-aett="{esc(r['aett'])}" data-search="{esc((r['name'] + ' ' + r['nameRu'] + ' ' + ' '.join(r['keywords']) + ' ' + r['short']).lower())}">
+    return f'''    <a class="sign-card rune-card" href="{r['id']}/index.html" data-aett="{esc(r['aett'])}" data-search="{esc((r['name'] + ' ' + r['nameRu'] + ' ' + ' '.join(r['keywords']) + ' ' + r['short']).lower())}">
       <div class="sign-card-body">
         <span class="sign-sym rune-sym">{r['symbol']}</span>
         <h2 class="sign-name">{esc(r['nameRu'])}</h2>
@@ -141,7 +142,7 @@ def build_index():
 <main class="astro-wrap runes-wrap">
   <p class="astro-into">{esc(INTRO)}</p>
 
-  <a class="wheel-banner" href="rasclady/">
+  <a class="wheel-banner" href="rasclady/index.html">
     <span class="wb-icon">🎲</span>
     <span class="wb-text"><strong>Расклады и таблица</strong> — диагностика на 1/3/7 рун, сводная шпаргалка, магия по категориям</span>
     <span class="wb-arrow">→</span>
@@ -274,7 +275,7 @@ def build_rune_page(r, prev, nxt):
     def nb(other, arrow, before):
         if other:
             align = '' if before else ' <span>→</span>'
-            return f'    <a class="sign-nav-btn" href="../{other["id"]}/">{arrow} {esc(other["nameRu"])}{align}</a>'
+            return f'    <a class="sign-nav-btn" href="../{other["id"]}/index.html">{arrow} {esc(other["nameRu"])}{align}</a>'
         return f'    <a class="sign-nav-btn" style="visibility:hidden" href="#">{arrow} ·</a>'
 
     body = f'''<header class="site-header">

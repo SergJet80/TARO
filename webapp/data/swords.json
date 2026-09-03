@@ -6,7 +6,7 @@
   "type": "minor",
   "suit": "swords",
   "number": 1,
-  "img": "swords-ace.jpg",
+  "img": "swords-ace.webp",
   "element": "Воздух",
   "astro": null,
   "upright": {
@@ -61,7 +61,7 @@
   "type": "minor",
   "suit": "swords",
   "number": 2,
-  "img": "swords-two.jpg",
+  "img": "swords-two.webp",
   "element": "Воздух",
   "astro": "Луна в Весах",
   "upright": {
@@ -115,7 +115,7 @@
   "type": "minor",
   "suit": "swords",
   "number": 3,
-  "img": "swords-three.jpg",
+  "img": "swords-three.webp",
   "element": "Воздух",
   "astro": "Сатурн в Весах",
   "upright": {
@@ -169,7 +169,7 @@
   "type": "minor",
   "suit": "swords",
   "number": 4,
-  "img": "swords-four.jpg",
+  "img": "swords-four.webp",
   "element": "Воздух",
   "astro": "Юпитер в Весах",
   "upright": {
@@ -223,7 +223,7 @@
   "type": "minor",
   "suit": "swords",
   "number": 5,
-  "img": "swords-five.jpg",
+  "img": "swords-five.webp",
   "element": "Воздух",
   "astro": "Венера в Водолее",
   "upright": {
@@ -277,7 +277,7 @@
   "type": "minor",
   "suit": "swords",
   "number": 6,
-  "img": "swords-six.jpg",
+  "img": "swords-six.webp",
   "element": "Воздух",
   "astro": "Меркурий в Водолее",
   "upright": {
@@ -331,7 +331,7 @@
   "type": "minor",
   "suit": "swords",
   "number": 7,
-  "img": "swords-seven.jpg",
+  "img": "swords-seven.webp",
   "element": "Воздух",
   "astro": "Луна в Водолее",
   "upright": {
@@ -385,7 +385,7 @@
   "type": "minor",
   "suit": "swords",
   "number": 8,
-  "img": "swords-eight.jpg",
+  "img": "swords-eight.webp",
   "element": "Воздух",
   "astro": "Юпитер в Близнецах",
   "upright": {
@@ -439,7 +439,7 @@
   "type": "minor",
   "suit": "swords",
   "number": 9,
-  "img": "swords-nine.jpg",
+  "img": "swords-nine.webp",
   "element": "Воздух",
   "astro": "Марс в Близнецах",
   "upright": {
@@ -493,7 +493,7 @@
   "type": "minor",
   "suit": "swords",
   "number": 10,
-  "img": "swords-ten.jpg",
+  "img": "swords-ten.webp",
   "element": "Воздух",
   "astro": "Солнце в Близнецах",
   "upright": {
@@ -547,7 +547,7 @@
   "type": "minor",
   "suit": "swords",
   "number": null,
-  "img": "swords-page.jpg",
+  "img": "swords-page.webp",
   "element": "Воздух",
   "astro": null,
   "upright": {
@@ -592,7 +592,7 @@
   "type": "minor",
   "suit": "swords",
   "number": null,
-  "img": "swords-knight.jpg",
+  "img": "swords-knight.webp",
   "element": "Воздух",
   "astro": null,
   "upright": {
@@ -637,7 +637,7 @@
   "type": "minor",
   "suit": "swords",
   "number": null,
-  "img": "swords-queen.jpg",
+  "img": "swords-queen.webp",
   "element": "Воздух",
   "astro": null,
   "upright": {
@@ -682,7 +682,7 @@
   "type": "minor",
   "suit": "swords",
   "number": null,
-  "img": "swords-king.jpg",
+  "img": "swords-king.webp",
   "element": "Воздух",
   "astro": null,
   "upright": {

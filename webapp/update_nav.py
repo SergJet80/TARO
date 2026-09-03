@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Обновить main-nav на ВСЕХ страницах webapp (кроме numerology/, там уже собран) + CSS v2.7."""
+"""Обновить main-nav и версию CSS на всех HTML-страницах сайта."""
 import os, re
 
 WEBAPP = os.path.dirname(os.path.abspath(__file__))
-CSS_V = '2.7'
+CSS_V = '3.0'
 
 NAV = '''<nav class="main-nav" aria-label="Разделы">
   <div class="main-nav-inner">

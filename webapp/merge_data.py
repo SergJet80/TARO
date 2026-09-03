@@ -2,7 +2,7 @@
 """Слияние JSON-частей в js/data.js + финальная валидация всех 78 карт."""
 import json, os, sys
 
-ROOT = "/home/serg/projects/Project-TARO/webapp"
+ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(ROOT, "data")
 
 PARTS = [
@@ -20,6 +20,18 @@ PARTS = [
 
 FIELDS = ["short", "keywords", "archetype", "daily", "career", "love", "health", "esoteric"]
 errors, all_cards = [], []
+
+gd_path = os.path.join(DATA, "golden_dawn.json")
+try:
+    with open(gd_path, encoding="utf-8") as f:
+        golden_dawn = json.load(f)
+except Exception as e:
+    print(f"ОШИБКА: не удалось прочитать data/golden_dawn.json: {e}")
+    sys.exit(1)
+
+if not isinstance(golden_dawn, dict) or len(golden_dawn) != 40:
+    print(f"ОШИБКА: в data/golden_dawn.json должно быть 40 записей, найдено {len(golden_dawn) if isinstance(golden_dawn, dict) else '?'}")
+    sys.exit(1)
 
 for fn, expected_ids in PARTS:
     path = os.path.join(DATA, fn)
@@ -60,7 +72,21 @@ for fn, expected_ids in PARTS:
                     mn = 400 if f == "archetype" else 60
                     if len(v) < mn:
                         errors.append(f"{cid}.{pos}.{f}: {len(v)} < {mn}")
+
+            # Golden Dawn относится к Тузу–Десятке каждой масти.
+            # Данные хранятся отдельно и добавляются в оба положения карты.
+            if cid in golden_dawn:
+                gd = golden_dawn[cid]
+                gd_clean = {key: gd.get(key) for key in ("title_en", "title_ru", "why")}
+                if not all(isinstance(v, str) and v.strip() for v in gd_clean.values()):
+                    errors.append(f"{cid}.{pos}.gd: неполные данные")
+                else:
+                    p["gd"] = gd_clean
         all_cards.append(c)
+
+gd_ids = {c["id"] for c in all_cards if c.get("upright", {}).get("gd")}
+if gd_ids != set(golden_dawn):
+    errors.append("Golden Dawn: набор id не совпадает с 40 числовыми Младшими Арканами")
 
 if errors:
     print("ОШИБКИ:")

@@ -6,7 +6,7 @@
   "type": "minor",
   "suit": "cups",
   "number": 1,
-  "img": "cups-ace.jpg",
+  "img": "cups-ace.webp",
   "element": "Вода",
   "astro": null,
   "upright": {
@@ -63,7 +63,7 @@
   "number": 2,
   "type": "minor",
   "suit": "cups",
-  "img": "cups-two.jpg",
+  "img": "cups-two.webp",
   "element": "Вода",
   "astro": "Венера в Раке",
   "upright": {
@@ -120,7 +120,7 @@
   "number": 3,
   "type": "minor",
   "suit": "cups",
-  "img": "cups-three.jpg",
+  "img": "cups-three.webp",
   "element": "Вода",
   "astro": "Меркурий в Раке",
   "upright": {
@@ -175,7 +175,7 @@
   "number": 4,
   "type": "minor",
   "suit": "cups",
-  "img": "cups-four.jpg",
+  "img": "cups-four.webp",
   "element": "Вода",
   "astro": "Луна в Раке",
   "upright": {
@@ -231,7 +231,7 @@
   "number": 5,
   "type": "minor",
   "suit": "cups",
-  "img": "cups-five.jpg",
+  "img": "cups-five.webp",
   "element": "Вода",
   "astro": "Марс в Скорпионе",
   "upright": {
@@ -287,7 +287,7 @@
   "number": 6,
   "type": "minor",
   "suit": "cups",
-  "img": "cups-six.jpg",
+  "img": "cups-six.webp",
   "element": "Вода",
   "astro": "Солнце в Скорпионе",
   "upright": {
@@ -343,7 +343,7 @@
   "number": 7,
   "type": "minor",
   "suit": "cups",
-  "img": "cups-seven.jpg",
+  "img": "cups-seven.webp",
   "element": "Вода",
   "astro": "Венера в Скорпионе",
   "upright": {
@@ -398,7 +398,7 @@
   "number": 8,
   "type": "minor",
   "suit": "cups",
-  "img": "cups-eight.jpg",
+  "img": "cups-eight.webp",
   "element": "Вода",
   "astro": "Сатурн в Рыбах",
   "upright": {
@@ -453,7 +453,7 @@
   "number": 9,
   "type": "minor",
   "suit": "cups",
-  "img": "cups-nine.jpg",
+  "img": "cups-nine.webp",
   "element": "Вода",
   "astro": "Юпитер в Рыбах",
   "upright": {
@@ -508,7 +508,7 @@
   "number": 10,
   "type": "minor",
   "suit": "cups",
-  "img": "cups-ten.jpg",
+  "img": "cups-ten.webp",
   "element": "Вода",
   "astro": "Марс в Рыбах",
   "upright": {
@@ -563,7 +563,7 @@
   "type": "minor",
   "suit": "cups",
   "number": null,
-  "img": "cups-page.jpg",
+  "img": "cups-page.webp",
   "element": "Вода",
   "astro": null,
   "upright": {
@@ -608,7 +608,7 @@
   "type": "minor",
   "suit": "cups",
   "number": null,
-  "img": "cups-knight.jpg",
+  "img": "cups-knight.webp",
   "element": "Вода",
   "astro": null,
   "upright": {
@@ -653,7 +653,7 @@
   "type": "minor",
   "suit": "cups",
   "number": null,
-  "img": "cups-queen.jpg",
+  "img": "cups-queen.webp",
   "element": "Вода",
   "astro": null,
   "upright": {
@@ -698,7 +698,7 @@
   "type": "minor",
   "suit": "cups",
   "number": null,
-  "img": "cups-king.jpg",
+  "img": "cups-king.webp",
   "element": "Вода",
   "astro": null,
   "upright": {

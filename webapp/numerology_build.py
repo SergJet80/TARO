@@ -13,7 +13,7 @@ import re
 
 WEBAPP = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(WEBAPP, 'data', 'numerology.json')
-CSS_V = '2.7'
+CSS_V = '3.0'
 
 with open(DATA, encoding='utf-8') as f:
     SRC = json.load(f)
@@ -133,7 +133,7 @@ def shell(title, desc, css_prefix, nav_prefix, active, body):
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%E2%9D%BF%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="{css_prefix}fonts/fonts.css">
+<link rel="stylesheet" href="{css_prefix}fonts/fonts.css?v={CSS_V}">
 <link rel="stylesheet" href="{css_prefix}css/style.css?v={CSS_V}">
 <link rel="stylesheet" href="{css_prefix}css/astrology.css?v={CSS_V}">
 <link rel="stylesheet" href="{css_prefix}css/runes.css?v={CSS_V}">

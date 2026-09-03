@@ -7,7 +7,7 @@ const TARO_CARDS = [
   "type": "major",
   "suit": null,
   "number": 0,
-  "img": "major-00-fool.jpg",
+  "img": "major-00-fool.webp",
   "element": "Воздух",
   "astro": "Уран",
   "upright": {
@@ -53,7 +53,7 @@ const TARO_CARDS = [
   "type": "major",
   "suit": null,
   "number": 1,
-  "img": "major-01-magician.jpg",
+  "img": "major-01-magician.webp",
   "element": "Воздух",
   "astro": "Меркурий",
   "upright": {
@@ -99,7 +99,7 @@ const TARO_CARDS = [
   "type": "major",
   "suit": null,
   "number": 2,
-  "img": "major-02-high-priestess.jpg",
+  "img": "major-02-high-priestess.webp",
   "element": "Вода",
   "astro": "Луна",
   "upright": {
@@ -145,7 +145,7 @@ const TARO_CARDS = [
   "type": "major",
   "suit": null,
   "number": 3,
-  "img": "major-03-empress.jpg",
+  "img": "major-03-empress.webp",
   "element": "Земля",
   "astro": "Венера",
   "upright": {
@@ -191,7 +191,7 @@ const TARO_CARDS = [
   "type": "major",
   "suit": null,
   "number": 4,
-  "img": "major-04-emperor.jpg",
+  "img": "major-04-emperor.webp",
   "element": "Огонь",
   "astro": "Овен",
   "upright": {
@@ -237,7 +237,7 @@ const TARO_CARDS = [
   "type": "major",
   "suit": null,
   "number": 5,
-  "img": "major-05-hierophant.jpg",
+  "img": "major-05-hierophant.webp",
   "element": "Земля",
   "astro": "Телец",
   "upright": {
@@ -283,7 +283,7 @@ const TARO_CARDS = [
   "type": "major",
   "suit": null,
   "number": 6,
-  "img": "major-06-lovers.jpg",
+  "img": "major-06-lovers.webp",
   "element": "Воздух",
   "astro": "Близнецы",
   "upright": {
@@ -329,7 +329,7 @@ const TARO_CARDS = [
   "type": "major",
   "suit": null,
   "number": 7,
-  "img": "major-07-chariot.jpg",
+  "img": "major-07-chariot.webp",
   "element": "Вода",
   "astro": "Рак",
   "upright": {
@@ -375,7 +375,7 @@ const TARO_CARDS = [
   "type": "major",
   "suit": null,
   "number": 8,
-  "img": "major-08-strength.jpg",
+  "img": "major-08-strength.webp",
   "element": "Огонь",
   "astro": "Лев",
   "upright": {
@@ -421,7 +421,7 @@ const TARO_CARDS = [
   "type": "major",
   "suit": null,
   "number": 9,
-  "img": "major-09-hermit.jpg",
+  "img": "major-09-hermit.webp",
   "element": "Земля",
   "astro": "Дева",
   "upright": {
@@ -467,7 +467,7 @@ const TARO_CARDS = [
   "type": "major",
   "suit": null,
   "number": 10,
-  "img": "major-10-wheel-of-fortune.jpg",
+  "img": "major-10-wheel-of-fortune.webp",
   "element": "Огонь",
   "astro": "Юпитер",
   "upright": {
@@ -513,7 +513,7 @@ const TARO_CARDS = [
   "type": "major",
   "suit": null,
   "number": 11,
-  "img": "major-11-justice.jpg",
+  "img": "major-11-justice.webp",
   "element": "Воздух",
   "astro": "Весы",
   "upright": {
@@ -559,7 +559,7 @@ const TARO_CARDS = [
   "type": "major",
   "suit": null,
   "number": 12,
-  "img": "major-12-hanged-man.jpg",
+  "img": "major-12-hanged-man.webp",
   "element": "Вода",
   "astro": "Нептун",
   "upright": {
@@ -604,7 +604,7 @@ const TARO_CARDS = [
   "type": "major",
   "suit": null,
   "number": 13,
-  "img": "major-13-death.jpg",
+  "img": "major-13-death.webp",
   "element": "Вода",
   "astro": "Скорпион",
   "upright": {
@@ -649,7 +649,7 @@ const TARO_CARDS = [
   "type": "major",
   "suit": null,
   "number": 14,
-  "img": "major-14-temperance.jpg",
+  "img": "major-14-temperance.webp",
   "element": "Огонь",
   "astro": "Стрелец",
   "upright": {
@@ -694,7 +694,7 @@ const TARO_CARDS = [
   "type": "major",
   "suit": null,
   "number": 15,
-  "img": "major-15-devil.jpg",
+  "img": "major-15-devil.webp",
   "element": "Земля",
   "astro": "Козерог",
   "upright": {
@@ -740,7 +740,7 @@ const TARO_CARDS = [
   "type": "major",
   "suit": null,
   "number": 16,
-  "img": "major-16-tower.jpg",
+  "img": "major-16-tower.webp",
   "element": "Огонь",
   "astro": "Марс",
   "upright": {
@@ -785,7 +785,7 @@ const TARO_CARDS = [
   "type": "major",
   "suit": null,
   "number": 17,
-  "img": "major-17-star.jpg",
+  "img": "major-17-star.webp",
   "element": "Воздух",
   "astro": "Водолей",
   "upright": {
@@ -830,7 +830,7 @@ const TARO_CARDS = [
   "type": "major",
   "suit": null,
   "number": 18,
-  "img": "major-18-moon.jpg",
+  "img": "major-18-moon.webp",
   "element": "Вода",
   "astro": "Рыбы",
   "upright": {
@@ -875,7 +875,7 @@ const TARO_CARDS = [
   "type": "major",
   "suit": null,
   "number": 19,
-  "img": "major-19-sun.jpg",
+  "img": "major-19-sun.webp",
   "element": "Огонь",
   "astro": "Солнце",
   "upright": {
@@ -920,7 +920,7 @@ const TARO_CARDS = [
   "type": "major",
   "suit": null,
   "number": 20,
-  "img": "major-20-judgement.jpg",
+  "img": "major-20-judgement.webp",
   "element": "Огонь",
   "astro": "Плутон",
   "upright": {
@@ -965,7 +965,7 @@ const TARO_CARDS = [
   "type": "major",
   "suit": null,
   "number": 21,
-  "img": "major-21-world.jpg",
+  "img": "major-21-world.webp",
   "element": "Земля",
   "astro": "Сатурн",
   "upright": {
@@ -1010,7 +1010,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "wands",
   "number": 1,
-  "img": "wands-ace.jpg",
+  "img": "wands-ace.webp",
   "element": "Огонь",
   "astro": null,
   "upright": {
@@ -1065,7 +1065,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "wands",
   "number": 2,
-  "img": "wands-two.jpg",
+  "img": "wands-two.webp",
   "element": "Огонь",
   "astro": "Марс в Овне",
   "upright": {
@@ -1119,7 +1119,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "wands",
   "number": 3,
-  "img": "wands-three.jpg",
+  "img": "wands-three.webp",
   "element": "Огонь",
   "astro": "Солнце в Овне",
   "upright": {
@@ -1173,7 +1173,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "wands",
   "number": 4,
-  "img": "wands-four.jpg",
+  "img": "wands-four.webp",
   "element": "Огонь",
   "astro": "Венера в Овне",
   "upright": {
@@ -1227,7 +1227,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "wands",
   "number": 5,
-  "img": "wands-five.jpg",
+  "img": "wands-five.webp",
   "element": "Огонь",
   "astro": "Сатурн во Льве",
   "upright": {
@@ -1281,7 +1281,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "wands",
   "number": 6,
-  "img": "wands-six.jpg",
+  "img": "wands-six.webp",
   "element": "Огонь",
   "astro": "Юпитер во Льве",
   "upright": {
@@ -1336,7 +1336,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "wands",
   "number": 7,
-  "img": "wands-seven.jpg",
+  "img": "wands-seven.webp",
   "element": "Огонь",
   "astro": "Марс во Льве",
   "upright": {
@@ -1390,7 +1390,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "wands",
   "number": 8,
-  "img": "wands-eight.jpg",
+  "img": "wands-eight.webp",
   "element": "Огонь",
   "astro": "Меркурий в Стрельце",
   "upright": {
@@ -1445,7 +1445,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "wands",
   "number": 9,
-  "img": "wands-nine.jpg",
+  "img": "wands-nine.webp",
   "element": "Огонь",
   "astro": "Луна в Стрельце",
   "upright": {
@@ -1500,7 +1500,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "wands",
   "number": 10,
-  "img": "wands-ten.jpg",
+  "img": "wands-ten.webp",
   "element": "Огонь",
   "astro": "Сатурн в Стрельце",
   "upright": {
@@ -1554,7 +1554,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "wands",
   "number": null,
-  "img": "wands-page.jpg",
+  "img": "wands-page.webp",
   "element": "Огонь",
   "astro": null,
   "upright": {
@@ -1599,7 +1599,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "wands",
   "number": null,
-  "img": "wands-knight.jpg",
+  "img": "wands-knight.webp",
   "element": "Огонь",
   "astro": null,
   "upright": {
@@ -1644,7 +1644,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "wands",
   "number": null,
-  "img": "wands-queen.jpg",
+  "img": "wands-queen.webp",
   "element": "Огонь",
   "astro": null,
   "upright": {
@@ -1689,7 +1689,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "wands",
   "number": null,
-  "img": "wands-king.jpg",
+  "img": "wands-king.webp",
   "element": "Огонь",
   "astro": null,
   "upright": {
@@ -1734,7 +1734,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "cups",
   "number": 1,
-  "img": "cups-ace.jpg",
+  "img": "cups-ace.webp",
   "element": "Вода",
   "astro": null,
   "upright": {
@@ -1791,7 +1791,7 @@ const TARO_CARDS = [
   "number": 2,
   "type": "minor",
   "suit": "cups",
-  "img": "cups-two.jpg",
+  "img": "cups-two.webp",
   "element": "Вода",
   "astro": "Венера в Раке",
   "upright": {
@@ -1848,7 +1848,7 @@ const TARO_CARDS = [
   "number": 3,
   "type": "minor",
   "suit": "cups",
-  "img": "cups-three.jpg",
+  "img": "cups-three.webp",
   "element": "Вода",
   "astro": "Меркурий в Раке",
   "upright": {
@@ -1903,7 +1903,7 @@ const TARO_CARDS = [
   "number": 4,
   "type": "minor",
   "suit": "cups",
-  "img": "cups-four.jpg",
+  "img": "cups-four.webp",
   "element": "Вода",
   "astro": "Луна в Раке",
   "upright": {
@@ -1959,7 +1959,7 @@ const TARO_CARDS = [
   "number": 5,
   "type": "minor",
   "suit": "cups",
-  "img": "cups-five.jpg",
+  "img": "cups-five.webp",
   "element": "Вода",
   "astro": "Марс в Скорпионе",
   "upright": {
@@ -2015,7 +2015,7 @@ const TARO_CARDS = [
   "number": 6,
   "type": "minor",
   "suit": "cups",
-  "img": "cups-six.jpg",
+  "img": "cups-six.webp",
   "element": "Вода",
   "astro": "Солнце в Скорпионе",
   "upright": {
@@ -2071,7 +2071,7 @@ const TARO_CARDS = [
   "number": 7,
   "type": "minor",
   "suit": "cups",
-  "img": "cups-seven.jpg",
+  "img": "cups-seven.webp",
   "element": "Вода",
   "astro": "Венера в Скорпионе",
   "upright": {
@@ -2126,7 +2126,7 @@ const TARO_CARDS = [
   "number": 8,
   "type": "minor",
   "suit": "cups",
-  "img": "cups-eight.jpg",
+  "img": "cups-eight.webp",
   "element": "Вода",
   "astro": "Сатурн в Рыбах",
   "upright": {
@@ -2181,7 +2181,7 @@ const TARO_CARDS = [
   "number": 9,
   "type": "minor",
   "suit": "cups",
-  "img": "cups-nine.jpg",
+  "img": "cups-nine.webp",
   "element": "Вода",
   "astro": "Юпитер в Рыбах",
   "upright": {
@@ -2236,7 +2236,7 @@ const TARO_CARDS = [
   "number": 10,
   "type": "minor",
   "suit": "cups",
-  "img": "cups-ten.jpg",
+  "img": "cups-ten.webp",
   "element": "Вода",
   "astro": "Марс в Рыбах",
   "upright": {
@@ -2291,7 +2291,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "cups",
   "number": null,
-  "img": "cups-page.jpg",
+  "img": "cups-page.webp",
   "element": "Вода",
   "astro": null,
   "upright": {
@@ -2336,7 +2336,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "cups",
   "number": null,
-  "img": "cups-knight.jpg",
+  "img": "cups-knight.webp",
   "element": "Вода",
   "astro": null,
   "upright": {
@@ -2381,7 +2381,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "cups",
   "number": null,
-  "img": "cups-queen.jpg",
+  "img": "cups-queen.webp",
   "element": "Вода",
   "astro": null,
   "upright": {
@@ -2426,7 +2426,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "cups",
   "number": null,
-  "img": "cups-king.jpg",
+  "img": "cups-king.webp",
   "element": "Вода",
   "astro": null,
   "upright": {
@@ -2471,7 +2471,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "swords",
   "number": 1,
-  "img": "swords-ace.jpg",
+  "img": "swords-ace.webp",
   "element": "Воздух",
   "astro": null,
   "upright": {
@@ -2526,7 +2526,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "swords",
   "number": 2,
-  "img": "swords-two.jpg",
+  "img": "swords-two.webp",
   "element": "Воздух",
   "astro": "Луна в Весах",
   "upright": {
@@ -2580,7 +2580,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "swords",
   "number": 3,
-  "img": "swords-three.jpg",
+  "img": "swords-three.webp",
   "element": "Воздух",
   "astro": "Сатурн в Весах",
   "upright": {
@@ -2634,7 +2634,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "swords",
   "number": 4,
-  "img": "swords-four.jpg",
+  "img": "swords-four.webp",
   "element": "Воздух",
   "astro": "Юпитер в Весах",
   "upright": {
@@ -2688,7 +2688,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "swords",
   "number": 5,
-  "img": "swords-five.jpg",
+  "img": "swords-five.webp",
   "element": "Воздух",
   "astro": "Венера в Водолее",
   "upright": {
@@ -2742,7 +2742,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "swords",
   "number": 6,
-  "img": "swords-six.jpg",
+  "img": "swords-six.webp",
   "element": "Воздух",
   "astro": "Меркурий в Водолее",
   "upright": {
@@ -2796,7 +2796,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "swords",
   "number": 7,
-  "img": "swords-seven.jpg",
+  "img": "swords-seven.webp",
   "element": "Воздух",
   "astro": "Луна в Водолее",
   "upright": {
@@ -2850,7 +2850,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "swords",
   "number": 8,
-  "img": "swords-eight.jpg",
+  "img": "swords-eight.webp",
   "element": "Воздух",
   "astro": "Юпитер в Близнецах",
   "upright": {
@@ -2904,7 +2904,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "swords",
   "number": 9,
-  "img": "swords-nine.jpg",
+  "img": "swords-nine.webp",
   "element": "Воздух",
   "astro": "Марс в Близнецах",
   "upright": {
@@ -2958,7 +2958,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "swords",
   "number": 10,
-  "img": "swords-ten.jpg",
+  "img": "swords-ten.webp",
   "element": "Воздух",
   "astro": "Солнце в Близнецах",
   "upright": {
@@ -3012,7 +3012,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "swords",
   "number": null,
-  "img": "swords-page.jpg",
+  "img": "swords-page.webp",
   "element": "Воздух",
   "astro": null,
   "upright": {
@@ -3057,7 +3057,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "swords",
   "number": null,
-  "img": "swords-knight.jpg",
+  "img": "swords-knight.webp",
   "element": "Воздух",
   "astro": null,
   "upright": {
@@ -3102,7 +3102,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "swords",
   "number": null,
-  "img": "swords-queen.jpg",
+  "img": "swords-queen.webp",
   "element": "Воздух",
   "astro": null,
   "upright": {
@@ -3147,7 +3147,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "swords",
   "number": null,
-  "img": "swords-king.jpg",
+  "img": "swords-king.webp",
   "element": "Воздух",
   "astro": null,
   "upright": {
@@ -3192,7 +3192,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "pentacles",
   "number": 1,
-  "img": "pentacles-ace.jpg",
+  "img": "pentacles-ace.webp",
   "element": "Земля",
   "astro": null,
   "upright": {
@@ -3248,7 +3248,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "pentacles",
   "number": 2,
-  "img": "pentacles-two.jpg",
+  "img": "pentacles-two.webp",
   "element": "Земля",
   "astro": "Юпитер в Козероге",
   "upright": {
@@ -3304,7 +3304,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "pentacles",
   "number": 3,
-  "img": "pentacles-three.jpg",
+  "img": "pentacles-three.webp",
   "element": "Земля",
   "astro": "Марс в Козероге",
   "upright": {
@@ -3360,7 +3360,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "pentacles",
   "number": 4,
-  "img": "pentacles-four.jpg",
+  "img": "pentacles-four.webp",
   "element": "Земля",
   "astro": "Солнце в Козероге",
   "upright": {
@@ -3416,7 +3416,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "pentacles",
   "number": 5,
-  "img": "pentacles-five.jpg",
+  "img": "pentacles-five.webp",
   "element": "Земля",
   "astro": "Меркурий в Тельце",
   "upright": {
@@ -3472,7 +3472,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "pentacles",
   "number": 6,
-  "img": "pentacles-six.jpg",
+  "img": "pentacles-six.webp",
   "element": "Земля",
   "astro": "Луна в Тельце",
   "upright": {
@@ -3528,7 +3528,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "pentacles",
   "number": 7,
-  "img": "pentacles-seven.jpg",
+  "img": "pentacles-seven.webp",
   "element": "Земля",
   "astro": "Сатурн в Тельце",
   "upright": {
@@ -3583,7 +3583,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "pentacles",
   "number": 8,
-  "img": "pentacles-eight.jpg",
+  "img": "pentacles-eight.webp",
   "element": "Земля",
   "astro": "Солнце в Деве",
   "upright": {
@@ -3639,7 +3639,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "pentacles",
   "number": 9,
-  "img": "pentacles-nine.jpg",
+  "img": "pentacles-nine.webp",
   "element": "Земля",
   "astro": "Венера в Деве",
   "upright": {
@@ -3695,7 +3695,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "pentacles",
   "number": 10,
-  "img": "pentacles-ten.jpg",
+  "img": "pentacles-ten.webp",
   "element": "Земля",
   "astro": "Меркурий в Деве",
   "upright": {
@@ -3751,7 +3751,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "pentacles",
   "number": null,
-  "img": "pentacles-page.jpg",
+  "img": "pentacles-page.webp",
   "element": "Земля",
   "astro": null,
   "upright": {
@@ -3797,7 +3797,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "pentacles",
   "number": null,
-  "img": "pentacles-knight.jpg",
+  "img": "pentacles-knight.webp",
   "element": "Земля",
   "astro": null,
   "upright": {
@@ -3843,7 +3843,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "pentacles",
   "number": null,
-  "img": "pentacles-queen.jpg",
+  "img": "pentacles-queen.webp",
   "element": "Земля",
   "astro": null,
   "upright": {
@@ -3889,7 +3889,7 @@ const TARO_CARDS = [
   "type": "minor",
   "suit": "pentacles",
   "number": null,
-  "img": "pentacles-king.jpg",
+  "img": "pentacles-king.webp",
   "element": "Земля",
   "astro": null,
   "upright": {

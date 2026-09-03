@@ -7,6 +7,7 @@
 import os
 
 BASE = os.path.dirname(os.path.abspath(__file__))
+ASSET_VERSION = "3.0"
 
 # ─── Данные знаков ───
 # slug, имя, символ, подпись для карточки, 9 текстовых блоков
@@ -169,9 +170,8 @@ def head(title, desc, root, v):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title}</title>
 <meta name="description" content="{desc}">
-<meta name="robots" content="noindex">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="{root}fonts/fonts.css">
+<link rel="stylesheet" href="{root}fonts/fonts.css?v={v}">
 <link rel="stylesheet" href="{root}css/style.css?v={v}">
 <link rel="stylesheet" href="{root}css/astrology.css?v={v}">
 </head>
@@ -185,6 +185,8 @@ def nav(root, active):
   <div class="main-nav-inner">
     <a href="{root}index.html"{taro}><span class="mn-icon">✦</span> Таро</a>
     <a href="{root}astrology/index.html"{astro}><span class="mn-icon">♄</span> Астрология</a>
+    <a href="{root}runes/index.html"><span class="mn-icon">ᚠ</span> Руны</a>
+    <a href="{root}numerology/index.html"><span class="mn-icon">❿</span> Теория</a>
   </div>
 </nav>
 """
@@ -193,16 +195,16 @@ def build_index():
     """Главная страница раздела: 12 карточек."""
     cards = []
     for slug, name, sym, sub, _ in SIGNS:
-        cards.append(f"""    <a class="sign-card" href="{slug}/">
+        cards.append(f"""    <a class="sign-card" href="{slug}/index.html">
       <div class="sign-card-body">
         <span class="sign-sym">{sym}</span>
         <h2 class="sign-name">{name}</h2>
         <p class="sign-sub">{sub}</p>
       </div>
-      <div class="sign-card-img"><img src="img/signs/{slug}-preview.jpg" alt="Знак Зодиака {name} — мистическая иллюстрация" loading="lazy"></div>
+      <div class="sign-card-img"><img src="img/signs/{slug}-preview.webp" alt="Знак Зодиака {name} — мистическая иллюстрация" loading="lazy"></div>
     </a>""")
     cards_html = "\n".join(cards)
-    return f"""{head("Знаки Зодиака · Астрология", "Обобщённые описания всех 12 знаков Зодиака: характер, сильные и слабые стороны, любовь, работа, внутренние противоречия.", "../", "1.7")}
+    return f"""{head("Знаки Зодиака · Астрология", "Обобщённые описания всех 12 знаков Зодиака: характер, сильные и слабые стороны, любовь, работа, внутренние противоречия.", "../", ASSET_VERSION)}
 <body>
 
 <div class="stars" aria-hidden="true"></div>
@@ -218,6 +220,12 @@ def build_index():
 </header>
 
 <main class="astro-wrap">
+  <div class="section-switch">
+    <a class="ss-btn ss-active" href="index.html">♈ Знаки Зодиака</a>
+    <a class="ss-btn" href="planety/index.html">☉ Планеты</a>
+    <a class="ss-btn" href="wheel.html">🎡 Колесо</a>
+  </div>
+
   <p class="astro-into">Каждый знак — это обобщённый портрет по положению Солнца в момент рождения. Ниже — 12 карточек: нажми на знак, чтобы прочитать про него.</p>
 
   <a class="wheel-banner" href="wheel.html">
@@ -256,7 +264,7 @@ def build_sign(idx, slug, name, sym, sub, blocks):
     </section>""")
     secs_html = "\n".join(secs)
 
-    return f"""{head(page_title(name), page_desc(name), root, "1.7")}
+    return f"""{head(page_title(name), page_desc(name), root, ASSET_VERSION)}
 <body>
 
 <div class="stars" aria-hidden="true"></div>
@@ -272,8 +280,14 @@ def build_sign(idx, slug, name, sym, sub, blocks):
 </header>
 
 <main class="sign-page">
+  <div class="section-switch">
+    <a class="ss-btn ss-active" href="../index.html">♈ Знаки Зодиака</a>
+    <a class="ss-btn" href="../planety/index.html">☉ Планеты</a>
+    <a class="ss-btn" href="../wheel.html">🎡 Колесо</a>
+  </div>
+
   <div class="sign-hero">
-    <img src="../img/signs/{slug}.jpg" alt="Знак Зодиака {name} — мистическая иллюстрация" loading="lazy" class="sign-hero-img">
+    <img src="../img/signs/{slug}.webp" alt="Знак Зодиака {name} — мистическая иллюстрация" loading="lazy" class="sign-hero-img">
   </div>
 
   <div class="sign-blocks">
@@ -283,9 +297,9 @@ def build_sign(idx, slug, name, sym, sub, blocks):
   <p class="astro-disclaimer">{DISCLAIMER}</p>
 
   <nav class="sign-nav" aria-label="Навигация по знакам">
-    <a class="sign-nav-btn" href="../{prev_slug}/"><span>←</span> {prev_name}</a>
+    <a class="sign-nav-btn" href="../{prev_slug}/index.html"><span>←</span> {prev_name}</a>
     <a class="sign-nav-btn back" href="../index.html">✦ Все знаки</a>
-    <a class="sign-nav-btn" href="../{next_slug}/">{next_name} <span>→</span></a>
+    <a class="sign-nav-btn" href="../{next_slug}/index.html">{next_name} <span>→</span></a>
   </nav>
 </main>
 
@@ -304,7 +318,7 @@ def main():
     os.makedirs(os.path.dirname(idx_path), exist_ok=True)
     with open(idx_path, "w", encoding="utf-8") as f:
         f.write(build_index())
-    print("✓ astrology/index.html")
+    print("OK astrology/index.html")
 
     # знаки
     for idx, (slug, name, sym, sub, blocks) in enumerate(SIGNS):
@@ -312,7 +326,7 @@ def main():
         os.makedirs(d, exist_ok=True)
         with open(os.path.join(d, "index.html"), "w", encoding="utf-8") as f:
             f.write(build_sign(idx, slug, name, sym, sub, blocks))
-        print(f"✓ astrology/{slug}/index.html")
+        print(f"OK astrology/{slug}/index.html")
 
 
 if __name__ == "__main__":

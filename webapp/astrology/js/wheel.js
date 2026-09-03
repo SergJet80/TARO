@@ -181,7 +181,7 @@
         '<p class="zd-m"><strong>' + s.month + '</strong> — ' + s.work + '</p>' +
       '</div>' +
       '<div class="zd-actions">' +
-        '<a class="zd-link" href="' + s.slug + '/">Открыть страницу знака →</a>' +
+        '<a class="zd-link" href="' + s.slug + '/index.html">Открыть страницу знака →</a>' +
         '<button class="zd-btn" type="button" data-opp="' + s.oppositeSlug + '">Тень (' + s.opposite + ')</button>' +
       '</div>';
 

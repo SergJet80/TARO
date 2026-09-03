@@ -36,6 +36,23 @@ let currentQuery = '';
 let currentCard = null;
 let currentPos = 'upright';
 
+const GOLDEN_DAWN_RANKS = new Set([
+  'ace', 'two', 'three', 'four', 'five',
+  'six', 'seven', 'eight', 'nine', 'ten'
+]);
+
+function isGoldenDawnCard(card) {
+  if (!card || card.type === 'major' || !card.suit) return false;
+  return GOLDEN_DAWN_RANKS.has(card.id.split('-')[1]);
+}
+
+function validGoldenDawn(data) {
+  return data
+    && typeof data.title_en === 'string' && data.title_en.trim()
+    && typeof data.title_ru === 'string' && data.title_ru.trim()
+    && typeof data.why === 'string' && data.why.trim();
+}
+
 /* ─── Порядок карт внутри масти ─── */
 function sortKey(c) {
   if (c.type === 'major') return c.number;
@@ -119,6 +136,7 @@ function openCard(card) {
 
   renderPosition();
   modal.classList.add('open');
+  modal.scrollTop = 0;
   modal.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
 }
@@ -139,10 +157,18 @@ function renderPosition() {
   html.push(`<div class="pos-content">`);
   html.push(`<div class="kw-row">${p.keywords.map(k => `<span class="kw">${k}</span>`).join('')}</div>`);
   html.push(`<p class="short-value">${p.short}</p>`);
-  if (p.gd) {
-    html.push(`<div class="gd-block"><div class="gd-head">По ордену «Золотая Заря»</div>`
+  const expectsGoldenDawn = isGoldenDawnCard(currentCard);
+  if (expectsGoldenDawn && validGoldenDawn(p.gd)) {
+    html.push(`<aside class="gd-block" data-card-id="${currentCard.id}" data-position="${currentPos}" aria-label="Значение карты по ордену Золотая Заря">`
+      + `<div class="gd-head"><span class="gd-symbol" aria-hidden="true">☉</span> По ордену «Золотая Заря»</div>`
       + `<p class="gd-title">«${p.gd.title_en}» — ${p.gd.title_ru}</p>`
-      + `<p class="gd-why">${p.gd.why}</p></div>`);
+      + `<p class="gd-why">${p.gd.why}</p></aside>`);
+  } else if (expectsGoldenDawn) {
+    // Не скрываем секцию при рассинхронизации публикации: ошибка становится видимой.
+    html.push(`<aside class="gd-block gd-missing" data-card-id="${currentCard.id}" data-position="${currentPos}">`
+      + `<div class="gd-head">По ордену «Золотая Заря»</div>`
+      + `<p class="gd-why">Данные этой карты не загрузились. Обновите страницу без кеша.</p></aside>`);
+    console.error(`Golden Dawn data is missing for ${currentCard.id}.${currentPos}`);
   }
   for (const [key, title, icon] of SECTION_META) {
     html.push(`<div class="info-section"><h3><span>${icon}</span> ${title}</h3><p>${p[key]}</p></div>`);

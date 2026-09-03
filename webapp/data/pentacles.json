@@ -6,7 +6,7 @@
   "type": "minor",
   "suit": "pentacles",
   "number": 1,
-  "img": "pentacles-ace.jpg",
+  "img": "pentacles-ace.webp",
   "element": "Земля",
   "astro": null,
   "upright": {
@@ -62,7 +62,7 @@
   "type": "minor",
   "suit": "pentacles",
   "number": 2,
-  "img": "pentacles-two.jpg",
+  "img": "pentacles-two.webp",
   "element": "Земля",
   "astro": "Юпитер в Козероге",
   "upright": {
@@ -118,7 +118,7 @@
   "type": "minor",
   "suit": "pentacles",
   "number": 3,
-  "img": "pentacles-three.jpg",
+  "img": "pentacles-three.webp",
   "element": "Земля",
   "astro": "Марс в Козероге",
   "upright": {
@@ -174,7 +174,7 @@
   "type": "minor",
   "suit": "pentacles",
   "number": 4,
-  "img": "pentacles-four.jpg",
+  "img": "pentacles-four.webp",
   "element": "Земля",
   "astro": "Солнце в Козероге",
   "upright": {
@@ -230,7 +230,7 @@
   "type": "minor",
   "suit": "pentacles",
   "number": 5,
-  "img": "pentacles-five.jpg",
+  "img": "pentacles-five.webp",
   "element": "Земля",
   "astro": "Меркурий в Тельце",
   "upright": {
@@ -286,7 +286,7 @@
   "type": "minor",
   "suit": "pentacles",
   "number": 6,
-  "img": "pentacles-six.jpg",
+  "img": "pentacles-six.webp",
   "element": "Земля",
   "astro": "Луна в Тельце",
   "upright": {
@@ -342,7 +342,7 @@
   "type": "minor",
   "suit": "pentacles",
   "number": 7,
-  "img": "pentacles-seven.jpg",
+  "img": "pentacles-seven.webp",
   "element": "Земля",
   "astro": "Сатурн в Тельце",
   "upright": {
@@ -397,7 +397,7 @@
   "type": "minor",
   "suit": "pentacles",
   "number": 8,
-  "img": "pentacles-eight.jpg",
+  "img": "pentacles-eight.webp",
   "element": "Земля",
   "astro": "Солнце в Деве",
   "upright": {
@@ -453,7 +453,7 @@
   "type": "minor",
   "suit": "pentacles",
   "number": 9,
-  "img": "pentacles-nine.jpg",
+  "img": "pentacles-nine.webp",
   "element": "Земля",
   "astro": "Венера в Деве",
   "upright": {
@@ -509,7 +509,7 @@
   "type": "minor",
   "suit": "pentacles",
   "number": 10,
-  "img": "pentacles-ten.jpg",
+  "img": "pentacles-ten.webp",
   "element": "Земля",
   "astro": "Меркурий в Деве",
   "upright": {
@@ -565,7 +565,7 @@
   "type": "minor",
   "suit": "pentacles",
   "number": null,
-  "img": "pentacles-page.jpg",
+  "img": "pentacles-page.webp",
   "element": "Земля",
   "astro": null,
   "upright": {
@@ -611,7 +611,7 @@
   "type": "minor",
   "suit": "pentacles",
   "number": null,
-  "img": "pentacles-knight.jpg",
+  "img": "pentacles-knight.webp",
   "element": "Земля",
   "astro": null,
   "upright": {
@@ -657,7 +657,7 @@
   "type": "minor",
   "suit": "pentacles",
   "number": null,
-  "img": "pentacles-queen.jpg",
+  "img": "pentacles-queen.webp",
   "element": "Земля",
   "astro": null,
   "upright": {
@@ -703,7 +703,7 @@
   "type": "minor",
   "suit": "pentacles",
   "number": null,
-  "img": "pentacles-king.jpg",
+  "img": "pentacles-king.webp",
   "element": "Земля",
   "astro": null,
   "upright": {
