@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b0d12">
+  <meta name="description" content="47 практичных раскладов Таро: схемы, вопросы, позиции, порядок чтения и типичные ошибки.">
+  <title>Атлас раскладов Таро</title>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="fonts/fonts.css?v=3.0">
+  <link rel="stylesheet" href="css/style.css?v=3.0">
+  <style>
+:root{--bg:#090b10;--panel:#11141b;--panel-2:#171a22;--ink:#f2eee5;--muted:#a8a5a0;--gold:#d7b66a;--gold-2:#8d7139;--line:#2a2d36;--violet:#9681cf;--red:#c97b77;--green:#78aa93;--blue:#719dbd;--radius:18px;--shadow:0 24px 70px rgba(0,0,0,.45)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 15% -10%,rgba(150,129,207,.12),transparent 32rem),var(--bg);color:var(--ink);font-family:Manrope,system-ui,sans-serif;min-height:100vh}button,input,select{font:inherit}button{color:inherit}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.skip-link{position:fixed;left:1rem;top:-5rem;background:var(--gold);color:#111;padding:.7rem 1rem;z-index:99;border-radius:8px}.skip-link:focus{top:1rem}
+.site-head{height:72px;padding:0 clamp(1rem,4vw,4rem);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:rgba(9,11,16,.84);backdrop-filter:blur(16px);position:sticky;top:0;z-index:20}.brand{font-weight:700;letter-spacing:.14em;font-size:.9rem}.brand-mark{color:var(--gold);margin-right:.55rem}.about-button,.research-note button{background:transparent;border:1px solid var(--line);border-radius:999px;padding:.62rem 1rem;cursor:pointer}.about-button:hover,.research-note button:hover{border-color:var(--gold);color:var(--gold)}
+main{width:min(1380px,calc(100% - 2rem));margin:auto}.intro{padding:clamp(3.5rem,8vw,8rem) 0 clamp(2.5rem,5vw,5rem);display:grid;grid-template-columns:minmax(0,1.4fr) minmax(280px,.6fr);gap:3rem;align-items:end}.eyebrow{text-transform:uppercase;color:var(--gold);letter-spacing:.16em;font-size:.72rem;font-weight:700;margin:0 0 1rem}.intro h1{font-family:"Cormorant Garamond",serif;font-size:clamp(2rem,3.5vw,3.5rem);line-height:.94;letter-spacing:-.035em;margin:0;max-width:16ch;font-weight:600}.intro h1 em{font-weight:600;color:var(--gold);font-style:italic}.lead{font-size:clamp(1rem,1.5vw,1.3rem);line-height:1.7;color:var(--muted);max-width:760px;margin:2rem 0 0}.stats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:linear-gradient(145deg,rgba(255,255,255,.025),transparent)}.stats div{padding:1.3rem 1rem;display:flex;flex-direction:column;gap:.2rem}.stats div+div{border-left:1px solid var(--line)}.stats strong{font-family:"Cormorant Garamond",serif;color:var(--gold);font-size:2rem}.stats span{font-size:.72rem;color:var(--muted)}
+.notice{display:flex;gap:1rem;align-items:flex-start;border:1px solid rgba(215,182,106,.25);border-radius:14px;padding:1rem 1.2rem;background:rgba(215,182,106,.045)}.notice-icon{color:var(--gold);font-size:1.3rem}.notice p{margin:0;color:#cbc6bc;line-height:1.65;font-size:.88rem}.notice strong{color:var(--ink)}
+.controls{padding:2.6rem 0 1.4rem}.search-wrap{position:relative;display:flex;align-items:center}.search-wrap svg{position:absolute;left:1rem;width:20px;height:20px;fill:none;stroke:var(--muted);stroke-width:1.7}.search-wrap input{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:14px;color:var(--ink);padding:1rem 4rem 1rem 3rem;outline:none;font-size:1rem}.search-wrap input:focus{border-color:var(--gold-2);box-shadow:0 0 0 3px rgba(215,182,106,.08)}.search-wrap kbd{position:absolute;right:1rem;border:1px solid var(--line);border-bottom-color:#444;padding:.18rem .45rem;border-radius:6px;color:var(--muted);font-size:.72rem}.filters{display:flex;gap:.55rem;overflow:auto;padding:1rem 0 .4rem;scrollbar-width:none}.filters::-webkit-scrollbar{display:none}.filter{white-space:nowrap;border:1px solid var(--line);background:transparent;border-radius:999px;padding:.55rem .85rem;cursor:pointer;color:var(--muted);font-size:.8rem}.filter:hover{color:var(--ink);border-color:#4a4d57}.filter.active{background:var(--ink);border-color:var(--ink);color:#14151a}.control-row{display:flex;align-items:center;justify-content:space-between;margin-top:1rem;color:var(--muted);font-size:.78rem}.select-wrap{display:flex;align-items:center;gap:.55rem}.select-wrap select{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:9px;padding:.46rem .7rem;outline:none}
+.catalog{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;padding-bottom:4rem}.spread-card{min-width:0;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(145deg,rgba(255,255,255,.025),transparent 70%),var(--panel);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s,box-shadow .2s}.spread-card:hover{transform:translateY(-3px);border-color:#4b463a;box-shadow:0 16px 40px rgba(0,0,0,.2)}.card-head{padding:1rem 1rem 0;display:flex;justify-content:space-between;gap:1rem;align-items:center}.tag{font-size:.68rem;color:var(--cat,var(--gold));text-transform:uppercase;letter-spacing:.09em;font-weight:700}.origin{font-size:.64rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:.25rem .5rem}.diagram{height:190px;margin:.8rem 1rem 0;border-radius:13px;background:radial-gradient(circle at 50% 45%,rgba(215,182,106,.08),transparent 54%),#0c0e13;border:1px solid #20232b;position:relative;display:grid;place-items:center;overflow:hidden}.card-body{padding:1.15rem 1.15rem 1.25rem;display:flex;flex-direction:column;flex:1}.spread-card h2{font-family:"Cormorant Garamond",serif;font-size:1.7rem;line-height:1.05;margin:0 0 .65rem}.spread-card .summary{color:var(--muted);line-height:1.55;font-size:.82rem;margin:0 0 1rem}.meta{display:flex;gap:.8rem;color:#c9c3b8;font-size:.72rem;margin-top:auto}.details-button{margin-top:1rem;width:100%;border:1px solid var(--line);background:#171a20;border-radius:10px;padding:.72rem;cursor:pointer;text-align:left;display:flex;justify-content:space-between}.details-button:hover{border-color:var(--gold-2);color:var(--gold)}
+.mini-layout{width:86%;height:82%;position:relative}.mini-card{position:absolute;width:28px;height:43px;border:1px solid rgba(215,182,106,.6);border-radius:4px;background:linear-gradient(145deg,#2a2434,#12141a);display:grid;place-items:center;color:var(--gold);font-family:"Cormorant Garamond",serif;font-size:.76rem;box-shadow:0 4px 10px rgba(0,0,0,.25);transform:translate(-50%,-50%)}.mini-card.crossed{transform:translate(-50%,-50%) rotate(90deg);border-color:var(--violet)}.mini-card.centered{border-color:#efe3bd;background:linear-gradient(145deg,#3a2e24,#16151a)}
+.etteilla-mini{width:90%;display:flex;flex-direction:column;gap:8px}.etteilla-row{display:flex;align-items:center;gap:6px}.etteilla-row b{width:25px;color:var(--gold);font-family:"Cormorant Garamond",serif}.etteilla-cards{display:flex;gap:2px;flex:1}.etteilla-cards i{height:25px;flex:1;max-width:10px;border:1px solid rgba(215,182,106,.45);border-radius:2px;background:#1a1720}.etteilla-row.off{opacity:.38}.etteilla-row span{font-size:.58rem;color:var(--muted);width:55px}
+.empty{text-align:center;padding:5rem 1rem;color:var(--muted)}.empty span{font-size:2rem;color:var(--gold)}.empty h2{color:var(--ink);font-family:"Cormorant Garamond",serif;font-size:2rem;margin:.5rem}.research-note{margin:0 0 5rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:2rem 0;display:grid;grid-template-columns:.7fr 1.2fr auto;gap:2rem;align-items:center}.research-note h2{font-family:"Cormorant Garamond",serif;font-size:2rem;margin:0}.research-note p{color:var(--muted);line-height:1.7;font-size:.85rem;margin:0}.research-note .eyebrow{margin-bottom:.5rem}footer{border-top:1px solid var(--line);padding:1.5rem clamp(1rem,4vw,4rem);display:flex;justify-content:space-between;color:var(--muted);font-size:.72rem}
+dialog{border:0;padding:0;color:var(--ink);background:transparent;max-width:none;max-height:none}dialog::backdrop{background:rgba(2,3,6,.78);backdrop-filter:blur(6px)}.spread-dialog,.info-dialog{width:100%;height:100%}.dialog-shell{width:min(1180px,calc(100% - 2rem));margin:3vh auto;background:var(--panel);border:1px solid #343741;border-radius:22px;box-shadow:var(--shadow);min-height:94vh;position:relative;overflow:hidden}.close-button{position:absolute;right:1rem;top:1rem;width:40px;height:40px;z-index:3;border:1px solid var(--line);background:rgba(17,20,27,.9);border-radius:50%;cursor:pointer;font-size:1.4rem}.close-button:hover{border-color:var(--gold);color:var(--gold)}.detail-head{display:grid;grid-template-columns:1fr 1fr;min-height:390px;border-bottom:1px solid var(--line)}.detail-title{padding:clamp(2rem,5vw,4rem);align-self:center}.detail-title h2{font-family:"Cormorant Garamond",serif;font-size:clamp(3rem,6vw,5rem);line-height:.9;margin:.8rem 0 1.2rem;max-width:10ch}.detail-title .summary{color:var(--muted);line-height:1.65;max-width:570px}.detail-diagram{border-left:1px solid var(--line);background:radial-gradient(circle,rgba(215,182,106,.08),transparent 58%),#0c0e13;min-height:390px;display:grid;place-items:center}.detail-diagram .mini-layout{width:88%;height:84%}.detail-diagram .mini-card{width:42px;height:65px;border-radius:6px;font-size:1rem}.detail-body{padding:clamp(1.3rem,4vw,3rem);display:grid;grid-template-columns:1fr 1fr;gap:2rem 3rem}.detail-section h3{font-family:"Cormorant Garamond",serif;font-size:1.7rem;margin:0 0 1rem}.question-list,.error-list,.position-list{list-style:none;padding:0;margin:0}.question-list li{border-left:2px solid var(--gold-2);padding:.35rem 0 .35rem .8rem;color:#d6d0c4;font-size:.86rem;line-height:1.5}.question-list li+li{margin-top:.55rem}.position-list{display:grid;gap:.55rem}.position-list li{display:grid;grid-template-columns:34px 1fr;gap:.7rem;align-items:start}.pos-num{width:30px;height:30px;border:1px solid var(--gold-2);border-radius:8px;display:grid;place-items:center;color:var(--gold);font-family:"Cormorant Garamond",serif;font-weight:700}.position-list strong{display:block;font-size:.84rem;margin-bottom:.18rem}.position-list span:last-child{font-size:.78rem;line-height:1.45;color:var(--muted)}.error-list li{position:relative;padding-left:1.2rem;color:var(--muted);font-size:.82rem;line-height:1.55}.error-list li:before{content:"×";position:absolute;left:0;color:var(--red)}.error-list li+li{margin-top:.55rem}.read-order{grid-column:1/-1;background:#0d0f14;border:1px solid var(--line);border-radius:14px;padding:1rem 1.2rem;color:#cfc9be;font-size:.84rem;line-height:1.65}.read-order strong{color:var(--gold)}.variant-box{grid-column:1/-1;border:1px solid rgba(150,129,207,.3);background:rgba(150,129,207,.06);border-radius:14px;padding:1rem 1.2rem}.variant-box h3{font-family:"Cormorant Garamond",serif;font-size:1.5rem;margin:0 0 .6rem}.variant-box p{margin:.45rem 0;color:#c7c1cc;font-size:.82rem;line-height:1.6}.prose-shell{min-height:0;padding:clamp(2rem,5vw,4.5rem);max-width:850px;margin-top:5vh;margin-bottom:5vh}.prose-shell h2{font-family:"Cormorant Garamond",serif;font-size:clamp(2.5rem,6vw,4rem);margin:0 0 2rem}.guide-steps{padding:0;list-style:none;counter-reset:guide;display:grid;gap:1.15rem}.guide-steps li{counter-increment:guide;display:grid;grid-template-columns:42px 1fr;column-gap:1rem}.guide-steps li:before{content:counter(guide);grid-row:1/3;width:38px;height:38px;border:1px solid var(--gold-2);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-family:"Cormorant Garamond",serif;font-size:1.2rem}.guide-steps strong{font-size:.9rem}.guide-steps span{font-size:.82rem;color:var(--muted);line-height:1.55;margin-top:.2rem}.tip-box{margin-top:2rem;padding:1.1rem;border:1px solid rgba(215,182,106,.3);border-radius:12px;background:rgba(215,182,106,.04)}.tip-box p{color:var(--muted);font-size:.82rem;line-height:1.6;margin:.45rem 0 0}.source-list{display:grid;gap:.9rem}.source-list article{border-top:1px solid var(--line);padding-top:1rem}.source-list article>span{font-size:.66rem;color:var(--gold);text-transform:uppercase;letter-spacing:.1em}.source-list h3{margin:.35rem 0;font-size:1rem}.source-list p{font-size:.8rem;line-height:1.55;color:var(--muted);margin:.35rem 0}.source-list a{color:var(--gold);font-size:.78rem;text-underline-offset:3px}
+@media(max-width:980px){.catalog{grid-template-columns:repeat(2,minmax(0,1fr))}.intro{grid-template-columns:1fr}.stats{max-width:520px}.research-note{grid-template-columns:1fr}.detail-head{grid-template-columns:1fr}.detail-title{padding-right:4.5rem}.detail-diagram{border-left:0;border-top:1px solid var(--line)}.detail-body{grid-template-columns:1fr}.read-order,.variant-box{grid-column:auto}}
+@media(max-width:640px){main{width:min(100% - 1.2rem,1380px)}.site-head{height:62px;padding:0 .8rem}.brand{font-size:.78rem}.about-button{font-size:.72rem;padding:.5rem .7rem}.intro{padding:2.8rem 0 2rem;gap:2rem}.intro h1{font-size:2.15rem}.lead{font-size:.95rem;margin-top:1.3rem}.stats div{padding:1rem .7rem}.stats strong{font-size:1.55rem}.notice{padding:.85rem}.controls{padding-top:1.8rem}.catalog{grid-template-columns:1fr}.diagram{height:175px}.control-row{align-items:flex-end}.select-wrap{flex-direction:column;align-items:flex-start;gap:.25rem}.research-note{margin-bottom:3rem}.research-note button{width:max-content}footer{padding:1.2rem;flex-direction:column;gap:.5rem}.dialog-shell{width:100%;margin:0;border-radius:0;min-height:100vh;border:0}.detail-title{padding:4.5rem 1.2rem 2rem}.detail-title h2{font-size:3.1rem}.detail-diagram{min-height:330px}.detail-body{padding:1.4rem 1rem 2rem;gap:1.7rem}.prose-shell{padding:4.5rem 1.2rem 2rem}.search-wrap kbd{display:none}.search-wrap input{padding-right:1rem}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+  </style>
+</head>
+<body>
+<nav class="main-nav" aria-label="Разделы">
+  <div class="main-nav-inner">
+    <a href="index.html" class="mn-active"><span class="mn-icon">✦</span> Таро</a>
+    <a href="astrology/index.html"><span class="mn-icon">♄</span> Астрология</a>
+    <a href="runes/index.html"><span class="mn-icon">ᚠ</span> Руны</a>
+    <a href="numerology/index.html"><span class="mn-icon">❿</span> Теория</a>
+  </div>
+</nav>
+  <a class="skip-link" href="#catalog">К каталогу</a>
+  <header class="site-head">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">✦</span><span>АТЛАС ТАРО</span></div>
+    <button class="about-button" id="openGuide" type="button">Как читать схемы</button>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="pageTitle">
+      <div class="intro-copy">
+        <p class="eyebrow">Практический справочник · 2026</p>
+        <h1 id="pageTitle">Расклад под задачу,<br><em>а не задача под расклад</em></h1>
+        <p class="lead">Выберите жизненную ситуацию — и сразу увидите форму расклада, точные позиции, удачные вопросы и ловушки трактовки.</p>
+      </div>
+      <div class="stats" aria-label="Сводка каталога">
+        <div><strong id="spreadCount">47</strong><span>раскладов</span></div>
+        <div><strong>7</strong><span>категорий</span></div>
+        <div><strong>1–78</strong><span>карт</span></div>
+      </div>
+    </section>
+
+    <section class="notice" aria-label="Важное предупреждение">
+      <span class="notice-icon" aria-hidden="true">◈</span>
+      <p><strong>Символическая практика.</strong> Карты помогают рассмотреть ситуацию с разных сторон, но не подтверждают факты и не гарантируют будущее. Для юридических и финансовых решений проверяйте документы и реальные данные. Медицинских раскладов в каталоге нет.</p>
+    </section>
+
+    <section class="controls" aria-label="Поиск и фильтры">
+      <label class="search-wrap">
+        <span class="sr-only">Поиск расклада</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16.5 16.5 4 4"></path></svg>
+        <input id="search" type="search" placeholder="Например: работа, переезд, мысли…" autocomplete="off">
+        <kbd>/</kbd>
+      </label>
+      <div class="filters" id="filters" role="group" aria-label="Категории"></div>
+      <div class="control-row">
+        <p id="resultCount" aria-live="polite"></p>
+        <label class="select-wrap">Сортировка
+          <select id="sort">
+            <option value="recommended">Рекомендуемые</option>
+            <option value="easy">Сначала простые</option>
+            <option value="deep">Сначала подробные</option>
+            <option value="az">По названию</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <section class="catalog" id="catalog" aria-label="Каталог раскладов"></section>
+    <div class="empty" id="empty" hidden>
+      <span>◇</span><h2>Ничего не найдено</h2><p>Попробуйте более короткий запрос или выберите другую категорию.</p>
+    </div>
+
+    <section class="research-note" aria-labelledby="researchTitle">
+      <div>
+        <p class="eyebrow">Проверка источников</p>
+        <h2 id="researchTitle">Где традиция, а где современная схема</h2>
+      </div>
+      <p>Классические расклады помечены отдельно. Современные бытовые схемы названы редакционными — без вымышленной «древности». В методе Эттейлы показано расхождение приложенного файла с опубликованным текстом Папюса.</p>
+      <button type="button" id="openSources">Источники и примечания</button>
+    </section>
+  </main>
+
+  <footer>
+    <span>Атлас раскладов Таро</span>
+    <span>Сначала вопрос → затем схема → затем связная история карт</span>
+  </footer>
+
+  <dialog id="spreadDialog" class="spread-dialog">
+    <div class="dialog-shell">
+      <button class="close-button" type="button" data-close aria-label="Закрыть">×</button>
+      <div id="dialogContent"></div>
+    </div>
+  </dialog>
+
+  <dialog id="guideDialog" class="info-dialog">
+    <div class="dialog-shell prose-shell">
+      <button class="close-button" type="button" data-close aria-label="Закрыть">×</button>
+      <p class="eyebrow">Короткая инструкция</p>
+      <h2>Как пользоваться атласом</h2>
+      <ol class="guide-steps">
+        <li><strong>Назовите одну задачу.</strong><span>Не «что вообще будет?», а «что поможет продвинуть продажу в ближайшие три месяца?»</span></li>
+        <li><strong>Выберите минимальную схему.</strong><span>Три–пять карт часто яснее десяти. Большой расклад нужен, когда факторов действительно много.</span></li>
+        <li><strong>Закрепите позиции заранее.</strong><span>Не меняйте значение места после того, как увидели неудобную карту.</span></li>
+        <li><strong>Читайте связи.</strong><span>Сначала оси, пары и последовательности, затем соберите карты в одну историю.</span></li>
+        <li><strong>Сверьте с реальностью.</strong><span>Отделите символическое предположение от фактов, которые можно проверить.</span></li>
+      </ol>
+      <div class="tip-box"><strong>Уточняющая карта</strong><p>Тяните её только к узкому вопросу: «Что именно означает карта в позиции препятствия?» или «Что она точно не означает?». Не вытягивайте новые карты до желаемого ответа.</p></div>
+    </div>
+  </dialog>
+
+  <dialog id="sourcesDialog" class="info-dialog">
+    <div class="dialog-shell prose-shell">
+      <button class="close-button" type="button" data-close aria-label="Закрыть">×</button>
+      <p class="eyebrow">Исследование</p>
+      <h2>Источники и редакционные решения</h2>
+      <div class="source-list">
+        <article><span>Классика · 1911</span><h3>А. Э. Уэйт — Кельтский крест</h3><p>Первоисточник оставлен для истории расклада, но в каталоге используется более привычная современная формулировка позиций: суть, препятствие, основание, прошлое, цель, ближайшее будущее и правая колонна.</p><a href="https://sacred-texts.com/tarot/pkt/pkt0307.htm" target="_blank" rel="noreferrer">Открыть первоисточник ↗</a></article>
+        <article><span>Классика · 1912</span><h3>Папюс — метод Эттейлы</h3><p>Текст подтверждает рабочие ряды 26/17/11 и прямо называет 24 карты отброшенной пачкой. Это расходится с приложенным DOCX.</p><a href="https://ru.wikisource.org/wiki/Предсказательное_таро,_или_ключ_всякого_рода_карточных_гаданий_(Папюс;_Трояновский)" target="_blank" rel="noreferrer">Читать на Викитеке ↗</a></article>
+        <article><span>История · музей</span><h3>Victoria and Albert Museum</h3><p>Гадательное применение Таро относится к концу XVIII века; заявления о древнеегипетском происхождении исторически не подтверждены.</p><a href="https://www.vam.ac.uk/articles/tarot-cards" target="_blank" rel="noreferrer">История Таро в V&amp;A ↗</a></article>
+        <article><span>Современная школа</span><h3>«Вокзал для двоих» Х. Банцхафа</h3><p>Взята распространённая семикарточная структура: отношения в центре, мысли/чувства/поведение каждого человека по сторонам.</p><a href="https://thewildunknown.ru/node/782/" target="_blank" rel="noreferrer">Схема и позиции ↗</a></article>
+        <article><span>Современная практика</span><h3>Подкова и тематические каталоги</h3><p>Сопоставлены варианты Подковы и современные способы группировки раскладов по реальным задачам.</p><a href="https://www.learnreligions.com/seven-card-horseshoe-tarot-spread-2562801" target="_blank" rel="noreferrer">Подкова ↗</a> · <a href="https://labyrinthos.co/pages/tarot-spreads-list" target="_blank" rel="noreferrer">Каталог Labyrinthos ↗</a></article>
+        <article><span>Современная редакция</span><h3>«Египетское гадание» (метод Эттейлы)</h3><p>Сохранены алгоритм деления 78 карт, чтение рядов парами от краёв к центру и альтернативная трактовка четвёртой группы как «Судьбы». Расхождение с Папюсом показано открыто.</p></article>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+const CATEGORIES={all:["Все","#d7b66a"],quick:["Быстрые и универсальные","#d7b66a"],choice:["Выбор и решения","#9681cf"],relations:["Отношения","#c97b77"],person:["Анализ человека","#78aa93"],work:["Работа и деньги","#719dbd"],time:["Планы и события","#d29562"],classic:["Большие и традиционные","#b596d7"]};
+const pos=a=>a.map((x,i)=>{const [name,desc]=x.split("|");return{n:i+1,name,desc}});
+const S=(id,title,cat,count,difficulty,origin,summary,layout,positions,questions,errors,read,variant="",preparation="")=>({id,title,cat,count,difficulty,origin,summary,layout,positions:pos(positions),questions,errors,read,variant,preparation});
+
+const spreads=[
+S("card-day","Карта дня","quick",1,1,"Практика","Один ясный фокус без лишних деталей.","single",
+["Тема дня|Главная энергия, задача или угол зрения на выбранный день."],
+["На что мне полезно обратить внимание сегодня?","Какой подход поможет провести день лучше?","Что важно заметить в этой встрече?"],
+["Читать карту как неизбежное событие вместо темы для наблюдения.","Пытаться получить ответ сразу на несколько разных вопросов.","Вечером помнить только совпадения и игнорировать остальное."],
+"Запишите первое впечатление утром. Вечером сравните символы карты с реальными событиями и своим поведением."),
+
+S("three-dynamics","Три карты: динамика","quick",3,1,"Универсальная","Короткая история: от исходной точки к вероятному развитию.","line3",
+["Откуда|Причина, прошлый импульс или уже сложившееся условие.","Что сейчас|Главный процесс в настоящем.","Куда идёт|Вероятное направление, если условия не изменятся."],
+["Как развивается моя текущая рабочая ситуация?","Что происходит между нами после разговора?","К чему идёт продажа вещи в этом месяце?"],
+["Превращать третью карту в гарантированный финал.","Смешивать слишком большой срок с мелким бытовым вопросом.","Толковать три карты отдельно, не связывая их в последовательность."],
+"Читайте слева направо как один глагольный сюжет: что породило → что меняется → во что это складывается."),
+
+S("situation-cross","Крест ситуации","quick",4,1,"Современная классика","Суть, помеха, поддержка и результат в компактной форме.","cross4",
+["Суть|Что на самом деле происходит.","Против|Главное препятствие или слабое место.","За|Ресурс, поддержка или благоприятный фактор.","Результат|К чему ведёт текущий баланс сил."],
+["Что важно понять о переговорах?","Что помогает и мешает моему плану?","Каков потенциал этой договорённости?"],
+["Считать любую “тяжёлую” карту в позиции «За» плохой — она может показывать полезную жёсткость.","Игнорировать конфликт между позициями 2 и 3.","Не задавать срок для позиции результата."],
+"Начните с центра. Затем сравните левую и правую стороны; верхняя карта суммирует их взаимодействие."),
+
+S("five-supports","Пять опор","quick",5,2,"Редакционная","Разбор проблемы с отдельной картой практического шага.","cross5",
+["Ситуация|Текущая суть вопроса.","Корень|Почему ситуация сложилась именно так.","Скрытое|Что не учитывается или пока не видно.","Полезный шаг|Что можно сделать в реальности.","Результат шага|Как изменится ситуация после этого действия."],
+["Почему дело застопорилось и что сдвинет его?","Как лучше подготовиться к важному разговору?","Что я упускаю в своём плане?"],
+["Путать скрытый фактор с мистическим воздействием без фактов.","Читать карту совета как описание события, а не действия.","Оценивать результат без связи с четвёртой картой."],
+"Свяжите 2→1→3 как диагноз ситуации, затем 4→5 как проверяемую линию действия."),
+
+S("horseshoe","Подкова","quick",7,2,"Традиционная","Средний по глубине обзор одной запутанной ситуации.","horseshoe7",
+["Прошлое|Что сформировало вопрос.","Настоящее|Главное действующее условие.","Скрытое влияние|Фактор, который легко пропустить.","Ваша позиция|Отношение и способ участия кверента.","Окружение|Люди и внешние обстоятельства.","Полезное действие|Что улучшит траекторию.","Вероятный итог|Куда ведёт ситуация при текущих условиях."],
+["Как будет развиваться проект в ближайшие три месяца?","Что важно учесть перед переездом?","Как выбраться из затянувшегося конфликта?"],
+["Смешивать варианты Подковы из разных источников после выкладки.","Принимать скрытое влияние за доказанную тайну.","Читать итог отдельно от карты действия."],
+"Читайте дугу слева направо. Центральная карта №4 — точка разворота: до неё формируется ситуация, после неё виден ответ."),
+
+S("celtic-cross","Кельтский крест","classic",10,3,"Практический вариант","Универсальный расклад: настоящее, причины, прошлое, скрытые факторы, перспективы и итог.","celtic10",
+["Суть ситуации|Что происходит сейчас, ядро вопроса.","Перекрёстная карта|Что помогает или мешает развитию ситуации. Кладётся поперёк первой карты.","Основание / подсознание|Глубинные причины, мотивы и страхи.","Прошлое|Что привело к нынешнему положению и постепенно уходит.","Сознательное / цель|О чём человек думает и чего хочет добиться.","Ближайшее будущее|Тенденция на короткий срок — обычно один-два месяца.","Позиция кверента|Как человек ведёт себя в ситуации и влияет на неё.","Внешние обстоятельства|Люди, среда и давление извне.","Надежды и страхи|То, чего одновременно ждут и опасаются.","Итог|Наиболее вероятный исход, если всё продолжит развиваться как сейчас."],
+["Как будет развиваться ситуация с работой в ближайшие три месяца?","Что происходит в отношениях и к чему они идут?","Каковы причины задержки дела и его ближайшие перспективы?","Что учитывать перед важным жизненным решением?"],
+["Задавать слишком общий вопрос вроде «Что у меня в жизни?».","Сразу хвататься за карту Итога и не читать центр.","Игнорировать перекрёстную карту — она показывает главный узел ситуации.","Толковать каждую карту отдельно, не связывая их между собой.","Считать итог приговором, хотя поведение и обстоятельства можно изменить."],
+"1 + 2 показывают, что реально происходит. 3 + 4 объясняют, откуда растут корни ситуации. 5 ↔ 6 показывают разницу между желаемым и ближайшей реальностью. Затем читайте 7–9 — почему всё движется именно так. Карта 10 завершает историю как логический вывод, а не как «страшилка».",
+"Это упрощённый современный вариант для повседневной практики. Сначала читается центр 1–6, затем правая колонна 7–10. Если итог не нравится, смотрите, что можно изменить прежде всего в позициях 7–9. Перевёрнутые карты могут показывать задержку, внутренний конфликт или искажённое проявление темы — но их значение всегда зависит от позиции.",
+"Чётко сформулируйте один вопрос и укажите срок. Перетасуйте колоду; прямые и перевёрнутые карты используйте по своей обычной системе. В классической традиции колоду снимают левой рукой к себе, но это ритуальное правило, а не обязательное условие расклада."),
+
+S("twelve-houses","Двенадцать домов","classic",12,3,"Астрологическая","Панорамный обзор сфер жизни или двенадцати месяцев.","wheel12",
+["Я и образ|Самовосприятие, инициатива, способ проявляться.","Деньги и ценности|Ресурсы, бюджет, чувство устойчивости.","Общение и обучение|Информация, документы, ближние поездки.","Дом и семья|Жильё, корни, приватная опора.","Радость и творчество|Хобби, романтика, личные проекты.","Режим и обязанности|Повседневная работа, навыки, организация дел.","Партнёрства|Союзы, договоры и открытые оппоненты.","Общие ресурсы|Долги, налоги, наследство, глубокая перестройка.","Дальние горизонты|Путешествия, образование, мировоззрение.","Карьера и статус|Цели, репутация, общественная роль.","Друзья и планы|Сообщества, поддержка, долгосрочные надежды.","Скрытое и завершение|Уединение, неосознанное, то, что пора отпустить."],
+["Какие темы будут главными в ближайший год?","Где сейчас мой самый сильный ресурс, а где требуется внимание?","Как новая работа отразится на разных сферах жизни?"],
+["Считать каждый дом отдельным предсказанием, не замечая осей 1–7, 2–8, 4–10.","Подменять позицию 6 медицинской диагностикой.","Смешивать дома с календарными месяцами без отдельного решения до расклада."],
+"Читайте противоположные дома парами, затем угловые 1–4–7–10. Если используете как годовой круг, заранее определите: дома или месяцы — не оба значения сразу."),
+
+S("two-paths","Два пути","choice",7,2,"Современная","Сравнение двух вариантов по одинаковым критериям.","fork7",
+["Суть выбора|Что на самом деле приходится решать.","Путь А: возможность|Что этот вариант открывает.","Путь А: цена|Риск, усилие или компромисс.","Путь А: результат|К чему вероятнее приведёт вариант А.","Путь Б: возможность|Что этот вариант открывает.","Путь Б: цена|Риск, усилие или компромисс.","Путь Б: результат|К чему вероятнее приведёт вариант Б."],
+["Остаться на нынешней работе или принять предложение?","Ремонтировать технику или покупать новую?","Ехать сейчас или отложить поездку?"],
+["Сравнивать варианты по разным критериям.","Называть один путь «хорошим», другой «плохим» до чтения.","Забывать, что бездействие иногда является третьим вариантом."],
+"Сначала прочитайте каждую ветвь сверху вниз, потом сравните пары 2↔5, 3↔6 и 4↔7."),
+
+S("do-or-not","Делать или не делать","choice",7,2,"Редакционная","Две параллельные линии: действие и отказ от него.","fork7",
+["Суть|Почему вопрос возник сейчас.","Если сделать: старт|Ближайшая реакция ситуации.","Если сделать: развитие|Что придётся пройти.","Если сделать: итог|Вероятный результат.","Если не делать: старт|Что сохранится или изменится сразу.","Если не делать: развитие|Как пойдёт альтернативная линия.","Если не делать: итог|Вероятный результат без действия."],
+["Подавать ли заявление сейчас?","Ехать ли на предложенную работу?","Возобновлять ли разговор с человеком?"],
+["Формулировать «не делать» как пустоту — это самостоятельный сценарий.","Путать желаемое с показанным в карте сути.","Игнорировать практические факторы: сроки, деньги, обязательства."],
+"Читайте две ветви как сценарии, а не как команды. Карты помогают увидеть последствия; решение остаётся за человеком."),
+
+S("idea-test","Проверка идеи","choice",7,2,"Редакционная","От замысла до первого проверяемого шага.","pyramid7",
+["Ядро идеи|Что именно вы хотите создать.","Реальная потребность|Кому и зачем это нужно.","Сильная сторона|Главное преимущество замысла.","Слабое место|Что может сорвать реализацию.","Необходимый ресурс|Время, навык, деньги или человек.","Первый тест|Самый дешёвый способ проверить идею.","Потенциал|Во что идея способна вырасти после проверки."],
+["Стоит ли делать сайт для этой услуги?","Есть ли практический смысл запускать канал?","Как проверить бизнес-идею без больших затрат?"],
+["Считать карту потенциала гарантией спроса.","Заменять исследование аудитории символическим раскладом.","Выбирать слишком большой первый тест."],
+"Сначала основание 1–4, затем ресурс и тест 5–6; карту 7 оценивайте только при условии выполнения теста."),
+
+S("purchase","Покупка без самообмана","choice",6,2,"Редакционная","Проверка пользы, скрытой цены и альтернативы покупке.","grid6",
+["Истинная потребность|Что вы пытаетесь решить покупкой.","Польза|Что приобретение реально даст.","Скрытая цена|Дополнительные траты, обслуживание, время.","Риск|Что может разочаровать.","Альтернатива|Можно ли решить задачу иначе.","Вердикт для себя|Наиболее здравый подход к покупке."],
+["Подойдёт ли мне эта видеокарта по моим задачам?","Стоит ли сейчас менять телефон?","Что я недооцениваю в покупке автомобиля?"],
+["Не проверять характеристики, отзывы и бюджет.","Читать сильное желание как доказательство необходимости.","Задавать вопрос после того, как решение уже эмоционально принято."],
+"Сравните 1 и 2: решает ли покупка настоящую потребность. Затем вычтите 3 и 4, после чего сопоставьте с альтернативой 5."),
+
+S("move-trip","Переезд или поездка","choice",7,2,"Редакционная","Практическая готовность, дорога, место и адаптация.","road7",
+["Мотив|Зачем вам эта поездка или переезд.","Подготовка|Документы, деньги, вещи, договорённости.","Дорога|Как пройдёт переходный этап.","Новое место|Что встретит по прибытии.","Сложность|Главная зона адаптации.","Поддержка|Что или кто поможет.","Результат|Какой опыт и положение вероятны после адаптации."],
+["Что учесть перед работой в другой стране?","Как подготовиться к переезду?","Как пройдёт деловая поездка?"],
+["Считать карту дороги буквальным указанием на транспортное происшествие.","Не сверять визы, правила въезда и договор.","Путать впечатление от первых дней с долгосрочным итогом."],
+"Читайте 1→4 как маршрут, затем 5 и 6 как пару «сложность/опора». Итог — после периода адаптации, срок которого нужно назвать заранее."),
+
+S("event-risk","Риск нежелательного события","choice",5,2,"Редакционная","Не «да/нет», а факторы риска, защиты и контроля.","line5",
+["Текущий риск|Насколько ситуация напряжена сейчас.","Что усиливает|Фактор, повышающий вероятность.","Что снижает|Защита, ресурс или благоприятное условие.","Что контролировать|Практическое действие со стороны кверента.","Траектория|Куда идёт баланс факторов в заданный срок."],
+["Каков риск срыва сделки в этом месяце?","Что может помешать поездке и как подготовиться?","Насколько устойчив наш план при нынешних условиях?"],
+["Переводить карты в точный процент без метода и данных.","Пугаться одной тяжёлой карты вне её позиции.","Не учитывать, что действие №4 меняет траекторию №5."],
+"Сравните усилитель и защиту, затем сформулируйте одно реальное действие. Этот расклад полезен как карта факторов, не как статистическая оценка."),
+
+S("tfa","Мысли · чувства · действия","relations",3,1,"Современная","Быстрая проверка согласованности внутреннего и внешнего.","line3",
+["Мысли|Осознанная оценка, планы, объяснение ситуации.","Чувства|Эмоциональная реакция и привязанность.","Действия|Наблюдаемое поведение или ближайшая линия поступков."],
+["Как человек относится к нашему общению?","Насколько его слова согласуются с поведением?","Что происходит между нами после встречи?"],
+["Выдавать карту мыслей за доказательство того, что человек буквально думает.","Считать чувства важнее действий.","Предполагать романтику, если вопрос был о семье или работе."],
+"Главный смысл — в согласованности. Если мысли, чувства и действия противоречат друг другу, именно этот разрыв и есть ответ."),
+
+S("station-two","Вокзал на двоих","relations",7,2,"Х. Банцхаф","Два человека на трёх уровнях и общая карта отношений.","columns7",
+["Мысли первого|Как первый человек понимает отношения.","Чувства первого|Его эмоциональная реакция.","Поведение первого|Что он показывает и делает.","Мысли второго|Как второй человек понимает отношения.","Чувства второго|Его эмоциональная реакция.","Поведение второго|Что он показывает и делает.","Между ними|Текущее состояние и общий рисунок связи."],
+["Почему мы по-разному видим эту ситуацию?","Как устроены наши отношения сейчас?","Где возникает несоответствие между чувствами и поступками?"],
+["Читать столбцы как телепатию, а не символическую модель отношений.","Сравнивать карты по «силе», не учитывая уровни.","Превращать центральную карту в далёкий итог — она описывает настоящее."],
+"Сначала прочитайте каждого сверху вниз. Затем сравните горизонтальные пары мыслей, чувств и поведения; центральная карта объясняет, что соединяет или разделяет."),
+
+S("repair-dialogue","Диалог после конфликта","relations",7,2,"Редакционная","Что было услышано, что не сказано и как восстановить разговор.","bridge7",
+["Предмет конфликта|О чём спорят на поверхности.","Моя уязвимость|Что задело меня глубже.","Уязвимость другого|Что могло задеть другого человека.","Искажение|Что стороны понимают по-разному.","Что сказать|Главная ясная мысль для разговора.","Как сказать|Тон, момент или форма.","Возможность контакта|Что реально можно восстановить сейчас."],
+["Как поговорить после ссоры без нового скандала?","Что мы не услышали друг у друга?","Как восстановить рабочее общение?"],
+["Использовать расклад, чтобы назначить виноватого.","Приписывать другому диагнозы или тайные намерения.","Игнорировать безопасность и реальные границы при токсичном поведении."],
+"Читайте карты 2 и 3 симметрично, затем мост 4→5→6. Карта 7 показывает доступный уровень контакта, а не обещание примирения."),
+
+S("relationship-nine","Динамика отношений","relations",9,3,"Редакционная","Расширенная схема без сведения всего к любви или разрыву.","grid9",
+["Я сейчас|Моя роль и состояние в связи.","Другой сейчас|Его проявленная роль.","Основа связи|На чём отношения держатся.","Сильная сторона|Что работает хорошо.","Напряжение|Где копится конфликт.","Невысказанное|Тема, которую обходят.","Мой шаг|Что я могу изменить.","Общий шаг|Что требует участия обоих.","Тенденция|Куда движется связь при текущем поведении."],
+["Что поддерживает и разрушает наши отношения?","О чём нам необходимо поговорить?","Как изменится связь, если я перестану давить?"],
+["Возлагать карту общего шага только на партнёра.","Читать невысказанное как доказанную измену или обман.","Игнорировать различие между своей зоной контроля и общей."],
+"Прочитайте верхний ряд как участников и основание, средний — как механизм отношений, нижний — как действия и тенденцию."),
+
+S("new-acquaintance","Новое знакомство","relations",7,2,"Редакционная","Темп, взаимный интерес, границы и реальная перспектива контакта.","fan7",
+["Моё впечатление|Что меня привлекает или настораживает.","Проявление человека|Как он показывает себя сейчас.","Общий интерес|Что создаёт контакт.","Различие|Где ожидания могут не совпасть.","Темп|Как быстро полезно развивать общение.","Граница|Что важно не нарушить.","Ближайшая перспектива|Во что может вырасти знакомство в заданный срок."],
+["Стоит ли развивать новое знакомство?","На чём может строиться наше общение?","Какой темп сближения будет разумным?"],
+["Строить далёкий прогноз по человеку, которого почти не знаете.","Принимать привлекательность за совместимость.","Игнорировать реальные слова, поступки и согласие."],
+"Сопоставьте 1 и 2, затем пару 3/4. Карты 5 и 6 задают условия, при которых перспектива 7 вообще имеет смысл."),
+
+S("family-conflict","Семейный узел","relations",7,2,"Редакционная","Роли, повторяющийся сценарий и минимальный шаг к разрядке.","knot7",
+["Поверхность|Из-за чего спорят сейчас.","Старый сценарий|Что повторяется из прошлого.","Моя роль|Как я поддерживаю или меняю цикл.","Роль другого|Его наблюдаемый вклад в цикл.","Общая потребность|Что обе стороны пытаются защитить.","Граница|Что нельзя продолжать по-старому.","Шаг к разрядке|Самое реалистичное действие сейчас."],
+["Почему мы с родственником снова ссоримся об одном и том же?","Как прекратить повторяющийся семейный конфликт?","Какую границу нужно обозначить спокойно?"],
+["Искать одного виноватого вместо повторяющегося механизма.","Считать карту другого человека установленным фактом о нём.","Путать разрядку с обязанностью терпеть нарушение границ."],
+"Центр — общая потребность. Вокруг неё прочитайте старый цикл 2→3→4, затем выход 6→7."),
+
+S("contact-boundaries","Границы общения","relations",5,2,"Редакционная","Когда контакт нужен, но его формат должен измениться.","cross5",
+["Что происходит|Суть текущего общения.","Что я отдаю|Мой вклад, время и эмоциональный ресурс.","Что получаю|Реальная обратная связь.","Нужная граница|Что следует ограничить или назвать.","Здоровый формат|Как может выглядеть приемлемое общение."],
+["Стоит ли сокращать общение с этим человеком?","Как сохранить контакт и не выгорать?","Что именно меня не устраивает в нашем формате?"],
+["Использовать расклад вместо прямого разговора.","Считать границу наказанием другого человека.","Обесценивать карту «что получаю», если она не соответствует ожиданиям."],
+"Сравните обмен 2↔3. Позиции 4 и 5 переводят дисбаланс в конкретное правило и новый формат."),
+
+S("person-scan","Сканирование человека — краткое","person",9,3,"Редакционная","Сокращённый портрет проявлений человека без претензии на чтение мыслей.","person9",
+["Внешний образ|Как человек обычно себя показывает.","Способ мышления|Как обрабатывает информацию и принимает решения.","Эмоциональный стиль|Как выражает и регулирует чувства.","Главная мотивация|Что чаще всего направляет выбор.","Сильная сторона|На что можно опереться.","Уязвимость|Где человек теряет устойчивость.","Поведение в отношениях|Как строит близкий или деловой контакт.","Поведение под давлением|Что проявляется в конфликте и стрессе.","Текущая задача|На каком жизненном уроке или выборе он сосредоточен."],
+["Какой стиль общения подходит этому человеку?","В чём его сильная сторона как партнёра по проекту?","Как он обычно действует под давлением?"],
+["Называть символический портрет объективной психологической диагностикой.","Смешивать устойчивые черты с временным состоянием.","Использовать карту уязвимости для давления или манипуляции."],
+"Читайте вертикали: образ–мотивация–отношения и мышление–сила–давление. Девятая карта задаёт временный контекст всему портрету."),
+
+S("person-scan-full","Сканирование человека","person",11,3,"Расширенный вариант","Подробный портрет: внешняя маска, внутренний характер, мысли, чувства, скрытое и мотив общения с вами.","person11",
+["Как показывает себя окружающим|Социальный образ, маска и первое впечатление.","Какой он на самом деле|Внутренняя сущность и характер без социальной маски.","Что у него в голове|Основные мысли, установки и то, чем сейчас занят ум.","Что у него внутри|Эмоциональная сторона, чувства и переживания.","Сильные стороны|Качества, способности и то, на что в человеке можно опереться.","Теневая сторона|Недостатки, слабости и неприятные качества, которые могут проявляться.","Что скрывает от окружающих|То, что человек сознательно не демонстрирует.","Как относится ко мне|Его восприятие вас и вашего места в своей жизни.","Чего хочет от меня|Мотив взаимодействия и зачем ему нужно общение.","Чего от него ожидать|Наиболее вероятное поведение по отношению к вам в заданный срок.","Итог / совет|Как разумнее выстраивать контакт: сближаться, проверять доверие или держать дистанцию."],
+["Что за человек передо мной и как он обычно себя проявляет?","Насколько этому человеку можно доверять в совместном деле?","Зачем он поддерживает общение со мной?","Чего ожидать от него в ближайший месяц?"],
+["Выдавать символический портрет за объективный психологический диагноз.","Считать карты мыслей и чувств буквальным чтением чужого сознания.","Путать временное состояние человека с его постоянным характером.","Делать обвинения по позициям «тень» и «что скрывает» без реальных доказательств.","Игнорировать поступки человека, если они противоречат красивой трактовке."],
+"Сначала сравните 1 ↔ 2: внешний образ и внутренний характер. Затем прочитайте пары 3 ↔ 4 и 5 ↔ 6 — разум с чувствами, сильную сторону с тенью. Карта 7 показывает скрытый слой. После общего портрета переходите к личной линии 8 → 9 → 10: отношение, мотив, ожидаемое поведение. Карта 11 подводит практический итог для вас.",
+"Позиции 3, 4, 7–10 отражают символическую модель ситуации глазами кверента, а не устанавливают факты о другом человеке. Проверяйте выводы по словам, поступкам, времени и собственным границам."),
+
+S("reliability","Надёжность человека","person",6,2,"Редакционная","Слова, действия, обязательства и проверяемые признаки.","grid6",
+["Что обещает|Заявленная позиция человека.","Что делает|Наблюдаемое поведение.","Мотивация|Почему ему выгодно участвовать.","Ограничение|Что мешает выполнить обещанное.","Как проверить|Какой факт или действие попросить.","Уровень доверия|Какую степень ответственности разумно передать сейчас."],
+["Можно ли полагаться на этого подрядчика?","Насколько реалистично обещание знакомого?","Что проверить перед совместным делом?"],
+["Подменять проверку репутации раскладом.","Считать приятную карту гарантией честности.","Передавать человеку больше ответственности, чем допускает позиция 6."],
+"Ключевая пара — 1↔2. Если слова и действия расходятся, карта 5 должна превратиться в реальную проверку до принятия решения."),
+
+S("motives-behavior","Мотивы и поведение","person",7,2,"Редакционная","Почему человек включён в ситуацию и чего ждать от его действий.","fan7",
+["Роль|Какое место человек занимает в ситуации.","Видимая цель|Что он заявляет или показывает.","Внутренний интерес|Какая выгода или потребность может двигать им.","Страх|Чего он старается избежать.","Ресурс|Что он способен реально сделать.","Вероятное действие|Как проявится в ближайший срок.","Как взаимодействовать|Наиболее конструктивная линия со стороны кверента."],
+["Чего человек добивается в этих переговорах?","Как общаться с новым руководителем?","Какова вероятная линия поведения второй стороны?"],
+["Принимать внутренний интерес за доказанный скрытый план.","Не различать способность и намерение.","Манипулировать человеком на основе предположений расклада."],
+"Сначала роль и видимую цель, затем скрытую пару интерес/страх. Действие №6 ограничено реальным ресурсом №5."),
+
+S("job-now","Работа сейчас","work",7,2,"Редакционная","Роль, нагрузка, отношения, рост и ближайший практический шаг.","desk7",
+["Моя позиция|Как я сейчас включён в работу.","Главная задача|Что требует внимания прежде всего.","Нагрузка|Куда уходит больше всего сил.","Отношения|Команда, руководство, клиенты.","Ресурс|Что помогает справляться.","Рост|Где есть возможность развития.","Следующий шаг|Что сделать в ближайшее время."],
+["Почему работа стала выматывать?","Где сейчас мой лучший шанс на рост?","Как улучшить отношения с руководством?"],
+["Любую тяжёлую карту читать как увольнение.","Смешивать неудовлетворённость работой с общей самооценкой.","Ждать изменений без шага в позиции 7."],
+"Прочитайте рабочий контур 2–4, затем свои возможности 1–5–6. Последняя карта должна стать конкретным действием."),
+
+S("new-job","Новая работа","work",7,2,"Редакционная","Не только «возьмут ли», а условия, соответствие и подготовка.","road7",
+["Соответствие|Насколько роль подходит навыкам и целям.","Сильная сторона|Что выгодно выделить.","Пробел|Что нужно подтянуть или объяснить.","Работодатель|Что, вероятно, важно второй стороне.","Условия|Что внимательно проверить в предложении.","Подготовка|Лучший следующий шаг.","Перспектива|Как может развиться эта возможность."],
+["Как подготовиться к собеседованию?","На что смотреть в предложении о работе?","Что повысит мои шансы на эту вакансию?"],
+["Считать перспективу обещанием найма.","Не проверять зарплату, обязанности и договор.","Пытаться угадать точные мысли интервьюера."],
+"Сопоставьте соответствие и пробел, затем переведите карты 2 и 6 в аргументы и подготовку. Пятая карта — список вопросов работодателю."),
+
+S("business-idea","Бизнес-идея","work",9,3,"Редакционная","Потребность клиента, предложение, ресурсы, риски и тест рынка.","grid9",
+["Проблема клиента|Какую реальную боль решает идея.","Предложение|Что именно вы продаёте.","Клиент|Кто скорее всего заплатит.","Преимущество|Почему выберут вас.","Ресурс|Что уже есть для запуска.","Дефицит|Чего не хватает.","Риск|Что может сделать идею невыгодной.","Первый тест|Как проверить спрос малой ценой.","Потенциал|Во что проект может вырасти после проверки."],
+["Есть ли смысл предлагать создание сайтов местному бизнесу?","Какой клиент лучше всего подходит этой услуге?","Что проверить до вложения денег?"],
+["Подменять расчёт себестоимости картой потенциала.","Фантазировать о клиенте вместо разговора с ним.","Сразу строить полный продукт до теста позиции 8."],
+"Читайте верхний ряд как рынок, средний как способность выполнить обещание, нижний как проверку жизнеспособности."),
+
+S("money-flow","Куда уходит ресурс","work",6,2,"Редакционная","Финансовая привычка, скрытая утечка и точка контроля.","grid6",
+["Входящий поток|Как формируются деньги или другой ресурс.","Обязательные расходы|То, без чего сейчас нельзя обойтись.","Незаметная утечка|Мелкие или неучтённые траты.","Эмоциональная трата|Что покупается ради чувства, статуса или облегчения.","Резерв|Где можно сохранить или вернуть ресурс.","Первое правило|Какое ограничение ввести на ближайший месяц."],
+["Почему деньги заканчиваются раньше срока?","Какая трата сейчас незаметно съедает бюджет?","С чего начать наводить порядок в расходах?"],
+["Обвинять другого человека без выписок и чеков.","Воспринимать карту как точную сумму.","Не вести реальный учёт хотя бы 30 дней."],
+"Сначала проверьте карты 1–4 по фактическим операциям. Только затем используйте 5 и 6 как гипотезу для бюджетного эксперимента."),
+
+S("sale","Продажа вещи или имущества","work",7,2,"Редакционная","Спрос, цена, препятствие, покупатель и действие продавца.","market7",
+["Объект|Как рынок воспринимает предложение.","Спрос|Есть ли активный интерес в выбранный срок.","Цена|Насколько цена соответствует условиям.","Препятствие|Что тормозит сделку.","Покупатель|Какой тип покупателя вероятнее откликнется.","Действие продавца|Что улучшить в объявлении или процессе.","Вероятный результат|К чему идёт продажа в заданный срок."],
+["Что мешает продать видеокарту?","Как ускорить продажу автомобиля?","Насколько реалистична текущая цена?"],
+["Считать карту цены точным денежным числом.","Игнорировать качество фото, описание и аналоги рынка.","Читать карту покупателя как конкретную личность без оснований."],
+"Свяжите рынок 1–3, затем препятствие и действие 4→6. Итог зависит от того, будет ли выполнена карта 6."),
+
+S("project-status","Проект: карта состояния","work",8,3,"Редакционная","Цель, прогресс, узкое место, люди, срок и ближайший результат.","project8",
+["Цель|Что проект должен дать в итоге.","Фактический прогресс|Что уже сделано, а не запланировано.","Узкое место|Что сильнее всего ограничивает движение.","Люди|Команда, заказчик или партнёры.","Ресурсы|Время, деньги, инструменты.","Приоритет|Что делать раньше остального.","Риск срока|Что может вызвать задержку.","Ближайший результат|Какой этап реально завершить следующим."],
+["Почему сайт не удаётся закончить?","Что сейчас важнее всего в проекте?","Какой результат реалистичен до конца месяца?"],
+["Оценивать прогресс по намерениям, а не готовым результатам.","Назначать виноватого по карте людей.","Раздувать объём вместо снятия узкого места."],
+"Сравните цель и факт 1↔2. Затем узкое место проверяется ресурсами и людьми; приоритет №6 должен вести прямо к результату №8."),
+
+S("day-parts","Утро · день · вечер","time",4,1,"Практика","Короткий прогноз ритма дня с общей темой.","line4",
+["Утро|Старт дня и первые обстоятельства.","День|Основная активность и нагрузка.","Вечер|Завершение и эмоциональный фон.","Тема дня|Что объединяет три периода."],
+["Как пройдёт мой завтрашний день?","На что обратить внимание в день поездки?","Как распределится энергия важного рабочего дня?"],
+["Привязывать каждую карту к точному часу.","Считать сложную карту вечером обязательной бедой.","Не использовать общую карту для связи трёх частей."],
+"Сначала прочитайте временную линию 1→2→3, затем четвёртой картой сформулируйте заголовок всего дня."),
+
+S("week","Неделя: семь дней и итог","time",8,2,"Практика","По одному фокусу на день плюс общий итог недели.","week8",
+["Понедельник|Главная тема дня.","Вторник|Главная тема дня.","Среда|Главная тема дня.","Четверг|Главная тема дня.","Пятница|Главная тема дня.","Суббота|Главная тема дня.","Воскресенье|Главная тема дня.","Итог недели|Повторяющаяся тема, урок или результат."],
+["На что обратить внимание на следующей неделе?","Как распределить силы по дням?","В какой день лучше заняться сложным делом?"],
+["Трактовать карты как жёсткое расписание событий.","Менять значение дня задним числом.","Игнорировать общий рисунок мастей и повторов."],
+"Сначала отметьте контрасты и повторы по семи дням. Восьмая карта не заменяет дни, а показывает их общий знаменатель."),
+
+S("event","Событие или встреча","time",6,2,"Редакционная","Подготовка, атмосфера, поворот, результат и послевкусие.","event6",
+["Мой настрой|С чем я вхожу в событие.","Внешняя атмосфера|Условия, люди и общий тон.","Ключевой момент|Что окажется самым важным.","Моя реакция|Как я вероятнее поведу себя.","Результат|Чем закончится сама встреча.","После|Что останется и потребует продолжения."],
+["Как пройдёт собеседование?","Что будет главным на семейной встрече?","Как подготовиться к важным переговорам?"],
+["Считать атмосферу характеристикой конкретного человека.","Путать результат встречи с долгосрочным итогом дела.","Не готовиться, потому что карта выглядит благоприятно."],
+"Читайте 1 и 2 как встречу двух потоков. Карты 3→4 дают поворот, а 5 и 6 разделяют результат события и его последствия."),
+
+S("legal-process","Судебное или административное дело","time",7,3,"Редакционная","Документы, позиция сторон, процедура, задержка и следующий шаг.","scales7",
+["Суть дела|Какой вопрос реально решается.","Мои документы|Сильные и слабые стороны подтверждений.","Другая сторона|Её проявленная позиция и аргументы.","Процедура|Формальные правила и ход рассмотрения.","Задержка|Что может затянуть процесс.","Полезный шаг|Что уточнить у юриста или в документах.","Вероятный этап|К какому ближайшему процессуальному результату идёт дело."],
+["Что проверить перед заседанием?","Где слабое место в подготовке документов?","Какой ближайший этап вероятен в деле о снятии ареста?"],
+["Заменять картами консультацию адвоката и текст закона.","Называть карту другой стороны доказательством её намерений.","Путать ближайший этап с окончательным решением суда."],
+"Сначала фактический треугольник 2–3–4, затем задержка и действие 5→6. Седьмая карта — ближайший этап в указанном сроке, не юридическая гарантия."),
+
+S("lost-item","Потерянная вещь","time",5,2,"Народная практика","Контекст потери, зона поиска и действие без буквального фатализма.","compass5",
+["Обстоятельство|Что происходило вокруг момента потери.","Тип места|Открытое/закрытое, рабочее/домашнее, высоко/низко — символические подсказки.","Рядом с чем|Предмет, функция или активность поблизости.","Что мешает найти|Неверное предположение, чужое перемещение, беспорядок.","Действие|Где и как искать сначала."],
+["Где начать искать ключи?","Что я упускаю при поиске документа?","Мог ли предмет быть перемещён во время уборки?"],
+["Превращать символы мастей в точные координаты.","Обвинять человека в краже по придворной карте.","Продолжать расклад вместо системного поиска и звонков."],
+"Используйте карту 1 для восстановления цепочки действий, 2 и 3 — как признаки зоны, 4 — как проверку ошибочной гипотезы, 5 — как первый маршрут поиска."),
+
+S("etteilla","Большой метод Эттейлы","classic",78,4,"Эттейла / Папюс","Полная колода делится на 26, 17, 11 и 24; версии расходятся в роли последней группы.","etteilla",
+["Ряд 26 — Душа|Общий внутренний фон и глубокие побуждения; читается парами от краёв к центру.","Ряд 17 — Дух / разум|Осознанные идеи и стратегия; центральная 9-я карта остаётся без пары.","Ряд 11 — Тело / материя|Поступки, быт и материальное проявление; без медицинской диагностики. Центральная 6-я карта остаётся без пары.","Группа 24|В тексте Папюса — отброшенная пачка. В приложенном файле — четвёртый ряд «Судьба / итог»."],
+["Какова общая структура моей ситуации на длительном отрезке?","Какие внутренние, умственные и материальные процессы связаны в этом вопросе?","Что показывает полный обзор важного жизненного периода?"],
+["Называть метод доказанным наследием древнеегипетских жрецов.","Смешивать версию Папюса и вариант приложенного файла незаметно для читателя.","Пытаться истолковать 78 карт как 78 независимых сообщений.","Использовать ряд «Тело» для постановки диагноза."],
+"В варианте приложенного файла карты сдаются по принципу «две в остаток, одна в рабочую группу»: сначала 26/52, затем 17/35, затем 11/24. Ряды выкладываются справа налево и читаются парами: крайняя правая с крайней левой, затем следующая пара — к центру.",
+"У Папюса алгоритм иной: колоду делят на три равные стопки по 26, одну откладывают; 52 карты — на три стопки по 17 с остатком; 35 карт — на три стопки по 11 с остатком. Полученные 26/17/11 читаются как Душа/Дух/Тело, а 24 нерабочие карты откладываются. В приложенном DOCX группа 24 переосмыслена как «Судьба / итог» и читается четвёртым рядом. Оба варианта показаны, но их нельзя выдавать за одну и ту же схему. Египетское происхождение Таро — оккультная легенда XVIII века, а не подтверждённый исторический факт."),
+
+S("monthly-compass","Компас месяца","time",5,2,"Редакционная","Главная тема, работа, отношения, ресурс и ориентир месяца.","compass5",
+["Тема месяца|Главный процесс периода.","Дела и работа|На чём будет держаться практическая часть жизни.","Отношения|Ключевой способ взаимодействия с людьми.","Ресурс|Что поддержит и поможет восстановиться в бытовом смысле.","Ориентир|Какой выбор или привычка улучшит месяц."],
+["На что сделать ставку в следующем месяце?","Как распределить внимание между делами и отношениями?","Какой навык будет самым полезным в этом месяце?"],
+["Пытаться увидеть каждое событие месяца в пяти картах.","Читать ресурс как медицинский совет.","Не обозначать календарные границы периода."],
+"Начните с центра, затем прочитайте горизонталь дел и отношений, после — вертикаль ресурса и ориентира."),
+
+S("contract-client","Клиент или договор","work",7,2,"Редакционная","Ожидания, объём, деньги, риски и способ зафиксировать договорённость.","bridge7",
+["Запрос клиента|Что ему действительно нужно.","Моё понимание|Как я сейчас вижу задачу.","Расхождение|Где стороны могут говорить о разном.","Объём работ|Что должно войти и не войти в договор.","Оплата|Как устроена ценность и денежная сторона.","Риск|Что способно вызвать конфликт.","Фиксация|Какое условие нужно записать особенно ясно."],
+["Что уточнить перед созданием сайта клиенту?","Где риск недопонимания в договоре?","Как обозначить границы поддержки проекта?"],
+["Считать карту оплаты заменой смете.","Не фиксировать правки, сроки и ответственность письменно.","Приписывать клиенту скрытый обман без наблюдаемых признаков."],
+"Сравните запрос и своё понимание 1↔2; карта 3 показывает вопрос для уточнения. Затем превратите позиции 4–7 в пункты письменного соглашения."),
+
+S("decision-three","Решение в трёх картах","choice",3,1,"Редакционная","Минимальный выбор: возможность, цена и здравый шаг.","line3",
+["Возможность|Что откроет выбранное действие.","Цена|Чем придётся заплатить: временем, усилиями, отказом от другого.","Здравый шаг|Что сделать прежде, чем решить окончательно."],
+["Стоит ли соглашаться на это предложение?","Что я получу и чем заплачу?","Как проверить решение до большого шага?"],
+["Читать первую карту как «да», вторую как «нет».","Игнорировать цену благоприятной возможности.","Не выполнять проверочный шаг из третьей позиции."],
+"Не голосуйте картами. Сопоставьте ценность возможности с приемлемостью цены и завершите конкретной проверкой."),
+
+S("communication-scan","Сканирование общения","person",6,2,"Редакционная","Как человек слышит, отвечает, избегает и договаривается.","grid6",
+["Как слышит|Что он улавливает в чужих словах.","Как говорит|Манера выражать позицию.","Что замалчивает|Тема, которую трудно формулировать.","Реакция на несогласие|Поведение в споре.","Способ договориться|Формат, который повышает ясность.","Красный флаг|Какой наблюдаемый признак нельзя игнорировать."],
+["Как лучше объяснить задачу этому человеку?","Почему наши разговоры заканчиваются непониманием?","Как вести переговоры с жёстким собеседником?"],
+["Диагностировать личность по одной беседе и одному раскладу.","Считать замалчивание обязательной ложью.","Игнорировать фактические угрозы и оскорбления ради «правильного подхода»."],
+"Сначала пара 1↔2, затем трудная зона 3↔4. Позиции 5 и 6 задают одновременно рабочий формат и предел допустимого."),
+
+S("goal-ladder","Лестница к цели","choice",6,2,"Редакционная","Цель раскладывается на основание, препятствие и три шага.","pyramid6",
+["Цель|Чего вы хотите достичь в проверяемой форме.","Где сейчас|Реальная стартовая точка.","Главное препятствие|Что сильнее всего мешает.","Первый шаг|Действие на ближайшие дни.","Второй шаг|Что делать после первого результата.","Критерий успеха|По какому факту понять, что вы продвинулись."],
+["Как начать зарабатывать на создании сайтов?","Что поможет закончить учебный проект?","Как сдвинуть цель, которую долго откладываю?"],
+["Формулировать цель как мечту без измеримого результата.","Тянуть новые карты вместо выполнения первого шага.","Путать критерий успеха с идеальным финалом."],
+"Читайте снизу вверх: реальность и препятствие создают основание; шаги должны быть последовательны, а вершина — измерима."),
+
+S("conversation","Важный разговор","time",5,2,"Редакционная","Цель, позиция собеседника, риск, формулировка и итог разговора.","line5",
+["Моя цель|Что я хочу получить от разговора.","Позиция собеседника|Что он показывает и защищает.","Риск разговора|Где возможен срыв или недопонимание.","Ключевая фраза|Что важно сказать ясно.","Вероятный итог|Чего реально можно достичь за один разговор."],
+["Как поговорить о деньгах с клиентом?","Как сообщить неприятную новость спокойно?","Что важно сказать родственнику о своих границах?"],
+["Готовить манипуляцию вместо ясного сообщения.","Считать позицию собеседника точным чтением его мыслей.","Ожидать решить многолетнюю проблему за один разговор."],
+"Сверьте цель с реалистичным итогом. Затем используйте карту риска, чтобы изменить форму ключевой фразы, а не отказаться от разговора."),
+
+S("three-not-mean","Карта + «значит / не значит»","quick",3,2,"Уточняющая техника","Лаконичный способ прояснить неоднозначную карту без бесконечных дополнений.","triangle3",
+["Основная карта|Неясный символ или позиция из исходного расклада.","Точно не означает|Граница неверной или пугающей трактовки.","Скорее означает|Конкретный смысл карты в данном вопросе."],
+["Что означает Тройка Мечей в вопросе о том, как пройдёт день?","Башня здесь про событие или про внутреннюю тревогу?","Что именно показывает Луна в позиции препятствия?"],
+["Тянуть уточнения к каждой карте расклада.","Формулировать «не значит» после того, как карта уже вытянута.","Использовать технику, чтобы отменить неудобный ответ."],
+"Сначала вслух задайте обе границы, только затем вытяните карты 2 и 3. Они уточняют одну карту, а не переписывают весь расклад."),
+
+S("meeting-two","Встреча двух сторон","relations",6,2,"Редакционная","Ожидания, предложения и точки совпадения двух людей или команд.","columns6",
+["Ожидание стороны А|Что она хочет получить.","Предложение стороны А|Что готова дать.","Предел стороны А|На что не согласится.","Ожидание стороны Б|Что она хочет получить.","Предложение стороны Б|Что готова дать.","Предел стороны Б|На что не согласится."],
+["Есть ли основа для делового партнёрства?","Почему переговоры зашли в тупик?","Где возможен компромисс между нами?"],
+["Считать предполагаемые ожидания фактом без прямого вопроса сторонам.","Искать компромисс за чужой счёт.","Не сравнивать предложения с пределами противоположной стороны."],
+"Сначала каждый столбец сверху вниз. Затем сравните ожидание А с предложением Б и ожидание Б с предложением А; пределы показывают границы сделки."),
+
+S("home-change","Дом и перемены","time",6,2,"Редакционная","Жильё, бытовая нагрузка, деньги, люди и результат изменения.","home6",
+["Текущее состояние|Что в доме или быту требует внимания.","Желаемая перемена|Какой результат действительно нужен.","Практическое препятствие|Деньги, время, документы, организация.","Люди|Как затронуты домочадцы или соседи.","Первый этап|С чего разумно начать.","Результат|Как изменится бытовая ситуация после первого цикла работ."],
+["Стоит ли начинать ремонт сейчас?","Что учесть перед сменой жилья?","Как организовать бытовую перемену без хаоса?"],
+["Читать карту дома как буквальную поломку.","Игнорировать смету и согласие других жильцов.","Путать первый цикл изменений с окончательным результатом."],
+"Свяжите желание с реальным препятствием 2↔3; затем люди и первый этап 4→5 определяют достижимость результата 6."),
+
+S("resource-balance","Баланс нагрузки","quick",5,2,"Редакционная","Бытовой разбор перегруза без медицинских утверждений.","cross5",
+["Что перегружает|Главный источник бытового или эмоционального напряжения.","Что обязательно|Задача, которую нельзя отложить.","Что можно убрать|Лишнее обязательство или ожидание.","Что поддерживает|Доступный ресурс, человек или привычка.","Новый баланс|Как перестроить ближайшие дни."],
+["Почему я ничего не успеваю?","Что можно убрать из нагрузки на этой неделе?","Как распределить силы перед важным сроком?"],
+["Использовать расклад для объяснения физических симптомов.","Называть все обязанности одинаково важными.","Считать карту поддержки пассивным спасением извне."],
+"Сначала отделите обязательное от лишнего, затем найдите доступную поддержку. Финальная карта должна стать новым правилом расписания."),
+
+S("hidden-factor","Что я упускаю","quick",4,2,"Редакционная","Проверка слепой зоны без драматизации «тайн».","diamond4",
+["Что вижу|Моё текущее понимание ситуации.","Что не замечаю|Фактор вне внимания.","Почему не замечаю|Предположение, страх или привычка мышления.","Как проверить|Наблюдение, вопрос или документ, который внесёт ясность."],
+["Что я упускаю в переговорах?","Почему не понимаю причину задержки?","Как проверить своё впечатление о человеке?"],
+["Называть вторую карту тайным заговором.","Путать собственное предположение с фактом.","Не выполнять реальную проверку из позиции 4."],
+"Карты 1 и 2 образуют контраст; карта 3 объясняет фильтр восприятия, а карта 4 переводит гипотезу в проверяемый шаг.")
+];
+
+const layouts={
+ single:[[50,50]],line3:[[24,50],[50,50],[76,50]],line4:[[17,50],[39,50],[61,50],[83,50]],line5:[[10,50],[30,50],[50,50],[70,50],[90,50]],
+ cross4:[[50,55],[25,55],[75,55],[50,20]],cross5:[[50,50],[50,82],[22,50],[78,50],[50,18]],diamond4:[[50,15],[82,50],[50,85],[18,50]],
+ horseshoe7:[[10,68],[22,36],[38,18],[50,12],[62,18],[78,36],[90,68]],
+ celtic10:[[37,50],[37,50],[37,84],[13,50],[37,15],[63,50],[89,15],[89,38],[89,61],[89,84]],
+ fork7:[[50,12],[28,34],[20,60],[12,86],[72,34],[80,60],[88,86]],
+ columns7:[[23,20],[23,50],[23,80],[77,20],[77,50],[77,80],[50,50]],columns6:[[25,18],[25,50],[25,82],[75,18],[75,50],[75,82]],
+ grid6:[[25,28],[50,28],[75,28],[25,72],[50,72],[75,72]],grid9:[[20,20],[50,20],[80,20],[20,50],[50,50],[80,50],[20,80],[50,80],[80,80]],person9:[[20,17],[50,17],[80,17],[20,50],[50,50],[80,50],[20,83],[50,83],[80,83]],person11:[[18,15],[82,15],[35,39],[65,39],[15,64],[85,64],[50,64],[18,87],[39,87],[61,87],[82,87]],
+ pyramid7:[[50,12],[35,40],[65,40],[18,78],[39,78],[61,78],[82,78]],pyramid6:[[50,15],[36,48],[64,48],[20,82],[50,82],[80,82]],triangle3:[[50,16],[26,78],[74,78]],
+ road7:[[8,64],[22,48],[36,32],[50,20],[64,32],[78,48],[92,64]],bridge7:[[12,25],[12,75],[32,50],[50,50],[68,50],[88,25],[88,75]],
+ fan7:[[50,17],[18,42],[34,48],[50,53],[66,48],[82,42],[50,84]],knot7:[[50,50],[23,22],[50,15],[77,22],[77,78],[50,85],[23,78]],
+ desk7:[[16,24],[39,24],[62,24],[85,24],[27,72],[50,72],[73,72]],market7:[[15,25],[38,25],[62,25],[85,25],[27,72],[50,72],[73,72]],
+ project8:[[12,25],[37,25],[63,25],[88,25],[12,75],[37,75],[63,75],[88,75]],week8:[[8,35],[22,35],[36,35],[50,35],[64,35],[78,35],[92,35],[50,78]],
+ event6:[[15,35],[32,20],[50,35],[68,20],[85,35],[50,78]],scales7:[[50,12],[20,35],[80,35],[50,43],[20,78],[50,82],[80,78]],compass5:[[50,50],[14,50],[86,50],[50,14],[50,86]],home6:[[50,15],[20,45],[50,45],[80,45],[32,82],[68,82]]
+};
+function wheel(n){return Array.from({length:n},(_,i)=>{const a=(i/n)*Math.PI*2-Math.PI;return[50+39*Math.cos(a),50+39*Math.sin(a)]})}
+function diagram(spread,detail=false){if(spread.layout==="etteilla")return `<div class="etteilla-mini">${[[26,"Душа"],[17,"Дух"],[11,"Материя"],[24,"Отложены"]].map(([n,l],i)=>`<div class="etteilla-row ${i===3?'off':''}"><b>${n}</b><div class="etteilla-cards">${Array.from({length:Math.min(n,26)},()=>'<i></i>').join('')}</div><span>${l}</span></div>`).join('')}</div>`;const coords=spread.layout==="wheel12"?wheel(12):(layouts[spread.layout]||layouts.grid9);return `<div class="mini-layout">${coords.slice(0,spread.count).map((xy,i)=>`<i class="mini-card ${spread.layout==='celtic10'&&i===1?'crossed':''} ${i===0?'centered':''}" style="left:${xy[0]}%;top:${xy[1]}%">${i+1}</i>`).join('')}</div>`}
+
+const state={cat:"all",query:"",sort:"recommended"};
+const catalog=document.querySelector("#catalog"),filters=document.querySelector("#filters"),resultCount=document.querySelector("#resultCount"),empty=document.querySelector("#empty"),dialog=document.querySelector("#spreadDialog"),dialogContent=document.querySelector("#dialogContent");
+Object.entries(CATEGORIES).forEach(([key,[label]])=>{const b=document.createElement("button");b.type="button";b.className="filter"+(key==="all"?" active":"");b.dataset.cat=key;b.textContent=label;b.addEventListener("click",()=>{state.cat=key;document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x===b));render()});filters.append(b)});
+function visible(){const q=state.query.trim().toLowerCase();let list=spreads.filter(s=>(state.cat==="all"||s.cat===state.cat)&&(!q||[s.title,s.summary,CATEGORIES[s.cat][0],...s.questions,...s.positions.map(p=>p.name+" "+p.desc)].join(" ").toLowerCase().includes(q)));if(state.sort==="easy")list.sort((a,b)=>a.count-b.count||a.difficulty-b.difficulty);if(state.sort==="deep")list.sort((a,b)=>b.count-a.count||b.difficulty-a.difficulty);if(state.sort==="az")list.sort((a,b)=>a.title.localeCompare(b.title,"ru"));return list}
+function render(){const list=visible();catalog.innerHTML=list.map(s=>`<article class="spread-card" style="--cat:${CATEGORIES[s.cat][1]}"><div class="card-head"><span class="tag">${CATEGORIES[s.cat][0]}</span><span class="origin">${s.origin}</span></div><div class="diagram" aria-hidden="true">${diagram(s)}</div><div class="card-body"><h2>${s.title}</h2><p class="summary">${s.summary}</p><div class="meta"><span>${s.count} ${cardWord(s.count)}</span><span>${"◆".repeat(Math.min(s.difficulty,4))}${"◇".repeat(4-Math.min(s.difficulty,4))}</span></div><button class="details-button" type="button" data-id="${s.id}"><span>Открыть схему</span><span>↗</span></button></div></article>`).join("");resultCount.textContent=`Найдено: ${list.length} из ${spreads.length}`;empty.hidden=!!list.length;catalog.querySelectorAll("[data-id]").forEach(b=>b.addEventListener("click",()=>openSpread(b.dataset.id)))}
+function cardWord(n){const m=n%100;if(m>=11&&m<=14)return"карт";const d=n%10;return d===1?"карта":d>=2&&d<=4?"карты":"карт"}
+function openSpread(id){const s=spreads.find(x=>x.id===id);dialogContent.innerHTML=`<div class="detail-head"><div class="detail-title"><span class="tag" style="--cat:${CATEGORIES[s.cat][1]}">${CATEGORIES[s.cat][0]} · ${s.origin}</span><h2>${s.title}</h2><p class="summary">${s.summary}</p><div class="meta"><span>${s.count} ${cardWord(s.count)}</span><span>Сложность ${s.difficulty}/4</span></div></div><div class="detail-diagram" aria-label="Схема расклада">${diagram(s,true)}</div></div><div class="detail-body"><section class="detail-section"><h3>Для каких вопросов</h3><ul class="question-list">${s.questions.map(q=>`<li>${q}</li>`).join('')}</ul></section><section class="detail-section"><h3>Ошибки трактовки</h3><ul class="error-list">${s.errors.map(e=>`<li>${e}</li>`).join('')}</ul></section><section class="detail-section"><h3>Значение позиций</h3><ol class="position-list">${s.positions.map(p=>`<li><span class="pos-num">${p.n}</span><span><strong>${p.name}</strong><span>${p.desc}</span></span></li>`).join('')}</ol></section><section class="detail-section"><h3>Подготовка и выкладка</h3><p class="summary">${s.preparation||"Разложите карты по номерам на схеме. Значения позиций определите до тасования; перевёрнутые карты используйте только если это ваш обычный метод."}</p></section><div class="read-order"><strong>Порядок чтения.</strong> ${s.read}</div>${s.variant?`<div class="variant-box"><h3>${s.id==="etteilla"?"Вариант и источник":"Важные нюансы"}</h3><p>${s.variant}</p></div>`:""}</div>`;dialog.showModal();document.body.style.overflow="hidden"}
+function close(d){d.close();document.body.style.overflow=""}
+document.querySelectorAll("dialog").forEach(d=>{d.addEventListener("click",e=>{if(e.target===d)close(d)});d.querySelectorAll("[data-close]").forEach(b=>b.addEventListener("click",()=>close(d)))});
+document.querySelector("#openGuide").addEventListener("click",()=>{document.querySelector("#guideDialog").showModal();document.body.style.overflow="hidden"});
+document.querySelector("#openSources").addEventListener("click",()=>{document.querySelector("#sourcesDialog").showModal();document.body.style.overflow="hidden"});
+document.querySelector("#search").addEventListener("input",e=>{state.query=e.target.value;render()});
+document.querySelector("#sort").addEventListener("change",e=>{state.sort=e.target.value;render()});
+document.addEventListener("keydown",e=>{if(e.key==="/"&&!/input|textarea|select/i.test(document.activeElement.tagName)){e.preventDefault();document.querySelector("#search").focus()}if(e.key==="Escape")document.body.style.overflow=""});
+document.querySelector("#spreadCount").textContent=spreads.length;render();
+
+  </script>
+</body>
+</html>
