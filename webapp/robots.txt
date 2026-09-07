@@ -1,0 +1,5 @@
+# taro.jetserg.top
+User-agent: *
+Allow: /
+
+Sitemap: https://taro.jetserg.top/sitemap.xml
