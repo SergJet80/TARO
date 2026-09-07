@@ -637,3 +637,8 @@ body {
 @media (max-width: 420px) {
   .main-nav a { padding: 9px 14px; font-size: .95rem; gap: 6px; }
 }
+
+/* ─── Ссылка на страницу карты ─── */
+.card-page-link { margin: 18px 0 4px; text-align: center; }
+.card-page-link a { color: var(--accent, #c9a227); text-decoration: none; border-bottom: 1px dashed currentColor; }
+.card-page-link a:hover { opacity: .8; }

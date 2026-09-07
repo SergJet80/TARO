@@ -239,6 +239,13 @@ function renderRoman(card) {
     </details>`);
   }
 
+/* ─── Ссылка на статическую страницу карты (SEO) ─── */
+const CARD_PAGE_SLUGS = {major00:'durak',major01:'mag',major02:'zhrefca',major03:'imperatrica',major04:'imperator',major05:'ierofant',major06:'vlyublyonnye',major07:'kolesnica',major08:'sila',major09:'otshelnik',major10:'koleso-fortuny',major11:'spravedlivost',major12:'poveshennyj',major13:'smert',major14:'umerennost',major15:'dyavol',major16:'bashnya',major17:'zvezda',major18:'luna',major19:'solnce',major20:'sud',major21:'mir'};
+const cardPage = CARD_PAGE_SLUGS[currentCard.id.replace('-','')];
+if (cardPage) {
+  html.push(`<div class="card-page-link"><a href="/cards/${cardPage}.html" target="_blank" rel="noopener">Подробнее о карте «${currentCard.name_ru}» — отдельная страница →</a></div>`);
+}
+
   html.push('</div>');
   document.getElementById('mContent').innerHTML = html.join('');
 }
