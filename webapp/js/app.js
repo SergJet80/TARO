@@ -185,7 +185,7 @@ function para(text) {
   return '<p>' + t.replace(/\n/g, '<br>') + '</p>';
 }
 
-/* ─── Вкладка «Школа Пана Романа» (только старшие арканы) ─── */
+/* ─── Вкладка «Школа Современного Таро» (только старшие арканы) ─── */
 const ROMAN_SECTIONS_FULL = [
   ['Суть карты',              '✧'],
   ['Прямое положение',        '☀'],
@@ -205,7 +205,7 @@ function renderRoman(card) {
 
   if (!data) {
     html.push(`<div class="roman-empty">
-      <p class="short-value">Для этой карты материалы школы Пана Романа пока не готовы.</p>
+      <p class="short-value">Для этой карты материалы школы Современного Таро пока не готовы.</p>
     </div>`);
     html.push('</div>');
     document.getElementById('mContent').innerHTML = html.join('');
@@ -273,7 +273,7 @@ posTabs.addEventListener('click', e => {
   if (currentPos === 'roman') {
     // Вкладка школы — карту не крутим, показываем материалы школы
     mImg.classList.remove('reversed');
-    if (currentCard) mImg.alt = `${currentCard.name_ru} — школа Пана Романа`;
+    if (currentCard) mImg.alt = `${currentCard.name_ru} — школа Современного Таро`;
     renderRoman(currentCard);
     return;
   }
