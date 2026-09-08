@@ -103,6 +103,16 @@ def shell(title, desc, css_prefix, nav_prefix, active, body):
 FOOTER = '''<footer class="site-footer">
   <p>Руны · Старший Футарк — справочник значений</p>
   <p class="footer-note">Материалы носят справочный и развлекательный характер</p>
+
+<div class="footer-contact">
+  <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+  <a href="mailto:jetjarret@gmail.com">jetjarret@gmail.com</a>
+  <span class="fc-sep" aria-hidden="true">·</span>
+  <span class="fc-support">Поддержать проект:
+    <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener">Donatello</a> ·
+    <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener">Privat24</a>
+  </span>
+</div>
 </footer>'''
 
 # ── index раздела ────────────────────────────────────────────────────────────

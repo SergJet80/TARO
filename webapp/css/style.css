@@ -650,3 +650,28 @@ body {
 .card-page-link { margin: 18px 0 4px; text-align: center; }
 .card-page-link a { color: var(--accent, #c9a227); text-decoration: none; border-bottom: 1px dashed currentColor; }
 .card-page-link a:hover { opacity: .8; }
+
+/* ─── Контакты и поддержка в подвале ─── */
+.footer-contact {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(212, 175, 55, .12);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  gap: 6px 16px;
+  font-size: .84rem;
+}
+.footer-contact a {
+  color: var(--gold-dim, #c9a94f);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(212, 175, 55, .4);
+  transition: color .15s;
+}
+.footer-contact a:hover { color: var(--gold, #d4af37); }
+.footer-contact .fc-support { opacity: .8; }
+.fc-sep { opacity: .4; }
+@media (max-width: 640px) {
+  .footer-contact { flex-direction: column; gap: 6px; }
+}

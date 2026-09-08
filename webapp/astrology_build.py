@@ -243,6 +243,16 @@ def build_index():
 <footer class="site-footer">
   <p>Астрология · обобщённые описания солнечных знаков</p>
   <p class="footer-note">Материалы носят справочный и развлекательный характер</p>
+
+<div class="footer-contact">
+  <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+  <a href="mailto:jetjarret@gmail.com">jetjarret@gmail.com</a>
+  <span class="fc-sep" aria-hidden="true">·</span>
+  <span class="fc-support">Поддержать проект:
+    <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener">Donatello</a> ·
+    <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener">Privat24</a>
+  </span>
+</div>
 </footer>
 </body>
 </html>
@@ -306,6 +316,16 @@ def build_sign(idx, slug, name, sym, sub, blocks):
 <footer class="site-footer">
   <p>Астрология · {name} — обобщённое описание солнечного знака</p>
   <p class="footer-note">Материалы носят справочный и развлекательный характер</p>
+
+<div class="footer-contact">
+  <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+  <a href="mailto:jetjarret@gmail.com">jetjarret@gmail.com</a>
+  <span class="fc-sep" aria-hidden="true">·</span>
+  <span class="fc-support">Поддержать проект:
+    <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener">Donatello</a> ·
+    <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener">Privat24</a>
+  </span>
+</div>
 </footer>
 </body>
 </html>
