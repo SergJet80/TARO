@@ -261,7 +261,7 @@ def position_html(card: dict, position: str, pane_id: str) -> str:
 
 
 def roman_html(card: dict, roman: dict | None) -> str:
-    parts = ["<div class=\"pos-pane roman-content\" id=\"pane-roman\" role=\"tabpanel\">"]
+    parts = ["<div class=\"pos-pane pane-roman roman-content\" id=\"pane-roman\" role=\"tabpanel\">"]
     if not roman:
         parts.append("<p class=\"short-value\">Для этой карты материалы школы Современного Таро пока не готовы.</p>")
     else:
@@ -580,8 +580,8 @@ def document(title: str, description: str, url: str, body: str, article: bool, o
 <meta property="og:type" content="{'article' if article else 'website'}">
 <meta property="og:url" content="{escape(url, quote=True)}">
 {f'<meta property="og:image" content="{SITE}/img/cards/{escape(og_img, quote=True)}">' if og_img else ''}
-<link rel="stylesheet" href="/css/style.css?v=3.3">
-<link rel="stylesheet" href="/css/astrology.css?v=3.3">
+<link rel="stylesheet" href="/css/style.css?v=3.4">
+<link rel="stylesheet" href="/css/astrology.css?v=3.4">
 <style>{STYLE}</style>
 <script type="application/ld+json">
 {schema}
