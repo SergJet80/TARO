@@ -6,10 +6,10 @@
 <title>Sowilo (Соулу) — значение руны | Справочник</title>
 <meta name="description" content="Руна ясной направленной энергии, успеха и целостности. В мантике показывает момент, когда цель освещена и ресурсы собраны в один вектор.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%E1%9A%A0%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="../../fonts/fonts.css?v=3.5">
-<link rel="stylesheet" href="../../css/style.css?v=3.5">
-<link rel="stylesheet" href="../../css/astrology.css?v=3.5">
-<link rel="stylesheet" href="../../css/runes.css?v=3.5">
+<link rel="stylesheet" href="../../fonts/fonts.css?v=3.6">
+<link rel="stylesheet" href="../../css/style.css?v=3.6">
+<link rel="stylesheet" href="../../css/astrology.css?v=3.6">
+<link rel="stylesheet" href="../../css/runes.css?v=3.6">
 <!-- Microsoft Clarity -->
 <script>
     (function(c,l,a,r,i,t,y){
@@ -32,7 +32,7 @@
     <a href="../../astrology/index.html"><span class="mn-icon">♄</span> Астрология</a>
     <a href="../../runes/index.html" class="mn-active"><span class="mn-icon">ᚠ</span> Руны</a>
     <a href="../../numerology/index.html"><span class="mn-icon">❿</span> Теория</a>
-  </div>
+  <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> О проекте</a></div>
 </nav>
 
 <header class="site-header">
@@ -182,13 +182,17 @@
   <p class="footer-note">Материалы носят справочный и развлекательный характер</p>
 
 <div class="footer-contact">
-  <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
-  <a href="mailto:jetjarret@gmail.com">jetjarret@gmail.com</a>
-  <span class="fc-sep" aria-hidden="true">·</span>
-  <span class="fc-support">Поддержать проект:
-    <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener">Donatello</a> ·
-    <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener">Privat24</a>
-  </span>
+  <p class="fc-lead">По всем вопросам, предложениям о сотрудничестве и рекламе — пишите, я отвечаю лично:</p>
+  <div class="fc-links">
+    <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+    <span class="fc-sep" aria-hidden="true">·</span>
+    <a href="mailto:jetjarret@gmail.com">E-mail: jetjarret@gmail.com</a>
+  </div>
+  <p class="fc-lead">Проект живёт на чистом энтузиазме — без рекламы и комиссии с посетителей. Если он вам полезен, поддержите его: любая сумма помогает развивать справочник дальше.</p>
+  <div class="fc-links fc-donate">
+    <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Donatello</a>
+    <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24</a>
+  </div>
 </div>
 </footer>
 
@@ -206,6 +210,38 @@
     var p = panes.filter(function(x) { return x.dataset.pane === b.dataset.tab; })[0];
     if (p) p.classList.add('active');
   });
+})();
+</script>
+
+<!-- Модалка «О проекте» -->
+<div class="about-backdrop" id="aboutModal" aria-hidden="true">
+  <div class="about-dialog" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+    <button class="about-close" type="button" aria-label="Закрыть">&times;</button>
+    <h2 id="aboutTitle"><span class="title-star">✦</span> О проекте</h2>
+    <p>Это личный справочник по Таро, Ленорман, рунам и астрологии, собранный одним человеком — без команды, без офиса и без инвесторов. Проект живёт на чистом энтузиазме: без навязчивой рекламы, регистрации и платных подписок — все материалы открыты полностью.</p>
+    <p>Создание и поддержка такого справочника — это сотни часов работы: тексты, переводы трактовок, вёрстка, сервер. Если материалы сайта были вам полезны, поддержка — лучший способ сказать «спасибо» и помочь развитию: новые разделы, карты, сочетания и расклады.</p>
+    <div class="about-donate">
+      <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Поддержать через Donatello</a>
+      <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24</a>
+    </div>
+    <p class="about-contact">Есть вопросы, предложения о сотрудничестве или хотите разместить рекламу? Пишите — я отвечаю лично:</p>
+    <div class="about-links">
+      <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+      <span aria-hidden="true">·</span>
+      <a href="mailto:jetjarret@gmail.com">E-mail: jetjarret@gmail.com</a>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('aboutBtn'), m=document.getElementById('aboutModal');
+  if(!btn||!m) return;
+  function open(e){e.preventDefault();m.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){m.classList.remove('open');document.body.style.overflow='';}
+  btn.addEventListener('click',open);
+  m.querySelector('.about-close').addEventListener('click',close);
+  m.addEventListener('click',function(e){if(e.target===m)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
 })();
 </script>
 </body>

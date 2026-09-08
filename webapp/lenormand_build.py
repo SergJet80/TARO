@@ -83,7 +83,9 @@ def nav(rel: str, active: str) -> str:
         a = ' class="mn-active"' if key == active else ""
         rows.append(f'    <a href="{href}"{a}><span class="mn-icon">{icon}</span> {label}</a>')
     return ('<nav class="main-nav" aria-label="Разделы">\n  <div class="main-nav-inner">\n'
-            + "\n".join(rows) + "\n  </div>\n</nav>")
+            + "\n".join(rows)
+            + '\n    <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> О проекте</a>'
+            + "\n  </div>\n</nav>")
 
 
 def document(title: str, description: str, url: str, body: str, schema_type: str,
@@ -202,15 +204,50 @@ def document(title: str, description: str, url: str, body: str, schema_type: str
   <p>Личный справочник · не официальный доклад и не исследовательская статья · JeT</p>
 
 <div class="footer-contact">
-  <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
-  <a href="mailto:jetjarret@gmail.com">jetjarret@gmail.com</a>
-  <span class="fc-sep" aria-hidden="true">·</span>
-  <span class="fc-support">Поддержать проект:
-    <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener">Donatello</a> ·
-    <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener">Privat24</a>
-  </span>
+  <p class="fc-lead">По всем вопросам, предложениям о сотрудничестве и рекламе — пишите, я отвечаю лично:</p>
+  <div class="fc-links">
+    <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+    <span class="fc-sep" aria-hidden="true">·</span>
+    <a href="mailto:jetjarret@gmail.com">E-mail: jetjarret@gmail.com</a>
+  </div>
+  <p class="fc-lead">Проект живёт на чистом энтузиазме — без рекламы и комиссии с посетителей. Если он вам полезен, поддержите его: любая сумма помогает развивать справочник дальше.</p>
+  <div class="fc-links fc-donate">
+    <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Donatello</a>
+    <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24</a>
+  </div>
 </div>
 </footer>
+<!-- Модалка «О проекте» -->
+<div class="about-backdrop" id="aboutModal" aria-hidden="true">
+  <div class="about-dialog" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+    <button class="about-close" type="button" aria-label="Закрыть">&times;</button>
+    <h2 id="aboutTitle"><span class="title-star">✦</span> О проекте</h2>
+    <p>Это личный справочник по Таро, Ленорман, рунам и астрологии, собранный одним человеком — без команды, без офиса и без инвесторов. Проект живёт на чистом энтузиазме: без навязчивой рекламы, регистрации и платных подписок — все материалы открыты полностью.</p>
+    <p>Создание и поддержка такого справочника — это сотни часов работы: тексты, переводы трактовок, вёрстка, сервер. Если материалы сайта были вам полезны, поддержка — лучший способ сказать «спасибо» и помочь развитию: новые разделы, карты, сочетания и расклады.</p>
+    <div class="about-donate">
+      <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Поддержать через Donatello</a>
+      <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24</a>
+    </div>
+    <p class="about-contact">Есть вопросы, предложения о сотрудничестве или хотите разместить рекламу? Пишите — я отвечаю лично:</p>
+    <div class="about-links">
+      <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+      <span aria-hidden="true">·</span>
+      <a href="mailto:jetjarret@gmail.com">E-mail: jetjarret@gmail.com</a>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('aboutBtn'), m=document.getElementById('aboutModal');
+  if(!btn||!m) return;
+  function open(e){e.preventDefault();m.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){m.classList.remove('open');document.body.style.overflow='';}
+  btn.addEventListener('click',open);
+  m.querySelector('.about-close').addEventListener('click',close);
+  m.addEventListener('click',function(e){if(e.target===m)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
 </body>
 </html>
 """
