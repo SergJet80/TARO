@@ -112,7 +112,16 @@ dialog{border:0;padding:0;color:var(--ink);background:transparent;max-width:none
     <span>Атлас раскладов Таро</span>
     <span>Сначала вопрос → затем схема → затем связная история карт</span>
     <div class="footer-contact" style="flex-basis:100%">
-      <p class="fc-lead">По всем вопросам и предложениям — пишите: <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a> · <a href="mailto:jetjarret@gmail.com">E-mail: jetjarret@gmail.com</a>. Проект живёт на чистом энтузиазме — если он вам полезен, поддержите его: <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener">Donatello</a> · <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener">Privat24</a></p>
+      <p class="fc-lead">По всем вопросам и предложениям — пишите: <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a> · <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>. Проект живёт на чистом энтузиазме — если он вам полезен, поддержите его: <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener">Donatello</a> · <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener">Privat24</a></p>
     </div>
   </footer>
 
@@ -499,7 +508,16 @@ document.querySelector("#spreadCount").textContent=spreads.length;render();
     <div class="about-links">
       <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
       <span aria-hidden="true">·</span>
-      <a href="mailto:jetjarret@gmail.com">E-mail: jetjarret@gmail.com</a>
+      <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
     </div>
   </div>
 </div>

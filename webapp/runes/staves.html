@@ -221,7 +221,16 @@ const SL=[['National Museum of Denmark — Runic magic','Исторически�
     <div class="about-links">
       <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
       <span aria-hidden="true">·</span>
-      <a href="mailto:jetjarret@gmail.com">E-mail: jetjarret@gmail.com</a>
+      <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
     </div>
   </div>
 </div>

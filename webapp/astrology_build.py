@@ -250,7 +250,16 @@ def build_index():
   <div class="fc-links">
     <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
     <span class="fc-sep" aria-hidden="true">·</span>
-    <a href="mailto:jetjarret@gmail.com">E-mail: jetjarret@gmail.com</a>
+    <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
   </div>
   <p class="fc-lead">Проект живёт на чистом энтузиазме — без рекламы и комиссии с посетителей. Если он вам полезен, поддержите его: любая сумма помогает развивать справочник дальше.</p>
   <div class="fc-links fc-donate">
@@ -274,7 +283,16 @@ def build_index():
     <div class="about-links">
       <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
       <span aria-hidden="true">·</span>
-      <a href="mailto:jetjarret@gmail.com">E-mail: jetjarret@gmail.com</a>
+      <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
     </div>
   </div>
 </div>
@@ -358,7 +376,16 @@ def build_sign(idx, slug, name, sym, sub, blocks):
   <div class="fc-links">
     <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
     <span class="fc-sep" aria-hidden="true">·</span>
-    <a href="mailto:jetjarret@gmail.com">E-mail: jetjarret@gmail.com</a>
+    <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
   </div>
   <p class="fc-lead">Проект живёт на чистом энтузиазме — без рекламы и комиссии с посетителей. Если он вам полезен, поддержите его: любая сумма помогает развивать справочник дальше.</p>
   <div class="fc-links fc-donate">
@@ -382,7 +409,16 @@ def build_sign(idx, slug, name, sym, sub, blocks):
     <div class="about-links">
       <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
       <span aria-hidden="true">·</span>
-      <a href="mailto:jetjarret@gmail.com">E-mail: jetjarret@gmail.com</a>
+      <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
     </div>
   </div>
 </div>
