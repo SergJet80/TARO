@@ -3,16 +3,94 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Оракул Ленорман — 36 карт и сочетания | Справочник</title>
-<meta name="description" content="Все 36 карт оракула Ленорман: значения по сферам жизни, время, сигнификаторы и 1260 сочетаний пар. Классическая колода с авторскими трактовками.">
+<title>Ленорман — значения 36 карт оракула</title>
+<meta name="description" content="Значения всех 36 карт оракула Ленорман: по сферам жизни, сигнификаторы, полярность, время и 1260 сочетаний пар.">
 <link rel="canonical" href="https://taro.jetserg.top/lenormand/">
-<meta property="og:title" content="Оракул Ленорман — 36 карт и сочетания">
-<meta property="og:description" content="Значения 36 карт Ленорман по сферам жизни и 1260 сочетаний пар.">
+<meta property="og:title" content="Ленорман — значения 36 карт оракула">
+<meta property="og:description" content="Значения всех 36 карт оракула Ленорман: по сферам жизни, сигнификаторы, полярность, время и 1260 сочетаний пар.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://taro.jetserg.top/lenormand/">
 <link rel="stylesheet" href="../fonts/fonts.css?v=3.4">
 <link rel="stylesheet" href="../css/style.css?v=3.4">
-<link rel="stylesheet" href="css/lenormand.css?v=1.2">
+<link rel="stylesheet" href="css/lenormand.css?v=1.3">
+<style>
+/* ── v2: карточный лист в духе Таро ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--ln-bg-card), #1b101d);
+  border: 1px solid var(--ln-accent-dim); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: 0 18px 50px rgba(0,0,0,.45), 0 0 60px rgba(217,138,166,.1); }
+.sheet-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.sheet-head .card-scene { flex-shrink: 0; }
+.sheet-head .card-scene img { width: 150px; aspect-ratio: 516/909; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--ln-accent-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--ln-accent); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--ln-accent-bright); line-height: 1.15; margin: 0; }
+.card-number { display: block; font-size: 1.9rem; color: var(--ln-accent); margin-bottom: 4px; }
+.m-en { color: var(--ln-text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--ln-text-dim); margin: 0; }
+.m-meta b { color: var(--ln-text); font-weight: 500; }
+/* ── Вкладки (radio, без JS) ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid var(--ln-accent-dim); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--ln-text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--ln-text); }
+.pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.pos-state.s-vals:checked ~ .pos-tabs label[for="ln-vals"],
+.pos-state.s-sph:checked ~ .pos-tabs label[for="ln-sph"] {
+  color: var(--ln-accent-bright); border-bottom-color: var(--ln-accent); text-shadow: 0 0 12px rgba(217,138,166,.4); }
+.pos-state.s-pairs:checked ~ .pos-tabs label[for="ln-pairs"] {
+  color: var(--ln-accent-bright); border-bottom-color: var(--ln-accent); text-shadow: 0 0 12px rgba(217,138,166,.4); }
+.pos-pane { display: none; animation: ln-fade .3s ease; }
+.pos-state.s-vals:checked ~ .pos-pane.pane-vals { display: block; }
+.pos-state.s-sph:checked ~ .pos-pane.pane-sph { display: block; }
+.pos-state.s-pairs:checked ~ .pos-pane.pane-pairs { display: block; }
+@keyframes ln-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Секции внутри вкладок ── */
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--ln-accent); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--ln-accent-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--ln-text); font-size: .98rem; line-height: 1.65; margin: 0; }
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(217,138,166,.12);
+  border: 1px solid var(--ln-accent-dim); color: var(--ln-accent-bright); font-size: .85rem; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--ln-accent-bright); padding: 12px 18px; border-left: 3px solid var(--ln-accent);
+  background: rgba(217,138,166,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.sig-note { color: var(--ln-text-dim); font-size: .95rem; line-height: 1.6; margin: 0 0 16px; }
+.sig-note b { color: var(--ln-accent); font-weight: 600; }
+/* ── Сочетания ── */
+.pair-note { color: var(--ln-text-dim); font-size: .93rem; line-height: 1.6; margin: 0 0 14px; }
+.pair-list { list-style: none; padding: 0; margin: 0; }
+.pair-list li { padding: 12px 4px; border-top: 1px solid rgba(217,138,166,.14);
+  line-height: 1.6; color: var(--ln-text); font-size: .95rem; }
+.pair-list li:first-child { border-top: none; }
+.pair-list strong { color: var(--ln-accent-bright); font-weight: 600; }
+.pair-people { color: var(--ln-accent); }
+/* ── Каталог ── */
+.ln-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 16px; list-style: none; padding: 0; }
+.ln-grid li { min-width: 0; }
+/* ── Адаптив ── */
+@media (max-width: 640px) {
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .sheet-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .sheet-head .card-scene img { width: 104px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-tab3 { flex-basis: 100%; }
+  .ln-grid { grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 10px; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Ленорман — значения 36 карт оракула",
+  "description": "Значения всех 36 карт оракула Ленорман: по сферам жизни, сигнификаторы, полярность, время и 1260 сочетаний пар.",
+  "url": "https://taro.jetserg.top/lenormand/",
+  "inLanguage": "ru"
+}
+</script>
 <!-- Microsoft Clarity -->
 <script>
     (function(c,l,a,r,i,t,y){
@@ -30,11 +108,11 @@
     <a href="../index.html"><span class="mn-icon">✦</span> Таро</a>
     <a href="../astrology/index.html"><span class="mn-icon">♄</span> Астрология</a>
     <a href="../runes/index.html"><span class="mn-icon">ᚠ</span> Руны</a>
-    <a href="index.html" class="mn-active"><span class="mn-icon">🂠</span> Ленорман</a>
+    <a href="../lenormand/index.html" class="mn-active"><span class="mn-icon">🂠</span> Ленорман</a>
     <a href="../numerology/index.html"><span class="mn-icon">❿</span> Теория</a>
   </div>
 </nav>
-
+<main class="ln-wrap">
 <header class="site-header">
   <div class="header-inner">
     <h1 class="site-title"><span class="title-star">🂠</span> Ленорман <span class="title-sub">Оракул · 36 карт</span></h1>
@@ -42,193 +120,46 @@
     <p class="ln-intro">Оракулы Ленорман — это уникальные колоды карт, которые берут своё начало в XVIII веке, и обязаны своей популярностью знаменитой французской гадалке Марии Ленорман. Она использовала карты для предсказаний судьбоносных событий и давала консультации известным личностям своего времени. Стандартная колода Ленорман состоит из 36 карт, каждая из которых содержит символы, легко интерпретируемые даже теми, кто только начинает знакомство с миром гадания. Эти символы — Лиса, Корабль, Солнце, Дерево и другие — представляют собой архетипические образы, связанные с повседневной жизнью. Карты Ленорман отличаются своей доступностью и прямолинейностью: в отличие от более сложных систем, таких как Таро, они дают быстрые и точные ответы, фокусируясь на реальных событиях и практических советах.</p>
   </div>
 </header>
-
-<main class="ln-wrap">
-  <p class="ln-note">Полярность карт — рабочая подсказка, а не приговор: соседние карты и вопрос меняют тон прочтения.</p>
-  <div class="ln-grid">
-      <a class="ln-tile pol-pos" href="01-vsadnik/">
-        <img src="img/01-vsadnik.webp" alt="Карта Ленорман 01 Всадник" loading="lazy">
-        <span class="ln-tile-num">01</span>
-        <span class="ln-tile-name">Всадник</span>
-      </a>
-      <a class="ln-tile pol-pos" href="02-klever/">
-        <img src="img/02-klever.webp" alt="Карта Ленорман 02 Клевер" loading="lazy">
-        <span class="ln-tile-num">02</span>
-        <span class="ln-tile-name">Клевер</span>
-      </a>
-      <a class="ln-tile pol-neu" href="03-korabl/">
-        <img src="img/03-korabl.webp" alt="Карта Ленорман 03 Корабль" loading="lazy">
-        <span class="ln-tile-num">03</span>
-        <span class="ln-tile-name">Корабль</span>
-      </a>
-      <a class="ln-tile pol-pos" href="04-dom/">
-        <img src="img/04-dom.webp" alt="Карта Ленорман 04 Дом" loading="lazy">
-        <span class="ln-tile-num">04</span>
-        <span class="ln-tile-name">Дом</span>
-      </a>
-      <a class="ln-tile pol-pos" href="05-derevo/">
-        <img src="img/05-derevo.webp" alt="Карта Ленорман 05 Дерево" loading="lazy">
-        <span class="ln-tile-num">05</span>
-        <span class="ln-tile-name">Дерево</span>
-      </a>
-      <a class="ln-tile pol-neg" href="06-tuchi/">
-        <img src="img/06-tuchi.webp" alt="Карта Ленорман 06 Тучи" loading="lazy">
-        <span class="ln-tile-num">06</span>
-        <span class="ln-tile-name">Тучи</span>
-      </a>
-      <a class="ln-tile pol-neg" href="07-zmeya/">
-        <img src="img/07-zmeya.webp" alt="Карта Ленорман 07 Змея" loading="lazy">
-        <span class="ln-tile-num">07</span>
-        <span class="ln-tile-name">Змея</span>
-      </a>
-      <a class="ln-tile pol-neg" href="08-grob/">
-        <img src="img/08-grob.webp" alt="Карта Ленорман 08 Гроб" loading="lazy">
-        <span class="ln-tile-num">08</span>
-        <span class="ln-tile-name">Гроб</span>
-      </a>
-      <a class="ln-tile pol-pos" href="09-buket/">
-        <img src="img/09-buket.webp" alt="Карта Ленорман 09 Букет" loading="lazy">
-        <span class="ln-tile-num">09</span>
-        <span class="ln-tile-name">Букет</span>
-      </a>
-      <a class="ln-tile pol-neg" href="10-kosa/">
-        <img src="img/10-kosa.webp" alt="Карта Ленорман 10 Коса" loading="lazy">
-        <span class="ln-tile-num">10</span>
-        <span class="ln-tile-name">Коса</span>
-      </a>
-      <a class="ln-tile pol-neg" href="11-metla/">
-        <img src="img/11-metla.webp" alt="Карта Ленорман 11 Метла" loading="lazy">
-        <span class="ln-tile-num">11</span>
-        <span class="ln-tile-name">Метла</span>
-      </a>
-      <a class="ln-tile pol-neu" href="12-sovy/">
-        <img src="img/12-sovy.webp" alt="Карта Ленорман 12 Совы" loading="lazy">
-        <span class="ln-tile-num">12</span>
-        <span class="ln-tile-name">Совы</span>
-      </a>
-      <a class="ln-tile pol-neu" href="13-rebenok/">
-        <img src="img/13-rebenok.webp" alt="Карта Ленорман 13 Ребенок" loading="lazy">
-        <span class="ln-tile-num">13</span>
-        <span class="ln-tile-name">Ребенок</span>
-      </a>
-      <a class="ln-tile pol-neg" href="14-lisa/">
-        <img src="img/14-lisa.webp" alt="Карта Ленорман 14 Лиса" loading="lazy">
-        <span class="ln-tile-num">14</span>
-        <span class="ln-tile-name">Лиса</span>
-      </a>
-      <a class="ln-tile pol-neu" href="15-medved/">
-        <img src="img/15-medved.webp" alt="Карта Ленорман 15 Медведь" loading="lazy">
-        <span class="ln-tile-num">15</span>
-        <span class="ln-tile-name">Медведь</span>
-      </a>
-      <a class="ln-tile pol-pos" href="16-zvezda/">
-        <img src="img/16-zvezda.webp" alt="Карта Ленорман 16 Звезды" loading="lazy">
-        <span class="ln-tile-num">16</span>
-        <span class="ln-tile-name">Звезды</span>
-      </a>
-      <a class="ln-tile pol-pos" href="17-aist/">
-        <img src="img/17-aist.webp" alt="Карта Ленорман 17 Аист" loading="lazy">
-        <span class="ln-tile-num">17</span>
-        <span class="ln-tile-name">Аист</span>
-      </a>
-      <a class="ln-tile pol-pos" href="18-sobaka/">
-        <img src="img/18-sobaka.webp" alt="Карта Ленорман 18 Собака" loading="lazy">
-        <span class="ln-tile-num">18</span>
-        <span class="ln-tile-name">Собака</span>
-      </a>
-      <a class="ln-tile pol-neu" href="19-bashnya/">
-        <img src="img/19-bashnya.webp" alt="Карта Ленорман 19 Башня" loading="lazy">
-        <span class="ln-tile-num">19</span>
-        <span class="ln-tile-name">Башня</span>
-      </a>
-      <a class="ln-tile pol-pos" href="20-sad/">
-        <img src="img/20-sad.webp" alt="Карта Ленорман 20 Сад" loading="lazy">
-        <span class="ln-tile-num">20</span>
-        <span class="ln-tile-name">Сад</span>
-      </a>
-      <a class="ln-tile pol-neg" href="21-gora/">
-        <img src="img/21-gora.webp" alt="Карта Ленорман 21 Гора" loading="lazy">
-        <span class="ln-tile-num">21</span>
-        <span class="ln-tile-name">Гора</span>
-      </a>
-      <a class="ln-tile pol-neu" href="22-razvilka/">
-        <img src="img/22-razvilka.webp" alt="Карта Ленорман 22 Развилка" loading="lazy">
-        <span class="ln-tile-num">22</span>
-        <span class="ln-tile-name">Развилка</span>
-      </a>
-      <a class="ln-tile pol-neg" href="23-mishi/">
-        <img src="img/23-mishi.webp" alt="Карта Ленорман 23 Мыши" loading="lazy">
-        <span class="ln-tile-num">23</span>
-        <span class="ln-tile-name">Мыши</span>
-      </a>
-      <a class="ln-tile pol-pos" href="24-serdce/">
-        <img src="img/24-serdce.webp" alt="Карта Ленорман 24 Сердце" loading="lazy">
-        <span class="ln-tile-num">24</span>
-        <span class="ln-tile-name">Сердце</span>
-      </a>
-      <a class="ln-tile pol-neu" href="25-kolco/">
-        <img src="img/25-kolco.webp" alt="Карта Ленорман 25 Кольцо" loading="lazy">
-        <span class="ln-tile-num">25</span>
-        <span class="ln-tile-name">Кольцо</span>
-      </a>
-      <a class="ln-tile pol-neu" href="26-kniga/">
-        <img src="img/26-kniga.webp" alt="Карта Ленорман 26 Книга" loading="lazy">
-        <span class="ln-tile-num">26</span>
-        <span class="ln-tile-name">Книга</span>
-      </a>
-      <a class="ln-tile pol-neu" href="27-pismo/">
-        <img src="img/27-pismo.webp" alt="Карта Ленорман 27 Письмо" loading="lazy">
-        <span class="ln-tile-num">27</span>
-        <span class="ln-tile-name">Письмо</span>
-      </a>
-      <a class="ln-tile pol-neu" href="28-muzhchina/">
-        <img src="img/28-muzhchina.webp" alt="Карта Ленорман 28 Мужчина" loading="lazy">
-        <span class="ln-tile-num">28</span>
-        <span class="ln-tile-name">Мужчина</span>
-      </a>
-      <a class="ln-tile pol-neu" href="29-zhenshina/">
-        <img src="img/29-zhenshina.webp" alt="Карта Ленорман 29 Женщина" loading="lazy">
-        <span class="ln-tile-num">29</span>
-        <span class="ln-tile-name">Женщина</span>
-      </a>
-      <a class="ln-tile pol-neu" href="30-lilii/">
-        <img src="img/30-lilii.webp" alt="Карта Ленорман 30 Лилии" loading="lazy">
-        <span class="ln-tile-num">30</span>
-        <span class="ln-tile-name">Лилии</span>
-      </a>
-      <a class="ln-tile pol-pos" href="31-solnce/">
-        <img src="img/31-solnce.webp" alt="Карта Ленорман 31 Солнце" loading="lazy">
-        <span class="ln-tile-num">31</span>
-        <span class="ln-tile-name">Солнце</span>
-      </a>
-      <a class="ln-tile pol-neu" href="32-luna/">
-        <img src="img/32-luna.webp" alt="Карта Ленорман 32 Луна" loading="lazy">
-        <span class="ln-tile-num">32</span>
-        <span class="ln-tile-name">Луна</span>
-      </a>
-      <a class="ln-tile pol-pos" href="33-klyuch/">
-        <img src="img/33-klyuch.webp" alt="Карта Ленорман 33 Ключ" loading="lazy">
-        <span class="ln-tile-num">33</span>
-        <span class="ln-tile-name">Ключ</span>
-      </a>
-      <a class="ln-tile pol-pos" href="34-ryby/">
-        <img src="img/34-ryby.webp" alt="Карта Ленорман 34 Рыбы" loading="lazy">
-        <span class="ln-tile-num">34</span>
-        <span class="ln-tile-name">Рыбы</span>
-      </a>
-      <a class="ln-tile pol-pos" href="35-yakor/">
-        <img src="img/35-yakor.webp" alt="Карта Ленорман 35 Якорь" loading="lazy">
-        <span class="ln-tile-num">35</span>
-        <span class="ln-tile-name">Якорь</span>
-      </a>
-      <a class="ln-tile pol-neg" href="36-krest/">
-        <img src="img/36-krest.webp" alt="Карта Ленорман 36 Крест" loading="lazy">
-        <span class="ln-tile-num">36</span>
-        <span class="ln-tile-name">Крест</span>
-      </a>
-  </div>
+<p class="ln-note">Полярность карт — рабочая подсказка, а не приговор: соседние карты и вопрос меняют тон прочтения.</p>
+<ol class="ln-grid">
+<li><a class="ln-tile pol-pos" href="01-vsadnik/"><img src="img/01-vsadnik.webp" alt="Карта Ленорман 01 Всадник" loading="lazy"><span class="ln-tile-num">01</span><span class="ln-tile-name">Всадник</span></a></li>
+<li><a class="ln-tile pol-pos" href="02-klever/"><img src="img/02-klever.webp" alt="Карта Ленорман 02 Клевер" loading="lazy"><span class="ln-tile-num">02</span><span class="ln-tile-name">Клевер</span></a></li>
+<li><a class="ln-tile pol-neu" href="03-korabl/"><img src="img/03-korabl.webp" alt="Карта Ленорман 03 Корабль" loading="lazy"><span class="ln-tile-num">03</span><span class="ln-tile-name">Корабль</span></a></li>
+<li><a class="ln-tile pol-pos" href="04-dom/"><img src="img/04-dom.webp" alt="Карта Ленорман 04 Дом" loading="lazy"><span class="ln-tile-num">04</span><span class="ln-tile-name">Дом</span></a></li>
+<li><a class="ln-tile pol-pos" href="05-derevo/"><img src="img/05-derevo.webp" alt="Карта Ленорман 05 Дерево" loading="lazy"><span class="ln-tile-num">05</span><span class="ln-tile-name">Дерево</span></a></li>
+<li><a class="ln-tile pol-neu" href="06-tuchi/"><img src="img/06-tuchi.webp" alt="Карта Ленорман 06 Тучи" loading="lazy"><span class="ln-tile-num">06</span><span class="ln-tile-name">Тучи</span></a></li>
+<li><a class="ln-tile pol-neu" href="07-zmeya/"><img src="img/07-zmeya.webp" alt="Карта Ленорман 07 Змея" loading="lazy"><span class="ln-tile-num">07</span><span class="ln-tile-name">Змея</span></a></li>
+<li><a class="ln-tile pol-neu" href="08-grob/"><img src="img/08-grob.webp" alt="Карта Ленорман 08 Гроб" loading="lazy"><span class="ln-tile-num">08</span><span class="ln-tile-name">Гроб</span></a></li>
+<li><a class="ln-tile pol-pos" href="09-buket/"><img src="img/09-buket.webp" alt="Карта Ленорман 09 Букет" loading="lazy"><span class="ln-tile-num">09</span><span class="ln-tile-name">Букет</span></a></li>
+<li><a class="ln-tile pol-neu" href="10-kosa/"><img src="img/10-kosa.webp" alt="Карта Ленорман 10 Коса" loading="lazy"><span class="ln-tile-num">10</span><span class="ln-tile-name">Коса</span></a></li>
+<li><a class="ln-tile pol-neu" href="11-metla/"><img src="img/11-metla.webp" alt="Карта Ленорман 11 Метла" loading="lazy"><span class="ln-tile-num">11</span><span class="ln-tile-name">Метла</span></a></li>
+<li><a class="ln-tile pol-neu" href="12-sovy/"><img src="img/12-sovy.webp" alt="Карта Ленорман 12 Совы" loading="lazy"><span class="ln-tile-num">12</span><span class="ln-tile-name">Совы</span></a></li>
+<li><a class="ln-tile pol-neu" href="13-rebenok/"><img src="img/13-rebenok.webp" alt="Карта Ленорман 13 Ребенок" loading="lazy"><span class="ln-tile-num">13</span><span class="ln-tile-name">Ребенок</span></a></li>
+<li><a class="ln-tile pol-neu" href="14-lisa/"><img src="img/14-lisa.webp" alt="Карта Ленорман 14 Лиса" loading="lazy"><span class="ln-tile-num">14</span><span class="ln-tile-name">Лиса</span></a></li>
+<li><a class="ln-tile pol-neu" href="15-medved/"><img src="img/15-medved.webp" alt="Карта Ленорман 15 Медведь" loading="lazy"><span class="ln-tile-num">15</span><span class="ln-tile-name">Медведь</span></a></li>
+<li><a class="ln-tile pol-pos" href="16-zvezda/"><img src="img/16-zvezda.webp" alt="Карта Ленорман 16 Звезды" loading="lazy"><span class="ln-tile-num">16</span><span class="ln-tile-name">Звезды</span></a></li>
+<li><a class="ln-tile pol-pos" href="17-aist/"><img src="img/17-aist.webp" alt="Карта Ленорман 17 Аист" loading="lazy"><span class="ln-tile-num">17</span><span class="ln-tile-name">Аист</span></a></li>
+<li><a class="ln-tile pol-pos" href="18-sobaka/"><img src="img/18-sobaka.webp" alt="Карта Ленорман 18 Собака" loading="lazy"><span class="ln-tile-num">18</span><span class="ln-tile-name">Собака</span></a></li>
+<li><a class="ln-tile pol-neu" href="19-bashnya/"><img src="img/19-bashnya.webp" alt="Карта Ленорман 19 Башня" loading="lazy"><span class="ln-tile-num">19</span><span class="ln-tile-name">Башня</span></a></li>
+<li><a class="ln-tile pol-pos" href="20-sad/"><img src="img/20-sad.webp" alt="Карта Ленорман 20 Сад" loading="lazy"><span class="ln-tile-num">20</span><span class="ln-tile-name">Сад</span></a></li>
+<li><a class="ln-tile pol-neu" href="21-gora/"><img src="img/21-gora.webp" alt="Карта Ленорман 21 Гора" loading="lazy"><span class="ln-tile-num">21</span><span class="ln-tile-name">Гора</span></a></li>
+<li><a class="ln-tile pol-neu" href="22-razvilka/"><img src="img/22-razvilka.webp" alt="Карта Ленорман 22 Развилка" loading="lazy"><span class="ln-tile-num">22</span><span class="ln-tile-name">Развилка</span></a></li>
+<li><a class="ln-tile pol-neu" href="23-mishi/"><img src="img/23-mishi.webp" alt="Карта Ленорман 23 Мыши" loading="lazy"><span class="ln-tile-num">23</span><span class="ln-tile-name">Мыши</span></a></li>
+<li><a class="ln-tile pol-pos" href="24-serdce/"><img src="img/24-serdce.webp" alt="Карта Ленорман 24 Сердце" loading="lazy"><span class="ln-tile-num">24</span><span class="ln-tile-name">Сердце</span></a></li>
+<li><a class="ln-tile pol-neu" href="25-kolco/"><img src="img/25-kolco.webp" alt="Карта Ленорман 25 Кольцо" loading="lazy"><span class="ln-tile-num">25</span><span class="ln-tile-name">Кольцо</span></a></li>
+<li><a class="ln-tile pol-neu" href="26-kniga/"><img src="img/26-kniga.webp" alt="Карта Ленорман 26 Книга" loading="lazy"><span class="ln-tile-num">26</span><span class="ln-tile-name">Книга</span></a></li>
+<li><a class="ln-tile pol-neu" href="27-pismo/"><img src="img/27-pismo.webp" alt="Карта Ленорман 27 Письмо" loading="lazy"><span class="ln-tile-num">27</span><span class="ln-tile-name">Письмо</span></a></li>
+<li><a class="ln-tile pol-neu" href="28-muzhchina/"><img src="img/28-muzhchina.webp" alt="Карта Ленорман 28 Мужчина" loading="lazy"><span class="ln-tile-num">28</span><span class="ln-tile-name">Мужчина</span></a></li>
+<li><a class="ln-tile pol-neu" href="29-zhenshina/"><img src="img/29-zhenshina.webp" alt="Карта Ленорман 29 Женщина" loading="lazy"><span class="ln-tile-num">29</span><span class="ln-tile-name">Женщина</span></a></li>
+<li><a class="ln-tile pol-neu" href="30-lilii/"><img src="img/30-lilii.webp" alt="Карта Ленорман 30 Лилии" loading="lazy"><span class="ln-tile-num">30</span><span class="ln-tile-name">Лилии</span></a></li>
+<li><a class="ln-tile pol-pos" href="31-solnce/"><img src="img/31-solnce.webp" alt="Карта Ленорман 31 Солнце" loading="lazy"><span class="ln-tile-num">31</span><span class="ln-tile-name">Солнце</span></a></li>
+<li><a class="ln-tile pol-neu" href="32-luna/"><img src="img/32-luna.webp" alt="Карта Ленорман 32 Луна" loading="lazy"><span class="ln-tile-num">32</span><span class="ln-tile-name">Луна</span></a></li>
+<li><a class="ln-tile pol-pos" href="33-klyuch/"><img src="img/33-klyuch.webp" alt="Карта Ленорман 33 Ключ" loading="lazy"><span class="ln-tile-num">33</span><span class="ln-tile-name">Ключ</span></a></li>
+<li><a class="ln-tile pol-pos" href="34-ryby/"><img src="img/34-ryby.webp" alt="Карта Ленорман 34 Рыбы" loading="lazy"><span class="ln-tile-num">34</span><span class="ln-tile-name">Рыбы</span></a></li>
+<li><a class="ln-tile pol-pos" href="35-yakor/"><img src="img/35-yakor.webp" alt="Карта Ленорман 35 Якорь" loading="lazy"><span class="ln-tile-num">35</span><span class="ln-tile-name">Якорь</span></a></li>
+<li><a class="ln-tile pol-neu" href="36-krest/"><img src="img/36-krest.webp" alt="Карта Ленорман 36 Крест" loading="lazy"><span class="ln-tile-num">36</span><span class="ln-tile-name">Крест</span></a></li>
+</ol>
 </main>
-
 <footer class="site-footer">
   <p>Личный справочник · не официальный доклад и не исследовательская статья · JeT</p>
 </footer>

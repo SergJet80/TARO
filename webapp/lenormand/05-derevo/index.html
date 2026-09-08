@@ -4,15 +4,94 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Дерево — карта Ленорман №5: значение и сочетания</title>
-<meta name="description" content="Карта Ленорман №5 Дерево: значения по сферам жизни, сигнификатор, время и 35 сочетаний с другими картами оракула.">
+<meta name="description" content="Карта Ленорман №5 Дерево (7 червей): значения по сферам жизни, сигнификатор, время и 35 сочетаний с другими картами оракула.">
 <link rel="canonical" href="https://taro.jetserg.top/lenormand/05-derevo/">
 <meta property="og:title" content="Дерево — карта Ленорман №5: значение и сочетания">
-<meta property="og:description" content="Карта Ленорман №5 Дерево: значения по сферам жизни, сигнификатор, время и 35 сочетаний с другими картами оракула.">
-<meta property="og:type" content="website">
+<meta property="og:description" content="Карта Ленорман №5 Дерево (7 червей): значения по сферам жизни, сигнификатор, время и 35 сочетаний с другими картами оракула.">
+<meta property="og:type" content="article">
 <meta property="og:url" content="https://taro.jetserg.top/lenormand/05-derevo/">
+<meta property="og:image" content="https://taro.jetserg.top/lenormand/img/05-derevo.webp">
 <link rel="stylesheet" href="../../fonts/fonts.css?v=3.4">
 <link rel="stylesheet" href="../../css/style.css?v=3.4">
-<link rel="stylesheet" href="../css/lenormand.css?v=1.2">
+<link rel="stylesheet" href="../css/lenormand.css?v=1.3">
+<style>
+/* ── v2: карточный лист в духе Таро ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--ln-bg-card), #1b101d);
+  border: 1px solid var(--ln-accent-dim); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: 0 18px 50px rgba(0,0,0,.45), 0 0 60px rgba(217,138,166,.1); }
+.sheet-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.sheet-head .card-scene { flex-shrink: 0; }
+.sheet-head .card-scene img { width: 150px; aspect-ratio: 516/909; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--ln-accent-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--ln-accent); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--ln-accent-bright); line-height: 1.15; margin: 0; }
+.card-number { display: block; font-size: 1.9rem; color: var(--ln-accent); margin-bottom: 4px; }
+.m-en { color: var(--ln-text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--ln-text-dim); margin: 0; }
+.m-meta b { color: var(--ln-text); font-weight: 500; }
+/* ── Вкладки (radio, без JS) ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid var(--ln-accent-dim); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--ln-text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--ln-text); }
+.pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.pos-state.s-vals:checked ~ .pos-tabs label[for="ln-vals"],
+.pos-state.s-sph:checked ~ .pos-tabs label[for="ln-sph"] {
+  color: var(--ln-accent-bright); border-bottom-color: var(--ln-accent); text-shadow: 0 0 12px rgba(217,138,166,.4); }
+.pos-state.s-pairs:checked ~ .pos-tabs label[for="ln-pairs"] {
+  color: var(--ln-accent-bright); border-bottom-color: var(--ln-accent); text-shadow: 0 0 12px rgba(217,138,166,.4); }
+.pos-pane { display: none; animation: ln-fade .3s ease; }
+.pos-state.s-vals:checked ~ .pos-pane.pane-vals { display: block; }
+.pos-state.s-sph:checked ~ .pos-pane.pane-sph { display: block; }
+.pos-state.s-pairs:checked ~ .pos-pane.pane-pairs { display: block; }
+@keyframes ln-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Секции внутри вкладок ── */
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--ln-accent); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--ln-accent-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--ln-text); font-size: .98rem; line-height: 1.65; margin: 0; }
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(217,138,166,.12);
+  border: 1px solid var(--ln-accent-dim); color: var(--ln-accent-bright); font-size: .85rem; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--ln-accent-bright); padding: 12px 18px; border-left: 3px solid var(--ln-accent);
+  background: rgba(217,138,166,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.sig-note { color: var(--ln-text-dim); font-size: .95rem; line-height: 1.6; margin: 0 0 16px; }
+.sig-note b { color: var(--ln-accent); font-weight: 600; }
+/* ── Сочетания ── */
+.pair-note { color: var(--ln-text-dim); font-size: .93rem; line-height: 1.6; margin: 0 0 14px; }
+.pair-list { list-style: none; padding: 0; margin: 0; }
+.pair-list li { padding: 12px 4px; border-top: 1px solid rgba(217,138,166,.14);
+  line-height: 1.6; color: var(--ln-text); font-size: .95rem; }
+.pair-list li:first-child { border-top: none; }
+.pair-list strong { color: var(--ln-accent-bright); font-weight: 600; }
+.pair-people { color: var(--ln-accent); }
+/* ── Каталог ── */
+.ln-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 16px; list-style: none; padding: 0; }
+.ln-grid li { min-width: 0; }
+/* ── Адаптив ── */
+@media (max-width: 640px) {
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .sheet-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .sheet-head .card-scene img { width: 104px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-tab3 { flex-basis: 100%; }
+  .ln-grid { grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 10px; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Дерево — карта Ленорман №5: значение и сочетания",
+  "description": "Карта Ленорман №5 Дерево (7 червей): значения по сферам жизни, сигнификатор, время и 35 сочетаний с другими картами оракула.",
+  "url": "https://taro.jetserg.top/lenormand/05-derevo/",
+  "inLanguage": "ru"
+}
+</script>
 <!-- Microsoft Clarity -->
 <script>
     (function(c,l,a,r,i,t,y){
@@ -30,49 +109,57 @@
     <a href="../../index.html"><span class="mn-icon">✦</span> Таро</a>
     <a href="../../astrology/index.html"><span class="mn-icon">♄</span> Астрология</a>
     <a href="../../runes/index.html"><span class="mn-icon">ᚠ</span> Руны</a>
-    <a href="../index.html" class="mn-active"><span class="mn-icon">🂠</span> Ленорман</a>
+    <a href="../../lenormand/index.html" class="mn-active"><span class="mn-icon">🂠</span> Ленорман</a>
     <a href="../../numerology/index.html"><span class="mn-icon">❿</span> Теория</a>
   </div>
 </nav>
 <main class="ln-wrap ln-card-page">
 <nav class="card-crumbs" aria-label="Хлебные крошки"><a href="../">Ленорман</a> / <span aria-current="page">Дерево</span></nav>
-<div class="ln-hero">
-  <img src="../img/05-derevo.webp" alt="Карта Ленорман №5 Дерево" width="516" height="909">
-  <div class="ln-facts">
-    <p>Дерево — 7 червей</p>
-    <p><span>Полярность:</span> положительная карта</p>
-    <p><span>Время:</span> месяцы или годы; медленно</p>
-  </div>
+<article class="tarot-sheet">
+<header class="sheet-head">
+<div class="card-scene"><img src="../img/05-derevo.webp" alt="Карта Ленорман №5 Дерево" width="150" height="264"></div>
+<div class="head-info">
+<p class="m-arcana">Оракул Ленорман · карта №5</p>
+<h1 class="m-title"><span class="card-number">05</span>Дерево</h1>
+<p class="m-en">7 червей</p>
+<p class="m-meta">Полярность: <b>положительная</b> &nbsp;·&nbsp; Время: <b>месяцы или годы; медленно</b></p>
 </div>
-<h1 class="ln-card-title">Дерево</h1>
-<section class="ln-sec">
-  <h2>Ключевые значения</h2>
-  <p>здоровье, рост, корни, время, жизненность, род</p>
-  <p class="ln-dim"><b>Сигнификатор:</b> здоровье, организм, долговременный рост, генеалогия, природная система</p>
-</section>
-  <section class="ln-sec"><h2>Стандартное</h2><p>Развивает ситуацию медленно, органично и надолго. Часто становится тематическим сигнификатором здоровья, рода, устойчивого роста и глубоких причин.</p></section>
-  <section class="ln-sec"><h2>В быту</h2><p>самочувствие, растения, прогулка, семейная история, долговременная привычка.</p></section>
-  <section class="ln-sec"><h2>Работа и бизнес</h2><p>устойчивый рост, развитие компетенций, организационная культура, долгий инвестиционный горизонт.</p></section>
-  <section class="ln-sec"><h2>Отношения</h2><p>глубокая связь, общие корни, семейная история, медленное сближение, долговечность.</p></section>
-  <section class="ln-sec"><h2>Характеристика личности</h2><p>спокойный, терпеливый, укорененный, последовательный, естественный, трудно меняющийся.</p></section>
-  <section class="ln-sec"><h2>Предметы и места</h2><p>дерево, лес, древесина, клиника здоровья, генеалогическая схема, разветвленная сеть.</p></section>
-  <section class="ln-sec"><h2>Необычные и буквальные проявления</h2><p>нервная система; экология; семейное заболевание; зависимость от корневой причины; биомимикрия.</p></section>
-  <section class="ln-sec"><h2>Теневая сторона</h2><p>застой под видом стабильности, хронический процесс, слишком медленный результат, наследуемый паттерн.</p></section>
-  <section class="ln-sec"><h2>Практический совет</h2><p>Искать корень и оценивать тенденцию на длинной дистанции. В вопросах здоровья обращаться к врачу.</p></section>
-  <section class="ln-sec"><h2>Примечание по времени</h2><p>месяцы или годы; медленно. Сроки в Ленорман различаются по школам; применять только после выбора одной системы.</p></section>
-
-<section class="ln-sec ln-pairs"><h2>Сочетания: Дерево первой картой</h2>
-  <p class="ln-dim">Дерево задаёт тему, вторая карта уточняет её. Всего 35 направленных сочетаний; пары «Дерево + X» и «X + Дерево» могут читаться по-разному.</p>
-  <ul class="ln-pair-list">
-<li><strong>Дерево + Всадник</strong> — быстрое известие, прибытие, визит или запуск. <span class='ln-pair-people'>Люди:</span> инициатива, новое знакомство, сообщение или активный партнер</li><li><strong>Дерево + Клевер</strong> — небольшая удача, короткое окно, легкость или случайный бонус. <span class='ln-pair-people'>Люди:</span> легкий флирт, приятная случайность, второй шанс или несерьезность</li><li><strong>Дерево + Корабль</strong> — дистанция, дорога, иностранный контекст, перевозка или расширение. <span class='ln-pair-people'>Люди:</span> дальняя связь, свобода, отъезд, возвращение или роман в поездке</li><li><strong>Дерево + Дом</strong> — дома; семейная история влияет на здоровье; дерево, сад или натуральный материал в жилище.</li><li><strong>Дерево + Тучи</strong> — туман, смешанные сигналы, временная путаница или скрытая часть. <span class='ln-pair-people'>Люди:</span> сомнения, недосказанность, переменчивое настроение или неверное понимание</li><li><strong>Дерево + Змея</strong> — извилистый сценарий, скрытый мотив, соблазн, стратегия или осложнение. <span class='ln-pair-people'>Люди:</span> ревность, сильное желание, треугольник, манипуляция или мудрая гибкость</li><li><strong>Дерево + Гроб</strong> — завершение, пауза, отмена, архивирование или освобождение. <span class='ln-pair-people'>Люди:</span> расставание, молчание, завершение этапа, утрата или эмоциональная пауза</li><li><strong>Дерево + Букет</strong> — приятная подача, подарок, комплимент, приглашение или социальное одобрение. <span class='ln-pair-people'>Люди:</span> ухаживание, комплимент, примирение, красивый жест или лесть</li><li><strong>Дерево + Коса</strong> — вмешательства; долгий рост резко прерывается; решение отсекает корневую причину.</li><li><strong>Дерево + Метла</strong> — повторение, спор, трение, тренировка или сильное возбуждение. <span class='ln-pair-people'>Люди:</span> ссора, страсть, навязчивый цикл, конкуренция или примирение через телесность</li><li><strong>Дерево + Совы</strong> — обсуждение, два участника, звонок, сплетни или нервная активность. <span class='ln-pair-people'>Люди:</span> свидание, разговор по душам, тревога пары, флирт или пересуды</li><li><strong>Дерево + Ребенок</strong> — новизна, малый размер, первый шаг, простота или уязвимость. <span class='ln-pair-people'>Люди:</span> новая связь, игривость, ребенок, неопытность или свежий старт</li><li><strong>Дерево + Лиса</strong> — проверка, скрытый интерес, тактика, рабочий контекст или возможный обман. <span class='ln-pair-people'>Люди:</span> недоверие, самозащита, прагматизм, скрытый мотив или умная осторожность</li><li><strong>Дерево + Медведь</strong> — укрупнение, мощная поддержка, контроль, авторитет или давление. <span class='ln-pair-people'>Люди:</span> защита, сильное влечение, ревнивая опека, покровительство или дисбаланс власти</li><li><strong>Дерево + Звезды</strong> — ясный ориентир, надежда, план, множество возможностей или связь через сеть. <span class='ln-pair-people'>Люди:</span> общая мечта, онлайн-знакомство, идеализация, духовная связь или надежда</li><li><strong>Дерево + Аист</strong> — переход, обновление, улучшение, возвращение или смена состояния. <span class='ln-pair-people'>Люди:</span> новый этап, съезд, беременность, возвращение или изменение динамики</li><li><strong>Дерево + Собака</strong> — верная поддержка, надежный помощник, дружба, сервис или зависимость. <span class='ln-pair-people'>Люди:</span> верность, дружба, «вечная дружба» вместо отношений, поддержка или знакомство через друзей</li><li><strong>Дерево + Башня</strong> — формализация, иерархия, официальный статус, отделение или изоляция. <span class='ln-pair-people'>Люди:</span> дистанция, границы, одиночество, статусность или официальность</li><li><strong>Дерево + Сад</strong> — публичность, группа, мероприятие, аудитория или открытый доступ. <span class='ln-pair-people'>Люди:</span> знакомство через круг, публичная пара, социальность, открытый формат или давление мнения</li><li><strong>Дерево + Гора</strong> — барьер, блокировка, задержка, холодность или испытание выносливости. <span class='ln-pair-people'>Люди:</span> эмоциональная стена, недоступность, застой, запрет или терпеливое преодоление</li><li><strong>Дерево + Развилка</strong> — несколько дорог, решение, развилка, альтернативный сценарий или расхождение. <span class='ln-pair-people'>Люди:</span> выбор партнера, разные планы, свобода вариантов, расхождение или нерешительность</li><li><strong>Дерево + Мыши</strong> — постепенное уменьшение, мелкий вред, тревога, кража или дефект. <span class='ln-pair-people'>Люди:</span> придирки, тревога, истощение связи, ревность или потеря доверия</li><li><strong>Дерево + Сердце</strong> — искреннее чувство, симпатия, сострадание, страсть или личная ценность. <span class='ln-pair-people'>Люди:</span> любовь, примирение, эмоциональная совместимость, страсть или идеализация</li><li><strong>Дерево + Кольцо</strong> — связь, обещание, контракт, повторение или замкнутый контур. <span class='ln-pair-people'>Люди:</span> помолвка, брак, эксклюзивность, повторяющийся сценарий или обязанность</li><li><strong>Дерево + Книга</strong> — скрытая информация, исследование, обучение, закрытый доступ или нераскрытый факт. <span class='ln-pair-people'>Люди:</span> тайные чувства, скрытая связь, неизвестный человек или необходимость узнать больше</li><li><strong>Дерево + Письмо</strong> — письменная фиксация, документ, сообщение, форма или официальная запись. <span class='ln-pair-people'>Люди:</span> переписка, признание в сообщении, дистанционный контакт или фиксация договоренности</li><li><strong>Дерево + Мужчина</strong> — конкретный человек, личный центр, мужская роль или назначенный сигнификатор. <span class='ln-pair-people'>Люди:</span> кверент, партнер, потенциальный партнер или значимый мужчина</li><li><strong>Дерево + Женщина</strong> — конкретный человек, личный центр, женская роль или назначенный сигнификатор. <span class='ln-pair-people'>Люди:</span> кверент, партнерша, потенциальная партнерша или значимая женщина</li><li><strong>Дерево + Лилии</strong> — зрелость, спокойствие, длительность, этическая рамка или сексуальность. <span class='ln-pair-people'>Люди:</span> зрелая близость, секс, возрастная разница, спокойствие или морализаторство</li><li><strong>Дерево + Солнце</strong> — успех, яркое прояснение, энергия, победа или перегрев. <span class='ln-pair-people'>Люди:</span> теплота, взаимность, открытая страсть, радость или чрезмерное эго</li><li><strong>Дерево + Луна</strong> — эмоциональная окраска, интуиция, признание, ночной контекст или повторяющийся ритм. <span class='ln-pair-people'>Люди:</span> романтика, глубокая чувствительность, настроение, тайное желание или идеализация</li><li><strong>Дерево + Ключ</strong> — верный ответ, доступ, критическая значимость, открытие или подтверждение. <span class='ln-pair-people'>Люди:</span> решающий разговор, доступ к доверию, важная связь или ключевой человек</li><li><strong>Дерево + Рыбы</strong> — финансовый поток, обмен, множество ресурсов, торговля или свобода. <span class='ln-pair-people'>Люди:</span> общие ресурсы, независимость, щедрость, свободный формат или материальный интерес</li><li><strong>Дерево + Якорь</strong> — закрепление, надежность, длительность, постоянная работа или застревание. <span class='ln-pair-people'>Люди:</span> долговечность, безопасность, преданность, привязанность или застой</li><li><strong>Дерево + Крест</strong> — Тяжелое заболевание. Кармическая болезнь.</li>
-  </ul>
-</section>
+</header>
+<input class="pos-state s-vals" type="radio" name="lnpos" id="ln-vals" checked>
+<input class="pos-state s-sph" type="radio" name="lnpos" id="ln-sph">
+<input class="pos-state s-pairs" type="radio" name="lnpos" id="ln-pairs">
+<div class="pos-tabs" role="tablist" aria-label="Разделы карты">
+<label class="pos-tab" for="ln-vals">Значения</label>
+<label class="pos-tab" for="ln-sph">Сферы жизни</label>
+<label class="pos-tab pos-tab-tab3" for="ln-pairs">Сочетания (35)</label>
+</div>
+<div class="pos-pane pane-vals" id="pane-vals" role="tabpanel">
+<div class="kw-row"><span class="kw">здоровье</span><span class="kw">рост</span><span class="kw">корни</span><span class="kw">время</span><span class="kw">жизненность</span><span class="kw">род</span></div>
+<div class="info-section"><h3><span aria-hidden="true">✦</span> Ключевые значения</h3><p>здоровье, рост, корни, время, жизненность, род</p></div>
+<p class="sig-note"><b>Сигнификатор:</b> здоровье, организм, долговременный рост, генеалогия, природная система</p>
+<div class="info-section"><h3><span aria-hidden="true">🂠</span> Игральная карта и факты</h3><p>Дерево — 7 червей. Полярность: положительная. Время: месяцы или годы; медленно</p></div>
+</div>
+<div class="pos-pane pane-sph" id="pane-sph" role="tabpanel">
+<p class="short-value">Развивает ситуацию медленно, органично и надолго. Часто становится тематическим сигнификатором здоровья, рода, устойчивого роста и глубоких причин.</p>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>самочувствие, растения, прогулка, семейная история, долговременная привычка.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и бизнес</h3><p>устойчивый рост, развитие компетенций, организационная культура, долгий инвестиционный горизонт.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>глубокая связь, общие корни, семейная история, медленное сближение, долговечность.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">👤</span> Характеристика личности</h3><p>спокойный, терпеливый, укорененный, последовательный, естественный, трудно меняющийся.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">📍</span> Предметы и места</h3><p>дерево, лес, древесина, клиника здоровья, генеалогическая схема, разветвленная сеть.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🎲</span> Необычные и буквальные проявления</h3><p>нервная система; экология; семейное заболевание; зависимость от корневой причины; биомимикрия.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">☾</span> Теневая сторона</h3><p>застой под видом стабильности, хронический процесс, слишком медленный результат, наследуемый паттерн.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">★</span> Практический совет</h3><p>Искать корень и оценивать тенденцию на длинной дистанции. В вопросах здоровья обращаться к врачу.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">⏳</span> Примечание по времени</h3><p>месяцы или годы; медленно. Сроки в Ленорман различаются по школам; применять только после выбора одной системы.</p></div>
+</div>
+<div class="pos-pane pane-pairs" id="pane-pairs" role="tabpanel">
+<p class="pair-note">Дерево задаёт тему, вторая карта уточняет её. Всего 35 направленных сочетаний; пары «Дерево + X» и «X + Дерево» могут читаться по-разному.</p><ul class="pair-list"><li><strong>Всадник + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Всадник</strong> — быстрое известие, прибытие, визит или запуск <span class="pair-people">Люди:</span> инициатива, новое знакомство, сообщение или активный партнер</li><li><strong>Клевер + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Клевер</strong> — небольшая удача, короткое окно, легкость или случайный бонус <span class="pair-people">Люди:</span> легкий флирт, приятная случайность, второй шанс или несерьезность</li><li><strong>Корабль + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Корабль</strong> — дистанция, дорога, иностранный контекст, перевозка или расширение <span class="pair-people">Люди:</span> дальняя связь, свобода, отъезд, возвращение или роман в поездке</li><li><strong>Дом + Дерево</strong> — </li><li><strong>Дерево + Дом</strong> — </li><li><strong>Дерево + Тучи</strong> — туман, смешанные сигналы, временная путаница или скрытая часть <span class="pair-people">Люди:</span> сомнения, недосказанность, переменчивое настроение или неверное понимание</li><li><strong>Тучи + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Змея</strong> — извилистый сценарий, скрытый мотив, соблазн, стратегия или осложнение <span class="pair-people">Люди:</span> ревность, сильное желание, треугольник, манипуляция или мудрая гибкость</li><li><strong>Змея + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Гроб</strong> — завершение, пауза, отмена, архивирование или освобождение <span class="pair-people">Люди:</span> расставание, молчание, завершение этапа, утрата или эмоциональная пауза</li><li><strong>Гроб + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Букет</strong> — приятная подача, подарок, комплимент, приглашение или социальное одобрение <span class="pair-people">Люди:</span> ухаживание, комплимент, примирение, красивый жест или лесть</li><li><strong>Букет + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Коса</strong> — </li><li><strong>Коса + Дерево</strong> — </li><li><strong>Дерево + Метла</strong> — повторение, спор, трение, тренировка или сильное возбуждение <span class="pair-people">Люди:</span> ссора, страсть, навязчивый цикл, конкуренция или примирение через телесность</li><li><strong>Метла + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Совы</strong> — обсуждение, два участника, звонок, сплетни или нервная активность <span class="pair-people">Люди:</span> свидание, разговор по душам, тревога пары, флирт или пересуды</li><li><strong>Совы + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Ребенок</strong> — новизна, малый размер, первый шаг, простота или уязвимость <span class="pair-people">Люди:</span> новая связь, игривость, ребенок, неопытность или свежий старт</li><li><strong>Ребенок + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Лиса</strong> — проверка, скрытый интерес, тактика, рабочий контекст или возможный обман <span class="pair-people">Люди:</span> недоверие, самозащита, прагматизм, скрытый мотив или умная осторожность</li><li><strong>Лиса + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Медведь</strong> — укрупнение, мощная поддержка, контроль, авторитет или давление <span class="pair-people">Люди:</span> защита, сильное влечение, ревнивая опека, покровительство или дисбаланс власти</li><li><strong>Медведь + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Звезды</strong> — ясный ориентир, надежда, план, множество возможностей или связь через сеть <span class="pair-people">Люди:</span> общая мечта, онлайн-знакомство, идеализация, духовная связь или надежда</li><li><strong>Звезды + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Аист</strong> — переход, обновление, улучшение, возвращение или смена состояния <span class="pair-people">Люди:</span> новый этап, съезд, беременность, возвращение или изменение динамики</li><li><strong>Аист + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Собака</strong> — верная поддержка, надежный помощник, дружба, сервис или зависимость <span class="pair-people">Люди:</span> верность, дружба, «вечная дружба» вместо отношений, поддержка или знакомство через друзей</li><li><strong>Собака + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Башня</strong> — формализация, иерархия, официальный статус, отделение или изоляция <span class="pair-people">Люди:</span> дистанция, границы, одиночество, статусность или официальность</li><li><strong>Башня + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Сад</strong> — публичность, группа, мероприятие, аудитория или открытый доступ <span class="pair-people">Люди:</span> знакомство через круг, публичная пара, социальность, открытый формат или давление мнения</li><li><strong>Сад + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Гора</strong> — барьер, блокировка, задержка, холодность или испытание выносливости <span class="pair-people">Люди:</span> эмоциональная стена, недоступность, застой, запрет или терпеливое преодоление</li><li><strong>Гора + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Развилка</strong> — несколько дорог, решение, развилка, альтернативный сценарий или расхождение <span class="pair-people">Люди:</span> выбор партнера, разные планы, свобода вариантов, расхождение или нерешительность</li><li><strong>Развилка + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Мыши</strong> — постепенное уменьшение, мелкий вред, тревога, кража или дефект <span class="pair-people">Люди:</span> придирки, тревога, истощение связи, ревность или потеря доверия</li><li><strong>Мыши + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Сердце</strong> — искреннее чувство, симпатия, сострадание, страсть или личная ценность <span class="pair-people">Люди:</span> любовь, примирение, эмоциональная совместимость, страсть или идеализация</li><li><strong>Сердце + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Кольцо</strong> — связь, обещание, контракт, повторение или замкнутый контур <span class="pair-people">Люди:</span> помолвка, брак, эксклюзивность, повторяющийся сценарий или обязанность</li><li><strong>Кольцо + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Книга</strong> — скрытая информация, исследование, обучение, закрытый доступ или нераскрытый факт <span class="pair-people">Люди:</span> тайные чувства, скрытая связь, неизвестный человек или необходимость узнать больше</li><li><strong>Книга + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Письмо</strong> — письменная фиксация, документ, сообщение, форма или официальная запись <span class="pair-people">Люди:</span> переписка, признание в сообщении, дистанционный контакт или фиксация договоренности</li><li><strong>Письмо + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Мужчина</strong> — конкретный человек, личный центр, мужская роль или назначенный сигнификатор <span class="pair-people">Люди:</span> кверент, партнер, потенциальный партнер или значимый мужчина</li><li><strong>Мужчина + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Женщина</strong> — конкретный человек, личный центр, женская роль или назначенный сигнификатор <span class="pair-people">Люди:</span> кверент, партнерша, потенциальная партнерша или значимая женщина</li><li><strong>Женщина + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Лилии</strong> — зрелость, спокойствие, длительность, этическая рамка или сексуальность <span class="pair-people">Люди:</span> зрелая близость, секс, возрастная разница, спокойствие или морализаторство</li><li><strong>Лилии + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Солнце</strong> — успех, яркое прояснение, энергия, победа или перегрев <span class="pair-people">Люди:</span> теплота, взаимность, открытая страсть, радость или чрезмерное эго</li><li><strong>Солнце + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Луна</strong> — эмоциональная окраска, интуиция, признание, ночной контекст или повторяющийся ритм <span class="pair-people">Люди:</span> романтика, глубокая чувствительность, настроение, тайное желание или идеализация</li><li><strong>Луна + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Ключ</strong> — верный ответ, доступ, критическая значимость, открытие или подтверждение <span class="pair-people">Люди:</span> решающий разговор, доступ к доверию, важная связь или ключевой человек</li><li><strong>Ключ + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Рыбы</strong> — финансовый поток, обмен, множество ресурсов, торговля или свобода <span class="pair-people">Люди:</span> общие ресурсы, независимость, щедрость, свободный формат или материальный интерес</li><li><strong>Рыбы + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Якорь</strong> — закрепление, надежность, длительность, постоянная работа или застревание <span class="pair-people">Люди:</span> долговечность, безопасность, преданность, привязанность или застой</li><li><strong>Якорь + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li><li><strong>Дерево + Крест</strong> — </li><li><strong>Крест + Дерево</strong> — медленное укоренение, здоровье, родовая связь или долговременный рост <span class="pair-people">Люди:</span> глубокая связь, общие корни, терпение или хронический паттерн</li></ul>
+</div>
 <nav class="ln-pag" aria-label="Навигация по картам">
   <a href="../04-dom/">← 04 Дом</a>
   <a href="../06-tuchi/">06 Тучи →</a>
 </nav>
+</article>
 </main>
-
 <footer class="site-footer">
   <p>Личный справочник · не официальный доклад и не исследовательская статья · JeT</p>
 </footer>
