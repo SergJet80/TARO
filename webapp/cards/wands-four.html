@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Четвёрка жезлов — значение и толкование | Таро Справочник</title>
+<meta name="description" content="Четвёрка жезлов — значение карты Таро младшего аркана: масть жезлы, стихия огонь. Толкование в прямом и перевёрнутом положении, в любви и работе.">
+<link rel="canonical" href="https://taro.jetserg.top/cards/wands-four.html">
+<meta property="og:title" content="Четвёрка жезлов — значение и толкование | Таро Справочник">
+<meta property="og:description" content="Четвёрка жезлов — значение карты Таро младшего аркана: масть жезлы, стихия огонь. Толкование в прямом и перевёрнутом положении, в любви и работе.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taro.jetserg.top/cards/wands-four.html">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/wands-four.webp">
+<link rel="stylesheet" href="/css/style.css?v=3.4">
+<link rel="stylesheet" href="/css/astrology.css?v=3.4">
+<style>
+.main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
+.card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
+.card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
+.card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
+.card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── Школа Современного Таро ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
+.card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
+.card-pagination a:last-child { text-align: right; }
+.card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
+@media (max-width: 480px) {
+  .main-nav { padding: 12px 12px 0; }
+  .main-nav a { padding: 8px 12px; font-size: .9rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
+  .card-pagination { gap: 10px; }
+  .card-pagination a { padding: 16px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Четвёрка жезлов — значение и толкование | Таро Справочник",
+  "description": "Четвёрка жезлов — значение карты Таро младшего аркана: масть жезлы, стихия огонь. Толкование в прямом и перевёрнутом положении, в любви и работе.",
+  "url": "https://taro.jetserg.top/cards/wands-four.html",
+  "inLanguage": "ru"
+}
+</script>
+<!-- Microsoft Clarity -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yejlmmd6nr");
+</script>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+<nav class="main-nav" aria-label="Разделы">
+  <div class="main-nav-inner">
+    <a href="/">Главная</a>
+    <a href="/cards/" class="mn-active">Карты</a>
+    <a href="/astrology/">Астрология</a>
+    <a href="/runes/">Руны</a>
+    <a href="/spreads.html">Расклады</a>
+  </div>
+</nav>
+<main class="card-page">
+<nav class="card-crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/cards/">Карты</a> / <span aria-current="page">Четвёрка жезлов</span></nav>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="/img/cards/wands-four.webp" alt="Четвёрка жезлов — карта Таро Уэйта" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Младший аркан · Жезлы</p>
+<h1 class="m-title"><span class="card-number">IV</span>Четвёрка жезлов</h1>
+<p class="m-en">Four of Wands</p>
+<p class="m-meta">Масть: <b>Жезлы</b> &nbsp;·&nbsp; Стихия: <b>Огонь</b> &nbsp;·&nbsp; Классика: <b>Венера в Овне</b></p>
+</div>
+</header>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Положения карты">
+<label class="pos-tab" for="pos-upright">Прямое положение</label>
+<label class="pos-tab" for="pos-reversed">Перевёрнутое положение</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">Школа Современного Таро</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">праздник</span><span class="kw">домашний очаг</span><span class="kw">гармония</span><span class="kw">новоселье</span><span class="kw">сообщество</span><span class="kw">стабильность</span></div>
+<p class="short-value">Гирлянда над четырьмя жезлами: праздник, лад в доме и заслуженная передышка на пороге нового этапа.</p>
+<aside class="gd-block" aria-label="Значение карты по ордену Золотая Заря"><div class="gd-head"><span class="gd-symbol" aria-hidden="true">☉</span> По ордену «Золотая Заря»</div><p class="gd-title">«The Lord of Perfected Work» — Владыка Совершенной Работы</p><p class="gd-why">Четвёрка закрепляет результат, а Венера смягчает и гармонизирует огненный импульс. Получается завершённая структура: порядок, мир и праздничное подведение итогов.</p></aside>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Четыре жезла образуют ворота под гирляндой цветов и плодов; под ними танцуют фигуры с букетами, позади виднеется уютный замок. Урожай собран, дом построен — пора открыть двери гостям. Четвёрка жезлов — самый тёплый и светский аркан масти.</p>
+<p>Карта утверждает: прочность измеряется не камнями, а согласием. Мост держится, потому что четыре опоры стоят ровно — семья, дружба, дело, кров. Она выпадает на свадьбы, новоселье, юбилеи и напоминает: вехи нужно отмечать вслух, разделяя радость с теми, кто рядом.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>День располагает к семейному теплу: собрать родню за столом, отметить событие, навестить родителей, заняться цветами на балконе. Хорошее время для новоселья и перестановки. Даже обычный ужин при свечах сегодня становится праздником — позвольте себе радоваться без повода.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Командный праздник: проект успешно завершён, коллектив получил премию, офис отмечает годовщину. Благоприятны корпоративы и знакомства с семьями партнёров — за столом договорённости становятся человечнее. Фундамент дела надёжен; закрепляйте отношения неформально.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Одна из главных карт брачных прогнозов: помолвка, свадьба, знакомство с семьями, переезд на общую территорию. Отношения входят в спокойную счастливую колею, где хочется обустраивать быт и принимать гостей. Устоявшимся парам карта советует вернуть ритуалы ухаживания.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Устойчивое здоровье и эмоциональная подпитка от близких: выздоровление получает тыл, стресс снижается без лекарств. Домашняя радость лечит лучше рецептов. Единственная угроза периода — праздничный стол: перебор с угощением и вином отзовётся тяжестью наутро.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Четвёрка жезлов — освящённый порог и очаг: карта домашних алтарей, семейных оберегов, обрядов на лад в доме. Она покровительствует венчанию, праздникам колеса года, гостеприимству как искусству. В раскладах на переезд обещает: новое жильё станет настоящим домом.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">нестабильность</span><span class="kw">переходный период</span><span class="kw">домашний разлад</span><span class="kw">одиночество в толпе</span><span class="kw">отложенная радость</span></div>
+<p class="short-value">Праздник проходит мимо: опоры разъехались, дом без каркаса, переходный период без простого человеческого тепла.</p>
+<aside class="gd-block" aria-label="Значение карты по ордену Золотая Заря"><div class="gd-head"><span class="gd-symbol" aria-hidden="true">☉</span> По ордену «Золотая Заря»</div><p class="gd-title">«The Lord of Perfected Work» — Владыка Совершенной Работы</p><p class="gd-why">Четвёрка закрепляет результат, а Венера смягчает и гармонизирует огненный импульс. Получается завершённая структура: порядок, мир и праздничное подведение итогов.</p></aside>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Гирлянда провисла: опоры разъехались, и праздник теряет каркас. Семья собирается за одним столом физически, но каждый сидит в своём телефоне; дом есть, а очага нет. Карта часто выпадает в переходные времена — ремонт, разъезд, смена города, когда привычный уклад временно разобран.</p>
+<p>Есть у неё мягкая сторона — частный праздник без публики, но чаще речь о дефиците принадлежности: человеку негде опереться, и любая мелочь грозит ссорой. Урок перевёрнутой Четвёрки: прочность создают не стены, а ритуалы внимания, и восстанавливать их придётся руками.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Быт идёт вразнобой: гости переносят визит, ремонт затягивается, домашние ссорятся из-за мелочей, переезд идёт не по плану. Не требуйте от периода красивой картинки: наведите порядок в одной комнате, приготовьте любимое блюдо — маленькие островки уюта удержат равновесие.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>В коллективе прохладно: команда разбита на группировки, начальство экономит на традициях, обещанный банкет превратился в рассылку благодарностей. Бизнес страдает от текучки людей. Сейчас важны не парадные речи, а точечная забота — личные разговоры и восстановление доверия по одному человеку за раз.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Турбулентность: разговоры о свадьбе заходят в тупик, семьи не сходятся, быт обнажает различия. Возможна жизнь на два дома или вынужденная разлука. Иногда карта показывает союз, держащийся на фасаде для гостей. Найдите занятие, где можно быть вдвоём без ролей и ожиданий.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Нестабильность бьёт прежде всего по сну и пищеварению: без режима тело не знает, когда отдыхать, мигрень приходит после ссор. Постройте минимальный каркас дня — одинаковый подъём, тёплая еда, прогулка. Устойчивость вернётся через ритм.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Неосвящённое жилище: в доме нет центра, обереги забыты, ссоры оставляют осадок в стенах. Карта советует очистить пространство, заново очертить границы дома и обновить семейные обычаи. Простая трапеза без экранов — сильнейшее домашнее действо, известное задолго до сложных ритуалов.</p></div>
+</div>
+<div class="pos-pane roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> Как школа читает этот ранг</h3>
+<div class="info-section"><h3>Основная идея</h3><p>Желание становится постоянным: то, что понравилось, хочется повторять. Это фундамент устойчивого союза и постоянного дела.</p></div>
+<div class="info-section"><h3>Как проявляется</h3><p>В отношениях — дом, семья и устойчивый союз. В работе — дело, куда хочется возвращаться каждый день. Стабильность здесь живая: она держится на желании, а не на обязанности.</p></div>
+<div class="info-section"><h3>Теневая сторона</h3><p>Огонь плохо переносит полное отсутствие новизны: постоянство превращается в скуку и выгорание.</p></div>
+<div class="info-section"><h3>Ключевые слова</h3><p>постоянное желание · дом · фундамент · стабильность · выгорание</p></div>
+<div class="roman-astro"><span class="ra-label">✷ Астрология школы</span><b>Масть огня · устойчивость достигнутого</b><span class="ra-sep">·</span>холерики — «знают, чего хотят», настойчивость, движение</div>
+<h3 class="roman-subtitle"><span>📜</span> Развёрнуто — из лекции по рангу</h3>
+<details class="roman-details" open><summary><span class="rd-icon" aria-hidden="true">✧</span> Суть карты</summary><div class="rd-body"><p>желание становится постоянным. Линия ранга: потенция → выбор одного из желаний → слияние двух желаний в консенсусе → здесь закрепление: «вы это желание хотите повторить, потому что вам понравилось».</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Прямое положение</summary><div class="rd-body"><ul class="st-list"><li>Отношения (центральная сфера): мужчина хочет секса, женщина — любви; правильная тройка их слила, а по четвёрке это хочется повторять снова и снова: «ты начинаешь строить дом, чтобы далеко не ходить». Четыре жезла по углам — фундамент отношений.</li><li>Символика: столбы с гирляндами цветов и ягод. «Многие говорят — праздник середины лета», но более узнаваемая отсылка — хупа: балдахин еврейской свадьбы, символ будущего дома. Это обещание мужчины: моё желание постоянно, «готов для нас построить дом… жить до конца моей жизни».</li><li>Работа: постоянная работа, куда ходишь каждый день, дело, которым хочешь заниматься долго.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Негативное значение</summary><div class="rd-body"><p>• желание устарело и начинает мешать — «замершего огня не бывает», стабильность неудобна огненной стихии. Работой оборачивается выгоранием: результат есть, но слишком предсказуемый, «отсутствует интрига». Стряхнуть скуку могут попыткой через ревность — а «ревность не самое лучшее средство» (мост к конкуренции пятёрки).</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> Акценты и фишки школы</summary><div class="rd-body"><ul class="st-list"><li>Сквозной тезис: четвёрка соединяет идею всех четырёх стихий — повторение формы, желания, мысли, эмоции; поэтому масть почти самоочевидна.</li><li>Астрологии в этой лекции нет вовсе: ни домов, ни планет — их систему он даёт по старшим арканам; славянского ряда нет (даже купалу не называет — просто «праздник середины лета»), Банцхаф не цитируется, здоровья как темы нет.</li><li>Разводит классические значения по стихиям: «игнорируемая возможность» четвёрки кубков — скорее жезлы/мечи: «огонь и воздух работают в паре», подогревают друг друга.</li><li>Тетраморф в консультации: все четыре стихии работают всегда, лишь одна ярче — упивается радостью (кубки), взвешивает (мечи), тело требует (пентакли), оглядывается на социум (жезлы).</li><li>Пресыщение не по четвёрке: она — ровное повторение; перенасыщение лежит в перевернутых семёрке/восьмёрке/девятке; восьмёрка — «уже две четвёрки», ритм повтора.</li><li>Формула полюсов: «карта это одно и то же… просто как вы относитесь» — нравится повторение, значит прямая; надоело — перевёрнутая.</li><li>Литература и история: Э. М. Форстер и пост-викторианская Англия накануне Первой мировой; масонские посвящения; Святой Августин о сердце, не знающем покоя (сквозная рамка тройки); буддизм — Будда под деревом, Мара с дочерьми-«харитами», параллель с бесами, посылающими святым обнажённых женщин.</li><li>Кино: «Маленький Будда» — прямая рекомендация; гоголевская история Хомы Брута (цикл «Вечера на хуторе близ Диканьки»): три ночи в часовне, круг мелом и «Отче наш» против чертей — портрет зоны комфорта четвёрки мечей, где ты говоришь только с собой и Богом.</li><li>Примеры из практики/чата: приёмная «Ивана Ивановича» в Газпроме — диван, интересная секретарша, и вам несут четвёртую чашку кофе ожидания; партнёр, каждое утро приносящий кофе в постель, пока не захочется «хоть шампанского».</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Ключевые слова</summary><div class="rd-body"><p>постоянное желание; фундамент отношений; хупа; обещание навсегда; выгорание.</p></div></details>
+</div>
+<nav class="card-pagination" aria-label="Предыдущая и следующая карта">
+<a rel="prev" href="wands-three.html"><span>← Предыдущая карта</span>Тройка жезлов</a>
+<a rel="next" href="wands-five.html"><span>Следующая карта →</span>Пятёрка жезлов</a>
+</nav>
+</article>
+</main>
+<footer class="site-footer">
+  <p>Таро · Справочник значений карт</p>
+  <p class="footer-note">Материалы носят справочный и развлекательный характер</p>
+</footer>
+</body>
+</html>

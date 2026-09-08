@@ -10,55 +10,127 @@
 <meta property="og:description" content="Умеренность — равновесие, мера и терпение. Значение карты Таро в прямом и перевёрнутом положении, в любви и карьере. Совет карты и вопросы для размышления.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://taro.jetserg.top/cards/umerennost.html">
-<link rel="stylesheet" href="/css/style.css?v=3.3">
-<link rel="stylesheet" href="/css/astrology.css?v=3.3">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/major-14-temperance.webp">
+<link rel="stylesheet" href="/css/style.css?v=3.4">
+<link rel="stylesheet" href="/css/astrology.css?v=3.4">
 <style>
 .main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
 .card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
 .card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
 .card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
 .card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
-.card-hero { text-align: center; padding: 14px 0 34px; }
-.card-symbol { display: block; font-family: Georgia, serif; font-size: 5rem; line-height: 1.2; color: var(--gold-bright); text-shadow: 0 0 30px var(--gold-dim); }
-.card-eyebrow { color: var(--text-dim); letter-spacing: .15em; text-transform: uppercase; font-size: .76rem; margin: 18px 0 8px; }
-.card-hero h1 { font-family: Georgia, serif; font-weight: 500; font-size: clamp(2rem, 6vw, 3.3rem); line-height: 1.2; color: var(--gold-bright); overflow-wrap: anywhere; }
-.card-number { display: block; font-size: 2.2rem; color: var(--gold); margin-bottom: 10px; }
-.card-hero > p:last-child { margin-top: 16px; color: var(--text-dim); }
-.card-section { margin: 0 0 22px; padding: 28px 32px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: rgba(23, 18, 43, .88); }
-.card-section h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500; font-size: 1.6rem; line-height: 1.3; margin-bottom: 18px; }
-.card-section h3 { color: var(--gold-bright); font-size: 1rem; margin: 22px 0 10px; }
-.card-section p + p { margin-top: 16px; }
-.card-intro { background: linear-gradient(135deg, rgba(124, 92, 191, .2), var(--bg-panel)); font-size: 1.1rem; }
-.card-keywords { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 18px 0; }
-.card-keywords li { border: 1px solid var(--gold-dim); border-radius: 999px; padding: 4px 12px; font-size: .85rem; color: var(--gold-bright); }
-.card-questions { padding-left: 24px; }
-.card-questions li { padding: 4px 0 10px 6px; }
-.card-questions li::marker { color: var(--gold); }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── Школа Современного Таро ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
 .card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
-.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius); text-decoration: none; background: var(--bg-panel); }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
 .card-pagination a:last-child { text-align: right; }
 .card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
-.card-pagination a:hover, .card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
-.card-catalog { max-width: 1120px; }
-.card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; list-style: none; }
-.card-grid li { min-width: 0; }
-.card-tile { display: flex; flex-direction: column; align-items: flex-start; height: 100%; padding: 24px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel); text-decoration: none; }
-.card-tile-symbol { font-size: 2rem; line-height: 1.3; }
-.card-tile-number { color: var(--text-dim); font-size: .85rem; margin: 18px 0 4px; }
-.card-tile strong { font-family: Georgia, serif; font-size: 1.4rem; font-weight: 500; }
-.card-tile-desc { color: var(--text-dim); font-size: .9rem; margin-top: 6px; }
-@media (max-width: 700px) { .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
 @media (max-width: 480px) {
   .main-nav { padding: 12px 12px 0; }
   .main-nav a { padding: 8px 12px; font-size: .9rem; }
-  .card-page { padding: 22px 16px 36px; }
-  .card-section { padding: 22px 20px; }
-  .card-tile { padding: 18px 14px; }
-  .card-tile strong { font-size: 1.16rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
   .card-pagination { gap: 10px; }
   .card-pagination a { padding: 16px 12px; }
 }
-@media (max-width: 350px) { .card-grid { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
 </style>
 <script type="application/ld+json">
@@ -88,69 +160,76 @@
     <a href="/">Главная</a>
     <a href="/cards/" class="mn-active">Карты</a>
     <a href="/astrology/">Астрология</a>
-    <a href="/lenormand/">Ленорман</a>
     <a href="/runes/">Руны</a>
     <a href="/spreads.html">Расклады</a>
   </div>
 </nav>
 <main class="card-page">
 <nav class="card-crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/cards/">Карты</a> / <span aria-current="page">Умеренность</span></nav>
-<article>
-<header class="card-hero">
-<span class="card-symbol" aria-hidden="true">≈</span>
-<p class="card-eyebrow">Старшие арканы</p>
-<h1><span class="card-number">XIV</span>Умеренность</h1>
-<p>Мера и согласие</p>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="/img/cards/major-14-temperance.webp" alt="Умеренность — карта Таро Уэйта" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Старший аркан · XIV</p>
+<h1 class="m-title"><span class="card-number">XIV</span>Умеренность</h1>
+<p class="m-en">Temperance</p>
+<p class="m-meta">Стихия: <b>Огонь</b> &nbsp;·&nbsp; Астрология: <b>Стрелец</b></p>
+</div>
 </header>
-<section class="card-section card-intro" aria-labelledby="brief">
-<h2 id="brief">Краткое значение</h2>
-<p>Умеренность ищет сочетание, в котором разные потребности могут сосуществовать. Она предлагает менять пропорции постепенно и замечать, где привычный ритм требует более бережной настройки.</p>
-</section>
-<section class="card-section" aria-labelledby="upright">
-<h2 id="upright">Прямое положение</h2>
-<p>Ангел переливает воду из чаши в чашу без единой капли мимо: искусство смешивать несмешиваемое мерой и терпением.</p>
-<ul class="card-keywords" aria-label="Ключевые слова"><li>умеренность</li><li>баланс</li><li>терпение</li><li>синтез</li><li>золотая середина</li><li>исцеление</li></ul>
-<p>Умеренность — алхимик среди арканов: одна нога фигуры на камне, другая в воде, и поток льётся между чашами ровно настолько, насколько нужно. Карта утверждает: противоположности не обязаны воевать — огонь и вода при верной пропорции дают лекарство.</p>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Положения карты">
+<label class="pos-tab" for="pos-upright">Прямое положение</label>
+<label class="pos-tab" for="pos-reversed">Перевёрнутое положение</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">Школа Современного Таро</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">умеренность</span><span class="kw">баланс</span><span class="kw">терпение</span><span class="kw">синтез</span><span class="kw">золотая середина</span><span class="kw">исцеление</span></div>
+<p class="short-value">Ангел переливает воду из чаши в чашу без единой капли мимо: искусство смешивать несмешиваемое мерой и терпением.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Умеренность — алхимик среди арканов: одна нога фигуры на камне, другая в воде, и поток льётся между чашами ровно настолько, насколько нужно. Карта утверждает: противоположности не обязаны воевать — огонь и вода при верной пропорции дают лекарство.</p>
 <p>В раскладе она обещает период ровного течения. Конфликты стихают не потому, что кто-то победил, а потому, что найдена формула сосуществования. Результаты приходят небыстро, зато без трещин: всё, что построено в это время, стоит долго.</p>
-<p>Стрелецья природа аркана направляет его к высшей цели. Умеренность — не скука аскета, а точность лучника, экономящего силы ради попадания. Её закон прост: меньше, но лучше — и каждый день понемногу.</p>
-</section>
-<section class="card-section" aria-labelledby="reversed">
-<h2 id="reversed">Перевёрнутое положение</h2>
-<p>Пропорции нарушены: что-то в жизни переливается через край, а что-то давно пересохло.</p>
-<ul class="card-keywords" aria-label="Ключевые слова"><li>крайности</li><li>излишества</li><li>нетерпение</li><li>дисбаланс</li><li>разлад</li><li>качели</li></ul>
-<p>Перевёрнутая Умеренность — алхимик, уронивший колбы. Одна чаша переливается: работа съедает жизнь, страсть — голову, забота о других — собственные ресурсы. Вместо синтеза получаются качели от крайности к крайности.</p>
+<p>Стрелецья природа аркана направляет его к высшей цели. Умеренность — не скука аскета, а точность лучника, экономящего силы ради попадания. Её закон прост: меньше, но лучше — и каждый день понемногу.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Спокойный день без потрясений — и это подарок: размеренный ритм, обычные дела, никаких резких поворотов. Хорошо навести порядок в питании и режиме, мягко договориться с трудным человеком. Всё начатое требует дозировки: понемногу, но каждый день — так делаются и ремонт, и здоровье.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Процессы выравниваются: спорные проекты получают сбалансированный план, конфликты подразделений сходятся к компромиссу. Лучшее время для переговоров, где нужен не напор, а аккуратная сборка позиций, и для обучения новому ремеслу. Избегайте крайностей — ни авралов, ни простоя: ровный темп сейчас выгоднее рывков.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Отношения входят в мирную гавань: после бурь хочется тишины и тёплых мелочей. Карта учит соединять разное — его друзей и ваших, город и дачу, молчание и разговоры — в общий уклад без победителей. Пара в кризисе может восстановиться через заботу без требований.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Одна из главных карт выздоровления: организм сам настраивает баланс, если перестать мешать. Показаны диета, режим, вода, плавание, спокойная ходьба. Хороший период для реабилитации и отказа от крайностей — и лечебного голодания, и праздников желудка. Алкоголь и стимуляторы сейчас особенно нежелательны.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>В Таро Тота этот аркан зовётся Искусством — так же называется алхимическая стадия растворения и соединения. Медитация на переливание воды тренирует тонкость: сколько силы взять и когда остановиться. Карта покровительствует целительству, зарядке воды, смешению традиций. Четырнадцать — удвоенная пятёрка: свобода, усмирённая мерой.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">крайности</span><span class="kw">излишества</span><span class="kw">нетерпение</span><span class="kw">дисбаланс</span><span class="kw">разлад</span><span class="kw">качели</span></div>
+<p class="short-value">Пропорции нарушены: что-то в жизни переливается через край, а что-то давно пересохло.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Перевёрнутая Умеренность — алхимик, уронивший колбы. Одна чаша переливается: работа съедает жизнь, страсть — голову, забота о других — собственные ресурсы. Вместо синтеза получаются качели от крайности к крайности.</p>
 <p>Часто карта указывает на нетерпение: человек хочет результат немедленно и сливает вместе с водой главное. Либо наоборот — застрял в тёплом болоте комфорта, избегая любого напряжения, пока навыки не ржавеют.</p>
-<p>Есть и светлая грань: иногда переворот означает очищающий кризис — тело и психика сами начали вытягивать яд. Процесс неприятен, но ведёт к новому равновесию, если не мешать ему паникой.</p>
-</section>
-<section class="card-section" aria-labelledby="love">
-<h2 id="love">В любви</h2>
-<h3>Прямое положение</h3>
-<p>Отношения входят в мирную гавань: после бурь хочется тишины и тёплых мелочей. Карта учит соединять разное — его друзей и ваших, город и дачу, молчание и разговоры — в общий уклад без победителей. Пара в кризисе может восстановиться через заботу без требований.</p>
-<h3>Перевёрнутое положение</h3>
-<p>Эмоциональные американские горки: то слияние без остатка, то ледяная дистанция. Кто-то в паре требует слишком многого сразу — внимания, гарантий, перемен — и этим выжигает чувство. Возможен роман на контрасте притяжения и ссор, который держится адреналином, а не близостью. Лекарство одно, скучное и действенное: мера.</p>
-</section>
-<section class="card-section" aria-labelledby="career">
-<h2 id="career">В карьере</h2>
-<h3>Прямое положение</h3>
-<p>Процессы выравниваются: спорные проекты получают сбалансированный план, конфликты подразделений сходятся к компромиссу. Лучшее время для переговоров, где нужен не напор, а аккуратная сборка позиций, и для обучения новому ремеслу. Избегайте крайностей — ни авралов, ни простоя: ровный темп сейчас выгоднее рывков.</p>
-<h3>Перевёрнутое положение</h3>
-<p>На работе — качели: аврал за авралом либо затишье до ступора, договорённости рушатся из-за несогласованности. Команда тянет в разные стороны, ресурсы распределены криво, сроки противоречат возможностям. Не подписывайтесь на проекты без ясных полномочий — легко оказаться между двух огней с чужими задачами в руках.</p>
-</section>
-<section class="card-section" aria-labelledby="advice">
-<h2 id="advice">Совет карты</h2>
-<p>Посмотрите, чего в повседневности стало слишком много, а чему совсем не остаётся места. Внесите одно посильное изменение и дайте ему время, вместо того чтобы исправлять всё резким рывком.</p>
-</section>
-<section class="card-section" aria-labelledby="questions">
-<h2 id="questions">Вопросы для размышления</h2>
-<ol class="card-questions"><li>Чему в моём дне достаётся слишком много места, а чему слишком мало?</li>
-<li>Какие противоположные потребности можно согласовать без крайностей?</li>
-<li>Какое небольшое изменение я смогу поддерживать спокойно и регулярно?</li></ol>
-</section>
-</article>
+<p>Есть и светлая грань: иногда переворот означает очищающий кризис — тело и психика сами начали вытягивать яд. Процесс неприятен, но ведёт к новому равновесию, если не мешать ему паникой.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Бытовой сигнал об избытке: еда, сериалы, траты, уборка по ночам — всё чрезмерно. Выберите одну привычку и сократите её на треть вместо тотальных запретов. Спешка ломает дела: суп не сварить быстрее, помешивая каждые полминуты. Верните в день хотя бы одну настоящую паузу.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>На работе — качели: аврал за авралом либо затишье до ступора, договорённости рушатся из-за несогласованности. Команда тянет в разные стороны, ресурсы распределены криво, сроки противоречат возможностям. Не подписывайтесь на проекты без ясных полномочий — легко оказаться между двух огней с чужими задачами в руках.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Эмоциональные американские горки: то слияние без остатка, то ледяная дистанция. Кто-то в паре требует слишком многого сразу — внимания, гарантий, перемен — и этим выжигает чувство. Возможен роман на контрасте притяжения и ссор, который держится адреналином, а не близостью. Лекарство одно, скучное и действенное: мера.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Перекосы очевидны: переедание или жёсткие диеты, кофе против бессонницы и таблетки от последствий, спорт рывками после месяцев лежания. Организм бунтует против крайностей обострениями. Восстановление начинайте с малого — сон по часам, вода, ежедневный шаг, — без подвигов и запретов разом.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>В практиках перевёрнутая карта предупреждает о нарушенной мере: передозировка энергий, смешение несовместимых традиций, работа на истощении. Целительные техники требуют пересборки — меньше силы, больше точности. Иногда это знак очищающего кризиса: гной вышел, пока рана не закрылась.</p></div>
+</div>
+<div class="pos-pane roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> Кратко и просто</h3>
+<div class="info-section"><h3>Основная идея</h3><p>Умеренность — это правильная дозировка и правильный момент.
+Слишком мало лекарства не помогает, слишком много становится ядом. То же самое происходит практически с любым качеством.</p></div>
+<div class="info-section"><h3>Как проявляется</h3><p>Умение чувствовать темп ситуации, менять форму, не теряя сути, постепенно переходить из одного состояния в другое.</p></div>
+<div class="info-section"><h3>Работа и деньги</h3><p>Переход из одной формы в другую: смена профессии, новый способ заработка, перевод денег из одного инструмента в другой.</p></div>
+<div class="info-section"><h3>В отношениях</h3><p>Понимание того, что два человека могут жить в разных ритмах.</p></div>
+<div class="info-section"><h3>Теневая сторона</h3><p>Мера становится неуместной. Человек слишком долго ждёт там, где необходимо действовать, или слишком спокойно относится к ситуации, которая требует резкого решения.</p></div>
+<div class="info-section"><h3>Особенность школы</h3><p>Одна из главных метафор карты — вода, переливающаяся между двумя чашами. Форма меняется, содержание остаётся.</p></div>
+<div class="roman-astro"><span class="ra-label">✷ Астрология школы</span><b>VIII → IX дом</b><span class="ra-sep">·</span>переход от Скорпиона к Стрельцу, «от воды к огню»<div class="ra-classic">У классики Уэйта: Стрелец</div></div>
+<h3 class="roman-subtitle"><span>📜</span> Развёрнуто — выжимки лекций</h3>
+<details class="roman-details" open><summary><span class="rd-icon" aria-hidden="true">✧</span> Суть карты</summary><div class="rd-body"><p>Умеренность — это мера и правильная дозировка: ангел «переливает воду из чаши в чашу — отмеряет нужное и правильное количество любого действия». Слово Temperance идёт от латинского темп — время: это «ощущение времени», движение «с нужным темпом». Метафорa дозы повторяется через всю лекцию: «слишком мало змеиного яда не даст никакого эффекта, слишком много убьёт, а умеренная, тщательно отмеренная доза является лекарством». Его формула: умеренность — не медленно, это с правильной скоростью; «умеренность — умение прочувствовать время и сделать вовремя». Главный смысл образа — плавный переход из грубого материального состояния жизни в высшее духовное, венчающееся спасением души.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Прямое положение</summary><div class="rd-body"><ul class="st-list"><li>По стихиям/сферам раскладов:</li><li>- Социум и желания (огненный ряд) — широта взглядов: человек потихоньку, шаг за шагом меняет мнение о мире; кто всю жизнь не меняет убеждений, тот закоснел. Отсутствие снобизма: две чаши — два человека, «одна и та же идея при переходе от одного человека к другому может принять абсолютно другую форму», вода приобретает форму чаши.</li><li>- Отказ от устаревших традиций и формализма: главное — идея, форма вторична; «традиция ходить с коромыслом за водой при водопроводе выглядит смешно». Понял суть карты («жидкость смысла») — зубрить значения не нужно: «можешь всегда попробовать на вкус ситуацию».</li><li>- Работа: изменение и развитие ситуации — переход из одного состояния в другое, включая смену профессиональной формы при сохранении сути (пример художника: рисовал для чужого имени → продаёт искусство от своего имени, разбираясь в нём лучше других).</li><li>- Финансы и имущество (пентакли): новый формат заработка; вложения средств — «деньги меняют свою форму»: банк ↔ недвижимость ↔ акции ↔ дело, перевод из оборота в запас и обратно нужно делать вовремя; взвешенные решения по чужим деньгам (восьмой дом: наследство, кредиты, долги).</li><li>- Действие (воздух): работа с информацией и воздействие на людей; выдержка вместо «ждать у моря погоды»: правильное слово — с нужной громкостью и вовремя; «слив информации должен происходить точно». Спокойствие = ровное дыхание: «сначала подумал — потом сделал».</li><li>- Личная жизнь: благие цели, внимание к мелочам, новые традиции. В общении двоих — понимание, что у другого «чуть-чуть другой ритм жизни»; изменения обдумывать спокойно и планомерно. Понимание сути отношений — «фокусировка на воде»: любовь может иметь разную форму, важно, что она есть и эмоции одинаковы у обоих. Его стандартный пример: встречались пять лет, съезжаться не торопится — «мы по сути уже давно женаты», форма (штамп) не важна.</li><li>Образ умеренности — через быт (алкоголь, сахар, мясо: полезное в избытке становится вредным).</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Негативное значение</summary><div class="rd-body"><p>Точная формула: «то же самое, только работающее в ущерб ситуации». Минусы здесь не «пороки наоборот», а неуместность меры: человек действует с выдержкой и неторопливо там, где надо резко и быстро — «при ловле блох выдержка и спокойствие никакого толка не несут». «Умеренность не всегда уместна — там, где она неуместна, карта даёт негативное значение». По работе в негативе — переход в ситуацию, которая вам не нравится (но это всё равно развитие), либо переход слишком медленный. В отношениях негативный оттенок даёт разочаровывающий для клиенток ответ про «и муж и не муж»: партнёр пребывает в двух состояниях одновременно — «и в мире мужей, и в мире любовников», но «если его это устраивает, в этом и есть суть ваших отношений».</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> Акценты и фишки школы</summary><div class="rd-body"><ul class="st-list"><li>- Астрология его системы: VIII дом с переходом в IX — «переход от Скорпиона к Стрельцу, от воды к огню»; выход из интереса к материальной жизни к духовной. Работает пара противоположных домов Скорпион–Телец (одна монета с двух сторон): приятное/полезное и мера во всём.</li><li>- Тетраморф и кардинальные добродетели: античный ряд «умеренность, мудрость, мужество, справедливость» разложен на фиксированный крест — Телец (справедливость), Лев (мужество), Скорпион (умеренность), Водолей/ангел (мудрость); четыре евангелиста, четыре стихии. Крылья как у стрекозы — полужизнь в воде (материя), метаморфоза, жизнь в воздухе (дух): существо на границе двух миров.</li><li>- Мифология: имя ангела он не называет — за образом стоит богиня Ирида: радуга как предвестница радостных новостей; лестница богов; «женский вариант Гермеса»: Гермес несёт информацию, Ирида — эмоции и радость. Ирисы растут на границе воды и земли — отсюда жёлтые ирисы на карте. Зевс послал её набрать воды из Стикса — нога в одном мире, нога в другом; вода другого мира для мира живых. Персидский след: Ахура-Мазда переливает воду из чаши в чашу, прыгая зубец на зубец крепостной стены, не пролив ни капли — предельная ювелирность действия. Радуга Ноя — окончание бедствий, символ радости в христианстве.</li><li>- Древнегреческий пласт: разбавление вина водой («Temporis… она доливает, а не выливает») — пьянеть правильно, постепенно; Аристотель — середина между холодностью и распущенностью; Платон — контроль поведения по понятиям добра и зла; Элевсинские таинства и спорынья — вещество как ключ перехода между мирами при правильной дозировке.</li><li>- Срединный путь Будды: крайности дворца и семилетней аскезы плохи обе; Уэйт: символ «меряет, сочетает и гармонизирует духовную и материальную природу человека».</li><li>- Кино и культура: «Ной» Аронофски (неумеренное вино после потопа), «Блуберри» Якунина (борьба со своим внутренним дьяволом), «Фонтан» Аронофски (три жизни, дерево жизни, звезда Шибальба), «Облачный атлас» (души переходят из тела в тело, неторопливая трансформация личности), Алиса в Стране чудес (кусок гриба: больше-меньше — суть та же, содержание при другой форме меняется), «Золотая антилопа» («глупец, золота не может быть слишком много» — падишах чуть не погиб, «неправильный Телец»), Би-2 «Воздушная тревога» («ровные дыши, капитан моей распущенной души»), Мария Поппинс как «правильный светлый скорпион», дозирующая запреты. Славянского ряда в лекции нет; Банцхафа не цитирует. Инстаграм-тарологов высмеивает: «две чашки — значит муж будет сильно пьющим».</li><li>- Поговорка всей лекции (польская): co za dużo, to niezdrowo — «чего слишком много, то уже вредно».</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Ключевые слова</summary><div class="rd-body"><ul class="st-list"><li>Мера, правильная дозировка («сколько вешать в граммах»), ощущение времени, правильная скорость/темп, срединный путь, плавный переход между мирами, две чаши — два человека, выверенность, терпение без промедления, синтез духовного и материального.</li><li>---</li></ul></div></details>
+</div>
 <nav class="card-pagination" aria-label="Предыдущая и следующая карта">
 <a rel="prev" href="smert.html"><span>← Предыдущая карта</span>Смерть</a>
 <a rel="next" href="dyavol.html"><span>Следующая карта →</span>Дьявол</a>
 </nav>
+</article>
 </main>
 <footer class="site-footer">
   <p>Таро · Справочник значений карт</p>

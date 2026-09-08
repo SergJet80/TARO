@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Двойка кубков — значение и толкование | Таро Справочник</title>
+<meta name="description" content="Двойка кубков — значение карты Таро младшего аркана: масть кубки, стихия вода. Толкование в прямом и перевёрнутом положении, в любви и работе.">
+<link rel="canonical" href="https://taro.jetserg.top/cards/cups-two.html">
+<meta property="og:title" content="Двойка кубков — значение и толкование | Таро Справочник">
+<meta property="og:description" content="Двойка кубков — значение карты Таро младшего аркана: масть кубки, стихия вода. Толкование в прямом и перевёрнутом положении, в любви и работе.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taro.jetserg.top/cards/cups-two.html">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/cups-two.webp">
+<link rel="stylesheet" href="/css/style.css?v=3.4">
+<link rel="stylesheet" href="/css/astrology.css?v=3.4">
+<style>
+.main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
+.card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
+.card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
+.card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
+.card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── Школа Современного Таро ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
+.card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
+.card-pagination a:last-child { text-align: right; }
+.card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
+@media (max-width: 480px) {
+  .main-nav { padding: 12px 12px 0; }
+  .main-nav a { padding: 8px 12px; font-size: .9rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
+  .card-pagination { gap: 10px; }
+  .card-pagination a { padding: 16px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Двойка кубков — значение и толкование | Таро Справочник",
+  "description": "Двойка кубков — значение карты Таро младшего аркана: масть кубки, стихия вода. Толкование в прямом и перевёрнутом положении, в любви и работе.",
+  "url": "https://taro.jetserg.top/cards/cups-two.html",
+  "inLanguage": "ru"
+}
+</script>
+<!-- Microsoft Clarity -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yejlmmd6nr");
+</script>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+<nav class="main-nav" aria-label="Разделы">
+  <div class="main-nav-inner">
+    <a href="/">Главная</a>
+    <a href="/cards/" class="mn-active">Карты</a>
+    <a href="/astrology/">Астрология</a>
+    <a href="/runes/">Руны</a>
+    <a href="/spreads.html">Расклады</a>
+  </div>
+</nav>
+<main class="card-page">
+<nav class="card-crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/cards/">Карты</a> / <span aria-current="page">Двойка кубков</span></nav>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="/img/cards/cups-two.webp" alt="Двойка кубков — карта Таро Уэйта" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Младший аркан · Кубки</p>
+<h1 class="m-title"><span class="card-number">II</span>Двойка кубков</h1>
+<p class="m-en">Two of Cups</p>
+<p class="m-meta">Масть: <b>Кубки</b> &nbsp;·&nbsp; Стихия: <b>Вода</b> &nbsp;·&nbsp; Классика: <b>Венера в Раке</b></p>
+</div>
+</header>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Положения карты">
+<label class="pos-tab" for="pos-upright">Прямое положение</label>
+<label class="pos-tab" for="pos-reversed">Перевёрнутое положение</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">Школа Современного Таро</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">взаимность</span><span class="kw">притяжение</span><span class="kw">партнёрский союз</span><span class="kw">гармония</span><span class="kw">равновесие</span><span class="kw">помолвка</span><span class="kw">доверие</span></div>
+<p class="short-value">Два сердца договариваются: взаимная симпатия, союз равных, гармония в паре или рабочем тандеме.</p>
+<aside class="gd-block" aria-label="Значение карты по ордену Золотая Заря"><div class="gd-head"><span class="gd-symbol" aria-hidden="true">☉</span> По ордену «Золотая Заря»</div><p class="gd-title">«The Lord of Love» — Владыка Любви</p><p class="gd-why">Венера соединяет и притягивает, а Рак стремится к эмоциональной близости и защищённой связи. Двойка создаёт пару — поэтому смысл почти буквально становится Любовью.</p></aside>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Юноша и девушка обмениваются чашами; над ними кадуцей Гермеса и крылатый лев. Каждая деталь рисунка Уэйта говорит об одном: встреча двух равных исцеляет и преображает, «я» и «ты» складываются в устойчивое «мы».</p>
+<p>В традиции карта означает взаимную симпатию и договор сердец: притяжение, помолвку, мир после размолвки. Её язык шире романтики — любое партнёрство, где обмен равноценен: тандем, соавторство, союз единомышленников. На вопрос «возможен ли союз?» Двойка кубков отвечает «да», если оба готовы давать столько же, сколько берут.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Хорошее время для всего, что делается вдвоём: совместный ужин, уборка на двоих, разговор, который давно откладывался. Примирение проходит легко, бытовые вопросы решаются одной фразой. Если в семье была натянутость, сегодня достаточно маленького жеста навстречу.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Время тандемов: соосновательство, сильная пара «ведущий — ведомый», сделка, выгодная обеим сторонам. Идеальный момент предложить партнёрство или принять его — доверие высоко. Проекты с чётким разделением ролей дают неожиданно высокий результат; одиночная работа менее продуктивна.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Взаимность, помолвка, свадьба, второй медовый месяц. Одиноких ждёт встреча с ощутимым, почти физическим притяжением, где оба читают мысли друг друга. Отношения выходят на уровень осознанного выбора: мы вместе, и это решение, а не привычка.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Организм восстанавливается, когда рядом поддержка: лечение проходит легче в паре или группе. Гармоничная интимная жизнь напрямую отражается на тонусе и сне. Благоприятны парные практики — йога, массаж, танцы: психика успокаивается там, где принимают целиком.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Алхимический брак: соединение противоположностей в более крупное целое. Кадуцей на карте — знак Гермеса, покровителя целительства, поэтому карту используют в ритуалах примирения и скрепления союзов. Урок: магия отношений начинается там, где оба смотрят друг на друга, а не на выгоду.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">разлад</span><span class="kw">неравенство в паре</span><span class="kw">отдаление</span><span class="kw">ссора</span><span class="kw">недоверие</span><span class="kw">разрыв</span><span class="kw">борьба за власть</span></div>
+<p class="short-value">Обмен нарушился: дисбаланс «даю больше, чем получаю», натянутые отношения, назревающий разрыв.</p>
+<aside class="gd-block" aria-label="Значение карты по ордену Золотая Заря"><div class="gd-head"><span class="gd-symbol" aria-hidden="true">☉</span> По ордену «Золотая Заря»</div><p class="gd-title">«The Lord of Love» — Владыка Любви</p><p class="gd-why">Венера соединяет и притягивает, а Рак стремится к эмоциональной близости и защищённой связи. Двойка создаёт пару — поэтому смысл почти буквально становится Любовью.</p></aside>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Чаши не сходятся: каждый держит свою выше, и обмен прекращается. Крылатый лев теряет силу там, где исчезло равенство, — вместо союза остаётся сделка с односторонней выгодой.</p>
+<p>Карта указывает на дисбаланс, натянутость, злоупотребление доверием. Иногда это лишь усталость и накопившиеся мелкие обиды, иногда — симптом глубокого несовпадения, когда «мы» существует по инерции. В любом случае требуется честный пересмотр условий союза.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Бытовой разлад: споры о дележе обязанностей, ощущение, что вас не слышат, разговоры через губу. Не устраивайте ревизию претензий на пике раздражения — выберите спокойный час. Часто партнёр просто не догадывается о вашем чувстве неравенства.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Партнёрство трещит: вклады стали неравноценны, обещания выполняются спустя рукава, решения принимают за вашей спиной. Проверьте документальную сторону договорённостей, не полагайтесь на устные заверения. Если тандем дорог — заново распределите ответственность.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Охлаждение: ссоры идут по кругу, растут ревность и борьба за власть, близость сменилась формальным «нормально». Карта не всегда означает расставание, но всегда требует честного разговора — если он не случится, дистанция продолжит расти.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Конфликт бьёт по нервной системе и сердцу: бессонница на почве обид, скачки давления, ком в груди. Хроническое напряжение в паре снижает иммунитет быстрее инфекции. Парные практики бесполезны, пока не разряжен конфликт; начните с индивидуального снятия стресса.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Разрушенный алхимический союз — повод проверить значимые связи на прочность. В работе с энергиями карта помогает отсекать неживые привязанности и завершать изжившие себя контракты. Урок суров: любовь живёт там, где равенство; там, где правит сила, остаётся сделка.</p></div>
+</div>
+<div class="pos-pane roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> Как школа читает этот ранг</h3>
+<div class="info-section"><h3>Основная идея</h3><p>Встреча двух эмоциональных потоков. Чувство становится конкретным, потому что появляется другой человек, и эмоции начинают смешиваться.</p></div>
+<div class="info-section"><h3>Как проявляется</h3><p>В работе — взаимная эмоциональная поддержка. В отношениях — взаимность, доверие и влюблённость. В саморазвитии — способность разделять радость с другим человеком.</p></div>
+<div class="info-section"><h3>Теневая сторона</h3><p>Эмоции не совпадают: один любит, другой нет; один радуется, другой переживает.</p></div>
+<div class="info-section"><h3>Ключевые слова</h3><p>доверие · взаимность · коктейль эмоций · радость · фон</p></div>
+<div class="roman-astro"><span class="ra-label">✷ Астрология школы</span><b>Масть воды · двойственность стихии: исходный поток против изменения</b><span class="ra-sep">·</span>меланхолики — пластичность, глубокие эмоции</div>
+<h3 class="roman-subtitle"><span>📜</span> Развёрнуто — из лекции по рангу</h3>
+<details class="roman-details" open><summary><span class="rd-icon" aria-hidden="true">✧</span> Суть карты</summary><div class="rd-body"><p>разделение и смешение эмоций; ровная эмоция туза делится при появлении конкретного человека. Мужчина и женщина чокаются — «ты соединяешь эмоции… пьёшь из одного кувшина», общая эмоция, разделённая пополам.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Прямое положение</summary><div class="rd-body"><ul class="st-list"><li>Историческая раскопка сюжета: чоканье родом из Античности времён культуры ядов — вино сливали из кубка в кубок или менялись кубками, показывая, что не отравишь; отсюда питьё «на брудершафт». Ключевая эмоция — доверие.</li><li>Работа/социум: взаимная эмоциональная подпитка — начальник радуется вашим результатам, «а вы выпрямляете спину и горите ещё больше»; выпадает и на рабочих союзников.</li><li>Отношения: по тузу любите «ровно всех» и на расстоянии (объект даже не знает); по двойке человек знает о ваших чувствах и отвечает — «коктейль из ваших эмоций и его», влюблённость с взаимностью.</li><li>Саморазвитие: радость приятнее вдвоём — «мороженое одному невкусно», разделённая радость удваивается.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Негативное значение</summary><div class="rd-body"><p>• эмоции уходят в минус — неразделённая любовь («у вас одна эмоция, у него другая»), отказ, несоответствие фонов: скорбишь по Бельмондо, а рядом радуются победе футбольной команды; «ноющий» коллега портит напиток «кислым морсом».</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> Акценты и фишки школы</summary><div class="rd-body"><ul class="st-list"><li>Младшие арканы разбираются четвёрками; каждый следующий аркан «разворачивает» ощущение стихии.</li><li>Авторские исторические раскопки образов: красная шапка моряка; чоканье и брудершафт от ядов Античности; тёмные подводные камни мечей нарисованы намеренно — «если поискать хорошенько хотя бы 100 лет назад».</li><li>Дидактические модели: карта дня; мороженое как модель прямой/перевёрнутой карты; велосипед пентаклей; лемниската-уроборос; «вторая монета» любой ситуации.</li><li>Каббалу/сфирот не использует вовсе («нужно быть немножко иудеем»), нумерологию отбрасывает; астрология упомянута лишь как подспорье чтения клиента — собственной астрологической привязки двоек в лекции нет.</li><li>Практика раскладов: на себя делать можно, «если у вас это хорошо получается»; откаты — не мистика, а погружение в эмоции клиента (работа со следователями по «висякам» в Бресте); ритуалы сброса индивидуальны — ему хватало смыть руки/лицо. Карты не устают и не врут — устаёт человек.</li><li>Современный ряд и юмор: качка после плацкарта, курсы валют и недвижимость, Maybach против Жигулей, «такие дела пироги», «лось по кукурузе».</li><li>Позиционирование: теория — в свободном доступе, практика — в малых группах (~7 человек, 40 двухчасовых лекций, курс ~300 евро с ростом до ~400): «практика — мой личный опыт, который я имею право монетизировать».</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Ключевые слова</summary><div class="rd-body"><p>доверие; брудершафт; коктейль эмоций; взаимность; несоответствие фонов.</p></div></details>
+</div>
+<nav class="card-pagination" aria-label="Предыдущая и следующая карта">
+<a rel="prev" href="cups-ace.html"><span>← Предыдущая карта</span>Туз кубков</a>
+<a rel="next" href="cups-three.html"><span>Следующая карта →</span>Тройка кубков</a>
+</nav>
+</article>
+</main>
+<footer class="site-footer">
+  <p>Таро · Справочник значений карт</p>
+  <p class="footer-note">Материалы носят справочный и развлекательный характер</p>
+</footer>
+</body>
+</html>

@@ -10,55 +10,127 @@
 <meta property="og:description" content="Сила — выдержка, терпение и внутренняя сила. Значение карты Таро в прямом и перевёрнутом положении, в любви и карьере. Совет карты и вопросы для размышления.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://taro.jetserg.top/cards/sila.html">
-<link rel="stylesheet" href="/css/style.css?v=3.3">
-<link rel="stylesheet" href="/css/astrology.css?v=3.3">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/major-08-strength.webp">
+<link rel="stylesheet" href="/css/style.css?v=3.4">
+<link rel="stylesheet" href="/css/astrology.css?v=3.4">
 <style>
 .main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
 .card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
 .card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
 .card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
 .card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
-.card-hero { text-align: center; padding: 14px 0 34px; }
-.card-symbol { display: block; font-family: Georgia, serif; font-size: 5rem; line-height: 1.2; color: var(--gold-bright); text-shadow: 0 0 30px var(--gold-dim); }
-.card-eyebrow { color: var(--text-dim); letter-spacing: .15em; text-transform: uppercase; font-size: .76rem; margin: 18px 0 8px; }
-.card-hero h1 { font-family: Georgia, serif; font-weight: 500; font-size: clamp(2rem, 6vw, 3.3rem); line-height: 1.2; color: var(--gold-bright); overflow-wrap: anywhere; }
-.card-number { display: block; font-size: 2.2rem; color: var(--gold); margin-bottom: 10px; }
-.card-hero > p:last-child { margin-top: 16px; color: var(--text-dim); }
-.card-section { margin: 0 0 22px; padding: 28px 32px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: rgba(23, 18, 43, .88); }
-.card-section h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500; font-size: 1.6rem; line-height: 1.3; margin-bottom: 18px; }
-.card-section h3 { color: var(--gold-bright); font-size: 1rem; margin: 22px 0 10px; }
-.card-section p + p { margin-top: 16px; }
-.card-intro { background: linear-gradient(135deg, rgba(124, 92, 191, .2), var(--bg-panel)); font-size: 1.1rem; }
-.card-keywords { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 18px 0; }
-.card-keywords li { border: 1px solid var(--gold-dim); border-radius: 999px; padding: 4px 12px; font-size: .85rem; color: var(--gold-bright); }
-.card-questions { padding-left: 24px; }
-.card-questions li { padding: 4px 0 10px 6px; }
-.card-questions li::marker { color: var(--gold); }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── Школа Современного Таро ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
 .card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
-.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius); text-decoration: none; background: var(--bg-panel); }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
 .card-pagination a:last-child { text-align: right; }
 .card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
-.card-pagination a:hover, .card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
-.card-catalog { max-width: 1120px; }
-.card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; list-style: none; }
-.card-grid li { min-width: 0; }
-.card-tile { display: flex; flex-direction: column; align-items: flex-start; height: 100%; padding: 24px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel); text-decoration: none; }
-.card-tile-symbol { font-size: 2rem; line-height: 1.3; }
-.card-tile-number { color: var(--text-dim); font-size: .85rem; margin: 18px 0 4px; }
-.card-tile strong { font-family: Georgia, serif; font-size: 1.4rem; font-weight: 500; }
-.card-tile-desc { color: var(--text-dim); font-size: .9rem; margin-top: 6px; }
-@media (max-width: 700px) { .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
 @media (max-width: 480px) {
   .main-nav { padding: 12px 12px 0; }
   .main-nav a { padding: 8px 12px; font-size: .9rem; }
-  .card-page { padding: 22px 16px 36px; }
-  .card-section { padding: 22px 20px; }
-  .card-tile { padding: 18px 14px; }
-  .card-tile strong { font-size: 1.16rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
   .card-pagination { gap: 10px; }
   .card-pagination a { padding: 16px 12px; }
 }
-@media (max-width: 350px) { .card-grid { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
 </style>
 <script type="application/ld+json">
@@ -88,67 +160,74 @@
     <a href="/">Главная</a>
     <a href="/cards/" class="mn-active">Карты</a>
     <a href="/astrology/">Астрология</a>
-    <a href="/lenormand/">Ленорман</a>
     <a href="/runes/">Руны</a>
     <a href="/spreads.html">Расклады</a>
   </div>
 </nav>
 <main class="card-page">
 <nav class="card-crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/cards/">Карты</a> / <span aria-current="page">Сила</span></nav>
-<article>
-<header class="card-hero">
-<span class="card-symbol" aria-hidden="true">♌</span>
-<p class="card-eyebrow">Старшие арканы</p>
-<h1><span class="card-number">VIII</span>Сила</h1>
-<p>Мягкая стойкость</p>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="/img/cards/major-08-strength.webp" alt="Сила — карта Таро Уэйта" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Старший аркан · VIII</p>
+<h1 class="m-title"><span class="card-number">VIII</span>Сила</h1>
+<p class="m-en">Strength</p>
+<p class="m-meta">Стихия: <b>Огонь</b> &nbsp;·&nbsp; Астрология: <b>Лев</b></p>
+</div>
 </header>
-<section class="card-section card-intro" aria-labelledby="brief">
-<h2 id="brief">Краткое значение</h2>
-<p>Сила показывает выдержку, которая позволяет встретить сильные чувства без борьбы с собой. Её мягкость не отменяет границ: принять живой характер другого человека не значит терпеть всё подряд.</p>
-</section>
-<section class="card-section" aria-labelledby="upright">
-<h2 id="upright">Прямое положение</h2>
-<p>Настоящая сила мягка: зверя укрощает не хлыст, а спокойное дыхание и терпение; выдержка, самообладание и сострадание берут то, что не взял бы самый жёсткий нажим.</p>
-<ul class="card-keywords" aria-label="Ключевые слова"><li>внутренняя сила</li><li>мягкость</li><li>терпение</li><li>укрощение страстей</li><li>мужество</li><li>самообладание</li><li>сострадание</li></ul>
-<p>Женщина в венке из роз без усилия закрывает пасть льву; знак бесконечности над её головой говорит, что источник этой силы — не мышцы. Лев — наши страсти, инстинкты и страхи; укрощаются они не запретом, а приручением: зверь отдаёт силу тому, кто его не боится и не унижает.</p>
-<p>После победной Колесницы аркан учит следующему уровню мастерства — побеждать, не воюя. Это стойкость при долгом напряжении, умение выдерживать чужой гнев, не отвечая тем же, сохранять спокойствие там, где кулаки были бы проще. Карта обещает: мягкость в этом сюжете — не слабость, а высшая форма контроля.</p>
-</section>
-<section class="card-section" aria-labelledby="reversed">
-<h2 id="reversed">Перевёрнутое положение</h2>
-<p>Сбой в управлении зверем: вспышки гнева и необдуманные поступки, за которые потом стыдно, — либо задавленные эмоции, сомнение в себе и ресурс, истощённый до самого дна.</p>
-<ul class="card-keywords" aria-label="Ключевые слова"><li>сомнение в себе</li><li>срыв</li><li>подавление эмоций</li><li>истощение</li><li>неуверенность</li><li>сырые страсти</li></ul>
-<p>Перевёрнутая Сила — сбой в управлении зверем. Первый сценарий: лев вырвался — вспышки гнева, срывы, необдуманные поступки, за которые потом стыдно. Второй: лев на цепи — эмоции задавлены, желания запрещены, человек живёт на обезболивающих воли и называет это спокойствием.</p>
-<p>Часто карта говорит о подорванной уверенности: вечное сравнение себя с другими, синдром самозванца, страх показаться слабым, который маскируется то грубостью, то болезненной уступчивостью. Энергетически это истощение — ресурс, который слишком долго брали в кредит. Аркан советует не героизировать выживание: восстановление — тоже работа силы, порой самая трудная.</p>
-</section>
-<section class="card-section" aria-labelledby="love">
-<h2 id="love">В любви</h2>
-<h3>Прямое положение</h3>
-<p>В отношениях Сила — искусство принимать партнёра живым: с характером, привычками и настроениями, не пытаясь переписать его под себя. Карта хороша для пар в турбулентности: нежность и юмор гасят ссору эффективнее разбора, кто прав. Одиночкам она советует присмотреться к сдержанным взрослым людям рядом, а не к эффектным львам: страсть проверяется годами, а не первым свиданием. Тень — терпеть недопустимое: укрощать зверя не значит жить во рву.</p>
-<h3>Перевёрнутое положение</h3>
-<p>В отношениях карта показывает два повреждения: вспышки и унижения, после которых близкий ходит тише воды, — либо полное онемение чувств, когда оба живут как соседи. Ревность и собственничество — типичные маски страха «я недостаточно хорош». Возможна и усталость от терпения: годами сглаживали углы, и сегодня чаша переполнилась.</p>
-</section>
-<section class="card-section" aria-labelledby="career">
-<h2 id="career">В карьере</h2>
-<h3>Прямое положение</h3>
-<p>На работе аркан означает ситуацию, где результат приносит не давление, а влияние: сложный клиент, капризный руководитель, конфликтный коллега — со всеми справляется спокойный, последовательный тон. Благоприятно время кропотливых задач, требующих выдержки: длинные переговоры, обучение новичков, тихое исправление чужих ошибок без публичных разборок. Но не путайте терпение с бесконечной уступчивостью: границы обозначайте тихо и твёрдо.</p>
-<h3>Перевёрнутое положение</h3>
-<p>На работе перевёрнутая Сила — ресурс на нуле: задачи, которые вчера решались легко, сегодня вызывают раздражение, а ошибки посыпались из-за потери концентрации. Возможен кризис уверенности после публичной неудачи: критика бьёт сильнее обычного, и руки опускаются. Опасна и обратная стратегия — давить, кричать, продавливать: краткосрочно работает, долговременно сжигает команду и вас.</p>
-</section>
-<section class="card-section" aria-labelledby="advice">
-<h2 id="advice">Совет карты</h2>
-<p>Прежде чем отвечать на давление, дайте себе время заметить гнев, усталость или страх. Выберите спокойный, твёрдый ответ и берегите силы: терпение не требует отказываться от уважения к себе.</p>
-</section>
-<section class="card-section" aria-labelledby="questions">
-<h2 id="questions">Вопросы для размышления</h2>
-<ol class="card-questions"><li>Какое чувство я пытаюсь подавить вместо того, чтобы его понять?</li>
-<li>Как прозвучит мой твёрдый ответ без угроз и нажима?</li>
-<li>Где моё терпение перестало быть бережным по отношению ко мне?</li></ol>
-</section>
-</article>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Положения карты">
+<label class="pos-tab" for="pos-upright">Прямое положение</label>
+<label class="pos-tab" for="pos-reversed">Перевёрнутое положение</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">Школа Современного Таро</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">внутренняя сила</span><span class="kw">мягкость</span><span class="kw">терпение</span><span class="kw">укрощение страстей</span><span class="kw">мужество</span><span class="kw">самообладание</span><span class="kw">сострадание</span></div>
+<p class="short-value">Настоящая сила мягка: зверя укрощает не хлыст, а спокойное дыхание и терпение; выдержка, самообладание и сострадание берут то, что не взял бы самый жёсткий нажим.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Женщина в венке из роз без усилия закрывает пасть льву; знак бесконечности над её головой говорит, что источник этой силы — не мышцы. Лев — наши страсти, инстинкты и страхи; укрощаются они не запретом, а приручением: зверь отдаёт силу тому, кто его не боится и не унижает.</p>
+<p>После победной Колесницы аркан учит следующему уровню мастерства — побеждать, не воюя. Это стойкость при долгом напряжении, умение выдерживать чужой гнев, не отвечая тем же, сохранять спокойствие там, где кулаки были бы проще. Карта обещает: мягкость в этом сюжете — не слабость, а высшая форма контроля.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>День, когда раздражают мелочи: пробки, очереди, чужая медлительность — карта предлагает тренировку самообладания вместо ответной вспышки. Подходят дела, требующие терпения: долгие разговоры с детьми и пожилыми, монотонная работа, уход за животными и растениями. Отличный день, чтобы извиниться первым или погасить зарождающуюся ссору улыбкой. Вечером — физическая разрядка: накопленное за день найдёт выход само, если не помочь ему.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>На работе аркан означает ситуацию, где результат приносит не давление, а влияние: сложный клиент, капризный руководитель, конфликтный коллега — со всеми справляется спокойный, последовательный тон. Благоприятно время кропотливых задач, требующих выдержки: длинные переговоры, обучение новичков, тихое исправление чужих ошибок без публичных разборок. Но не путайте терпение с бесконечной уступчивостью: границы обозначайте тихо и твёрдо.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>В отношениях Сила — искусство принимать партнёра живым: с характером, привычками и настроениями, не пытаясь переписать его под себя. Карта хороша для пар в турбулентности: нежность и юмор гасят ссору эффективнее разбора, кто прав. Одиночкам она советует присмотреться к сдержанным взрослым людям рядом, а не к эффектным львам: страсть проверяется годами, а не первым свиданием. Тень — терпеть недопустимое: укрощать зверя не значит жить во рву.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Карта связана с сердцем и позвоночником — тем, что качает и держит: полезны упражнения на спину и мягкое кардио в радостном режиме. Эмоциональная составляющая важнее нагрузок: хроническое подавление злости бьёт по сердцу и давлению заметнее жирной пищи. Хороший период для работы с зависимостями: ежедневная мягкая борьба с привычкой побеждает рывки и срывы.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Путь Тет, «змеи», соединяет Гебуру и Хесед: сила, текущая между строгостью и милостью, как змея — между камнями. Лев и знак бесконечности делают аркан картой работы с огненной энергией: дыхательные практики, работа с инстинктами, всё, где мощь требует приручения, а не запирания.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">сомнение в себе</span><span class="kw">срыв</span><span class="kw">подавление эмоций</span><span class="kw">истощение</span><span class="kw">неуверенность</span><span class="kw">сырые страсти</span></div>
+<p class="short-value">Сбой в управлении зверем: вспышки гнева и необдуманные поступки, за которые потом стыдно, — либо задавленные эмоции, сомнение в себе и ресурс, истощённый до самого дна.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Перевёрнутая Сила — сбой в управлении зверем. Первый сценарий: лев вырвался — вспышки гнева, срывы, необдуманные поступки, за которые потом стыдно. Второй: лев на цепи — эмоции задавлены, желания запрещены, человек живёт на обезболивающих воли и называет это спокойствием.</p>
+<p>Часто карта говорит о подорванной уверенности: вечное сравнение себя с другими, синдром самозванца, страх показаться слабым, который маскируется то грубостью, то болезненной уступчивостью. Энергетически это истощение — ресурс, который слишком долго брали в кредит. Аркан советует не героизировать выживание: восстановление — тоже работа силы, порой самая трудная.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>В быту день низкой яркости: всё бесит, любое «нет» воспринимается как личное оскорбление, а сдерживаться уже нет сил — отсюда срывы на кассирах и близких. Либо наоборот: апатия, когда даже сериал смотреть лень, а желания молчат. Первое средство — снизить обороты до того, как сорвёт: сон, еда, вода, никаких важных разговоров на голодный нерв. Второе — маленькое честное удовольствие без оправданий: оно возвращает к жизни быстрее самобичевания.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>На работе перевёрнутая Сила — ресурс на нуле: задачи, которые вчера решались легко, сегодня вызывают раздражение, а ошибки посыпались из-за потери концентрации. Возможен кризис уверенности после публичной неудачи: критика бьёт сильнее обычного, и руки опускаются. Опасна и обратная стратегия — давить, кричать, продавливать: краткосрочно работает, долговременно сжигает команду и вас.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>В отношениях карта показывает два повреждения: вспышки и унижения, после которых близкий ходит тише воды, — либо полное онемение чувств, когда оба живут как соседи. Ревность и собственничество — типичные маски страха «я недостаточно хорош». Возможна и усталость от терпения: годами сглаживали углы, и сегодня чаша переполнилась.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Телесно подавленная или бушующая стихия бьёт по сердцу, сосудам и гормональной системе: приступы паники, тремор, ком в горле, перепады аппетита. Хроническое самоподавление — известный фактор гипертонии и проблем с пищеварением: тело продолжает кричать, пока его не услышат. Снижается иммунитет — обостряется всё, что дремало. Рецепт аркана: ежедневная мягкая разрядка злости — спорт, бумага, крик в машине, — полноценный сон и отказ от роли вечного героя: выздоровление начинается с разрешения быть уставшим.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Духовно перевёрнутый Тет — змея, кусающая свой хвост: энергия, замкнутая в страх или выпущенная без сознания. Карта указывает на испуг перед собственной мощью: человек чувствует в себе зверя и потому держит его на голоде, а голодный зверь рано или поздно рвёт цепь. В практике она предупреждает о насильственных техниках пробуждения — форсированная работа с огнём даёт ожоги.</p></div>
+</div>
+<div class="pos-pane roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> Кратко и просто</h3>
+<div class="info-section"><h3>Основная идея</h3><p>Сила — это не подавление и не насилие. Это умение договориться со своей собственной силой.
+Лев не обязан постоянно рычать. Настоящая сила проявляется тогда, когда человек способен управлять своими желаниями спокойно.</p></div>
+<div class="info-section"><h3>Как проявляется</h3><p>Харизма, смелость, сексуальность, естественность, творческий огонь, желание делать дело потому, что оно действительно нравится.</p></div>
+<div class="info-section"><h3>Работа</h3><p>Яркий руководитель, который способен увлечь других собственной энергией.</p></div>
+<div class="info-section"><h3>В отношениях</h3><p>Искреннее проявление желаний, сексуальность, смелость быть собой.</p></div>
+<div class="info-section"><h3>Теневая сторона</h3><p>Страсть выходит из-под контроля. Жадность, похоть, импульсивность, желание внимания, звёздная болезнь.</p></div>
+<div class="info-section"><h3>Особенность школы</h3><p>Сила связана со Львом и V домом. Главная задача — не подавлять своего льва и не позволять ему съесть тебя.</p></div>
+<div class="roman-astro"><span class="ra-label">✷ Астрология школы</span><b>V дом · Лев</b><span class="ra-sep">·</span>Солнце<div class="ra-classic">У классики Уэйта: Лев</div></div>
+<h3 class="roman-subtitle"><span>📜</span> Развёрнуто — выжимки лекций</h3>
+<details class="roman-details" open><summary><span class="rd-icon" aria-hidden="true">✧</span> Суть карты</summary><div class="rd-body"><p>Сила — это не мускулы, а действие, приложенное к чему-то: «силы, неприложенной никуда, не бывает»; любой поступок — это воздействие на другого человека. Главное действующее лицо карты — не лев и не девушка, а сама сила во взаимодействии сознания-солнца и естественных человеческих страстей. Девушка «закрывает пасть льву», а не рвёт её, как Геракл или Марсельское Таро, — действует силой успокоения, поводком служит гирлянда цветов. Из Уэйта он выводит ключевой тезис школы: лев — наши страсти, а Сила — «высшая природа освобождения от них»; иногда высшее проявление силы — бездействие: «очень часто гораздо сложнее сдержаться и не делать».</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Прямое положение</summary><div class="rd-body"><ul class="st-list"><li>Отдельного списка значений в лекции нет — карта даётся через четыре темы-стихии (социальное/личное, работа/дом) и «ощущение пятого дома».</li><li>- Работа, социум: яркая харизматичная личность, которая делает «так, как ему нравится». Контраст с Колесницей: риэлтор по Колеснице трудится по налаженной стандартной схеме, а по Силе — горит желанием, вкладывает душу («давайте эту стеночку перекрасим — квартира лучше продастся»). Принцип силы = принцип управления: солнечный «львиный начальник» увлекает напором («давайте мы все вместе сможем»), но «лев рычит не для того, чтобы кто-то слушал, а потому что ему хочется порычать».</li><li>- Поле пятого дома: деятельность «в центре внимания других» — публичные выступления, самодемонстрация, актёрство (личный опыт студтеатра), преподавание, спорт (sport = веселье, «for sport»), хобби, увлечение противоположным полом («стрельнуть глазами, чтобы мужчины укладывались в штабеля»), дети, игры, азартные игры, игра на бирже.</li><li>- Финансы, имущество: золото — традиционное значение солнца и льва, «сдерживаемый потенциал»: деньги решают всё. Недвижимость — скрытая стоимость, которую раскрывают в решающий момент (неблещущая квартирка после показа «заиграет», центр Москвы рядом с метро лучше придержать). Продавать в правильный момент: «если очень хотите продать квартиру — продадите дёшево».</li><li>- Эмоции, личная жизнь: смелость, мужество, естественность, сексуальность; искреннее проявление желаний; лев — прайдовое животное, учитывает мнение своих.</li><li>- Саморазвитие: раскрытие таланта, творчество, самовыражение — подбрасывать дровишки в огонь желания, останавливаться нельзя. Возрастной акцент школы: к 28 годам — работа и семья, на переходе 28→30 человек ищет себя и переосмысливает умения во взаимодействии с другими.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Негативное значение</summary><div class="rd-body"><ul class="st-list"><li>Негативы задаются прилагательно: «оно же, если в негативе, то похоть». Конкретика минусов тех же качеств:</li><li>- Страсти теряют управление: жадность («леву всё время хочется больше и больше»), импульсивное «захотел — сделал».</li><li>- Звёздная болезнь — «причина проблем льва»: работа на публику ради известности самой по себе (знаменитость — лишь побочный эффект дела по душе); обратная сторона видности — желание спрятаться: «не всегда хочется быть на виду».</li><li>- Чрезмерное желание давит на ситуацию: квартиру продали дёшево, потому что «хотелось быстро».</li><li>- Перегибание палки (пример школы — Кроули) и противоположная крайность — средневековое умерщвление плоти истязаниями; обе крайности отходят от школьного принципа «договориться со своим львом полюбовно».</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> Акценты и фишки школы</summary><div class="rd-body"><ul class="st-list"><li>- VIII ≠ XI. Средние века — «века силы», справедливость = право сильного; Уэйт рисовал колоду «на переломе эпох», когда проявление силы «скорее слабость». Школа поддерживает Уэйта и цепочку развития Колесница → Сила → Отшельник → Справедливость на XI (для неё нужен разбор механизма мира — Колеса Фортуны).</li><li>- Астрология его системы (западная, «не авторская, просто логичная»): VIII аркан = V дом + Лев; солнечная свобода против лунных циклов Колесницы («дом—работа—борщ—тапочки»). Оговорка-анекдот: «сварщик я не настоящий», я не астролог.</li><li>- Лемниската над головой — бесконечный цикл развития (та же у Мага/I дома; зашифрованная — у ангела с чашами при переходе Скорпион→Стрелец); вход во вторую треть зодиака — стадия становления.</li><li>- Мифология: Инанна/Иштар — богиня на льве (плодородие + война, покровительница храмовых блудниц, «куртизанка богов»), параллель с Венерой/Афродитой; «женская сила — в слабости, красоте, умении соблазнить». Лев — главный зверь бестиариев, символ власти: троны Соломона, французских королей, епископов; тетраморф — евангелист Марк; тёмная линия — символ Антихриста, хтонический рёв.</li><li>- Кроули — главная антитеза: аркан Lust «Похоть», семиглавый зверь, вавилонская блудница; телема выросла из Рабле («Делай что изволишь»), истинная воля = призвание. Биография объясняет колоду: мать называла его «дитём антихриста», отсюда вывод школы — воспитывать детей мягче. Собственная формула: идеальная карта Силы — середина между Уэйтом и Кроули (Уэйт — «розовые сопли», Кроули — «слишком вавилонская блудница»).</li><li>- Sol Invictus / Митра / Гелиос: непобедимое солнце Аврелиана (274 г.), конкурировавшее с христианством; атрибут — золотая колесница (связка с прошлым арканом); Дюрер рисовал справедливость едущей на льве; Христос = переродившийся Гелиос (Зевс стал Богом-Отцом); церковь переосмыслила солнечные праздники (аналог Масленицы на Руси); Гелиос поднял со дна остров Родос (Колосс) — тема выработки своей цивилизации.</li><li>- Алхимия и детская литература: зелёный лев Марсельского Таро — универсальный растворитель, «наша ртуть», кусающий солнце (Rosarium philosophorum; благодарность: сайт Арзамас, Сергей Зотов); зелёный крокодил Чуковского читается как страсти, поглощающие сознание-солнце.</li><li>- «Второй огонь»: первый огонь Овна/Мага — случайная молния для одного; второй, львиный — костёр, занесённый в пещеру ради семьи и племени, требующий ночного дозора ⇒ профессия, специализация, сознательное понимание своего дела.</li><li>- Славянский ряд: «Иван Царевич и серый волк» — архетип помощника-зверя: угроза оружием → «я ещё пригожусь»; умение договориться с диким зверем = настоящий герой (Геракл убивает — «сила по Кроули»). Мёртвая вода, затем живая — намёк на противоположный дом Водолея.</li><li>- Современные образы: комиксы как продолжение лубка и сторителлинга; Халк, Джекил и Хайд; Супермен и Бэтмен — карта Колесницы (наследная сила, двойная личность), а вот Тони Старк — «истинный лев»: выходит на публику — «Железный человек — это я», гордость тем, что создал себя сам: «моя суперсила — ум, его у меня не отнять»; Киркоров — «более лев», Расторгуев ближе к Колеснице.</li><li>- Практика: понимаем родителей, лишь сами став ими; силу применять спокойно — «успокаивать детей, а не наказывать ремнём»; Солнце/асцендент во Льве — не показатель знаменитости, известность лишь побочный эффект.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Ключевые слова</summary><div class="rd-body"><ul class="st-list"><li>Сила успокоения; второй огонь; сдерживаемый потенциал; действие в центре внимания; самодемонстрация; прайд; гирлянда цветов; скрытая стоимость; естественность; звёздная болезнь; «делать то, что в кайф».</li><li>---</li></ul></div></details>
+</div>
 <nav class="card-pagination" aria-label="Предыдущая и следующая карта">
 <a rel="prev" href="kolesnica.html"><span>← Предыдущая карта</span>Колесница</a>
 <a rel="next" href="otshelnik.html"><span>Следующая карта →</span>Отшельник</a>
 </nav>
+</article>
 </main>
 <footer class="site-footer">
   <p>Таро · Справочник значений карт</p>

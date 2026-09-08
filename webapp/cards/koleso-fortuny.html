@@ -10,55 +10,127 @@
 <meta property="og:description" content="Колесо фортуны — перемены и повторяющиеся циклы. Прямое и перевёрнутое значение карты Таро, толкование в любви и карьере, совет и вопросы для размышления.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://taro.jetserg.top/cards/koleso-fortuny.html">
-<link rel="stylesheet" href="/css/style.css?v=3.3">
-<link rel="stylesheet" href="/css/astrology.css?v=3.3">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/major-10-wheel-of-fortune.webp">
+<link rel="stylesheet" href="/css/style.css?v=3.4">
+<link rel="stylesheet" href="/css/astrology.css?v=3.4">
 <style>
 .main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
 .card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
 .card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
 .card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
 .card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
-.card-hero { text-align: center; padding: 14px 0 34px; }
-.card-symbol { display: block; font-family: Georgia, serif; font-size: 5rem; line-height: 1.2; color: var(--gold-bright); text-shadow: 0 0 30px var(--gold-dim); }
-.card-eyebrow { color: var(--text-dim); letter-spacing: .15em; text-transform: uppercase; font-size: .76rem; margin: 18px 0 8px; }
-.card-hero h1 { font-family: Georgia, serif; font-weight: 500; font-size: clamp(2rem, 6vw, 3.3rem); line-height: 1.2; color: var(--gold-bright); overflow-wrap: anywhere; }
-.card-number { display: block; font-size: 2.2rem; color: var(--gold); margin-bottom: 10px; }
-.card-hero > p:last-child { margin-top: 16px; color: var(--text-dim); }
-.card-section { margin: 0 0 22px; padding: 28px 32px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: rgba(23, 18, 43, .88); }
-.card-section h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500; font-size: 1.6rem; line-height: 1.3; margin-bottom: 18px; }
-.card-section h3 { color: var(--gold-bright); font-size: 1rem; margin: 22px 0 10px; }
-.card-section p + p { margin-top: 16px; }
-.card-intro { background: linear-gradient(135deg, rgba(124, 92, 191, .2), var(--bg-panel)); font-size: 1.1rem; }
-.card-keywords { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 18px 0; }
-.card-keywords li { border: 1px solid var(--gold-dim); border-radius: 999px; padding: 4px 12px; font-size: .85rem; color: var(--gold-bright); }
-.card-questions { padding-left: 24px; }
-.card-questions li { padding: 4px 0 10px 6px; }
-.card-questions li::marker { color: var(--gold); }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── Школа Современного Таро ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
 .card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
-.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius); text-decoration: none; background: var(--bg-panel); }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
 .card-pagination a:last-child { text-align: right; }
 .card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
-.card-pagination a:hover, .card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
-.card-catalog { max-width: 1120px; }
-.card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; list-style: none; }
-.card-grid li { min-width: 0; }
-.card-tile { display: flex; flex-direction: column; align-items: flex-start; height: 100%; padding: 24px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel); text-decoration: none; }
-.card-tile-symbol { font-size: 2rem; line-height: 1.3; }
-.card-tile-number { color: var(--text-dim); font-size: .85rem; margin: 18px 0 4px; }
-.card-tile strong { font-family: Georgia, serif; font-size: 1.4rem; font-weight: 500; }
-.card-tile-desc { color: var(--text-dim); font-size: .9rem; margin-top: 6px; }
-@media (max-width: 700px) { .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
 @media (max-width: 480px) {
   .main-nav { padding: 12px 12px 0; }
   .main-nav a { padding: 8px 12px; font-size: .9rem; }
-  .card-page { padding: 22px 16px 36px; }
-  .card-section { padding: 22px 20px; }
-  .card-tile { padding: 18px 14px; }
-  .card-tile strong { font-size: 1.16rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
   .card-pagination { gap: 10px; }
   .card-pagination a { padding: 16px 12px; }
 }
-@media (max-width: 350px) { .card-grid { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
 </style>
 <script type="application/ld+json">
@@ -88,67 +160,73 @@
     <a href="/">Главная</a>
     <a href="/cards/" class="mn-active">Карты</a>
     <a href="/astrology/">Астрология</a>
-    <a href="/lenormand/">Ленорман</a>
     <a href="/runes/">Руны</a>
     <a href="/spreads.html">Расклады</a>
   </div>
 </nav>
 <main class="card-page">
 <nav class="card-crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/cards/">Карты</a> / <span aria-current="page">Колесо фортуны</span></nav>
-<article>
-<header class="card-hero">
-<span class="card-symbol" aria-hidden="true">☸</span>
-<p class="card-eyebrow">Старшие арканы</p>
-<h1><span class="card-number">X</span>Колесо фортуны</h1>
-<p>Поворот обстоятельств</p>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="/img/cards/major-10-wheel-of-fortune.webp" alt="Колесо фортуны — карта Таро Уэйта" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Старший аркан · X</p>
+<h1 class="m-title"><span class="card-number">X</span>Колесо фортуны</h1>
+<p class="m-en">Wheel of Fortune</p>
+<p class="m-meta">Стихия: <b>Огонь</b> &nbsp;·&nbsp; Астрология: <b>Юпитер</b></p>
+</div>
 </header>
-<section class="card-section card-intro" aria-labelledby="brief">
-<h2 id="brief">Краткое значение</h2>
-<p>Колесо фортуны напоминает, что обстоятельства меняются даже без нашего разрешения. Карта помогает заметить открывшуюся возможность и отделить доступное действие от попытки управлять случайностью.</p>
-</section>
-<section class="card-section" aria-labelledby="upright">
-<h2 id="upright">Прямое положение</h2>
-<p>Колесо повернулось: судьба меняет кадр, и удача благоволит тем, кто успел схватиться за обод, — впереди судьбоносная встреча, внезапное предложение и поворот обстоятельств к лучшему.</p>
-<ul class="card-keywords" aria-label="Ключевые слова"><li>поворот судьбы</li><li>удача</li><li>циклы</li><li>перемены</li><li>поворотный момент</li><li>карма</li><li>судьбоносная встреча</li></ul>
-<p>В небе вращается огромное колесо с буквами имени Бога и словом TORA; на самом диске — сфинкс наверху, змей Тифон внизу и Германубис с посохом, поднимающийся вместе с оборотом. По углам карты — четыре херувима с книгами: законы остаются, пока вращается случай. Это самый «событийный» аркан колоды: жизнь делает следующий кадр.</p>
-<p>Юпитерианская природа даёт повороту щедрый оттенок: перемены чаще в пользу того, кто готов. Карта означает благоприятное стечение обстоятельств, судьбоносную встречу, внезапное предложение — то, что нельзя заказать, но можно заслужить готовностью. Её мудрость — в различении: колесо крутит ситуации, но не вас; центр остаётся вашим, если вы его не сдали.</p>
-</section>
-<section class="card-section" aria-labelledby="reversed">
-<h2 id="reversed">Перевёрнутое положение</h2>
-<p>Обод просел: полоса невезения и задержек, сопротивление неизбежной перемене и ставки против течения; с ритмом жизни не спорят — его пережидают, копя силы для нового оборота.</p>
-<ul class="card-keywords" aria-label="Ключевые слова"><li>полоса неудач</li><li>сопротивление переменам</li><li>застревание</li><li>дурной момент</li><li>азарт</li><li>внешнее давление</li></ul>
-<p>Перевёрнутое Колесо — фаза, когда обод проседает: задержки, отмены, «не вовремя», события тащат за собой, как течение неумелого пловца. Часто это сопротивление перемене, которая всё равно происходит: человек держится за отжившее — должность, отношения, прежнюю версию себя, — и вращение превращается в перемалывание.</p>
-<p>Карта предупреждает и о другом: попытке обыграть судьбу — от казино до авантюрных схем. Внизу колеса холодно всем, кто оказался там по глупости, а не по циклу. Совет аркана прост: различайте закономерность и случай; на случайное не ставьте всё. Полоса изменится — колесо не знает исключений, и в этом его утешение.</p>
-</section>
-<section class="card-section" aria-labelledby="love">
-<h2 id="love">В любви</h2>
-<h3>Прямое положение</h3>
-<p>В любви Колесо — судьбоносность: встреча, случившаяся «случайно», возвращение человека из прошлого, внезапный поворот там, где всё казалось ясным. Для одиночек это знак повысить мобильность — судьба знакомит в дороге, на мероприятиях, через друзей друзей, а не в диванной тишине. Парам карта обещает обновление цикла: второй медовый месяц или честный разговор, после которого всё меняется.</p>
-<h3>Перевёрнутое положение</h3>
-<p>В отношениях перевёрнутое Колесо — полоса, где обоих несёт: ссоры по кругу, возвращение к одной и той же теме, «сколько можно», — или внешний шторм, бьющий по союзу: переезд без согласия, вмешательство родни, обстоятельства сильнее планов. Одиночкам она советует не делать выводов о любви из неудачного периода: сейчас врут календарь и обстоятельства, а не ваши шансы. Парам важно не принимать решений на дне цикла: дождитесь подъёма — и оцените отношения трезво.</p>
-</section>
-<section class="card-section" aria-labelledby="career">
-<h2 id="career">В карьере</h2>
-<h3>Прямое положение</h3>
-<p>В карьере это карта поворотного момента: внезапное предложение, реорганизация, новый рынок, шанс, который не повторится. Действуйте быстро, но не суетливо — колесо поднимает тех, кто уже держится за него руками, и вашу готовность оно засчитывает как заслугу. Хорошее время «лотерей карьеры»: конкурсы, гранты, публичные заявки — вероятность успеха выше обычного.</p>
-<h3>Перевёрнутое положение</h3>
-<p>На работе карта рисует затяжное «не время»: проекты зависают, решения откладываются, усилия не конвертируются в результат — и велик соблазн рвануть куда угодно, лишь бы что-то происходило. Это ловушка: перемены, продавленные в фазе спада, обходятся вдвое дороже. Проверьте, не держитесь ли вы за место, которое давно перестало расти, — колесо убирает тех, кто вцепился в обод зубами.</p>
-</section>
-<section class="card-section" aria-labelledby="advice">
-<h2 id="advice">Совет карты</h2>
-<p>Посмотрите, что уже изменилось, и скорректируйте планы под новые условия. Используйте удачный момент, сохраняя запас сил на задержки: один поворот обстоятельств не определяет весь путь.</p>
-</section>
-<section class="card-section" aria-labelledby="questions">
-<h2 id="questions">Вопросы для размышления</h2>
-<ol class="card-questions"><li>Какая перемена уже произошла, хотя я продолжаю планировать по-старому?</li>
-<li>Какой повторяющийся круг событий я могу заметить в своей жизни?</li>
-<li>Что зависит от моего выбора, а что сейчас придётся принять?</li></ol>
-</section>
-</article>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Положения карты">
+<label class="pos-tab" for="pos-upright">Прямое положение</label>
+<label class="pos-tab" for="pos-reversed">Перевёрнутое положение</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">Школа Современного Таро</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">поворот судьбы</span><span class="kw">удача</span><span class="kw">циклы</span><span class="kw">перемены</span><span class="kw">поворотный момент</span><span class="kw">карма</span><span class="kw">судьбоносная встреча</span></div>
+<p class="short-value">Колесо повернулось: судьба меняет кадр, и удача благоволит тем, кто успел схватиться за обод, — впереди судьбоносная встреча, внезапное предложение и поворот обстоятельств к лучшему.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>В небе вращается огромное колесо с буквами имени Бога и словом TORA; на самом диске — сфинкс наверху, змей Тифон внизу и Германубис с посохом, поднимающийся вместе с оборотом. По углам карты — четыре херувима с книгами: законы остаются, пока вращается случай. Это самый «событийный» аркан колоды: жизнь делает следующий кадр.</p>
+<p>Юпитерианская природа даёт повороту щедрый оттенок: перемены чаще в пользу того, кто готов. Карта означает благоприятное стечение обстоятельств, судьбоносную встречу, внезапное предложение — то, что нельзя заказать, но можно заслужить готовностью. Её мудрость — в различении: колесо крутит ситуации, но не вас; центр остаётся вашим, если вы его не сдали.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>День неожиданностей: планы поменяются, и лучше встретить это как сюжет, а не как катастрофу. Держите в расписании воздух — незастроенные окна, в которые судьба внесёт свой пункт. Примите неожиданное приглашение, ответьте на случайное сообщение, купите билет, если вдруг подешевел: мелкие повороты сегодня складываются в крупный узор.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>В карьере это карта поворотного момента: внезапное предложение, реорганизация, новый рынок, шанс, который не повторится. Действуйте быстро, но не суетливо — колесо поднимает тех, кто уже держится за него руками, и вашу готовность оно засчитывает как заслугу. Хорошее время «лотерей карьеры»: конкурсы, гранты, публичные заявки — вероятность успеха выше обычного.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>В любви Колесо — судьбоносность: встреча, случившаяся «случайно», возвращение человека из прошлого, внезапный поворот там, где всё казалось ясным. Для одиночек это знак повысить мобильность — судьба знакомит в дороге, на мероприятиях, через друзей друзей, а не в диванной тишине. Парам карта обещает обновление цикла: второй медовый месяц или честный разговор, после которого всё меняется.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Карта советует спокойно принять смену режима: переезд, сезон, новый график — организм сейчас легко перестраивается, если ему не сопротивляться. Хороший период для смены подхода к здоровью: новый врач или случайно попавшийся к месту курс оказывается точным. Юпитер предупреждает об излишествах — печень, вес и аппетит требуют меры, особенно в праздничные недели.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Путь Каф, «ладони», соединяет Хесед и Нецах: судьба — это хватка, которой Вселенная держит нас, и которой мы держимся за неё. Сфинкс на вершине колеса — знание, удерживающее равновесие на вращении; Тифон внизу — сила распада, без которой невозможен новый оборот. В практике аркан соответствует работе с ритмами: астрологическими транзитами, лунными циклами, сроками начинаний. Медитация на Колесо воспитывает невозмутимость — умение оставаться центром, пока по ободу проходят и взлёт, и падение.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">полоса неудач</span><span class="kw">сопротивление переменам</span><span class="kw">застревание</span><span class="kw">дурной момент</span><span class="kw">азарт</span><span class="kw">внешнее давление</span></div>
+<p class="short-value">Обод просел: полоса невезения и задержек, сопротивление неизбежной перемене и ставки против течения; с ритмом жизни не спорят — его пережидают, копя силы для нового оборота.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Перевёрнутое Колесо — фаза, когда обод проседает: задержки, отмены, «не вовремя», события тащат за собой, как течение неумелого пловца. Часто это сопротивление перемене, которая всё равно происходит: человек держится за отжившее — должность, отношения, прежнюю версию себя, — и вращение превращается в перемалывание.</p>
+<p>Карта предупреждает и о другом: попытке обыграть судьбу — от казино до авантюрных схем. Внизу колеса холодно всем, кто оказался там по глупости, а не по циклу. Совет аркана прост: различайте закономерность и случай; на случайное не ставьте всё. Полоса изменится — колесо не знает исключений, и в этом его утешение.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>В быту день мелких сбоев: сорвавшиеся встречи, техника, выбирающая момент, чтобы сломаться, деньги, уходящие на непредвиденное. Не принимайте это на свой счёт — это погода, а не приговор; снижайте ставки и темп, дублируйте важное. Откажитесь от азартных решений — лотерейных билетов, спонтанных крупных покупок, споров на спор. Поможет юмор и запасной план: тот, кто смеётся над колесом, катится мягче того, кто проклинает каждую спицу.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>На работе карта рисует затяжное «не время»: проекты зависают, решения откладываются, усилия не конвертируются в результат — и велик соблазн рвануть куда угодно, лишь бы что-то происходило. Это ловушка: перемены, продавленные в фазе спада, обходятся вдвое дороже. Проверьте, не держитесь ли вы за место, которое давно перестало расти, — колесо убирает тех, кто вцепился в обод зубами.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>В отношениях перевёрнутое Колесо — полоса, где обоих несёт: ссоры по кругу, возвращение к одной и той же теме, «сколько можно», — или внешний шторм, бьющий по союзу: переезд без согласия, вмешательство родни, обстоятельства сильнее планов. Одиночкам она советует не делать выводов о любви из неудачного периода: сейчас врут календарь и обстоятельства, а не ваши шансы. Парам важно не принимать решений на дне цикла: дождитесь подъёма — и оцените отношения трезво.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Телесно период нестабилен: обострения приходят «не вовремя», лечение буксует, анализы скачут — не меняйте резко схемы и врачей из-за одной плохой недели. Уязвимы печень, обмен веществ и вес: юпитерианские излишества в неудачной полосе бьют заметнее. Осторожнее с самолечением «чудо-курсами» — азарт в вопросах здоровья дорого стоит.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Духовно перевёрнутый Каф — борьба с ладонью: человек спорит с ритмом, в котором живёт, и называет это свободой. Карта указывает на кармическое топтание: одни и те же уроки приходят новыми лицами, пока не выучены, — и на суеверный страх судьбы, парализующий волю. Практика этих недель — различать: где моё решение, а где течение; первому — вся воля, второму — доверие без драмы.</p></div>
+</div>
+<div class="pos-pane roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> Кратко и просто</h3>
+<div class="info-section"><h3>Основная идея</h3><p>Колесо Фортуны — это не рулетка без правил. Это механизм, законы которого мы не всегда понимаем.</p></div>
+<div class="info-section"><h3>Как проявляется</h3><p>Цикличность, повторение, закономерность, последствия собственных действий.</p></div>
+<div class="info-section"><h3>Работа и деньги</h3><p>Циклы рынка, отчётность, зарплаты, обороты, прибыль и расходы.</p></div>
+<div class="info-section"><h3>В отношениях</h3><p>Судьбоносные изменения, которые человек может не предвидеть, но которые становятся понятными после того, как механизм ситуации раскрывается.</p></div>
+<div class="info-section"><h3>Теневая сторона</h3><p>Фатализм. Человек перестаёт искать причины и начинает всё объяснять судьбой.</p></div>
+<div class="info-section"><h3>Особенность школы</h3><p>Колесо связано с Девой, шестым домом, Меркурием и Прозерпиной. Сначала нужно собрать огромное количество информации, а потом выделить из неё несколько действительно важных закономерностей.</p></div>
+<div class="roman-astro"><span class="ra-label">✷ Астрология школы</span><b>VI дом · Дева</b><span class="ra-sep">·</span>Меркурий + Прозерпина; нижняя точка зодиакального колеса<div class="ra-classic">У классики Уэйта: Юпитер</div></div>
+<h3 class="roman-subtitle"><span>📜</span> Развёрнуто — выжимки лекций</h3>
+<details class="roman-details" open><summary><span class="rd-icon" aria-hidden="true">✧</span> Суть карты</summary><div class="rd-body"><p>Колесо Фортуны он ставит в самую нижнюю точку зодиакального колеса — 6-й дом (Дева), где правят Меркурий и главная планета дома Прозерпина; это родство с Отшельником: выбор одного и погружение вглубь. Ядро карты — «отрицание случайности и фатализм»: само́ колесо — «бездушный механизм», якобы холодный и спокойный, законы природы на материальном уровне, за которыми божественный промысел просто не виден. Отсюда его ключевая формула: «это не рулетка, а рулетка с правилами и законами» — просто не все законы мы знаем и видим. В работе с картами суть — выделить одну ключевую идею из всей информации: Меркурий работает с данными вообще, Прозерпина «убирает лишнее и фокусируется на нужном».</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Прямое положение</summary><div class="rd-body"><ul class="st-list"><li>Разбирается по его привычным четырём стихиям-секторам: огонь — социум и желания, земля — финансы и имущество, воздух — действия и саморазвитие, вода — эмоции и личная жизнь.</li><li>- Общий ряд: разобравшийся механизм знает, за какие действия прилетит наказание, а за какие — добро; не разобравшийся видит только случай; по Аристотелю — параллелизм двух причинных последовательностей: и падение камня, и маршрут прохожего неслучайны. Карма — не наказание, а последствия действий: «как работал так заработал», включая чужую — часто пожнёшь «то, что сеяли до тебя». Цикличность и время: вывод делают после повтора — если в четвёртый раз то же самое, «значит закономерность, а не случайность».</li><li>- Социум: общество как механизм социальных взаимодействий — знакомства, связи, тренды, мода, тенденции. Идеальный пример — SMM-щики-Девы: собирают информацию, выделяют пять-шесть ключевых слов («Прозерпина обработала Меркурий»), работают спокойно и без лишних эмоций; эмоции — стихия Рыб напротив (ютюберы, интриги): Дева и Рыбы работают в паре.</li><li>- Работа/финансы: служение и труд, работа в подчинении, сфера обслуживания, «работа ради куска хлеба, всякий труд не по призванию» — «сегодня ты царь наверху, завтра колесо опустит ниже». Финансовые циклы: годовой и квартальный отчёты, проценты месячные и полугодовые, оборотные средства. Выпадет хорошо — прибыль, плохо — расходы. Доллар и биткойн падают не потому что «споткнулись» — это биржевые закономерности; без железобетонного знания, когда покупать и продавать, в эту мясорубку не лезть, иначе «колесо вас прокрутит вниз и вы упадёте».</li><li>- Быт и тело: через 6-й дом: медицинские учреждения, диеты, косметология, уход за телом, гигиена, бытовые проблемы, домашние животные. Тело — «скафандр, в котором заключена душа»; здоровый дух живёт в 12-м доме.</li><li>- Эмоции/личная жизнь: карта особенно выпадает на судьбоносные решения и перемены, которые человек может или не может предсказать; умный понимает, почему она вышла: «по-другому быть и не может».</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Негативное значение</summary><div class="rd-body"><p>Работает шкала «хорошо/плохо выпавшей карты»: прибыль или расходы, верх или низ колеса. Тот, кто действует сообразно закону, наверху; кто рассчитывает на волю случая — «рано или поздно колесо вас прокрутит вниз и вы упадёте с этого колеса». Его формула фатализма: люди, не выполняющие простых вещей, списывают неудачи на судьбу — девушка без прически дивится, что мужчины отворачиваются: «ей кажется, что это судьба». Обещание: на следующей практике он разберёт, «почему дуракам везёт».</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> Акценты и фишки школы</summary><div class="rd-body"><ul class="st-list"><li>- Своя астрологическая привязка (раскладку арканов по зодиаку он разделяет с Юрием Ханом, споря лишь с тягой к красивой симметрии: идеально симметричное лицо «страшновато», изюминку даёт асимметрия).</li><li>- Ось 6–12: внизу земля и тело, вверху вода и дух; пара домов даёт два ощущения кармы — расчетливую причинность или «дай вселенной шанс вознаградить» (лотерейный билет); стоять надо посередине.</li><li>- Мифология: Тихе — жребий по велению богов, порождение эллинизма против неизменной судьбы; Фортуна — колесо и рог изобилия, богиня урожая от ferre («приносить плод»). Мойры: Клото сплетает нить «из всего, что попадёт в руки», Лахесис переплетает нити разных людей, Атропос состригает (корабли капитана Блада); скандинавский дубль — норны Урд, Верданди, Скульд у корней Иггдрасиля (отсылка к прошлой карте об Одине у источника мудрости). Немезида открывает мостик к следующей карте Справедливости.</li><li>- Славянский ряд единственный: прялка — женская работа, её колесо совпадает с колесом Фортуны, девушки гадали при прялении; 6-й дом «очень женский», пассивная земля — женщине без прав оставалось ждать, «когда удача повернётся лицом».</li><li>- Греки: Тихе действует в разуме, аутоматон — в материальном мире (боги говорят мыслями через самого человека); «случай — это когда бог хочет выступить инкогнито».</li><li>- Символика Уэйта (взявшего всё у Элифаса Леви): буквы TARO/TORA — смесь мировоззрений (Таро, каббала, алхимия, герметизм), четыре фигуры-евангелиста одновременно фиксированные знаки зодиака — Лев, Телец, Орёл-Скорпион, Ангел-Водолей: «смешались в кучу кони люди» — «нельзя сказать, кто прав». На средневековой гравюре странник с посохом («он же Один») прорывает ткань реальности к музыке высших сфер.</li><li>- Современные образы — блокбастеры о судьбе: «Терминатор-2» (робот-аутоматон защищает ребёнка; Сара Коннор выцарапывает: «нет судьбы, кроме той, которую мы сами себе создаем»; беги впереди колеса, чтобы не задавило), «Звёздные войны» IV (чертёж звезды смерти в роботе — переход информации из подсознания в сознание, дело Меркурия), «Эффект бабочки» (карма бывает и хорошей), «Матрица» (лик Нео из роботов — духовное против материального механизма), «Люси» Бессона (человек становится богом «банальной химией», стопроцентное ощущение мира).</li><li>- Приёмы: проверять повторами, смотреть кино с рейтингом IMDb выше семи ради философского слоя («лучше, чем „Дом-2&quot;»); фирменный анекдот про Штирлица: «Не судьба, подумал Штирлиц, и сел в сугроб» — грибы зимой не растут. Банцхафа не цитирует.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Ключевые слова</summary><div class="rd-body"><ul class="st-list"><li>бездушный механизм · причинно-следственные связи · цикличность · жребий · рулетка с правилами · что посеешь, то и пожнёшь · шестой дом (Дева, Меркурий и Прозерпина) · судьба и удача · слепой фатализм · нижняя точка Зодиака</li><li>---</li></ul></div></details>
+</div>
 <nav class="card-pagination" aria-label="Предыдущая и следующая карта">
 <a rel="prev" href="otshelnik.html"><span>← Предыдущая карта</span>Отшельник</a>
 <a rel="next" href="spravedlivost.html"><span>Следующая карта →</span>Справедливость</a>
 </nav>
+</article>
 </main>
 <footer class="site-footer">
   <p>Таро · Справочник значений карт</p>

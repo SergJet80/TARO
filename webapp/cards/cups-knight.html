@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Рыцарь кубков — значение и толкование | Таро Справочник</title>
+<meta name="description" content="Рыцарь кубков — значение карты Таро младшего аркана: масть кубки, стихия вода. Толкование в прямом и перевёрнутом положении, в любви и работе.">
+<link rel="canonical" href="https://taro.jetserg.top/cards/cups-knight.html">
+<meta property="og:title" content="Рыцарь кубков — значение и толкование | Таро Справочник">
+<meta property="og:description" content="Рыцарь кубков — значение карты Таро младшего аркана: масть кубки, стихия вода. Толкование в прямом и перевёрнутом положении, в любви и работе.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taro.jetserg.top/cards/cups-knight.html">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/cups-knight.webp">
+<link rel="stylesheet" href="/css/style.css?v=3.4">
+<link rel="stylesheet" href="/css/astrology.css?v=3.4">
+<style>
+.main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
+.card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
+.card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
+.card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
+.card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── Школа Современного Таро ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
+.card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
+.card-pagination a:last-child { text-align: right; }
+.card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
+@media (max-width: 480px) {
+  .main-nav { padding: 12px 12px 0; }
+  .main-nav a { padding: 8px 12px; font-size: .9rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
+  .card-pagination { gap: 10px; }
+  .card-pagination a { padding: 16px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Рыцарь кубков — значение и толкование | Таро Справочник",
+  "description": "Рыцарь кубков — значение карты Таро младшего аркана: масть кубки, стихия вода. Толкование в прямом и перевёрнутом положении, в любви и работе.",
+  "url": "https://taro.jetserg.top/cards/cups-knight.html",
+  "inLanguage": "ru"
+}
+</script>
+<!-- Microsoft Clarity -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yejlmmd6nr");
+</script>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+<nav class="main-nav" aria-label="Разделы">
+  <div class="main-nav-inner">
+    <a href="/">Главная</a>
+    <a href="/cards/" class="mn-active">Карты</a>
+    <a href="/astrology/">Астрология</a>
+    <a href="/runes/">Руны</a>
+    <a href="/spreads.html">Расклады</a>
+  </div>
+</nav>
+<main class="card-page">
+<nav class="card-crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/cards/">Карты</a> / <span aria-current="page">Рыцарь кубков</span></nav>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="/img/cards/cups-knight.webp" alt="Рыцарь кубков — карта Таро Уэйта" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Младший аркан · Кубки</p>
+<h1 class="m-title"><span class="card-number">XII</span>Рыцарь кубков</h1>
+<p class="m-en">Knight of Cups</p>
+<p class="m-meta">Масть: <b>Кубки</b> &nbsp;·&nbsp; Стихия: <b>Вода</b></p>
+</div>
+</header>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Положения карты">
+<label class="pos-tab" for="pos-upright">Прямое положение</label>
+<label class="pos-tab" for="pos-reversed">Перевёрнутое положение</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">Школа Современного Таро</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">предложение</span><span class="kw">приглашение</span><span class="kw">романтический жест</span><span class="kw">обаяние</span><span class="kw">поступок сердца</span><span class="kw">творческий порыв</span></div>
+<p class="short-value">Рыцарь едет с чашей: романтический жест, красивое предложение, поступок по зову сердца.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Рыцарь в крылатом шлеме медленно едет, держа чашу как дар или послание. Он не мчится, как остальные рыцари колоды: его стихия не атака, а приглашение. Так появляются письма, признания, проекты-заявки — красивые жесты, в которых человек решается показать чувство. Этот герой — художник и влюблённый, идущий за красотой.</p>
+<p>Карта означает предложение или приглашение эмоционально значимое: сватовство, творческий шанс, зов сердца, требующий ответа. Рыцарь действует эстетично и мягко. Его вопрос не «правильно ли это», а «отзывается ли»: когда сердце сказало «да», разум обычно догоняет позже и соглашается.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Красиво сделанные вещи: букет без повода, приглашение на выставку, письмо старому другу, спонтанная поездка на закат. День благоприятен для ухаживаний в широком смысле — навестите бабушку с пирогами, зовите людей на кофе. Мир отвечает взаимностью тому, кто первым протягивает чашу.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Предложение, от которого теплее: творческий проект, участие в красивом деле, командировка мечты. Подавайте заявки на конкурсы и гранты, выходите с идеей к руководству — сейчас вас слышат внимательнее обычного. Действуйте элегантно: Рыцарь побеждает не напором, а вкусом подачи.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Главный романтический сюжет: признание, эффектное свидание, человек, который красиво ухаживает и не скрывает симпатии. Одиноким — обаятельный поклонник с явными намерениями; парам — возрождение галантности: ужины при свечах, танцы на кухне. Отвечайте на жесты: гордое молчание быстро охлаждает пыл.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Эмоциональный подъём лечит лучше витаминов: глаза горят, плечи расправлены, сон лёгкий. Хорошее время начать танцы, плавание — любую практику, где движение связано с удовольствием, а не с долгом. Сердце благодарно откликается на радость; не гоните организм стимуляторами ради высоты полёта.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Крылатый шлем — знак вдохновения, снизошедшего до действия: идея перестала быть мыслью и пошла ногами. Эзотерически это карта посланника — включая послание, которое вы сами несёте другому сердцу. Используйте её для привлечения достойного партнёра, освящения начинаний, ритуала первого шага.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">пустые обещания</span><span class="kw">ложный блеск</span><span class="kw">капризность</span><span class="kw">отменённое предложение</span><span class="kw">манипуляция чувствами</span><span class="kw">витание в облаках</span></div>
+<p class="short-value">Чаша оказалась пустой: красивые слова без содержания, капризный романтик, отозванное предложение.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Рыцарь всё так же прекрасен в седле, но чаша пуста, а маршрут ведёт мимо. Он обещает золотые горы убедительным голосом и исчезает при первом счёте. Обаяние поставлено на службу эго: романы-фантазии без намерения, проекты, живущие только в презентации. Красивая упаковка сама по себе не ложь — но здесь она заменяет содержимое.</p>
+<p>Карта означает отозванное предложение, разочарование в кумире, эмоциональную нестабильность рядом. Она же — про внутреннее состояние: мечты стали способом не жить, а анестезировать жизнь; «поиск идеала» прикрывает страх близости. Проверяйте слова делами простым вопросом: что этот человек сделал, а не сказал?</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Сорванные договорённости: друг обещал и не пришёл, мастера пропали, «созвонимся на неделе» растворилось. Не стройте планов на голом слове — фиксируйте важное письменно. И проверьте себя: сколько обещаний вы раздали на энтузиазме? Отмена собственных слов — та же незрелость, в профиль.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Вдохновенный прожектёр: презентации великолепны, сроки тают, ответственность размывается. Не вкладывайтесь в проекты без бюджета, графика и конкретики — красота идеи не гарантирует её существования. Собственные амбиции тоже проверьте: не витаете ли вы там, где нужен чертёж и план продаж?</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Донжуанский сценарий: пышные ухаживания, слова о судьбе и полное нежелание чего-то реального. Возможны ревность, драмы на пустом месте, человек, любящий образ вас, а не вас. Если вы влюблены в собственную мечту о нём — спускайтесь на землю: живых людей выбирают среди живых людей.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Качели между вдохновением и апатией изматывают: скачки давления, нервное истощение, тяга к алкоголю «для настроения». Обаяние требует топлива — проверьте, чем вы его заправляете. Помогают заземляющие практики: силовые нагрузки, распорядок, работа руками. Телу нужен ритм, а не волна восторга с провалом.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Ложный посланник и размытая воля: энергия чувства не собрана в направление, поэтому рассыпается красивыми жестами. Карта предупреждает об иллюзиях в отношениях и требует проверки видений фактом. Работа с ней — превращать вдохновение в обязательства: одно выполненное молча обещание стоит десяти красивых.</p></div>
+</div>
+<div class="pos-pane roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> Как школа читает этот ранг</h3>
+<div class="info-section"><h3>Основная идея</h3><p>Эмпат, который уже умеет управлять эмоциями — своими и чужими. Он способен менять настроение людей мягко и почти незаметно.</p></div>
+<div class="info-section"><h3>Как проявляется</h3><p>В отношениях — романтик и джентльмен, которому хочется доверять. В работе — тонкий переговорщик, чувствующий эмоциональный фон. В развитии — осознанная регуляция настроения.</p></div>
+<div class="info-section"><h3>Теневая сторона</h3><p>Эмоциональное влияние становится манипуляцией и зависимостью.</p></div>
+<div class="info-section"><h3>Ключевые слова</h3><p>эмпатия · романтика · эмоции · доверие · влияние</p></div>
+<div class="roman-astro"><span class="ra-label">✷ Астрология школы</span><b>Масть воды · мастер — самостоятельность в рамках масти</b><span class="ra-sep">·</span>меланхолики — пластичность, глубокие эмоции</div>
+<h3 class="roman-subtitle"><span>📜</span> Развёрнуто — из лекции по рангу</h3>
+<details class="roman-details" open><summary><span class="rd-icon" aria-hidden="true">✧</span> Суть карты</summary><div class="rd-body"><p>эмоциональный эмпат, который начал активно управлять эмоциями. Логики в кубках мало или нет вовсе. Паж сидит с поданной эмоцией; рыцарь раскручивает её либо незаметно заменяет позитивом, приободряя «товарищей по несчастью».</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Прямое положение</summary><div class="rd-body"><ul class="st-list"><li>Отношения: «тот самый рыцарь на белом коне, о котором мечтают все женщины» — джентльмен, тонкий, мягкий, серенады споёт; вызывает доверие, ведь «доверяем тому, кому хочется верить». Но опасен: играет эмоциями, будет ухаживать даже к замужней с «28 детьми» — «тайные поцелуи во тьме ночной».</li><li>Работа: читает эмоциональный фон людей — переговоры и клиенты; дисциплина страдает, всё по настроению.</li><li>Финансы: решения от чувств, не от выгоды.</li><li>Саморазвитие: осознанная регуляция настроения; духовность рядом (Арамис ленив без духовного/любовного интереса).</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Негативное значение</summary><div class="rd-body"><p>• транслирует чужую гнетущую эмоцию, затягивая вас (вздыхающий коллега портит вам день); гиперэмоциональность и эмоциональная зависимость; с Дьяволом — тяга забыться, «уйти в другой мир»; алкоголь как усилитель эмоций, частые зависимости.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> Акценты и фишки школы</summary><div class="rd-body"><ul class="st-list"><li>Цвета лошадей: чёрный у пентаклей — материальное, приземлённое; белый у кубков — возвышенные правильные эмоции, любовь к Богу; рыжий у жезлов — огонь страсти; светлый у мечей — чистый воздух и достоверность информации. Земля/огонь ближе к телу, мысли и эмоции должны быть возвышенными.</li><li>Конь — символ врождённой активности, рыцарь управляет стихией; сокол на уздечке мечей — хищная охота: информация приносит ущерб или пользу; фаллическая символика жезла — привет Фрейду («душа горит — значит, хочется»).</li><li>Направление скачка (активные влево, пассивные вправо, «от/к человеку») — цыганщина, «работает временами», он этим не пользуется.</li><li>Буратино — образ человека, осваивающего четыре стихии: Арлекин — огонь, Мальвина — мечи/воздух, Артемон — земля (защитник своего), Пьеро — вода. Жанна д&#x27;Арк — не рыцарь, а королева/король жезлов: направляла желания людей. Манипуляции — дело королевы («женщина немного ведьма»), король просто объявляет: «царь трапезничать желает».</li><li>Астрология: младшие арканы в зодиак — «натянуть сову на глобус», таблицы Золотой Зари «кривые»; система Юрия Хана (10 карт = 10 знаков, Водолей — паж+рыцарь, Рыбы — королева+король) рабочая, но авторская. Своё зодиакальное колесо старших арканов он объясняет через мифологию (совпало с Ханом независимо).</li><li>Старшие арканы — архетипы и теология; младшие — устройство средневекового социума, «табель о рангах»; Золотая Заря черпала из тех же источников и знала меньше нас (1909–11), сейчас помогают психология и социология.</li><li>Расклад: «Шумел камыш» — частный случай Шута; рыцарь мечей — резкий порыв ветра. Образы: четыре мушкетёра, Ghost Rider — байкер-экстремал намёком на жезлы, «Аббатство Даунтон» про иерархию «кто слуга».</li><li>Диагностика в поле: раздражающая стихия — конфликт с ней внутри; работающий с удовольствием — рыцарь, страдающий от принуждения — паж; Маргарита у Булгакова хотела спокойствия — главная эмоция кубков (дзен, нирвана).</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Ключевые слова</summary><div class="rd-body"><p>эмпат, управление эмоциями, «рыцарь на белом коне», доверие, эмоциональная зависимость.</p></div></details>
+</div>
+<nav class="card-pagination" aria-label="Предыдущая и следующая карта">
+<a rel="prev" href="cups-page.html"><span>← Предыдущая карта</span>Паж кубков</a>
+<a rel="next" href="cups-queen.html"><span>Следующая карта →</span>Королева кубков</a>
+</nav>
+</article>
+</main>
+<footer class="site-footer">
+  <p>Таро · Справочник значений карт</p>
+  <p class="footer-note">Материалы носят справочный и развлекательный характер</p>
+</footer>
+</body>
+</html>

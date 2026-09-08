@@ -10,55 +10,127 @@
 <meta property="og:description" content="Солнце — ясность, жизненная сила и радость. Значение карты Таро в прямом и перевёрнутом положении, в любви и карьере. Совет карты и вопросы для размышления.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://taro.jetserg.top/cards/solnce.html">
-<link rel="stylesheet" href="/css/style.css?v=3.3">
-<link rel="stylesheet" href="/css/astrology.css?v=3.3">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/major-19-sun.webp">
+<link rel="stylesheet" href="/css/style.css?v=3.4">
+<link rel="stylesheet" href="/css/astrology.css?v=3.4">
 <style>
 .main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
 .card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
 .card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
 .card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
 .card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
-.card-hero { text-align: center; padding: 14px 0 34px; }
-.card-symbol { display: block; font-family: Georgia, serif; font-size: 5rem; line-height: 1.2; color: var(--gold-bright); text-shadow: 0 0 30px var(--gold-dim); }
-.card-eyebrow { color: var(--text-dim); letter-spacing: .15em; text-transform: uppercase; font-size: .76rem; margin: 18px 0 8px; }
-.card-hero h1 { font-family: Georgia, serif; font-weight: 500; font-size: clamp(2rem, 6vw, 3.3rem); line-height: 1.2; color: var(--gold-bright); overflow-wrap: anywhere; }
-.card-number { display: block; font-size: 2.2rem; color: var(--gold); margin-bottom: 10px; }
-.card-hero > p:last-child { margin-top: 16px; color: var(--text-dim); }
-.card-section { margin: 0 0 22px; padding: 28px 32px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: rgba(23, 18, 43, .88); }
-.card-section h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500; font-size: 1.6rem; line-height: 1.3; margin-bottom: 18px; }
-.card-section h3 { color: var(--gold-bright); font-size: 1rem; margin: 22px 0 10px; }
-.card-section p + p { margin-top: 16px; }
-.card-intro { background: linear-gradient(135deg, rgba(124, 92, 191, .2), var(--bg-panel)); font-size: 1.1rem; }
-.card-keywords { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 18px 0; }
-.card-keywords li { border: 1px solid var(--gold-dim); border-radius: 999px; padding: 4px 12px; font-size: .85rem; color: var(--gold-bright); }
-.card-questions { padding-left: 24px; }
-.card-questions li { padding: 4px 0 10px 6px; }
-.card-questions li::marker { color: var(--gold); }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── Школа Современного Таро ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
 .card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
-.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius); text-decoration: none; background: var(--bg-panel); }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
 .card-pagination a:last-child { text-align: right; }
 .card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
-.card-pagination a:hover, .card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
-.card-catalog { max-width: 1120px; }
-.card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; list-style: none; }
-.card-grid li { min-width: 0; }
-.card-tile { display: flex; flex-direction: column; align-items: flex-start; height: 100%; padding: 24px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel); text-decoration: none; }
-.card-tile-symbol { font-size: 2rem; line-height: 1.3; }
-.card-tile-number { color: var(--text-dim); font-size: .85rem; margin: 18px 0 4px; }
-.card-tile strong { font-family: Georgia, serif; font-size: 1.4rem; font-weight: 500; }
-.card-tile-desc { color: var(--text-dim); font-size: .9rem; margin-top: 6px; }
-@media (max-width: 700px) { .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
 @media (max-width: 480px) {
   .main-nav { padding: 12px 12px 0; }
   .main-nav a { padding: 8px 12px; font-size: .9rem; }
-  .card-page { padding: 22px 16px 36px; }
-  .card-section { padding: 22px 20px; }
-  .card-tile { padding: 18px 14px; }
-  .card-tile strong { font-size: 1.16rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
   .card-pagination { gap: 10px; }
   .card-pagination a { padding: 16px 12px; }
 }
-@media (max-width: 350px) { .card-grid { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
 </style>
 <script type="application/ld+json">
@@ -88,69 +160,76 @@
     <a href="/">Главная</a>
     <a href="/cards/" class="mn-active">Карты</a>
     <a href="/astrology/">Астрология</a>
-    <a href="/lenormand/">Ленорман</a>
     <a href="/runes/">Руны</a>
     <a href="/spreads.html">Расклады</a>
   </div>
 </nav>
 <main class="card-page">
 <nav class="card-crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/cards/">Карты</a> / <span aria-current="page">Солнце</span></nav>
-<article>
-<header class="card-hero">
-<span class="card-symbol" aria-hidden="true">☀</span>
-<p class="card-eyebrow">Старшие арканы</p>
-<h1><span class="card-number">XIX</span>Солнце</h1>
-<p>Ясность и радость</p>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="/img/cards/major-19-sun.webp" alt="Солнце — карта Таро Уэйта" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Старший аркан · XIX</p>
+<h1 class="m-title"><span class="card-number">XIX</span>Солнце</h1>
+<p class="m-en">The Sun</p>
+<p class="m-meta">Стихия: <b>Огонь</b> &nbsp;·&nbsp; Астрология: <b>Солнце</b></p>
+</div>
 </header>
-<section class="card-section card-intro" aria-labelledby="brief">
-<h2 id="brief">Краткое значение</h2>
-<p>Солнце приносит ощущение ясности, когда можно открыто радоваться жизни и результатам своих усилий. Если удовольствие потускнело, карта предлагает снова заметить то хорошее, что уже рядом.</p>
-</section>
-<section class="card-section" aria-labelledby="upright">
-<h2 id="upright">Прямое положение</h2>
-<p>Полдень без туч: жизненная сила, успех и радость, которые не нужно заслуживать.</p>
-<ul class="card-keywords" aria-label="Ключевые слова"><li>радость</li><li>успех</li><li>витальность</li><li>ясность</li><li>тепло</li><li>признание</li></ul>
-<p>Солнце — самая добрая карта колоды: ребёнок на белом коне, подсолнухи выше стены, свет, которому нечего доказывать. Всё живое тянется к нему не за наградой, а потому что так устроено.</p>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Положения карты">
+<label class="pos-tab" for="pos-upright">Прямое положение</label>
+<label class="pos-tab" for="pos-reversed">Перевёрнутое положение</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">Школа Современного Таро</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">радость</span><span class="kw">успех</span><span class="kw">витальность</span><span class="kw">ясность</span><span class="kw">тепло</span><span class="kw">признание</span></div>
+<p class="short-value">Полдень без туч: жизненная сила, успех и радость, которые не нужно заслуживать.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Солнце — самая добрая карта колоды: ребёнок на белом коне, подсолнухи выше стены, свет, которому нечего доказывать. Всё живое тянется к нему не за наградой, а потому что так устроено.</p>
 <p>В раскладе она объявляет период плодоношения. Успех здесь не лотерея, а естественный итог того, что росло тихо и долго. Ясность заменяет догадки: видно далеко — и дорогу, и себя в ней.</p>
-<p>Аркан напоминает и о главном источнике: радость живёт не в достижениях, а в самой способности светить. Ребёнок на карте счастлив не потому, что выиграл, — он вообще не участвует в соревновании.</p>
-</section>
-<section class="card-section" aria-labelledby="reversed">
-<h2 id="reversed">Перевёрнутое положение</h2>
-<p>Солнце за дымкой: успех не отменён, но задерживается, а радость нужно будить.</p>
-<ul class="card-keywords" aria-label="Ключевые слова"><li>временные тучи</li><li>отложенный успех</li><li>выгорание</li><li>приглушённая радость</li><li>тщеславие</li><li>инфантильность</li></ul>
-<p>Перевёрнутое Солнце — тот же полдень, увиденный из задымлённой комнаты. Ничего страшного не произошло: свет на месте, но между вами занавес — усталость, обида, вечная занятость.</p>
+<p>Аркан напоминает и о главном источнике: радость живёт не в достижениях, а в самой способности светить. Ребёнок на карте счастлив не потому, что выиграл, — он вообще не участвует в соревновании.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>День с открытыми окнами: дела ладятся, люди улыбаются, тело просит движения и воздуха. Проведите время на солнце, с детьми, в игре без цели. Домашние вопросы решаются легко — даже затянувшийся ремонт спорится. Позвольте себе удовольствие без пользы: просто радость — тоже дело.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Полоса признания: проект увенчался успехом, руководство довольно, ваше имя звучит громче. Карта благоприятствует публичности — презентации, выступления и собеседования проходят блестяще. Хороший момент начинать своё дело, расширяться, брать ответственную роль. Энергия восстанавливается быстрее, чем тратится: работается на подъёме.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Отношения в лучшей форме: тепло без причин, смех по мелочи, желание показывать любимого миру. Парам, ждущим прибавления, карта традиционно благоприятна — она несёт детскую энергию в прямом смысле. Одиночество сейчас не беда, а пауза на солнце: знакомства случаются легко и без стратегии. Любите открыто — сегодня это безопасно.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Одна из лучших карт здоровья: силы на подъёме, иммунитет крепкий, лечение даёт быстрый эффект. Особенно благоприятна для детей и всех, кто восстанавливается после болезни. Показаны солнце, спорт, активный отдых — организм просит движения. Одна осторожность: даже солнце светит ритмично — берегитесь перегрева и перегрузок.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Солнце — аркан светлого посвящения: радость как духовная техника, а не награда за аскезу. В практиках карту используют для зарядки амулетов удачи, укрепления жизненной силы и защиты детей. Медитация на солнечный свет прогревает энергетический столб снизу доверху.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">временные тучи</span><span class="kw">отложенный успех</span><span class="kw">выгорание</span><span class="kw">приглушённая радость</span><span class="kw">тщеславие</span><span class="kw">инфантильность</span></div>
+<p class="short-value">Солнце за дымкой: успех не отменён, но задерживается, а радость нужно будить.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Перевёрнутое Солнце — тот же полдень, увиденный из задымлённой комнаты. Ничего страшного не произошло: свет на месте, но между вами занавес — усталость, обида, вечная занятость.</p>
 <p>Карта описывает приглушённую радость: достижения есть, а праздновать не хочется; любовь рядом, а чувствуется через силу. Иногда это просто отсрочка: успех придёт позже срока, признание — после дополнительного круга.</p>
-<p>Есть и теневая грань — детскость, повернувшаяся не той стороной: капризы, требование всего сразу, эго, ожидающее аплодисментов без работы. Либо выгорание того, кто светил всем и забыл платить себе.</p>
-</section>
-<section class="card-section" aria-labelledby="love">
-<h2 id="love">В любви</h2>
-<h3>Прямое положение</h3>
-<p>Отношения в лучшей форме: тепло без причин, смех по мелочи, желание показывать любимого миру. Парам, ждущим прибавления, карта традиционно благоприятна — она несёт детскую энергию в прямом смысле. Одиночество сейчас не беда, а пауза на солнце: знакомства случаются легко и без стратегии. Любите открыто — сегодня это безопасно.</p>
-<h3>Перевёрнутое положение</h3>
-<p>Чувства живы, но приглушены: быт съел романтику, пара любит «по памяти». Иногда карта — о внутреннем ребёнке: кто-то в союзе когда-то недополучил тепла и теперь просит его неуклюже. Верните в отношения игру и глупости — они лечат лучше серьёзных разговоров. Одиноким: сначала радость к себе, потом уже поиск партнёра.</p>
-</section>
-<section class="card-section" aria-labelledby="career">
-<h2 id="career">В карьере</h2>
-<h3>Прямое положение</h3>
-<p>Полоса признания: проект увенчался успехом, руководство довольно, ваше имя звучит громче. Карта благоприятствует публичности — презентации, выступления и собеседования проходят блестяще. Хороший момент начинать своё дело, расширяться, брать ответственную роль. Энергия восстанавливается быстрее, чем тратится: работается на подъёме.</p>
-<h3>Перевёрнутое положение</h3>
-<p>Работа идёт, но признание запаздывает: результаты есть, премии и похвалы нет — оформление ваших заслуг движется медленнее желаемого. Не форсируйте: карта обещает, что успех состоится, только позже. Опаснее другое — звёздная болезнь или перегрузка ради аплодисментов.</p>
-</section>
-<section class="card-section" aria-labelledby="advice">
-<h2 id="advice">Совет карты</h2>
-<p>Признайте свой успех и разделите радость с теми, кто вам дорог. Оставьте место игре и простым удовольствиям, не превращая хорошее настроение в ещё одну обязанность.</p>
-</section>
-<section class="card-section" aria-labelledby="questions">
-<h2 id="questions">Вопросы для размышления</h2>
-<ol class="card-questions"><li>Какому своему достижению я ещё не позволил себя порадовать?</li>
-<li>С кем мне хочется разделить тепло и хорошую новость?</li>
-<li>Что приносит мне удовольствие без необходимости что-то заслуживать?</li></ol>
-</section>
-</article>
+<p>Есть и теневая грань — детскость, повернувшаяся не той стороной: капризы, требование всего сразу, эго, ожидающее аплодисментов без работы. Либо выгорание того, кто светил всем и забыл платить себе.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>День вполсилы: всё получается, но без вкуса; солнце светит, а тепла мало. Не заставляйте себя радоваться — уберите из дня лишнее, останется главное. Помогите кому-то по мелочи: чужая улыбка часто заводит вашу. Ложитесь спать пораньше — многим «серым дням» банально не хватает сна.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Работа идёт, но признание запаздывает: результаты есть, премии и похвалы нет — оформление ваших заслуг движется медленнее желаемого. Не форсируйте: карта обещает, что успех состоится, только позже. Опаснее другое — звёздная болезнь или перегрузка ради аплодисментов.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Чувства живы, но приглушены: быт съел романтику, пара любит «по памяти». Иногда карта — о внутреннем ребёнке: кто-то в союзе когда-то недополучил тепла и теперь просит его неуклюже. Верните в отношения игру и глупости — они лечат лучше серьёзных разговоров. Одиноким: сначала радость к себе, потом уже поиск партнёра.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Энергия ниже нормы: вялость, снижение иммунитета, состояние «не болею, но и не живу». Причины чаще режимные: мало света, движения и настоящего отдыха. Прогулки в светлое время и витамины по назначению врача буквально необходимы. Выгорание лечится единственным способом — настоящим отдыхом, а не его имитацией.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Перевёрнутый аркан говорит о перекрытом солнечном канале: сила течёт, но тонкой струйкой. Практики удачи работают вполсилы — сначала восстановите ресурс, затем заряжайте талисманы. Иногда это знак детских программ: внутренний ребёнок ждёт разрешения сиять. Медитация на утреннее солнце, игра, творчество без судьи возвращают связь. Свет не выключали — просто шторы забыли раздвинуть.</p></div>
+</div>
+<div class="pos-pane roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> Кратко и просто</h3>
+<div class="info-section"><h3>Основная идея</h3><p>Солнце — это прямой свет сознания.
+В отличие от Луны, оно ничего не отражает. Свет идёт непосредственно и позволяет человеку видеть происходящее открыто.</p></div>
+<div class="info-section"><h3>Как проявляется</h3><p>Детскость, естественность, удовольствие от жизни, способность делать то, что действительно нравится.</p></div>
+<div class="info-section"><h3>Работа</h3><p>Творчество, свободная деятельность, покровительство, меценатство.</p></div>
+<div class="info-section"><h3>В отношениях</h3><p>Дети, родители, забота, потомство.</p></div>
+<div class="info-section"><h3>Теневая сторона</h3><p>Детская непосредственность превращается в безответственность. Человек слишком доверяет авторитету или ожидает, что кто-то всегда будет его обеспечивать.</p></div>
+<div class="info-section"><h3>Особенность школы</h3><p>Солнце связано с XII домом, Юпитером и Нептуном. Настоящее Солнце — человек, который позволяет через себя проявляться чему-то большему.</p></div>
+<div class="roman-astro"><span class="ra-label">✷ Астрология школы</span><b>XII дом · Рыбы</b><span class="ra-sep">·</span>Юпитер фоном, Нептун хозяин (не Лев и не 5-й дом!)<div class="ra-classic">У классики Уэйта: Солнце</div></div>
+<h3 class="roman-subtitle"><span>📜</span> Развёрнуто — выжимки лекций</h3>
+<details class="roman-details" open><summary><span class="rd-icon" aria-hidden="true">✧</span> Суть карты</summary><div class="rd-body"><p>Солнце — «светило сознание», прямой свет против отражённого Луны. Человек — проводник божественного сознания: через людей, «как маленькие тонкие лучики», свет изливается на землю; люди проживают жизнь, чтобы осознать её, становясь частью сознания бога («переход от проявленного света мира сего к свету мира грядущего»). Ядро карты — защищённость под присмотром божественного отца: ребёнок делает то, что в нём заложено, веря, что за ним присмотрят. Астрологически карта у него в 12-м доме: Нептун — хозяин, но значимые аспекты несёт Юпитер — бог-защитник, протектор.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Прямое положение</summary><div class="rd-body"><ul class="st-list"><li>Значения раскладываются по четырём стихиям (стандарт деления вопросов консультаций).</li><li>- Общий ряд: детскость, радость, наслаждение жизнью; делать то, что хочется и что заложено, не заботясь о заработке. Белое = честность и благие помыслы; нагота ребёнка = полная искренность — нагота в картах всегда означает искреннее проявление.</li><li>- Работа/социум: непосредственность — искреннее поведение: человек делает дело, потому что нравится, и люди это ценят. Карта патрона: клиент «делай-делай, я заплачу столько, сколько нужно», мастер свободен от забот о деньгах и творит (пример — знакомый кузнец из Минска).</li><li>- Финансы: покровительство и меценатство. Спонсор даёт деньги, чтобы заработать, — это не Солнце; Солнце ближе меценату: «божество смотрит на нас и просто даёт, ничего не требуя взамен». Совет по карте: художнику нанять менеджера, самому деньгами не думать; сюда же гранты. Наследство выпадает редко — оно идёт по Луне (подарок богини-матери) и Колеснице (дар богов, одарённость по роду).</li><li>- Саморазвитие: творчество как создание того, чего ещё нет в мире; вдохновение-озарение, «бог нашими руками творит». Если коуч указал направление — это скорее Иерофант; Солнце — сам чувствуешь, куда направить свет через себя.</li><li>- Отношения: главное значение — родители и дети; карта-намёк на потомство: часто выпадает на желание женщины иметь ребёнка, хотя сам символ мужской. Забота одного партнёра о другом: один менее прагматичен и живёт радостно, второй берёт обеспечение; традиционно мужчина присматривает за женщиной — «замужем как за каменной стеной». Принцип родителя — правильное расстояние: присматривать, не вмешиваясь в игры; «чем чаще ребёнок падает, тем быстрее научится стоять на ногах», помогать подняться, а не мешать падать.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Негативное значение</summary><div class="rd-body"><ul class="st-list"><li>Минусы вплетены в разбор значений под формулами «если карта в негативе…», «по негативному значению»:</li><li>- работа: безответственность; дизайнер с горящими глазами гонится за эмоциями и не думает, удобно ли жить — «дизайнерский ремонт» как отсебятина; ребёнок скачет с закрытыми глазами, ловя кайф, ушёл слишком глубоко в 12-й дом и забыл про практичный 6-й;</li><li>- чрезмерное покровительство: солнце пикает над работником — приблизилось слишком близко, стало жарко, уже не до работы;</li><li>- детское: желания заходят слишком далеко — не понимаем, чем придётся платить; слепое доверие авторитету, наивная доверчивость; пользуемся происходящим, не думая о будущем;</li><li>- отношения: партнёр требует обеспечить («я такая прекрасная — ты меня обеспечь, а я тебя буду просто любить и ничего делать не буду»); клиентка недооценивает мужчину либо лентяй сидит у футбола с пивом при жене на двух работах; «любого рода альфонсы и содержанки»;</li><li>- кино-минус: профессор в «Интерстелларе» — солнце в негативе: взял смелость решить за всех, вёл людей обманом («я знаю ответ»), хоть сам не верил.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> Акценты и фишки школы</summary><div class="rd-body"><ul class="st-list"><li>- Не Лев и не 5-й дом: «большой соблазн впихнуть», но Таро и астрология не тождественны. Связки: Сила (VIII) несёт аспекты Солнца; у Дьявола (9-й дом) Юпитер главный, здесь он фоном; цитата про обновлённый разум, ведущий к внутреннему согласию, — намёк на карты впереди.</li><li>- 12-й дом: тайны, уединение, монастыри, психбольницы, дальнее плавание, эзотерика; по Луне и Водолею шёл отражённый свет интеллекта, здесь — истинный свет чувств. Антитеза 6-го дома: там одиночество материальное, тут «один, но за тобой присматривают». Девы видят непонятное как карму («религиозные пессимисты»), Рыбы — «пути господни неисповедимы, всё к лучшему» («религиозные оптимисты»). Кому дом дан — в церковь ходить не надо, Бога чувствуют в себе. Теория «мир — сон бога».</li><li>- Эгида: бог-отец Зевс=Юпитер=Один, образ отца с детства; накидка из шкуры Амалфеи или хтонического змея, у Афины — с головой Горгоны (Маг); «под эгидой ООН». Стенка на карте — та же защита: Юпитер перехватывает космический мусор в пояс Койпера; потайной сад Возрождения, backyard/front yard; безопаснее всего на виду у всех.</li><li>- Красное знамя — не кровь: цвет жизни, огонь, желание жить и двигаться вперёд.</li><li>- Подсолнухи: следуют солнцу — преданность, в отличие от двуликой Луны; трава откровений; в христианстве знак любви Господа и послушания; автопортрет ван Дейка — преклонение перед покровителем Карлом I.</li><li>- Единорог вместо белой лошади: вечная юность, поймать можно лишь рядом с детьми (родительская привязанность); чистыми помыслами увидеть; олень Дианы/Артемиды (мост к Луне); светлые силы против хтони; христианский Христос (рыба), единство противоположностей; алхимическое «белое деяние». Рыбы-инь-ян: две рыбки, борьба света и тьмы внутри (диета vs ведро мороженого).</li><li>- Творцы: настоящий художник голоден; Дали+Гала — ангел-хранитель, муза и менеджер (после её смерти не творил, не переносил солнечный свет); Пикассо «занимаюсь ремеслом», Сафронов — заработок, не творчество.</li><li>- Кино: Дамблдор (помогает незамеченным), «Интерстеллар», «Шоу Трумана» (режиссёр — не дьявол, а доброе божество ограждения), «Знаки» Шьямалана (вера, кукуруза-хтонь, пазл судьбы); «Тигрёнок на подсолнухе» — круг заботы.</li><li>- На вопрос чата о всаднике Апокалипсиса: «натягивать сову на глобус», общее лишь лошадь и флаг; 12-й дом — смерть мира материального и начало духовной. Впереди Суд и Мир (вынесены за пределы колеса Зодиака). Банцхаф не цитируется; славянского ряда на лекции нет.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Ключевые слова</summary><div class="rd-body"><ul class="st-list"><li>сознание · присмотр свыше · покровительство · меценатство · непосредственность · искренность · творчество без заказа · правильное расстояние · под эгидой · ребёнок/потомство</li><li>---</li></ul></div></details>
+</div>
 <nav class="card-pagination" aria-label="Предыдущая и следующая карта">
 <a rel="prev" href="luna.html"><span>← Предыдущая карта</span>Луна</a>
 <a rel="next" href="sud.html"><span>Следующая карта →</span>Суд</a>
 </nav>
+</article>
 </main>
 <footer class="site-footer">
   <p>Таро · Справочник значений карт</p>

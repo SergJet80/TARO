@@ -10,55 +10,127 @@
 <meta property="og:description" content="Маг — сосредоточенность и сила действия. Значение карты Таро в прямом и перевёрнутом положении, в любви и карьере. Совет карты и вопросы для размышления.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://taro.jetserg.top/cards/mag.html">
-<link rel="stylesheet" href="/css/style.css?v=3.3">
-<link rel="stylesheet" href="/css/astrology.css?v=3.3">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/major-01-magician.webp">
+<link rel="stylesheet" href="/css/style.css?v=3.4">
+<link rel="stylesheet" href="/css/astrology.css?v=3.4">
 <style>
 .main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
 .card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
 .card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
 .card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
 .card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
-.card-hero { text-align: center; padding: 14px 0 34px; }
-.card-symbol { display: block; font-family: Georgia, serif; font-size: 5rem; line-height: 1.2; color: var(--gold-bright); text-shadow: 0 0 30px var(--gold-dim); }
-.card-eyebrow { color: var(--text-dim); letter-spacing: .15em; text-transform: uppercase; font-size: .76rem; margin: 18px 0 8px; }
-.card-hero h1 { font-family: Georgia, serif; font-weight: 500; font-size: clamp(2rem, 6vw, 3.3rem); line-height: 1.2; color: var(--gold-bright); overflow-wrap: anywhere; }
-.card-number { display: block; font-size: 2.2rem; color: var(--gold); margin-bottom: 10px; }
-.card-hero > p:last-child { margin-top: 16px; color: var(--text-dim); }
-.card-section { margin: 0 0 22px; padding: 28px 32px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: rgba(23, 18, 43, .88); }
-.card-section h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500; font-size: 1.6rem; line-height: 1.3; margin-bottom: 18px; }
-.card-section h3 { color: var(--gold-bright); font-size: 1rem; margin: 22px 0 10px; }
-.card-section p + p { margin-top: 16px; }
-.card-intro { background: linear-gradient(135deg, rgba(124, 92, 191, .2), var(--bg-panel)); font-size: 1.1rem; }
-.card-keywords { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 18px 0; }
-.card-keywords li { border: 1px solid var(--gold-dim); border-radius: 999px; padding: 4px 12px; font-size: .85rem; color: var(--gold-bright); }
-.card-questions { padding-left: 24px; }
-.card-questions li { padding: 4px 0 10px 6px; }
-.card-questions li::marker { color: var(--gold); }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── Школа Современного Таро ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
 .card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
-.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius); text-decoration: none; background: var(--bg-panel); }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
 .card-pagination a:last-child { text-align: right; }
 .card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
-.card-pagination a:hover, .card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
-.card-catalog { max-width: 1120px; }
-.card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; list-style: none; }
-.card-grid li { min-width: 0; }
-.card-tile { display: flex; flex-direction: column; align-items: flex-start; height: 100%; padding: 24px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel); text-decoration: none; }
-.card-tile-symbol { font-size: 2rem; line-height: 1.3; }
-.card-tile-number { color: var(--text-dim); font-size: .85rem; margin: 18px 0 4px; }
-.card-tile strong { font-family: Georgia, serif; font-size: 1.4rem; font-weight: 500; }
-.card-tile-desc { color: var(--text-dim); font-size: .9rem; margin-top: 6px; }
-@media (max-width: 700px) { .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
 @media (max-width: 480px) {
   .main-nav { padding: 12px 12px 0; }
   .main-nav a { padding: 8px 12px; font-size: .9rem; }
-  .card-page { padding: 22px 16px 36px; }
-  .card-section { padding: 22px 20px; }
-  .card-tile { padding: 18px 14px; }
-  .card-tile strong { font-size: 1.16rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
   .card-pagination { gap: 10px; }
   .card-pagination a { padding: 16px 12px; }
 }
-@media (max-width: 350px) { .card-grid { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
 </style>
 <script type="application/ld+json">
@@ -88,67 +160,76 @@
     <a href="/">Главная</a>
     <a href="/cards/" class="mn-active">Карты</a>
     <a href="/astrology/">Астрология</a>
-    <a href="/lenormand/">Ленорман</a>
     <a href="/runes/">Руны</a>
     <a href="/spreads.html">Расклады</a>
   </div>
 </nav>
 <main class="card-page">
 <nav class="card-crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/cards/">Карты</a> / <span aria-current="page">Маг</span></nav>
-<article>
-<header class="card-hero">
-<span class="card-symbol" aria-hidden="true">✦</span>
-<p class="card-eyebrow">Старшие арканы</p>
-<h1><span class="card-number">I</span>Маг</h1>
-<p>Воля и действие</p>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="/img/cards/major-01-magician.webp" alt="Маг — карта Таро Уэйта" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Старший аркан · I</p>
+<h1 class="m-title"><span class="card-number">I</span>Маг</h1>
+<p class="m-en">The Magician</p>
+<p class="m-meta">Стихия: <b>Воздух</b> &nbsp;·&nbsp; Астрология: <b>Меркурий</b></p>
+</div>
 </header>
-<section class="card-section card-intro" aria-labelledby="brief">
-<h2 id="brief">Краткое значение</h2>
-<p>Маг собирает разрозненные возможности в одно точное действие. Карта напоминает, что умение становится силой, когда вы выбираете задачу и подтверждаете намерения поступками.</p>
-</section>
-<section class="card-section" aria-labelledby="upright">
-<h2 id="upright">Прямое положение</h2>
-<p>Вся сила уже в ваших руках: воля, концентрация и умение соединять замысел с делом; наступает момент, когда вы можете, умеете и точно знаете, с чего начать движение к цели.</p>
-<ul class="card-keywords" aria-label="Ключевые слова"><li>воля</li><li>мастерство</li><li>концентрация</li><li>инициатива</li><li>манифестация</li><li>ловкость</li><li>ресурс</li></ul>
-<p>Маг стоит у стола, на котором разложены инструменты всех мастей — жезл, кубок, меч и пентакль доступны ему одновременно. Одна рука поднята к небу, другая опущена к земле: классическая формула «что наверху, то и внизу» действует через него самого. Это первый аркан осознанной воли после невинного нуля: замысел, который нашёл руки.</p>
-<p>Карта означает момент, когда понимание, красноречие и решимость совпадают. Вы не просто хотите — вы можете и знаете, с чего начать. Меркурианская природа даёт гибкость ума, торговую жилку, талант переводить сложное в понятное. Маг — аркан самореализации: мир откликается тому, кто чётко формулирует намерение и подкрепляет его действием.</p>
-</section>
-<section class="card-section" aria-labelledby="reversed">
-<h2 id="reversed">Перевёрнутое положение</h2>
-<p>Сила утекает сквозь пальцы: талант растрачивается на мелочи, слова расходятся с делами, а уверенность прикрывает пустоту — рядом может стоять ловкий манипулятор или собственное внутреннее самозванство.</p>
-<ul class="card-keywords" aria-label="Ключевые слова"><li>манипуляция</li><li>обман</li><li>самозванство</li><li>растраченный талант</li><li>суетливость</li><li>размытая цель</li></ul>
-<p>Перевёрнутый Маг — тот же фокусник, но стол повёрнут к публике, а не к делу. Воля рассеивается на десяток мелких начинаний, обещания опережают возможности, а уверенность маскирует пустоту. В худшем варианте карта указывает на манипулятора: человека, который сознательно использует доверие, продавая иллюзию компетентности, — от продавца чудо-курса до коллеги, присваивающего чужие идеи.</p>
-<p>Чаще, однако, аркан говорит о внутреннем самозванстве: способности есть, но страх разоблачения заставляет их прятать или имитировать деятельность вместо деятельности. Средство простое и неприятное — выбрать одну цель и довести её до результата, сверяя каждое заявление с фактом. Пока это не сделано, любая харизма остаётся дешёвым трюком.</p>
-</section>
-<section class="card-section" aria-labelledby="love">
-<h2 id="love">В любви</h2>
-<h3>Прямое положение</h3>
-<p>В любви Маг — период притяжения, когда слова и жесты попадают в цель: ухаживания изобретательны, разговоры глубокие, паузы выразительные. Одиноким карта обещает встречу с человеком яркого ума, часто из круга общения, учёбы или рабочих контактов. В паре полезно завести общее дело — от ремонта до курса английского: совместное действие сплачивает сильнее признаний. Тень аркана — красивые речи без поступков: если отношения держатся только на них, пора проверить их делом.</p>
-<h3>Перевёрнутое положение</h3>
-<p>В отношениях аркан указывает на игру: недоговорённости, двойную жизнь, манипуляцию чувством вины или ревностью как способом удержать. Иногда это просто болтовня — обещания золотых гор вместо конкретики, от которых партнёру то тепло, то тревожно. Для одиночек карта советует проверять слова делом: блестящий рассказчик не всегда надёжный человек.</p>
-</section>
-<section class="card-section" aria-labelledby="career">
-<h2 id="career">В карьере</h2>
-<h3>Прямое положение</h3>
-<p>Прямой Маг — карта профессионала: проект требует именно ваших компетенций, и вы это знаете. Отличное время презентаций, собеседований, сделок и защиты идей; переговорщик с такой энергией читает собеседника и мягко ведёт к нужному решению. Руководителю карта даёт авторитет без давления — вас слушают, потому что понимают. Следите лишь за соблазном превратить работу в шоу: фокус должен заканчиваться результатом, а не аплодисментами.</p>
-<h3>Перевёрнутое положение</h3>
-<p>На работе перевёрнутый Маг — размазанная фокусировка: совещания вместо решений, отчёты вместо продукта, три проекта вместо одного завершённого. Карта предупреждает о недобросовестных партнёрах и о соблазне приукрасить отчётность — репутация, уличённая в неточности, дорожает медленнее всего. Возможен и кризис компетентности: задача выросла, а навык остался прежним. Честный ответ — учиться или делегировать, а не изображать понимание кивками.</p>
-</section>
-<section class="card-section" aria-labelledby="advice">
-<h2 id="advice">Совет карты</h2>
-<p>Выберите одно дело и используйте то, что уже умеете, вместо бесконечного поиска идеального инструмента. Обещайте лишь то, что готовы сделать, и покажите результат прежде, чем рассказывать о следующем замысле.</p>
-</section>
-<section class="card-section" aria-labelledby="questions">
-<h2 id="questions">Вопросы для размышления</h2>
-<ol class="card-questions"><li>Какой мой навык уже позволяет сдвинуть дело с места?</li>
-<li>На какие мелочи уходит внимание, нужное главной задаче?</li>
-<li>Какой поступок подтвердит мои слова сегодня?</li></ol>
-</section>
-</article>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Положения карты">
+<label class="pos-tab" for="pos-upright">Прямое положение</label>
+<label class="pos-tab" for="pos-reversed">Перевёрнутое положение</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">Школа Современного Таро</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">воля</span><span class="kw">мастерство</span><span class="kw">концентрация</span><span class="kw">инициатива</span><span class="kw">манифестация</span><span class="kw">ловкость</span><span class="kw">ресурс</span></div>
+<p class="short-value">Вся сила уже в ваших руках: воля, концентрация и умение соединять замысел с делом; наступает момент, когда вы можете, умеете и точно знаете, с чего начать движение к цели.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Маг стоит у стола, на котором разложены инструменты всех мастей — жезл, кубок, меч и пентакль доступны ему одновременно. Одна рука поднята к небу, другая опущена к земле: классическая формула «что наверху, то и внизу» действует через него самого. Это первый аркан осознанной воли после невинного нуля: замысел, который нашёл руки.</p>
+<p>Карта означает момент, когда понимание, красноречие и решимость совпадают. Вы не просто хотите — вы можете и знаете, с чего начать. Меркурианская природа даёт гибкость ума, торговую жилку, талант переводить сложное в понятное. Маг — аркан самореализации: мир откликается тому, кто чётко формулирует намерение и подкрепляет его действием.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>День подходит для переговоров, покупок, оформления документов и всего, где нужно ясно излагать и быстро соображать. Можно вести несколько дел сразу — меркурианская энергия любит многозадачность, — но держите список, чтобы ничего не потерялось. Хорошо начать обучение чему-то новому или применить навык, который лежал без дела. Вечером перечитайте отправленное: в такие дни легко пообещать лишнего или написать не тому адресату.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Прямой Маг — карта профессионала: проект требует именно ваших компетенций, и вы это знаете. Отличное время презентаций, собеседований, сделок и защиты идей; переговорщик с такой энергией читает собеседника и мягко ведёт к нужному решению. Руководителю карта даёт авторитет без давления — вас слушают, потому что понимают. Следите лишь за соблазном превратить работу в шоу: фокус должен заканчиваться результатом, а не аплодисментами.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>В любви Маг — период притяжения, когда слова и жесты попадают в цель: ухаживания изобретательны, разговоры глубокие, паузы выразительные. Одиноким карта обещает встречу с человеком яркого ума, часто из круга общения, учёбы или рабочих контактов. В паре полезно завести общее дело — от ремонта до курса английского: совместное действие сплачивает сильнее признаний. Тень аркана — красивые речи без поступков: если отношения держатся только на них, пора проверить их делом.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Карта связана с нервной системой и проводящими каналами тела: энергия бодрит, но может «пересушить». Хорошо идут дела, требующие координации и мелкой моторики; диагностические процедуры в этот период точны, руки специалистов уверенны. Осторожнее с кофеином, стимуляторами и недосыпом — меркурианская гонка истощает нервы незаметно.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Путь Бет, «дома», соединяет Кетер и Бину: воля, которая строит себе жильё в материи. Меркурий делает Мага покровителем герметических искусств — от астрологии до искусства памяти; его главный инструмент — слово, произнесённое с силой. В ритуале аркан соответствует концентрации намерения перед началом любой работы: сначала собрать внимание в точку, затем действовать.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">манипуляция</span><span class="kw">обман</span><span class="kw">самозванство</span><span class="kw">растраченный талант</span><span class="kw">суетливость</span><span class="kw">размытая цель</span></div>
+<p class="short-value">Сила утекает сквозь пальцы: талант растрачивается на мелочи, слова расходятся с делами, а уверенность прикрывает пустоту — рядом может стоять ловкий манипулятор или собственное внутреннее самозванство.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Перевёрнутый Маг — тот же фокусник, но стол повёрнут к публике, а не к делу. Воля рассеивается на десяток мелких начинаний, обещания опережают возможности, а уверенность маскирует пустоту. В худшем варианте карта указывает на манипулятора: человека, который сознательно использует доверие, продавая иллюзию компетентности, — от продавца чудо-курса до коллеги, присваивающего чужие идеи.</p>
+<p>Чаще, однако, аркан говорит о внутреннем самозванстве: способности есть, но страх разоблачения заставляет их прятать или имитировать деятельность вместо деятельности. Средство простое и неприятное — выбрать одну цель и довести её до результата, сверяя каждое заявление с фактом. Пока это не сделано, любая харизма остаётся дешёвым трюком.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>В быту день суеты без итога: десять начатых дел, ни одного законченного, перепутанные записи, потерянное время на «важные» звонки. Повышается риск обмана — проверяйте чеки, сдачу, условия подписки, не ведитесь на срочность. Отложите крупные покупки и решения: сегодня они принимаются из азарта, а не из необходимости.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>На работе перевёрнутый Маг — размазанная фокусировка: совещания вместо решений, отчёты вместо продукта, три проекта вместо одного завершённого. Карта предупреждает о недобросовестных партнёрах и о соблазне приукрасить отчётность — репутация, уличённая в неточности, дорожает медленнее всего. Возможен и кризис компетентности: задача выросла, а навык остался прежним. Честный ответ — учиться или делегировать, а не изображать понимание кивками.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>В отношениях аркан указывает на игру: недоговорённости, двойную жизнь, манипуляцию чувством вины или ревностью как способом удержать. Иногда это просто болтовня — обещания золотых гор вместо конкретики, от которых партнёру то тепло, то тревожно. Для одиночек карта советует проверять слова делом: блестящий рассказчик не всегда надёжный человек.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Энергетика истощается через нервы: бессонница, тик, заикание, обострение хронических реакций на стресс — типичные маркеры этого периода. Симптомы могут путаться и «мигать», затрудняя диагностику: фиксируйте их письменно, чтобы не путать врача размытыми описаниями. Остерегайтесь самолечения по рекламе — перевёрнутый Маг торгует и чудесными пилюлями. Помогает снижение стимуляции: меньше экранов и кофеина, больше воды, сна и размеренных прогулок.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>В духовном смысле перевёрнутый Бет — слово, оторванное от смысла: заговоры без понимания, техники без этики, магия впечатления вместо магии изменения. Карта предупреждает о подмене цели средствами — коллекционирование инструментов вместо одной доведённой до конца работы. Она также указывает на утечку силы: обещания, данные легкомысленно, продолжают действовать и тянуть энергию. Практическое лекарство — молчание и один завершённый ритуал: малое, исполненное точно, восстанавливает канал.</p></div>
+</div>
+<div class="pos-pane roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> Кратко и просто</h3>
+<div class="info-section"><h3>Основная идея</h3><p>Если Дурак только готов сделать шаг, то Маг уже решил, чего хочет, и начинает действовать.
+Воля Мага — это не просто желание, а желание, которому придали направление. Идея осознаётся, обдумывается и постепенно воплощается в материальном мире. Четыре стихии на столе становятся инструментами, с помощью которых мысль превращается в действие.</p></div>
+<div class="info-section"><h3>Как проявляется</h3><p>Главное качество карты — концентрация. Маг не распыляется на десятки желаний. Его воля похожа на остриё копья: есть одна цель, и энергия направлена именно туда.
+Отсюда решительность, планирование, находчивость и способность убеждать людей. Настоящий лидер Мага не обязательно заставляет других идти за собой. Он настолько увлечён собственной идеей, что окружающие сами начинают в неё верить.</p></div>
+<div class="info-section"><h3>В отношениях</h3><p>Маг — инициатива, флирт, уверенность, демонстрация симпатии. Человек не просто испытывает интерес, а планирует свои действия.</p></div>
+<div class="info-section"><h3>Работа</h3><p>Умный, энергичный специалист, профессионал, который умеет найти выход из сложной ситуации. Особенно хорош Маг там, где требуется создать что-то из почти ничего: собрать работающий проект из ограниченных ресурсов.</p></div>
+<div class="info-section"><h3>Теневая сторона</h3><p>Когда концентрация становится чрезмерной, Маг превращается в человека, который идёт напролом.
+Рациональность превращается в попытку всё контролировать, лидерство — в желание подчинить окружающих, а находчивость — в манипуляцию.</p></div>
+<div class="info-section"><h3>Особенность школы</h3><p>В школе Современного Таро Маг связан не с Меркурием, а с Марсом и образом Афины: мысль должна не просто существовать, а получить воплощение.</p></div>
+<div class="roman-astro"><span class="ra-label">✷ Астрология школы</span><b>I дом · Овен</b><span class="ra-sep">·</span>Марс и особенно Афина (не Меркурий: ему достаётся лишь передача идеи)<div class="ra-classic">У классики Уэйта: Меркурий</div></div>
+<h3 class="roman-subtitle"><span>📜</span> Развёрнуто — выжимки лекций</h3>
+<details class="roman-details" open><summary><span class="rd-icon" aria-hidden="true">✧</span> Суть карты</summary><div class="rd-body"><p>Маг — олицетворение воли и осознанного желания человека: идея приходит «свыше», он осознаёт её, планирует и начинает воплощать в материальном мире через четыре стихии на столе. Жест «что наверху, то и внизу» — понимание, что одни законы действуют и в макрокосмосе, и в микрокосмосе; маг берёт высшие идеи и разворачивает их на нашем уровне. Одновременно это «проявление воли к освобождению от единства с тем, что вверху»: эго отделяет человека от Бога. Маг — не законченное, а текущее действие, переход от мысли к делу, начало пути (первая карта после Шута).</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Прямое положение</summary><div class="rd-body"><ul class="st-list"><li>Ядро — воля как концентрация на одном чётко выраженном желании («остриё копья, а не режущая кромка меча»):</li><li>- Решимость и готовность действовать.</li><li>- Планирование: начало действия состоит в разумном осмыслении этого действия.</li><li>- Лидерство: маг никем не управляет — заражает людей блеском своей идеи, и за ним идут сами.</li><li>- Осознанность, разумный подход к делу, ловкость, хитроумие.</li><li>- Образ «Брюса всемогущего»: человек уже понял, что может воплотить любую идею, но ещё не овладел силами полностью.</li><li>Отношения: очаровывание своей идеей — уверенная личность явно показывает симпатию, флиртует, остроумит, даёт обещания и сам в них верит; инициатива начала отношений (в т.ч. «боевая Афина» — активная женщина). На вопрос «что он думает / собирается ли что-то делать» Маг отвечает: действия спланированы, осознанны, целенаправленны. Хороший любовник — умный любовник: свечи, шампанское и лепестки роз не случайны, всё спланировано.</li><li>Работа: энергичный умный специалист, энтузиаст, расчётливый профессионал; начальник-лидер, который не заставляет, а сам показывает, как надо; конкурентоспособность, находчивость («смастерить из говна и палок»), убедительность на переговорах; идеален на стартапах: «идей и воли навалом — дайте четвёртую стихию, деньги».</li><li>Саморазвитие: разумный подход — выбирать школу и инструменты осознанно, ставя цель; ощущение уникальности — развивать себя, а не шаблон («вы не йогу развивайте, вы себя развивайте»); быть творцом — воплощать теорию на практике. По системе школы Маг относится к Марсу, а Марс — это эго, «я хочу».</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Негативное значение</summary><div class="rd-body"><ul class="st-list"><li>Негативному значению уделено примерно столько же внимания, сколько прямому. Школа работает только прямыми картами: все смыслы есть в карте всегда — при «пережиме» маг «ломается»; новичкам работа с перевёрнутыми картами снимает ответственность.</li><li>- Маниакальность: концентрация на одном желании превращается в одержимость, движение на пролом.</li><li>- Безудержная неконтролируемая активность, неугомонность.</li><li>- Чрезмерная рационализация: препарировать каждую идею, уходить в детали — маг «затормаживается».</li><li>- Желание подчинить других своей воле, отрицание чужих идей, бесчувственность к чужим желаниям.</li><li>- Негативный маг — Локи, трикстер, тот самый фокусник: выдаёт ловкость рук за реальную магию.</li><li>Отношения: манипуляции, навязчивость, грубость («всё тычит палочкой, не видя, что мозолит глаза»); обман и самообман; спланированная им ситуация, которая вам не нравится — «он вас туда привёл заранее»; отрицание интуиции, неверный расчёт; измена/развод — спланированные («в сауну случайно не попадают»); сознательно скрываемые планы.</li><li>Работа: воровство чужой идеи с выдачей за свою; мошенничество; начальник-самодур («сегодня вперёд, завтра назад»); звёздная болезнь, неверный расчёт собственных сил, безответственные лидеры; нечестная конкуренция («воины корпорации до добра не доводят»).</li><li>Саморазвитие: эгоистичность как обратная сторона ощущения избранности; неумение остановиться — «съесть больше, чем вмещает желудок», хвататься за Таро, руны и всё сразу; разум, который никак не выключаешь; поиск доказательств там, где надо просто попробовать самому.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> Акценты и фишки школы</summary><div class="rd-body"><ul class="st-list"><li>- Главная «ересь» школы: Маг относится не к Меркурию, а к Марсу и особенно Афине (Меркурию достаётся лишь передача идеи). Не Арес со слепой яростью, а цивилизованный Марс; лучший образ — Афина: мысль Зевса, осуществляемая в действии.</li><li>- Копьё vs меч: копьё — сконцентрированная колющая точка (одно желание), меч — растянутая режущая линия.</li><li>- В руке — волшебная палочка (дарование, объединяющее стихии), а не жезл: масти лежат отдельно на столе; квадратный стол — материальный мир (квадрат = материя, треугольник = дух).</li><li>- Лимниската над головой и змея на поясе — один знак: бесконечность, перерождение, циклы, переход на следующий уровень (потом на Колесе Фортуны и Силе).</li><li>- Красный плащ — страстное желание; белые тога и повязка — чистота намерений; золотой фон — благородные помыслы; цветы у ног — «это только цветочки», будущие плоды.</li><li>- Славянский ряд: Маг — Иван Царевич, а не Дурак (у него есть сила, ум и умение); из богатырей — Алёша Попович (сила мудрости). Серый волк и лев — уже карта Сила.</li><li>- Современные образы: Люк Скайуокер, Нео, политик, который сам садится за штурвал, чтобы показать, что умеет (маг — противоположность императору).</li><li>- Фокусник = маг в негативе: иллюзия волшебства вместо реального умения.</li><li>- Совет от любимого автора Хайо Банцхафа: проявить инициативу, дать ход движению, решиться и справляться с проблемами.</li><li>- Методология: «карты Таро — это эмоции человека», карту надо чувствовать, а не только знать значения.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Ключевые слова</summary><div class="rd-body"><ul class="st-list"><li>Воля · осознанное желание · концентрация на одной цели · целенаправленность · планирование · инициатива · лидерство, за которым идут · «что наверху, то и внизу» · материализация идеи, творец · энергия Марса/Афины · фокусник-трикстер (негатив).</li><li>---</li></ul></div></details>
+</div>
 <nav class="card-pagination" aria-label="Предыдущая и следующая карта">
 <a rel="prev" href="durak.html"><span>← Предыдущая карта</span>Дурак</a>
 <a rel="next" href="zhrefca.html"><span>Следующая карта →</span>Верховная жрица</a>
 </nav>
+</article>
 </main>
 <footer class="site-footer">
   <p>Таро · Справочник значений карт</p>

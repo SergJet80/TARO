@@ -10,55 +10,127 @@
 <meta property="og:description" content="Императрица — забота, творчество и изобилие. Значение карты Таро в прямом и перевёрнутом положении, в любви и карьере. Совет карты и вопросы для размышления.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://taro.jetserg.top/cards/imperatrica.html">
-<link rel="stylesheet" href="/css/style.css?v=3.3">
-<link rel="stylesheet" href="/css/astrology.css?v=3.3">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/major-03-empress.webp">
+<link rel="stylesheet" href="/css/style.css?v=3.4">
+<link rel="stylesheet" href="/css/astrology.css?v=3.4">
 <style>
 .main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
 .card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
 .card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
 .card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
 .card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
-.card-hero { text-align: center; padding: 14px 0 34px; }
-.card-symbol { display: block; font-family: Georgia, serif; font-size: 5rem; line-height: 1.2; color: var(--gold-bright); text-shadow: 0 0 30px var(--gold-dim); }
-.card-eyebrow { color: var(--text-dim); letter-spacing: .15em; text-transform: uppercase; font-size: .76rem; margin: 18px 0 8px; }
-.card-hero h1 { font-family: Georgia, serif; font-weight: 500; font-size: clamp(2rem, 6vw, 3.3rem); line-height: 1.2; color: var(--gold-bright); overflow-wrap: anywhere; }
-.card-number { display: block; font-size: 2.2rem; color: var(--gold); margin-bottom: 10px; }
-.card-hero > p:last-child { margin-top: 16px; color: var(--text-dim); }
-.card-section { margin: 0 0 22px; padding: 28px 32px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: rgba(23, 18, 43, .88); }
-.card-section h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500; font-size: 1.6rem; line-height: 1.3; margin-bottom: 18px; }
-.card-section h3 { color: var(--gold-bright); font-size: 1rem; margin: 22px 0 10px; }
-.card-section p + p { margin-top: 16px; }
-.card-intro { background: linear-gradient(135deg, rgba(124, 92, 191, .2), var(--bg-panel)); font-size: 1.1rem; }
-.card-keywords { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 18px 0; }
-.card-keywords li { border: 1px solid var(--gold-dim); border-radius: 999px; padding: 4px 12px; font-size: .85rem; color: var(--gold-bright); }
-.card-questions { padding-left: 24px; }
-.card-questions li { padding: 4px 0 10px 6px; }
-.card-questions li::marker { color: var(--gold); }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── Школа Современного Таро ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
 .card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
-.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius); text-decoration: none; background: var(--bg-panel); }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
 .card-pagination a:last-child { text-align: right; }
 .card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
-.card-pagination a:hover, .card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
-.card-catalog { max-width: 1120px; }
-.card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; list-style: none; }
-.card-grid li { min-width: 0; }
-.card-tile { display: flex; flex-direction: column; align-items: flex-start; height: 100%; padding: 24px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel); text-decoration: none; }
-.card-tile-symbol { font-size: 2rem; line-height: 1.3; }
-.card-tile-number { color: var(--text-dim); font-size: .85rem; margin: 18px 0 4px; }
-.card-tile strong { font-family: Georgia, serif; font-size: 1.4rem; font-weight: 500; }
-.card-tile-desc { color: var(--text-dim); font-size: .9rem; margin-top: 6px; }
-@media (max-width: 700px) { .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
 @media (max-width: 480px) {
   .main-nav { padding: 12px 12px 0; }
   .main-nav a { padding: 8px 12px; font-size: .9rem; }
-  .card-page { padding: 22px 16px 36px; }
-  .card-section { padding: 22px 20px; }
-  .card-tile { padding: 18px 14px; }
-  .card-tile strong { font-size: 1.16rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
   .card-pagination { gap: 10px; }
   .card-pagination a { padding: 16px 12px; }
 }
-@media (max-width: 350px) { .card-grid { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
 </style>
 <script type="application/ld+json">
@@ -88,67 +160,75 @@
     <a href="/">Главная</a>
     <a href="/cards/" class="mn-active">Карты</a>
     <a href="/astrology/">Астрология</a>
-    <a href="/lenormand/">Ленорман</a>
     <a href="/runes/">Руны</a>
     <a href="/spreads.html">Расклады</a>
   </div>
 </nav>
 <main class="card-page">
 <nav class="card-crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/cards/">Карты</a> / <span aria-current="page">Императрица</span></nav>
-<article>
-<header class="card-hero">
-<span class="card-symbol" aria-hidden="true">❀</span>
-<p class="card-eyebrow">Старшие арканы</p>
-<h1><span class="card-number">III</span>Императрица</h1>
-<p>Забота и рост</p>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="/img/cards/major-03-empress.webp" alt="Императрица — карта Таро Уэйта" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Старший аркан · III</p>
+<h1 class="m-title"><span class="card-number">III</span>Императрица</h1>
+<p class="m-en">The Empress</p>
+<p class="m-meta">Стихия: <b>Земля</b> &nbsp;·&nbsp; Астрология: <b>Венера</b></p>
+</div>
 </header>
-<section class="card-section card-intro" aria-labelledby="brief">
-<h2 id="brief">Краткое значение</h2>
-<p>Императрица говорит о росте, которому нужны внимание, время и удовольствие от процесса. Она помогает увидеть разницу между заботой, питающей жизнь, и опекой, под которой уже трудно дышать.</p>
-</section>
-<section class="card-section" aria-labelledby="upright">
-<h2 id="upright">Прямое положение</h2>
-<p>Всё растёт, когда о нём заботятся: изобилие, творчество, чувственность и материнское тепло жизни; идея и отношения приносят урожай, если их терпеливо холят, а не торопят по чужому расписанию.</p>
-<ul class="card-keywords" aria-label="Ключевые слова"><li>изобилие</li><li>плодородие</li><li>забота</li><li>творчество</li><li>чувственность</li><li>материнство</li><li>урожай</li></ul>
-<p>Императрица восседает среди спелой пшеницы, у её ног — серповидная луна, платье расшито гранатами. Венерианская природа карты говорит языком роста: сад, который поливают; ребёнок, которого любят; идея, которой дают дозреть. После молчания Жрицы это первое громкое «да» жизни — щедрое, телесное, земное.</p>
-<p>Как архетип она соединяет мать, хозяйку и творца: один и тот же принцип питает и живое, и созданное руками. В раскладе Императрица — знак урожая и беременности, буквальной или творческой: проект набрал соки и скоро появится на свет. Карта напоминает: изобилие не приходит к тем, кто стыдится желать; чтобы кормить других, нужно самому быть сытым.</p>
-</section>
-<section class="card-section" aria-labelledby="reversed">
-<h2 id="reversed">Перевёрнутое положение</h2>
-<p>Перекос в заботе: гиперопека и растворение в чужих нуждах душат близких — либо наступает творческая засуха, и жизнь пускается на самотёк, забытая собственной уставшей хозяйкой.</p>
-<ul class="card-keywords" aria-label="Ключевые слова"><li>гиперопека</li><li>творческий застой</li><li>зависимость</li><li>запущенность себя</li><li>удушающая забота</li><li>скудость</li></ul>
-<p>Перевёрнутая Императрица — сбой в механизме питания жизни. Первый вариант — гиперопека и растворение в чужих потребностях: человек настолько занят ролью «кормить», что забывает есть; помощь становится контролем, а щедрость — вечным долгом другого. Второй — творческая засуха: идеи не оплодотворяются, тело вялое, радость вытеснена списком обязанностей и чужими ожиданиями.</p>
-<p>Часто карта указывает на пренебрежение собственной телесностью: сон, еда, отдых и прикосновения отложены на потом, и почва жизни истощилась. Аркан предлагает вернуться к базовому: приготовить вкусное, выспаться, сказать «нет» лишней нагрузке. Плод не зреет по расписанию чужих требований — восстановите землю, и рост возобновится сам.</p>
-</section>
-<section class="card-section" aria-labelledby="love">
-<h2 id="love">В любви</h2>
-<h3>Прямое положение</h3>
-<p>Одна из главных карт семейного счастья: нежность, чувственность, желание баловать и быть балованным. Парам, думающим о детях, Императрица традиционно обещает зачатие; всем остальным — период медового тепла даже спустя годы. Одиночкам карта советует выйти из головы в тело: вкус, запах, танец и прикосновение приводят в жизнь тех, кого ум не подпустил бы. Берегитесь лишь превратить заботу в обслуживание партнёра — любовь не работает по принципу шведского стола с бесплатными добавками.</p>
-<h3>Перевёрнутое положение</h3>
-<p>В отношениях карта рисует удушающую любовь: партнёр решён, накормлен, проверен — и потихоньку задыхается; либо обратную картину — равнодушие, когда близкие живут рядом с человеком, который давно не замечает их потребностей. Одиночкам она указывает на зависимость от мнения родни или бывшего: сердце занято старой привязкой, и новое не помещается.</p>
-</section>
-<section class="card-section" aria-labelledby="career">
-<h2 id="career">В карьере</h2>
-<h3>Прямое положение</h3>
-<p>В деле Императрица — проект в стадии активного роста, требующий не рывка, а регулярного ухода: команду, бюджет и отношения с клиентами нужно поливать, как грядки. Благоприятен период для творческих профессий, общепита, красоты, образования — всего, что делает жизнь людей приятнее. Руководителю карта советует стиль садовника: создавать условия, а не давить дедлайном.</p>
-<h3>Перевёрнутое положение</h3>
-<p>Профессионально перевёрнутая Императрица — застой проекта и выгорание команды: ресурсы вкладываются, а роста нет, потому что поливается всё подряд, кроме главного. Руководителю карта указывает на микроменеджмент: сотрудники задыхаются под опекой и разучиваются думать сами. Творческим профессиям она обещает блок — черновики без финала, идеи без смелости. Лекарство — делегирование, приоритеты и честный отпуск: урожай не собирают с истощённой земли.</p>
-</section>
-<section class="card-section" aria-labelledby="advice">
-<h2 id="advice">Совет карты</h2>
-<p>Поддержите то, что хотите вырастить: уделите время идее, дому или близкому разговору. Не требуйте мгновенной отдачи и проверьте, остаются ли у вас силы и радость для собственной жизни.</p>
-</section>
-<section class="card-section" aria-labelledby="questions">
-<h2 id="questions">Вопросы для размышления</h2>
-<ol class="card-questions"><li>Что в моей жизни сейчас нуждается в регулярной, простой заботе?</li>
-<li>Где я тороплю результат, которому ещё нужно время?</li>
-<li>Как я могу поддержать близкого, не делая всё за него?</li></ol>
-</section>
-</article>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Положения карты">
+<label class="pos-tab" for="pos-upright">Прямое положение</label>
+<label class="pos-tab" for="pos-reversed">Перевёрнутое положение</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">Школа Современного Таро</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">изобилие</span><span class="kw">плодородие</span><span class="kw">забота</span><span class="kw">творчество</span><span class="kw">чувственность</span><span class="kw">материнство</span><span class="kw">урожай</span></div>
+<p class="short-value">Всё растёт, когда о нём заботятся: изобилие, творчество, чувственность и материнское тепло жизни; идея и отношения приносят урожай, если их терпеливо холят, а не торопят по чужому расписанию.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Императрица восседает среди спелой пшеницы, у её ног — серповидная луна, платье расшито гранатами. Венерианская природа карты говорит языком роста: сад, который поливают; ребёнок, которого любят; идея, которой дают дозреть. После молчания Жрицы это первое громкое «да» жизни — щедрое, телесное, земное.</p>
+<p>Как архетип она соединяет мать, хозяйку и творца: один и тот же принцип питает и живое, и созданное руками. В раскладе Императрица — знак урожая и беременности, буквальной или творческой: проект набрал соки и скоро появится на свет. Карта напоминает: изобилие не приходит к тем, кто стыдится желать; чтобы кормить других, нужно самому быть сытым.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>День телесных удовольствий и простых радостей: готовьте, принимайте гостей, наводите красоту в доме, гуляйте там, где зелено. Хорошо покупать вещи для уюта, растения, продукты с рынка, а не из списка. Забота о близких сегодня возвращается сторицей — но включите себя в тот же список заботы.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>В деле Императрица — проект в стадии активного роста, требующий не рывка, а регулярного ухода: команду, бюджет и отношения с клиентами нужно поливать, как грядки. Благоприятен период для творческих профессий, общепита, красоты, образования — всего, что делает жизнь людей приятнее. Руководителю карта советует стиль садовника: создавать условия, а не давить дедлайном.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Одна из главных карт семейного счастья: нежность, чувственность, желание баловать и быть балованным. Парам, думающим о детях, Императрица традиционно обещает зачатие; всем остальным — период медового тепла даже спустя годы. Одиночкам карта советует выйти из головы в тело: вкус, запах, танец и прикосновение приводят в жизнь тех, кого ум не подпустил бы. Берегитесь лишь превратить заботу в обслуживание партнёра — любовь не работает по принципу шведского стола с бесплатными добавками.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Карта благоприятна: организм восстанавливается, лечение проходит мягко, тело благодарно отзывается на заботу. Особенно хороши натуральное питание, массаж, водные процедуры — всё приятное и полезное одновременно. При планировании беременности это одно из самых сильных указаний колоды. Обратная сторона — склонность к излишествам: сладкое, застолья, расслабленность; удовольствие работает дозой, а не бесконечностью, поэтому балуйте себя осознанно.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Путь Далет, «двери», соединяет Хокму и Бину: жизнь входит в форму через врата любви. Венера делает Императрицу покровительницей плодородия во всех смыслах — от урожая до вдохновения; её стихии — земля, вода и всё цветущее. В практике аркан используют для благословения дома, привлечения достатка, освящения садов и любых начинаний, связанных с ростом. Медитация на неё возвращает базовое доверие «мир меня кормит» — почву, из которой вырастает настоящая щедрость.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">гиперопека</span><span class="kw">творческий застой</span><span class="kw">зависимость</span><span class="kw">запущенность себя</span><span class="kw">удушающая забота</span><span class="kw">скудость</span></div>
+<p class="short-value">Перекос в заботе: гиперопека и растворение в чужих нуждах душат близких — либо наступает творческая засуха, и жизнь пускается на самотёк, забытая собственной уставшей хозяйкой.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Перевёрнутая Императрица — сбой в механизме питания жизни. Первый вариант — гиперопека и растворение в чужих потребностях: человек настолько занят ролью «кормить», что забывает есть; помощь становится контролем, а щедрость — вечным долгом другого. Второй — творческая засуха: идеи не оплодотворяются, тело вялое, радость вытеснена списком обязанностей и чужими ожиданиями.</p>
+<p>Часто карта указывает на пренебрежение собственной телесностью: сон, еда, отдых и прикосновения отложены на потом, и почва жизни истощилась. Аркан предлагает вернуться к базовому: приготовить вкусное, выспаться, сказать «нет» лишней нагрузке. Плод не зреет по расписанию чужих требований — восстановите землю, и рост возобновится сам.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>В быту день, когда забота буксует: дом захламлён, питание на бегу, близкие получают раздражённые нотации вместо тепла. Возможен обратный перекос — день, полностью съеденный чужими просьбами: вы как няня, курьер и служба поддержки в одном лице. Наведите простой порядок: один час на себя без чувства вины, нормальная еда, отказ хотя бы одной навязанной роли. Дом оживает вслед за хозяином, а не наоборот.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Профессионально перевёрнутая Императрица — застой проекта и выгорание команды: ресурсы вкладываются, а роста нет, потому что поливается всё подряд, кроме главного. Руководителю карта указывает на микроменеджмент: сотрудники задыхаются под опекой и разучиваются думать сами. Творческим профессиям она обещает блок — черновики без финала, идеи без смелости. Лекарство — делегирование, приоритеты и честный отпуск: урожай не собирают с истощённой земли.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>В отношениях карта рисует удушающую любовь: партнёр решён, накормлен, проверен — и потихоньку задыхается; либо обратную картину — равнодушие, когда близкие живут рядом с человеком, который давно не замечает их потребностей. Одиночкам она указывает на зависимость от мнения родни или бывшего: сердце занято старой привязкой, и новое не помещается.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Телесно карта говорит о последствиях самозапуска: лишний вес от заедания стресса, отёки, вялость кишечника, обострения на фоне хронического недосыпа. У женщин возможны сбои цикла и признаки истощения репродуктивной системы — повод для визита к врачу, а не для героического «само пройдёт». Начните с простого: сон, еда по режиму, движение в удовольствие и один честный разговор с врачом.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Духовно перевёрнутая Далет — дверь, забитая с той или другой стороны: либо страх получить, либо страх отдать. Карта указывает на искажение венерианского принципа: любовь превратилась в сделку («я забочусь — ты должен») или в самонаказание («мне нельзя, пока не всё всем»). Практика исцеления проста и телесна: вкусная еда без чувства вины, уход за телом, красота вокруг — как ритуал принятия мира.</p></div>
+</div>
+<div class="pos-pane roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> Кратко и просто</h3>
+<div class="info-section"><h3>Основная идея</h3><p>Императрица — это плодородие: способность из малого создавать большое.
+Она связана с природой, материей, телом, красотой и женственностью. Это сила, которая умеет взращивать, умножать и превращать пространство вокруг себя в место жизни.</p></div>
+<div class="info-section"><h3>Как проявляется</h3><p>Императрица приветлива, чувственна, умеет создавать уют и находить общий язык с людьми. В ней много материнского начала: накормить, согреть, защитить, пожалеть.</p></div>
+<div class="info-section"><h3>Работа и деньги</h3><p>Очень плодородная финансовая почва. Это не обязательно уже полученная прибыль — скорее среда, в которой деньги способны расти.</p></div>
+<div class="info-section"><h3>В отношениях</h3><p>Любовь, сексуальность, забота, материнство, беременность, дети.</p></div>
+<div class="info-section"><h3>Теневая сторона</h3><p>Главное слово здесь — слишком много.
+Слишком много удовольствий, денег, еды, секса, покупок, внимания. Плодородие превращается в разрастание, забота — в удушающую опеку, а любовь — в неразборчивость.</p></div>
+<div class="info-section"><h3>Особенность школы</h3><p>Императрица связана с Тельцом, вторым домом и Венерой. Она создаёт материал, а следующий аркан учится этот материал упорядочивать.</p></div>
+<div class="roman-astro"><span class="ra-label">✷ Астрология школы</span><b>II дом · Телец</b><span class="ra-sep">·</span>Венера + Хирон (не Овен!)<div class="ra-classic">У классики Уэйта: Венера</div></div>
+<h3 class="roman-subtitle"><span>📜</span> Развёрнуто — выжимки лекций</h3>
+<details class="roman-details" open><summary><span class="rd-icon" aria-hidden="true">✧</span> Суть карты</summary><div class="rd-body"><p>Ядро карты — плодородие: умение «из малого количества сделать большое» — людей, денег, всего материального. Это явленная, проявленная женственность, привязанная к плотскому ощущению мира (Телец, второй дом, Венера/Афродита): земной рай, где «молочные реки, кисельные берега». Карта всегда играет в паре с Императором — «мама любит, папа воспитывает»: чтобы было что упорядочивать, сначала должно что-то вырасти. Главное в карте — ощущение, конкретные гадательные значения у него вторичны («это Instagram-подход — похватали значения и бегом»).</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Прямое положение</summary><div class="rd-body"><ul class="st-list"><li>Социум, отношения:</li><li>- Женственность, сексуальность, приветливость — «мать-природа любит всех, одинакова со всеми своими детьми».</li><li>- Мода, говорливость, умение найти общий интерес: женское сознание «социально прописанное» ещё с пещеры (женщина должна была договориться с соседками, муж «принеси пятнистую шкуру, а то я не как люди»).</li><li>- Покровительство: включается материнское чувство, часто направленное на мужчину — накормить, обогреть, приласкать, иногда переспать из жалости над «бедненьким страдальцем»; это даёт неправильную связь «женщина сильная — мужчина слабый».</li><li>- Мужчина с этой картой — джентльмен: мягкий, обходительный, немного женственный, обязательно любвеобильный («секс — прямо её второе имя»). Минус — неразборчивость: «неважно с кем, лишь бы вкусно было».</li><li>- Мама, влияние матери, всё, что передаётся по женскому роду («колдовство бытовое» — от бабушки к внучке). Для мужчины означает маму — и тут «спросите у Фрейда»: мужчина ищет женщину по идеальному образу матери, «поиск потерянного рая».</li><li>Работа, финансы:</li><li>- Высокая должность: управляет наравне с императором; потенциально богатая ситуация.</li><li>- Деньги — не гарантия заработка, а плодородная почва: «если воткнуть сухую палку — она заколосится»; прямая карта говорит об умножении средств.</li><li>- Банки (рост финансов, проценты), недвижимость, накопления.</li><li>- Беременность — одно из основных значений, но выпадает нечасто.</li><li>Саморазвитие:</li><li>- Творчество созидательное, декоративное: не радикально новое, а «большое количество чего-то красивого», украшающего жизнь — ар-нуво/модерн, Альфонс Муха, резной стул.</li><li>- Телесность: йога как спокойная «ленивая» физкультура для тела, развитие природного вкуса, «торжество человеческого тела».</li><li>- Карта дня: отдать деньги в рост (умеренно!), отдых, лакомства («скушать мороженку, но не ведро мороженого»), дети, раскрытие женской сущности; мужчине — пообщаться с мамой. Тратиться/закупаться — плохо: легко входит в раж «и это купим, и это купим».</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Негативное значение</summary><div class="rd-body"><ul class="st-list"><li>Формула школы: преувеличение количества, впадение в крайности — «то же самое, но слишком много, слишком вкусно, слишком сладко».</li><li>- Капризы «на ровном месте» («я не хочу, я не знаю»), чрезмерная эмоциональность и переменчивость — физиология и гормоны дают плаксивый капризный тон.</li><li>- Чрезмерная женственность в неподобающем возрасте и положении: злоупотребление макияжем в 70 лет, «одевается как подросток», замужняя живёт как свободная.</li><li>- Любвеобильность как минус: измены (Афродита водила тайком Ареса под нос у Гефеста), нимфомания — тот же механизм «ещё, ещё, ещё», вплоть до «венерического».</li><li>- Жадность, накопительство, зависимость от обогащения: «Глупый мальчишка! Разве может быть слишком много денег?» — деньгами «будешь задушен, будешь думать только о них»; тельцовское собирательство ради «ещё, ещё».</li><li>- Избыточная плодовитость природы — плющ, захватывающий город (фильм «Я легенда»), «слишком много ртов в семье».</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> Акценты и фишки школы</summary><div class="rd-body"><ul class="st-list"><li>- Уэйт: «величавая фигура... дочь небес и земли»; 12 звёзд диадемы = 12 знаков зодиака; скипетр с шаром = земной мир; не Регина Коэли (царица небесная), а «прибежище грешных», «благодатная матерь многих тысяч» (зёрна пшеницы); гранаты — множество семечек; сидит полулёжа на мягких подушках, поза беременной, которую надо беречь.</li><li>- Астрология: Телец, второй дом, Венера + Хирон; систему взял у Юрия Хана («много я слизал, но пошёл больше в мифологию, а он в астрологию»); астро+Таро = «стереоскопическое зрение». Хирон — двойственность отца: «вроде добрый папа, а на самом деле хищник, который может тигра загрызть». Хронос... ключ отца — «ключ во внешний мир».</li><li>- Мифология: Афродита дичее и естественнее Венеры (как Арес дикое Марса). Пояс Афродиты — любовь, желание, слова обольщения: мужик смотрит в декольте, «мозги отключаются, хочу и всё тут». Афина застала Афродиту за прялкой — больше никогда не работала: рожающая женщина работать не должна, отсюда проблема зачатия у современных женщин, живущих «по-марсиански». Все женские культы слились в Богородицу: раковина Афродиты стала знаком чистоты и непорочности, жемчужина — «родить скрытое богатство». Деметра (Церера) — сноп пшеницы, рог изобилия; Прозерпина — единственное зёрнышко граната, миф о взыскании у Аида (аналогия — Дюймовочка и крот), мостик к Деве.</li><li>- Славянский ряд: Матерь Сыра Земля, отождествление с Богородицей; заговорная берёза «вниз ветвями, вверх кореньями» — Богородица «кровавые раны зашивает».</li><li>- Современная мифология: Астарта в «Американских богах» (владеет силами природы, колдунья, очаровала самого Одина), «Аватар» Камерона (планета-мать, дерево-нейросеть, биосистема защищает детей), Малефисента с Анжелиной Джоли (злая, но справедливая, растит ребёнка, секс-символ под Венеру).</li><li>- Споры об Овне: бараньи головы императора — либо масонская мистификация, либо ошибка Уэйта; сам Император у него Гефест — порядок, квадратный трон; Марс/Овен — воин «возьму силой», не путать.</li><li>- Пара карт: женщины-начальницы в деловых костюмах — уже императоры, «не путайте императрицу и императора»; без императора ей тяжело — приходится самой забивать гвозди и воспитывать строго.</li><li>- Практики: держать распечатанную таблицу соответствий перед глазами, «добавлять к двадцати значениям двадцать первое своё», учить других, чтобы учиться; время угадывается индивидуально (3, 9 месяцев, 12, тысяча — но это «несчислимое множество»).</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Ключевые слова</summary><div class="rd-body"><ul class="st-list"><li>Плодородие · увеличение количества · материнство, «мать многих тысяч» · явленная женственность · сексуальность, любвеобильность · плотское ощущение мира · богатство, накопление · приветливость, покровительство · Телец/Венера · «мама любит, папа воспитывает».</li><li>---</li></ul></div></details>
+</div>
 <nav class="card-pagination" aria-label="Предыдущая и следующая карта">
 <a rel="prev" href="zhrefca.html"><span>← Предыдущая карта</span>Верховная жрица</a>
 <a rel="next" href="imperator.html"><span>Следующая карта →</span>Император</a>
 </nav>
+</article>
 </main>
 <footer class="site-footer">
   <p>Таро · Справочник значений карт</p>

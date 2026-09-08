@@ -3,70 +3,142 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Старшие арканы — значения 22 карт | Таро Справочник</title>
-<meta name="description" content="22 старших аркана Таро: от Дурака до Мира. Значения карт в прямом и перевёрнутом положении, в любви и карьере, советы и вопросы для размышления.">
+<title>Карты Таро — значения всех 78 карт | Таро Справочник</title>
+<meta name="description" content="Все 78 карт Таро колоды Уэйта: старшие и младшие арканы. Значения карт в прямом и перевёрнутом положении, в любви и карьере, толкования школы Современного Таро и ордена Золотая Заря.">
 <link rel="canonical" href="https://taro.jetserg.top/cards/">
-<meta property="og:title" content="Старшие арканы — значения 22 карт | Таро Справочник">
-<meta property="og:description" content="22 старших аркана Таро: от Дурака до Мира. Значения карт в прямом и перевёрнутом положении, в любви и карьере, советы и вопросы для размышления.">
+<meta property="og:title" content="Карты Таро — значения всех 78 карт | Таро Справочник">
+<meta property="og:description" content="Все 78 карт Таро колоды Уэйта: старшие и младшие арканы. Значения карт в прямом и перевёрнутом положении, в любви и карьере, толкования школы Современного Таро и ордена Золотая Заря.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://taro.jetserg.top/cards/">
-<link rel="stylesheet" href="/css/style.css?v=3.3">
-<link rel="stylesheet" href="/css/astrology.css?v=3.3">
+
+<link rel="stylesheet" href="/css/style.css?v=3.4">
+<link rel="stylesheet" href="/css/astrology.css?v=3.4">
 <style>
 .main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
 .card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
 .card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
 .card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
 .card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
-.card-hero { text-align: center; padding: 14px 0 34px; }
-.card-symbol { display: block; font-family: Georgia, serif; font-size: 5rem; line-height: 1.2; color: var(--gold-bright); text-shadow: 0 0 30px var(--gold-dim); }
-.card-eyebrow { color: var(--text-dim); letter-spacing: .15em; text-transform: uppercase; font-size: .76rem; margin: 18px 0 8px; }
-.card-hero h1 { font-family: Georgia, serif; font-weight: 500; font-size: clamp(2rem, 6vw, 3.3rem); line-height: 1.2; color: var(--gold-bright); overflow-wrap: anywhere; }
-.card-number { display: block; font-size: 2.2rem; color: var(--gold); margin-bottom: 10px; }
-.card-hero > p:last-child { margin-top: 16px; color: var(--text-dim); }
-.card-section { margin: 0 0 22px; padding: 28px 32px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: rgba(23, 18, 43, .88); }
-.card-section h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500; font-size: 1.6rem; line-height: 1.3; margin-bottom: 18px; }
-.card-section h3 { color: var(--gold-bright); font-size: 1rem; margin: 22px 0 10px; }
-.card-section p + p { margin-top: 16px; }
-.card-intro { background: linear-gradient(135deg, rgba(124, 92, 191, .2), var(--bg-panel)); font-size: 1.1rem; }
-.card-keywords { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 18px 0; }
-.card-keywords li { border: 1px solid var(--gold-dim); border-radius: 999px; padding: 4px 12px; font-size: .85rem; color: var(--gold-bright); }
-.card-questions { padding-left: 24px; }
-.card-questions li { padding: 4px 0 10px 6px; }
-.card-questions li::marker { color: var(--gold); }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── Школа Современного Таро ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
 .card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
-.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius); text-decoration: none; background: var(--bg-panel); }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
 .card-pagination a:last-child { text-align: right; }
 .card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
-.card-pagination a:hover, .card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
-.card-catalog { max-width: 1120px; }
-.card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; list-style: none; }
-.card-grid li { min-width: 0; }
-.card-tile { display: flex; flex-direction: column; align-items: flex-start; height: 100%; padding: 24px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel); text-decoration: none; }
-.card-tile-symbol { font-size: 2rem; line-height: 1.3; }
-.card-tile-number { color: var(--text-dim); font-size: .85rem; margin: 18px 0 4px; }
-.card-tile strong { font-family: Georgia, serif; font-size: 1.4rem; font-weight: 500; }
-.card-tile-desc { color: var(--text-dim); font-size: .9rem; margin-top: 6px; }
-@media (max-width: 700px) { .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
 @media (max-width: 480px) {
   .main-nav { padding: 12px 12px 0; }
   .main-nav a { padding: 8px 12px; font-size: .9rem; }
-  .card-page { padding: 22px 16px 36px; }
-  .card-section { padding: 22px 20px; }
-  .card-tile { padding: 18px 14px; }
-  .card-tile strong { font-size: 1.16rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
   .card-pagination { gap: 10px; }
   .card-pagination a { padding: 16px 12px; }
 }
-@media (max-width: 350px) { .card-grid { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
 </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "Старшие арканы — значения 22 карт | Таро Справочник",
-  "description": "22 старших аркана Таро: от Дурака до Мира. Значения карт в прямом и перевёрнутом положении, в любви и карьере, советы и вопросы для размышления.",
+  "name": "Карты Таро — значения всех 78 карт | Таро Справочник",
+  "description": "Все 78 карт Таро колоды Уэйта: старшие и младшие арканы. Значения карт в прямом и перевёрнутом положении, в любви и карьере, толкования школы Современного Таро и ордена Золотая Заря.",
   "url": "https://taro.jetserg.top/cards/",
   "inLanguage": "ru"
 }
@@ -88,7 +160,6 @@
     <a href="/">Главная</a>
     <a href="/cards/" class="mn-active">Карты</a>
     <a href="/astrology/">Астрология</a>
-    <a href="/lenormand/">Ленорман</a>
     <a href="/runes/">Руны</a>
     <a href="/spreads.html">Расклады</a>
   </div>
@@ -97,143 +168,102 @@
 <nav class="card-crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <span aria-current="page">Карты</span></nav>
 <header class="card-hero">
 <span class="card-symbol" aria-hidden="true">✦</span>
-<p class="card-eyebrow">От первого шага до целого мира</p>
-<h1>22 старших аркана</h1>
-<p>Выберите карту: её значения, совет и вопросы для размышления.</p>
+<p class="card-eyebrow">Все 78 карт колоды Уэйта</p>
+<h1>Карты Таро: значения и толкования</h1>
+<p>Выберите карту: её значения, школа и подробное досье на отдельной странице.</p>
 </header>
-<ol class="card-grid" aria-label="Старшие арканы от Дурака до Мира">
-<li><a class="card-tile" href="durak.html">
-<span class="card-tile-symbol" aria-hidden="true">☀</span>
-<span class="card-tile-number">0</span>
-<strong>Дурак</strong>
-<span class="card-tile-desc">Начало пути</span>
-</a></li>
-<li><a class="card-tile" href="mag.html">
-<span class="card-tile-symbol" aria-hidden="true">✦</span>
-<span class="card-tile-number">I</span>
-<strong>Маг</strong>
-<span class="card-tile-desc">Воля и действие</span>
-</a></li>
-<li><a class="card-tile" href="zhrefca.html">
-<span class="card-tile-symbol" aria-hidden="true">☾</span>
-<span class="card-tile-number">II</span>
-<strong>Верховная жрица</strong>
-<span class="card-tile-desc">Тишина и интуиция</span>
-</a></li>
-<li><a class="card-tile" href="imperatrica.html">
-<span class="card-tile-symbol" aria-hidden="true">❀</span>
-<span class="card-tile-number">III</span>
-<strong>Императрица</strong>
-<span class="card-tile-desc">Забота и рост</span>
-</a></li>
-<li><a class="card-tile" href="imperator.html">
-<span class="card-tile-symbol" aria-hidden="true">♜</span>
-<span class="card-tile-number">IV</span>
-<strong>Император</strong>
-<span class="card-tile-desc">Порядок и ответственность</span>
-</a></li>
-<li><a class="card-tile" href="ierofant.html">
-<span class="card-tile-symbol" aria-hidden="true">✧</span>
-<span class="card-tile-number">V</span>
-<strong>Иерофант</strong>
-<span class="card-tile-desc">Знание и традиция</span>
-</a></li>
-<li><a class="card-tile" href="vlyublyonnye.html">
-<span class="card-tile-symbol" aria-hidden="true">♡</span>
-<span class="card-tile-number">VI</span>
-<strong>Влюблённые</strong>
-<span class="card-tile-desc">Союз и выбор</span>
-</a></li>
-<li><a class="card-tile" href="kolesnica.html">
-<span class="card-tile-symbol" aria-hidden="true">➶</span>
-<span class="card-tile-number">VII</span>
-<strong>Колесница</strong>
-<span class="card-tile-desc">Курс и движение</span>
-</a></li>
-<li><a class="card-tile" href="sila.html">
-<span class="card-tile-symbol" aria-hidden="true">♌</span>
-<span class="card-tile-number">VIII</span>
-<strong>Сила</strong>
-<span class="card-tile-desc">Мягкая стойкость</span>
-</a></li>
-<li><a class="card-tile" href="otshelnik.html">
-<span class="card-tile-symbol" aria-hidden="true">✴</span>
-<span class="card-tile-number">IX</span>
-<strong>Отшельник</strong>
-<span class="card-tile-desc">Поиск в тишине</span>
-</a></li>
-<li><a class="card-tile" href="koleso-fortuny.html">
-<span class="card-tile-symbol" aria-hidden="true">☸</span>
-<span class="card-tile-number">X</span>
-<strong>Колесо фортуны</strong>
-<span class="card-tile-desc">Поворот обстоятельств</span>
-</a></li>
-<li><a class="card-tile" href="spravedlivost.html">
-<span class="card-tile-symbol" aria-hidden="true">⚖</span>
-<span class="card-tile-number">XI</span>
-<strong>Справедливость</strong>
-<span class="card-tile-desc">Честный итог</span>
-</a></li>
-<li><a class="card-tile" href="poveshennyj.html">
-<span class="card-tile-symbol" aria-hidden="true">⟡</span>
-<span class="card-tile-number">XII</span>
-<strong>Повешенный</strong>
-<span class="card-tile-desc">Пауза и переоценка</span>
-</a></li>
-<li><a class="card-tile" href="smert.html">
-<span class="card-tile-symbol" aria-hidden="true">❧</span>
-<span class="card-tile-number">XIII</span>
-<strong>Смерть</strong>
-<span class="card-tile-desc">Завершение и переход</span>
-</a></li>
-<li><a class="card-tile" href="umerennost.html">
-<span class="card-tile-symbol" aria-hidden="true">≈</span>
-<span class="card-tile-number">XIV</span>
-<strong>Умеренность</strong>
-<span class="card-tile-desc">Мера и согласие</span>
-</a></li>
-<li><a class="card-tile" href="dyavol.html">
-<span class="card-tile-symbol" aria-hidden="true">♑</span>
-<span class="card-tile-number">XV</span>
-<strong>Дьявол</strong>
-<span class="card-tile-desc">Привязанности и соблазн</span>
-</a></li>
-<li><a class="card-tile" href="bashnya.html">
-<span class="card-tile-symbol" aria-hidden="true">ϟ</span>
-<span class="card-tile-number">XVI</span>
-<strong>Башня</strong>
-<span class="card-tile-desc">Крушение иллюзий</span>
-</a></li>
-<li><a class="card-tile" href="zvezda.html">
-<span class="card-tile-symbol" aria-hidden="true">☆</span>
-<span class="card-tile-number">XVII</span>
-<strong>Звезда</strong>
-<span class="card-tile-desc">Надежда и восстановление</span>
-</a></li>
-<li><a class="card-tile" href="luna.html">
-<span class="card-tile-symbol" aria-hidden="true">☽</span>
-<span class="card-tile-number">XVIII</span>
-<strong>Луна</strong>
-<span class="card-tile-desc">Чувства и неизвестность</span>
-</a></li>
-<li><a class="card-tile" href="solnce.html">
-<span class="card-tile-symbol" aria-hidden="true">☀</span>
-<span class="card-tile-number">XIX</span>
-<strong>Солнце</strong>
-<span class="card-tile-desc">Ясность и радость</span>
-</a></li>
-<li><a class="card-tile" href="sud.html">
-<span class="card-tile-symbol" aria-hidden="true">♬</span>
-<span class="card-tile-number">XX</span>
-<strong>Суд</strong>
-<span class="card-tile-desc">Пробуждение и отклик</span>
-</a></li>
-<li><a class="card-tile" href="mir.html">
-<span class="card-tile-symbol" aria-hidden="true">◎</span>
-<span class="card-tile-number">XXI</span>
-<strong>Мир</strong>
-<span class="card-tile-desc">Целостность и завершение</span>
-</a></li>
+<h2 class="suit-title">Старшие арканы</h2>
+<ol class="card-grid" aria-label="Старшие арканы">
+<li><a class="card-tile" href="durak.html"><img src="/img/cards/major-00-fool.webp" alt="Дурак" loading="lazy" width="132" height="211"><span class="card-tile-number">0</span><strong>Дурак</strong></a></li>
+<li><a class="card-tile" href="mag.html"><img src="/img/cards/major-01-magician.webp" alt="Маг" loading="lazy" width="132" height="211"><span class="card-tile-number">I</span><strong>Маг</strong></a></li>
+<li><a class="card-tile" href="zhrefca.html"><img src="/img/cards/major-02-high-priestess.webp" alt="Верховная жрица" loading="lazy" width="132" height="211"><span class="card-tile-number">II</span><strong>Верховная жрица</strong></a></li>
+<li><a class="card-tile" href="imperatrica.html"><img src="/img/cards/major-03-empress.webp" alt="Императрица" loading="lazy" width="132" height="211"><span class="card-tile-number">III</span><strong>Императрица</strong></a></li>
+<li><a class="card-tile" href="imperator.html"><img src="/img/cards/major-04-emperor.webp" alt="Император" loading="lazy" width="132" height="211"><span class="card-tile-number">IV</span><strong>Император</strong></a></li>
+<li><a class="card-tile" href="ierofant.html"><img src="/img/cards/major-05-hierophant.webp" alt="Иерофант" loading="lazy" width="132" height="211"><span class="card-tile-number">V</span><strong>Иерофант</strong></a></li>
+<li><a class="card-tile" href="vlyublyonnye.html"><img src="/img/cards/major-06-lovers.webp" alt="Влюблённые" loading="lazy" width="132" height="211"><span class="card-tile-number">VI</span><strong>Влюблённые</strong></a></li>
+<li><a class="card-tile" href="kolesnica.html"><img src="/img/cards/major-07-chariot.webp" alt="Колесница" loading="lazy" width="132" height="211"><span class="card-tile-number">VII</span><strong>Колесница</strong></a></li>
+<li><a class="card-tile" href="sila.html"><img src="/img/cards/major-08-strength.webp" alt="Сила" loading="lazy" width="132" height="211"><span class="card-tile-number">VIII</span><strong>Сила</strong></a></li>
+<li><a class="card-tile" href="otshelnik.html"><img src="/img/cards/major-09-hermit.webp" alt="Отшельник" loading="lazy" width="132" height="211"><span class="card-tile-number">IX</span><strong>Отшельник</strong></a></li>
+<li><a class="card-tile" href="koleso-fortuny.html"><img src="/img/cards/major-10-wheel-of-fortune.webp" alt="Колесо фортуны" loading="lazy" width="132" height="211"><span class="card-tile-number">X</span><strong>Колесо фортуны</strong></a></li>
+<li><a class="card-tile" href="spravedlivost.html"><img src="/img/cards/major-11-justice.webp" alt="Справедливость" loading="lazy" width="132" height="211"><span class="card-tile-number">XI</span><strong>Справедливость</strong></a></li>
+<li><a class="card-tile" href="poveshennyj.html"><img src="/img/cards/major-12-hanged-man.webp" alt="Повешенный" loading="lazy" width="132" height="211"><span class="card-tile-number">XII</span><strong>Повешенный</strong></a></li>
+<li><a class="card-tile" href="smert.html"><img src="/img/cards/major-13-death.webp" alt="Смерть" loading="lazy" width="132" height="211"><span class="card-tile-number">XIII</span><strong>Смерть</strong></a></li>
+<li><a class="card-tile" href="umerennost.html"><img src="/img/cards/major-14-temperance.webp" alt="Умеренность" loading="lazy" width="132" height="211"><span class="card-tile-number">XIV</span><strong>Умеренность</strong></a></li>
+<li><a class="card-tile" href="dyavol.html"><img src="/img/cards/major-15-devil.webp" alt="Дьявол" loading="lazy" width="132" height="211"><span class="card-tile-number">XV</span><strong>Дьявол</strong></a></li>
+<li><a class="card-tile" href="bashnya.html"><img src="/img/cards/major-16-tower.webp" alt="Башня" loading="lazy" width="132" height="211"><span class="card-tile-number">XVI</span><strong>Башня</strong></a></li>
+<li><a class="card-tile" href="zvezda.html"><img src="/img/cards/major-17-star.webp" alt="Звезда" loading="lazy" width="132" height="211"><span class="card-tile-number">XVII</span><strong>Звезда</strong></a></li>
+<li><a class="card-tile" href="luna.html"><img src="/img/cards/major-18-moon.webp" alt="Луна" loading="lazy" width="132" height="211"><span class="card-tile-number">XVIII</span><strong>Луна</strong></a></li>
+<li><a class="card-tile" href="solnce.html"><img src="/img/cards/major-19-sun.webp" alt="Солнце" loading="lazy" width="132" height="211"><span class="card-tile-number">XIX</span><strong>Солнце</strong></a></li>
+<li><a class="card-tile" href="sud.html"><img src="/img/cards/major-20-judgement.webp" alt="Суд" loading="lazy" width="132" height="211"><span class="card-tile-number">XX</span><strong>Суд</strong></a></li>
+<li><a class="card-tile" href="mir.html"><img src="/img/cards/major-21-world.webp" alt="Мир" loading="lazy" width="132" height="211"><span class="card-tile-number">XXI</span><strong>Мир</strong></a></li>
+</ol>
+<h2 class="suit-title">Масть Жезлы</h2>
+<ol class="card-grid" aria-label="Масть Жезлы">
+<li><a class="card-tile" href="wands-ace.html"><img src="/img/cards/wands-ace.webp" alt="Туз жезлов" loading="lazy" width="132" height="211"><span class="card-tile-number">I</span><strong>Туз жезлов</strong></a></li>
+<li><a class="card-tile" href="wands-two.html"><img src="/img/cards/wands-two.webp" alt="Двойка жезлов" loading="lazy" width="132" height="211"><span class="card-tile-number">II</span><strong>Двойка жезлов</strong></a></li>
+<li><a class="card-tile" href="wands-three.html"><img src="/img/cards/wands-three.webp" alt="Тройка жезлов" loading="lazy" width="132" height="211"><span class="card-tile-number">III</span><strong>Тройка жезлов</strong></a></li>
+<li><a class="card-tile" href="wands-four.html"><img src="/img/cards/wands-four.webp" alt="Четвёрка жезлов" loading="lazy" width="132" height="211"><span class="card-tile-number">IV</span><strong>Четвёрка жезлов</strong></a></li>
+<li><a class="card-tile" href="wands-five.html"><img src="/img/cards/wands-five.webp" alt="Пятёрка жезлов" loading="lazy" width="132" height="211"><span class="card-tile-number">V</span><strong>Пятёрка жезлов</strong></a></li>
+<li><a class="card-tile" href="wands-six.html"><img src="/img/cards/wands-six.webp" alt="Шестёрка жезлов" loading="lazy" width="132" height="211"><span class="card-tile-number">VI</span><strong>Шестёрка жезлов</strong></a></li>
+<li><a class="card-tile" href="wands-seven.html"><img src="/img/cards/wands-seven.webp" alt="Семёрка жезлов" loading="lazy" width="132" height="211"><span class="card-tile-number">VII</span><strong>Семёрка жезлов</strong></a></li>
+<li><a class="card-tile" href="wands-eight.html"><img src="/img/cards/wands-eight.webp" alt="Восьмёрка жезлов" loading="lazy" width="132" height="211"><span class="card-tile-number">VIII</span><strong>Восьмёрка жезлов</strong></a></li>
+<li><a class="card-tile" href="wands-nine.html"><img src="/img/cards/wands-nine.webp" alt="Девятка жезлов" loading="lazy" width="132" height="211"><span class="card-tile-number">IX</span><strong>Девятка жезлов</strong></a></li>
+<li><a class="card-tile" href="wands-ten.html"><img src="/img/cards/wands-ten.webp" alt="Десятка жезлов" loading="lazy" width="132" height="211"><span class="card-tile-number">X</span><strong>Десятка жезлов</strong></a></li>
+<li><a class="card-tile" href="wands-page.html"><img src="/img/cards/wands-page.webp" alt="Паж жезлов" loading="lazy" width="132" height="211"><span class="card-tile-number">XI</span><strong>Паж жезлов</strong></a></li>
+<li><a class="card-tile" href="wands-knight.html"><img src="/img/cards/wands-knight.webp" alt="Рыцарь жезлов" loading="lazy" width="132" height="211"><span class="card-tile-number">XII</span><strong>Рыцарь жезлов</strong></a></li>
+<li><a class="card-tile" href="wands-queen.html"><img src="/img/cards/wands-queen.webp" alt="Королева жезлов" loading="lazy" width="132" height="211"><span class="card-tile-number">XIII</span><strong>Королева жезлов</strong></a></li>
+<li><a class="card-tile" href="wands-king.html"><img src="/img/cards/wands-king.webp" alt="Король жезлов" loading="lazy" width="132" height="211"><span class="card-tile-number">XIV</span><strong>Король жезлов</strong></a></li>
+</ol>
+<h2 class="suit-title">Масть Кубки</h2>
+<ol class="card-grid" aria-label="Масть Кубки">
+<li><a class="card-tile" href="cups-ace.html"><img src="/img/cards/cups-ace.webp" alt="Туз кубков" loading="lazy" width="132" height="211"><span class="card-tile-number">I</span><strong>Туз кубков</strong></a></li>
+<li><a class="card-tile" href="cups-two.html"><img src="/img/cards/cups-two.webp" alt="Двойка кубков" loading="lazy" width="132" height="211"><span class="card-tile-number">II</span><strong>Двойка кубков</strong></a></li>
+<li><a class="card-tile" href="cups-three.html"><img src="/img/cards/cups-three.webp" alt="Тройка кубков" loading="lazy" width="132" height="211"><span class="card-tile-number">III</span><strong>Тройка кубков</strong></a></li>
+<li><a class="card-tile" href="cups-four.html"><img src="/img/cards/cups-four.webp" alt="Четвёрка кубков" loading="lazy" width="132" height="211"><span class="card-tile-number">IV</span><strong>Четвёрка кубков</strong></a></li>
+<li><a class="card-tile" href="cups-five.html"><img src="/img/cards/cups-five.webp" alt="Пятёрка кубков" loading="lazy" width="132" height="211"><span class="card-tile-number">V</span><strong>Пятёрка кубков</strong></a></li>
+<li><a class="card-tile" href="cups-six.html"><img src="/img/cards/cups-six.webp" alt="Шестёрка кубков" loading="lazy" width="132" height="211"><span class="card-tile-number">VI</span><strong>Шестёрка кубков</strong></a></li>
+<li><a class="card-tile" href="cups-seven.html"><img src="/img/cards/cups-seven.webp" alt="Семёрка кубков" loading="lazy" width="132" height="211"><span class="card-tile-number">VII</span><strong>Семёрка кубков</strong></a></li>
+<li><a class="card-tile" href="cups-eight.html"><img src="/img/cards/cups-eight.webp" alt="Восьмёрка кубков" loading="lazy" width="132" height="211"><span class="card-tile-number">VIII</span><strong>Восьмёрка кубков</strong></a></li>
+<li><a class="card-tile" href="cups-nine.html"><img src="/img/cards/cups-nine.webp" alt="Девятка кубков" loading="lazy" width="132" height="211"><span class="card-tile-number">IX</span><strong>Девятка кубков</strong></a></li>
+<li><a class="card-tile" href="cups-ten.html"><img src="/img/cards/cups-ten.webp" alt="Десятка кубков" loading="lazy" width="132" height="211"><span class="card-tile-number">X</span><strong>Десятка кубков</strong></a></li>
+<li><a class="card-tile" href="cups-page.html"><img src="/img/cards/cups-page.webp" alt="Паж кубков" loading="lazy" width="132" height="211"><span class="card-tile-number">XI</span><strong>Паж кубков</strong></a></li>
+<li><a class="card-tile" href="cups-knight.html"><img src="/img/cards/cups-knight.webp" alt="Рыцарь кубков" loading="lazy" width="132" height="211"><span class="card-tile-number">XII</span><strong>Рыцарь кубков</strong></a></li>
+<li><a class="card-tile" href="cups-queen.html"><img src="/img/cards/cups-queen.webp" alt="Королева кубков" loading="lazy" width="132" height="211"><span class="card-tile-number">XIII</span><strong>Королева кубков</strong></a></li>
+<li><a class="card-tile" href="cups-king.html"><img src="/img/cards/cups-king.webp" alt="Король кубков" loading="lazy" width="132" height="211"><span class="card-tile-number">XIV</span><strong>Король кубков</strong></a></li>
+</ol>
+<h2 class="suit-title">Масть Мечи</h2>
+<ol class="card-grid" aria-label="Масть Мечи">
+<li><a class="card-tile" href="swords-ace.html"><img src="/img/cards/swords-ace.webp" alt="Туз мечей" loading="lazy" width="132" height="211"><span class="card-tile-number">I</span><strong>Туз мечей</strong></a></li>
+<li><a class="card-tile" href="swords-two.html"><img src="/img/cards/swords-two.webp" alt="Двойка мечей" loading="lazy" width="132" height="211"><span class="card-tile-number">II</span><strong>Двойка мечей</strong></a></li>
+<li><a class="card-tile" href="swords-three.html"><img src="/img/cards/swords-three.webp" alt="Тройка мечей" loading="lazy" width="132" height="211"><span class="card-tile-number">III</span><strong>Тройка мечей</strong></a></li>
+<li><a class="card-tile" href="swords-four.html"><img src="/img/cards/swords-four.webp" alt="Четвёрка мечей" loading="lazy" width="132" height="211"><span class="card-tile-number">IV</span><strong>Четвёрка мечей</strong></a></li>
+<li><a class="card-tile" href="swords-five.html"><img src="/img/cards/swords-five.webp" alt="Пятёрка мечей" loading="lazy" width="132" height="211"><span class="card-tile-number">V</span><strong>Пятёрка мечей</strong></a></li>
+<li><a class="card-tile" href="swords-six.html"><img src="/img/cards/swords-six.webp" alt="Шестёрка мечей" loading="lazy" width="132" height="211"><span class="card-tile-number">VI</span><strong>Шестёрка мечей</strong></a></li>
+<li><a class="card-tile" href="swords-seven.html"><img src="/img/cards/swords-seven.webp" alt="Семёрка мечей" loading="lazy" width="132" height="211"><span class="card-tile-number">VII</span><strong>Семёрка мечей</strong></a></li>
+<li><a class="card-tile" href="swords-eight.html"><img src="/img/cards/swords-eight.webp" alt="Восьмёрка мечей" loading="lazy" width="132" height="211"><span class="card-tile-number">VIII</span><strong>Восьмёрка мечей</strong></a></li>
+<li><a class="card-tile" href="swords-nine.html"><img src="/img/cards/swords-nine.webp" alt="Девятка мечей" loading="lazy" width="132" height="211"><span class="card-tile-number">IX</span><strong>Девятка мечей</strong></a></li>
+<li><a class="card-tile" href="swords-ten.html"><img src="/img/cards/swords-ten.webp" alt="Десятка мечей" loading="lazy" width="132" height="211"><span class="card-tile-number">X</span><strong>Десятка мечей</strong></a></li>
+<li><a class="card-tile" href="swords-page.html"><img src="/img/cards/swords-page.webp" alt="Паж мечей" loading="lazy" width="132" height="211"><span class="card-tile-number">XI</span><strong>Паж мечей</strong></a></li>
+<li><a class="card-tile" href="swords-knight.html"><img src="/img/cards/swords-knight.webp" alt="Рыцарь мечей" loading="lazy" width="132" height="211"><span class="card-tile-number">XII</span><strong>Рыцарь мечей</strong></a></li>
+<li><a class="card-tile" href="swords-queen.html"><img src="/img/cards/swords-queen.webp" alt="Королева мечей" loading="lazy" width="132" height="211"><span class="card-tile-number">XIII</span><strong>Королева мечей</strong></a></li>
+<li><a class="card-tile" href="swords-king.html"><img src="/img/cards/swords-king.webp" alt="Король мечей" loading="lazy" width="132" height="211"><span class="card-tile-number">XIV</span><strong>Король мечей</strong></a></li>
+</ol>
+<h2 class="suit-title">Масть Пентакли</h2>
+<ol class="card-grid" aria-label="Масть Пентакли">
+<li><a class="card-tile" href="pentacles-ace.html"><img src="/img/cards/pentacles-ace.webp" alt="Туз пентаклей" loading="lazy" width="132" height="211"><span class="card-tile-number">I</span><strong>Туз пентаклей</strong></a></li>
+<li><a class="card-tile" href="pentacles-two.html"><img src="/img/cards/pentacles-two.webp" alt="Двойка пентаклей" loading="lazy" width="132" height="211"><span class="card-tile-number">II</span><strong>Двойка пентаклей</strong></a></li>
+<li><a class="card-tile" href="pentacles-three.html"><img src="/img/cards/pentacles-three.webp" alt="Тройка пентаклей" loading="lazy" width="132" height="211"><span class="card-tile-number">III</span><strong>Тройка пентаклей</strong></a></li>
+<li><a class="card-tile" href="pentacles-four.html"><img src="/img/cards/pentacles-four.webp" alt="Четвёрка пентаклей" loading="lazy" width="132" height="211"><span class="card-tile-number">IV</span><strong>Четвёрка пентаклей</strong></a></li>
+<li><a class="card-tile" href="pentacles-five.html"><img src="/img/cards/pentacles-five.webp" alt="Пятёрка пентаклей" loading="lazy" width="132" height="211"><span class="card-tile-number">V</span><strong>Пятёрка пентаклей</strong></a></li>
+<li><a class="card-tile" href="pentacles-six.html"><img src="/img/cards/pentacles-six.webp" alt="Шестёрка пентаклей" loading="lazy" width="132" height="211"><span class="card-tile-number">VI</span><strong>Шестёрка пентаклей</strong></a></li>
+<li><a class="card-tile" href="pentacles-seven.html"><img src="/img/cards/pentacles-seven.webp" alt="Семёрка пентаклей" loading="lazy" width="132" height="211"><span class="card-tile-number">VII</span><strong>Семёрка пентаклей</strong></a></li>
+<li><a class="card-tile" href="pentacles-eight.html"><img src="/img/cards/pentacles-eight.webp" alt="Восьмёрка пентаклей" loading="lazy" width="132" height="211"><span class="card-tile-number">VIII</span><strong>Восьмёрка пентаклей</strong></a></li>
+<li><a class="card-tile" href="pentacles-nine.html"><img src="/img/cards/pentacles-nine.webp" alt="Девятка пентаклей" loading="lazy" width="132" height="211"><span class="card-tile-number">IX</span><strong>Девятка пентаклей</strong></a></li>
+<li><a class="card-tile" href="pentacles-ten.html"><img src="/img/cards/pentacles-ten.webp" alt="Десятка пентаклей" loading="lazy" width="132" height="211"><span class="card-tile-number">X</span><strong>Десятка пентаклей</strong></a></li>
+<li><a class="card-tile" href="pentacles-page.html"><img src="/img/cards/pentacles-page.webp" alt="Паж пентаклей" loading="lazy" width="132" height="211"><span class="card-tile-number">XI</span><strong>Паж пентаклей</strong></a></li>
+<li><a class="card-tile" href="pentacles-knight.html"><img src="/img/cards/pentacles-knight.webp" alt="Рыцарь пентаклей" loading="lazy" width="132" height="211"><span class="card-tile-number">XII</span><strong>Рыцарь пентаклей</strong></a></li>
+<li><a class="card-tile" href="pentacles-queen.html"><img src="/img/cards/pentacles-queen.webp" alt="Королева пентаклей" loading="lazy" width="132" height="211"><span class="card-tile-number">XIII</span><strong>Королева пентаклей</strong></a></li>
+<li><a class="card-tile" href="pentacles-king.html"><img src="/img/cards/pentacles-king.webp" alt="Король пентаклей" loading="lazy" width="132" height="211"><span class="card-tile-number">XIV</span><strong>Король пентаклей</strong></a></li>
 </ol>
 </main>
 <footer class="site-footer">

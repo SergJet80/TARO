@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Десятка кубков — значение и толкование | Таро Справочник</title>
+<meta name="description" content="Десятка кубков — значение карты Таро младшего аркана: масть кубки, стихия вода. Толкование в прямом и перевёрнутом положении, в любви и работе.">
+<link rel="canonical" href="https://taro.jetserg.top/cards/cups-ten.html">
+<meta property="og:title" content="Десятка кубков — значение и толкование | Таро Справочник">
+<meta property="og:description" content="Десятка кубков — значение карты Таро младшего аркана: масть кубки, стихия вода. Толкование в прямом и перевёрнутом положении, в любви и работе.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taro.jetserg.top/cards/cups-ten.html">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/cups-ten.webp">
+<link rel="stylesheet" href="/css/style.css?v=3.4">
+<link rel="stylesheet" href="/css/astrology.css?v=3.4">
+<style>
+.main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
+.card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
+.card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
+.card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
+.card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── Школа Современного Таро ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
+.card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
+.card-pagination a:last-child { text-align: right; }
+.card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
+@media (max-width: 480px) {
+  .main-nav { padding: 12px 12px 0; }
+  .main-nav a { padding: 8px 12px; font-size: .9rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
+  .card-pagination { gap: 10px; }
+  .card-pagination a { padding: 16px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Десятка кубков — значение и толкование | Таро Справочник",
+  "description": "Десятка кубков — значение карты Таро младшего аркана: масть кубки, стихия вода. Толкование в прямом и перевёрнутом положении, в любви и работе.",
+  "url": "https://taro.jetserg.top/cards/cups-ten.html",
+  "inLanguage": "ru"
+}
+</script>
+<!-- Microsoft Clarity -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yejlmmd6nr");
+</script>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+<nav class="main-nav" aria-label="Разделы">
+  <div class="main-nav-inner">
+    <a href="/">Главная</a>
+    <a href="/cards/" class="mn-active">Карты</a>
+    <a href="/astrology/">Астрология</a>
+    <a href="/runes/">Руны</a>
+    <a href="/spreads.html">Расклады</a>
+  </div>
+</nav>
+<main class="card-page">
+<nav class="card-crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/cards/">Карты</a> / <span aria-current="page">Десятка кубков</span></nav>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="/img/cards/cups-ten.webp" alt="Десятка кубков — карта Таро Уэйта" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Младший аркан · Кубки</p>
+<h1 class="m-title"><span class="card-number">X</span>Десятка кубков</h1>
+<p class="m-en">Ten of Cups</p>
+<p class="m-meta">Масть: <b>Кубки</b> &nbsp;·&nbsp; Стихия: <b>Вода</b> &nbsp;·&nbsp; Классика: <b>Марс в Рыбах</b></p>
+</div>
+</header>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Положения карты">
+<label class="pos-tab" for="pos-upright">Прямое положение</label>
+<label class="pos-tab" for="pos-reversed">Перевёрнутое положение</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">Школа Современного Таро</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">семейное счастье</span><span class="kw">гармония</span><span class="kw">любовь в доме</span><span class="kw">единство</span><span class="kw">мир в душе</span><span class="kw">счастливый финал</span></div>
+<p class="short-value">Радуга из десяти чаш над семьёй: мир в доме, любовь без условий, счастье без доказательств.</p>
+<aside class="gd-block" aria-label="Значение карты по ордену Золотая Заря"><div class="gd-head"><span class="gd-symbol" aria-hidden="true">☉</span> По ордену «Золотая Заря»</div><p class="gd-title">«The Lord of Perfected Success» — Владыка Совершенного Успеха</p><p class="gd-why">Десятка доводит эмоциональный цикл до абсолютной наполненности. У Golden Dawn это совершенный успех; Кроули подчёркивает обратную сторону полноты: когда чаши переполнены, наступает насыщение.</p></aside>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Под радугой из десяти сияющих чаш пара смотрит на зелёные холмы, дети танцуют рядом. Это архетип «жили долго и счастливо»: не страсть первой встречи, а тихое прочное счастье принадлежности, где каждого видят и любят целиком.</p>
+<p>Десятка кубков — вершина масти: эмоциональная полнота, мир в доме, единство поколений. Она обещает счастливое разрешение затянувшейся истории и напоминает: богатство измеряется числом людей, которым ты дорог. Карта также о мире с собой: когда внутренний конфликт улажен, дом перестаёт быть полем боя.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Домашний день, который вспоминаешь годами: общий стол, гости без напряжения, дети играют, взрослые смеются. Семейный совет сейчас удаётся — крупные решения принимаются легко и согласованно. Звоните родне, миритесь с родственниками, заводите традицию воскресных завтраков.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Гармоничный этап: команда работает без интриг, дело приносит не только деньги. Успешен семейный бизнес и работа с близкими людьми. Хороший момент просить гибкий график ради семьи — такие просьбы сейчас встречают пониманием. Помните: карьера — часть жизни, а не замена ей.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Одна из главных карт брака: любовь, прошедшая проверку бытом, решение о детях, переезд в общий дом, примирение семей. Одиноким обещает встречу уровня серьёзности — не искру на вечер, а потенциальную семью. Существующие союзы выходят на новый уровень доверия.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Психика отдыхает фундаментально: ощущение тыла снижает стрессовые гормоны, сон глубокий, хронические болячки затихают. Здоровье укрепляют простые вещи — совместные прогулки, домашняя еда, смех. Карта благоприятна для планирования детей и восстановительных программ с поддержкой близких.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Прообраз небесного града и завершённость стихии Воды: десять сосудов полны и стоят аркой мира. Карту привлекают для освящения дома, ритуалов семейного единства и примирения родов. Высшая магия Кубков — не привороты, а умение создать пространство, где людям безопасно любить.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">разлад в семье</span><span class="kw">домашние ссоры</span><span class="kw">расхождение ценностей</span><span class="kw">фасад благополучия</span><span class="kw">отчуждение</span><span class="kw">кризис уклада</span></div>
+<p class="short-value">Радуга померкла: разлад в доме, война ценностей и фасад благополучия, за которым все устали.</p>
+<aside class="gd-block" aria-label="Значение карты по ордену Золотая Заря"><div class="gd-head"><span class="gd-symbol" aria-hidden="true">☉</span> По ордену «Золотая Заря»</div><p class="gd-title">«The Lord of Perfected Success» — Владыка Совершенного Успеха</p><p class="gd-why">Десятка доводит эмоциональный цикл до абсолютной наполненности. У Golden Dawn это совершенный успех; Кроули подчёркивает обратную сторону полноты: когда чаши переполнены, наступает насыщение.</p></aside>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Арка рассыпается: та же семья, тот же пейзаж, но между близкими выросла невидимая стена. Прямая Десятка показывала счастье как факт, перевёрнутая — как декорацию: фотографии собирают лайки, а за кадром каждый живёт в своей комнате и своём молчании.</p>
+<p>Карта означает дисгармонию дома: конфликты поколений, развод «с сохранением лица», борьбу за то, чья правда станет семейной идеологией. Иногда мягче — разные ценности, ранее казавшиеся совместимыми. Старый уклад больше не работает; это не обязательно распад, но пересборка необходима.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Фон звенит: разговоры только хозяйственные, посуда бьётся чаще обычного, каждый избегает общей кухни. Не спасайте фасад любой ценой — устройте честный семейный разговор без обвинений, начиная с «я», а не «ты». Если живёте с родителями, проверьте границы: часть войн идёт за территорию.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Домашний кризис отражается на работе: концентрация падает, больничные учащаются, решения принимаются раздражённо. Возможна офисная версия той же темы — команда делится на лагеря под лозунгами общих ценностей. Не делайте резких карьерных движений на эмоциях: сначала стабилизируйте тыл.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Шторм: ссоры из-за мелочей, охлаждение, споры о детях и деньгах, вопрос «спасать ли союз». Смотрите глубже претензий — под ними обычно один невыясненный вопрос: «ты вообще со мной или рядом?» Его ответ важнее исхода любой ссоры.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Семейный конфликт бьёт по всем, включая детей: головные боли, обострения хронического, бессонница у взрослых. Детям вреднее молчаливая война, чем честный развод. Позаботьтесь о нейтральной территории и взрослых опорах — терапевт, друзья, спорт — и не тащите всё в одиночку.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Разрушенный очаг, требующий перекладки: старый ритуал семьи отслужил своё. Практики — очищение жилища, пересмотр родовых сценариев («в нашей семье все терпят»), осознанная сборка новых правил. Подарок карты велик: шанс построить дом по собственному чертежу, а не наследственному.</p></div>
+</div>
+<div class="pos-pane roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> Как школа читает этот ранг</h3>
+<div class="info-section"><h3>Основная идея</h3><p>Максимум доступной эмоции. Это не обещание вечной идиллии, а эмоциональный потолок конкретной ситуации.</p></div>
+<div class="info-section"><h3>Как проявляется</h3><p>В отношениях — общая радость, которой хочется делиться. В других сферах — момент, когда эмоция достигла максимума. Важно помнить, что сегодняшний эмоциональный максимум не гарантирует вечного состояния.</p></div>
+<div class="info-section"><h3>Теневая сторона</h3><p>Даже негативная десятка означает предел переживания: дальше хуже уже не станет.</p></div>
+<div class="info-section"><h3>Ключевые слова</h3><p>максимум эмоций · радость · идиллия · предел · полная чаша</p></div>
+<div class="roman-astro"><span class="ra-label">✷ Астрология школы</span><b>Масть воды · итог цикла масти</b><span class="ra-sep">·</span>меланхолики — пластичность, глубокие эмоции</div>
+<h3 class="roman-subtitle"><span>📜</span> Развёрнуто — из лекции по рангу</h3>
+<details class="roman-details" open><summary><span class="rd-icon" aria-hidden="true">✧</span> Суть карты</summary><div class="rd-body"><p>формально самая радостная карта, но школа предостерегает от оценочных восторгов. Содержание — разделённая радость: в девятке радуются сами, здесь «мороженое вдвойне вкуснее в компании».</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Прямое положение</summary><div class="rd-body"><ul class="st-list"><li>«Это тот максимум эмоций, который вы можете сейчас испытывать» — «в наполненную до верха чашу сиропа нельзя долить». Закрытый мужчина тоже даёт прямую десятку кубков — это ЕГО максимум, не обязательно ваш.</li><li>Отношения: не «идеальная семейная жизнь», а текущий потолок эмоций данной ситуации; идиллия не вечна — эмоции со временем угасают, потом будет что-то новое (на вопрос об увольнении — максимум радости от ухода, но не гарантия счастливого разворота всей жизни).</li><li>Выход — к пажу кубков: учится понимать, выбирать и делить эмоции, понемногу управлять ими.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Негативное значение</summary><div class="rd-body"><p>• максимум негативных эмоций именно в этом положении — причём «больше уже не будет», что само по себе утешительно.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> Акценты и фишки школы</summary><div class="rd-body"><ul class="st-list"><li>Своя символическая опора: Каббала (Сефирот, Лайтман); Библия — конец потопа у Арарата, радуга как знак радости (с оговоркой: радуга — НЕ символ ЛГБТ); св. Себастьян; Ирида в перекличке с Умеренностью; пастораль и идиллия; викторианская Англия и тема наследования.</li><li>Современные образы: хлеб за 10 евро против торта «Наполеон», шведский стол «олл инклюзив», автосалон, шкаф из ИКЕА, Куршевель.</li><li>Практика: добавлять к выводам «но это неточно»; начинающим работать с прямыми и перевёрнутыми картами; тарологу нельзя включать оценочные эмоции (анекдот про Дядю Фёдора в буддийском монастыре — отказ от оценочности); различать, о ком карта — «о тебе или о твоих врагах» (сюжет «ты разрушишь великое государство»).</li><li>Примеры из практики: пер. 9 + пр. 10 пентаклей про зарплату; огнестрел на десятке мечей и «ножевое ранение в области сердца» на перевёрнутой тройке; увольнение с прямой десяткой кубков.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Ключевые слова</summary><div class="rd-body"><p>разделённая радость; идиллия-пастораль; максимум эмоций; «в полную чашу не дольёшь»; радуга после дождя.</p></div></details>
+</div>
+<nav class="card-pagination" aria-label="Предыдущая и следующая карта">
+<a rel="prev" href="cups-nine.html"><span>← Предыдущая карта</span>Девятка кубков</a>
+<a rel="next" href="cups-page.html"><span>Следующая карта →</span>Паж кубков</a>
+</nav>
+</article>
+</main>
+<footer class="site-footer">
+  <p>Таро · Справочник значений карт</p>
+  <p class="footer-note">Материалы носят справочный и развлекательный характер</p>
+</footer>
+</body>
+</html>

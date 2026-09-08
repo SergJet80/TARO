@@ -10,55 +10,127 @@
 <meta property="og:description" content="Суд — переоценка жизни и новый отклик. Значение карты Таро в прямом и перевёрнутом положении, в любви и карьере. Совет карты и вопросы для размышления.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://taro.jetserg.top/cards/sud.html">
-<link rel="stylesheet" href="/css/style.css?v=3.3">
-<link rel="stylesheet" href="/css/astrology.css?v=3.3">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/major-20-judgement.webp">
+<link rel="stylesheet" href="/css/style.css?v=3.4">
+<link rel="stylesheet" href="/css/astrology.css?v=3.4">
 <style>
 .main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
 .card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
 .card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
 .card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
 .card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
-.card-hero { text-align: center; padding: 14px 0 34px; }
-.card-symbol { display: block; font-family: Georgia, serif; font-size: 5rem; line-height: 1.2; color: var(--gold-bright); text-shadow: 0 0 30px var(--gold-dim); }
-.card-eyebrow { color: var(--text-dim); letter-spacing: .15em; text-transform: uppercase; font-size: .76rem; margin: 18px 0 8px; }
-.card-hero h1 { font-family: Georgia, serif; font-weight: 500; font-size: clamp(2rem, 6vw, 3.3rem); line-height: 1.2; color: var(--gold-bright); overflow-wrap: anywhere; }
-.card-number { display: block; font-size: 2.2rem; color: var(--gold); margin-bottom: 10px; }
-.card-hero > p:last-child { margin-top: 16px; color: var(--text-dim); }
-.card-section { margin: 0 0 22px; padding: 28px 32px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: rgba(23, 18, 43, .88); }
-.card-section h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500; font-size: 1.6rem; line-height: 1.3; margin-bottom: 18px; }
-.card-section h3 { color: var(--gold-bright); font-size: 1rem; margin: 22px 0 10px; }
-.card-section p + p { margin-top: 16px; }
-.card-intro { background: linear-gradient(135deg, rgba(124, 92, 191, .2), var(--bg-panel)); font-size: 1.1rem; }
-.card-keywords { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 18px 0; }
-.card-keywords li { border: 1px solid var(--gold-dim); border-radius: 999px; padding: 4px 12px; font-size: .85rem; color: var(--gold-bright); }
-.card-questions { padding-left: 24px; }
-.card-questions li { padding: 4px 0 10px 6px; }
-.card-questions li::marker { color: var(--gold); }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── Школа Современного Таро ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
 .card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
-.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius); text-decoration: none; background: var(--bg-panel); }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
 .card-pagination a:last-child { text-align: right; }
 .card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
-.card-pagination a:hover, .card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
-.card-catalog { max-width: 1120px; }
-.card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; list-style: none; }
-.card-grid li { min-width: 0; }
-.card-tile { display: flex; flex-direction: column; align-items: flex-start; height: 100%; padding: 24px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel); text-decoration: none; }
-.card-tile-symbol { font-size: 2rem; line-height: 1.3; }
-.card-tile-number { color: var(--text-dim); font-size: .85rem; margin: 18px 0 4px; }
-.card-tile strong { font-family: Georgia, serif; font-size: 1.4rem; font-weight: 500; }
-.card-tile-desc { color: var(--text-dim); font-size: .9rem; margin-top: 6px; }
-@media (max-width: 700px) { .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
 @media (max-width: 480px) {
   .main-nav { padding: 12px 12px 0; }
   .main-nav a { padding: 8px 12px; font-size: .9rem; }
-  .card-page { padding: 22px 16px 36px; }
-  .card-section { padding: 22px 20px; }
-  .card-tile { padding: 18px 14px; }
-  .card-tile strong { font-size: 1.16rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
   .card-pagination { gap: 10px; }
   .card-pagination a { padding: 16px 12px; }
 }
-@media (max-width: 350px) { .card-grid { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
 </style>
 <script type="application/ld+json">
@@ -88,69 +160,76 @@
     <a href="/">Главная</a>
     <a href="/cards/" class="mn-active">Карты</a>
     <a href="/astrology/">Астрология</a>
-    <a href="/lenormand/">Ленорман</a>
     <a href="/runes/">Руны</a>
     <a href="/spreads.html">Расклады</a>
   </div>
 </nav>
 <main class="card-page">
 <nav class="card-crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/cards/">Карты</a> / <span aria-current="page">Суд</span></nav>
-<article>
-<header class="card-hero">
-<span class="card-symbol" aria-hidden="true">♬</span>
-<p class="card-eyebrow">Старшие арканы</p>
-<h1><span class="card-number">XX</span>Суд</h1>
-<p>Пробуждение и отклик</p>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="/img/cards/major-20-judgement.webp" alt="Суд — карта Таро Уэйта" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Старший аркан · XX</p>
+<h1 class="m-title"><span class="card-number">XX</span>Суд</h1>
+<p class="m-en">Judgement</p>
+<p class="m-meta">Стихия: <b>Огонь</b> &nbsp;·&nbsp; Астрология: <b>Плутон</b></p>
+</div>
 </header>
-<section class="card-section card-intro" aria-labelledby="brief">
-<h2 id="brief">Краткое значение</h2>
-<p>Суд зовёт пересмотреть прожитое и услышать направление, которое уже трудно игнорировать. Честный итог здесь нужен для обновления: осознанный опыт помогает ответить на зов действием.</p>
-</section>
-<section class="card-section" aria-labelledby="upright">
-<h2 id="upright">Прямое положение</h2>
-<p>Труба архангела зовёт подняться: время честной переоценки жизни и второго рождения.</p>
-<ul class="card-keywords" aria-label="Ключевые слова"><li>пробуждение</li><li>зов</li><li>переоценка</li><li>возрождение</li><li>искупление</li><li>второй шанс</li></ul>
-<p>На карте уснувшие поднимаются из могил, услышав трубу архангела. Это не приговор, а приглашение: жизнь просит отчёт — не перед судьёй, а перед собой настоящим. Что из прожитого берём дальше, а что остаётся в земле?</p>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Положения карты">
+<label class="pos-tab" for="pos-upright">Прямое положение</label>
+<label class="pos-tab" for="pos-reversed">Перевёрнутое положение</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">Школа Современного Таро</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">пробуждение</span><span class="kw">зов</span><span class="kw">переоценка</span><span class="kw">возрождение</span><span class="kw">искупление</span><span class="kw">второй шанс</span></div>
+<p class="short-value">Труба архангела зовёт подняться: время честной переоценки жизни и второго рождения.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>На карте уснувшие поднимаются из могил, услышав трубу архангела. Это не приговор, а приглашение: жизнь просит отчёт — не перед судьёй, а перед собой настоящим. Что из прожитого берём дальше, а что остаётся в земле?</p>
 <p>В раскладе Суд означает пробуждение после долгого сна: вдруг становится ясно, кем вы и были должны быть. Зов приходит через случай, книгу, болезнь, разговор — но узнаётся мгновенно: это моё.</p>
-<p>Аркан несёт и прощение: старые вины, которые годами тащишь как мешок, подлежат списанию — не оправданию, а отпусканию. Второе рождение невозможно с грузом первого. Плутоновская природа делает процесс глубоким и необратимым.</p>
-</section>
-<section class="card-section" aria-labelledby="reversed">
-<h2 id="reversed">Перевёрнутое положение</h2>
-<p>Труба звучит, а вы притворяетесь спящим: зов откладывается, самокритика заменяет действие.</p>
-<ul class="card-keywords" aria-label="Ключевые слова"><li>игнорирование зова</li><li>самобичевание</li><li>откладывание решений</li><li>страх перемен</li><li>застарелая обида</li><li>застой</li></ul>
-<p>Перевёрнутый Суд — человек, который делает вид, что не слышит. Зов звучит давно и настойчиво: менять работу, заканчивать отношения, начинать лечение, ехать, — а он находит сто уважительных причин остаться.</p>
+<p>Аркан несёт и прощение: старые вины, которые годами тащишь как мешок, подлежат списанию — не оправданию, а отпусканию. Второе рождение невозможно с грузом первого. Плутоновская природа делает процесс глубоким и необратимым.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>День звонков из прошлого: сообщение давнего друга, весть, меняющая планы, предложение, от которого стучит сердце. Отвечайте — это не случайность, а расписание. Хорошо закрыть вечные семейные вопросы: позвонить родителям, закончить старую ссору. Дело, начатое сегодня, обещает обновить больше, чем планировалось.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Призыв перемен профессионального масштаба: накопленный опыт вдруг складывается в новую роль — повышение, своё дело, переход к призванию. Прошлые ошибки перестают быть клеймом: партнёры и работодатели готовы дать второй шанс. Не отвергайте зов из удобства — отвергнутый возвращается громче. Благоприятно возвращаться к старому проекту на новых условиях.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Отношения проходят суд совести: кто был прав — уже неважно; важно, готовы ли оба начать заново другими людьми. Прошлое прощается по-настоящему, а не «ладно, забыли». Возможен возврат значимого человека — не повтор старого круга, а новая глава с ним же. Одиноким карта обещает пробуждение чувства, которое считалось похороненным.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Выздоровление после долгой полосы: организм словно слышит команду «подъём» — силы возвращаются, хроника отступает. Хороший период для решительных шагов: операция, которую откладывали, курс, меняющий качество жизни. Важна и душевная часть: отпущенные обиды снимают половину симптомов. Тело сейчас говорит правду прямо — слушайте с первого раза.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Суд — аркан великого призыва: в каждой традиции есть труба, будящая уснувших. В практике он открывает работу с предназначением и родовой памятью, помогает услышать собственное настоящее имя. Медитация на звук — колокол, гонг, голос — выводит на глубину.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">игнорирование зова</span><span class="kw">самобичевание</span><span class="kw">откладывание решений</span><span class="kw">страх перемен</span><span class="kw">застарелая обида</span><span class="kw">застой</span></div>
+<p class="short-value">Труба звучит, а вы притворяетесь спящим: зов откладывается, самокритика заменяет действие.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Перевёрнутый Суд — человек, который делает вид, что не слышит. Зов звучит давно и настойчиво: менять работу, заканчивать отношения, начинать лечение, ехать, — а он находит сто уважительных причин остаться.</p>
 <p>Другое лицо аркана — судья, развернувшийся внутрь: вечный процесс над собой без права на апелляцию. Такие люди не ошибаются — они «просто ужасны», и эта формула надёжнее любого тюремщика.</p>
-<p>Бывает и обратное: приговор вынесен другим и обжалованию не подлежит — обида, ставшая мировоззрением. Пока дело не пересмотрено, новое жильё в старой тюрьме не построить.</p>
-</section>
-<section class="card-section" aria-labelledby="love">
-<h2 id="love">В любви</h2>
-<h3>Прямое положение</h3>
-<p>Отношения проходят суд совести: кто был прав — уже неважно; важно, готовы ли оба начать заново другими людьми. Прошлое прощается по-настоящему, а не «ладно, забыли». Возможен возврат значимого человека — не повтор старого круга, а новая глава с ним же. Одиноким карта обещает пробуждение чувства, которое считалось похороненным.</p>
-<h3>Перевёрнутое положение</h3>
-<p>Отношения стоят на паузе из-за невынесенного приговора: кто-то продолжает наказывать партнёра за давнюю историю — или сам носит вину как крест. Прощение предлагали; вы его не приняли. Возможен страх близости после болезненного опыта: прошлое судит настоящее. Двигаться вперёд позволяет одно честное решение — простить или отпустить.</p>
-</section>
-<section class="card-section" aria-labelledby="career">
-<h2 id="career">В карьере</h2>
-<h3>Прямое положение</h3>
-<p>Призыв перемен профессионального масштаба: накопленный опыт вдруг складывается в новую роль — повышение, своё дело, переход к призванию. Прошлые ошибки перестают быть клеймом: партнёры и работодатели готовы дать второй шанс. Не отвергайте зов из удобства — отвергнутый возвращается громче. Благоприятно возвращаться к старому проекту на новых условиях.</p>
-<h3>Перевёрнутое положение</h3>
-<p>Застой по собственной воле: менять роль или место давно пора, но «не время». Возможно, вы недавно отказались от возможности, испугавшись масштаба, — проверьте, не вернулась ли она другим входом. Самокопание после неудачи съедает больше сил, чем сама неудача.</p>
-</section>
-<section class="card-section" aria-labelledby="advice">
-<h2 id="advice">Совет карты</h2>
-<p>Подведите итог без самооправдания и бесконечного обвинения себя. Выделите то, что опыт просит изменить сейчас, и сделайте шаг, который давно откладывали после этого понимания.</p>
-</section>
-<section class="card-section" aria-labelledby="questions">
-<h2 id="questions">Вопросы для размышления</h2>
-<ol class="card-questions"><li>Какое понимание своей жизни я больше не могу откладывать в сторону?</li>
-<li>Что я могу вынести из прошлого, перестав снова судить себя за него?</li>
-<li>Каким действием я отвечу на давно назревший внутренний зов?</li></ol>
-</section>
-</article>
+<p>Бывает и обратное: приговор вынесен другим и обжалованию не подлежит — обида, ставшая мировоззрением. Пока дело не пересмотрено, новое жильё в старой тюрьме не построить.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>День отложенных решений: письма без ответа, звонки «на потом», вопрос, требующий решения ещё вчера. Заметьте, где вы притворяетесь, что не слышали. Один звонок, сделанный сегодня, снимет груз целой недели.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Застой по собственной воле: менять роль или место давно пора, но «не время». Возможно, вы недавно отказались от возможности, испугавшись масштаба, — проверьте, не вернулась ли она другим входом. Самокопание после неудачи съедает больше сил, чем сама неудача.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Отношения стоят на паузе из-за невынесенного приговора: кто-то продолжает наказывать партнёра за давнюю историю — или сам носит вину как крест. Прощение предлагали; вы его не приняли. Возможен страх близости после болезненного опыта: прошлое судит настоящее. Двигаться вперёд позволяет одно честное решение — простить или отпустить.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Здоровье страдает от затянутых решений: обследование откладывается третий месяц, курс брошен на середине, «само пройдёт» стало основным диагнозом. Самобичевание добавляет своё: иммунитет первым сдаёт позиции. Назначьте себе день решительных действий в пользу здоровья — и проведите его. Терпеливое тело ждёт вашего «да», но ведёт счёт.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Мистически перевёрнутый Суд — глухота к зову души: практика формальна, предназначение топчется на месте, дары лежат нераспакованными. Родовая программа осуждения будет передаваться дальше, пока кто-то не оборвёт цепь. Начните с малого ритуала прощения — себя, родителей, обидчика. Пока приговоры не сожжены, труба будет звучать снова: она не устаёт.</p></div>
+</div>
+<div class="pos-pane roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> Кратко и просто</h3>
+<div class="info-section"><h3>Основная идея</h3><p>Суд — это прежде всего освобождение.
+Не наказание и не осуждение, а выход из тесных рамок, в которых человек находился раньше.</p></div>
+<div class="info-section"><h3>Как проявляется</h3><p>Освобождение от старой роли, увольнение, отпуск, развод, погашение долга, признание ошибок, отказ от ограничивающих привычек.</p></div>
+<div class="info-section"><h3>Работа и деньги</h3><p>Закрытие кредита, получение денег из вклада, освобождение от обязательств, увольнение или смена деятельности.</p></div>
+<div class="info-section"><h3>В отношениях</h3><p>Очень часто карта показывает развод как освобождение. Также это может быть выход из роли, которую человек долго играл ради других.</p></div>
+<div class="info-section"><h3>Теневая сторона</h3><p>Свобода, которая человеку не нужна. Человек хотел сохранить работу, но его уволили; хотел сохранить брак, а оказался свободен.</p></div>
+<div class="info-section"><h3>Особенность школы</h3><p>Суд связан с Рыбами и XII домом. Его важнейшая тема — выход из ограничений, искупление и возвращение к собственной природе.</p></div>
+<div class="roman-astro"><span class="ra-label">✷ Астрология школы</span><b>XII дом · Рыбы</b><span class="ra-sep">·</span>обитель Юпитера и Нептуна<div class="ra-classic">У классики Уэйта: Плутон</div></div>
+<h3 class="roman-subtitle"><span>📜</span> Развёрнуто — выжимки лекций</h3>
+<details class="roman-details" open><summary><span class="rd-icon" aria-hidden="true">✧</span> Суть карты</summary><div class="rd-body"><p>Бытовое название «страшный суд» даёт лишь плоское значение («какое-то осуждение самого себя со стороны либо со своей личной стороны») — суть глубже: это освобождение из тесных зажатых рамок (квадратных гробов материального существования) в жизнь духовную. Из тьмы, из хтонической базы, люди восходят в ответ на зов (трубный глас ангела), испытывая «изумление, преклонение и восхищение» — как формулирует Уэйт. Основное ощущение карты: «выход из этих зажатых ощущений во что-то более свободное, более наполненное воздухом»; Уэйт вспоминает, что карта именовалась «картой вечной жизни» и связывается у него с Умеренностью (переход от материальной жизни к высшей).</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Прямое положение</summary><div class="rd-body"><ul class="st-list"><li>Отдельной структуры «сфера за сферой» он не даёт, но перечисляет по четырём темам раскладов:</li><li>Общение / социум</li><li>- Внутренняя свобода: освободиться от рамок и смело честно высказать человеку всё, что думаете; но не всегда полезно выходить из социальных договорённостей — правда «добавит сложности в общении с обычными людьми, которые зажаты в этих самых рамках».</li><li>- Неформальность общения: вместо «здравствуйте, Иван Иванович / уважаемый профессор» — живой личный контакт с сутью человека, а не с его ролью.</li><li>- Инновации, освобождение от заблуждений: «ходите по квадрату привычных действий — и внезапно находите новый способ», больше свободы и возможностей; отказ от норм ради искренности помогает сотрудничеству.</li><li>Работа / финансы</li><li>- Отпуск или увольнение как выход из тесных рамок работы на простор отдыха. Хорошо — только для тех, кто устал; трудоголику свобода — мука. Увольнение насильственное (сокращают) — уже негатив.</li><li>- Открытая информация, инсайд, инсайдерская информация; деньги вместе с процентами, вывод денег, снятие вклада досрочно, доставание из заначки.</li><li>- Окончательная выплата ипотеки/кредита — освобождение от обязательств («спрыгнуть с трезубца»); снятие ограничений и условий (наследство по достижении 18 лет).</li><li>- Искупление и покаяние: «повинную голову меч не сечёт» — признался, простил себя — освобождён.</li><li>Саморазвитие</li><li>- Выход из зоны комфорта: привычки работают на автомате (вождение на механике), экономят сознание, но временами нужен выход новыми осознанными действиями; признание своих ошибок.</li><li>- Инсайт, озарение: знание приходит «откуда-то сверху» — «слышите глас Божий, архангельскую трубу» и вдруг осознаёте; осознавание = освобождение от заблуждений, в которых пребывали «как в этом тесном гробу».</li><li>- В предельном смысле — смерть как долгожданное освобождение души из квадратной рамки тела.</li><li>Личная жизнь</li><li>- Чаще всего у него карта выпадала по разводу: партнёры тяготятся совместной жизнью. Прямое — развод, который освобождает («женщина чувствует себя свободной»).</li><li>- Осознание ошибок и прощение себя; каминг-аут как долгожданный выход наружу истинного себя «из ложного футляра, где ты играл роль».</li><li>Болезни и склонности, наследуемые через гены, упоминаются только в теме связи с родом.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Негативное значение</summary><div class="rd-body"><ul class="st-list"><li>Отдельного блока у него нет; значения рассыпаны по тексту:</li><li>- Суд в негативе «не значит закабаление — он значит освобождение, которое вам не нужно»: увольнение, когда хотел остаться; свобода, которой не знаешь что делать.</li><li>- Тот же развод, но чувствуете себя брошенной, выброшенной из брака; шутка школы: «свободная женщина и брошенная женщина — одна и та же женщина, но с разным настроением».</li><li>- Каминг-аут наоборот: правду вывели наружу против воли, вскрылась истина, которая может навредить.</li><li>- Для трудоголика освобождение = ужас и муки.</li><li>- Приближённо к вопросам смерти — преждевременное освобождение физического тела от души.</li><li>- Беременность → рождение ребёнка возможно, если мать тяготится тяжестью и хочет освобождения — но «слишком глубоко нырнуть в эту хтонь — порой вынырнуть очень сложно».</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> Акценты и фишки школы</summary><div class="rd-body"><ul class="st-list"><li>- Астрология: 12-й дом, Рыбы, обитель Юпитера и Нептуна; «по другому эти карты расположить нереально», согласен с системой Юрия Ханa. Шут и Мир стоят чуть выше домов (альфа и омега витка спирали). 12-й дом: изоляция (монастырь, ашрам, тюрьма, дальнее плавание, экспедиция, больница, психбольница), тайные знания, эзотерика, карма. Юпитер — светлый бог, Нептун — тёмный хтонический: страсти борются с благими намерениями.</li><li>- Ангел: Исрафил (трубный глас перед концом света, забирает души); созвучен Азраилю и Рафаэлю — архангелу-целителю, проводнику в мир духовный, покровителю мореходов (изображался с рыбой); параллель с Гермесом Трисмегистом. Рафаил принёс Соломону кольцо с шестиконечной звездой «чтобы подчинять демонов» — бороться со своими внутренними демонами.</li><li>- Магендавид: два разнонаправленных треугольника — борьба светлого и тёмного начал, макрокосма и микрокосма; Шива и Кали в индуизме; срединный путь Будды между крайностями духовного и материального.</li><li>- Хтонические существа: Посейдон (изначально подземный), Аид, Деметра, Персефона (зерно: рождается—умирает), Геката, гекатонхейры (стихии), Тиамат (океан хаоса, дракон о семи головах), Мардук — бог порядка, судья богов, искусник врачевания (= Юпитер), создавший небо и землю из тела Тиамат; двойной трезубец как намёк на Нептуна; рыболовный крючок = привычки и зависимости, за которые нельзя спрыгнуть. Скандинавия: Фенрир, Ёрмунганд, Рагнарёк. Хтонь сегодня — Ктулху. Хтонические божества не злые: им молились «оставьте меня в покое». На человеческом уровне — природные желания и гормоны, тянут вниз.</li><li>- Славянское: баба-яга как сила природы и умершие предки — если общаться вежливо, даст клубочек, серого волка или молодецкого коня; связь с родом — гены, тело, привитые привычки.</li><li>- Квадрат vs треугольник: материальный мир рисовали квадратом (гробы квадратные), духовное — треугольником с оком Бога; Христос восстает из квадратного гроба с белым флагом — но Иисуса на картах Таро рисовать было нельзя, поэтому иносказательная масонская символика.</li><li>- Красный крест на белом фоне: не медицинский крест, а флаг Англии — святой Георгий/Юрий/Джордж (одно имя): великомученик, которого мучили и казнили много раз, а к концу дня он исцелялся; христианский вариант Таммуза/Думузи — умирающего и воскресающего бога, как Адонис и Осирис («Осирис зелёный — потому что прорастает как трава»). Юрьев день (26 ноября): переход крестьян, «вот тебе бабушка и юрьев день» — освобождение от давлеющего.</li><li>- Кино/литература: «Аватар» (переход души из чахлого тела в сильное настоящее; хтонь Пандоры спасает), «Матрица» (три выхода Киану Ривза из капсулы/рамок/слияние с миром), «Начало» Нолана (условно), «Фонтан» Аронофски («смерть — это дорога к благоговению»; любимый режиссёр), «Побег из Шоушенка» — ключ к карте в слове redemption: искупление, спасение, выкуп, погашение долга, исправление; дождь омывает прошлое и грехи, «Остров» Лунгина (три пути к Богу; Мамонов умер в день записи лекции — «освободился»). Рецепт: «карты таро — картинки из нашей жизни, как кадры из фильма».</li><li>- Приём: логика нужна только чтобы оформить чувства словами; первична интуиция и эмоции. Пример ученицы: Суд в раскладе «что мне даст обучение таро» — выход на новый уровень духовного развития.</li><li>- Банцхафа не цитирует.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Ключевые слова</summary><div class="rd-body"><ul class="st-list"><li>Освобождение · внутренняя свобода · выход из тесных рамок на простор · искупление, покаяние · хтонь (природная база, привычки) · воскрешение · трубный глас, зов · инсайт, озарение, осознавание · искренность, неформальность · развод-освобождение / брошенность</li><li>---</li></ul></div></details>
+</div>
 <nav class="card-pagination" aria-label="Предыдущая и следующая карта">
 <a rel="prev" href="solnce.html"><span>← Предыдущая карта</span>Солнце</a>
 <a rel="next" href="mir.html"><span>Следующая карта →</span>Мир</a>
 </nav>
+</article>
 </main>
 <footer class="site-footer">
   <p>Таро · Справочник значений карт</p>

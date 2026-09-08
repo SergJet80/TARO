@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Десятка жезлов — значение и толкование | Таро Справочник</title>
+<meta name="description" content="Десятка жезлов — значение карты Таро младшего аркана: масть жезлы, стихия огонь. Толкование в прямом и перевёрнутом положении, в любви и работе.">
+<link rel="canonical" href="https://taro.jetserg.top/cards/wands-ten.html">
+<meta property="og:title" content="Десятка жезлов — значение и толкование | Таро Справочник">
+<meta property="og:description" content="Десятка жезлов — значение карты Таро младшего аркана: масть жезлы, стихия огонь. Толкование в прямом и перевёрнутом положении, в любви и работе.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taro.jetserg.top/cards/wands-ten.html">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/wands-ten.webp">
+<link rel="stylesheet" href="/css/style.css?v=3.4">
+<link rel="stylesheet" href="/css/astrology.css?v=3.4">
+<style>
+.main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
+.card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
+.card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
+.card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
+.card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── Школа Современного Таро ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
+.card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
+.card-pagination a:last-child { text-align: right; }
+.card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
+@media (max-width: 480px) {
+  .main-nav { padding: 12px 12px 0; }
+  .main-nav a { padding: 8px 12px; font-size: .9rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
+  .card-pagination { gap: 10px; }
+  .card-pagination a { padding: 16px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Десятка жезлов — значение и толкование | Таро Справочник",
+  "description": "Десятка жезлов — значение карты Таро младшего аркана: масть жезлы, стихия огонь. Толкование в прямом и перевёрнутом положении, в любви и работе.",
+  "url": "https://taro.jetserg.top/cards/wands-ten.html",
+  "inLanguage": "ru"
+}
+</script>
+<!-- Microsoft Clarity -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yejlmmd6nr");
+</script>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+<nav class="main-nav" aria-label="Разделы">
+  <div class="main-nav-inner">
+    <a href="/">Главная</a>
+    <a href="/cards/" class="mn-active">Карты</a>
+    <a href="/astrology/">Астрология</a>
+    <a href="/runes/">Руны</a>
+    <a href="/spreads.html">Расклады</a>
+  </div>
+</nav>
+<main class="card-page">
+<nav class="card-crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/cards/">Карты</a> / <span aria-current="page">Десятка жезлов</span></nav>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="/img/cards/wands-ten.webp" alt="Десятка жезлов — карта Таро Уэйта" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Младший аркан · Жезлы</p>
+<h1 class="m-title"><span class="card-number">X</span>Десятка жезлов</h1>
+<p class="m-en">Ten of Wands</p>
+<p class="m-meta">Масть: <b>Жезлы</b> &nbsp;·&nbsp; Стихия: <b>Огонь</b> &nbsp;·&nbsp; Классика: <b>Сатурн в Стрельце</b></p>
+</div>
+</header>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Положения карты">
+<label class="pos-tab" for="pos-upright">Прямое положение</label>
+<label class="pos-tab" for="pos-reversed">Перевёрнутое положение</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">Школа Современного Таро</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">груз обязанностей</span><span class="kw">ответственность</span><span class="kw">перегрузка</span><span class="kw">завершающий этап</span><span class="kw">долг</span><span class="kw">стойкость</span></div>
+<p class="short-value">Тяжёлая вязанка на плече: груз ответственности велик, но цель видна, и донести дело до конца — вопрос чести.</p>
+<aside class="gd-block" aria-label="Значение карты по ордену Золотая Заря"><div class="gd-head"><span class="gd-symbol" aria-hidden="true">☉</span> По ордену «Золотая Заря»</div><p class="gd-title">«The Lord of Oppression» — Владыка Угнетения</p><p class="gd-why">Десятка доводит огненную силу до предела, а Сатурн превращает расширение Стрельца в тяжесть обязанностей и ограничений. Энергии становится слишком много для свободного движения.</p></aside>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Человек согнулся под вязанкой жезлов, но идёт к дому, который уже виден. Десятка — карта большой ноши: обязательства, взятые честно или наваленные извне, достигли максимума. При этом груз осмысленный — он кому-то нужен, и расстояние конечное.</p>
+<p>Карта фиксирует горькую закономерность: мы не замечаем момент, когда ответственность перестала быть службой и стала привычкой тащить всё самим. Десятка не осуждает труд — она спрашивает о распределении: почему в вязанке оказались чужие брёвна? Финал близок; дойти надо с прямой спиной, а не ползком.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Список дел длиннее суток, домашние привычно перекладывают на вас, а вы всё принимаете. Расставьте приоритеты: что действительно сегодня, что вообще не ваше. Просите помощи прямо, без намёков, и проверьте рюкзак — половина «обязанностей» существует только в голове.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Финальная прямая большого проекта: сроки поджимают, отчётность множится, а участок, который должны делить трое, держите вы один. Карта признаёт незаменимость, но предупреждает: так недалеко до выгорания. Завершайте этап, фиксируйте результаты — и сразу обсуждайте разгрузку.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Вы тащите всё: бюджет, быт, эмоциональный климат, планы на двоих, а партнёр привык ехать багажом и считает это нормой. Носильщик рано или поздно сгибается или сбрасывает вязанку в овраг. Говорите о распределении веса заранее, не в момент срыва: любовь — когда ноша общая.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Классика перегруза: боли в спине и плечах, тяжесть в ногах, скачки давления, вечная усталость при нормальных анализах. Тело просит разгрузки до того, как сломается. Обязательны сон, массаж, делегирование быта и запрет на сверхурочные — восстановление начнётся сразу, как положите вязанку.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Крест, который несут добровольно и давно перерос: карта указывает на кармические перегрузы — чужие роли и родовые обязанности, взятые без спроса. Её практика — освящение труда и честная инвентаризация ноши: вернуть чужое, поблагодарить своё и донести остальное до ворот дома с прямой спиной.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">сбрасывание груза</span><span class="kw">делегирование</span><span class="kw">крах под тяжестью</span><span class="kw">отказ от чужих задач</span><span class="kw">предельный вес</span></div>
+<p class="short-value">Вязанка рассыпается или сброшена: наступил предел — либо вы учитесь говорить «нет», либо груз ломает спину.</p>
+<aside class="gd-block" aria-label="Значение карты по ордену Золотая Заря"><div class="gd-head"><span class="gd-symbol" aria-hidden="true">☉</span> По ордену «Золотая Заря»</div><p class="gd-title">«The Lord of Oppression» — Владыка Угнетения</p><p class="gd-why">Десятка доводит огненную силу до предела, а Сатурн превращает расширение Стрельца в тяжесть обязанностей и ограничений. Энергии становится слишком много для свободного движения.</p></aside>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Ноша требует решения. Светлый вариант: человек расстёгивает ремни — часть груза оказывается чужой, часть ненужной, и выпрямленная спина удивляется, сколько лет несла лишнее. Это урок делегирования и права на «нет», сказанное без вины.</p>
+<p>Тёмный вариант тяжелее: вязанка валит владельца — здоровье, отношения или дело ломаются под весом, который отказались делить вовремя. Бывает и обратная крайность: сброс всех обязательств разом, когда вместе с лишним выбрасывают своё. Освобождение отличается от побега одним: за собой оставили действительно своё.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Предел наступил: вы либо внезапно отказываетесь тянуть хозяйство на себе, вызвав бурю у привыкших, либо срываетесь физически. Возможны поломки, требующие денег и рук не только ваших. Правильный ход — спокойная ревизия: список дел, из него вычеркнуто чужое, остальное распределено письменно.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Точка кипения: сотрудник уходит с горящих проектов, руководитель снимает с себя лишние участки, команда требует пересмотра норм. Иногда — крах структуры, годами державшейся на энтузиазме двоих. Руководителю стоит делегировать по-настоящему; подчинённому — оформлять объём работы официально или уходить.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Партнёрство перекошено до предела: один объявляет забастовку, и выясняется, сколько функций годами выполнялось молча. Возможен разрыв как освобождение от ноши, называвшейся любовью. Если союз жив, кризис — шанс перестроить распределение; если мёртв, сбросить вязанку — милосердие к обоим.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Организм выставил счёт: обострения хронических болезней, проблемы спины, нервное истощение вплоть до слёз от включённого света. Тело делает за вас то, на что не решилась воля, — останавливает. Лечение невозможно без изменения жизни: начните со сна и одной отменённой обязанности, терапия подействует только в новой реальности.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Сброс карманных мешков: практик видит, что годами нёс чужие программы, родовые страхи, обязательства умерших договоров. Карта благоприятна для обрядов возвращения чужого и снятия обетов, данных не вами. Осторожнее: освобождённая рука должна остаться открытой, а не пустой — вместе с грузом не отдайте дар.</p></div>
+</div>
+<div class="pos-pane roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> Как школа читает этот ранг</h3>
+<div class="info-section"><h3>Основная идея</h3><p>Финальный рывок, в котором сходятся желания множества людей. Главная задача — не просто тащить всё на себе, а правильно организовать поток.</p></div>
+<div class="info-section"><h3>Как проявляется</h3><p>В работе — увязать интересы клиентов, руководства, команды и семьи. В управлении — расставить приоритеты и делегировать. В саморазвитии — перейти от исполнения к управлению собственной жизнью.</p></div>
+<div class="info-section"><h3>Теневая сторона</h3><p>Груз становится неподъёмным: всё происходит одновременно, а попытка сделать всё самому приводит к потерям.</p></div>
+<div class="info-section"><h3>Ключевые слова</h3><p>финальный рывок · приоритеты · управление · контроль · перегрузка</p></div>
+<div class="roman-astro"><span class="ra-label">✷ Астрология школы</span><b>Масть огня · итог цикла масти</b><span class="ra-sep">·</span>холерики — «знают, чего хотят», настойчивость, движение</div>
+<h3 class="roman-subtitle"><span>📜</span> Развёрнуто — из лекции по рангу</h3>
+<details class="roman-details" open><summary><span class="rd-icon" aria-hidden="true">✧</span> Суть карты</summary><div class="rd-body"><p>финальный рывок после восьмёрки (ритм поступающих желаний) и девятки (пауза, осмотр результатов, накопление сил). Человек несёт охапку жезлов — «жезлы это разные желания разных людей», и все они «сходятся в одной точке» — пересечение интересов.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Прямое положение</summary><div class="rd-body"><ul class="st-list"><li>Работа/социум: работаете на все 100 %, «едете ровно с той скоростью, с которой нужно»; максимум энергии и общения. Надо увязать интересы клиентов, подрядчиков, директора, семьи, кошек и собак.</li><li>Это единственная карта с «правильным порядком действий»: не столько пахать, сколько включить голову — правильно «уложить жезлы», расставить приоритеты. Финишная прямая, конь приободрился.</li><li>Саморазвитие: урок карты — выход на управление: нанимать людей, сводить желания наёмных работников в одну точку, руководить процессом. «Не жизнь должна нас проживать, а мы должны проживать нашу жизнь». Как умный пенсионер — столп рода: сам руками не работает, советует.</li><li>Юмористическое значение: сборка шкафа из IKEA.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Негативное значение</summary><div class="rd-body"><p>• связать не получается — всё накрывает одномоментно: начальник, два клиента, жена обрывает телефон, звонок из школы. «Швец и жнец и на дуде игрец», «брошу все полки». Груз выше сил, очень большой объём энергии проходит через вас, потери неизбежны.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> Акценты и фишки школы</summary><div class="rd-body"><ul class="st-list"><li>Своя символическая опора: Каббала (Сефирот, Лайтман); Библия — конец потопа у Арарата, радуга как знак радости (с оговоркой: радуга — НЕ символ ЛГБТ); св. Себастьян; Ирида в перекличке с Умеренностью; пастораль и идиллия; викторианская Англия и тема наследования.</li><li>Современные образы: хлеб за 10 евро против торта «Наполеон», шведский стол «олл инклюзив», автосалон, шкаф из ИКЕА, Куршевель.</li><li>Практика: добавлять к выводам «но это неточно»; начинающим работать с прямыми и перевёрнутыми картами; тарологу нельзя включать оценочные эмоции (анекдот про Дядю Фёдора в буддийском монастыре — отказ от оценочности); различать, о ком карта — «о тебе или о твоих врагах» (сюжет «ты разрушишь великое государство»).</li><li>Примеры из практики: пер. 9 + пр. 10 пентаклей про зарплату; огнестрел на десятке мечей и «ножевое ранение в области сердца» на перевёрнутой тройке; увольнение с прямой десяткой кубков.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Ключевые слова</summary><div class="rd-body"><p>финальный рывок; все желания в одной точке; правильный порядок действий; максимум сил; взять контроль.</p></div></details>
+</div>
+<nav class="card-pagination" aria-label="Предыдущая и следующая карта">
+<a rel="prev" href="wands-nine.html"><span>← Предыдущая карта</span>Девятка жезлов</a>
+<a rel="next" href="wands-page.html"><span>Следующая карта →</span>Паж жезлов</a>
+</nav>
+</article>
+</main>
+<footer class="site-footer">
+  <p>Таро · Справочник значений карт</p>
+  <p class="footer-note">Материалы носят справочный и развлекательный характер</p>
+</footer>
+</body>
+</html>

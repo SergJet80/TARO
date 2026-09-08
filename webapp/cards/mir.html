@@ -10,55 +10,127 @@
 <meta property="og:description" content="Мир — завершение цикла и собранный опыт. Значение карты Таро в прямом и перевёрнутом положении, в любви и карьере. Совет карты и вопросы для размышления.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://taro.jetserg.top/cards/mir.html">
-<link rel="stylesheet" href="/css/style.css?v=3.3">
-<link rel="stylesheet" href="/css/astrology.css?v=3.3">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/major-21-world.webp">
+<link rel="stylesheet" href="/css/style.css?v=3.4">
+<link rel="stylesheet" href="/css/astrology.css?v=3.4">
 <style>
 .main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
 .card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
 .card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
 .card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
 .card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
-.card-hero { text-align: center; padding: 14px 0 34px; }
-.card-symbol { display: block; font-family: Georgia, serif; font-size: 5rem; line-height: 1.2; color: var(--gold-bright); text-shadow: 0 0 30px var(--gold-dim); }
-.card-eyebrow { color: var(--text-dim); letter-spacing: .15em; text-transform: uppercase; font-size: .76rem; margin: 18px 0 8px; }
-.card-hero h1 { font-family: Georgia, serif; font-weight: 500; font-size: clamp(2rem, 6vw, 3.3rem); line-height: 1.2; color: var(--gold-bright); overflow-wrap: anywhere; }
-.card-number { display: block; font-size: 2.2rem; color: var(--gold); margin-bottom: 10px; }
-.card-hero > p:last-child { margin-top: 16px; color: var(--text-dim); }
-.card-section { margin: 0 0 22px; padding: 28px 32px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: rgba(23, 18, 43, .88); }
-.card-section h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500; font-size: 1.6rem; line-height: 1.3; margin-bottom: 18px; }
-.card-section h3 { color: var(--gold-bright); font-size: 1rem; margin: 22px 0 10px; }
-.card-section p + p { margin-top: 16px; }
-.card-intro { background: linear-gradient(135deg, rgba(124, 92, 191, .2), var(--bg-panel)); font-size: 1.1rem; }
-.card-keywords { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 18px 0; }
-.card-keywords li { border: 1px solid var(--gold-dim); border-radius: 999px; padding: 4px 12px; font-size: .85rem; color: var(--gold-bright); }
-.card-questions { padding-left: 24px; }
-.card-questions li { padding: 4px 0 10px 6px; }
-.card-questions li::marker { color: var(--gold); }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── Школа Современного Таро ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
 .card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
-.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius); text-decoration: none; background: var(--bg-panel); }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
 .card-pagination a:last-child { text-align: right; }
 .card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
-.card-pagination a:hover, .card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
-.card-catalog { max-width: 1120px; }
-.card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; list-style: none; }
-.card-grid li { min-width: 0; }
-.card-tile { display: flex; flex-direction: column; align-items: flex-start; height: 100%; padding: 24px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel); text-decoration: none; }
-.card-tile-symbol { font-size: 2rem; line-height: 1.3; }
-.card-tile-number { color: var(--text-dim); font-size: .85rem; margin: 18px 0 4px; }
-.card-tile strong { font-family: Georgia, serif; font-size: 1.4rem; font-weight: 500; }
-.card-tile-desc { color: var(--text-dim); font-size: .9rem; margin-top: 6px; }
-@media (max-width: 700px) { .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
 @media (max-width: 480px) {
   .main-nav { padding: 12px 12px 0; }
   .main-nav a { padding: 8px 12px; font-size: .9rem; }
-  .card-page { padding: 22px 16px 36px; }
-  .card-section { padding: 22px 20px; }
-  .card-tile { padding: 18px 14px; }
-  .card-tile strong { font-size: 1.16rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
   .card-pagination { gap: 10px; }
   .card-pagination a { padding: 16px 12px; }
 }
-@media (max-width: 350px) { .card-grid { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
 </style>
 <script type="application/ld+json">
@@ -88,69 +160,78 @@
     <a href="/">Главная</a>
     <a href="/cards/" class="mn-active">Карты</a>
     <a href="/astrology/">Астрология</a>
-    <a href="/lenormand/">Ленорман</a>
     <a href="/runes/">Руны</a>
     <a href="/spreads.html">Расклады</a>
   </div>
 </nav>
 <main class="card-page">
 <nav class="card-crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/cards/">Карты</a> / <span aria-current="page">Мир</span></nav>
-<article>
-<header class="card-hero">
-<span class="card-symbol" aria-hidden="true">◎</span>
-<p class="card-eyebrow">Старшие арканы</p>
-<h1><span class="card-number">XXI</span>Мир</h1>
-<p>Целостность и завершение</p>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="/img/cards/major-21-world.webp" alt="Мир — карта Таро Уэйта" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Старший аркан · XXI</p>
+<h1 class="m-title"><span class="card-number">XXI</span>Мир</h1>
+<p class="m-en">The World</p>
+<p class="m-meta">Стихия: <b>Земля</b> &nbsp;·&nbsp; Астрология: <b>Сатурн</b></p>
+</div>
 </header>
-<section class="card-section card-intro" aria-labelledby="brief">
-<h2 id="brief">Краткое значение</h2>
-<p>Мир собирает пройденный путь в ощущение целостности: сделанное можно признать завершённым. Карта помогает заметить последний незакрытый шаг и войти в новый этап с опытом, который уже стал вашим.</p>
-</section>
-<section class="card-section" aria-labelledby="upright">
-<h2 id="upright">Прямое положение</h2>
-<p>Финальный аккорд, звучащий как начало: цикл завершён, опыт собран, танец внутри венка продолжается.</p>
-<ul class="card-keywords" aria-label="Ключевые слова"><li>завершение</li><li>целостность</li><li>достижение</li><li>исполнение</li><li>путешествия</li><li>признание</li></ul>
-<p>Мир замыкает Старшие арканы: танцующая фигура в лавровом венке, а по углам — четыре стихии, прошедшие с вами всю дорогу. Маг начинал с одного жезла; здесь их два, и оба лежат в руках свободно, без усилия.</p>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Положения карты">
+<label class="pos-tab" for="pos-upright">Прямое положение</label>
+<label class="pos-tab" for="pos-reversed">Перевёрнутое положение</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">Школа Современного Таро</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">завершение</span><span class="kw">целостность</span><span class="kw">достижение</span><span class="kw">исполнение</span><span class="kw">путешествия</span><span class="kw">признание</span></div>
+<p class="short-value">Финальный аккорд, звучащий как начало: цикл завершён, опыт собран, танец внутри венка продолжается.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Мир замыкает Старшие арканы: танцующая фигура в лавровом венке, а по углам — четыре стихии, прошедшие с вами всю дорогу. Маг начинал с одного жезла; здесь их два, и оба лежат в руках свободно, без усилия.</p>
 <p>В раскладе карта объявляет завершение большого цикла: диплом, дом, проект, этап жизни — дело сделано и сделано целиком. Это не финиш, а выход на орбиту: закончив одно, человек видит следующее уже с высоты.</p>
-<p>Сатурн здесь — не строгий экзаменатор, а довольный строитель: ограничения, через которые вы прошли, оказались каркасом целого. Главный дар аркана — целостность: разрозненные куски жизни впервые складываются в узор.</p>
-</section>
-<section class="card-section" aria-labelledby="reversed">
-<h2 id="reversed">Перевёрнутое положение</h2>
-<p>Почти-финиш: до завершения остался один шаг, который почему-то не делается.</p>
-<ul class="card-keywords" aria-label="Ключевые слова"><li>незавершённость</li><li>задержка финала</li><li>формальное закрытие</li><li>перфекционизм</li><li>страх нового цикла</li><li>недоведённость</li></ul>
-<p>Перевёрнутый Мир — танец, остановившийся за шаг до финала: диплом не защищён, книга дописана на девять десятых, переезд завис на коробках. Сделано почти всё — и именно это «почти» лишает награды.</p>
+<p>Сатурн здесь — не строгий экзаменатор, а довольный строитель: ограничения, через которые вы прошли, оказались каркасом целого. Главный дар аркана — целостность: разрозненные куски жизни впервые складываются в узор.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>День закрытых гештальтов: последний штрих в ремонте, финальная уборка, вручение давно купленного подарка. Завершайте всё, что висело месяцами, — каждый закрытый вопрос добавляет лёгкости. Хорошо подводить итоги и планировать следующий сезон: горизонт виден далеко.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Крупное достижение: проект сдан, цель взята, уровень признан официально. Карта благоприятствует защитам, релизам, подписанию долгосрочных контрактов и наградам. Отличный момент для выхода на международный уровень или дальней рабочей поездки.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Отношения переживают свой «Мир» — годовщину, свадьбу, общий дом или просто глубокое чувство: «мы состоялись». Пройденные уроки не потрачены зря — они стали фундаментом нынешней близости. Одиноким карта сообщает: цикл одиночества завершён, вы вышли из него человеком, готовым к большому. Возможна встреча в путешествии или с человеком издалека.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Организм в гармонии: системы работают согласован, выздоровление после болезней — полное, без остаточных явлений. Хороший период закреплять здоровые привычки — они ложатся в плодородную почву. Особенно целебны путешествия и активность на природе. Профилактические обследования проходите спокойно: телу нечего скрывать.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Мир — завершение Великого Делания: четыре стихии танцуют вокруг венка, и ни одна не спорит с остальными. В практиках карту используют для закрытия магических циклов, благодарственных обрядов и посвящения на новый уровень. Венок — не клетка, а рама картины: танец продолжается внутри формы, которая защищает.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">незавершённость</span><span class="kw">задержка финала</span><span class="kw">формальное закрытие</span><span class="kw">перфекционизм</span><span class="kw">страх нового цикла</span><span class="kw">недоведённость</span></div>
+<p class="short-value">Почти-финиш: до завершения остался один шаг, который почему-то не делается.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Перевёрнутый Мир — танец, остановившийся за шаг до финала: диплом не защищён, книга дописана на девять десятых, переезд завис на коробках. Сделано почти всё — и именно это «почти» лишает награды.</p>
 <p>Иногда карта показывает финал формальный: печать стоит, а внутри пусто. Человек добежал не туда, куда хотел, и триумф не пахнет триумфом — закрытие получилось без завершения. Это больнее простой недоделки.</p>
-<p>Третий смысл — страх конца цикла: выпустить готовое в мир страшно, ведь после этого придётся стать тем, кто уже без оправданий «готов». Аркан мягко напоминает: венок — не потолок; за ним начинается небо.</p>
-</section>
-<section class="card-section" aria-labelledby="love">
-<h2 id="love">В любви</h2>
-<h3>Прямое положение</h3>
-<p>Отношения переживают свой «Мир» — годовщину, свадьбу, общий дом или просто глубокое чувство: «мы состоялись». Пройденные уроки не потрачены зря — они стали фундаментом нынешней близости. Одиноким карта сообщает: цикл одиночества завершён, вы вышли из него человеком, готовым к большому. Возможна встреча в путешествии или с человеком издалека.</p>
-<h3>Перевёрнутое положение</h3>
-<p>Отношения на стадии «почти»: почти съехались, почти познакомили с родителями, почти поговорили о будущем. Кто-то в паре тянет с финалом — из страха ответственности или потери свободы. Возможен и другой сюжет: форма совместной жизни сложилась, а танца в ней нет.</p>
-</section>
-<section class="card-section" aria-labelledby="career">
-<h2 id="career">В карьере</h2>
-<h3>Прямое положение</h3>
-<p>Крупное достижение: проект сдан, цель взята, уровень признан официально. Карта благоприятствует защитам, релизам, подписанию долгосрочных контрактов и наградам. Отличный момент для выхода на международный уровень или дальней рабочей поездки.</p>
-<h3>Перевёрнутое положение</h3>
-<p>Проекты буксуют на финише: согласования тянутся, клиент медлит с приёмкой, релиз переносится в четвёртый раз. Проверьте, всё ли действительно готово с вашей стороны — иногда задержку создаёт ваш же перфекционизм. Не срезайте последние этапы «для скорости»: недоведённость вернётся переделкой. Праздновать рано, бросать смешно — финиш ближе, чем кажется.</p>
-</section>
-<section class="card-section" aria-labelledby="advice">
-<h2 id="advice">Совет карты</h2>
-<p>Завершите оставшийся шаг и отметьте, чему научились на этом пути. Дайте себе почувствовать итог, прежде чем искать следующую вершину: завершение тоже заслуживает времени и внимания.</p>
-</section>
-<section class="card-section" aria-labelledby="questions">
-<h2 id="questions">Вопросы для размышления</h2>
-<ol class="card-questions"><li>Какой последний шаг отделяет меня от настоящего завершения?</li>
-<li>Какие разные части опыта теперь складываются для меня в одно целое?</li>
-<li>Как я хочу отметить итог, прежде чем начинать следующий путь?</li></ol>
-</section>
-</article>
+<p>Третий смысл — страх конца цикла: выпустить готовое в мир страшно, ведь после этого придётся стать тем, кто уже без оправданий «готов». Аркан мягко напоминает: венок — не потолок; за ним начинается небо.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Дом полон последних штрихов, длящихся месяцами: одна полка, один звонок, один документ. Закончите сегодня хоть что-то целиком — лёгкость гарантирована. Проверьте, не бросаете ли вы дела на девяноста процентах из страха оценки результата. Маленькое вечернее завершение — лучшее снотворное.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Проекты буксуют на финише: согласования тянутся, клиент медлит с приёмкой, релиз переносится в четвёртый раз. Проверьте, всё ли действительно готово с вашей стороны — иногда задержку создаёт ваш же перфекционизм. Не срезайте последние этапы «для скорости»: недоведённость вернётся переделкой. Праздновать рано, бросать смешно — финиш ближе, чем кажется.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Отношения на стадии «почти»: почти съехались, почти познакомили с родителями, почти поговорили о будущем. Кто-то в паре тянет с финалом — из страха ответственности или потери свободы. Возможен и другой сюжет: форма совместной жизни сложилась, а танца в ней нет.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Лечение брошено на последнем этапе: «стало лучше — зачем дальше», и болезнь ходит по кругу. Реабилитация требует полного курса, а не половины: недолеченные истории копятся с процентами. Прислушайтесь и к общему ощущению «жизнь проходит мимо» — телесная вялость нередко отражает незакрытые жизненные циклы. Завершайте начатое: тело отблагодарит энергией.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Перевёрнутый аркан указывает на незакрытую инициацию: обучение прервано, обряд не завершён, и сила не встраивается в жизнь. Практик много, а целостности нет — знания лежат грудой, не собираясь в узор. Вернитесь и доделайте: завершённый ритуал, дочитанная книга, отданный традиции долг.</p></div>
+</div>
+<div class="pos-pane roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> Кратко и просто</h3>
+<div class="info-section"><h3>Основная идея</h3><p>Мир — это завершённость и полнота ситуации.
+Но завершение здесь не означает окончательную остановку. Мир и Дурак связаны как начало и конец одного витка спирали.</p></div>
+<div class="info-section"><h3>Как проявляется</h3><p>Закрытие проекта, окончание отношений в их прежнем качестве, завершение финансового цикла, возвращение долга, окончание обучения.</p></div>
+<div class="info-section"><h3>Работа</h3><p>Проект закончен — каким получился, таким получился. Теперь начинается следующий.</p></div>
+<div class="info-section"><h3>Финансы</h3><p>Долг выплачен, вклад отработал, деньги вернулись, кредит закрыт.</p></div>
+<div class="info-section"><h3>В отношениях</h3><p>Отношения достигают полноценной формы и переходят на новый уровень — или полноценно завершаются.</p></div>
+<div class="info-section"><h3>Теневая сторона</h3><p>События складываются логично, но результат человеку может не нравиться.</p></div>
+<div class="info-section"><h3>Особенность школы</h3><p>Мир — последняя точка спирали, а Дурак — начало следующего витка. Конец одного цикла одновременно является началом следующего.
+Главная мысль карты: «Этот этап завершён. Теперь можно идти дальше».</p></div>
+<div class="roman-astro"><span class="ra-label">✷ Астрология школы</span><b>вне колеса домов</b><span class="ra-sep">·</span>Шут и Мир — альфа и омега витка спирали, выше домов<div class="ra-classic">У классики Уэйта: Сатурн</div></div>
+<h3 class="roman-subtitle"><span>📜</span> Развёрнуто — выжимки лекций</h3>
+<details class="roman-details" open><summary><span class="rd-icon" aria-hidden="true">✧</span> Суть карты</summary><div class="rd-body"><p>Мир он берёт одной лекцией со Шутом: оба «никак не вписываются» в его систему астрологических соответствий — в 12-й дом борьбы Юпитера и Нептуна третью карту не впихнуть, Шут лишний в Овне. Ядро — «ощущение полноты ситуации»: спиральный виток закончен, даёт выход на следующий уровень. Шут и Мир — «альфа и омега», начала и конец одной пружины, «по сути одно и то же». По Уэйту: «совершенство и конечность вселенной, заключённая в ней тайна и духовный экстаз».</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Прямое положение</summary><div class="rd-body"><ul class="st-list"><li>Значения традиционно раскладываются по четырём стихиям; из телесного — лишь «общее самочувствие хорошее».</li><li>- Общий ряд: конец цикла — годового, квартального, финансового отчёта, завершение проекта; «ничего добавить нельзя»; понимание формы и сути явления; объективность (в противоположность субъективной конкретике Девы); принятие коллектива как есть — «понял, вошёл или вляпался»; умиротворение; путешествия, расширение горизонтов и рынков сбыта; часто выпадает на интернет — «идеальная площадка ощущения полноты».</li><li>- Работа: продукт выпускается «как есть, так есть», пусть с ошибками — цикл закрыт, ждёт следующий проект.</li><li>- Финансы: вклад отработал — можно снять проценты; деньги вернулись, долг отдали; выйти в ноль, всё сверх — прибыль и задел нового оборота; освобождение от задолженностей и выплат, полностью выплаченная ипотека; предел роста — «сколько отработал, столько заработал»; на вопрос из чата допускает чтение венка как конца жизни.</li><li>- Саморазвитие: самооценка через вовлечённость — часть процесса, «не выше и не ниже» мира; вдохновение творить либо желание раствориться; колесо сансары — души приходят «вдохнуть жизнь полной грудью», познавший дзен сам выбирает новую роль игры или уход выше.</li><li>- Отношения: финал отношений «логичный, полновесный, полноценный», ведущий к продолжению в новом качестве; конфетно-букетный период отгармонизирован, добавить нечего → загс, совместная жизнь, ребёнок, развод либо переезд, если тесно; каждый новый виток отношений стартует этой картой.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Негативное значение</summary><div class="rd-body"><p>Отдельного блока нет — формула прямая: «будет приобретать все те же самые значения только в отрицательном аспекте». Понимание формы и сути событий остаётся, но «едва ли будет нравиться»: «понимание от этого меньше не станет, но может быть не таким приятным». Конкретика из лекции: интернет со слежкой алгоритмов Facebook и Google — информация о вас доступна всем; путешествие, которое вам придётся испытать; действия дали логичный итог, но гармония — «против вас». Попутно отбрасывает бытовой ход «мир круглый, как его ни крути»: меняешь лишь точку зрения — считает поверхностным.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> Акценты и фишки школы</summary><div class="rd-body"><ul class="st-list"><li>- Астро-логика системы: старшие арканы целиком на колёса домов не размещаются, младшие и вовсе «натянуты на глобус» — систематизирует только 22; ссылается на Юрия Хана (придворные карты у того идут по последним домам).</li><li>- Спираль, не кольцо: пружинка, виток, винтовая лестница — ступенька-аркан сразу конец пролёта, площадка этажа и старт следующего; «закончился сезон сериала — подтягиваешь первую серию следующего».</li><li>- Каббалистическая рамка: сочетание первой и последней букв (алеф-тав) даёт истину; Христос — «альфа и омега»; колода схлопывается в одну точку.</li><li>- Два прочтения эволюции: либо Мир — Шут, доросший до высшей мудрости, либо версия Кроули — душа рождается ближе всего к богу и всю жизнь отделяется, чтобы, отринув материальное, «увенчаться Шутом» (в школе эту версию считают «грубоватой»).</li><li>- Трактовка персонажа по Уэйту: фигура не Истина (та целиком обнажена на Звезде), а душа/сознание в гармонии; «реальная истина всегда оставляет оттенок непознаваемости»; состояние благодати, озарения, инсайта, просветления будды.</li><li>- Фиолетовый шарфик — цвет высших непостижимых истин: верхний предел радуги, ряска королей и пап, самый дорогой пигмент.</li><li>- Тетраморф без книг (в Колесе Фортуны книги были): записывать нечего — дон Хуан смеялся над пишущим Карлитосом; ученицам то же: поймите смысл карты.</li><li>- Венок листьев = уроборос: вечный змей кусает свой хвост, циклы созидания и разрушения; аналог — свастика (движение по кругу); Сатурн с серпом и кольцом; по Юнгу архетип несёт «темноту и саморазрушение», Нойманн — ранняя стадия развития личности; Тор так и не победил мирового змея.</li><li>- Новый год: Сатурналии → Sol Invictus → Рождество; Дед Мороз = символика времени Сатурна; Санта помнит не только подарки, но и наказания (Морозко: «тепло ли тебе, девица»), слабую скотину зимой резали — «грустная сказка» цикла года; советская открытка со сменой лет: Мир — окончание года, Шут — начало.</li><li>- Две палочки против одной у Мага — его гипотеза: крест материальной жизни (Иисус прибит к материи), склейка дуальности инь-ян; оговорка: «это мои теории».</li><li>- Дзен и смирение — восточная и западная формы той же полноты: энсо-кольцо, пустота = наполненность, содержащая вселенную, сад камней; «кто понял жизнь, тот в цирке не смеётся»; Экхарт Толле про момент «сейчас»; смирение — «быть равным всему миру» (Маугли), кошка лезет гладиться во время медитации — истинный дзен-буддист гладит и молится; дети на коленях папы римского принимаются со смирением.</li><li>- Кино: «Хоббит, или Туда и обратно» — кольцевая композиция великих произведений, Бильбо возвращается тем же, но раскрывшимся; «Безумный Макс: Дорога ярости» — герой с героиней как дух и тело, рай находят в себе; «Восхождение Юпитер» — «матрица для девочек» сестёр Вачовски: дравшая унитазы Мила Кунис наследует вселенную, оставаясь жить в семье; «День сурка» — самое шикарное кино этой карты, путь смирения через зацикленный день; «Мирный воин» — механик-отшельник как дон Хуан.</li><li>- Банцхафа не цитирует вовсе; нумерологию отвергает («я не нумеролог», 21→3 разводит через третий дом и тройственность); танец фигуры упрощает: не богиня танца, просто «радостно».</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Ключевые слова</summary><div class="rd-body"><ul class="st-list"><li>полнота · завершение витка · выход на новый уровень · «как есть, так есть» · гармония скорее, нежели истина · умиротворение · смирение · объективность · финал, открывающий новый цикл · альфа и омега</li><li>---</li></ul></div></details>
+</div>
 <nav class="card-pagination" aria-label="Предыдущая и следующая карта">
 <a rel="prev" href="sud.html"><span>← Предыдущая карта</span>Суд</a>
-<a rel="next" href="durak.html"><span>Следующая карта →</span>Дурак</a>
+<a rel="next" href="wands-ace.html"><span>Следующая карта →</span>Туз жезлов</a>
 </nav>
+</article>
 </main>
 <footer class="site-footer">
   <p>Таро · Справочник значений карт</p>

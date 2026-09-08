@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Тройка мечей — значение и толкование | Таро Справочник</title>
+<meta name="description" content="Тройка мечей — значение карты Таро младшего аркана: масть мечи, стихия воздух. Толкование в прямом и перевёрнутом положении, в любви и работе.">
+<link rel="canonical" href="https://taro.jetserg.top/cards/swords-three.html">
+<meta property="og:title" content="Тройка мечей — значение и толкование | Таро Справочник">
+<meta property="og:description" content="Тройка мечей — значение карты Таро младшего аркана: масть мечи, стихия воздух. Толкование в прямом и перевёрнутом положении, в любви и работе.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taro.jetserg.top/cards/swords-three.html">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/swords-three.webp">
+<link rel="stylesheet" href="/css/style.css?v=3.4">
+<link rel="stylesheet" href="/css/astrology.css?v=3.4">
+<style>
+.main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
+.card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
+.card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
+.card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
+.card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── Школа Современного Таро ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
+.card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
+.card-pagination a:last-child { text-align: right; }
+.card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
+@media (max-width: 480px) {
+  .main-nav { padding: 12px 12px 0; }
+  .main-nav a { padding: 8px 12px; font-size: .9rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
+  .card-pagination { gap: 10px; }
+  .card-pagination a { padding: 16px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Тройка мечей — значение и толкование | Таро Справочник",
+  "description": "Тройка мечей — значение карты Таро младшего аркана: масть мечи, стихия воздух. Толкование в прямом и перевёрнутом положении, в любви и работе.",
+  "url": "https://taro.jetserg.top/cards/swords-three.html",
+  "inLanguage": "ru"
+}
+</script>
+<!-- Microsoft Clarity -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yejlmmd6nr");
+</script>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+<nav class="main-nav" aria-label="Разделы">
+  <div class="main-nav-inner">
+    <a href="/">Главная</a>
+    <a href="/cards/" class="mn-active">Карты</a>
+    <a href="/astrology/">Астрология</a>
+    <a href="/runes/">Руны</a>
+    <a href="/spreads.html">Расклады</a>
+  </div>
+</nav>
+<main class="card-page">
+<nav class="card-crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/cards/">Карты</a> / <span aria-current="page">Тройка мечей</span></nav>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="/img/cards/swords-three.webp" alt="Тройка мечей — карта Таро Уэйта" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Младший аркан · Мечи</p>
+<h1 class="m-title"><span class="card-number">III</span>Тройка мечей</h1>
+<p class="m-en">Three of Swords</p>
+<p class="m-meta">Масть: <b>Мечи</b> &nbsp;·&nbsp; Стихия: <b>Воздух</b> &nbsp;·&nbsp; Классика: <b>Сатурн в Весах</b></p>
+</div>
+</header>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Положения карты">
+<label class="pos-tab" for="pos-upright">Прямое положение</label>
+<label class="pos-tab" for="pos-reversed">Перевёрнутое положение</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">Школа Современного Таро</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">сердечная боль</span><span class="kw">предательство</span><span class="kw">горькая правда</span><span class="kw">слёзы</span><span class="kw">разрыв</span><span class="kw">скорбь</span></div>
+<p class="short-value">Сердце, пронзённое тремя клинками под грозовым небом: боль, нанесённая словами, изменой или горькой правдой, которую больше нельзя отрицать.</p>
+<aside class="gd-block" aria-label="Значение карты по ордену Золотая Заря"><div class="gd-head"><span class="gd-symbol" aria-hidden="true">☉</span> По ордену «Золотая Заря»</div><p class="gd-title">«The Lord of Sorrow» — Владыка Печали</p><p class="gd-why">Сатурн фиксирует границы и разделяет, а Весы относятся к союзам. В Тройке идея становится фактом — и факт разделения переживается как печаль.</p></aside>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Самый узнаваемый образ колоды: красное сердце в ливне, и три меча входят в него сверху, сбоку, снизу. Боль эта умственная вдвойне — мечи принадлежат стихии ума, поэтому голова снова и снова проигрывает ранящую сцену. Признание в измене, публичное унижение, письмо, после которого жизнь делится на «до» и «после».</p>
+<p>Но у карты есть вторая строка: дождь — это конец грозы, а не начало. Правда, даже болезненная, освобождает — иллюзия рассекается вместе с сердцем. Сатурн в Весах добавляет урок справедливости: там, где нарушены обязательства, счёт приходит обязательно. Эту боль надо назвать по имени — только названную можно отпустить.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Неприятный разговор, который давно назрел: с соседом о шуме, с роднёй о деньгах, с другом о долге. Может прийти весть, которая кольнёт, — отказ, повышение тарифа, чужая небрежность, задевшая живое. Не глушите раздражение: один честный разговор сейчас экономит месяцы глухого напряжения потом.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Критика, провал сделки или конфликт в команде: проект разворачивают, отчёт разбирают при всех, возможны сокращения. Смысл послания — отделить болезненную форму от содержания: в жёсткой обратной связи почти всегда лежит зерно, которое сделает сильнее. Подписывайте документы внимательно: тройка наказывает небрежность.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Здесь карта говорит от первого лица: измена, разоблачённая ложь, разрыв, треугольник, в котором больно всем троим. Основные удары наносят слова — сказанные сгоряча или намеренно. Если пара пережила шторм, тройка требует честности без анестезии: замалчивание превратит рану в гнойник.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Острые состояния: воспаление, жар, боль, обострение на нервной почве. Сердце и сосуды первыми отвечают на стресс — контролируйте показатели. Карта связана и с операциями: болезненно, но во спасение. Главный рецепт — не тащить боль в одиночку: слёзы снижают стрессовые гормоны, поддержка ускоряет выздоровление.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Три меча — мысль, слово и дело: три способа нанести рану; карта показывает, где вас задело и что пора оплакать. Практики горя — письма обидчику, которые сжигают, слёзы как очищение поля. Тройка — санитар души: она вскрывает нарыв, чтобы он не отравил всё тело отношений.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">исцеление</span><span class="kw">прощение</span><span class="kw">высвобождение боли</span><span class="kw">подавленная обида</span><span class="kw">восстановление</span></div>
+<p class="short-value">Клинки медленно выходят из сердца: рана затягивается и прощение становится возможным — либо боль спрятана внутрь и продолжает работу там.</p>
+<aside class="gd-block" aria-label="Значение карты по ордену Золотая Заря"><div class="gd-head"><span class="gd-symbol" aria-hidden="true">☉</span> По ордену «Золотая Заря»</div><p class="gd-title">«The Lord of Sorrow» — Владыка Печали</p><p class="gd-why">Сатурн фиксирует границы и разделяет, а Весы относятся к союзам. В Тройке идея становится фактом — и факт разделения переживается как печаль.</p></aside>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Перевёрнутая Тройка читается двумя способами. Первый — свет: острия разворачиваются вниз, самое страшное позади, сердце восстанавливает способность чувствовать. Приходят извинения или хотя бы понимание; человек обнаруживает, что вспоминает прошлое без привычного спазма. Это карта терапии и примирения.</p>
+<p>Второй — тень: рана не вылечена, а законсервирована. «Я в порядке» произносится при живых клинках внутри: цинизм вместо доверия, старая история, пересказываемая с прежней горячкой. Непрощённая обида — якорь, удерживающий всю последующую жизнь. Выбор ветки делает владелец сердца.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Восстановление после ссоры: первое мирное чаепитие, неловкое «привет», попытка вернуть дому нормальный звук. Либо обратное — бурчание на кухне, когда претензии высказываются кастрюлям, а не адресату. Закончите процесс: недообижаться хуже, чем ссориться открыто. Короткое сообщение человеку, с кем давно не говорили, снимает груз.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>После провала команда учится работать снова: репутация отрастает, новый проект компенсирует старый, возможен возврат на прежнее место. Теневой вариант — затяжная война с обидчиком: служебные записки и мелкая месть съедают силы, которые лучше вложить в следующий успех.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>После кризиса паре даётся второй шанс: извинения произнесены, правила обсуждены, близость возвращается осторожно, как птица на подоконник. Оборотная сторона — циклические войны: одна обида всплывает при каждом удобном случае, «прости» давно стало формальностью. Настоящее прощение измеряется отсутствием желания напомнить.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Фаза восстановления: послеоперационный период идёт хорошо, боль стихает, анализы улучшаются. Но психосоматика напоминает о подавленном: невыплаканная печаль оседает в теле хроническими болями в спине, желудке, горле. Если «всё нормально», а сон плохой, — тело спорит с головой; верните чувствам русло.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Работа извлечения клинков: ритуалы прощения, мягкое отсечение старых привязок, очищение сердца огнём свечи. Эффективны обряды завершения — символическое погребение умерших отношений. Теневая сторона — исцеление как вечное откладывание: годовой сбор техник вместо одного настоящего отпускания.</p></div>
+</div>
+<div class="pos-pane roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> Как школа читает этот ранг</h3>
+<div class="info-section"><h3>Основная идея</h3><p>Встреча двух идей рождает третью. Это взаимодействие не всегда приятно: приходится признать часть правды другого человека.</p></div>
+<div class="info-section"><h3>Как проявляется</h3><p>В работе — учитывать способ действия коллеги. В отношениях — искать совместный способ жить, даже при разных привычках. В саморазвитии — принимать неприятную, но полезную правду.</p></div>
+<div class="info-section"><h3>Теневая сторона</h3><p>Обида возникает, когда чужая информация превращается в эмоциональные выводы и удары по самооценке.</p></div>
+<div class="info-section"><h3>Ключевые слова</h3><p>чужая правда · компромисс · разум · взаимодействие · информация</p></div>
+<div class="roman-astro"><span class="ra-label">✷ Астрология школы</span><b>Масть воздуха · первые плоды после двойки</b><span class="ra-sep">·</span>сангвиники — «не умеешь научим, не хочешь заставим»</div>
+<h3 class="roman-subtitle"><span>📜</span> Развёрнуто — из лекции по рангу</h3>
+<details class="roman-details" open><summary><span class="rd-icon" aria-hidden="true">✧</span> Суть карты</summary><div class="rd-body"><p>взаимодействие двух идей/сил даёт третью, как сложение двух векторов силы — третий вектор; «в споре рождается истина». Но взаимодействие «не полюбовное»: приходится отказываться от своей точки зрения — отсюда печаль.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Прямое положение</summary><div class="rd-body"><ul class="st-list"><li>Символика: пронзенное сердце + дождь-слёзы; христианский ряд ран Христа (легионер пикой) и цитаты Августина/викторианской эпохи о пронзённом сердцем страстью («Ты пронзил сердце моё стрелой любви твоей»); колода Sola Busca XV века — «не советую руководствоваться этой колодой»; Уэйт — убеждённый христианин.</li><li>Соразмерность: «тройка — это на троечку» — обидно слабенько, легко исправимо (страшна десятка), но выбора нет: двойкой чужую правду можно отринуть, тройкой — вынуждены учитывать.</li><li>Работа: нового сушиста посадили на вашу кухню — «подвинься», широко махать ножом нельзя; обидно, но «разумом успокаивайте эмоции — это для общего блага».</li><li>Отношения: совместить способы действия — «как ты моешь посуду? А я вот так… давай пробовать, чтобы обоим было удобно»; блондинке при партнёре-любителе рыжих приходится думать о перекраске.</li><li>Ссоры — НЕ значение карты: «ругаться будете, только если не хватит ума договориться».</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Негативное значение</summary><div class="rd-body"><p>• обида — чужая, возможно ложная информация ложится на самооценку («а вдруг в чём-то прав»); выводы нелогичные, эмоциональные («раз мою посуду иначе — значит, не любит»).</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> Акценты и фишки школы</summary><div class="rd-body"><ul class="st-list"><li>Астрология — рабочая привязка системы вместо каббалы/нумерологии; конкретных деканатов в лекции нет.</li><li>Масонская расшифровка тройки пентаклей и «трёх степеней развития личности» — фирменный ход курса; плюс акцент на приступочке.</li><li>Различение мастей по одному вопросу: физика — пентакли, страсть и обмен интересами — жезлы, мысли — мечи, фон настроения — кубки; двойка кубков замещает эмоцию, тройка — дополняет.</li><li>Славянский ряд поговорок как мнемоники: «поперед батьки в пекло», «моя хата с краю», «не нашим не вашим», «кто в лес, кто по дрова», «дружба дружбой, а служба службой», «мама не горюй»; котёнок Гав «давай вместе бояться» → давай вместе хотеть.</li><li>Современные образы: автомобильные кинотеатры США, сушист на кухне, тату-олдскул (бывшее хобби лектора).</li><li>Рекомендация смежного взгляда — курс Юрия Хана «Алхимия отношений».</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Ключевые слова</summary><div class="rd-body"><p>в споре рождается истина; вынужденно учесть чужую правду; обидно, но логично; компромисс разумом.</p></div></details>
+</div>
+<nav class="card-pagination" aria-label="Предыдущая и следующая карта">
+<a rel="prev" href="swords-two.html"><span>← Предыдущая карта</span>Двойка мечей</a>
+<a rel="next" href="swords-four.html"><span>Следующая карта →</span>Четвёрка мечей</a>
+</nav>
+</article>
+</main>
+<footer class="site-footer">
+  <p>Таро · Справочник значений карт</p>
+  <p class="footer-note">Материалы носят справочный и развлекательный характер</p>
+</footer>
+</body>
+</html>

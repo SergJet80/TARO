@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Десятка мечей — значение и толкование | Таро Справочник</title>
+<meta name="description" content="Десятка мечей — значение карты Таро младшего аркана: масть мечи, стихия воздух. Толкование в прямом и перевёрнутом положении, в любви и работе.">
+<link rel="canonical" href="https://taro.jetserg.top/cards/swords-ten.html">
+<meta property="og:title" content="Десятка мечей — значение и толкование | Таро Справочник">
+<meta property="og:description" content="Десятка мечей — значение карты Таро младшего аркана: масть мечи, стихия воздух. Толкование в прямом и перевёрнутом положении, в любви и работе.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taro.jetserg.top/cards/swords-ten.html">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/swords-ten.webp">
+<link rel="stylesheet" href="/css/style.css?v=3.4">
+<link rel="stylesheet" href="/css/astrology.css?v=3.4">
+<style>
+.main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
+.card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
+.card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
+.card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
+.card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── Школа Современного Таро ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
+.card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
+.card-pagination a:last-child { text-align: right; }
+.card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
+@media (max-width: 480px) {
+  .main-nav { padding: 12px 12px 0; }
+  .main-nav a { padding: 8px 12px; font-size: .9rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
+  .card-pagination { gap: 10px; }
+  .card-pagination a { padding: 16px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Десятка мечей — значение и толкование | Таро Справочник",
+  "description": "Десятка мечей — значение карты Таро младшего аркана: масть мечи, стихия воздух. Толкование в прямом и перевёрнутом положении, в любви и работе.",
+  "url": "https://taro.jetserg.top/cards/swords-ten.html",
+  "inLanguage": "ru"
+}
+</script>
+<!-- Microsoft Clarity -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yejlmmd6nr");
+</script>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+<nav class="main-nav" aria-label="Разделы">
+  <div class="main-nav-inner">
+    <a href="/">Главная</a>
+    <a href="/cards/" class="mn-active">Карты</a>
+    <a href="/astrology/">Астрология</a>
+    <a href="/runes/">Руны</a>
+    <a href="/spreads.html">Расклады</a>
+  </div>
+</nav>
+<main class="card-page">
+<nav class="card-crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/cards/">Карты</a> / <span aria-current="page">Десятка мечей</span></nav>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="/img/cards/swords-ten.webp" alt="Десятка мечей — карта Таро Уэйта" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Младший аркан · Мечи</p>
+<h1 class="m-title"><span class="card-number">X</span>Десятка мечей</h1>
+<p class="m-en">Ten of Swords</p>
+<p class="m-meta">Масть: <b>Мечи</b> &nbsp;·&nbsp; Стихия: <b>Воздух</b> &nbsp;·&nbsp; Классика: <b>Солнце в Близнецах</b></p>
+</div>
+</header>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Положения карты">
+<label class="pos-tab" for="pos-upright">Прямое положение</label>
+<label class="pos-tab" for="pos-reversed">Перевёрнутое положение</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">Школа Современного Таро</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">дно</span><span class="kw">финал</span><span class="kw">предательство</span><span class="kw">крах</span><span class="kw">предел страдания</span><span class="kw">рассвет после</span></div>
+<p class="short-value">Дно достигнуто: человек лежит лицом вниз, в спине десять клинков — но над чёрным небом уже встаёт солнце, и удары закончились.</p>
+<aside class="gd-block" aria-label="Значение карты по ордену Золотая Заря"><div class="gd-head"><span class="gd-symbol" aria-hidden="true">☉</span> По ордену «Золотая Заря»</div><p class="gd-title">«The Lord of Ruin» — Владыка Разрушения</p><p class="gd-why">Десятка доводит Воздух до предельной множественности и распада. Единый центр уже не удерживает массу противоречащих мыслей — структура разрушается окончательно.</p></aside>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Самая драматичная карта колоды: тело на земле, красный плащ как последний знак достоинства, в спине — вся масть целиком. Это полное крушение: конец отношений, крах дела, предательство от своих. Здесь нечего недооценивать: произошло именно то, чего больше всего боялись.</p>
+<p>Композиция двусмысленна намеренно: десять клинков — предел, больше не войдёт ни один; удары закончились, даже если кажется иначе. Драма доведена до финала ради ясности — теперь точно известно, что умерло, и можно хоронить вместо реанимации. Восход над спокойным морем — второй сюжет: с настоящего дна путь только вверх. Карта говорит два предложения сразу: да, всё кончилось; нет, вы не кончились.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Всё разом: техника ломается, планы рушатся, новость добивает. Ощущение «за что?» законно — не глушите его деловитостью. День без подвигов: минимум обязанностей, максимум простых утешений — еда, душ, живой голос друга. Вечером обозначьте физически, что глава закрыта: выбросить разбитое, удалить переписку.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Профессиональное крушение: проект закрывают, вас увольняют или публично назначают виноватым во всём, партнёры наносят удар со спины. Не подписывайте ничего в первые дни и не судите о будущем из ямы: снизу любой горизонт выглядит одинаково. Заберите документы и рекомендации — они пригодятся раньше, чем кажется.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Конец окончательный: предательство раскрыто полностью, иллюзий не осталось, возвращаться некуда и незачем. Боль настоящая — карта не предлагает обесценить её словами «к лучшему», лишь фиксирует смерть связи. Иногда это крах общих надежд внутри пары — болезнь, долг. После такой карты перестаёшь хотеть прежнего — и это начало нового.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Предел: обострения по всем системам, температура, давление, бессонница; возможен диагноз, которого боялись, или кризисное состояние, требующее профессиональной помощи немедленно. Главное — самочувствие на дне обманчиво и не является прогнозом. При тяжёлых мыслях — к врачу и к людям, не оставайтесь одних: десятка лечится присутствием рядом.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Аркан завершения цикла: старая личность умерла, и хоронить её обязательно, иначе труп тянет энергию. Практики прощания — символическое погребение, письмо-эпитафия, сожжение вещей прошлого. Также кармическое завершение: долг этого этапа уплачен, урок сдан. Худший сценарий уже произошёл или отменён — страхам дальше делать нечего.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">восстановление</span><span class="kw">выживание</span><span class="kw">медленный подъём</span><span class="kw">отрицание конца</span><span class="kw">затянувшаяся боль</span></div>
+<p class="short-value">Из лежачего положения медленно садятся: дно пройдено и начинается подъём — либо человек отказывается признать конец и продлевает агонию.</p>
+<aside class="gd-block" aria-label="Значение карты по ордену Золотая Заря"><div class="gd-head"><span class="gd-symbol" aria-hidden="true">☉</span> По ордену «Золотая Заря»</div><p class="gd-title">«The Lord of Ruin» — Владыка Разрушения</p><p class="gd-why">Десятка доводит Воздух до предельной множественности и распада. Единый центр уже не удерживает массу противоречащих мыслей — структура разрушается окончательно.</p></aside>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>То, что происходит после кадра: тело шевелится. Первый смысл — выздоровление: худшее позади, силы возвращаются понемногу, раны затягиваются, жизнь возобновляется скромными шагами. Человек выжил — уже биография победителя, хотя пока так не ощущается: восстановление идёт медленнее желаний.</p>
+<p>Второй смысл труднее — отказ признать финал. Прямая десятка честно сказала «кончилось», перевёрнутая тянет: ещё попытка, ещё шанс. Так годами доигрывают мёртвые отношения и перезанимают деньги на убыточный бизнес. Различие задаёт вопрос: я поднимаюсь или тащу труп? Борьбе за живое — да, мёртвому — отпустить.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Постепенное возвращение к жизни: снова готовят еду, отвечают на письма, смеются над пустяками. Не форсируйте — одного маленького достижения в день достаточно. Если же вы третий месяц «почти заканчиваете» то, что давно пора похоронить, — день для честного разговора с собой. Планируйте важное на утро: оно реально добрее вечера.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Медленное возрождение: работа после увольнения находится лучше прежней, команда собирается заново, репутация отрастает тише, чем падала. Возвращайтесь к отложенным навыкам и связям. Обратный сценарий — реанимация мёртвого: компания на кредитах, проект никто не решается закрыть. Посчитайте честно: сколько ещё сил стоит эта агония?</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Выжившие отношения восстанавливаются: после измены или кризиса пара учится жить заново, доверие возвращается порциями. Иногда вторая попытка удачнее первой — оба повзрослели. Обратная сторона: связь умерла давно, а расстаются до сих пор — годы выяснений и помираний по кругу. Вы строите или отпеваете?</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Выздоровление после тяжёлого состояния: кризис миновал, показатели выравниваются, сон и аппетит возвращаются постепенно. Реабилитация требует терпения — форсаж вреден, недолеченное возвращается, поэтому курс доводится до конца. Теневой сценарий — хронификация: лечат годами без точного диагноза, потому что страшно посмотреть правде в корень.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Воскрешение после магического поражения: сила возвращается после чужой атаки или провала практики, поле очищено, урок усвоен. Хорошее время работать с родовыми сценариями беды — их власть кончается вместе с циклом. Предупреждение о некрофилии энергии: удержание умерших связей приворотами не воскрешает, а связывает обоих. Правильные проводы — благодарность и закрытая могила.</p></div>
+</div>
+<div class="pos-pane roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> Как школа читает этот ранг</h3>
+<div class="info-section"><h3>Основная идея</h3><p>Окончательное решение проблемы. То, что началось как промежуточная победа, здесь должно быть доведено до конца.</p></div>
+<div class="info-section"><h3>Как проявляется</h3><p>В работе — окончательно закрыть конфликт или проблему. В отношениях — поставить точку в старом формате. В развитии — не оставлять дверь открытой там, где решение уже принято.</p></div>
+<div class="info-section"><h3>Теневая сторона</h3><p>Процесс затягивается или решение оказывается не в пользу человека: проблема продолжает управлять им.</p></div>
+<div class="info-section"><h3>Ключевые слова</h3><p>окончательность · решение · точка · рассвет · завершение</p></div>
+<div class="roman-astro"><span class="ra-label">✷ Астрология школы</span><b>Масть воздуха · итог цикла масти</b><span class="ra-sep">·</span>сангвиники — «не умеешь научим, не хочешь заставим»</div>
+<h3 class="roman-subtitle"><span>📜</span> Развёрнуто — из лекции по рангу</h3>
+<details class="roman-details" open><summary><span class="rd-icon" aria-hidden="true">✧</span> Суть карты</summary><div class="rd-body"><p>На небе сквозь мечи виден рассвет — «самое тёмное время перед рассветом»; после решённого дня можно лежать пластом.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Прямое положение</summary><div class="rd-body"><ul class="st-list"><li>Прямое: окончательное решение проблемы: враг повержен и «больше не встанет» — похоронить, забыть. Победа началась в пятёрке, но там незавершённая (оружие забрали, врагов отпустили); десятка обязывает довести до конца: «пока не решили проблему — не вставайте из-за стола переговоров».</li><li>Девятка — страх заранее (смотрим по сторонам у дороги), десятка — то, чего боялись, произошло. Пример: десять шагов ради похода с женой в кино — спланировать, купить, сделать.</li><li>Св. Себастьян: недобитый возвращается — проблему решать окончательно, иначе вернётся.</li><li>Иногда — буквально гибель (огнестрел), но это лишь частный случай «плоского гадания».</li><li>Если что-то не получилось — окончательно испорчено (разбитая машина «в хлам»).</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Негативное значение</summary><div class="rd-body"><p>• процесс болезненный, затянутый; решение не в вашу пользу — «либо вы решаете проблемы, либо проблемы решают вас». Все десять аргументов высказаны — ни один не принят, мужчина ушёл из семьи; ваших сил недостаточно, идите к пажу мечей или становитесь им.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> Акценты и фишки школы</summary><div class="rd-body"><ul class="st-list"><li>Своя символическая опора: Каббала (Сефирот, Лайтман); Библия — конец потопа у Арарата, радуга как знак радости (с оговоркой: радуга — НЕ символ ЛГБТ); св. Себастьян; Ирида в перекличке с Умеренностью; пастораль и идиллия; викторианская Англия и тема наследования.</li><li>Современные образы: хлеб за 10 евро против торта «Наполеон», шведский стол «олл инклюзив», автосалон, шкаф из ИКЕА, Куршевель.</li><li>Практика: добавлять к выводам «но это неточно»; начинающим работать с прямыми и перевёрнутыми картами; тарологу нельзя включать оценочные эмоции (анекдот про Дядю Фёдора в буддийском монастыре — отказ от оценочности); различать, о ком карта — «о тебе или о твоих врагах» (сюжет «ты разрушишь великое государство»).</li><li>Примеры из практики: пер. 9 + пр. 10 пентаклей про зарплату; огнестрел на десятке мечей и «ножевое ранение в области сердца» на перевёрнутой тройке; увольнение с прямой десяткой кубков.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Ключевые слова</summary><div class="rd-body"><p>окончательное решение проблемы; поверженный враг; самое тёмное время перед рассветом; добить до конца.</p></div></details>
+</div>
+<nav class="card-pagination" aria-label="Предыдущая и следующая карта">
+<a rel="prev" href="swords-nine.html"><span>← Предыдущая карта</span>Девятка мечей</a>
+<a rel="next" href="swords-page.html"><span>Следующая карта →</span>Паж мечей</a>
+</nav>
+</article>
+</main>
+<footer class="site-footer">
+  <p>Таро · Справочник значений карт</p>
+  <p class="footer-note">Материалы носят справочный и развлекательный характер</p>
+</footer>
+</body>
+</html>

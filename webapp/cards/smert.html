@@ -10,55 +10,127 @@
 <meta property="og:description" content="Смерть — завершение этапа и глубокая перемена. Значение карты Таро в прямом и перевёрнутом положении, в любви и карьере. Совет карты и вопросы для размышления.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://taro.jetserg.top/cards/smert.html">
-<link rel="stylesheet" href="/css/style.css?v=3.3">
-<link rel="stylesheet" href="/css/astrology.css?v=3.3">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/major-13-death.webp">
+<link rel="stylesheet" href="/css/style.css?v=3.4">
+<link rel="stylesheet" href="/css/astrology.css?v=3.4">
 <style>
 .main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
 .card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
 .card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
 .card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
 .card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
-.card-hero { text-align: center; padding: 14px 0 34px; }
-.card-symbol { display: block; font-family: Georgia, serif; font-size: 5rem; line-height: 1.2; color: var(--gold-bright); text-shadow: 0 0 30px var(--gold-dim); }
-.card-eyebrow { color: var(--text-dim); letter-spacing: .15em; text-transform: uppercase; font-size: .76rem; margin: 18px 0 8px; }
-.card-hero h1 { font-family: Georgia, serif; font-weight: 500; font-size: clamp(2rem, 6vw, 3.3rem); line-height: 1.2; color: var(--gold-bright); overflow-wrap: anywhere; }
-.card-number { display: block; font-size: 2.2rem; color: var(--gold); margin-bottom: 10px; }
-.card-hero > p:last-child { margin-top: 16px; color: var(--text-dim); }
-.card-section { margin: 0 0 22px; padding: 28px 32px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: rgba(23, 18, 43, .88); }
-.card-section h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500; font-size: 1.6rem; line-height: 1.3; margin-bottom: 18px; }
-.card-section h3 { color: var(--gold-bright); font-size: 1rem; margin: 22px 0 10px; }
-.card-section p + p { margin-top: 16px; }
-.card-intro { background: linear-gradient(135deg, rgba(124, 92, 191, .2), var(--bg-panel)); font-size: 1.1rem; }
-.card-keywords { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 18px 0; }
-.card-keywords li { border: 1px solid var(--gold-dim); border-radius: 999px; padding: 4px 12px; font-size: .85rem; color: var(--gold-bright); }
-.card-questions { padding-left: 24px; }
-.card-questions li { padding: 4px 0 10px 6px; }
-.card-questions li::marker { color: var(--gold); }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── Школа Современного Таро ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
 .card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
-.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius); text-decoration: none; background: var(--bg-panel); }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
 .card-pagination a:last-child { text-align: right; }
 .card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
-.card-pagination a:hover, .card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
-.card-catalog { max-width: 1120px; }
-.card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; list-style: none; }
-.card-grid li { min-width: 0; }
-.card-tile { display: flex; flex-direction: column; align-items: flex-start; height: 100%; padding: 24px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel); text-decoration: none; }
-.card-tile-symbol { font-size: 2rem; line-height: 1.3; }
-.card-tile-number { color: var(--text-dim); font-size: .85rem; margin: 18px 0 4px; }
-.card-tile strong { font-family: Georgia, serif; font-size: 1.4rem; font-weight: 500; }
-.card-tile-desc { color: var(--text-dim); font-size: .9rem; margin-top: 6px; }
-@media (max-width: 700px) { .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
 @media (max-width: 480px) {
   .main-nav { padding: 12px 12px 0; }
   .main-nav a { padding: 8px 12px; font-size: .9rem; }
-  .card-page { padding: 22px 16px 36px; }
-  .card-section { padding: 22px 20px; }
-  .card-tile { padding: 18px 14px; }
-  .card-tile strong { font-size: 1.16rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
   .card-pagination { gap: 10px; }
   .card-pagination a { padding: 16px 12px; }
 }
-@media (max-width: 350px) { .card-grid { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
 </style>
 <script type="application/ld+json">
@@ -88,69 +160,77 @@
     <a href="/">Главная</a>
     <a href="/cards/" class="mn-active">Карты</a>
     <a href="/astrology/">Астрология</a>
-    <a href="/lenormand/">Ленорман</a>
     <a href="/runes/">Руны</a>
     <a href="/spreads.html">Расклады</a>
   </div>
 </nav>
 <main class="card-page">
 <nav class="card-crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/cards/">Карты</a> / <span aria-current="page">Смерть</span></nav>
-<article>
-<header class="card-hero">
-<span class="card-symbol" aria-hidden="true">❧</span>
-<p class="card-eyebrow">Старшие арканы</p>
-<h1><span class="card-number">XIII</span>Смерть</h1>
-<p>Завершение и переход</p>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="/img/cards/major-13-death.webp" alt="Смерть — карта Таро Уэйта" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Старший аркан · XIII</p>
+<h1 class="m-title"><span class="card-number">XIII</span>Смерть</h1>
+<p class="m-en">Death</p>
+<p class="m-meta">Стихия: <b>Вода</b> &nbsp;·&nbsp; Астрология: <b>Скорпион</b></p>
+</div>
 </header>
-<section class="card-section card-intro" aria-labelledby="brief">
-<h2 id="brief">Краткое значение</h2>
-<p>Смерть говорит о завершении, после которого прежний порядок уже не вернуть. В трактовках этого аркана важно освободить место для следующего этапа и не тратить все силы на удержание отжившего.</p>
-</section>
-<section class="card-section" aria-labelledby="upright">
-<h2 id="upright">Прямое положение</h2>
-<p>Конец главы, который нельзя отменить: старое уходит, освобождая место новому, — единственная настоящая гарантия карты.</p>
-<ul class="card-keywords" aria-label="Ключевые слова"><li>завершение</li><li>трансформация</li><li>переход</li><li>отпускание прошлого</li><li>неотвратимость</li><li>обновление</li></ul>
-<p>Смерть в Таро — не могила, а дверной проём. Всадник на карте движется медленно и неудержимо: то, что должно закончиться, закончится независимо от наших ходатайств. Белая роза на знамени напоминает — за всяким концом спрятано обновление.</p>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Положения карты">
+<label class="pos-tab" for="pos-upright">Прямое положение</label>
+<label class="pos-tab" for="pos-reversed">Перевёрнутое положение</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">Школа Современного Таро</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">завершение</span><span class="kw">трансформация</span><span class="kw">переход</span><span class="kw">отпускание прошлого</span><span class="kw">неотвратимость</span><span class="kw">обновление</span></div>
+<p class="short-value">Конец главы, который нельзя отменить: старое уходит, освобождая место новому, — единственная настоящая гарантия карты.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Смерть в Таро — не могила, а дверной проём. Всадник на карте движется медленно и неудержимо: то, что должно закончиться, закончится независимо от наших ходатайств. Белая роза на знамени напоминает — за всяким концом спрятано обновление.</p>
 <p>В раскладе карта объявляет о финале цикла: отношений, работы, этапа жизни, версии себя. Попытки удержать отжившее болезненнее самого перехода. Смерть щадит тех, кто не цепляется: она забирает форму, но не суть.</p>
-<p>Это аркан глубокого очищения. Как в природе ничего не исчезает, а перегнивает в новую жизнь, так и личная история, сброшенная с плеч, становится почвой для следующего сезона.</p>
-</section>
-<section class="card-section" aria-labelledby="reversed">
-<h2 id="reversed">Перевёрнутое положение</h2>
-<p>Переход застрял наполовину: старое уже мертво, но его держат за руку и не дают выйти из комнаты.</p>
-<ul class="card-keywords" aria-label="Ключевые слова"><li>сопротивление переменам</li><li>застой</li><li>цепляние за прошлое</li><li>затянувшийся финал</li><li>страх конца</li><li>незавершённость</li></ul>
-<p>Перевёрнутая Смерть — всадник, которого заставляют стоять. Перемены назрели и многократно объявлены, но человек держится за рухнувшее: за отношения, работающие на памяти, за работу, существующую в титрах, за себя прежнего.</p>
+<p>Это аркан глубокого очищения. Как в природе ничего не исчезает, а перегнивает в новую жизнь, так и личная история, сброшенная с плеч, становится почвой для следующего сезона.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Хороший день, чтобы разобрать кладовку, шкаф и телефонную книгу — выбросить, отдать, попрощаться. Завершите то, что давно висит: заявление, возврат, последнее письмо. Разрыв с надоевшей привычкой пройдёт легче, чем обычно.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>В работе происходит смена эпох: проект закрывается, команда распускается, профессия перестаёт кормить. Карта советует не спасать утопающее, а забрать опыт и уйти красиво. Резкая перемена — увольнение, смена сферы, продажа бизнеса — сейчас не риск, а своевременность.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Отношения достигли точки невозврата: прежними они не станут — либо перерождение союза на новых условиях, либо честное прощание. Цепляние «ради детей», «квартиры» и «уже восемь лет» продлевает агонию и ранит всех. Для одиночек — конец долгой влюблённости в недоступного человека, освобождающий место живому чувству.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Карта редко говорит о физической смерти — чаще о серьёзной перестройке: операции, курс лечения, отказ от старого образа жизни. Хроническая болезнь может наконец быть названа своим именем и взята под контроль. Период требует уважения к процессу: тело меняется, не торопите его, но и не прячьтесь от обследований — ранняя честность здесь спасает.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Скорпионья природа аркана делает его картой посвящения в тайну преображения: старое «я» умирает ритуально, чтобы освободилась более крупная фигура. В практиках Смерть работает с отпусканием — писем, которые не отправят, вещей, которые сожгут, имён, которые перестанут произносить. Она же — покровительница работы с предками и тонкой настройке наследия рода.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">сопротивление переменам</span><span class="kw">застой</span><span class="kw">цепляние за прошлое</span><span class="kw">затянувшийся финал</span><span class="kw">страх конца</span><span class="kw">незавершённость</span></div>
+<p class="short-value">Переход застрял наполовину: старое уже мертво, но его держат за руку и не дают выйти из комнаты.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Перевёрнутая Смерть — всадник, которого заставляют стоять. Перемены назрели и многократно объявлены, но человек держится за рухнувшее: за отношения, работающие на памяти, за работу, существующую в титрах, за себя прежнего.</p>
 <p>Эта карта описывает полужизнь в коридоре между комнатами: дверь назад закрыта, вперёд не открыта, и всё время уходит на раскачивание ручки. Чем дольше задержка, тем жёстче финальный толчок.</p>
-<p>Иногда она показывает и обратное — слишком частые, поверхностные «умирания»: человек сжигает мосты по мелочам, избегая единственного настоящего перехода, который действительно страшен.</p>
-</section>
-<section class="card-section" aria-labelledby="love">
-<h2 id="love">В любви</h2>
-<h3>Прямое положение</h3>
-<p>Отношения достигли точки невозврата: прежними они не станут — либо перерождение союза на новых условиях, либо честное прощание. Цепляние «ради детей», «квартиры» и «уже восемь лет» продлевает агонию и ранит всех. Для одиночек — конец долгой влюблённости в недоступного человека, освобождающий место живому чувству.</p>
-<h3>Перевёрнутое положение</h3>
-<p>Отношения существуют по инерции: пара давно рассталась морально, но продолжает делить кров и праздники. Каждый новый виток ссор повторяет старый сценарий — ни конца, ни начала. Карта говорит прямо: удерживаемое насильно разлагается и травлит обоих.</p>
-</section>
-<section class="card-section" aria-labelledby="career">
-<h2 id="career">В карьере</h2>
-<h3>Прямое положение</h3>
-<p>В работе происходит смена эпох: проект закрывается, команда распускается, профессия перестаёт кормить. Карта советует не спасать утопающее, а забрать опыт и уйти красиво. Резкая перемена — увольнение, смена сферы, продажа бизнеса — сейчас не риск, а своевременность.</p>
-<h3>Перевёрнутое положение</h3>
-<p>Профессиональный застой с симптомами распада: зарплаты задерживают, проекты сворачиваются, а все держатся за тонущее место из страха перемен. Карта честно предупреждает: спасать уже нечего, экономия сил на подготовку к новому выгоднее героической обороны. Возможен и внутренний вариант — работа, которую вы тайно ненавидите годами, но не смеетесь оставить.</p>
-</section>
-<section class="card-section" aria-labelledby="advice">
-<h2 id="advice">Совет карты</h2>
-<p>Назовите, что уже закончилось, и позвольте себе прожить расставание с этим этапом. Заберите полезный опыт, завершите доступные дела и постепенно освобождайте место для нового.</p>
-</section>
-<section class="card-section" aria-labelledby="questions">
-<h2 id="questions">Вопросы для размышления</h2>
-<ol class="card-questions"><li>Что я продолжаю удерживать, хотя прежней жизни в этом уже нет?</li>
-<li>Какой опыт завершившегося этапа я хочу взять с собой?</li>
-<li>Какое небольшое действие поможет признать переход?</li></ol>
-</section>
-</article>
+<p>Иногда она показывает и обратное — слишком частые, поверхностные «умирания»: человек сжигает мосты по мелочам, избегая единственного настоящего перехода, который действительно страшен.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Быт зарастает недоделками: ремонт стоит на середине, вещи умерших времён занимают полкомнаты, письма без ответа копятся месяцами. День требует одного решительного выброса — физического или бумажного. Застрявшие вопросы не решатся сами: чем дольше вы обходите их стороной, тем дороже будет финальный счёт.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Профессиональный застой с симптомами распада: зарплаты задерживают, проекты сворачиваются, а все держатся за тонущее место из страха перемен. Карта честно предупреждает: спасать уже нечего, экономия сил на подготовку к новому выгоднее героической обороны. Возможен и внутренний вариант — работа, которую вы тайно ненавидите годами, но не смеетесь оставить.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Отношения существуют по инерции: пара давно рассталась морально, но продолжает делить кров и праздники. Каждый новый виток ссор повторяет старый сценарий — ни конца, ни начала. Карта говорит прямо: удерживаемое насильно разлагается и травлит обоих.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Хронические состояния, которые лечат половинчато: курс брошен, симптомы заглушены, причина процветает. Тело застряло в болезни так же, как психика — в старой роли жертвы обстоятельств. Опасно и другое: игнорирование явных симптомов из страха диагноза.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>В тонких практиках перевёрнутая Смерть — знак незакрытого перехода: духи неотпущенных связей, работа с утратой, которая была запрещена и не прожита. Человек может годами носить чужое незавершённое горе. Ритуальные формы завершения — поминовение, письмо умершему, символическое захоронение предмета — открывают замороженную энергию. Пока переход не прожит, сила циркулирует вокруг, не входя в жизнь.</p></div>
+</div>
+<div class="pos-pane roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> Кратко и просто</h3>
+<div class="info-section"><h3>Основная идея</h3><p>Смерть — не обязательно физическая смерть. В первую очередь это необратимое изменение.
+Старое состояние заканчивается, чтобы могло начаться новое.</p></div>
+<div class="info-section"><h3>Как проявляется</h3><p>Завершение этапа, увольнение, выход на пенсию, разрыв отношений, переезд, смена профессии, окончательное решение.</p></div>
+<div class="info-section"><h3>Работа</h3><p>Человек перестаёт быть тем, кем был раньше, и начинает новую жизнь уже в другой роли.
+Деньги
+Потери, необратимые решения, прекращение старого способа использования имущества или денег.</p></div>
+<div class="info-section"><h3>Теневая сторона</h3><p>Главная проблема — отказ принимать перемены.</p></div>
+<div class="info-section"><h3>Особенность школы</h3><p>Смерть связана со Скорпионом и VIII домом, Плутоном и Аидом. Главная мысль карты: смерть — не конец пути, а одна из его важнейших границ.</p></div>
+<div class="roman-astro"><span class="ra-label">✷ Астрология школы</span><b>VIII дом · Скорпион</b><span class="ra-sep">·</span>Плутон/Аид явно, Марс фоном; ось II–VIII<div class="ra-classic">У классики Уэйта: Скорпион</div></div>
+<h3 class="roman-subtitle"><span>📜</span> Развёрнуто — выжимки лекций</h3>
+<details class="roman-details" open><summary><span class="rd-icon" aria-hidden="true">✧</span> Суть карты</summary><div class="rd-body"><p>Он снимает ужас клиентов: «ничего такого глобального страшного в этой карте нет — это скорее более философская карта», хотя иногда она напрямую говорит об угасании жизни. Ядро — трансформация и выход за пределы: число 13 означает «выход по другую сторону» — час после полночи, следующий виток колеса Зодиака; отсюда «несчастливость»: 13 «уже не принадлежит нашему миру». Оккультное толкование по Уэйту «в целом позитивнее, чем общепринятое значение»: перемены, «переходы от низшего к высшему», возрождение, «место прибытия». Это не конец: «это не Рагнарёк… ещё одна веха на пути к новой, другой жизни» — над картой между двумя башнями сияет солнце бессмертия. Архетип прост: «главный смысл аркана выражается одним словом — названием; главный смысл смерти — это смерть»; при этом смерть — «не столько личность и даже не ситуация, сколько общий принцип», как Император — закон порядка.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Прямое положение</summary><div class="rd-body"><ul class="st-list"><li>Значения даёт «по социуму и желаниям», называя условными — тонкости остаются закрытым группам.</li><li>- Социум: равенство («все умрут, все там будем»), непоколебимость познавших смерть («пчёлы — та же фигня… бояться нечего»); смерть «не принимает аргументов».</li><li>- Работа, роль: новая деятельность; увольнение/пенсия: человек «умирает для общества в прежнем виде»: «Иван Иванович-начальник умер — теперь Иван Иванович-охотник родился».</li><li>- Финансы: потери («что-то для вас умерло»); необратимое решение — «билет в один конец»: Харон возит «только в одну сторону», «фарш невозможно прокрутить назад». Новый формат имущества: квартиру переводят под кафе — помещение «умерло», но «родилось в мире ресторанов».</li><li>- Саморазвитие: суровое всеобщее равенство; решимость — смирившиеся со смертью («мы всё равно не жильцы»: немецкая подлодка, спартанцы) идут на подвиг; пересмотр приоритетов, «убрать лишнее»: «в Макдональдс бегал — купил проездной в бассейн»; прежний умирает, рождается другой.</li><li>- Эмоции, личная жизнь: принятие неизбежного — чаще разрыв отношений, вы уходите «в мир без этого человека»; окончательное решение; прощение неисправимой ошибки; переезд за границу — прежний житель родины умер.</li><li>Телесное — только через VIII дом («смертельные болезни») и пример ЗОЖ.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Негативное значение</summary><div class="rd-body"><p>Работает формула нейтральности: «всё зависит от того, хорошо это для вас или нет — вопрос второй»; карта — о процессах, «протекающих помимо воли человека». Минусы придаточно: игнорирующие перемены «расплачиваются за это» — «судьба ломает через колено тех, кто не понимает намёков судьбы»; скорпион жалит «в незащищённое место», как Ахиллеса; вампир, не желающий меняться, лишь существует. По сути «то же самое с неприятным привкусом»: страх вместо принятия.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> Акценты и фишки школы</summary><div class="rd-body"><ul class="st-list"><li>- Астрология системы: VIII дом / Скорпион, фон — Марс, явно — Плутон, «он же Аид». Ось II–VIII: Телец, Венера, Хирон — своё, «правильное» против чужого и запретного; «в противоположных домах всегда есть что-то общее — две стороны одной монеты».</li><li>- Начинка VIII дома: переменные, наследство, долги, кредиты, чужие деньги, крупные финансы, крупный бизнес («всё стекается в землю» — Плутос); магия, мистика, паранормальное; секс на адреналине — продолжение рода при близости смерти; опасные профессии. Три ступени Скорпиона = уровни развития. Парадокс: «война быстрее всего движет прогресс человечества… смерть — это прогресс».</li><li>- Символика: всадник — одно из видений Апокалипсиса; белая роза на чёрном флаге: «роза — это жизнь; чёрное — отсутствие, белое — присутствие»; река как Стикс; ладья Харона и монеты покойнику — «всегда чем-то нужно жертвовать… просто так туда не пустят» (мостик от Повешенного); башни повторятся в Луне.</li><li>- Детали рисунка (ход справа налево, позы фигур) — «не натягивайте сову на глобус»: художник так видел. Демарш против книг сочетаний: «зачем плодить сущности без нужды… даже Хайо Банцхаф этим баловался» (единственное упоминание автора).</li><li>- Египет: Анубис — страж весов (преемственность от Справедливости); собака — древний образ страха: лай означал угрозу, «человек перепоручал бояться за себя собаке»; сравнение с Гермесом он принимает лишь как «всхожесть функций»; хвалил Анубиса в «Американских богах». Геката — богиня лунного света, преисподней, ведьм и ядов; скорпионьей матери-целительнице отвечает образ няни: «мать любит — няня наказывает», поэтому Скорпионы — строгие администраторы вроде Мэри Поппинс. Цербер рационализировали в ядовитую змею — «домашнюю зверушку Аида сократили до собаки».</li><li>- Аид по Гомеру «щедрый и гостеприимный» и хранитель богатств; страшное имя вытеснил Плутон.</li><li>- Бессмертие: «бессмертный человек — тот, который знает своё слабое место и прячет его» — ахиллесова пята и Кощей с иглой в яйце «на мировом древе». Славянский ряд скромен: Кощей и белорусская «Дикая охота короля Стаха» Короткевича.</li><li>- Дикая охота — память о набегах, предвестие войны/чумы; предводительница Геката. Danse macabre чумной эпохи ведёт к могиле все сословия; осознавший смертность «начинает думать о высоких понятиях».</li><li>- Кино: «Фонтан» Аронофски — его фильм №1 всех времён и народов (конкистадор, врач, космонавт в звездолёте-дереве); «смерть — это дорога к величию», «отправная точка пути к бессмертию»; «не надо понимать, надо смотреть и чувствовать» — ощущение как при работе с картами. «Пункт назначения» — неизбежное догонит убежавших; Белые ходоки «Игры престолов» «воевали против всех»; «Интервью с вампиром» — три вампира = три ступени Скорпиона, вампир живёт чужим, как скорпион-финансист чужими деньгами; «Грань будущего» — день сурка и безошибочность: «спасая других, спасаешь себя»; из чата — «Мертвец» Джармуша.</li><li>- Темп: на «что быстрее — Смерть или Башня?» отвечает «времени в картах таро нет»; движется всю жизнь — случается мгновенно.</li><li>- Мостик вперёд: Умеренность — «правильное изменение, перетекание форм»; понявший смерть «уже не боится не успеть».</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Ключевые слова</summary><div class="rd-body"><ul class="st-list"><li>трансформация; переход от низшего к высшему; выход «по другую сторону»; равенство («все там будем»); непоколебимость; фатализм; билет в один конец; новый формат; путь к вечной жизни, солнце бессмертия; белая роза на чёрном фоне.</li><li>---</li></ul></div></details>
+</div>
 <nav class="card-pagination" aria-label="Предыдущая и следующая карта">
 <a rel="prev" href="poveshennyj.html"><span>← Предыдущая карта</span>Повешенный</a>
 <a rel="next" href="umerennost.html"><span>Следующая карта →</span>Умеренность</a>
 </nav>
+</article>
 </main>
 <footer class="site-footer">
   <p>Таро · Справочник значений карт</p>

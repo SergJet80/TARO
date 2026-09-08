@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Семёрка пентаклей — значение и толкование | Таро Справочник</title>
+<meta name="description" content="Семёрка пентаклей — значение карты Таро младшего аркана: масть пентакли, стихия земля. Толкование в прямом и перевёрнутом положении, в любви и работе.">
+<link rel="canonical" href="https://taro.jetserg.top/cards/pentacles-seven.html">
+<meta property="og:title" content="Семёрка пентаклей — значение и толкование | Таро Справочник">
+<meta property="og:description" content="Семёрка пентаклей — значение карты Таро младшего аркана: масть пентакли, стихия земля. Толкование в прямом и перевёрнутом положении, в любви и работе.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taro.jetserg.top/cards/pentacles-seven.html">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/pentacles-seven.webp">
+<link rel="stylesheet" href="/css/style.css?v=3.4">
+<link rel="stylesheet" href="/css/astrology.css?v=3.4">
+<style>
+.main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
+.card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
+.card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
+.card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
+.card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── Школа Современного Таро ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
+.card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
+.card-pagination a:last-child { text-align: right; }
+.card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
+@media (max-width: 480px) {
+  .main-nav { padding: 12px 12px 0; }
+  .main-nav a { padding: 8px 12px; font-size: .9rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
+  .card-pagination { gap: 10px; }
+  .card-pagination a { padding: 16px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Семёрка пентаклей — значение и толкование | Таро Справочник",
+  "description": "Семёрка пентаклей — значение карты Таро младшего аркана: масть пентакли, стихия земля. Толкование в прямом и перевёрнутом положении, в любви и работе.",
+  "url": "https://taro.jetserg.top/cards/pentacles-seven.html",
+  "inLanguage": "ru"
+}
+</script>
+<!-- Microsoft Clarity -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yejlmmd6nr");
+</script>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+<nav class="main-nav" aria-label="Разделы">
+  <div class="main-nav-inner">
+    <a href="/">Главная</a>
+    <a href="/cards/" class="mn-active">Карты</a>
+    <a href="/astrology/">Астрология</a>
+    <a href="/runes/">Руны</a>
+    <a href="/spreads.html">Расклады</a>
+  </div>
+</nav>
+<main class="card-page">
+<nav class="card-crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/cards/">Карты</a> / <span aria-current="page">Семёрка пентаклей</span></nav>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="/img/cards/pentacles-seven.webp" alt="Семёрка пентаклей — карта Таро Уэйта" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Младший аркан · Пентакли</p>
+<h1 class="m-title"><span class="card-number">VII</span>Семёрка пентаклей</h1>
+<p class="m-en">Seven of Pentacles</p>
+<p class="m-meta">Масть: <b>Пентакли</b> &nbsp;·&nbsp; Стихия: <b>Земля</b> &nbsp;·&nbsp; Классика: <b>Сатурн в Тельце</b></p>
+</div>
+</header>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Положения карты">
+<label class="pos-tab" for="pos-upright">Прямое положение</label>
+<label class="pos-tab" for="pos-reversed">Перевёрнутое положение</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">Школа Современного Таро</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">терпение</span><span class="kw">оценка прогресса</span><span class="kw">инвестиции</span><span class="kw">долгосрочность</span><span class="kw">настойчивость</span><span class="kw">плоды труда</span></div>
+<p class="short-value">Пауза перед урожаем: труд вложен, плоды наливаются, и всё, что требуется сейчас, — терпение, оценка и не выдёргивать ростки.</p>
+<aside class="gd-block" aria-label="Значение карты по ордену Золотая Заря"><div class="gd-head"><span class="gd-symbol" aria-hidden="true">☉</span> По ордену «Золотая Заря»</div><p class="gd-title">«The Lord of Success Unfulfilled» — Владыка Неосуществлённого Успеха</p><p class="gd-why">Сатурн замедляет и ограничивает фиксированную Землю. Семёрка ставит результат под испытание: ресурсы вложены, но рост задержан, поэтому обещанный успех ощущается как неосуществлённый.</p></aside>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Огородник облокотился на мотыгу и смотрит на куст, увешанный шестью плодами; седьмой внизу только раскрылся. Работы на грядке сделано много, но урожай ещё не снят — между трудом и результатом лежит время, которое нельзя ускорить никаким усердием. Семёрка пентаклей — карта стратегической паузы: оценить, дождаться, дозреть самому.</p>
+<p>Сатурн в Тельце даёт вкус медленного времени: рост меряется сезонами, не днями. Юная энергия торопит сорвать и подсчитать; зрелая умеет стоять, опираясь на мотыгу, зная, что ожидание — тоже работа. Второй сюжет карты — ревизия: решить честно, что доращивать, а что выкопать ради нового посева.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Домашние вложения зреют: ремонт почти закончен, сбережения подрастают, ребёнок крепнет в успехах. Действий требуется немного: проверяйте полив, а не пересаживайте дерево каждую неделю. Дневник прогресса успокоит нетерпеливый ум фактами пройденного пути.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>В работе стадия ожидания отдачи: проект отправлен клиенту, инвестиция работает, заявка рассматривается. Не дёргайте процесс уточнениями каждые сутки — результаты придут по своему расписанию. Параллельно проведите трезвую ревизию: какие усилия окупаются, какие тянут силы впустую. Спокойное стратегическое решение дороже срочных телодвижений.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Отношения в фазе выращивания: вкладываете внимание и терпение, а мгновенного отклика нет. Не требуйте урожай через неделю после посева — доверие растёт медленно. Но если сеете только вы, взгляните на грядку честно: растёт ли там что-нибудь вообще?</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Телу нужно время: результаты тренировок проявятся через недели, лечение набирает силу постепенно. Главный враг — нетерпение, толкающее удваивать нагрузки и бросать курсы на середине. Продолжайте в режиме умеренности и регулярности с контрольными точками раз в месяц: здоровье — самая долгосрочная ваша инвестиция.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Сатурн в Тельце — время, вросшее в материю: тайна вызревания, знакомая аграрным культам как священное ожидание. Намерение, посеянное в правильный час, растёт само — не дёргайте его проверками. Ритуал семёрки — ревизия посевов при полной луне: посмотреть, поблагодарить, выбрать, чему дать второй сезон.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">нетерпение</span><span class="kw">потраченные впустую усилия</span><span class="kw">слабая отдача</span><span class="kw">разочарование</span><span class="kw">короткое мышление</span><span class="kw">заброшенность</span></div>
+<p class="short-value">Нетерпение губит посевы: усилий много, отдачи мало, и рука уже тянется выкопать то, что следовало бы дорастить.</p>
+<aside class="gd-block" aria-label="Значение карты по ордену Золотая Заря"><div class="gd-head"><span class="gd-symbol" aria-hidden="true">☉</span> По ордену «Золотая Заря»</div><p class="gd-title">«The Lord of Success Unfulfilled» — Владыка Неосуществлённого Успеха</p><p class="gd-why">Сатурн замедляет и ограничивает фиксированную Землю. Семёрка ставит результат под испытание: ресурсы вложены, но рост задержан, поэтому обещанный успех ощущается как неосуществлённый.</p></aside>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Садовник бросил мотыгу и ушёл с поля — обидевшись на медленные плоды или рыть новый участок, не сняв урожай со старого. Перевёрнутая семёрка — разорванный цикл: труд был, результата нет, потому что ожидание оборвалось на середине или усилия изначально шли в истощённую почву.</p>
+<p>Два характерных сценария. Нетерпеливый: смена направления при каждом замедлении, и ни один посев не доживает до урожая. Усталый: годы вкладов в дело или отношения, которые не собирались плодоносить, а признать страшно. Оба лечит честный учёт: цифры вложенного и выросшего вернут ясность лучше эмоций.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Домашние проекты буксуют: начатое месяцами висит недоделанным, деньги, отложенные на цель, растаскиваются мелочами, результата не видно нигде. Причина чаще не в проклятии, а в отсутствии системы. Выберите один процесс, доведите до конца и зафиксируйте результат — привычка завершать важнее вдохновения, которым вы пытаетесь её заменить.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Вложения не окупаются: проект съедает часы, зарплата стоит на месте, обучение не ведёт к повышению. Возможны и свои ошибки управления — ресурсы не туда, вечная шлифовка вместо выпуска продукта. Не бросайте всё: пересчитайте, что имеет перспективу, а что — красивая трата жизни.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>В отношениях чувство вклада без отдачи: вы водите на ужины, помните даты, а в ответ тишина или потребительский тон. Нетерпение толкает к ультиматумам, усталость — к ледяному безразличию, обе крайности губительны. Спокойный разговор о том, что каждый кладёт в общую грядку, полезнее бурных сцен и молчаливого счёта обид.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Быстрые схемы проваливаются: чудо-диета не держится, абонемент сгорает, курс витаминов брошен на треть. Разочарование в медленной медицине опаснее самой медлительности. Вернитесь к скучной основе — сон, шаги, вода, плановый визит к врачу — и дайте этому три месяца: организм отвечает тем, кто не бросает его на середине.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Перевёрнутый Сатурн в Тельце — время, вышедшее из повиновения: намерения гниют в земле от избытка проверок или недостатка веры. Магическая традиция видела здесь урок незрелого посева: желания, брошенные от скуки, без цены и срока, не прорастают. Практика исправления — пересмотр обетов: допишите срок, плату и критерий результата целям, которые хотите всерьёз.</p></div>
+</div>
+<div class="pos-pane roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> Как школа читает этот ранг</h3>
+<div class="info-section"><h3>Основная идея</h3><p>Результат труда уже есть, но ещё не пришло время окончательно им воспользоваться. Работа сделана — теперь наступает ожидание.</p></div>
+<div class="info-section"><h3>Как проявляется</h3><p>В работе — здоровый ритм усилий и отдыха. В деньгах — заработанное ещё не пришло в окончательную точку. В отношениях — периодичность и спокойная пауза.</p></div>
+<div class="info-section"><h3>Теневая сторона</h3><p>Человек продолжает работать там, где ему уже пора остановиться и выдохнуть.</p></div>
+<div class="info-section"><h3>Ключевые слова</h3><p>ожидание · отдых · ритм · урожай · пауза</p></div>
+<div class="roman-astro"><span class="ra-label">✷ Астрология школы</span><b>Масть земли · испытание, переоценка</b><span class="ra-sep">·</span>флегматики — выжидающие, конкретика и форма</div>
+<h3 class="roman-subtitle"><span>📜</span> Развёрнуто — из лекции по рангу</h3>
+<details class="roman-details" open><summary><span class="rd-icon" aria-hidden="true">✧</span> Суть карты</summary><div class="rd-body"><p>закономерный результат приложенного труда: «основная работа сделана честно, осталось дождаться, когда виноград зреет» — плоды вкушаются лишь на девятке. Отсюда легитимный отдых: «бог на седьмой день решил ничего не делать, потому что и так много всё успел».</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Прямое положение</summary><div class="rd-body"><ul class="st-list"><li>Работа: эффективность — «сколько знаков в минуту печатаешь без ошибок»; войти в недельный рабочий ритм, чередовать напряжение и паузы; удовольствие от погружённой работы придёт на восьмёрке.</li><li>Финансы: заработано многое, пользоваться рановато — «месяц закончился, зарплата будет седьмого числа», квартальный отчёт сдан — премии ждать.</li><li>Отношения: пауза и периодичность хорошего; на физическом уровне (секс для пентаклей — материальный аспект отношений) результат достигнут и устраивает; иногда показывает беременность.</li><li>Саморазвитие: важнейшая карта для людей земли — трудоголиков, забывающих отдыхать.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Негативное значение</summary><div class="rd-body"><p>• придётся делать перерыв — результат есть, но не устраивает («сажали помидоры, вырос кабачок — как ни крути, помидорами не станет»); совет мастера-ювелира: не выходит — отложи работу, выдохни, вернись; «довёл до постели, но не до удовлетворения»; без отдыха — угроза физическому здоровью (единственная тема здоровья в лекции).</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> Акценты и фишки школы</summary><div class="rd-body"><ul class="st-list"><li>Астрологии у семёрок нет вовсе: привязок к Зодиаку и домам здесь нет (единственное слово «астрологический» — про чужую колоду Мадара); колесо Зодиака — прерогатива старших арканов.</li><li>«Славянского ряда» в привычном смысле нет — фольклор сведён к русской пословичной семантике множества; плюс пятница как день Венеры и Афродиты, где труднее не поддаться лени («семь пятниц на неделе» — о кормящем завтраками).</li><li>Средневековая реалия: выходной в неделю был один — база сюжета про отказ работать в седьмой день.</li><li>Кино и культура: «Одиннадцать друзей Оушена» и «Бумажный дом» как благородные семёрки мечей, моргающие рамочки Остапа Бендера (воображаемое будущее), «Мастер и Маргарита» (героям нужна тишина и спокойствие), песня «нормальные герои всегда идут в обход», Сократ: «чем больше я знаю, тем лучше понимаю, как мало я знаю».</li><li>Полемика с книгами: современная литература по Таро — перепаковка («возьми чужие значения, заверни в другие слова — книжка готова»); копируют у Кроули и Банцхафа; самого Банцхафа он одобряет — «на начальном этапе заходит идеально, простой и доступный язык», хотя старшие арканы по большому мифу там не разобраны; Ошо Дзен для него — маркетинг вокруг имени автора.</li><li>Практика: новичкам пять лет работать прямыми и перевёрнутыми («пересядьте с механики на автомат»); негатив прямой карты читают по соседям и интуиции.</li><li>Значения строятся от прогрессии ряда: пятёрка → шестёрка → семёрка, с анонсом восьмёрки (удовольствие от работы / уход без нужного кубка).</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Ключевые слова</summary><div class="rd-body"><p>много результатов труда; урожай не созрел; пауза и передышка; «зарплата седьмого числа»; соразмерь усилия.</p></div></details>
+</div>
+<nav class="card-pagination" aria-label="Предыдущая и следующая карта">
+<a rel="prev" href="pentacles-six.html"><span>← Предыдущая карта</span>Шестёрка пентаклей</a>
+<a rel="next" href="pentacles-eight.html"><span>Следующая карта →</span>Восьмёрка пентаклей</a>
+</nav>
+</article>
+</main>
+<footer class="site-footer">
+  <p>Таро · Справочник значений карт</p>
+  <p class="footer-note">Материалы носят справочный и развлекательный характер</p>
+</footer>
+</body>
+</html>

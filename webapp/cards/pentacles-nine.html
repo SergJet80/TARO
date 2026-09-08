@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Девятка пентаклей — значение и толкование | Таро Справочник</title>
+<meta name="description" content="Девятка пентаклей — значение карты Таро младшего аркана: масть пентакли, стихия земля. Толкование в прямом и перевёрнутом положении, в любви и работе.">
+<link rel="canonical" href="https://taro.jetserg.top/cards/pentacles-nine.html">
+<meta property="og:title" content="Девятка пентаклей — значение и толкование | Таро Справочник">
+<meta property="og:description" content="Девятка пентаклей — значение карты Таро младшего аркана: масть пентакли, стихия земля. Толкование в прямом и перевёрнутом положении, в любви и работе.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taro.jetserg.top/cards/pentacles-nine.html">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/pentacles-nine.webp">
+<link rel="stylesheet" href="/css/style.css?v=3.4">
+<link rel="stylesheet" href="/css/astrology.css?v=3.4">
+<style>
+.main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
+.card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
+.card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
+.card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
+.card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── Школа Современного Таро ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
+.card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
+.card-pagination a:last-child { text-align: right; }
+.card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
+@media (max-width: 480px) {
+  .main-nav { padding: 12px 12px 0; }
+  .main-nav a { padding: 8px 12px; font-size: .9rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
+  .card-pagination { gap: 10px; }
+  .card-pagination a { padding: 16px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Девятка пентаклей — значение и толкование | Таро Справочник",
+  "description": "Девятка пентаклей — значение карты Таро младшего аркана: масть пентакли, стихия земля. Толкование в прямом и перевёрнутом положении, в любви и работе.",
+  "url": "https://taro.jetserg.top/cards/pentacles-nine.html",
+  "inLanguage": "ru"
+}
+</script>
+<!-- Microsoft Clarity -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yejlmmd6nr");
+</script>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+<nav class="main-nav" aria-label="Разделы">
+  <div class="main-nav-inner">
+    <a href="/">Главная</a>
+    <a href="/cards/" class="mn-active">Карты</a>
+    <a href="/astrology/">Астрология</a>
+    <a href="/runes/">Руны</a>
+    <a href="/spreads.html">Расклады</a>
+  </div>
+</nav>
+<main class="card-page">
+<nav class="card-crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/cards/">Карты</a> / <span aria-current="page">Девятка пентаклей</span></nav>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="/img/cards/pentacles-nine.webp" alt="Девятка пентаклей — карта Таро Уэйта" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Младший аркан · Пентакли</p>
+<h1 class="m-title"><span class="card-number">IX</span>Девятка пентаклей</h1>
+<p class="m-en">Nine of Pentacles</p>
+<p class="m-meta">Масть: <b>Пентакли</b> &nbsp;·&nbsp; Стихия: <b>Земля</b> &nbsp;·&nbsp; Классика: <b>Венера в Деве</b></p>
+</div>
+</header>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Положения карты">
+<label class="pos-tab" for="pos-upright">Прямое положение</label>
+<label class="pos-tab" for="pos-reversed">Перевёрнутое положение</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">Школа Современного Таро</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">достаток</span><span class="kw">независимость</span><span class="kw">самодостаточность</span><span class="kw">заслуженная роскошь</span><span class="kw">дисциплина</span><span class="kw">наслаждение</span><span class="kw">уверенность</span></div>
+<p class="short-value">Сад, выращенный собой: заслуженное изобилие, независимость и умение наконец наслаждаться плодами своего труда.</p>
+<aside class="gd-block" aria-label="Значение карты по ордену Золотая Заря"><div class="gd-head"><span class="gd-symbol" aria-hidden="true">☉</span> По ордену «Золотая Заря»</div><p class="gd-title">«The Lord of Material Gain» — Владыка Материальной Прибыли</p><p class="gd-why">Венера отвечает за ценность и удовольствие, Дева — за качество и расчёт. Девятка показывает зрелый результат: выгода достигается не расточительством, а умением беречь и правильно использовать ресурс.</p></aside>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Элегантная женщина стоит в ухоженном винограднике, на руке — сокол в клобучке. Всё вокруг создано её усилиями: сад, порядок, покой, право никуда не спешить. Девятка пентаклей — карта самодостаточности, достигнутой трудом и дисциплиной: человек построил жизнь, которую не надо терпеть.</p>
+<p>Сокол — укрощённая страсть, умение управлять импульсами; он же намекает на одиночество сада, но избранное, а не вынужденное. Венера в Деве превращает аккуратность в красоту — эстетику как форму уважения к себе. Пора снять фартук работника и надеть берет хозяйки: пользоваться заслуженным без оправданий.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Быт сияет: дом обустроен по вкусу, бюджет позволяет радости без отчёта, выходной принадлежит вам. Время вложений в качество — одна добрая вещь вместо трёх дешёвых. Спа, ресторан, день тишины: наслаждение теперь не грех, а завершение цикла труда.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Профессионально вы вышли на уровень эксперта: доход зависит от вашей компетенции, а не от чужих решений, график всё больше принадлежит вам. Возможен статус фрилансера, собственного дела, узкого специалиста с именем. Карта советует закреплять позицию: авторские методики, личный бренд, продуманные инвестиции заработанного в активы.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>В отношения вы входите целостным человеком, а не половинкой. Партнёр нужен как равный сосед по саду — не спасатель и не проект. В паре — гармония: своё пространство у каждого, и вместе от этого интереснее. Ваша самостоятельность притягивает таких же взрослых людей.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Здоровье — предмет гордости: режим и профилактика дают энергию, крепкий сон, ровное настроение. Хорошее время оздоровительных программ и углублённого чекапа. Тело давно на вашей стороне и отблагодарит любую заботу.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Сокол в клобучке — укрощённая воля: желания не убиты, но обучены служить хозяину, в этом ключ магии изобилия. Сад карты — культивированная душа. Практики девятки — процветание как состояние сознания, благодарность вслух, уход за живым как ритуал, умение быть наедине с собой без пустоты.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">показная роскошь</span><span class="kw">зависимость</span><span class="kw">одиночество</span><span class="kw">переутомление</span><span class="kw">ложная независимость</span><span class="kw">обесценивание</span></div>
+<p class="short-value">Пустой сад при полном кошельке: успех стоит на витрине, а за фасадом — усталость, зависимость и одиночество.</p>
+<aside class="gd-block" aria-label="Значение карты по ордену Золотая Заря"><div class="gd-head"><span class="gd-symbol" aria-hidden="true">☉</span> По ордену «Золотая Заря»</div><p class="gd-title">«The Lord of Material Gain» — Владыка Материальной Прибыли</p><p class="gd-why">Венера отвечает за ценность и удовольствие, Дева — за качество и расчёт. Девятка показывает зрелый результат: выгода достигается не расточительством, а умением беречь и правильно использовать ресурс.</p></aside>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Клубок распутался: сокол сорвался или оказался декорацией, сад зарастает, а хозяйка продолжает улыбаться гостям. Перевёрнутая девятка — внешний достаток, отделившийся от внутреннего содержания: благополучие на кредитах, независимость-клетка или труд, съевший всё, ради чего трудились.</p>
+<p>Частый сюжет — самозванец достатка: жизнь изображается под чужие мерки, и расходы на спектакль топят настоящий бюджет. Другой — победитель на безлюдной вершине: трофеи есть, праздновать не с кем. Оба лечатся вопросом: для кого и зачем я всё это строю?</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Дом хорош, но не ощущается домом: интерьеры из журнала и тревога при виде счёта. Деньги уходят на поддержание образа, настоящие желания откладываются годами. Проведите ревизию реквизита: отмена пары статусных трат высвобождает неожиданно много воздуха.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Работа поглотила жизнь: карьера идёт, а радости в ней нет, отпуск не брался годами, доход растёт вместе с усталостью. Возможно, успех держится на одном человеке — вас, и это уже риск, а не комплимент. Карта рекомендует делегировать, документировать процессы и вспомнить, зачем начиналось дело: прибыль без удовольствия — плохая сделка с собой.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>При внешнем лоске не хватает тепла: пара красива на фотографиях и чужда на кухне, кто-то дарит вещи вместо времени. Одиноким — броня самодостаточности, под которой прячется страх пустить кого-то на свою территорию. Богатство души меряется не площадью, а числом дверей, открытых изнутри.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Здоровье имитируется: косметика прячет недосып, кофе маскирует истощение, спорт заменяется покупкой формы. Тело посылает сигналы — гормоны, сон, нервы — и они всё настойчивее. Настоящая роскошь сейчас — отдых: полноценный отпуск, обследование, лечение накопленного. Гордость не должна стоить дороже медицинской карты.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Золотая клетка духа: энергия заперта в формах успеха, лишённых смысла; эгрегоры статуса берут в долг и выставляют счета. Проверка подлинности: чего бы вы хотели, если бы никто никогда не узнал? Ответ покажет настоящий сад, который стоит выращивать.</p></div>
+</div>
+<div class="pos-pane roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> Как школа читает этот ранг</h3>
+<div class="info-section"><h3>Основная идея</h3><p>Богатство и заслуженный отдых: «сняла фартук работника» (восьмёрка) и надела нарядное. Плоды созрели и накоплены, будущего не боится. «Богат не тот, у кого много денег, а тот, кто знает, как их заработать».</p></div>
+<div class="info-section"><h3>Как проявляется</h3><p>В работе — ритм налажен, доход стабилен, есть буфер: можно спокойно отдыхать, зная, что заработаешь всегда. В финансах — чувство богатства (само «сколько нужно на самом деле» — десятка). В отношениях — спокойствие и уверенность, ничего не фиксируешь из страха.</p></div>
+<div class="info-section"><h3>Теневая сторона</h3><p>Чувство богатства мешает: лень, «жиру бесишься», траты не по средствам, развлечение вместо развития.</p></div>
+<div class="info-section"><h3>Ключевые слова</h3><p>богатство · заслуженный отдых · буфер · улитка · маленькие радости · траты не по средствам (перев.)</p></div>
+<div class="roman-astro"><span class="ra-label">✷ Астрология школы</span><b>Масть земли · спокойствие результата</b><span class="ra-sep">·</span>флегматики — выжидающие, конкретика и форма</div>
+<h3 class="roman-subtitle"><span>📜</span> Развёрнуто — из лекции по рангу</h3>
+<details class="roman-details" open><summary><span class="rd-icon" aria-hidden="true">✧</span> Суть карты</summary><div class="rd-body"><p>Богатая женщина в саду: плоды созрели, накоплены, будущего не боится. Восьмёрка дала удовольствие от ритма работы — девятка даёт спокойствие от результата. Истинно богат тот, кто знает, как заработать: «даже если опоздаю — не обеднею, куплю в другом магазине».</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Прямое положение</summary><div class="rd-body"><ul class="st-list"><li>Работа/финансы: рабочий ритм налажен, доход стабилен, есть буфер — можно спокойно уйти в отпуск, зная, что работа найдётся. Не первый «урожай»: результаты повторяются, поэтому человек спокоен.</li><li>Символы: охотничий сокол на перчатке — соколиная охота была забавой знати, не для добычи еды; намёк на отдых, удовольствие и физическую активность (не забывать тело, свежий воздух, спорт).</li><li>Улитка — двигаться надо, но не спешить. Виноград — маленькие радости жизни (Раневская: можно не есть мяса и не пить — «но лицо от этого станет очень грустным»).</li><li>Богатство — именно здесь, а не в десятке: десятка — «достаток, хватает», девятка — ощущение богатства (забегая вперёд).</li><li>Тело: есть не спеша, не мучить себя диетами — подобрать богатый рацион и чередовать работу с физическими удовольствиями.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Негативное значение</summary><div class="rd-body"><p>Чувство богатства мешает. Лень, «жиру бесишься», развлекаться вместо развития; траты не по средствам — деньги спускаются «от ощущения барина» (получил зарплату — и сразу всё). На работе — работнику много платят, а он работает спустя рукава. Кто-то хочет «растрясти» вашу стабильность (подростки уверены, что родители «как сыр в масле катаются», — а зарплата уже расписана на всё).</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> Акценты и фишки школы</summary><div class="rd-body"><ul class="st-list"><li>Логика ранга: четверка — первый минимум и попытка закрепить; семёрка — плоды видны; восьмёрка — рабочий ритм; девятка — спокойствие и накопленный запас.</li><li>В одной из альтернативных колод женщина просто держит птицу — «чуть неправильно»: важна именно охотничья птица на перчатке, символ богатой забавы.</li><li>Виноград — сладкий «десертный» плод, связь с Дьяволом и Тройкой кубков: маленькие приятные желания, которые иногда стоит баловать.</li><li>В раскладах: «всё более-менее хорошо — работа нравится, карьеры не особо хочу, доход растёт»; карта активная, но аккуратная и неспешная.</li><li>Перекличка с Императрицей: нега и роскошь — правильно, если обоснованно.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Ключевые слова</summary><div class="rd-body"><p>богатство · заслуженный отдых · сокол · улитка · не бояться будущего · буфер · маленькие радости · лень и траты не по средствам (перев.)</p></div></details>
+</div>
+<nav class="card-pagination" aria-label="Предыдущая и следующая карта">
+<a rel="prev" href="pentacles-eight.html"><span>← Предыдущая карта</span>Восьмёрка пентаклей</a>
+<a rel="next" href="pentacles-ten.html"><span>Следующая карта →</span>Десятка пентаклей</a>
+</nav>
+</article>
+</main>
+<footer class="site-footer">
+  <p>Таро · Справочник значений карт</p>
+  <p class="footer-note">Материалы носят справочный и развлекательный характер</p>
+</footer>
+</body>
+</html>

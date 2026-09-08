@@ -10,55 +10,127 @@
 <meta property="og:description" content="Башня — внезапные перемены и крушение иллюзий. Значение карты Таро в прямом и перевёрнутом положении, в любви и карьере. Совет карты и вопросы для размышления.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://taro.jetserg.top/cards/bashnya.html">
-<link rel="stylesheet" href="/css/style.css?v=3.3">
-<link rel="stylesheet" href="/css/astrology.css?v=3.3">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/major-16-tower.webp">
+<link rel="stylesheet" href="/css/style.css?v=3.4">
+<link rel="stylesheet" href="/css/astrology.css?v=3.4">
 <style>
 .main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
 .card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
 .card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
 .card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
 .card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
-.card-hero { text-align: center; padding: 14px 0 34px; }
-.card-symbol { display: block; font-family: Georgia, serif; font-size: 5rem; line-height: 1.2; color: var(--gold-bright); text-shadow: 0 0 30px var(--gold-dim); }
-.card-eyebrow { color: var(--text-dim); letter-spacing: .15em; text-transform: uppercase; font-size: .76rem; margin: 18px 0 8px; }
-.card-hero h1 { font-family: Georgia, serif; font-weight: 500; font-size: clamp(2rem, 6vw, 3.3rem); line-height: 1.2; color: var(--gold-bright); overflow-wrap: anywhere; }
-.card-number { display: block; font-size: 2.2rem; color: var(--gold); margin-bottom: 10px; }
-.card-hero > p:last-child { margin-top: 16px; color: var(--text-dim); }
-.card-section { margin: 0 0 22px; padding: 28px 32px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: rgba(23, 18, 43, .88); }
-.card-section h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500; font-size: 1.6rem; line-height: 1.3; margin-bottom: 18px; }
-.card-section h3 { color: var(--gold-bright); font-size: 1rem; margin: 22px 0 10px; }
-.card-section p + p { margin-top: 16px; }
-.card-intro { background: linear-gradient(135deg, rgba(124, 92, 191, .2), var(--bg-panel)); font-size: 1.1rem; }
-.card-keywords { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 18px 0; }
-.card-keywords li { border: 1px solid var(--gold-dim); border-radius: 999px; padding: 4px 12px; font-size: .85rem; color: var(--gold-bright); }
-.card-questions { padding-left: 24px; }
-.card-questions li { padding: 4px 0 10px 6px; }
-.card-questions li::marker { color: var(--gold); }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── Школа Современного Таро ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
 .card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
-.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius); text-decoration: none; background: var(--bg-panel); }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
 .card-pagination a:last-child { text-align: right; }
 .card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
-.card-pagination a:hover, .card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
-.card-catalog { max-width: 1120px; }
-.card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; list-style: none; }
-.card-grid li { min-width: 0; }
-.card-tile { display: flex; flex-direction: column; align-items: flex-start; height: 100%; padding: 24px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel); text-decoration: none; }
-.card-tile-symbol { font-size: 2rem; line-height: 1.3; }
-.card-tile-number { color: var(--text-dim); font-size: .85rem; margin: 18px 0 4px; }
-.card-tile strong { font-family: Georgia, serif; font-size: 1.4rem; font-weight: 500; }
-.card-tile-desc { color: var(--text-dim); font-size: .9rem; margin-top: 6px; }
-@media (max-width: 700px) { .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
 @media (max-width: 480px) {
   .main-nav { padding: 12px 12px 0; }
   .main-nav a { padding: 8px 12px; font-size: .9rem; }
-  .card-page { padding: 22px 16px 36px; }
-  .card-section { padding: 22px 20px; }
-  .card-tile { padding: 18px 14px; }
-  .card-tile strong { font-size: 1.16rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
   .card-pagination { gap: 10px; }
   .card-pagination a { padding: 16px 12px; }
 }
-@media (max-width: 350px) { .card-grid { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
 </style>
 <script type="application/ld+json">
@@ -88,69 +160,77 @@
     <a href="/">Главная</a>
     <a href="/cards/" class="mn-active">Карты</a>
     <a href="/astrology/">Астрология</a>
-    <a href="/lenormand/">Ленорман</a>
     <a href="/runes/">Руны</a>
     <a href="/spreads.html">Расклады</a>
   </div>
 </nav>
 <main class="card-page">
 <nav class="card-crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/cards/">Карты</a> / <span aria-current="page">Башня</span></nav>
-<article>
-<header class="card-hero">
-<span class="card-symbol" aria-hidden="true">ϟ</span>
-<p class="card-eyebrow">Старшие арканы</p>
-<h1><span class="card-number">XVI</span>Башня</h1>
-<p>Крушение иллюзий</p>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="/img/cards/major-16-tower.webp" alt="Башня — карта Таро Уэйта" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Старший аркан · XVI</p>
+<h1 class="m-title"><span class="card-number">XVI</span>Башня</h1>
+<p class="m-en">The Tower</p>
+<p class="m-meta">Стихия: <b>Огонь</b> &nbsp;·&nbsp; Астрология: <b>Марс</b></p>
+</div>
 </header>
-<section class="card-section card-intro" aria-labelledby="brief">
-<h2 id="brief">Краткое значение</h2>
-<p>Башня показывает момент, когда прежние представления перестают выдерживать встречу с реальностью. Резкая перемена заставляет увидеть слабое основание и искать опору в том, что действительно осталось.</p>
-</section>
-<section class="card-section" aria-labelledby="upright">
-<h2 id="upright">Прямое положение</h2>
-<p>Молния бьёт в фундамент: ложное рушится внезапно — и именно потому, что было ложным.</p>
-<ul class="card-keywords" aria-label="Ключевые слова"><li>крах</li><li>внезапность</li><li>откровение</li><li>освобождение</li><li>кризис</li><li>правда</li></ul>
-<p>Башня, построенная на песке, выдерживала годы — до одного громкого удара. Молния на карте не случайность, а аудит: всё, что держалось на самообмане, не выдерживает контакта с правдой. Корона слетает с вершины — первым падает всегда тщеславие.</p>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Положения карты">
+<label class="pos-tab" for="pos-upright">Прямое положение</label>
+<label class="pos-tab" for="pos-reversed">Перевёрнутое положение</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">Школа Современного Таро</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">крах</span><span class="kw">внезапность</span><span class="kw">откровение</span><span class="kw">освобождение</span><span class="kw">кризис</span><span class="kw">правда</span></div>
+<p class="short-value">Молния бьёт в фундамент: ложное рушится внезапно — и именно потому, что было ложным.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Башня, построенная на песке, выдерживала годы — до одного громкого удара. Молния на карте не случайность, а аудит: всё, что держалось на самообмане, не выдерживает контакта с правдой. Корона слетает с вершины — первым падает всегда тщеславие.</p>
 <p>Расклад с Башней обещает не беду вообще, а демонтаж конкретных конструкций: отношений на иллюзиях, карьеры не по талантам, репутации-фасада. Разрушение стремительно и болезненно, но оно высвобождает то, что было замуровано живым.</p>
-<p>После падения выясняется удивительное: земля ближе, чем казалось из окна верхнего этажа. Аркан Марса — не о наказании, а о принудительной честности, самой быстрой форме роста.</p>
-</section>
-<section class="card-section" aria-labelledby="reversed">
-<h2 id="reversed">Перевёрнутое положение</h2>
-<p>Гроза висит в воздухе или уже прошла стороной: напряжение требует выхода — планового или стихийного.</p>
-<ul class="card-keywords" aria-label="Ключевые слова"><li>отложенный кризис</li><li>страх перемен</li><li>внутренний взрыв</li><li>затяжной демонтаж</li><li>избегание правды</li><li>разрядка</li></ul>
-<p>Перевёрнутая Башня — гроза, которая почему-то не начинается. Все чувствуют давление, все ждут взрыва, а он откладывается — и дорожает с каждым днём. Это карта медленного демонтажа: стены трещат месяцами, а никто не решается начать разбор всерьёз.</p>
+<p>После падения выясняется удивительное: земля ближе, чем казалось из окна верхнего этажа. Аркан Марса — не о наказании, а о принудительной честности, самой быстрой форме роста.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>День резких сюрпризов: техника ломается, планы срываются, новость приходит без предупреждения. Не цепляйтесь за сценарий — перестройка проходит быстрее без сопротивления. Хорошо признать вслух то, что было ясно давно: признанная проблема взрывается тише. К вечеру обычно находится странное облегчение.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Профессиональный гром: увольнение, крах проекта, развал команды, публичный провал красивой стратегии. Если ваша конструкция была честной, удар заденет только лишнее. Не восстанавливайте рухнувшее в прежнем виде — стройте ниже, шире и из своих материалов.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>В отношениях грянул кризис-разоблачение: тайное всплыло, недоговариваемое прозвучало, «у нас всё хорошо» кончилось. Это не обязательно разрыв — иногда только так пара впервые видит друг друга настоящими. Союз на честном фундаменте переживёт грозу и окрепнет; отношения-фасад рухнут, освободив обоих. Больно — и очищает.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Резкие состояния: обострение, травма, температура, внезапный диагноз — тело кричит там, где вы годами не слушали шёпот. Карта требует немедленной реакции и полной честности с врачами. Часто острый кризис оказывается точкой перелома: правильно пролеченный, он снимает весь хронический фон.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Башня — карта озарения насильно: пробуждение, которого не просили, разрушение эго-конструкций молнией сверху. В магии её используют для разрыва заколдованных кругов и снятия застарелого негатива — образ работает громко и требует уважения. Главный урок аркана: не привязываться к формам даже самым красивым.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">отложенный кризис</span><span class="kw">страх перемен</span><span class="kw">внутренний взрыв</span><span class="kw">затяжной демонтаж</span><span class="kw">избегание правды</span><span class="kw">разрядка</span></div>
+<p class="short-value">Гроза висит в воздухе или уже прошла стороной: напряжение требует выхода — планового или стихийного.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Перевёрнутая Башня — гроза, которая почему-то не начинается. Все чувствуют давление, все ждут взрыва, а он откладывается — и дорожает с каждым днём. Это карта медленного демонтажа: стены трещат месяцами, а никто не решается начать разбор всерьёз.</p>
 <p>Другой смысл — катастрофа внутренняя: внешне всё держится, а внутри уже рушится — сон, нервы, вера в происходящее. Человек поддерживает лицо ценой здоровья и искренности.</p>
-<p>Есть и благоприятный вариант: молния ударила рядом, обломки прошли мимо. Тогда карта говорит коротко — страшное закончилось, пора вылезать из-под стола и спокойно разбирать завал.</p>
-</section>
-<section class="card-section" aria-labelledby="love">
-<h2 id="love">В любви</h2>
-<h3>Прямое положение</h3>
-<p>В отношениях грянул кризис-разоблачение: тайное всплыло, недоговариваемое прозвучало, «у нас всё хорошо» кончилось. Это не обязательно разрыв — иногда только так пара впервые видит друг друга настоящими. Союз на честном фундаменте переживёт грозу и окрепнет; отношения-фасад рухнут, освободив обоих. Больно — и очищает.</p>
-<h3>Перевёрнутое положение</h3>
-<p>Отношения висят над разрывом: оба знают, что всё кончилось или должно измениться, но играют прежний спектакль. Накопленное прорывается бытовыми срывами и обидами по мелочи, молчание о главном съедает близость изнутри. Единственный безопасный путь — сказать правду самому, раньше, чем жизнь скажет её за вас.</p>
-</section>
-<section class="card-section" aria-labelledby="career">
-<h2 id="career">В карьере</h2>
-<h3>Прямое положение</h3>
-<p>Профессиональный гром: увольнение, крах проекта, развал команды, публичный провал красивой стратегии. Если ваша конструкция была честной, удар заденет только лишнее. Не восстанавливайте рухнувшее в прежнем виде — стройте ниже, шире и из своих материалов.</p>
-<h3>Перевёрнутое положение</h3>
-<p>Кризис тлеет: организация трещит, но официально «всё под контролем»; сокращения обсуждают шёпотом, стратегия рассыпается на глазах. Не ждите официальных писем — обновляйте резюме, грейте связи, выносите ценное в портфель. Если взрыв готовите сами, закладывайте основу заранее: рубка сгоряча обходится дороже всего.</p>
-</section>
-<section class="card-section" aria-labelledby="advice">
-<h2 id="advice">Совет карты</h2>
-<p>Признайте факты, даже если они ломают привычное объяснение происходящего. Сосредоточьтесь на ближайших необходимых действиях и не спешите восстанавливать прежний порядок, не разобравшись в его слабых местах.</p>
-</section>
-<section class="card-section" aria-labelledby="questions">
-<h2 id="questions">Вопросы для размышления</h2>
-<ol class="card-questions"><li>Какое представление о ситуации больше не выдерживает проверки?</li>
-<li>На что я всё ещё могу опереться после этой перемены?</li>
-<li>Что нельзя повторять, когда я начну выстраивать жизнь заново?</li></ol>
-</section>
-</article>
+<p>Есть и благоприятный вариант: молния ударила рядом, обломки прошли мимо. Тогда карта говорит коротко — страшное закончилось, пора вылезать из-под стола и спокойно разбирать завал.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Быт на взводе: мелочи выводят из себя, техника ломается по очереди, дом сползает в конфликт. Устраивайте разрядку планово — разговор, спорт, честные слёзы, — иначе она случится сама и не там, где удобно. Проверьте предохранители буквально и фигурально: там, где копится напряжение, оно рано или поздно пробивает.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Кризис тлеет: организация трещит, но официально «всё под контролем»; сокращения обсуждают шёпотом, стратегия рассыпается на глазах. Не ждите официальных писем — обновляйте резюме, грейте связи, выносите ценное в портфель. Если взрыв готовите сами, закладывайте основу заранее: рубка сгоряча обходится дороже всего.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Отношения висят над разрывом: оба знают, что всё кончилось или должно измениться, но играют прежний спектакль. Накопленное прорывается бытовыми срывами и обидами по мелочи, молчание о главном съедает близость изнутри. Единственный безопасный путь — сказать правду самому, раньше, чем жизнь скажет её за вас.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Предвестники налицо: давление, панические волны, бессонница — организм готовит свой гром, если продолжать тянуть. Хронический стресс уже выбрал слабое место и работает по нему. Плановая разгрузка — отпуск, терапия, обследование — всегда дешевле аварийной. После пережитого потрясения возможна апатия: это ремонт, дайте ему срок.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>В практике перевёрнутая Башня предупреждает о накопленном негативе в пространстве или теле: чистки нужны, но постепенные — иначе хлынет разом. Техники отпускания работают лучше силовых. Иногда карта сообщает о предотвращённом ударе: защита сработала, поблагодарите и пересмотрите образ жизни. Урок — снимать напряжение малыми порциями, не доводя до молнии.</p></div>
+</div>
+<div class="pos-pane roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> Кратко и просто</h3>
+<div class="info-section"><h3>Основная идея</h3><p>Башня — это резкий переход из одного состояния в другое.
+В отличие от Умеренности, где изменение происходит постепенно, здесь появляется фактор внезапности.</p></div>
+<div class="info-section"><h3>Как проявляется</h3><p>Крушение старого, внезапная перестройка, форс-мажор, неожиданные события, разрушение привычного сценария.</p></div>
+<div class="info-section"><h3>Работа</h3><p>Карьерная перестройка, смена профессии, необходимость менять рабочую модель.</p></div>
+<div class="info-section"><h3>В отношениях</h3><p>Даже устойчивый союз требует ремонта и обновления. Если годами ничего не менять, отношения могут разрушиться внезапно.</p></div>
+<div class="info-section"><h3>Финансы</h3><p>Риски, необходимость иметь резерв, менять форму вложений и заранее думать о форс-мажоре.</p></div>
+<div class="info-section"><h3>Теневая сторона</h3><p>Башня особенно неприятна для тех, кто не хотел ничего менять.</p></div>
+<div class="info-section"><h3>Особенность школы</h3><p>Башня связана с Козерогом, X домом, Сатурном и Ураном. Важный принцип карты: с башни всегда падает корона. Если власть не передают вовремя, она будет сброшена сама.</p></div>
+<div class="roman-astro"><span class="ra-label">✷ Астрология школы</span><b>X дом · Козерог</b><span class="ra-sep">·</span>Сатурн/Кронос + Уран<div class="ra-classic">У классики Уэйта: Марс</div></div>
+<h3 class="roman-subtitle"><span>📜</span> Развёрнуто — выжимки лекций</h3>
+<details class="roman-details" open><summary><span class="rd-icon" aria-hidden="true">✧</span> Суть карты</summary><div class="rd-body"><p>Башню зря боятся клиенты («все пропало, все плохо») — это «вполне нормальный естественный процесс в жизни любого человека», неприятный, но необходимый. Ядро карты — переход из одного состояния в другое: если Умеренность даёт качественный переход, то Башня — резкий переход с фактором внезапности. И «что-то надо делать»: «человек предполагает, а бог располагает».</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Прямое положение</summary><div class="rd-body"><ul class="st-list"><li>Трактовка через его астрологическую систему: десятый дом, Козерог, Сатурн/Кронос + Уран (система Юрия Хана). Карты лежат на дома «градиентом»: Козерог частично «залазит» в Дьявола и Звезду. Башня — внешняя защита (строительство себя в большом мире); Колесница (противоположный 4-й дом) — внутренняя, «маленькая гавань безопасности» семьи.</li><li>- Работа/карьера: перед вами карьерист — строит карьеру и имидж; по прямой аккуратно, заранее готовясь к сложностям. Пример школы: таролог должен перестроить свою башню под онлайн — кто не успел, «упадёт с неё».</li><li>- Отношения/семья: семейный очаг — Колесница, данная родителями; Башня — ячейка общества (брак), которую надо «ремонтировать, обновлять и перестраивать», иначе рухнет внезапно («какая-нибудь любовница или любовник»). Интерес мужчины падает, если годами жить «на одном лестничном пролёте» — планируй радовать партнёра «через год, два, пять».</li><li>- Саморазвитие/планы: чем выше башня (домино требует «стяжки»), тем вывереннее действия. Прямая — есть план Б и запасы, молния «шапку не сбрасывает»; форс-мажор прописывать в договорах. Разрыв шаблонов и перестройка личности вовремя — иначе время стукнет по макушке (Nokia в эпоху айфонов). Выходи из зоны комфорта сам, иначе она выкинет болезненно.</li><li>- Финансы: накопления держатся на случай осады; риски — та самая молния. Вовремя менять форму вложений — банк → недвижимость, доллар → биткоин («те же кирпичи перекладываем по-другому»). Страх как инструмент власти (кольцо Сатурна) долго не держится — график курса падает.</li><li>- Также видел: выход на пенсию (смена поколений; отсылка к Десятке Пентаклей), может принести не то, на что рассчитывали.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Негативное значение</summary><div class="rd-body"><p>Формулы разбросаны по лекции: внезапный несчастный случай — расстаться с планами; карьерист может «пойти по головам», «ожидать можно любой гадости»; риски во вложениях не учтены; крушение надежд — построили «ерунду, которая падает от любой грозы»; воспитание ребёнка по-старому — «башню скинет». Общий принцип школы: карта нейтральна — «нет ничего вечного под луной», кто перестраивается и передаёт власть вовремя, «того башни не скинут».</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> Акценты и фишки школы</summary><div class="rd-body"><ul class="st-list"><li>- Цитаты Уэйта: «крушение во всех её аспектах»; «слово ставшее плотью» — человек строит башню так же, как Бог творит мир в миниатюре, а не падение Адама; «крушение разума дерзнувшего проникнуть в тайну бога»; «если Господь не возведёт дома, тщетны труды возводящих» — оттенок справедливого возмездия. Связка соседних карт: Дьявол — падение в животное состояние, Башня — крушение интеллекта, возгордившегося.</li><li>- Про Марса у других авторов: «на заборе тоже пишут».</li><li>- Вавилонская башня: мотив «сделать себе имя» = десятый дом; Бог смешал языки — фактор внезапности; молния = случайность: «когда бог хочет выступить инкогнито, он подписывается именем случайность»; «громоотвод ставить нужно».</li><li>- Зиккураты (Этеменанки, «дом, где сходятся небеса и земля»): разрушение и реконструкция неотрывны от образа; камни разобранного Македонским зиккурата пошли на театр — «ничто не пропало даром».</li><li>- Средневековая осадная башня (в лекции зацепила историческая реконструкция): высокая точка — «сверху предугадываешь события»; запасы на осаду; кольцо осады = кольцо Сатурна; лендлорд и наследуемая власть; винтовые ступени — «каждый этаж — следующее поколение». «С башни всегда падает корона»: власть либо вовремя передают наследнику, либо скидывают внезапно (пример Ельцина).</li><li>- Уран и Кронос: Уран — прародитель богов, «скопище идей», новые идеи приходят «по Урану»; Кронос серпом сместил отца, серп загнут вниз — «падение власти». Пожирание детей — аграрная логика: выращиваешь, потом режешь слабых животных.</li><li>- Сатурналии 17–20 декабря: господа и слуги меняются местами, возвращение к «золотому веку» охотников-собирателей; отсюда Новый год и славянский ряд: колядование, козлиные шкуры и рога, подарки хорошим детям и наказание плохих = естественный отбор.</li><li>- Пан — аналог Козерога: наводил панический ужас на титанов ради Зевса; панический страх идёт «из Луны», осознанный страх норм — «из Сатурна»; от Тифона упал в Нил — рыбий хвост.</li><li>- Давид и Голиаф: Голиаф — потомок рефаимов (великаны либо мёртвые предки); Давид снял доспехи — только истинностью побеждается накопленная структура; Голиаф раскрылся от эмоций и получил камушком в лоб; гиперэмоциональный Рак против гранита Козерога — свой имидж легко разрушить собственными эмоциями.</li><li>- Башни-близнецы (9/11) — знак перехода эры Рыб в Водолея («совпадение? не думаю… я не сторонник теории заговоров»).</li><li>- Кардинальная земля: гранит, памятники, «мысль, вырубленная в граните», бриллианты как предельно сконцентрированная материя (бубны = diamonds).</li><li>- Образы в кино: «С меня хватит»/«Падая вниз» (Майкл Дуглас) — терпел и сорвался, «срезало крышу» разума; «Zомбилэнд» (Вуди Харрельсон с киркой) — постапокалипсис как крушение привычного мира, кирпичи жизненного опыта пригодятся и в новой реальности (слёзы вытирает пачкой денег); «Люди в чёрном» — картина мира рухнула в одночасье, учатся друг у друга; «Аббатство Даунтон» — хозяева и слуги при смене уклада; «Жизнь после людей» — время рушит созданное; «Тихое место» — дети адаптируются быстрее родителей;  фильмы-катастрофы и «Война миров» Уэллса — радиопостановка вызвала массовую панику («чистый Сатурн»), люди приобретают «скотский вид», откатываясь в Дьявола.</li><li>- Мелочь декора: в Влюблённых мужчина справа, женщина слева, в Башне меняются местами, «только у Шута всё встаёт на свои места». «Хроники Амбера» Желязны привели его в Таро.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Ключевые слова</summary><div class="rd-body"><ul class="st-list"><li>фактор внезапности · молния-случайность · безопасность наружу · смена поколений, передача власти · «с башни всегда падает корона» · карьера и уважение (имидж) · запасы и план Б · перестройка башни · кольцо Сатурна · разрыв шаблонов, выход из зоны комфорта</li><li>---</li></ul></div></details>
+</div>
 <nav class="card-pagination" aria-label="Предыдущая и следующая карта">
 <a rel="prev" href="dyavol.html"><span>← Предыдущая карта</span>Дьявол</a>
 <a rel="next" href="zvezda.html"><span>Следующая карта →</span>Звезда</a>
 </nav>
+</article>
 </main>
 <footer class="site-footer">
   <p>Таро · Справочник значений карт</p>

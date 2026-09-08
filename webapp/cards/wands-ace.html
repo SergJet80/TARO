@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Туз жезлов — значение и толкование | Таро Справочник</title>
+<meta name="description" content="Туз жезлов — значение карты Таро младшего аркана: масть жезлы, стихия огонь. Толкование в прямом и перевёрнутом положении, в любви и работе.">
+<link rel="canonical" href="https://taro.jetserg.top/cards/wands-ace.html">
+<meta property="og:title" content="Туз жезлов — значение и толкование | Таро Справочник">
+<meta property="og:description" content="Туз жезлов — значение карты Таро младшего аркана: масть жезлы, стихия огонь. Толкование в прямом и перевёрнутом положении, в любви и работе.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taro.jetserg.top/cards/wands-ace.html">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/wands-ace.webp">
+<link rel="stylesheet" href="/css/style.css?v=3.4">
+<link rel="stylesheet" href="/css/astrology.css?v=3.4">
+<style>
+.main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
+.card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
+.card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
+.card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
+.card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── Школа Современного Таро ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
+.card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
+.card-pagination a:last-child { text-align: right; }
+.card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
+@media (max-width: 480px) {
+  .main-nav { padding: 12px 12px 0; }
+  .main-nav a { padding: 8px 12px; font-size: .9rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
+  .card-pagination { gap: 10px; }
+  .card-pagination a { padding: 16px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Туз жезлов — значение и толкование | Таро Справочник",
+  "description": "Туз жезлов — значение карты Таро младшего аркана: масть жезлы, стихия огонь. Толкование в прямом и перевёрнутом положении, в любви и работе.",
+  "url": "https://taro.jetserg.top/cards/wands-ace.html",
+  "inLanguage": "ru"
+}
+</script>
+<!-- Microsoft Clarity -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yejlmmd6nr");
+</script>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+<nav class="main-nav" aria-label="Разделы">
+  <div class="main-nav-inner">
+    <a href="/">Главная</a>
+    <a href="/cards/" class="mn-active">Карты</a>
+    <a href="/astrology/">Астрология</a>
+    <a href="/runes/">Руны</a>
+    <a href="/spreads.html">Расклады</a>
+  </div>
+</nav>
+<main class="card-page">
+<nav class="card-crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/cards/">Карты</a> / <span aria-current="page">Туз жезлов</span></nav>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="/img/cards/wands-ace.webp" alt="Туз жезлов — карта Таро Уэйта" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Младший аркан · Жезлы</p>
+<h1 class="m-title"><span class="card-number">I</span>Туз жезлов</h1>
+<p class="m-en">Ace of Wands</p>
+<p class="m-meta">Масть: <b>Жезлы</b> &nbsp;·&nbsp; Стихия: <b>Огонь</b></p>
+</div>
+</header>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Положения карты">
+<label class="pos-tab" for="pos-upright">Прямое положение</label>
+<label class="pos-tab" for="pos-reversed">Перевёрнутое положение</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">Школа Современного Таро</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">новое начало</span><span class="kw">вдохновение</span><span class="kw">творческий импульс</span><span class="kw">потенциал</span><span class="kw">решимость</span><span class="kw">чистая энергия</span></div>
+<p class="short-value">Чистая искра огня: вспышка вдохновения и решимости начать своё главное дело.</p>
+<aside class="gd-block" aria-label="Значение карты по ордену Золотая Заря"><div class="gd-head"><span class="gd-symbol" aria-hidden="true">☉</span> По ордену «Золотая Заря»</div><p class="gd-title">«The Root of the Powers of Fire» — Корень Сил Огня</p><p class="gd-why">Туз — чистая, ещё не оформленная стихия. В Golden Dawn это Кетер Огня: первичный импульс воли и действия до конкретной формы.</p></aside>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Туз жезлов — корень стихии Огня и семя всякого начинания. На карте рука из облака протягивает живой посох с молодыми побегами: замысел приходит как дар, но расти ему предстоит в ваших руках. В каббалистическом ключе это Кетер в мире огненной энергии — чистый импульс воли, ещё не тронутый ни сомнением, ни формой.</p>
+<p>Карта ловит мгновение, когда внутри вспыхивает желание сделать что-то своё — проект, книгу, переезд. Это ещё не план и не результат, только жар, по которому узнаёшь: «это моё». Побеги на посохе обещают идее жизнеспособность; ей нужны лишь пространство и первый шаг. Туз призывает действовать сразу: его энергия щедра, но коротка, и её легко рассеять бесконечной подготовкой.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>День заряжает бодростью: просыпаетесь раньше будильника, а в голове уже список дел, которые наконец хочется начать. Удачное время затеять уборку, записаться на курс, отправить давно откладываемое письмо. Всё, что делается с азартом, спорится; всё из чувства долга — буксует.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Карта означает старт: новый проект, должность, собственное дело или первую задачу, открывающую двери. Инициативу замечает руководство, коллеги предлагают совместные планы, а идея выглядит дерзко и обещает рост. Главное — превратить замысел в конкретные первые шаги, пока другие ещё размышляют.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>В любви Туз жезлов — вспышка страсти и головокружение новизны. Одиноким он сулит знакомство, которое зажигает с первых минут; парам — обновление чувств и смелые совместные затеи. Это огонь влечения, а не тихой привязанности: он требует честного ответа на взаимное напряжение.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Жизненный тонус высок: быстрое восстановление после болезни, прилив физических сил, лёгкость утренних подъёмов. Отличный момент начать тренировки или любую практику для тела — организм отзывается охотно. Единственный риск огня — перегрев: чрезмерные нагрузки грозят растяжениями и перегрузкой сердца.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>В магической работе Туз — зажжённая свеча на алтаре: канал творческой силы, через который намерение проходит без искажений. Карта хороша для освящения инструментов, начала практики, работы с центром воли. Она усиливает обряды на успех и защиту, но не терпит фальши: огонь сжигает ложное.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">задержки</span><span class="kw">отсутствие направления</span><span class="kw">сомнения</span><span class="kw">ложный старт</span><span class="kw">упущенный шанс</span><span class="kw">растраченная энергия</span></div>
+<p class="short-value">Искра гаснет на старте: идея есть, а движения нет — сомнения, отвлечения и задержки съедают импульс.</p>
+<aside class="gd-block" aria-label="Значение карты по ордену Золотая Заря"><div class="gd-head"><span class="gd-symbol" aria-hidden="true">☉</span> По ордену «Золотая Заря»</div><p class="gd-title">«The Root of the Powers of Fire» — Корень Сил Огня</p><p class="gd-why">Туз — чистая, ещё не оформленная стихия. В Golden Dawn это Кетер Огня: первичный импульс воли и действия до конкретной формы.</p></aside>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Перевернувшись, Туз показывает тот же огонь без доступа воздуха. Человек месяцами носит в себе идею, обсуждает её со всеми и не делает ни шага. Иногда карта означает преждевременность: почва ещё не готова, и попытка форсировать события даст лишь дым.</p>
+<p>У перевёрнутого Туза два полюса: внутренний — страх неудачи и ожидание «идеального момента», внешний — обстоятельства, блокирующие старт, когда проекты буксуют, а обещанная поддержка не приходит. Урок один: вернуть себе авторство собственной энергии, понять, куда она утекает, и разжечь её заново малыми, но реальными делами.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Обещающий день рассыпается на отвлечения: начатое не доделывается, встречи переносятся, техника ломается в самый нужный момент. Полезно сократить список дел до одной задачи и довести её до конца — это вернёт ощущение управления собственной энергией.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Проект задерживается: финансирование не одобрили, контракт подписывают третий месяц, новое место всё время «на днях». Возможно, дело начато без ресурсов или понимания. Худшая стратегия — толкать стену; лучшая — пересобрать план, добрать недостающие навыки и перезапустить идею, когда она снова загорится.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Страсть не переходит в действие: переписка вяло тянется, свидания откладываются, а в паре оба ждут первого шага друг от друга. Иногда карта показывает навязчивое увлечение без будущего, где огонь есть, а близости нет. Не форсируйте чувства — дайте им дозреть или признайте искру ложной.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Энергии много, но уходит она в тревогу и бессонницу: тело требует движения, нервы — покоя, и этот конфликт выматывает. Возможны скачки давления и воспаления на ровном месте. Снизьте темп, уберите стимуляторы, начните с мягкой активности — прогулок, растяжки, плавания.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Перевёрнутый Туз — заслонённый канал: сила приходит толчками, ритуалы срываются, намерения размываются чужим влиянием. Карта может указывать на привязки, гасящие волю. Прежде чем зажигать новое, проведите чистку: закройте незавершённые дела и верните себе имя.</p></div>
+</div>
+<div class="pos-pane roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> Как школа читает этот ранг</h3>
+<div class="info-section"><h3>Основная идея</h3><p>Чистая энергия огня: желание, импульс и готовность действовать. Это ещё не конкретный проект, а внутренний огонь, благодаря которому вообще хочется что-то начать.</p></div>
+<div class="info-section"><h3>Как проявляется</h3><p>В работе — инициатива, харизма, предприимчивость, лидерство, стартапы, реклама и управление желаниями людей. В отношениях — страсть, влюблённость и начало нового жизненного этапа; ребёнок тоже может быть таким началом. В саморазвитии — действовать, пробовать новое и вести за собой.</p></div>
+<div class="info-section"><h3>Теневая сторона</h3><p>Потенциал остаётся, но направление оказывается неверным: человек начинает использовать чужие желания ради собственной выгоды.</p></div>
+<div class="info-section"><h3>Ключевые слова</h3><p>желание · инициатива · рост · харизма · актуальность</p></div>
+<div class="roman-astro"><span class="ra-label">✷ Астрология школы</span><b>Масть огня · Туз — сама стихия в чистом виде, потенция</b><span class="ra-sep">·</span>холерики — «знают, чего хотят», настойчивость, движение</div>
+<h3 class="roman-subtitle"><span>📜</span> Развёрнуто — из лекции по рангу</h3>
+<details class="roman-details" open><summary><span class="rd-icon" aria-hidden="true">✧</span> Суть карты</summary><div class="rd-body"><p>Огонь: желания, движение, политика. Листики на карте — растущий росток; жезл поводыря стал символом покровительственной власти.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Прямое положение</summary><div class="rd-body"><ul class="st-list"><li>Социум/работа: харизма, инициатива, напористость, энергичность, предприимчивость, лёгкость на подъём; мода и реклама — управление желаниями других; спорт и соревнование «кто круче»; лидерство (≠ руководство); актуальность и быстрая реакция («огонь замершим быть не может»).</li><li>Финансы: актуальные, модные сейчас формы обогащения; стартапы («идея, которая растёт»); проценты, рост активов, движение денег по счетам, разница курсов, биржа; в негативе — общение ради обогащения, пирамиды.</li><li>Отношения: страсть, импульсивные отношения; семейные ценности как социальная ценность («все смотрят: какая крепкая семья»); влюблённость = чужое желание, пробудившее к действию (Констанция направила энергию д&#x27;Артаньяна «в нужное русло»); «женщина хочет — мужчина делает»; беременность и ребёнок как начало нового.</li><li>Саморазвитие: действовать энергично («движение — это жизнь»), лидировать, учитывать социальные интересы, пробовать новое, убеждать.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Негативное значение</summary><div class="rd-body"><p>• тот же потенциал и страсть, но «направленные не в ту сторону»; конъюнктурщина — пользоваться чужими желаниями, забывая о своих.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> Акценты и фишки школы</summary><div class="rd-body"><ul class="st-list"><li>Он не привязывает младшие арканы к колесу Зодиака — только старшие (та схема Юрия Хана); масти разбирает через стихии, темпераменты, сословия.</li><li>Четырёхчастность повсюду: четыре евангелиста = тетраморф = четыре стихии; факультеты Хогвартса, народы Толкина, «Волшебник страны Оз» (Буратино добавлен как деревянный образ сознания, объединяющего все стихии), «Звёздные войны», «Четыре танкиста и собака».</li><li>Рабочая модель лекции — три мушкетёра: Портос = пентакли (мышцы компании, мечта о замке — «стать землевладельцем»), Атос = мечи (честь — соответствие слова действию: готов казнить виновную жену по норме закона, потому ушёл из графов), Арамис = кубки (утончённый ценитель женской души, будущий аббат), д&#x27;Артаньян = жезлы (желание роста, политические игры, экшн).</li><li>Верх воды — Элевсинские мистерии и кикейон: напиток из ячменя и мяты со спорыньей давал религиозный экстаз — «понимать напрямую, без разума»; Дионис и вино усиливают любые эмоции (на свадьбе радость, похоронах слёзы); мухоморы викингов, шаманы с бубном, холотропное дыхание, крутящиеся дервиши; кино «Ной» и «Блуберри». Оговорка школы: всё хорошо в меру, передоз = зависимость.</li><li>Святой Грааль — поиск невысказываемого, «того, что нельзя найти»: надежда на будущее, в которую удобно верить вслепую.</li><li>Спор про бубен/веретено: веретено — мечи (разум сплетает из хаоса нить логичных событий), а музыка — настоящий инструмент разрыва реальности; инфразвук рок-концерта сливает толпу в единый ритм — «человек стадное животное».</li><li>Колоды: знак на тузе кубков — не перевёрнутая M, а прямая W — авторство Уэйта; раньше полиграфию ставили на двойках (марсельские ленточки), тузы украшали виньетками (охотничьи карты СССР: красивейший туз червей считался самым сильным).</li><li>Славянского ряда сказочных образов нет; Банцхаф не цитируется; практика раскладов остаётся в закрытом курсе.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Ключевые слова</summary><div class="rd-body"><p>желание, инициатива, рост, актуальность, харизма.</p></div></details>
+</div>
+<nav class="card-pagination" aria-label="Предыдущая и следующая карта">
+<a rel="prev" href="mir.html"><span>← Предыдущая карта</span>Мир</a>
+<a rel="next" href="wands-two.html"><span>Следующая карта →</span>Двойка жезлов</a>
+</nav>
+</article>
+</main>
+<footer class="site-footer">
+  <p>Таро · Справочник значений карт</p>
+  <p class="footer-note">Материалы носят справочный и развлекательный характер</p>
+</footer>
+</body>
+</html>

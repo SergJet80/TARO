@@ -10,55 +10,127 @@
 <meta property="og:description" content="Дьявол — привязанности и возвращение свободы. Значение карты Таро в прямом и перевёрнутом положении, в любви и карьере. Совет карты и вопросы для размышления.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://taro.jetserg.top/cards/dyavol.html">
-<link rel="stylesheet" href="/css/style.css?v=3.3">
-<link rel="stylesheet" href="/css/astrology.css?v=3.3">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/major-15-devil.webp">
+<link rel="stylesheet" href="/css/style.css?v=3.4">
+<link rel="stylesheet" href="/css/astrology.css?v=3.4">
 <style>
 .main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
 .card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
 .card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
 .card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
 .card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
-.card-hero { text-align: center; padding: 14px 0 34px; }
-.card-symbol { display: block; font-family: Georgia, serif; font-size: 5rem; line-height: 1.2; color: var(--gold-bright); text-shadow: 0 0 30px var(--gold-dim); }
-.card-eyebrow { color: var(--text-dim); letter-spacing: .15em; text-transform: uppercase; font-size: .76rem; margin: 18px 0 8px; }
-.card-hero h1 { font-family: Georgia, serif; font-weight: 500; font-size: clamp(2rem, 6vw, 3.3rem); line-height: 1.2; color: var(--gold-bright); overflow-wrap: anywhere; }
-.card-number { display: block; font-size: 2.2rem; color: var(--gold); margin-bottom: 10px; }
-.card-hero > p:last-child { margin-top: 16px; color: var(--text-dim); }
-.card-section { margin: 0 0 22px; padding: 28px 32px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: rgba(23, 18, 43, .88); }
-.card-section h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500; font-size: 1.6rem; line-height: 1.3; margin-bottom: 18px; }
-.card-section h3 { color: var(--gold-bright); font-size: 1rem; margin: 22px 0 10px; }
-.card-section p + p { margin-top: 16px; }
-.card-intro { background: linear-gradient(135deg, rgba(124, 92, 191, .2), var(--bg-panel)); font-size: 1.1rem; }
-.card-keywords { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 18px 0; }
-.card-keywords li { border: 1px solid var(--gold-dim); border-radius: 999px; padding: 4px 12px; font-size: .85rem; color: var(--gold-bright); }
-.card-questions { padding-left: 24px; }
-.card-questions li { padding: 4px 0 10px 6px; }
-.card-questions li::marker { color: var(--gold); }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── Школа Современного Таро ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
 .card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
-.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius); text-decoration: none; background: var(--bg-panel); }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
 .card-pagination a:last-child { text-align: right; }
 .card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
-.card-pagination a:hover, .card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
-.card-catalog { max-width: 1120px; }
-.card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; list-style: none; }
-.card-grid li { min-width: 0; }
-.card-tile { display: flex; flex-direction: column; align-items: flex-start; height: 100%; padding: 24px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel); text-decoration: none; }
-.card-tile-symbol { font-size: 2rem; line-height: 1.3; }
-.card-tile-number { color: var(--text-dim); font-size: .85rem; margin: 18px 0 4px; }
-.card-tile strong { font-family: Georgia, serif; font-size: 1.4rem; font-weight: 500; }
-.card-tile-desc { color: var(--text-dim); font-size: .9rem; margin-top: 6px; }
-@media (max-width: 700px) { .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
 @media (max-width: 480px) {
   .main-nav { padding: 12px 12px 0; }
   .main-nav a { padding: 8px 12px; font-size: .9rem; }
-  .card-page { padding: 22px 16px 36px; }
-  .card-section { padding: 22px 20px; }
-  .card-tile { padding: 18px 14px; }
-  .card-tile strong { font-size: 1.16rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
   .card-pagination { gap: 10px; }
   .card-pagination a { padding: 16px 12px; }
 }
-@media (max-width: 350px) { .card-grid { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
 </style>
 <script type="application/ld+json">
@@ -88,69 +160,83 @@
     <a href="/">Главная</a>
     <a href="/cards/" class="mn-active">Карты</a>
     <a href="/astrology/">Астрология</a>
-    <a href="/lenormand/">Ленорман</a>
     <a href="/runes/">Руны</a>
     <a href="/spreads.html">Расклады</a>
   </div>
 </nav>
 <main class="card-page">
 <nav class="card-crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/cards/">Карты</a> / <span aria-current="page">Дьявол</span></nav>
-<article>
-<header class="card-hero">
-<span class="card-symbol" aria-hidden="true">♑</span>
-<p class="card-eyebrow">Старшие арканы</p>
-<h1><span class="card-number">XV</span>Дьявол</h1>
-<p>Привязанности и соблазн</p>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="/img/cards/major-15-devil.webp" alt="Дьявол — карта Таро Уэйта" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Старший аркан · XV</p>
+<h1 class="m-title"><span class="card-number">XV</span>Дьявол</h1>
+<p class="m-en">The Devil</p>
+<p class="m-meta">Стихия: <b>Земля</b> &nbsp;·&nbsp; Астрология: <b>Козерог</b></p>
+</div>
 </header>
-<section class="card-section card-intro" aria-labelledby="brief">
-<h2 id="brief">Краткое значение</h2>
-<p>Дьявол высвечивает желания и привычки, которые незаметно начинают распоряжаться выбором. Возможность освобождения появляется, когда человек видит цену своей привязанности и перестаёт называть её неизбежностью.</p>
-</section>
-<section class="card-section" aria-labelledby="upright">
-<h2 id="upright">Прямое положение</h2>
-<p>Цепи, которые мы сами называем необходимостью: карта привязанностей, теневых желаний и власти материи.</p>
-<ul class="card-keywords" aria-label="Ключевые слова"><li>привязанность</li><li>зависимость</li><li>соблазн</li><li>теневая сторона</li><li>материализм</li><li>страсть</li><li>контроль</li></ul>
-<p>Дьявол сидит на пьедестале, но присмотритесь: цепи на пленниках у подножия длинны и свободны — снять их можно в любой момент. В этом весь смысл аркана: клетка держится не на замке, а на привычке её носить.</p>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Положения карты">
+<label class="pos-tab" for="pos-upright">Прямое положение</label>
+<label class="pos-tab" for="pos-reversed">Перевёрнутое положение</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">Школа Современного Таро</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">привязанность</span><span class="kw">зависимость</span><span class="kw">соблазн</span><span class="kw">теневая сторона</span><span class="kw">материализм</span><span class="kw">страсть</span><span class="kw">контроль</span></div>
+<p class="short-value">Цепи, которые мы сами называем необходимостью: карта привязанностей, теневых желаний и власти материи.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Дьявол сидит на пьедестале, но присмотритесь: цепи на пленниках у подножия длинны и свободны — снять их можно в любой момент. В этом весь смысл аркана: клетка держится не на замке, а на привычке её носить.</p>
 <p>Карта описывает всё, чем владеет наша слабая сторона: страсть, выдаваемая за любовь, работа, съедающая личность, вещество, деньги, статус, чужое одобрение. Она не запрещает желать — она предлагает посмотреть желаниям в глаза и спросить, кто кого использует.</p>
-<p>Теневая часть аркана честна, как хирург: он показывает материал, из которого делается свобода. Признанный страх теряет власть над поступками, названное вслух желание — свою лихорадку. Поэтому Дьявол, вопреки репутации, карта не злая, а трезвая.</p>
-</section>
-<section class="card-section" aria-labelledby="reversed">
-<h2 id="reversed">Перевёрнутое положение</h2>
-<p>Цепи расстёгиваются: зависимость увидена со стороны, и рука уже нашла застёжку.</p>
-<ul class="card-keywords" aria-label="Ключевые слова"><li>освобождение</li><li>разрыв зависимости</li><li>осознание манипуляции</li><li>возврат силы</li><li>детокс</li><li>границы</li></ul>
-<p>Перевёрнутый Дьявол ловит момент, когда пленник моргнул: хватит. Оковы ещё звенят, но застёжка найдена. Это карта выхода из токсичных связей, созависимых отношений и привычек, которые держались только на невнимании.</p>
+<p>Теневая часть аркана честна, как хирург: он показывает материал, из которого делается свобода. Признанный страх теряет власть над поступками, названное вслух желание — свою лихорадку. Поэтому Дьявол, вопреки репутации, карта не злая, а трезвая.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>День соблазнов: распродажи, вкусное, «ещё один эпизод». Сверьте бюджет и холодильник с реальными нуждами. Возможен мелкий шантаж — чувством вины, услугой, старым долгом; замечайте, где вас держат и где вы держитесь сами. Один честный взгляд на свои цепи ослабляет их наполовину.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>В делах пахнет жёсткой игрой: манипуляции, серые схемы, начальник-тиран или партнёр, привязывающий условиями. Посчитайте честно, что вы получаете за свою лояльность и чем платите взамен. Работа может быть денежной и при этом душащей — это тоже цена, и она растёт. От сомнительных сделок воздержитесь: выход всегда дороже входа.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Страсть с привкусом клетки: ревность, собственничество, связь, которая давно не радует, но держит — привычкой, деньгами, страхом пустоты. Карта не обязательно предвещает разрыв: она требует честности желаний. Если союз построен на контроле, спросите себя, чего боитесь именно вы.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Зона аркана — зависимости всех сортов: сахар, никотин, алкоголь, бесконечный скроллинг. Тело сигналит перенапряжением там, где вы искусственно себя «заводите». Возможны проблемы интимного характера и чисто психосоматические реакции — от невысказанного.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Дьявол — хозяин материального плана и страж посвящения: не встретивший собственных теней остаётся его погонщиком. В практике аркан используют для работы с подсознательными программами, снятия привязок и денежных блоков, распознавания чужих манипуляций. Его урок суров: сила через отрицание желаний фальшива; настоящая приходит через их переподчинение духу.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">освобождение</span><span class="kw">разрыв зависимости</span><span class="kw">осознание манипуляции</span><span class="kw">возврат силы</span><span class="kw">детокс</span><span class="kw">границы</span></div>
+<p class="short-value">Цепи расстёгиваются: зависимость увидена со стороны, и рука уже нашла застёжку.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Перевёрнутый Дьявол ловит момент, когда пленник моргнул: хватит. Оковы ещё звенят, но застёжка найдена. Это карта выхода из токсичных связей, созависимых отношений и привычек, которые держались только на невнимании.</p>
 <p>Нередко она фиксирует само прозрение: стало видно, кто и как дёргает за ниточки, — и сама эта видимость обессиливает кукловода. Здоровый гнев здесь целителен, если превращается в действие, а не в новый способ грызть себя.</p>
-<p>Тень аркана — освобождение показное: бросил курить и начал заедать, ушёл от тирана к контролёру. Настоящая свобода проверяется временем, а не декларацией.</p>
-</section>
-<section class="card-section" aria-labelledby="love">
-<h2 id="love">В любви</h2>
-<h3>Прямое положение</h3>
-<p>Страсть с привкусом клетки: ревность, собственничество, связь, которая давно не радует, но держит — привычкой, деньгами, страхом пустоты. Карта не обязательно предвещает разрыв: она требует честности желаний. Если союз построен на контроле, спросите себя, чего боитесь именно вы.</p>
-<h3>Перевёрнутое положение</h3>
-<p>Период расцепления: пара выбирается из круга «ревность—вина—прощение» или расстаётся окончательно. Возврат контроля над собой выглядит непривычно тихо — без войн, просто появляются границы. Возможно прощание с зависимостью от чужого одобрения: впервые нравится не абстрактному «кому-то», а себе. Связи, державшиеся на страхе, теряют магнит.</p>
-</section>
-<section class="card-section" aria-labelledby="career">
-<h2 id="career">В карьере</h2>
-<h3>Прямое положение</h3>
-<p>В делах пахнет жёсткой игрой: манипуляции, серые схемы, начальник-тиран или партнёр, привязывающий условиями. Посчитайте честно, что вы получаете за свою лояльность и чем платите взамен. Работа может быть денежной и при этом душащей — это тоже цена, и она растёт. От сомнительных сделок воздержитесь: выход всегда дороже входа.</p>
-<h3>Перевёрнутое положение</h3>
-<p>Рабочие путы слабеют: можно отказать токсичному заказчику, выйти из проекта-болота, потребовать пересмотра условий — и получить согласие. Освобождение идёт через документы и факты, не через сцену. Остерегайтесь демонстративных жестов: уход «в никуда» из гордости — тот же капкан, только теперь ваш собственный.</p>
-</section>
-<section class="card-section" aria-labelledby="advice">
-<h2 id="advice">Совет карты</h2>
-<p>Посмотрите без оправданий, что удерживает вас в повторяющемся сценарии и какую выгоду вы из него получаете. Назовите его цену и найдите первый доступный способ вернуть себе выбор.</p>
-</section>
-<section class="card-section" aria-labelledby="questions">
-<h2 id="questions">Вопросы для размышления</h2>
-<ol class="card-questions"><li>Какое «я должен» на деле скрывает сильную привязанность?</li>
-<li>Что даёт мне этот сценарий и чем за это приходится платить?</li>
-<li>Какой доступный отказ вернёт мне немного свободы?</li></ol>
-</section>
-</article>
+<p>Тень аркана — освобождение показное: бросил курить и начал заедать, ушёл от тирана к контролёру. Настоящая свобода проверяется временем, а не декларацией.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Хороший день для разгрузки: отмените лишние обязательства, отдайте давящий долг, выбросите хлам, съедающий пространство. Скажите вслух то, что крутилось в голове неделями, — одному человеку, но вслух. Замеченные сегодня манипуляции продавцов, родни и коллег уже не сработают повторно: знание делает их беспомощными.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Рабочие путы слабеют: можно отказать токсичному заказчику, выйти из проекта-болота, потребовать пересмотра условий — и получить согласие. Освобождение идёт через документы и факты, не через сцену. Остерегайтесь демонстративных жестов: уход «в никуда» из гордости — тот же капкан, только теперь ваш собственный.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Период расцепления: пара выбирается из круга «ревность—вина—прощение» или расстаётся окончательно. Возврат контроля над собой выглядит непривычно тихо — без войн, просто появляются границы. Возможно прощание с зависимостью от чужого одобрения: впервые нравится не абстрактному «кому-то», а себе. Связи, державшиеся на страхе, теряют магнит.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Время детокса во всех смыслах: тело охотно отпускает накопленное, если помочь водой, движением и сном. Зависимости поддаются лечению — особенно при поддержке близких и специалистов. Закрепляйте успех средой: меньше триггеров вокруг, больше живого взамен суррогатов.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Магически перевёрнутый аркан — знак удачной экзорцизмы собственной тени: программы признаны и разряжены. Практики освобождения — от родовых уз до финансовых проклятий — работают, лишь когда человек меняет поведение, а не только свечи. Сила возвращается через простые акты воли: сказал «нет» — и не передумал к утру.</p></div>
+</div>
+<div class="pos-pane roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> Кратко и просто</h3>
+<div class="info-section"><h3>Основная идея</h3><p>Дьявол — это сконцентрированное желание.
+Желание, которому человек придал конкретную цель, становится огромной движущей силой. Проблема начинается тогда, когда человек перестаёт управлять своим желанием и оказывается управляемым им.</p></div>
+<div class="info-section"><h3>Как проявляется</h3><p>Харизма, сильная мотивация, способность увлекать других, протест против традиций, желание получить материальный результат.</p></div>
+<div class="info-section"><h3>Работа и деньги</h3><p>Маркетинг, реклама, политика, влияние, деньги, кредиты, ипотеки и другие формы привязанности.</p></div>
+<div class="info-section"><h3>В отношениях</h3><p>Сильное сексуальное притяжение, зависимость, общие желания, сильная эмоциональная или физическая привязанность.</p></div>
+<div class="info-section"><h3>Теневая сторона</h3><p>Манипуляция. Человек перестаёт отличать собственное желание от желания, которое ему навязали.</p></div>
+<div class="info-section"><h3>Особенность школы</h3><p>Дьявол связан со Стрельцом и IX домом. Он задаёт вопрос: «А почему я вообще должен жить именно так?»</p></div>
+<div class="roman-astro"><span class="ra-label">✷ Астрология школы</span><b>IX дом · Стрелец</b><span class="ra-sep">·</span>Юпитер + Нептун (растворяй и сгущай)<div class="ra-classic">У классики Уэйта: Козерог</div></div>
+<h3 class="roman-subtitle"><span>📜</span> Развёрнуто — выжимки лекций</h3>
+<details class="roman-details" open><summary><span class="rd-icon" aria-hidden="true">✧</span> Суть карты</summary><div class="rd-body"><p>Дьявол — это «сконцентрированное желание», выраженное в цели, которое движет людьми вперёд: «дьявол это желание, которое движет людьми постоянно вперёд какой-то цели». Он владыка материальной жизни: люди цепями прикованы к плотской сути — «как ты ни желай чего-то возвышенного, всё равно ты прикован к желаниям своего тела». Карта не так плоха, как кажется: «нет плохих и хороших карт Таро»; в ней сидят два брата из IX дома — Юпитер и Нептун (светлый и тёмный), а светлой стороной XV выступает архангел Михаил — предводитель воинства, «проигравшей стороной» названный дьяволом.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Прямое положение</summary><div class="rd-body"><p>Отдельного блока «значения по положениям» в лекции нет — список идёт сплошняком (практику раскладов он выносит на закрытые курсы).</p>
+<p>Социум и желания. Харизматическая личность, увлекающая других харизмой — «тот самый Ленин с броневика»: хочет, чтобы за него делали другие. Руководитель-проповедник и миссионеры с факелами идут за своим огнём страсти.</p>
+<p>Нарушение традиций. V–VI арканы (Иерофант, Влюблённые) противостоят XV: «по традициям это так, но для себя я хочу совсем по-другому». Дьявол — оппозиционер, сектант, протестант; любая оппозиционная личность идёт по этой карте.</p>
+<p>Работа. Сложность субординации: ты делаешь то, что хочет начальник, и забываешь своё желание; либо сам выступаешь Дьяволом-оппозиционером («девочки из бухгалтерии идут требовать работу до пяти») — «это Зевс со братьями идёт к Кроносу».</p>
+<p>Финансы и имущество. Маркетинг и реклама: «купите наших слонов», счастливые люди в роликах навязывают чужие желания. Социальная реклама — «тот же дьявол, только хороший», вариант архангела Михаила. Зависимость от зарплаты; добровольные привязанности — кредиты, ипотеки: нам продают эту привязанность.</p>
+<p>Психика и саморазвитие. Привычки, слабости, истинное желание. Голые фигуры карты — истина в чистом виде (одежда скрывает, как у Верховной Жрицы): это ваше истинное желание. Характер стреноживается разумом (карты Солнца и Силы), а по XV лезет животное: «хочется — и всё тут». Победить можно только силой разума — знанием, Гермесом/Меркурием (меч Персей получил от Гермеса).</p>
+<p>Эмоции и личная жизнь. Настоящее желание и характер человека: если твоё «как мне нравится» совпадает с другими — повезло, иначе будешь изгоем; поэтому истинное желание показывать не всегда стоит. Зависимость от партнёра: двое привязаны к одной жёрдочке — «муж и жена одна сатана»; общее желание делает пару правильной. Сексуальные практики: извращённость — вопрос морали третьего дома; «всё что естественно, то не безобразно» — если обоим нравится, карта скорее хороша. Манипуляции партнёром в полный рост; в проверках на порчу, венец безбрачия — магическое воздействие третьей стороны (традиционное значение).</p>
+<p>Зависимости: алкоголизм, игорная, наркомания — механизм привычки, приковывающий к физическому телу.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Негативное значение</summary><div class="rd-body"><p>Негативное значение проявляется в двух позициях: работа — «есть ощущение, что тобой манипулируют», хотя по сути начальник просто платит деньги за нужное ему; и мошенничество — вашими желаниями играют и обманывают вас. Формула нейтральности: «вы не должны принимать какую-либо сторону — для таролога важно ощущение карты», а ощущение — движение вперёд из чего-то неправильного; всё зависит от целей человека (Жанна д’Арк, которой являлся архангел Михаил, — материальное воплощение той же силы).</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> Акценты и фишки школы</summary><div class="rd-body"><ul class="st-list"><li>- Астрология системы: XV = Стрелец, IX дом, Юпитер + Нептун. На девизе Бафомета Леви «растворяй и сгущай» — Нептун растворяет, Юпитер сгущает. VI аркан (Близнецы/III дом) стоит напротив XV — «грубая пародия на Влюблённых»: до грехопадения Адам и Ева ещё «близнецы без разделения полов».</li><li>- Три огня: Овен — кардинальный (молния охотнику), Лев — фиксированный (очаг в пещере, следящий за ним ребёнок), Стрелец — мутабельный (подсечное-огневое земледелие, лесной пожар). Дьявол — третий огонь: политика, идея, сжигающая массы.</li><li>- Козёл и азазель: ритуал козла отпущения с красной тряпочкой — грехи рода увозятся в пустыню ради приближения к Всевышнему; отсюда светлая сторона карты. Козёл смелее барана и ведёт стадо — им проще управлять (манипулятор, начальник, пастух-политик).</li><li>- Люцифер: буквально «несущий свет», утренняя звезда Венера; падшим ангелом стал лишь с позднего средневековья. Зевс — тот же восставший против Кроноса: смена поколений богов глубже раскрыта в X доме — Башне. Данко и Прометей — светлые люциферы.</li><li>- Андромеда и Персей: прикованные фигуры карты; чудовище — хтонь (крокодил египтян); победа — мечом Гермеса, т.е. разумом и знанием. Принцесса Лея у Джаббы — «один в один Андромеда».</li><li>- Эрот с факелом поджигал сердца и вёл куда хотел; только Афродита и Сатурн могли подрезать ему крылья — любовное желание гаснет от времени, намёк на следующую карту.</li><li>- Страж порога Уэйта — ключ: «Уэйт проговаривается, что карта не так плоха» → архангел Михаил, архистратиг; изгнание из рая = изгнание козла отпущения.</li><li>- Оппозиция vs служба: Сахаров, Навальный, Гай Фокс («викторианский Навальный»); Ошо и Кроули как лже-гуру («делай что хочешь»; Кроули — «родоначальник современного сатанизма, чем вас и поздравляю»).</li><li>- Перевёрнутая пентаграмма и поднятая рука — пародия средневековья на благословение Иерофанта; тамплиеров обвиняли в поклонении Бафомету (образ воскрешён Элифасом Леви).</li><li>- Маг vs Дьявол: маг — делатель и лидер, делает сам; дьявол ничего не делает сам — концентрирует желания толпы, и «за него все делают другие».</li><li>- Кино как учебники архетипа: «Адвокат дьявола» (обязательный просмотр, учебник по манипуляции), Джон Коннор из «Терминатора» (право ли вести за собой), агент Смит из «Матрицы» (истинный дьявол-манипулятор vs Нео-Зевс, собирающий желания людей), Иммортан Джо из «Безумного Макса» (секта и Валгалла), «Звёздные войны» (Лукас после аварии перечитал Кастанеду; падение Анакина), «V значит вендетта», «Дюна», роуд-муви «Трасса 60». Роуд-муви вообще есть старшие арканы — «большой миф» Голливуда.</li><li>- Коллеги: советует читать Банцхафа («нормальный хороший правильный таролог»), уважает Юрия Хана за астрологию, критикует маркетинг Скляровой и поверхностность Савченко. Метод «двух глаз»: добавочная дисциплина (астрология, нумерология, каббала) даёт стереоскопическое зрение карт.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Ключевые слова</summary><div class="rd-body"><ul class="st-list"><li>Желание; движение к цели; харизматичный лидер-предводитель; индивидуализм и оппозиция; манипуляция; соблазн и искушение; привязанность и зависимость; привычка (животная природа); расширение (IX дом, Стрелец); истинное желание «голой души».</li><li>---</li></ul></div></details>
+</div>
 <nav class="card-pagination" aria-label="Предыдущая и следующая карта">
 <a rel="prev" href="umerennost.html"><span>← Предыдущая карта</span>Умеренность</a>
 <a rel="next" href="bashnya.html"><span>Следующая карта →</span>Башня</a>
 </nav>
+</article>
 </main>
 <footer class="site-footer">
   <p>Таро · Справочник значений карт</p>

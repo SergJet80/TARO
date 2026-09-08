@@ -10,55 +10,127 @@
 <meta property="og:description" content="Справедливость — честность и последствия решений. Прямое и перевёрнутое значение карты Таро, толкование в любви и карьере, совет и вопросы для размышления.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://taro.jetserg.top/cards/spravedlivost.html">
-<link rel="stylesheet" href="/css/style.css?v=3.3">
-<link rel="stylesheet" href="/css/astrology.css?v=3.3">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/major-11-justice.webp">
+<link rel="stylesheet" href="/css/style.css?v=3.4">
+<link rel="stylesheet" href="/css/astrology.css?v=3.4">
 <style>
 .main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
 .card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
 .card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
 .card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
 .card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
-.card-hero { text-align: center; padding: 14px 0 34px; }
-.card-symbol { display: block; font-family: Georgia, serif; font-size: 5rem; line-height: 1.2; color: var(--gold-bright); text-shadow: 0 0 30px var(--gold-dim); }
-.card-eyebrow { color: var(--text-dim); letter-spacing: .15em; text-transform: uppercase; font-size: .76rem; margin: 18px 0 8px; }
-.card-hero h1 { font-family: Georgia, serif; font-weight: 500; font-size: clamp(2rem, 6vw, 3.3rem); line-height: 1.2; color: var(--gold-bright); overflow-wrap: anywhere; }
-.card-number { display: block; font-size: 2.2rem; color: var(--gold); margin-bottom: 10px; }
-.card-hero > p:last-child { margin-top: 16px; color: var(--text-dim); }
-.card-section { margin: 0 0 22px; padding: 28px 32px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: rgba(23, 18, 43, .88); }
-.card-section h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500; font-size: 1.6rem; line-height: 1.3; margin-bottom: 18px; }
-.card-section h3 { color: var(--gold-bright); font-size: 1rem; margin: 22px 0 10px; }
-.card-section p + p { margin-top: 16px; }
-.card-intro { background: linear-gradient(135deg, rgba(124, 92, 191, .2), var(--bg-panel)); font-size: 1.1rem; }
-.card-keywords { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 18px 0; }
-.card-keywords li { border: 1px solid var(--gold-dim); border-radius: 999px; padding: 4px 12px; font-size: .85rem; color: var(--gold-bright); }
-.card-questions { padding-left: 24px; }
-.card-questions li { padding: 4px 0 10px 6px; }
-.card-questions li::marker { color: var(--gold); }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── Школа Современного Таро ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
 .card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
-.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius); text-decoration: none; background: var(--bg-panel); }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
 .card-pagination a:last-child { text-align: right; }
 .card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
-.card-pagination a:hover, .card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
-.card-catalog { max-width: 1120px; }
-.card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; list-style: none; }
-.card-grid li { min-width: 0; }
-.card-tile { display: flex; flex-direction: column; align-items: flex-start; height: 100%; padding: 24px; border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel); text-decoration: none; }
-.card-tile-symbol { font-size: 2rem; line-height: 1.3; }
-.card-tile-number { color: var(--text-dim); font-size: .85rem; margin: 18px 0 4px; }
-.card-tile strong { font-family: Georgia, serif; font-size: 1.4rem; font-weight: 500; }
-.card-tile-desc { color: var(--text-dim); font-size: .9rem; margin-top: 6px; }
-@media (max-width: 700px) { .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
 @media (max-width: 480px) {
   .main-nav { padding: 12px 12px 0; }
   .main-nav a { padding: 8px 12px; font-size: .9rem; }
-  .card-page { padding: 22px 16px 36px; }
-  .card-section { padding: 22px 20px; }
-  .card-tile { padding: 18px 14px; }
-  .card-tile strong { font-size: 1.16rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
   .card-pagination { gap: 10px; }
   .card-pagination a { padding: 16px 12px; }
 }
-@media (max-width: 350px) { .card-grid { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
 </style>
 <script type="application/ld+json">
@@ -88,69 +160,80 @@
     <a href="/">Главная</a>
     <a href="/cards/" class="mn-active">Карты</a>
     <a href="/astrology/">Астрология</a>
-    <a href="/lenormand/">Ленорман</a>
     <a href="/runes/">Руны</a>
     <a href="/spreads.html">Расклады</a>
   </div>
 </nav>
 <main class="card-page">
 <nav class="card-crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/cards/">Карты</a> / <span aria-current="page">Справедливость</span></nav>
-<article>
-<header class="card-hero">
-<span class="card-symbol" aria-hidden="true">⚖</span>
-<p class="card-eyebrow">Старшие арканы</p>
-<h1><span class="card-number">XI</span>Справедливость</h1>
-<p>Честный итог</p>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="/img/cards/major-11-justice.webp" alt="Справедливость — карта Таро Уэйта" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Старший аркан · XI</p>
+<h1 class="m-title"><span class="card-number">XI</span>Справедливость</h1>
+<p class="m-en">Justice</p>
+<p class="m-meta">Стихия: <b>Воздух</b> &nbsp;·&nbsp; Астрология: <b>Весы</b></p>
+</div>
 </header>
-<section class="card-section card-intro" aria-labelledby="brief">
-<h2 id="brief">Краткое значение</h2>
-<p>Справедливость предлагает посмотреть на ситуацию без скидки на симпатии и удобные объяснения. Она связывает решение с его последствиями и возвращает вопрос о том, насколько честны условия для всех участников.</p>
-</section>
-<section class="card-section" aria-labelledby="upright">
-<h2 id="upright">Прямое положение</h2>
-<p>Аркан честного итога: ничто не исчезает бесследно, и решение будет вынесено по существу, а не по симпатиям.</p>
-<ul class="card-keywords" aria-label="Ключевые слова"><li>справедливость</li><li>правда</li><li>ответственность</li><li>причина и следствие</li><li>закон</li><li>беспристрастность</li><li>равновесие</li></ul>
-<p>Справедливость — аркан точного расчёта. Меч в поднятой руке говорит: решение принято окончательно, весы в левой — что холодная логика уравновешена интуицией. В мире этой карты ничего не растворяется в воздухе: каждый поступок, слово и даже невысказанное намерение возвращаются к своему автору.</p>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Положения карты">
+<label class="pos-tab" for="pos-upright">Прямое положение</label>
+<label class="pos-tab" for="pos-reversed">Перевёрнутое положение</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">Школа Современного Таро</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">справедливость</span><span class="kw">правда</span><span class="kw">ответственность</span><span class="kw">причина и следствие</span><span class="kw">закон</span><span class="kw">беспристрастность</span><span class="kw">равновесие</span></div>
+<p class="short-value">Аркан честного итога: ничто не исчезает бесследно, и решение будет вынесено по существу, а не по симпатиям.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Справедливость — аркан точного расчёта. Меч в поднятой руке говорит: решение принято окончательно, весы в левой — что холодная логика уравновешена интуицией. В мире этой карты ничего не растворяется в воздухе: каждый поступок, слово и даже невысказанное намерение возвращаются к своему автору.</p>
 <p>Когда она выпадает, время притворяться закончилось. Обстоятельства складываются так, что факты встанут на свои места — и вместе с ними придётся признать собственную роль в произошедшем. Это не кара и не трибунал, а восстановление нарушенного порядка.</p>
-<p>Связанный с Весами аркан учит видеть спор с обеих сторон и выбирать не удобное, а верное.</p>
-</section>
-<section class="card-section" aria-labelledby="reversed">
-<h2 id="reversed">Перевёрнутое положение</h2>
-<p>Весы накренились: предвзятость, уход от неудобных вопросов и решения, принятые в чужих интересах.</p>
-<ul class="card-keywords" aria-label="Ключевые слова"><li>предвзятость</li><li>самообман</li><li>уклонение от ответственности</li><li>нечестность</li><li>бюрократическая волокита</li><li>перекос</li></ul>
-<p>Перевёрнутая Справедливость — суд, который прошёл без вас или против вас. Чьи-то заслуги записаны в чужой столбец, чужие ошибки висят на вас.</p>
+<p>Связанный с Весами аркан учит видеть спор с обеих сторон и выбирать не удобное, а верное.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>День подходит для наведения порядка в договорённостях: верните долг, закройте формальности, перечитайте условия договора до подписи. Назревший бытовой спор — о деньгах, графике, обязанностях — разрешится, если обсуждать дело, а не чувства. Всё, что разделено сейчас поровну, больше не станет поводом для обид.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>Дела требуют юридической аккуратности: фиксируйте договорённости письменно, готовьтесь к проверкам, аттестациям или переговорам о компенсации. Исход будет объективным, особенно если ваши руки чисты. Карта покровительствует юристам, аудиторам, посредникам и всем, кто выносит кадровые решения: повышение придёт как оценка реальных заслуг.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>Отношения проходят проверку на честность. Пора обсудить не то, кто кого любит сильнее, а справедливо ли устроен союз: кто вкладывается, кто пользуется, чего каждый ждёт на самом деле. Такой разговор снимает накопленные обиды лучше любых примирений, а одиноким обещает встречу с человеком зрелым и порядочным — нередко связанным с правом или старше по возрасту.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Тело напоминает о балансе: нагрузки и отдых должны уравновешивать друг друга, иначе организм выставит счёт. Зона внимания — почки, поясница, кожа; хороший момент для обследования и второго, трезвого мнения вместо самодиагностики. Выздоровление сейчас идёт ровно, если точно соблюдать назначения врача.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>Эзотерически это аркан кармического учёта: вечерняя инвентаризация дня — без оправданий и самобичевания — заметно выравнивает события. Весы фигуры соотносят с египетской Маат, чьё перо взвешивает душу после смерти. В практике образ меча используют для отсечения лжи: остриё режет иллюзии, а твёрдая рука держит только то, чем действительно владеешь.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">предвзятость</span><span class="kw">самообман</span><span class="kw">уклонение от ответственности</span><span class="kw">нечестность</span><span class="kw">бюрократическая волокита</span><span class="kw">перекос</span></div>
+<p class="short-value">Весы накренились: предвзятость, уход от неудобных вопросов и решения, принятые в чужих интересах.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Архетип и основное значение</h3><p>Перевёрнутая Справедливость — суд, который прошёл без вас или против вас. Чьи-то заслуги записаны в чужой столбец, чужие ошибки висят на вас.</p>
 <p>Нередко карта описывает внутреннего обвинителя: человек судит себя строже любого трибунала, тащит не свой груз — или, наоборот, самооправдывается и перекладывает вину вовне, пока урок не усвоен.</p>
-<p>Аркан предупреждает: попытка обойти закон — государственный, человеческий или кармический — обернётся двойным счётом.</p>
-</section>
-<section class="card-section" aria-labelledby="love">
-<h2 id="love">В любви</h2>
-<h3>Прямое положение</h3>
-<p>Отношения проходят проверку на честность. Пора обсудить не то, кто кого любит сильнее, а справедливо ли устроен союз: кто вкладывается, кто пользуется, чего каждый ждёт на самом деле. Такой разговор снимает накопленные обиды лучше любых примирений, а одиноким обещает встречу с человеком зрелым и порядочным — нередко связанным с правом или старше по возрасту.</p>
-<h3>Перевёрнутое положение</h3>
-<p>В паре копится счёт взаимных претензий: один отдаёт, другой принимает как должное, и оба молчат о неравенстве. Прошлое используется как оружие в нынешних спорах, ревность рядится в заботу — такой обмен «по справедливости» убивает близость. Возможен тяжёлый раздел имущества и общих друзей.</p>
-</section>
-<section class="card-section" aria-labelledby="career">
-<h2 id="career">В карьере</h2>
-<h3>Прямое положение</h3>
-<p>Дела требуют юридической аккуратности: фиксируйте договорённости письменно, готовьтесь к проверкам, аттестациям или переговорам о компенсации. Исход будет объективным, особенно если ваши руки чисты. Карта покровительствует юристам, аудиторам, посредникам и всем, кто выносит кадровые решения: повышение придёт как оценка реальных заслуг.</p>
-<h3>Перевёрнутое положение</h3>
-<p>На работе возможна несправедливая оценка: премия распределена по симпатиям, ошибка раздута, идея ушла под чужим именем. Официальные процессы затягиваются или оборачиваются осложнениями — держите копии документов и привлекайте юриста. Отдельное предупреждение касается вас самого: небольшая «хитрость» с отчётностью закончится проверкой, а односторонние решения сегодня лучше не принимать вовсе.</p>
-</section>
-<section class="card-section" aria-labelledby="advice">
-<h2 id="advice">Совет карты</h2>
-<p>Соберите факты, проверьте договорённости и признайте свою часть в происходящем. Оценивайте чужие и собственные поступки по одной мерке, даже если такой итог не самый удобный.</p>
-</section>
-<section class="card-section" aria-labelledby="questions">
-<h2 id="questions">Вопросы для размышления</h2>
-<ol class="card-questions"><li>Какие факты я оставляю за скобками, потому что они мне невыгодны?</li>
-<li>Применяю ли я к себе те же требования, что к другому человеку?</li>
-<li>Какое последствие моего решения пора признать и исправить?</li></ol>
-</section>
-</article>
+<p>Аркан предупреждает: попытка обойти закон — государственный, человеческий или кармический — обернётся двойным счётом.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> В быту</h3><p>Возможна путаница в документах и обещаниях: перепроверьте счета, расписки, устные договорённости — всё незафиксированное рискует быть истолкованным против вас. Споры с коммунальными службами и продавцами потребуют больше времени, чем стоило бы. Крупные покупки отложите: сегодняшняя цена не отражает ценности.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Работа и карьера</h3><p>На работе возможна несправедливая оценка: премия распределена по симпатиям, ошибка раздута, идея ушла под чужим именем. Официальные процессы затягиваются или оборачиваются осложнениями — держите копии документов и привлекайте юриста. Отдельное предупреждение касается вас самого: небольшая «хитрость» с отчётностью закончится проверкой, а односторонние решения сегодня лучше не принимать вовсе.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Отношения</h3><p>В паре копится счёт взаимных претензий: один отдаёт, другой принимает как должное, и оба молчат о неравенстве. Прошлое используется как оружие в нынешних спорах, ревность рядится в заботу — такой обмен «по справедливости» убивает близость. Возможен тяжёлый раздел имущества и общих друзей.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Здоровье</h3><p>Симптомы путают и вас, и врачей: диагнозы меняются один за другим, лечение не даёт эффекта — ищите причину глубже первых назначений. Тело сигналит о хроническом перекосе: односторонние нагрузки, недосып, попытки заглушить стресс алкоголем. Второе мнение обязательно, самолечение сейчас играет роль пристрастного судьи.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Эзотерическое значение</h3><p>В магической работе карта указывает на незакрытые кармические счета — родовые истории, где кого-то оболгали или лишили своего. Очищение не подействует, пока не проведена честная ревизия собственных поступков: сначала признание, потом отпущение. Обереги на правосудие сейчас слабы; сильнее всего работает отказ от участия в чужих интригах.</p></div>
+</div>
+<div class="pos-pane roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> Кратко и просто</h3>
+<div class="info-section"><h3>Основная идея</h3><p>Справедливость здесь точнее понимать как Правосудие.
+Это карта договора между двумя равными сторонами. У каждого есть свои интересы, права и обязательства.</p></div>
+<div class="info-section"><h3>Как проявляется</h3><p>Договоры, обещания, обязательства, партнёрство, юридические вопросы и необходимость соблюдать достигнутые договорённости.</p></div>
+<div class="info-section"><h3>Работа и деньги</h3><p>Документы, контракты, суды, юристы, официальное оформление.</p></div>
+<div class="info-section"><h3>В отношениях</h3><p>Именно официальный брак: юридически оформленный договор между двумя людьми.</p></div>
+<div class="info-section"><h3>Теневая сторона</h3><p>Справедливость не становится «злой». Она просто начинает работать против человека. Долг нужно вернуть независимо от того, удобно это сейчас или нет.</p></div>
+<div class="info-section"><h3>Особенность школы</h3><p>Карта связана с Весами и VII домом. Главная формула — «Овен — это я, Весы — это ты».</p></div>
+<div class="roman-astro"><span class="ra-label">✷ Астрология школы</span><b>VII дом · Весы</b><span class="ra-sep">·</span>Венера + Хирон; ось I–VII: «Овен — это я, Весы — это ты»<div class="ra-classic">У классики Уэйта: Весы</div></div>
+<h3 class="roman-subtitle"><span>📜</span> Развёрнуто — выжимки лекций</h3>
+<details class="roman-details" open><summary><span class="rd-icon" aria-hidden="true">✧</span> Суть карты</summary><div class="rd-body"><p>Он читает карту через английское Justice → латинская Юстиция, богиня договоров: ядро карты — «ощущение договора между двумя равными сторонами», судебные и договорные дела. По-русски он называл бы карту «Правосудие»: правосудие и справедливость для жителей бывшего СНГ «либо с лёгким недоумением, либо с громогласным смехом» совпадать не могут — карта о божественном принципе правосудия, который искажается неидеальными людьми («божественная сущность искажается в нашем материальном мире»). По его системе соответствий — VII дом, знак Весов, две планеты Венера и Хирон, дающие вместе «подсознательное ощущение гармонии» — ставить нужный предмет на нужное место. В цикле арканов это середина Зодиака, точка у корней Иггдрасиля: после Отшельника и Колеса Фортуны человек переходит от накопления к отдаче — «пол жизни вдох, пол жизни выдох».</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Прямое положение</summary><div class="rd-body"><p>Славянского ряда нет.</p>
+<p>Общий ряд: партнёрство, конкуренция с противоположной стороной, обязательства, данное обещание, договор — пусть даже устный: «как договорились так и нужно выполнять, назвался груздем полезай в кузов». Весы = чужая точка зрения: твои интересы на одной чашке, интересы другого человека на другой. Цитирует Уэйта: карта «строго следует традиционной символике» и подобно Верховной жрице восседает между колоннами, но это «нравственное начало каждому воздающее по его заслугам» — строгое правосудие договорённостей, а не духовный суд Жрицы.</p>
+<p>Работа/финансы: бумажная работа — написанное люди воспринимают как закреплённую истину; одалживая деньги или отдавая имущество, фиксируйте обязательства документально («железная бумажка броня» Преображенского) — иначе «потом фиг докажешь что к чему». Суд — карта указывает на него почти буквально. Профессия: юрист либо клиент; сдавая квартиру — официальный договор. Совместное имущество, коммунальное жильё: ужиматься в свободах, занимая лишь свою половину плиты (личное жильё живёт в противоположном доме Овна).</p>
+<p>Отношения: эмоциональное умиротворение по формуле «как работал так и заработал» — это не высшая справедливость: как относишься к человеку, так он и к тебе. Принятие чужих желаний. Карта — только официальный брак: печать, загс или ратуша, свидетели, задокументированное обещание; традиционный брак — это Иерофант, продление рода «как деды-прадеды». В Калифорнии Justice может выпасть на нетрадиционный брак — он юридически оформлен: договориться можно о чём угодно.</p>
+<p>Саморазвитие: служение и помощь (смотри нужды партнёра: «раз мы братья — твои проблемы мои проблемы»), вторая половина жизни — отдавать людям то, что накопил. Есть и личная выгода быть хорошим пионером — искреннее двуличие; «худой мир лучше хорошей войны», любая улыбка лучше её отсутствия.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Негативное значение</summary><div class="rd-body"><p>Формула: справедливость в негативе — «то же самое, что и обычная справедливость… она в любом случае присутствует», просто работает против тебя. Взял взаймы 10000 долларов на год и отдал — прямая; год прошёл, отдавать должен, а денег нет — справедливость уже против тебя, «но она всё равно присутствует», удобно тебе либо нет. Минусы качеств конкретизируются попутно: бюрократизм — явно названный негативный аспект карты (закручивают то, что надо делать быстро, расписывают нюансы договора; учите детали, иначе Немезида накажет); перекос Весов — раствориться в интересах Овна, забыть себя и страдать; чёрный Овен — думает только о себе, легко предаёт. На вопрос из чата о связи карты с кармическими уроками ответил: об этом отдельная лекция в четверг — здесь темы кармы нет.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> Акценты и фишки школы</summary><div class="rd-body"><ul class="st-list"><li>- Мифология карты — симбиоз трёх богинь: Фемида (меч и весы), Немезида — крылатое возмездие за нарушение обещаний (часы, плеть, колесница с грифонами, согнутая в локте рука — локоть как мера длины, весы торговца) и Кибела — корона зубцами как башня, покровительница зерна и торговли. Весы Немезиды считали прообразом созвездия Весов — потому карту и ставят в VII дом.</li><li>- Юстицию часто рисовали со страусом: самец страуса высиживает потомство — «идеальный муж, идеальный отец», другая сторона договора; плюс перо страуса на весах души у египтян (сам оговаривается: «детали могу забыть»).</li><li>- Хирон связывает его с Императором: опытный создатель законов; те же планеты в Тельце фоново дают материю и вкусовую жизнь, в Весах — «разумное существование в закономерном мире», осознание чужих правил. Люди-Весы тонко чувствуют гармонию композиции, красоту, «близость к божественному идеалу».</li><li>- Две колонны: у Жрицы открывают путь внутрь подсознания, здесь — в «мир человеческих договорённостей»; Жрица этот мир прячет и защищает.</li><li>- Антитеза I/VII: «овен это я, а весы это ты», одна монета с разных сторон; у родившегося в доме тень-«слепое пятно» в противоположном; совесть — мерило высшей глубинной справедливости (Плутон у Овна).</li><li>- Астроосторожность: планеты — «стрелки часов», маркеры времени, а не причины бед (пассаж про ретроградный Меркурий: два совпадающих события).</li><li>- Кино: «Брат» Балабанова — Данила (Весы) вершит земной суд, на который не имеет права, судья и палач в одном лице; само имя Даниил = «Бог мне судья»; брат-наёмник — типичный чёрный Овен. Джон Уик наказывает нарушителей киллерских понятий (даже у убийц свой законодательный совет). «Эрин Брокович» — идеальные Весы, забывающие о себе ради дела. Сэм Гэмджи — образ слуги-денщика при носителе высокой идеи (цитата Толкина про денщиков войны 14 года). «47 ронинов» — долг и обещание, соблюдаемое под страхом смерти; злодей — Марс, колдунья — чёрный аспект Верховной жрицы. Вспоминает Раскольникова и «Десять негритят».</li><li>- Принципиально не смешивает Таро с чакрами и восточным мировоззрением — «натягивание совы на глобус»: курс построен на европейской традиции.</li><li>- Банцхафа не цитирует ни разу.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Ключевые слова</summary><div class="rd-body"><ul class="st-list"><li>договор · обязательство и данное обещание · партнёрство · чужая точка зрения · бумажная работа / железная бумажка · официальный брак · совместное имущество, коммуналка · суд и юрисдикция · баланс «я ↔ ты» · «пол жизни вдох, пол жизни выдох»</li><li>---</li></ul></div></details>
+</div>
 <nav class="card-pagination" aria-label="Предыдущая и следующая карта">
 <a rel="prev" href="koleso-fortuny.html"><span>← Предыдущая карта</span>Колесо фортуны</a>
 <a rel="next" href="poveshennyj.html"><span>Следующая карта →</span>Повешенный</a>
 </nav>
+</article>
 </main>
 <footer class="site-footer">
   <p>Таро · Справочник значений карт</p>
