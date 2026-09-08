@@ -335,7 +335,12 @@ body {
 }
 
 /* ─── Школа Современного Таро ─── */
-.pos-tab-school { margin-left: auto; color: var(--accent-purple); font-weight: 600; }
+.pos-tab-school { margin-left: auto; color: var(--accent-purple); font-weight: 600; max-width: 100%; }
+.pos-tabs { flex-wrap: wrap; }
+@media (max-width: 480px) {
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
+}
 .pos-tab-school:hover { color: #cdbef0; }
 .pos-tab-school.active {
   color: #cdbef0;
@@ -605,6 +610,9 @@ body {
 .main-nav-inner {
   display: flex;
   gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
   background: rgba(23, 18, 43, .75);
   border: 1px solid rgba(212, 175, 55, .22);
   border-radius: 999px;

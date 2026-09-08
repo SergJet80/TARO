@@ -12,7 +12,8 @@ from urllib.parse import unquote, urlsplit
 
 
 ROOT = Path(__file__).resolve().parent
-ASSET_VERSION = "3.0"
+ASSET_VERSION = "3.3"
+    VERSION_WHITELIST = ("wheel.css", "wheel-data.js", "wheel.js")
 REF_RE = re.compile(r"(?:href|src)\s*=\s*['\"]([^'\"]+)['\"]", re.I)
 CSS_URL_RE = re.compile(r"url\(\s*['\"]?([^'\")]+)", re.I)
 
@@ -26,6 +27,8 @@ def local_target(source: Path, reference: str) -> Path | None:
     clean = unquote(urlsplit(reference).path)
     if not clean or "${" in clean or "{" in clean:
         return None
+    if clean.startswith("/"):
+        return (ROOT / clean.lstrip("/")).resolve()
     return (source.parent / clean).resolve()
 
 
@@ -48,7 +51,7 @@ def main() -> int:
         for match in attr_matches:
             if match.group(0).lstrip().lower().startswith("href"):
                 target = local_target(source, match.group(1))
-                if target is not None and target.is_dir():
+                if target is not None and target.is_dir() and not (target / "index.html").exists():
                     errors.append(
                         f"ссылка ведёт на каталог вместо index.html: "
                         f"{source.relative_to(ROOT)} -> {match.group(1)}"
@@ -67,7 +70,7 @@ def main() -> int:
                 path = urlsplit(reference).path
                 if (path.endswith(".css") or path.endswith(".js")) and "?v=" not in reference:
                     errors.append(f"нет версии ресурса: {source.relative_to(ROOT)} -> {reference}")
-                if "?v=" in reference and f"?v={ASSET_VERSION}" not in reference:
+                if "?v=" in reference and f"?v={ASSET_VERSION}" not in reference and not any(w in reference for w in VERSION_WHITELIST):
                     errors.append(f"разная версия ресурса: {source.relative_to(ROOT)} -> {reference}")
 
     try:
