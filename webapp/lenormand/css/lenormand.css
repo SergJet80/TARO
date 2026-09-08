@@ -75,51 +75,29 @@
 .pol-neg .ln-tile-name { border-top: 2px solid rgba(214, 110, 110, .5); }
 .pol-neu .ln-tile-name { border-top: 2px solid rgba(180, 170, 190, .4); }
 
-/* ─── Шапка страницы карты: заголовок + факты сбоку от карты ─── */
-.ln-card-head {
+/* ─── Хиро карты: картинка + факты справа ─── */
+.ln-hero {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  gap: 28px;
-  max-width: 720px;
-  margin: 0 auto 22px;
-  text-align: left;
+  gap: 34px;
+  margin: 4px 0 20px;
 }
-.ln-head-title { text-align: center; }
-.ln-head-num {
-  display: block;
-  font-family: Georgia, serif;
-  font-size: 2.6rem;
-  color: var(--ln-accent-dim);
-  line-height: 1;
-  margin-bottom: 4px;
+.ln-hero img {
+  width: min(300px, 62vw);
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--ln-accent-dim);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, .45), 0 0 40px rgba(217, 138, 166, .08);
 }
-.ln-head-title h1 {
+.ln-card-title {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-weight: 500;
-  font-size: 2.2rem;
+  font-size: 2.1rem;
   color: var(--ln-accent-bright);
-  line-height: 1.15;
-}
-.ln-facts {
-  padding-top: 6px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.ln-facts p {
-  margin: 0;
-  font-size: .95rem;
-  line-height: 1.45;
-  color: var(--ln-text);
-}
-.ln-facts span {
-  display: block;
-  font-size: .72rem;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--ln-text-dim);
-  margin-bottom: 2px;
+  text-align: center;
+  margin: 0 0 22px;
+  line-height: 1.2;
 }
 
 /* ─── Страница карты ─── */
@@ -195,7 +173,8 @@
   .ln-sec { padding: 18px 16px; }
   .ln-pag { gap: 10px; }
   .ln-pag a { padding: 14px 12px; font-size: .88rem; }
-  .ln-hero-img img { width: min(260px, 68vw); }
-  .ln-card-head { flex-direction: column; align-items: center; gap: 14px; text-align: center; }
-  .ln-facts { padding-top: 0; text-align: left; }
+  .ln-hero { flex-direction: column-reverse; gap: 16px; }
+  .ln-hero img { width: min(250px, 66vw); }
+  .ln-facts { text-align: left; min-width: 220px; }
+  .ln-card-title { font-size: 1.75rem; margin-bottom: 18px; }
 }
