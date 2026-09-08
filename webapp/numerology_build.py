@@ -163,28 +163,28 @@ def shell(title, desc, css_prefix, nav_prefix, active, body):
       <span aria-hidden="true">·</span>
       <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
     <script>
-    (function(){
-      document.querySelectorAll('.email-link').forEach(function(a){
+    (function(){{
+      document.querySelectorAll('.email-link').forEach(function(a){{
         var e=a.dataset.u+'@'+a.dataset.d;
         a.href='mailto:'+e;
         a.textContent='E-mail: '+e;
-      });
-    })();
+      }});
+    }})();
     </script>
     </div>
   </div>
 </div>
 <script>
-(function(){
+(function(){{
   var btn=document.getElementById('aboutBtn'), m=document.getElementById('aboutModal');
   if(!btn||!m) return;
-  function open(e){e.preventDefault();m.classList.add('open');document.body.style.overflow='hidden';}
-  function close(){m.classList.remove('open');document.body.style.overflow='';}
+  function open(e){{e.preventDefault();m.classList.add('open');document.body.style.overflow='hidden';}}
+  function close(){{m.classList.remove('open');document.body.style.overflow='';}}
   btn.addEventListener('click',open);
   m.querySelector('.about-close').addEventListener('click',close);
-  m.addEventListener('click',function(e){if(e.target===m)close();});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
-})();
+  m.addEventListener('click',function(e){{if(e.target===m)close();}});
+  document.addEventListener('keydown',function(e){{if(e.key==='Escape')close();}});
+}})();
 </script>
 </body>
 </html>
@@ -242,13 +242,13 @@ def build_index():
     <span class="fc-sep" aria-hidden="true">·</span>
     <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
     <script>
-    (function(){
-      document.querySelectorAll('.email-link').forEach(function(a){
+    (function(){{
+      document.querySelectorAll('.email-link').forEach(function(a){{
         var e=a.dataset.u+'@'+a.dataset.d;
         a.href='mailto:'+e;
         a.textContent='E-mail: '+e;
-      });
-    })();
+      }});
+    }})();
     </script>
   </div>
   <p class="fc-lead">Проект живёт на чистом энтузиазме — без рекламы и комиссии с посетителей. Если он вам полезен, поддержите его: любая сумма помогает развивать справочник дальше.</p>
@@ -260,20 +260,20 @@ def build_index():
 </footer>
 
 <script>
-(function() {{
+(function() {{{{
   var bar = document.querySelector('.rune-tabs');
   var btns = Array.prototype.slice.call(bar.querySelectorAll('.rt-btn'));
   var panes = Array.prototype.slice.call(document.querySelectorAll('#numPanes .rt-pane'));
-  bar.addEventListener('click', function(e) {{
+  bar.addEventListener('click', function(e) {{{{
     var b = e.target.closest('.rt-btn');
     if (!b) return;
-    btns.forEach(function(x) {{ x.classList.remove('active'); }});
-    panes.forEach(function(x) {{ x.classList.remove('active'); }});
+    btns.forEach(function(x) {{{{ x.classList.remove('active'); }}}});
+    panes.forEach(function(x) {{{{ x.classList.remove('active'); }}}});
     b.classList.add('active');
-    var p = panes.filter(function(x) {{ return x.dataset.pane === b.dataset.tab; }})[0];
+    var p = panes.filter(function(x) {{{{ return x.dataset.pane === b.dataset.tab; }}}})[0];
     if (p) p.classList.add('active');
-  }});
-}})();
+  }}}});
+}}}})();
 </script>'''
     out = shell('Нумерология и масти Таро — системное чтение Младших Арканов | Справочник',
                 'Как читать 40 числовых Младших Арканов как систему: число задаёт этап, масть — сферу. Цикл из 10 этапов, 4 масти, шпаргалка 10×4 и алгоритм чтения без зубрёжки.',

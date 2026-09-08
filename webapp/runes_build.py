@@ -114,28 +114,28 @@ def shell(title, desc, css_prefix, nav_prefix, active, body):
       <span aria-hidden="true">·</span>
       <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
     <script>
-    (function(){
-      document.querySelectorAll('.email-link').forEach(function(a){
+    (function(){{
+      document.querySelectorAll('.email-link').forEach(function(a){{
         var e=a.dataset.u+'@'+a.dataset.d;
         a.href='mailto:'+e;
         a.textContent='E-mail: '+e;
-      });
-    })();
+      }});
+    }})();
     </script>
     </div>
   </div>
 </div>
 <script>
-(function(){
+(function(){{
   var btn=document.getElementById('aboutBtn'), m=document.getElementById('aboutModal');
   if(!btn||!m) return;
-  function open(e){e.preventDefault();m.classList.add('open');document.body.style.overflow='hidden';}
-  function close(){m.classList.remove('open');document.body.style.overflow='';}
+  function open(e){{e.preventDefault();m.classList.add('open');document.body.style.overflow='hidden';}}
+  function close(){{m.classList.remove('open');document.body.style.overflow='';}}
   btn.addEventListener('click',open);
   m.querySelector('.about-close').addEventListener('click',close);
-  m.addEventListener('click',function(e){if(e.target===m)close();});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
-})();
+  m.addEventListener('click',function(e){{if(e.target===m)close();}});
+  document.addEventListener('keydown',function(e){{if(e.key==='Escape')close();}});
+}})();
 </script>
 </body>
 </html>
@@ -152,13 +152,13 @@ FOOTER = '''<footer class="site-footer">
     <span class="fc-sep" aria-hidden="true">·</span>
     <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
     <script>
-    (function(){
-      document.querySelectorAll('.email-link').forEach(function(a){
+    (function(){{
+      document.querySelectorAll('.email-link').forEach(function(a){{
         var e=a.dataset.u+'@'+a.dataset.d;
         a.href='mailto:'+e;
         a.textContent='E-mail: '+e;
-      });
-    })();
+      }});
+    }})();
     </script>
   </div>
   <p class="fc-lead">Проект живёт на чистом энтузиазме — без рекламы и комиссии с посетителей. Если он вам полезен, поддержите его: любая сумма помогает развивать справочник дальше.</p>
@@ -221,32 +221,32 @@ def build_index():
 {FOOTER}
 
 <script>
-(function() {{
+(function() {{{{
   var inp = document.getElementById('search');
   var tabs = document.getElementById('tabs');
   var cards = Array.prototype.slice.call(document.querySelectorAll('#deck .rune-card'));
   var empty = document.getElementById('emptyMsg');
   var aett = '';
-  function apply() {{
+  function apply() {{{{
     var q = inp.value.trim().toLowerCase();
     var shown = 0;
-    cards.forEach(function(c) {{
+    cards.forEach(function(c) {{{{
       var ok = (!aett || c.dataset.aett === aett) && (!q || c.dataset.search.indexOf(q) !== -1);
       c.style.display = ok ? '' : 'none';
       if (ok) shown++;
-    }});
+    }}}});
     empty.hidden = shown > 0;
-  }}
+  }}}}
   inp.addEventListener('input', apply);
-  tabs.addEventListener('click', function(e) {{
+  tabs.addEventListener('click', function(e) {{{{
     var b = e.target.closest('.tab');
     if (!b) return;
-    tabs.querySelectorAll('.tab').forEach(function(t) {{ t.classList.remove('active'); }});
+    tabs.querySelectorAll('.tab').forEach(function(t) {{{{ t.classList.remove('active'); }}}});
     b.classList.add('active');
     aett = b.dataset.aett;
     apply();
-  }});
-}})();
+  }}}});
+}}}})();
 </script>'''
     out = shell('Руны — Старший Футарк · Справочник значений',
                 'Справочник всех 24 рун Старшего Футарка: значение, историческая основа, мантика, магия, сочетания и диагностика.',
@@ -376,20 +376,20 @@ def build_rune_page(r, prev, nxt):
 {FOOTER}
 
 <script>
-(function() {{
+(function() {{{{
   var bar = document.querySelector('.rune-tabs');
   var btns = Array.prototype.slice.call(bar.querySelectorAll('.rt-btn'));
   var panes = Array.prototype.slice.call(document.querySelectorAll('#runePanes .rt-pane'));
-  bar.addEventListener('click', function(e) {{
+  bar.addEventListener('click', function(e) {{{{
     var b = e.target.closest('.rt-btn');
     if (!b) return;
-    btns.forEach(function(x) {{ x.classList.remove('active'); }});
-    panes.forEach(function(x) {{ x.classList.remove('active'); }});
+    btns.forEach(function(x) {{{{ x.classList.remove('active'); }}}});
+    panes.forEach(function(x) {{{{ x.classList.remove('active'); }}}});
     b.classList.add('active');
-    var p = panes.filter(function(x) {{ return x.dataset.pane === b.dataset.tab; }})[0];
+    var p = panes.filter(function(x) {{{{ return x.dataset.pane === b.dataset.tab; }}}})[0];
     if (p) p.classList.add('active');
-  }});
-}})();
+  }}}});
+}}}})();
 </script>'''
     title = f"{r['name']} ({r['nameRu']}) — значение руны | Справочник"
     desc = r['short'][:160]
@@ -506,20 +506,20 @@ def build_rasclady():
 {FOOTER}
 
 <script>
-(function() {{
+(function() {{{{
   var bar = document.querySelector('.rune-tabs');
   var btns = Array.prototype.slice.call(bar.querySelectorAll('.rt-btn'));
   var panes = Array.prototype.slice.call(document.querySelectorAll('#runePanes .rt-pane'));
-  bar.addEventListener('click', function(e) {{
+  bar.addEventListener('click', function(e) {{{{
     var b = e.target.closest('.rt-btn');
     if (!b) return;
-    btns.forEach(function(x) {{ x.classList.remove('active'); }});
-    panes.forEach(function(x) {{ x.classList.remove('active'); }});
+    btns.forEach(function(x) {{{{ x.classList.remove('active'); }}}});
+    panes.forEach(function(x) {{{{ x.classList.remove('active'); }}}});
     b.classList.add('active');
-    var p = panes.filter(function(x) {{ return x.dataset.pane === b.dataset.tab; }})[0];
+    var p = panes.filter(function(x) {{{{ return x.dataset.pane === b.dataset.tab; }}}})[0];
     if (p) p.classList.add('active');
-  }});
-}})();
+  }}}});
+}}}})();
 </script>'''
     out = shell('Расклады и сводная таблица рун | Справочник Старшего Футарка',
                 'Руническая диагностика: расклады на одну, три и семь рун, сводная таблица 24 рун, магический функционал по категориям, источники и методология.',

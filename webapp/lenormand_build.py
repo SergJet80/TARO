@@ -61,11 +61,9 @@ def pairs_for(card_n: int, cards: list[dict], pairs: list[dict]) -> list[dict]:
     rows = []
     for p in pairs:
         if p["a"] == card_n:
-            rows.append({"first": False, "other_n": p["b"], "other": names[p["b"]],
-                         "refine": p.get("refine", ""), "people": p.get("people", "")})
-        elif p["b"] == card_n:
-            rows.append({"first": True, "other_n": p["a"], "other": names[p["a"]],
-                         "refine": p.get("refine", ""), "people": p.get("people", "")})
+            rows.append({"other_n": p["b"], "other": names[p["b"]],
+                         "refine": p.get("refine") or p.get("text", ""),
+                         "people": p.get("people", "")})
     rows.sort(key=lambda r: r["other_n"])
     return rows
 
@@ -188,11 +186,11 @@ def document(title: str, description: str, url: str, body: str, schema_type: str
 </script>
 <!-- Microsoft Clarity -->
 <script>
-    (function(c,l,a,r,i,t,y){{
-        c[a]=c[a]||function(){{(c[a].q=c[a].q||[]).push(arguments)}};
+    (function(c,l,a,r,i,t,y){{{{
+        c[a]=c[a]||function(){{{{(c[a].q=c[a].q||[]).push(arguments)}}}};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    }})(window, document, "clarity", "script", "yejlmmd6nr");
+    }}}})(window, document, "clarity", "script", "yejlmmd6nr");
 </script>
 </head>
 <body>
@@ -210,13 +208,13 @@ def document(title: str, description: str, url: str, body: str, schema_type: str
     <span class="fc-sep" aria-hidden="true">·</span>
     <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
     <script>
-    (function(){
-      document.querySelectorAll('.email-link').forEach(function(a){
+    (function(){{
+      document.querySelectorAll('.email-link').forEach(function(a){{
         var e=a.dataset.u+'@'+a.dataset.d;
         a.href='mailto:'+e;
         a.textContent='E-mail: '+e;
-      });
-    })();
+      }});
+    }})();
     </script>
   </div>
   <p class="fc-lead">Проект живёт на чистом энтузиазме — без рекламы и комиссии с посетителей. Если он вам полезен, поддержите его: любая сумма помогает развивать справочник дальше.</p>
@@ -243,28 +241,28 @@ def document(title: str, description: str, url: str, body: str, schema_type: str
       <span aria-hidden="true">·</span>
       <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
     <script>
-    (function(){
-      document.querySelectorAll('.email-link').forEach(function(a){
+    (function(){{
+      document.querySelectorAll('.email-link').forEach(function(a){{
         var e=a.dataset.u+'@'+a.dataset.d;
         a.href='mailto:'+e;
         a.textContent='E-mail: '+e;
-      });
-    })();
+      }});
+    }})();
     </script>
     </div>
   </div>
 </div>
 <script>
-(function(){
+(function(){{
   var btn=document.getElementById('aboutBtn'), m=document.getElementById('aboutModal');
   if(!btn||!m) return;
-  function open(e){e.preventDefault();m.classList.add('open');document.body.style.overflow='hidden';}
-  function close(){m.classList.remove('open');document.body.style.overflow='';}
+  function open(e){{e.preventDefault();m.classList.add('open');document.body.style.overflow='hidden';}}
+  function close(){{m.classList.remove('open');document.body.style.overflow='';}}
   btn.addEventListener('click',open);
   m.querySelector('.about-close').addEventListener('click',close);
-  m.addEventListener('click',function(e){if(e.target===m)close();});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
-})();
+  m.addEventListener('click',function(e){{if(e.target===m)close();}});
+  document.addEventListener('keydown',function(e){{if(e.key==='Escape')close();}});
+}})();
 </script>
 </body>
 </html>
@@ -314,7 +312,7 @@ def render_card(card: dict, cards: list[dict], pairs: list[dict]) -> str:
     rows = pairs_for(n, cards, pairs)
     li = []
     for r in rows:
-        pair_title = f"{name} + {r['other']}" if not r["first"] else f"{r['other']} + {name}"
+        pair_title = f"{name} + {r['other']}"
         people = (f' <span class="pair-people">Люди:</span> {esc(r["people"])}'
                   if r.get("people") else "")
         li.append(f'<li><strong>{esc(pair_title)}</strong> — {esc(r["refine"])}{people}</li>')

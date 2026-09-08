@@ -590,11 +590,11 @@ def document(title: str, description: str, url: str, body: str, article: bool, o
 </script>
 <!-- Microsoft Clarity -->
 <script>
-    (function(c,l,a,r,i,t,y){{
-        c[a]=c[a]||function(){{(c[a].q=c[a].q||[]).push(arguments)}};
+    (function(c,l,a,r,i,t,y){{{{
+        c[a]=c[a]||function(){{{{(c[a].q=c[a].q||[]).push(arguments)}}}};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    }})(window, document, "clarity", "script", "yejlmmd6nr");
+    }}}})(window, document, "clarity", "script", "yejlmmd6nr");
 </script>
 </head>
 <body>
@@ -613,13 +613,13 @@ def document(title: str, description: str, url: str, body: str, article: bool, o
     <span class="fc-sep" aria-hidden="true">·</span>
     <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
     <script>
-    (function(){
-      document.querySelectorAll('.email-link').forEach(function(a){
+    (function(){{
+      document.querySelectorAll('.email-link').forEach(function(a){{
         var e=a.dataset.u+'@'+a.dataset.d;
         a.href='mailto:'+e;
         a.textContent='E-mail: '+e;
-      });
-    })();
+      }});
+    }})();
     </script>
   </div>
   <p class="fc-lead">Проект живёт на чистом энтузиазме — без рекламы и комиссии с посетителей. Если он вам полезен, поддержите его: любая сумма помогает развивать справочник дальше.</p>
@@ -646,28 +646,28 @@ def document(title: str, description: str, url: str, body: str, article: bool, o
       <span aria-hidden="true">·</span>
       <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
     <script>
-    (function(){
-      document.querySelectorAll('.email-link').forEach(function(a){
+    (function(){{
+      document.querySelectorAll('.email-link').forEach(function(a){{
         var e=a.dataset.u+'@'+a.dataset.d;
         a.href='mailto:'+e;
         a.textContent='E-mail: '+e;
-      });
-    })();
+      }});
+    }})();
     </script>
     </div>
   </div>
 </div>
 <script>
-(function(){
+(function(){{
   var btn=document.getElementById('aboutBtn'), m=document.getElementById('aboutModal');
   if(!btn||!m) return;
-  function open(e){e.preventDefault();m.classList.add('open');document.body.style.overflow='hidden';}
-  function close(){m.classList.remove('open');document.body.style.overflow='';}
+  function open(e){{e.preventDefault();m.classList.add('open');document.body.style.overflow='hidden';}}
+  function close(){{m.classList.remove('open');document.body.style.overflow='';}}
   btn.addEventListener('click',open);
   m.querySelector('.about-close').addEventListener('click',close);
-  m.addEventListener('click',function(e){if(e.target===m)close();});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
-})();
+  m.addEventListener('click',function(e){{if(e.target===m)close();}});
+  document.addEventListener('keydown',function(e){{if(e.key==='Escape')close();}});
+}})();
 </script>
 </body>
 </html>
