@@ -19,7 +19,7 @@ OUT = ROOT / "lenormand"
 DATA = Path("/home/serg/projects/lenormand/lenormand.json")
 SITE = "https://taro.jetserg.top"
 CSS_V = "1.3"   # lenormand.css (в whitelist чекера)
-SITE_V = "3.4"  # общий style.css
+SITE_V = "3.6"  # общий style.css
 
 # Иконки сфер — порядок фиксирован (единый для всех карт).
 SPHERE_ICONS = {
