@@ -1,0 +1,152 @@
+/* ═══════════════ Ленорман · раздел (v1.0) — розово-золотая схема ═══════════════ */
+
+:root {
+  --ln-bg-panel: #241626;
+  --ln-bg-card: #2c1a2e;
+  --ln-bg-hover: #372138;
+  --ln-accent: #d98aa6;
+  --ln-accent-bright: #f2b8cc;
+  --ln-accent-dim: rgba(217, 138, 166, .35);
+  --ln-gold: #d4af37;
+  --ln-text: #efe4ea;
+  --ln-text-dim: #b39aa8;
+}
+
+/* ─── Шапка и заголовки ─── */
+.ln-wrap .site-title { color: var(--ln-accent-bright); }
+.ln-wrap .title-sub { color: var(--ln-text-dim); font-size: .55em; }
+.ln-wrap .site-tagline { color: var(--ln-text-dim); }
+.ln-wrap .site-footer p { color: var(--ln-text-dim); }
+
+.ln-intro {
+  max-width: 680px;
+  margin: 14px auto 0;
+  color: var(--ln-text-dim);
+  line-height: 1.65;
+  font-size: .95rem;
+}
+
+/* ─── Каталог: сетка карт ─── */
+.ln-wrap { max-width: 1120px; margin: 0 auto; padding: 26px 18px 60px; position: relative; z-index: 1; }
+.ln-note { text-align: center; color: var(--ln-text-dim); font-size: .88rem; margin-bottom: 22px; }
+
+.ln-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+}
+.ln-tile {
+  position: relative;
+  display: block;
+  border: 1px solid var(--ln-accent-dim);
+  border-radius: var(--radius);
+  background: var(--ln-bg-card);
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.ln-tile img { width: 100%; display: block; aspect-ratio: 516/909; object-fit: cover; }
+.ln-tile:hover, .ln-tile:focus-visible {
+  transform: translateY(-3px);
+  border-color: var(--ln-accent);
+  box-shadow: 0 10px 28px rgba(217, 138, 166, .18);
+}
+.ln-tile-num {
+  position: absolute;
+  top: 8px; left: 8px;
+  min-width: 26px; height: 26px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: rgba(36, 22, 38, .88);
+  border: 1px solid var(--ln-accent-dim);
+  border-radius: 8px;
+  color: var(--ln-accent-bright);
+  font-size: .78rem;
+  font-weight: 600;
+}
+.ln-tile-name {
+  display: block;
+  text-align: center;
+  padding: 10px 8px 12px;
+  color: var(--ln-text);
+  font-weight: 600;
+  font-size: .95rem;
+}
+.pol-pos .ln-tile-name { border-top: 2px solid rgba(140, 200, 130, .5); }
+.pol-neg .ln-tile-name { border-top: 2px solid rgba(214, 110, 110, .5); }
+.pol-neu .ln-tile-name { border-top: 2px solid rgba(180, 170, 190, .4); }
+
+/* ─── Страница карты ─── */
+.ln-card-page { max-width: 860px; }
+.ln-card-header { padding-top: 10px; }
+.ln-hero-img { text-align: center; margin: 6px 0 26px; }
+.ln-hero-img img {
+  width: min(320px, 74vw);
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--ln-accent-dim);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, .45), 0 0 40px rgba(217, 138, 166, .08);
+}
+
+.ln-sec {
+  margin-bottom: 18px;
+  padding: 24px 28px;
+  border: 1px solid var(--ln-accent-dim);
+  border-radius: var(--radius);
+  background: var(--ln-bg-panel);
+}
+.ln-sec h2 {
+  color: var(--ln-accent-bright);
+  font-family: Georgia, serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+.ln-sec p { color: var(--ln-text); line-height: 1.65; }
+.ln-dim { color: var(--ln-text-dim) !important; font-size: .93rem; }
+.ln-sec .ln-dim b { color: var(--ln-accent); }
+
+/* ─── Сочетания ─── */
+.ln-pair-list { list-style: none; padding: 0; margin: 0; }
+.ln-pair-list li {
+  padding: 12px 4px;
+  border-top: 1px solid rgba(217, 138, 166, .14);
+  line-height: 1.6;
+  color: var(--ln-text);
+  font-size: .95rem;
+}
+.ln-pair-list li:first-child { border-top: none; }
+.ln-pair-list strong { color: var(--ln-accent-bright); font-weight: 600; }
+.ln-pair-people { color: var(--ln-accent); }
+
+/* ─── Пагинация ─── */
+.ln-pag {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 30px;
+}
+.ln-pag a {
+  padding: 16px 18px;
+  border: 1px solid var(--ln-accent-dim);
+  border-radius: var(--radius);
+  background: var(--ln-bg-panel);
+  color: var(--ln-text);
+  text-decoration: none;
+  font-size: .95rem;
+}
+.ln-pag a:last-child { text-align: right; }
+.ln-pag a:hover { background: var(--ln-bg-hover); border-color: var(--ln-accent); }
+
+/* ─── Крошки ─── */
+.ln-card-page .card-crumbs { color: var(--ln-text-dim); font-size: .9rem; margin-bottom: 20px; }
+.ln-card-page .card-crumbs a { color: var(--ln-accent); text-decoration: none; }
+
+/* ─── Адаптив ─── */
+@media (max-width: 640px) {
+  .ln-grid { grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 10px; }
+  .ln-tile-name { font-size: .84rem; padding: 8px 6px 10px; }
+  .ln-sec { padding: 18px 16px; }
+  .ln-pag { gap: 10px; }
+  .ln-pag a { padding: 14px 12px; font-size: .88rem; }
+  .ln-hero-img img { width: min(260px, 68vw); }
+}
