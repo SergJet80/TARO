@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "lenormand"
 DATA = Path("/home/serg/projects/lenormand/lenormand.json")
 SITE = "https://taro.jetserg.top"
-CSS_V = "1.3"   # lenormand.css (в whitelist чекера)
+CSS_V = "1.4"   # lenormand.css (в whitelist чекера)
 SITE_V = "3.6"  # общий style.css
 
 # Иконки сфер — порядок фиксирован (единый для всех карт).
@@ -391,6 +391,7 @@ def render_index(cards: list[dict]) -> str:
   </div>
 </header>
 <p class="ln-note">Полярность карт — рабочая подсказка, а не приговор: соседние карты и вопрос меняют тон прочтения.</p>
+<p class="ln-note"><a class="ln-guide-link" href="guide.html">📖 Расклады Ленорман — интерактивный справочник</a>: связки, малые расклады, Гранд Табло с тренажёром.</p>
 <ol class="ln-grid">
 {chr(10).join(tiles)}
 </ol>

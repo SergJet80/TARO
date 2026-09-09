@@ -178,3 +178,7 @@
   .ln-facts { text-align: left; min-width: 220px; }
   .ln-card-title { font-size: 1.75rem; margin-bottom: 18px; }
 }
+
+/* ── Ссылка на интерактивный справочник раскладов ── */
+.ln-guide-link { color: var(--ln-accent-bright); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
+.ln-guide-link:hover { color: var(--ln-gold); }
