@@ -13,7 +13,7 @@ import re
 
 WEBAPP = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(WEBAPP, 'data', 'runes.json')
-CSS_V = '3.6'
+CSS_V = '4.0'
 
 with open(DATA, encoding='utf-8') as f:
     SRC = json.load(f)

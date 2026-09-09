@@ -12,7 +12,7 @@ from urllib.parse import unquote, urlsplit
 
 
 ROOT = Path(__file__).resolve().parent
-ASSET_VERSION = "3.6"
+ASSET_VERSION = "4.0"
 VERSION_WHITELIST = ("wheel.css", "wheel-data.js", "wheel.js", "lenormand.css")
 REF_RE = re.compile(r"(?:href|src)\s*=\s*['\"]([^'\"]+)['\"]", re.I)
 CSS_URL_RE = re.compile(r"url\(\s*['\"]?([^'\")]+)", re.I)

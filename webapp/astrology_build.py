@@ -7,7 +7,7 @@
 import os
 
 BASE = os.path.dirname(os.path.abspath(__file__))
-ASSET_VERSION = "3.6"
+ASSET_VERSION = "4.0"
 
 # ─── Данные знаков ───
 # slug, имя, символ, подпись для карточки, 9 текстовых блоков
