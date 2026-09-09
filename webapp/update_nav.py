@@ -16,6 +16,7 @@ def nav_html(rel_prefix, active):
     items = [
         ('✦', 'Таро', f'{rel_prefix}index.html', 'index'),
         ('♄', 'Астрология', f'{rel_prefix}astrology/index.html', 'astrology'),
+        ('🂠', 'Ленорман', f'{rel_prefix}lenormand/index.html', 'lenormand'),
         ('ᚠ', 'Руны', f'{rel_prefix}runes/index.html', 'runes'),
         ('❿', 'Теория', f'{rel_prefix}numerology/index.html', 'numerology'),
     ]
@@ -27,6 +28,7 @@ def nav_html(rel_prefix, active):
 
 def active_for(rel):
     if rel.startswith('astrology/'): return 'astrology'
+    if rel.startswith('lenormand/'): return 'lenormand'
     if rel.startswith('runes/'): return 'runes'
     if rel.startswith('numerology/'): return 'numerology'
     return 'index'

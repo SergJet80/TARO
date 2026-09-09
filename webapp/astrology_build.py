@@ -185,6 +185,7 @@ def nav(root, active):
   <div class="main-nav-inner">
     <a href="{root}index.html"{taro}><span class="mn-icon">✦</span> Таро</a>
     <a href="{root}astrology/index.html"{astro}><span class="mn-icon">♄</span> Астрология</a>
+    <a href="{root}lenormand/index.html"><span class="mn-icon">🂠</span> Ленорман</a>
     <a href="{root}runes/index.html"><span class="mn-icon">ᚠ</span> Руны</a>
     <a href="{root}numerology/index.html"><span class="mn-icon">❿</span> Нумерология</a>
   <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> О проекте</a>

@@ -177,6 +177,7 @@ INDEX_TMPL = """<!DOCTYPE html>
   <div class="main-nav-inner">
     <a href="../../index.html"><span class="mn-icon">✦</span> Таро</a>
     <a href="../index.html" class="mn-active"><span class="mn-icon">♄</span> Астрология</a>
+    <a href="../../lenormand/index.html"><span class="mn-icon">🂠</span> Ленорман</a>
     <a href="../../runes/index.html"><span class="mn-icon">ᚠ</span> Руны</a>
     <a href="../../numerology/index.html"><span class="mn-icon">❿</span> Нумерология</a>
   </div>
@@ -234,6 +235,7 @@ PAGE_TMPL = """<!DOCTYPE html>
   <div class="main-nav-inner">
     <a href="../../../index.html"><span class="mn-icon">✦</span> Таро</a>
     <a href="../../../astrology/index.html" class="mn-active"><span class="mn-icon">♄</span> Астрология</a>
+    <a href="../../../lenormand/index.html"><span class="mn-icon">🂠</span> Ленорман</a>
     <a href="../../../runes/index.html"><span class="mn-icon">ᚠ</span> Руны</a>
     <a href="../../../numerology/index.html"><span class="mn-icon">❿</span> Нумерология</a>
   </div>

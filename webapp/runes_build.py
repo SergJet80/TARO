@@ -90,6 +90,7 @@ def shell(title, desc, css_prefix, nav_prefix, active, body):
   <div class="main-nav-inner">
     <a href="{nav_prefix}index.html"><span class="mn-icon">✦</span> Таро</a>
     <a href="{nav_prefix}astrology/index.html"><span class="mn-icon">♄</span> Астрология</a>
+    <a href="{nav_prefix}lenormand/index.html"><span class="mn-icon">🂠</span> Ленорман</a>
     <a href="{nav_prefix}runes/index.html"{' class="mn-active"' if active == 'runes' else ''}><span class="mn-icon">ᚠ</span> Руны</a>
     <a href="{nav_prefix}numerology/index.html"><span class="mn-icon">❿</span> Нумерология</a>
   <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> О проекте</a>
