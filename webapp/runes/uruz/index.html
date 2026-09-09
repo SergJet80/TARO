@@ -10,14 +10,6 @@
 <link rel="stylesheet" href="../../css/style.css?v=3.6">
 <link rel="stylesheet" href="../../css/astrology.css?v=3.6">
 <link rel="stylesheet" href="../../css/runes.css?v=3.6">
-<!-- Microsoft Clarity -->
-<script>
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "yejlmmd6nr");
-</script>
 </head>
 
 <body>
@@ -28,11 +20,11 @@
 <nav class="main-nav" aria-label="Разделы">
   <div class="main-nav-inner">
     <a href="../../index.html"><span class="mn-icon">✦</span> Таро</a>
-    <a href="../../lenormand/index.html"><span class="mn-icon">🂠</span> Ленорман</a>
     <a href="../../astrology/index.html"><span class="mn-icon">♄</span> Астрология</a>
     <a href="../../runes/index.html" class="mn-active"><span class="mn-icon">ᚠ</span> Руны</a>
-    <a href="../../numerology/index.html"><span class="mn-icon">❿</span> Теория</a>
-  <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> О проекте</a></div>
+    <a href="../../numerology/index.html"><span class="mn-icon">❿</span> Нумерология</a>
+  <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> О проекте</a>
+  </div>
 </nav>
 
 <header class="site-header">
@@ -188,13 +180,13 @@
     <span class="fc-sep" aria-hidden="true">·</span>
     <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
     <script>
-    (function(){
-      document.querySelectorAll('.email-link').forEach(function(a){
+    (function(){{
+      document.querySelectorAll('.email-link').forEach(function(a){{
         var e=a.dataset.u+'@'+a.dataset.d;
         a.href='mailto:'+e;
         a.textContent='E-mail: '+e;
-      });
-    })();
+      }});
+    }})();
     </script>
   </div>
   <p class="fc-lead">Проект живёт на чистом энтузиазме — без рекламы и комиссии с посетителей. Если он вам полезен, поддержите его: любая сумма помогает развивать справочник дальше.</p>
@@ -206,22 +198,21 @@
 </footer>
 
 <script>
-(function() {
+(function() {{
   var bar = document.querySelector('.rune-tabs');
   var btns = Array.prototype.slice.call(bar.querySelectorAll('.rt-btn'));
   var panes = Array.prototype.slice.call(document.querySelectorAll('#runePanes .rt-pane'));
-  bar.addEventListener('click', function(e) {
+  bar.addEventListener('click', function(e) {{
     var b = e.target.closest('.rt-btn');
     if (!b) return;
-    btns.forEach(function(x) { x.classList.remove('active'); });
-    panes.forEach(function(x) { x.classList.remove('active'); });
+    btns.forEach(function(x) {{ x.classList.remove('active'); }});
+    panes.forEach(function(x) {{ x.classList.remove('active'); }});
     b.classList.add('active');
-    var p = panes.filter(function(x) { return x.dataset.pane === b.dataset.tab; })[0];
+    var p = panes.filter(function(x) {{ return x.dataset.pane === b.dataset.tab; }})[0];
     if (p) p.classList.add('active');
-  });
-})();
+  }});
+}})();
 </script>
-
 <!-- Модалка «О проекте» -->
 <div class="about-backdrop" id="aboutModal" aria-hidden="true">
   <div class="about-dialog" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">

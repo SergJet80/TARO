@@ -10,14 +10,6 @@
 <link rel="stylesheet" href="../css/style.css?v=3.6">
 <link rel="stylesheet" href="../css/astrology.css?v=3.6">
 <link rel="stylesheet" href="../css/runes.css?v=3.6">
-<!-- Microsoft Clarity -->
-<script>
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "yejlmmd6nr");
-</script>
 </head>
 
 <body>
@@ -28,11 +20,11 @@
 <nav class="main-nav" aria-label="Разделы">
   <div class="main-nav-inner">
     <a href="../index.html"><span class="mn-icon">✦</span> Таро</a>
-    <a href="../lenormand/index.html"><span class="mn-icon">🂠</span> Ленорман</a>
     <a href="../astrology/index.html"><span class="mn-icon">♄</span> Астрология</a>
     <a href="../runes/index.html" class="mn-active"><span class="mn-icon">ᚠ</span> Руны</a>
-    <a href="../numerology/index.html"><span class="mn-icon">❿</span> Теория</a>
-  <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> О проекте</a></div>
+    <a href="../numerology/index.html"><span class="mn-icon">❿</span> Нумерология</a>
+  <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> О проекте</a>
+  </div>
 </nav>
 
 <header class="site-header">
@@ -68,12 +60,6 @@
   <a class="wheel-banner" href="rasclady/index.html">
     <span class="wb-icon">🎲</span>
     <span class="wb-text"><strong>Расклады и таблица</strong> — диагностика на 1/3/7 рун, сводная шпаргалка, магия по категориям</span>
-    <span class="wb-arrow">→</span>
-  </a>
-
-  <a class="wheel-banner" href="staves.html">
-    <span class="wb-icon">ᚱ</span>
-    <span class="wb-text"><strong>Формулы и ставы</strong> — каталог современных рунических формул: защита, финансы, отношения, с указанием источников</span>
     <span class="wb-arrow">→</span>
   </a>
 
@@ -309,13 +295,13 @@
     <span class="fc-sep" aria-hidden="true">·</span>
     <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
     <script>
-    (function(){
-      document.querySelectorAll('.email-link').forEach(function(a){
+    (function(){{
+      document.querySelectorAll('.email-link').forEach(function(a){{
         var e=a.dataset.u+'@'+a.dataset.d;
         a.href='mailto:'+e;
         a.textContent='E-mail: '+e;
-      });
-    })();
+      }});
+    }})();
     </script>
   </div>
   <p class="fc-lead">Проект живёт на чистом энтузиазме — без рекламы и комиссии с посетителей. Если он вам полезен, поддержите его: любая сумма помогает развивать справочник дальше.</p>
@@ -327,34 +313,33 @@
 </footer>
 
 <script>
-(function() {
+(function() {{
   var inp = document.getElementById('search');
   var tabs = document.getElementById('tabs');
   var cards = Array.prototype.slice.call(document.querySelectorAll('#deck .rune-card'));
   var empty = document.getElementById('emptyMsg');
   var aett = '';
-  function apply() {
+  function apply() {{
     var q = inp.value.trim().toLowerCase();
     var shown = 0;
-    cards.forEach(function(c) {
+    cards.forEach(function(c) {{
       var ok = (!aett || c.dataset.aett === aett) && (!q || c.dataset.search.indexOf(q) !== -1);
       c.style.display = ok ? '' : 'none';
       if (ok) shown++;
-    });
+    }});
     empty.hidden = shown > 0;
-  }
+  }}
   inp.addEventListener('input', apply);
-  tabs.addEventListener('click', function(e) {
+  tabs.addEventListener('click', function(e) {{
     var b = e.target.closest('.tab');
     if (!b) return;
-    tabs.querySelectorAll('.tab').forEach(function(t) { t.classList.remove('active'); });
+    tabs.querySelectorAll('.tab').forEach(function(t) {{ t.classList.remove('active'); }});
     b.classList.add('active');
     aett = b.dataset.aett;
     apply();
-  });
-})();
+  }});
+}})();
 </script>
-
 <!-- Модалка «О проекте» -->
 <div class="about-backdrop" id="aboutModal" aria-hidden="true">
   <div class="about-dialog" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">

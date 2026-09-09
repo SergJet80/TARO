@@ -138,7 +138,7 @@ DISCLAIMER_INDEX = ("Прозерпина — гипотетическая эз�
                     "однако в традиционной астрологии их условно объединяют с планетами как значимые факторы карты. "
                     "Описания носят символический характер и не являются научным объяснением личности или судьбы.")
 
-V = "?v=3.0"
+V = "?v=3.6"
 
 def cards_html(current_slug):
     out = []
@@ -178,7 +178,7 @@ INDEX_TMPL = """<!DOCTYPE html>
     <a href="../../index.html"><span class="mn-icon">✦</span> Таро</a>
     <a href="../index.html" class="mn-active"><span class="mn-icon">♄</span> Астрология</a>
     <a href="../../runes/index.html"><span class="mn-icon">ᚠ</span> Руны</a>
-    <a href="../../numerology/index.html"><span class="mn-icon">❿</span> Теория</a>
+    <a href="../../numerology/index.html"><span class="mn-icon">❿</span> Нумерология</a>
   </div>
 </nav>
 
@@ -235,7 +235,7 @@ PAGE_TMPL = """<!DOCTYPE html>
     <a href="../../../index.html"><span class="mn-icon">✦</span> Таро</a>
     <a href="../../../astrology/index.html" class="mn-active"><span class="mn-icon">♄</span> Астрология</a>
     <a href="../../../runes/index.html"><span class="mn-icon">ᚠ</span> Руны</a>
-    <a href="../../../numerology/index.html"><span class="mn-icon">❿</span> Теория</a>
+    <a href="../../../numerology/index.html"><span class="mn-icon">❿</span> Нумерология</a>
   </div>
 </nav>
 

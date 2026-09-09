@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "lenormand"
 DATA = Path("/home/serg/projects/lenormand/lenormand.json")
 SITE = "https://taro.jetserg.top"
-CSS_V = "1.4"   # lenormand.css (в whitelist чекера)
+CSS_V = "1.5"   # lenormand.css (в whitelist чекера)
 SITE_V = "3.6"  # общий style.css
 
 # Иконки сфер — порядок фиксирован (единый для всех карт).
@@ -74,7 +74,7 @@ def nav(rel: str, active: str) -> str:
         ("♄", "Астрология", f"{rel}astrology/index.html", "astrology"),
         ("ᚠ", "Руны", f"{rel}runes/index.html", "runes"),
         ("🂠", "Ленорман", f"{rel}lenormand/index.html", "lenormand"),
-        ("❿", "Теория", f"{rel}numerology/index.html", "numerology"),
+        ("❿", "Нумерология", f"{rel}numerology/index.html", "numerology"),
     ]
     rows = []
     for icon, label, href, key in items:
@@ -391,7 +391,11 @@ def render_index(cards: list[dict]) -> str:
   </div>
 </header>
 <p class="ln-note">Полярность карт — рабочая подсказка, а не приговор: соседние карты и вопрос меняют тон прочтения.</p>
-<p class="ln-note"><a class="ln-guide-link" href="guide.html">📖 Расклады Ленорман — интерактивный справочник</a>: связки, малые расклады, Гранд Табло с тренажёром.</p>
+<a class="wheel-banner ln-banner" href="guide.html">
+  <span class="wb-icon">📖</span>
+  <span class="wb-text"><strong>Расклады Ленорман — интерактивный справочник</strong> — связки карт, малые расклады, Гранд Табло с тренажёром</span>
+  <span class="wb-arrow">→</span>
+</a>
 <ol class="ln-grid">
 {chr(10).join(tiles)}
 </ol>

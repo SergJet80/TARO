@@ -182,3 +182,21 @@
 /* ── Ссылка на интерактивный справочник раскладов ── */
 .ln-guide-link { color: var(--ln-accent-bright); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
 .ln-guide-link:hover { color: var(--ln-gold); }
+
+
+/* ── Баннер-ссылка на справочник раскладов (v1.5, аналогично rune wheel-banner) ── */
+.wheel-banner {
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+  width: fit-content; margin: 0 auto 30px; padding: 16px 26px;
+  background: linear-gradient(135deg, rgba(217, 138, 166, .22), rgba(28, 17, 30, .9));
+  border: 1px solid rgba(212, 175, 55, .4); border-radius: 14px;
+  text-decoration: none; color: var(--ln-text); max-width: 620px; text-align: center;
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.wheel-banner:hover { transform: translateY(-3px); border-color: rgba(212, 175, 55, .75);
+  box-shadow: 0 10px 28px rgba(0,0,0,.45), 0 0 20px rgba(217,138,166,.18); }
+.wb-icon { font-size: 1.9rem; flex: 0 0 auto; }
+.wb-text { font-size: 1rem; line-height: 1.5; }
+.wb-text strong { color: var(--ln-accent-bright); display: block; margin-bottom: 2px; font-size: 1.08rem; }
+.wb-arrow { font-size: 1.4rem; color: var(--ln-gold); flex: 0 0 auto; }
+@media (max-width: 600px) { .wheel-banner { flex-direction: column; padding: 14px 18px; } }
