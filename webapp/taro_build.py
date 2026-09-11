@@ -203,6 +203,8 @@ def finish_card_page(html: str, card: dict, ui: dict) -> str:
     html = html.replace('aria-label="Switch to English"', 'aria-label="Switch to Russian"')
     html = html.replace('hreflang="en" lang="en"', 'hreflang="ru" lang="ru"')
     html = html.replace('>EN | RU<', '>RU | EN<')
+    # Golden Dawn титул: в EN показываем только оригинал (RU «eng — перевод» не нужен)
+    html = re.sub(r'<p class="gd-title">«([^<]+)»\s—\s[^<]*</p>', r'<p class="gd-title">«\1»</p>', html)
     html = set_meta(
         html, title=title, description=description, url=url, page_type="Article",
         image=f"{SITE}/img/cards/{card['img']}",
@@ -230,6 +232,7 @@ def finish_catalog(html: str, ui: dict) -> str:
     html = html.replace('aria-label="Switch to English"', 'aria-label="Switch to Russian"')
     html = html.replace('hreflang="en" lang="en"', 'hreflang="ru" lang="ru"')
     html = html.replace('>EN | RU<', '>RU | EN<')
+    html = re.sub(r'<p class="gd-title">«([^<]+)»\s—\s[^<]*</p>', r'<p class="gd-title">«\1»</p>', html)
     html = html.replace(f"{SITE}/cards/", url)
     return set_meta(html, title=title, description=description, url=url, page_type="CollectionPage")
 
@@ -267,7 +270,8 @@ def build_main(cards: list[dict], roman: dict[str, dict], ui: dict) -> None:
     html = html.replace('href="css/', 'href="../../css/')
     for section in ("lenormand", "astrology", "runes", "numerology", "cards"):
         html = html.replace(f'href="{section}/', f'href="../{section}/')
-    html = html.replace('href="spreads.html"', 'href="../../spreads.html"')
+    # EN spreads.html пока не переведён (planned) — ведём на RU-атлас
+    html = html.replace('href="spreads.html"', 'href="../../spreads.html"')  # webapp/spreads.html (RU-атлас)
     # Языковой переключатель: EN-SPA ссылается на RU главную (/)
     html = html.replace('href="en/taro/index.html"', 'href="../../index.html"')
     html = html.replace('aria-label="Switch to English"', 'aria-label="Switch to Russian"')
@@ -283,6 +287,8 @@ def build_main(cards: list[dict], roman: dict[str, dict], ui: dict) -> None:
 
     app = (ROOT / "js" / "app.js").read_text(encoding="utf-8")
     app = apply_replacements(app, ui)
+    # Golden Dawn титул в EN: без «— перевод»
+    app = app.replace('«${p.gd.title_en}» — ${p.gd.title_ru}', '«${p.gd.title_en}»')
     app = app.replace('img/cards/${c.img}', '../../img/cards/${c.img}')
     app = app.replace('img/cards/${card.img}', '../../img/cards/${card.img}')
     app = app.replace('href="/cards/${cardPage}.html"', 'href="/en/cards/${cardPage}.html"')

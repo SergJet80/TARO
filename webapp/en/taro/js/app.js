@@ -169,7 +169,7 @@ function renderPosition() {
   if (expectsGoldenDawn && validGoldenDawn(p.gd)) {
     html.push(`<aside class="gd-block" data-card-id="${currentCard.id}" data-position="${currentPos}" aria-label="Card meaning in the Golden Dawn tradition">`
       + `<div class="gd-head"><span class="gd-symbol" aria-hidden="true">☉</span> Golden Dawn tradition</div>`
-      + `<p class="gd-title">«${p.gd.title_en}» — ${p.gd.title_ru}</p>`
+      + `<p class="gd-title">«${p.gd.title_en}»</p>`
       + `<p class="gd-why">${p.gd.why}</p></aside>`);
   } else if (expectsGoldenDawn) {
     // Не скрываем секцию при рассинхронизации публикации: ошибка становится видимой.
