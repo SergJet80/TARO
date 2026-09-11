@@ -554,7 +554,7 @@ NAV = """<nav class="main-nav" aria-label="Разделы">
     <a href="../lenormand/index.html">Ленорман</a>
     <a href="../runes/index.html">Руны</a>
     <a href="../spreads.html">Расклады</a>
-  <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> О проекте</a>
+  <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> О проекте</a><!-- i18n:switch --><a class="mn-language" href="__TARO_EN__" hreflang="en" lang="en" aria-label="Switch to English" style="color:var(--ln-accent,var(--gold));border:1px solid var(--ln-accent-dim,var(--gold));border-radius:6px;padding:6px 10px;white-space:nowrap">EN | RU</a><!-- /i18n:switch -->
   </div>
 </nav>"""
 
@@ -569,6 +569,7 @@ def document(title: str, description: str, url: str, body: str, article: bool, o
         "inLanguage": "ru",
     }
     schema = json.dumps(structured, ensure_ascii=False, indent=2).replace("<", "\\u003c")
+    taro_href = "../en/taro/index.html" if "/cards/" in url else "en/taro/index.html"
     return f"""<!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -600,7 +601,7 @@ def document(title: str, description: str, url: str, body: str, article: bool, o
 <body>
 <div class="stars" aria-hidden="true"></div>
 <div class="stars stars2" aria-hidden="true"></div>
-{NAV}
+{NAV.replace("__TARO_EN__", taro_href)}
 {body}
 <footer class="site-footer">
   <p>Таро · Справочник значений карт</p>

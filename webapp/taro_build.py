@@ -198,6 +198,11 @@ def finish_card_page(html: str, card: dict, ui: dict) -> str:
     )
     html = html.replace('href="../index.html"', 'href="../taro/index.html"')
     html = html.replace('href="../spreads.html"', 'href="../../spreads.html"')
+    # Переключатель языка: EN-карта ссылается на RU-карту
+    html = html.replace('href="../en/taro/index.html"', f'href="../../cards/{slug}.html"')
+    html = html.replace('aria-label="Switch to English"', 'aria-label="Switch to Russian"')
+    html = html.replace('hreflang="en" lang="en"', 'hreflang="ru" lang="ru"')
+    html = html.replace('>EN | RU<', '>RU | EN<')
     html = set_meta(
         html, title=title, description=description, url=url, page_type="Article",
         image=f"{SITE}/img/cards/{card['img']}",
@@ -220,6 +225,11 @@ def finish_catalog(html: str, ui: dict) -> str:
     )
     html = html.replace('href="../index.html"', 'href="../taro/index.html"')
     html = html.replace('href="../spreads.html"', 'href="../../spreads.html"')
+    # Переключатель языка: EN-каталог ссылается на RU-каталог
+    html = html.replace('href="../en/taro/index.html"', 'href="../../cards/index.html"')
+    html = html.replace('aria-label="Switch to English"', 'aria-label="Switch to Russian"')
+    html = html.replace('hreflang="en" lang="en"', 'hreflang="ru" lang="ru"')
+    html = html.replace('>EN | RU<', '>RU | EN<')
     html = html.replace(f"{SITE}/cards/", url)
     return set_meta(html, title=title, description=description, url=url, page_type="CollectionPage")
 
@@ -258,6 +268,11 @@ def build_main(cards: list[dict], roman: dict[str, dict], ui: dict) -> None:
     for section in ("lenormand", "astrology", "runes", "numerology", "cards"):
         html = html.replace(f'href="{section}/', f'href="../{section}/')
     html = html.replace('href="spreads.html"', 'href="../../spreads.html"')
+    # Языковой переключатель: EN-SPA ссылается на RU главную (/)
+    html = html.replace('href="en/taro/index.html"', 'href="../../index.html"')
+    html = html.replace('aria-label="Switch to English"', 'aria-label="Switch to Russian"')
+    html = html.replace('hreflang="en" lang="en"', 'hreflang="ru" lang="ru"')
+    html = html.replace('>EN | RU<', '>RU | EN<')
     html = html.replace('src="js/data.js', 'src="js/data.js')
     write_text(MAIN_OUT / "index.html", html)
 
@@ -334,9 +349,13 @@ def verify_russian() -> None:
     baseline = load_json(I18N / "ru-baseline.json")
     protected = ["index.html", *sorted(baseline["html"])]
     protected = list(dict.fromkeys(path for path in protected if path == "index.html" or path.startswith("cards/")))
+    def strip_additions(text: str) -> str:
+        # маркеры i18n (hreflang-блок, языковой переключатель) — разрешённые добавления
+        text = re.sub(r"<!-- i18n:seo -->\n.*?<!-- /i18n:seo -->\n", "", text, flags=re.S)
+        return re.sub(r"<!-- i18n:switch -->.*?<!-- /i18n:switch -->", "", text, flags=re.S)
     for rel in protected:
         path = ROOT / rel
-        digest = hashlib.sha256(path.read_text(encoding="utf-8").encode("utf-8")).hexdigest()
+        digest = hashlib.sha256(strip_additions(path.read_text(encoding="utf-8")).encode("utf-8")).hexdigest()
         if digest != baseline["html"][rel]:
             raise ValueError(f"Russian Tarot file changed: {rel}")
 
