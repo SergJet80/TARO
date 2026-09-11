@@ -65,10 +65,10 @@ def check():
     ready=[r for r in routes if r['status']=='ready']
     hidden=[r for r in routes if r['status']=='hidden']
     built=ready+hidden
-    expected_ready={r['ru_file'] for r in routes if r['ru_file'].startswith(('lenormand/','runes/','numerology/','astrology/'))}
+    expected_ready={r['ru_file'] for r in routes if r['ru_file'].startswith(('lenormand/','runes/','numerology/','astrology/')) or r['ru_file']=='spreads.html'}
     expected_hidden={r['ru_file'] for r in routes if r['ru_file']=='index.html' or r['ru_file'].startswith('cards/')}
-    if len(routes)!=175 or len(ready)!=94 or {r['ru_file'] for r in ready}!=expected_ready or len(hidden)!=80 or {r['ru_file'] for r in hidden}!=expected_hidden:
-        errors.append(f'Route manifest: expected 94 public and 80 hidden accepted pairs, found {len(ready)} public/{len(hidden)} hidden/{len(routes)} total')
+    if len(routes)!=175 or len(ready)!=95 or {r['ru_file'] for r in ready}!=expected_ready or len(hidden)!=80 or {r['ru_file'] for r in hidden}!=expected_hidden:
+        errors.append(f'Route manifest: expected 95 public and 80 hidden accepted pairs, found {len(ready)} public/{len(hidden)} hidden/{len(routes)} total')
     pages={}
     for r in built:
         for key in ('ru_file','en_file'):
@@ -126,7 +126,16 @@ def check():
     for rel,hash_ in baseline['files'].items():
         if rel.endswith('.py') or rel=='sitemap.xml' or rel in paired:continue
         p=ROOT/rel
-        if not p.is_file() or hashlib.sha256(p.read_bytes()).hexdigest()!=hash_:errors.append(f'Protected original changed: {rel}')
+        if not p.is_file():errors.append(f'Protected original changed: {rel}')
+        else:
+            raw=hashlib.sha256(p.read_bytes()).hexdigest()
+            stripped=None
+            if rel.endswith('.html'):
+                text=p.read_text(encoding='utf-8')
+                text=re.sub(r'<!-- i18n:seo -->\n.*?<!-- /i18n:seo -->\n','',text,flags=re.S)
+                text=re.sub(r'<!-- i18n:switch -->.*?<!-- /i18n:switch -->','',text,flags=re.S)
+                stripped=hashlib.sha256(text.encode('utf-8')).hexdigest()
+            if raw!=hash_ and stripped!=hash_:errors.append(f'Protected original changed: {rel}')
     ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
     for name in ('sitemap.xml','en/sitemap.xml'):
         try:

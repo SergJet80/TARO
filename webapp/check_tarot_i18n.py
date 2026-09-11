@@ -20,7 +20,11 @@ def load(path: Path):
 
 
 def text_digest(path: Path) -> str:
-    return hashlib.sha256(path.read_text(encoding="utf-8").encode("utf-8")).hexdigest()
+    text = path.read_text(encoding="utf-8")
+    # i18n-маркерные добавления (hreflang-блок, языковой переключатель) не считаются изменением
+    text = re.sub(r"<!-- i18n:seo -->\n.*?<!-- /i18n:seo -->\n", "", text, flags=re.S)
+    text = re.sub(r"<!-- i18n:switch -->.*?<!-- /i18n:switch -->", "", text, flags=re.S)
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
 def tag_value(html: str, pattern: str) -> str:
