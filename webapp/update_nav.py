@@ -4,7 +4,7 @@
 import os, re
 
 WEBAPP = os.path.dirname(os.path.abspath(__file__))
-CSS_V = '3.0'
+CSS_V = '5.0'
 
 NAV = '''<nav class="main-nav" aria-label="Разделы">
   <div class="main-nav-inner">
