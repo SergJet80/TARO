@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Death — Meaning and Interpretation | Tarot Guide</title>
+<meta name="description" content="Death: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<link rel="canonical" href="https://taro.jetserg.top/en/cards/smert.html">
+<meta property="og:title" content="Death — Meaning and Interpretation | Tarot Guide">
+<meta property="og:description" content="Death: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taro.jetserg.top/en/cards/smert.html">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/major-13-death.webp">
+<link rel="stylesheet" href="../../css/style.css?v=4.0">
+<link rel="stylesheet" href="../../css/astrology.css?v=4.0">
+<style>
+.main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
+.card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
+.card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
+.card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
+.card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── School of Modern Tarot ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
+.card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
+.card-pagination a:last-child { text-align: right; }
+.card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
+@media (max-width: 480px) {
+  .main-nav { padding: 12px 12px 0; }
+  .main-nav a { padding: 8px 12px; font-size: .9rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
+  .card-pagination { gap: 10px; }
+  .card-pagination a { padding: 16px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Death — Meaning and Interpretation | Tarot Guide",
+  "description": "Death: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.",
+  "url": "https://taro.jetserg.top/en/cards/smert.html",
+  "inLanguage": "en"
+}
+</script>
+<!-- Microsoft Clarity -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yejlmmd6nr");
+</script>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+<nav class="main-nav" aria-label="Sections">
+  <div class="main-nav-inner">
+    <a href="../taro/index.html">Tarot</a>
+    <a href="index.html" class="mn-active" style="display:none" aria-hidden="true">Cards</a>
+    <a href="../astrology/index.html">Astrology</a>
+    <a href="../lenormand/index.html">Lenormand</a>
+    <a href="../runes/index.html">Runes</a>
+    <a href="../../spreads.html">Spreads</a>
+  <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> About the project</a>
+  </div>
+</nav>
+<main class="card-page">
+<nav class="card-crumbs" aria-label="Breadcrumbs"><a href="../taro/index.html">Tarot</a> / <span aria-current="page">Death</span></nav>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="../../img/cards/major-13-death.webp" alt="Death — Universal Waite Tarot card" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Major Arcana · XIII</p>
+<h1 class="m-title"><span class="card-number">XIII</span>Death</h1>
+<p class="m-en"></p>
+<p class="m-meta">Element: <b>Water</b> &nbsp;·&nbsp; Astrology: <b>Scorpio</b></p>
+</div>
+</header>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Card positions">
+<label class="pos-tab" for="pos-upright">Upright position</label>
+<label class="pos-tab" for="pos-reversed">Reversed position</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">School of Modern Tarot</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">completion</span><span class="kw">transformation</span><span class="kw">transition</span><span class="kw">let-up</span><span class="kw">inevitableness</span><span class="kw">renewal</span></div>
+<p class="short-value">The end of a chapter that cannot be cancelled: the old is gone, making way for the new, is the only true guarantee of the card.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>Death in the Tarot is not a grave, but a doorway. The rider on the card moves slowly and irresistibly: what must end will end regardless of our petitions. The white rose on the banner reminds us that there is a renewal hidden behind each end.</p>
+<p>In the layout, the card announces the end of the cycle: relationships, work, life, version of yourself. Trying to hold the obsolete is more painful than the transition itself. Death spares those who do not cling: it takes shape, but not essence.</p>
+<p>It&#x27;s an arc of deep purification, and just as nature doesn&#x27;t disappear, it bends into a new life, a personal story, thrown off its shoulders, becomes the ground for the next season.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>A good day to take apart the closet, the closet, and the phone book is to throw away, give it away, say goodbye. Finish what&#x27;s been hanging for a long time: the application, the return, the last letter. The break with the annoying habit will pass easier than usual.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>So, the work is changing eras: the project is closed, the team is disbanded, the profession stops feeding, the card advises not to save the drowning, but to take the experience and leave beautifully, the abrupt change — dismissal, changing the field, selling the business — now is not risk, but timeliness.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>Relationships have reached the point of no return: they will not be the same, either through rebirth of the union on new terms or through an honest goodbye. Clinging &quot;for the children,&quot; &quot;apartments&quot; and &quot;for eight years already&quot; prolongs agony and hurts everyone. For singles, the end of a long love affair with an inaccessible person, making room for a living feeling.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>The card rarely talks about physical death — often about major restructurings: surgery, treatment, abandonment of the old way of life. Chronic illness can finally be called by its name and brought under control. The period requires respect for the process: the body changes, do not rush it, but do not hide from examinations — early honesty here saves.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>The scorpion nature of the arcanum makes it a card of initiation into the mystery of transformation: the old self dies ritually to free a larger figure. In practices, Death works with letting go -- letters that won&#x27;t be sent, things that will be burned, names that will not be spoken, and she&#x27;s also a patron of ancestral work and fine-tuning the heritage of the family.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">change-resistance</span><span class="kw">stagnation</span><span class="kw">clunging</span><span class="kw">lengthened</span><span class="kw">fear</span><span class="kw">unfinishedness</span></div>
+<p class="short-value">The transition is stuck halfway: the old is already dead, but he is held by the hand and not allowed to leave the room.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>Inverted Death is the rider who is forced to stand, change is ripe and announced many times, but the person holds on to the broken: to the relationship that works from memory, to the work that exists in the credits, to the former.</p>
+<p>This card describes the half-life in the hallway between the rooms: the door is closed back, the front is not open, and the handle is swinging all the time, and the longer the delay, the tougher the final push.</p>
+<p>Sometimes it shows the opposite – too frequent, superficial “dyings”: a person burns bridges over trifles, avoiding the only real transition that is truly terrible.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>Life gets overgrown with nuisances: repairs are in the middle, things of the dead are in half rooms, letters accumulate for months without answer. A day requires one decisive throw-out, physical or paper. Stuck questions will not be solved by themselves: the longer you pass them by, the more expensive the final bill will be.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>Professional stagnation with symptoms of collapse: salaries are delayed, projects are folded, and everyone is holding on to a sinking place for fear of change. The card honestly warns: there is nothing to save, saving energy to prepare for the new is more profitable than heroic defense. There is also an internal option - a job that you secretly hate for years, but do not dare to leave.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>The relationship is inertia: the couple have long since broken up morally, but continue to share homes and holidays. Each new round of quarrels repeats the old scenario - no end, no beginning. The card says directly: the held is forcibly decomposed and bullied both.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>Chronic conditions that are treated halfway: the course is abandoned, the symptoms are drowned out, the cause is thriving, the body is stuck in the disease as the psyche is in the old role of victim of circumstances, and another dangerous: ignoring obvious symptoms for fear of diagnosis.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>In subtle practices, inverted death is a sign of an unclosed transition: the spirits of undetached connections, the work of loss that has been forbidden and unlived. A person can carry someone else&#x27;s uncompleted grief for years. Ritual forms of completion - commemoration, a letter to the deceased, the symbolic burial of an object - open up frozen energy. Until the transition is lived, force circulates around without entering life.</p></div>
+</div>
+<div class="pos-pane pane-roman roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> In brief</h3>
+<div class="info-section"><h3>The main idea</h3><p>Death is not necessarily physical death; it is primarily an irreversible change.
+The old state ends so that a new one can begin.</p></div>
+<div class="info-section"><h3>How it manifests</h3><p>Completion of the stage, dismissal, retirement, separation of relationships, relocation, change of profession, final decision.</p></div>
+<div class="info-section"><h3>Work.</h3><p>A person ceases to be what he was before, and begins a new life in a different role.
+Money.
+Losses, irreversible decisions, termination of the old way of using property or money.</p></div>
+<div class="info-section"><h3>The shadow side</h3><p>The main problem is the refusal to accept change.</p></div>
+<div class="info-section"><h3>Feature of the school</h3><p>Death is connected to Scorpio and the Eighth House, Pluto and Hades, and the main message of the card is that death is not the end of the road, but one of its most important boundaries.</p></div>
+<div class="roman-astro"><span class="ra-label">✷ School astrology</span><b>VIII House · Scorpio</b><span class="ra-sep">·</span>Pluto/Haida, clearly, Mars in the background; axis II–VIII<div class="ra-classic">In the Waite tradition: Scorpio</div></div>
+<h3 class="roman-subtitle"><span>📜</span> In detail — lecture extracts</h3>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">✧</span> Essence of the card</summary><div class="rd-body"><p>He captures the horror of customers: There is nothing so global in this card. It is more of a philosophical card, although it sometimes speaks directly of the extinction of life. The core Transformation and going beyond: 13 means “going out on the other side.” - an hour after midnight, the next turn of the wheel of the Zodiac; And here&#x27;s the &quot;unhappiness&quot;: 13 “No longer belongs to our world.” Waite’s occult interpretation is “generally more positive than the conventional meaning”: Change, “transition from lower to higher,” rebirth, “place of arrival.” It&#x27;s not over. “This is not Ragnarok... another milestone on the road to a new, different life.” Above the card between the two towers shines the sun of immortality. The archetype is simple: “the main meaning of the arcanum is expressed in one word” - title; death - it is death&quot;; death “Not so much a person or even a situation as a general principle,” he said. - law of order.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Upright position</summary><div class="rd-body"><ul class="st-list"><li>The meanings give “according to society and desires”, calling them conditional – the subtleties remain closed to groups.</li><li>- Society: equality (&quot;everyone will die, all will be there&quot;), the unshakeability of those who have known death (&quot;bees are the same thing... there is nothing to fear&quot;); death &quot;does not accept arguments.&quot;</li><li>Work, role: new activity; dismissal / pension: a person “dies for society in the old form”: “Ivan Ivanovich-chief has died – now Ivan Ivanovich-hunter was born.”</li><li>Finance: losses (“something is dead to you”); irreversible solution: “one way ticket”: Charon drives “only one way”, “the ground can not be scrolled back” New format of property: the apartment is transferred to a cafe — the room “dead”, but “born in the world of restaurants”.</li><li>Self-development: harsh universal equality; determination – resigned to death (“we are not tenants anyway”: a German submarine, Spartans) go to the feat; revision of priorities, “remove unnecessary”: “to McDonald’s ran – bought a pass to the pool”; the former dies, another is born.</li><li>Emotions, personal life: accepting the inevitable is often a breakup of relationships, you go “into the world without this person”; the final decision; forgiveness of an incorrigible mistake; moving abroad – the former resident of the homeland has died.</li><li>Bodily - only through the VIII house (&quot;deadly diseases&quot;) and an example of healthy lifestyle.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Negative meaning</summary><div class="rd-body"><p>The neutrality formula works: “it all depends on whether it is good for you or not is the second question”; the card is about processes “that take place against the will of a person.” The disadvantages are appreciative: ignorant change “pays for it” – “fate breaks through the knee those who do not understand the hints of fate”; the scorpion stings “in an unprotected place” like Achilles; a vampire who does not want to change only exists. In fact, “the same thing with an unpleasant taste”: fear instead of acceptance.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> School emphases and distinctive points</summary><div class="rd-body"><ul class="st-list"><li>Astrology of the system: VIII house / Scorpio, von Mars, clearly Pluto, &quot;aka Hades.&quot; Axis II-VIII: Taurus, Venus, Chiron - its own, &quot;right&quot; against the alien and forbidden; &quot;in opposite houses there is always something in common - two sides of the same coin.&quot;</li><li>- The stuffing of the VIII house: variables, inheritance, debts, loans, other people&#x27;s money, big finance, big business (&quot;everything flows into the ground&quot; - Plutos); magic, mysticism, paranormal; adrenaline sex - continuation of the family at the approach of death; dangerous professions. Three degrees of Scorpio = levels of development. Paradox: &quot;war most quickly moves the progress of mankind ... death is progress.&quot;</li><li>Symbolism: the rider is one of the visions of the Apocalypse; the white rose on the black flag: “a rose is life; black is absence; white is presence”; the river is like the Styx; Charon’s boats and coins to the deceased – “always have to sacrifice something ... just don’t let it there” (bridge from the Hanged); towers will repeat in the moon.</li><li>- Details of the drawing (movement from right to left, poses of figures) - &quot;Don&#x27;t pull the owl on the globe&quot;: the artist saw it. Demarche against the books of combinations: &quot;Why produce entities without need ... even Hajo Bantzhaf indulged in this&quot; (the only mention of the author).</li><li>Egypt: Anubis is the guardian of the scales (continuity from Justice); the dog is an ancient image of fear: barking meant threat, “a man entrusted to fear for himself to the dog”; comparison with Hermes he takes only as “the germination of functions”; praised Anubis in “American Gods.” Hecate, the goddess of moonlight, underworld, witches and poisons; the scorpion of the mother-healer responds with the image of the nanny: “Mother loves – the nanny punishes”, so Scorpions – strict administrators like Marybirds – I rationalize the dog.</li><li>Hades is, according to Homer, &quot;generous and hospitable&quot; and the guardian of wealth; a terrible name has displaced Pluto.</li><li>- Immortality: &quot;The immortal man is the one who knows his weak spot and hides it&quot; - Achilles&#x27; heel and Koshchei with a needle in an egg &quot;on the world tree.&quot; Slavic series are modest: Koshchei and the Belarusian &quot;Wild Hunt of King Stakh&quot; Korotkevich.</li><li>Wild hunting - the memory of raids, the harbinger of war / plague; the leader of Hecate. Danse macabre plague era leads to the grave of all classes; the realized mortality &quot;begins to think of high concepts.&quot;</li><li>- Cinema: &quot;Fountain&quot; Aronofsky - his film No. 1 of all times and peoples (conquistador, doctor, astronaut in a starship-tree); &quot;Death is the road to greatness&quot;, &quot;the starting point of the path to immortality&quot;; &quot;don&#x27;t understand, you need to look and feel&quot; - a feeling like when working with cards. &quot;Destination Point&quot; - the inevitable catch up with the fugitives; White Walkers &quot;Gam of Thrones&quot; &quot;warred against everyone&quot;; &quot;Interview with a vampire&quot; - three steps Scorpor, a lifeless person from the future; &quot;Japorior, Jaraboszormuer, a life-smorigorita&quot; - a stranger from a life&quot;; &quot;a - a life-smossailant&quot;</li><li>Tempo: “Which is faster – Death or Tower?” says “there is no time in the tarot cards”; moves all life – happens instantly.</li><li>Moderation is “the right change, the flow of forms”; the one who understands death “is no longer afraid to fail.”</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Keywords</summary><div class="rd-body"><ul class="st-list"><li>Transformation; transition from the lower to the higher; exit “on the other side”; equality (“all will be there”); steadfastness; fatalism; one-way ticket; new format; path to eternal life, the sun of immortality; white rose on a black background.</li><li>---</li></ul></div></details>
+</div>
+<nav class="card-pagination" aria-label="Previous and next card">
+<a rel="prev" href="poveshennyj.html"><span>← Previous card</span>The Hanged Man</a>
+<a rel="next" href="umerennost.html"><span>Next card →</span>Temperance</a>
+</nav>
+</article>
+</main>
+<footer class="site-footer">
+  <p>Tarot · Card Meaning Guide</p>
+  <p class="footer-note">The material is for reference and entertainment</p>
+
+<div class="footer-contact">
+  <p class="fc-lead">For questions, collaboration or advertising enquiries, write to me — I reply personally:</p>
+  <div class="fc-links">
+    <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+    <span class="fc-sep" aria-hidden="true">·</span>
+    <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+  </div>
+  <p class="fc-lead">I keep this project going through enthusiasm, without advertising or visitor fees. If you find it useful, a contribution of any size helps me develop the guide further.</p>
+  <div class="fc-links fc-donate">
+    <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Donatello (UA-friendly)</a>
+    <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+  </div>
+</div>
+</footer>
+<!-- Модалка «About the project» -->
+<div class="about-backdrop" id="aboutModal" aria-hidden="true">
+  <div class="about-dialog" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+    <button class="about-close" type="button" aria-label="Close">&times;</button>
+    <h2 id="aboutTitle"><span class="title-star">✦</span> About the project</h2>
+    <p>I put this personal guide to Tarot, Lenormand, runes and astrology together on my own, with no team, office or investors. It runs on enthusiasm, without intrusive advertising, registration or paid subscriptions. All the material is freely accessible.</p>
+    <p>Creating and maintaining the guide takes hundreds of hours: writing, translating interpretations, designing pages and looking after the server. If it has helped you, a contribution is a welcome thank-you and supports new sections, cards, combinations and spreads.</p>
+    <div class="about-donate">
+      <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Support via Donatello (UA-friendly)</a>
+      <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+    </div>
+    <p class="about-contact">Questions, collaboration ideas or advertising enquiries? Write to me — I reply personally:</p>
+    <div class="about-links">
+      <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+      <span aria-hidden="true">·</span>
+      <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('aboutBtn'), m=document.getElementById('aboutModal');
+  if(!btn||!m) return;
+  function open(e){e.preventDefault();m.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){m.classList.remove('open');document.body.style.overflow='';}
+  btn.addEventListener('click',open);
+  m.querySelector('.about-close').addEventListener('click',close);
+  m.addEventListener('click',function(e){if(e.target===m)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,292 @@
+{
+  "schema_version": "5.0",
+  "source": "cards_build.py:EDITORIAL",
+  "cards": {
+    "major-00": {
+      "slug": "durak",
+      "symbol": "☀",
+      "label": "Beginning of the road",
+      "idea": "A new path and trust in life",
+      "intro": "A fool appears where experience has not yet given an answer; he invites you to try new things, with curiosity and a willingness to take responsibility for your own move.",
+      "advice": "Start with a little experience that doesn't require complete confidence or approval, check the essentials and leave room for the unexpected: trust in life coexists with mindfulness.",
+      "questions": [
+        "What do I want to try, even if I don’t know how to do it yet?",
+        "What simple preparation would allow me to take a conscious risk?",
+        "Where do I call caution the fear of appearing new?"
+      ]
+    },
+    "major-01": {
+      "slug": "mag",
+      "symbol": "✦",
+      "label": "Will and action",
+      "idea": "focus and power of action",
+      "intro": "The magician aggregates disparate possibilities into one precise action, and the card reminds us that skill becomes power when you choose a task and confirm intentions with actions.",
+      "advice": "Choose one thing and use what you already know, instead of endlessly searching for the perfect tool, promise only what you are willing to do, and show the result before you talk about the next idea.",
+      "questions": [
+        "What skills do I have to move my case forward?",
+        "What little things do you need to focus on the main task?",
+        "What action will confirm my words today?"
+      ]
+    },
+    "major-02": {
+      "slug": "zhrefca",
+      "symbol": "☾",
+      "label": "Silence and intuition",
+      "idea": "intuition and attention to the hidden",
+      "intro": "The High Priestess suggests taking your time to explain and listening to things that are hard to express, and silence helps you to notice ulterior motives, if you don't confuse your own feelings with guesses about others.",
+      "advice": "Put aside the noisy discussions and write down what you notice and feel alone, let the answer mature, and make the important disagreements clear: mystery should not replace honesty.",
+      "questions": [
+        "What feeling do I throw away just because I can’t explain it right away?",
+        "What do I know about the situation, and what do I think about in silence?",
+        "What is the point of being carefully cleared?"
+      ]
+    },
+    "major-03": {
+      "slug": "imperatrica",
+      "symbol": "❀",
+      "label": "Care and growth",
+      "idea": "care, creativity and abundance",
+      "intro": "The Empress talks about growth, which needs attention, time and pleasure, and she helps us to see the difference between caring for life and being cared for, and being cared for, which is already hard to breathe.",
+      "advice": "Support what you want to grow: take time for an idea, a home, or a close conversation; don’t demand instant returns and see if you have the strength and joy to live.",
+      "questions": [
+        "What in my life needs regular, simple care right now?",
+        "Where do I rush a result that still needs time?",
+        "How can I support someone without doing everything for them?"
+      ]
+    },
+    "major-04": {
+      "slug": "imperator",
+      "symbol": "♜",
+      "label": "Order and responsibility",
+      "idea": "order, boundaries and responsibility",
+      "intro": "The emperor turns intention into a clear order: who decides what is promised and where the boundaries are, and his resilience is held to responsibility, and his over-command makes that pillar tough and uncomfortable.",
+      "advice": "So, what are the rules and agreements that you can really build on, take your share of responsibility and keep your word, and keep your word, and keep the rule open if it's already in the way of revising it.",
+      "questions": [
+        "In what area do I lack clear agreements?",
+        "What decision am I prepared to answer personally for?",
+        "Where did the useful frontier become the desire to control everything?"
+      ]
+    },
+    "major-05": {
+      "slug": "ierofant",
+      "symbol": "✧",
+      "label": "Knowledge and tradition",
+      "idea": "study, tradition and shared values",
+      "intro": "The Hierophant draws attention to the knowledge and rules that are passed from person to person, and he suggests that you can build on the experience of others, and at the same time understand what you are putting into the tradition you choose.",
+      "advice": "Talk to someone who has a verifiable background and understand the basics of your case. When you follow a rule, ask yourself what it serves: meaningful learning leaves room for your own questions.",
+      "questions": [
+        "Who can I learn from without giving up my own judgment?",
+        "What rule does my values support?",
+        "What do I keep repeating out of habit, no longer understanding the meaning?"
+      ]
+    },
+    "major-06": {
+      "slug": "vlyublyonnye",
+      "symbol": "♡",
+      "label": "Alliance and choice",
+      "idea": "honest choice and closeness of values",
+      "intro": "Lovers associate intimacy with the choices that your values are based on, and the card asks if what your heart is reaching for is the same as what you're willing to do every day.",
+      "advice": "Talk about what's important to you in a union or a decision, and listen to the other side, and make choices that both your feelings and your conscience agree on, without putting them on the side of your circumstances.",
+      "questions": [
+        "What values do I want to keep in this choice?",
+        "What is the difference between what I do and what I call love?",
+        "What other path would I have to give up if I said yes?"
+      ]
+    },
+    "major-07": {
+      "slug": "kolesnica",
+      "symbol": "➶",
+      "label": "Course and movement",
+      "idea": "goal-setting and self-discipline",
+      "intro": "The chariot collects conflicting desires around the direction it chooses, and it supports the determination to move forward, but it reminds you that speed is only useful when you're driving.",
+      "advice": "Identify your immediate goal and agree on a direction with those involved, and if emotions make you rush or push, take control first, and then get on with it.",
+      "questions": [
+        "Where do I want to go if I stop wanting to just beat someone?",
+        "What two things are pulling me in different directions?",
+        "What signs do I notice that it is time to slow down?"
+      ]
+    },
+    "major-08": {
+      "slug": "sila",
+      "symbol": "♌",
+      "label": "Soft resistance",
+      "idea": "endurance, patience and inner strength",
+      "intro": "Strength is a kind of endurance that allows you to meet strong feelings without fighting yourself, and its gentleness is not a limit: accepting another person's lively character is not about enduring everything.",
+      "advice": "Before you respond to pressure, give yourself time to notice anger, fatigue, or fear. Choose a calm, firm response and conserve your strength: patience does not require you to give up respect for yourself.",
+      "questions": [
+        "What kind of feeling do I try to suppress instead of understanding it?",
+        "How will my firm response sound without threats or pressure?",
+        "Where did my patience stop being so kind to me?"
+      ]
+    },
+    "major-09": {
+      "slug": "otshelnik",
+      "symbol": "✴",
+      "label": "Searching in silence",
+      "idea": "solitude and finding your answer",
+      "intro": "The hermit suggests stepping away from other people's voices to sort through their own experiences, a pause that brings clarity until solitude remains a conscious choice and turns into a denial of connection with people.",
+      "advice": "Take time to take time off and talk about a question you've been around for a long time, keep in touch with your loved ones, and determine why you're taking a break: silence should help you move on.",
+      "questions": [
+        "What question am I still waiting for someone else to answer when I need my own?",
+        "What do I know about myself when I stop filling every pause with chores?",
+        "Who do I need to keep in touch with while I’m away?"
+      ]
+    },
+    "major-10": {
+      "slug": "koleso-fortuny",
+      "symbol": "☸",
+      "label": "Turning of circumstances",
+      "idea": "change and recurring cycles",
+      "intro": "The wheel of fortune reminds us that circumstances change even without our permission, and it helps us to notice the opportunity and to separate the action that is available from the attempt to control the chance.",
+      "advice": "Look at what's changed, and adjust your plans to the new conditions. Use the moment to keep your energy for delays: one turn of circumstances doesn't determine the whole path.",
+      "questions": [
+        "What change has happened, even though I keep planning the old way?",
+        "What recurring cycle of events can I see in my life?",
+        "What depends on my choice, what will I have to take now?"
+      ]
+    },
+    "major-11": {
+      "slug": "spravedlivost",
+      "symbol": "⚖",
+      "label": "Fair result",
+      "idea": "honesty and consequences of decisions",
+      "intro": "Justice offers a no-deal look at the situation, with no discount to sympathy or convenient explanations, and it connects the decision to its consequences and returns the question of how fair the terms are for all involved.",
+      "advice": "Gather facts, check agreements, and acknowledge your part in what's going on, and evaluate the actions of others and your own, even if that's not the most convenient outcome.",
+      "questions": [
+        "What facts do I leave out of brackets because they don’t benefit me?",
+        "Do I apply the same requirements to myself as to another person?",
+        "What is the consequence of my decision that I have to acknowledge and correct?"
+      ]
+    },
+    "major-12": {
+      "slug": "poveshennyj",
+      "symbol": "⟡",
+      "label": "Pause and reassessment",
+      "idea": "pause and a new look at the situation",
+      "intro": "The hanged person changes his mind when the usual effort is no longer helpful, and stopping him can bring insight if you know what you're waiting for and what you're willing to give up.",
+      "advice": "Use the delay to rethink the approach and gather the missing information. Be honest about the price of waiting: if the pause doesn't open anything else, name the solution you're putting off.",
+      "questions": [
+        "What does it look like when you look at the story from the other side?",
+        "What did I wait for and does that meaning still exist?",
+        "What am I sacrificing now and is it really my choice?"
+      ]
+    },
+    "major-13": {
+      "slug": "smert",
+      "symbol": "❧",
+      "label": "Completion and transition",
+      "idea": "End of phase and profound change",
+      "intro": "Death is a sign of completion, after which the old order can no longer be restored, and in the interpretations of this arcanum, it is important to make room for the next stage and not to waste all your energy on holding the obsolete.",
+      "advice": "Say what is over, and allow yourself to live through the breakup phase, take away the experience, complete the work that is available, and gradually make room for something new.",
+      "questions": [
+        "What do I keep holding on to even though my former life is no longer there?",
+        "What experience of the completed stage do I want to take with me?",
+        "What small action will help to recognize the transition?"
+      ]
+    },
+    "major-14": {
+      "slug": "umerennost",
+      "symbol": "≈",
+      "label": "Measure and consent",
+      "idea": "balance, measure and patience",
+      "intro": "Moderation seeks a combination in which different needs can coexist, and it suggests changing proportions gradually and noticing where the rhythm requires more careful adjustment.",
+      "advice": "Look at what's become too much of a daily routine and what's left out of it, and make one change you can and give it time instead of making it right in a big leap.",
+      "questions": [
+        "What is getting too much space in my day and what is getting too little?",
+        "What are the opposite needs that can be reconciled without extremes?",
+        "What small change can I keep calm and regular?"
+      ]
+    },
+    "major-15": {
+      "slug": "dyavol",
+      "symbol": "♑",
+      "label": "Attachment and temptation",
+      "idea": "attachment and the return of freedom",
+      "intro": "The devil highlights desires and habits that quietly begin to control choice, and liberation comes when one sees the value of one's attachment and stops calling it inevitable.",
+      "advice": "Look without excuses what keeps you in a repeating scenario and what you get out of it. Name its price and find the first available way to reclaim your choice.",
+      "questions": [
+        "What “I should” really hides a strong attachment?",
+        "What does this script give me and what does it cost me?",
+        "What kind of easy refusal will give me a little freedom?"
+      ]
+    },
+    "major-16": {
+      "slug": "bashnya",
+      "symbol": "ϟ",
+      "label": "The collapse of illusions",
+      "idea": "sudden change and the collapse of illusions",
+      "intro": "The tower shows the moment when the old ideas no longer stand up to the meeting with reality, and the sudden change makes you see the weak foundation and look for a foothold in what is really left.",
+      "advice": "Admit the facts, even if they break the usual explanation of what is happening, focus on the immediate necessary actions and do not rush to restore the old order without understanding its weak points.",
+      "questions": [
+        "What view of the situation no longer stands up to scrutiny?",
+        "What can I still rely on after this change?",
+        "What can I do when I start rebuilding my life?"
+      ]
+    },
+    "major-17": {
+      "slug": "zvezda",
+      "symbol": "☆",
+      "label": "Hope and recovery",
+      "idea": "hope and gradual recovery",
+      "intro": "The star regains the ability to look beyond the past difficulty, and her hope is revealed in careful recovery and small actions that make the future desirable again.",
+      "advice": "Give space to activities and relationships that give you quiet confidence in the future. Don't demand immediate upliftment: keep hope alive with simple, regular steps.",
+      "questions": [
+        "What helps me believe in the possibility of good again?",
+        "What dream can I bring back into my life?",
+        "What little sign do I notice I'm recovering?"
+      ]
+    },
+    "major-18": {
+      "slug": "luna",
+      "symbol": "☽",
+      "label": "Feelings and the unknown",
+      "idea": "intuition, fear and uncertainty",
+      "intro": "The moon describes a state in which feelings are strong and information is scarce, and it invites you to listen to the inner world and test your guesses so that anxiety doesn't pretend to be knowledge.",
+      "advice": "Write down the known facts, your assumptions and your fears. Take your time to conclude before the picture clears up, and ask direct questions where imagination fills in the gaps.",
+      "questions": [
+        "What do I fear in this situation and what facts support this fear?",
+        "How do I distinguish a quiet foreboding from an anxious repetition of a single thought?",
+        "What question will help clarify what I am just guessing?"
+      ]
+    },
+    "major-19": {
+      "slug": "solnce",
+      "symbol": "☀",
+      "label": "Clarity and joy",
+      "idea": "clarity, vitality and joy",
+      "intro": "The sun brings a sense of clarity, where you can openly enjoy life and the results of your efforts. If the pleasure is dimmed, the card suggests that you again notice the good that is already nearby.",
+      "advice": "Recognize your success and share your joy with those you care about, leave room for play and simple pleasures without making good mood another duty.",
+      "questions": [
+        "What accomplishment have I not yet allowed myself to be pleased with?",
+        "Who do I want to share the good news and the warmth with?",
+        "What brings me pleasure without having to deserve something?"
+      ]
+    },
+    "major-20": {
+      "slug": "sud",
+      "symbol": "♬",
+      "label": "Awakening and response",
+      "idea": "Reassessment of life and a new response",
+      "intro": "The court calls for a re-examination of what we've lived and a direction that's already hard to ignore, and the honest bottom line is that we need to update it, and conscious experience helps us respond to the call with action.",
+      "advice": "Summarize without self-justification and endless blaming yourself, highlight what experience is asking you to change now, and take a step that has long been postponed after that understanding.",
+      "questions": [
+        "What insights in my life can I no longer put aside?",
+        "What can I take away from the past by not judging myself for it again?",
+        "What do I do to answer a long-overdue inner call?"
+      ]
+    },
+    "major-21": {
+      "slug": "mir",
+      "symbol": "◎",
+      "label": "Integrity and completion",
+      "idea": "cycle completion and experience gathered",
+      "intro": "The world is taking the journey back to a sense of wholeness: what you've done is complete, and the card is helping you to notice the last step that you've taken, and to enter a new stage with the experience that's already yours.",
+      "advice": "Take the remaining step and note what you have learned along the way, and let yourself feel the end of it before you look for the next top: the end is worth the time and attention.",
+      "questions": [
+        "What is the last step that separates me from the present?",
+        "What different parts of the experience are now being added together for me?",
+        "How do I want to celebrate the outcome before starting the next journey?"
+      ]
+    }
+  }
+}

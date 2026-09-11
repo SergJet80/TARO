@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page of Pentacles — Meaning and Interpretation | Tarot Guide</title>
+<meta name="description" content="Page of Pentacles: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<link rel="canonical" href="https://taro.jetserg.top/en/cards/pentacles-page.html">
+<meta property="og:title" content="Page of Pentacles — Meaning and Interpretation | Tarot Guide">
+<meta property="og:description" content="Page of Pentacles: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taro.jetserg.top/en/cards/pentacles-page.html">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/pentacles-page.webp">
+<link rel="stylesheet" href="../../css/style.css?v=4.0">
+<link rel="stylesheet" href="../../css/astrology.css?v=4.0">
+<style>
+.main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
+.card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
+.card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
+.card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
+.card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── School of Modern Tarot ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
+.card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
+.card-pagination a:last-child { text-align: right; }
+.card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
+@media (max-width: 480px) {
+  .main-nav { padding: 12px 12px 0; }
+  .main-nav a { padding: 8px 12px; font-size: .9rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
+  .card-pagination { gap: 10px; }
+  .card-pagination a { padding: 16px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Page of Pentacles — Meaning and Interpretation | Tarot Guide",
+  "description": "Page of Pentacles: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.",
+  "url": "https://taro.jetserg.top/en/cards/pentacles-page.html",
+  "inLanguage": "en"
+}
+</script>
+<!-- Microsoft Clarity -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yejlmmd6nr");
+</script>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+<nav class="main-nav" aria-label="Sections">
+  <div class="main-nav-inner">
+    <a href="../taro/index.html">Tarot</a>
+    <a href="index.html" class="mn-active" style="display:none" aria-hidden="true">Cards</a>
+    <a href="../astrology/index.html">Astrology</a>
+    <a href="../lenormand/index.html">Lenormand</a>
+    <a href="../runes/index.html">Runes</a>
+    <a href="../../spreads.html">Spreads</a>
+  <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> About the project</a>
+  </div>
+</nav>
+<main class="card-page">
+<nav class="card-crumbs" aria-label="Breadcrumbs"><a href="../taro/index.html">Tarot</a> / <span aria-current="page">Page of Pentacles</span></nav>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="../../img/cards/pentacles-page.webp" alt="Page of Pentacles — Universal Waite Tarot card" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Minor Arcana · Pentacles</p>
+<h1 class="m-title"><span class="card-number">XI</span>Page of Pentacles</h1>
+<p class="m-en"></p>
+<p class="m-meta">Suit: <b>Pentacles</b> &nbsp;·&nbsp; Element: <b>Earth</b></p>
+</div>
+</header>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Card positions">
+<label class="pos-tab" for="pos-upright">Upright position</label>
+<label class="pos-tab" for="pos-reversed">Reversed position</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">School of Modern Tarot</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">teaching</span><span class="kw">new beginning</span><span class="kw">determination</span><span class="kw">good news</span><span class="kw">practicality</span><span class="kw">curiosity</span><span class="kw">step-step</span></div>
+<p class="short-value">Young practitioner: first serious goal, thirst for learning, and good news about money, study, or new business.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>The young page stands in a green field, looking at the coin in its raised hand as if it were reading a message in it, behind it is a plowed field: the earth is ready, the experience is not yet, and this combination opens it to any future. The page of the pentacles is the spirit of discipleship in the world of matter: the first goal, the first work, the first serious interest in how the material world works.</p>
+<p>The energy started without cynicism: the page doesn&#x27;t yet know that &quot;it doesn&#x27;t happen like that,&quot; so it tries. Its attentive view of the coin is a model of attitudes to possibilities: to consider up close before grasping. Often a card means a specific message - an invitation to study, a job offer, the beginning of a big road.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>Everyday life gets a student note: a new course, a fresh budget, the first steps of adulthood — contracts, insurance, shopping planning — and maybe some good practical news: a tax refund, a call about an apartment, a discount you&#x27;d like to get.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>Professional beginnings: internship, first job, probation, new chapter in the profession. Not afraid to look new is the advantage of the page: it learns quickly and asks questions. Favorable for applications for programs, grants and start-ups. Small regular steps: page doesn&#x27;t run a marathon, it learns to put feet.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>You know, it&#x27;s a young, it&#x27;s a cautious feeling: the sympathy, the test of the case, is to write first, to call for coffee. The card partner is serious beyond age: not loud words, but consistent actions. In a pair of pages, the theme of co-development is learning something together, saving for the first common acquisition.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>It&#x27;s a great time to get to know your body: a health journal, basic diagnostics, first workouts with a coach. Health is built from the bottom up -- sleep, nutrition, simple exercise, and small, right steps have a noticeable effect. Just don&#x27;t try to embrace anatomy in a week.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>Page - Earth in its infancy: a student of the magic of everyday life, whose first altar is a desk, and the first spell is a to-do list. Signs come through the usual: a letter, a bell, a coin found. Drive your first tools — a deck, a notebook, a crystal — carefully and without haste.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">procrastination</span><span class="kw">unrealistic plans</span><span class="kw">irresponsibility</span><span class="kw">missed opportunity</span><span class="kw">mess</span><span class="kw">immaturity</span></div>
+<p class="short-value">Scattered notebooks: plans without discipline, learning without purpose, and the message you least expected.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>The page turned away from the coin, the look wandering in the clouds, the field behind it remained unploughed. The inverted page is a talent that has lost its course: hundreds of courses started, none completed; a grand plan that did not withstand the first week; adult life postponed until times that do not come by themselves.</p>
+<p>It&#x27;s not stupidity, it&#x27;s immaturity of attention: there&#x27;s a lot of energy, there&#x27;s no focus, every new idea saves you from bringing the old one to life. The second story is the bad news in practical matters: a broken deal, a failed exam, a failure that preparation would avoid. Lesson one: the world pays not for ideas, but for what is done.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>The house is sinking in the wrong places: the renovation is frozen in the &quot;beginning to live in a new way&quot;, subscriptions are pulling money, documents are not issued, planning is turned into a genre of entertainment - beautiful diaries without records. Choose one household task and close it today. Small completeness cures slobberness better than new wish lists.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>The reputation of a promising person who doesn&#x27;t: deadlines go by, details get lost, exams get stuck with skips, sometimes it&#x27;s the wrong start, a profession chosen for a beautiful showcase, honest answers to the question &quot;what do I really want&quot; are more useful than another resume.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>Romance is languishing with infantility: the partner promises and forgets, the relationship is in correspondence, and the meetings are constantly shifting. You can hide in a slight flirtation yourself, so as not to take responsibility for real intimacy. The couple who thought of a common cause abandoned him at the start. The card offers a simple test of maturity of feelings: how many promises have been fulfilled in the last month?</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>Health is put on hold: symptoms are ignored, prescribed not started, Internet self-diagnoses replace the doctor - dangerous savings. The body forgives a lot, but the credit will run out. Write down one small action on a particular day: analysis, walking, early withdrawal.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>The flipped page is the energy of the Earth, crumbled in clods: intentions do not sprout because they are not embedded in the soil. Signs of the world pass by unnoticed, the messenger sleeps. The practice of return: the magic of small commitments to keep your word for the day; keep a sign journal. Tradition warned students: until you learn to complete the simple, the complex will remain theater.</p></div>
+</div>
+<div class="pos-pane pane-roman roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> How the school reads this rank</h3>
+<div class="info-section"><h3>The main idea</h3><p>Dependence on body, money, resources and little experience, and you can&#x27;t afford everything you can imagine.</p></div>
+<div class="info-section"><h3>How it manifests</h3><p>In work, you have a beginner with little influence on conditions, in relationships, your body and your physical attraction react before you&#x27;re conscious, in development, you gradually build up your skill and resource.</p></div>
+<div class="info-section"><h3>The shadow side</h3><p>There&#x27;s discontent, there&#x27;s no leverage, and a physical reaction can completely subjugate a person to the situation.</p></div>
+<div class="info-section"><h3>Keywords</h3><p>resource · body · little experience · dependence · performer</p></div>
+<div class="roman-astro"><span class="ra-label">✷ School astrology</span><b>Land suit · &quot;worker&quot; - depending on the situation</b><span class="ra-sep">·</span>Phlegmatics - waiting, specificity and form</div>
+<h3 class="roman-subtitle"><span>📜</span> In detail — from the rank lecture</h3>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">✧</span> Essence of the card</summary><div class="rd-body"><p>dependence on matter – body, money, resources; land is experience and skill, which are not yet enough: both “experience is not enough” and “the power for the planned is not enough”.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Upright position</summary><div class="rd-body"><ul class="st-list"><li>Work: &quot;gets not as much as he wants, but as much as he pays,&quot; there is no right to ask for an increase - the director will raise if he thinks he does; money &quot;for a beginner is normal.&quot; The inverted is unhappy with his salary, but there are zero levers; the extreme form is &quot;broker&quot;, an employee who does not do so.</li><li>Body and sex: the body reacts: the straight receives the right attraction; the upside down loses control entirely - &quot;like striped elephants at the sounds of a flute&quot; or suffers physically unpleasant: a partner with unbearable spirits (the real case of a listener from a bank) or a husband with whom &quot;sleeping has to be.&quot;</li><li>Animals: an obedient dog is the right page; a cat who “does not order it to do it in his own way” is the wrong page.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Negative meaning</summary><div class="rd-body"><p>Loses control of the whole body, like striped elephants at the sound of a flute.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> School emphases and distinctive points</summary><div class="rd-body"><ul class="st-list"><li>One scene is laid out in all four suits: the girl whistles after - the habit of not turning around (pentacles), the impulse to snap (wands), the calculation of &quot;trolling&quot; and ignoring a strong person (swords), emotional anticipation (cups); &quot;you turn around - means page&quot;.</li><li>He illustrates the hierarchy of the court with one plot: the son does not get on the plane because of the weather - the page sits at the airport and waits, the knight changes the ticket, the queen chooses the transport herself, the king would fly in a private jet.</li><li>The teacher is smeared in the elements: information is swords, the skill is “driven into habit” – earth, socialization (“school is primarily a treasure trove of communication”) – wands, love and humanities – cups; class favorites – queens.</li><li>The medieval gender framework is openly stated: tarot is a “slice of medieval society”, women are traditionally put in the place of the page – the first to not show initiative.</li><li>Customer Reception: always add “but it’s inaccurate – cards work differently for different people, check on yourself first.”</li><li>Modern images: the film &quot;Terminal&quot; - a clean page (stuck at the airport, limited in everything); about Gagarin - &quot;the party said it was necessary, the Komsomol answered to eat&quot; - like an inverted page of pentacles, physically fixed.</li><li>Astrology (Zodiac, planet) and Slavic series at the lecture is not at all; outside the masty bindings only temperaments and comparison with Gemini.</li><li>Pregnancy is played by pages as an extreme dependence on the situation; alcohol and drug addiction are “also pages”, each has a dependence in his element.</li><li>If page drops when contracting, it is pointless to advise “learning”: the page has no choice – to be the perfect performer.</li><li>Take only visually pleasing deck; the course deck is intentionally neutral, and the Manara with naked bodies will cause rejection and will not work.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Keywords</summary><div class="rd-body"><p>“How much is paid is so much is”; the body is decided; an obedient dog / cat (translation); little experience and strength.</p></div></details>
+</div>
+<nav class="card-pagination" aria-label="Previous and next card">
+<a rel="prev" href="pentacles-ten.html"><span>← Previous card</span>Ten of Pentacles</a>
+<a rel="next" href="pentacles-knight.html"><span>Next card →</span>Knight of Pentacles</a>
+</nav>
+</article>
+</main>
+<footer class="site-footer">
+  <p>Tarot · Card Meaning Guide</p>
+  <p class="footer-note">The material is for reference and entertainment</p>
+
+<div class="footer-contact">
+  <p class="fc-lead">For questions, collaboration or advertising enquiries, write to me — I reply personally:</p>
+  <div class="fc-links">
+    <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+    <span class="fc-sep" aria-hidden="true">·</span>
+    <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+  </div>
+  <p class="fc-lead">I keep this project going through enthusiasm, without advertising or visitor fees. If you find it useful, a contribution of any size helps me develop the guide further.</p>
+  <div class="fc-links fc-donate">
+    <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Donatello (UA-friendly)</a>
+    <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+  </div>
+</div>
+</footer>
+<!-- Модалка «About the project» -->
+<div class="about-backdrop" id="aboutModal" aria-hidden="true">
+  <div class="about-dialog" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+    <button class="about-close" type="button" aria-label="Close">&times;</button>
+    <h2 id="aboutTitle"><span class="title-star">✦</span> About the project</h2>
+    <p>I put this personal guide to Tarot, Lenormand, runes and astrology together on my own, with no team, office or investors. It runs on enthusiasm, without intrusive advertising, registration or paid subscriptions. All the material is freely accessible.</p>
+    <p>Creating and maintaining the guide takes hundreds of hours: writing, translating interpretations, designing pages and looking after the server. If it has helped you, a contribution is a welcome thank-you and supports new sections, cards, combinations and spreads.</p>
+    <div class="about-donate">
+      <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Support via Donatello (UA-friendly)</a>
+      <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+    </div>
+    <p class="about-contact">Questions, collaboration ideas or advertising enquiries? Write to me — I reply personally:</p>
+    <div class="about-links">
+      <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+      <span aria-hidden="true">·</span>
+      <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('aboutBtn'), m=document.getElementById('aboutModal');
+  if(!btn||!m) return;
+  function open(e){e.preventDefault();m.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){m.classList.remove('open');document.body.style.overflow='';}
+  btn.addEventListener('click',open);
+  m.querySelector('.about-close').addEventListener('click',close);
+  m.addEventListener('click',function(e){if(e.target===m)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+</body>
+</html>

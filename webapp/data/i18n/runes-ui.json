@@ -1,76 +1,310 @@
 [
-  {"ru":"Старший Футарк","en":"Elder Futhark"},
-  {"ru":"Все","en":"All"},
-  {"ru":"Материалы носят справочный и развлекательный характер","en":"The material is for reference and entertainment"},
-  {"ru":"Руны — Старший Футарк · Справочник значений","en":"Runes — Elder Futhark · Meaning Reference"},
-  {"ru":"Справочник всех 24 рун Старшего Футарка: значение, историческая основа, мантика, магия, сочетания и диагностика.","en":"A reference to all 24 Elder Futhark runes: meanings, historical basis, divination, magic, combinations, and diagnostics."},
-  {"ru":"Расклады и сводная таблица рун | Справочник Старшего Футарка","en":"Rune Casts and Summary Table | Elder Futhark Reference"},
-  {"ru":"Руническая диагностика: расклады на одну, три и семь рун, сводная таблица 24 рун, магический функционал по категориям, источники и методология.","en":"Runic diagnostics: one-, three-, and seven-rune casts, a table of all 24 runes, magical functions by category, sources, and methodology."},
-  {"ru":"Мантические, магические и диагностические значения относятся к современной рунической практике. Историческая часть опирается на рунические поэмы и эпиграфику. Материалы носят справочный и развлекательный характер.","en":"Divinatory, magical, and diagnostic meanings belong to modern runic practice. The historical section draws on rune poems and epigraphy. The material is for reference and entertainment."},
-  {"ru":"Описанное — современная эзотерическая практика и справочный материал, а не исторически подтверждённая система древних германцев. Материалы носят справочный и развлекательный характер.","en":"The practices described are modern esoteric and reference material, not a historically attested system of the ancient Germanic peoples. The material is for reference and entertainment."},
-  {"ru":"24 руны · значение, мантика, магия, диагностика","en":"24 runes · meanings, divination, magic, and diagnostics"},
-  {"ru":"Поиск: деньги, защита, дорога, конфликт…","en":"Search: money, protection, journey, conflict…"},
-  {"ru":"Фильтр по аттам","en":"Filter by aett"},
-  {"ru":"I атт · Фрейя","en":"First aett · Freyja"},
-  {"ru":"II атт · Хагаль","en":"Second aett · Hagal"},
-  {"ru":"III атт · Тюр","en":"Third aett · Tyr"},
-  {"ru":"I атт","en":"First aett"},
-  {"ru":"II атт","en":"Second aett"},
-  {"ru":"III атт","en":"Third aett"},
-  {"ru":"Расклады и таблица","en":"Casts and table"},
-  {"ru":"диагностика на 1/3/7 рун, сводная шпаргалка, магия по категориям","en":"one-, three-, and seven-rune diagnostics, summary guide, and magic by category"},
-  {"ru":"Ничего не найдено. Попробуйте другое слово.","en":"Nothing found. Try another word."},
-  {"ru":"Руна ","en":"Rune "},
-  {"ru":" — мистическая иллюстрация","en":" — mystical illustration"},
-  {"ru":"Краткая суть","en":"Core meaning"},
-  {"ru":"Историческая традиция","en":"Historical tradition"},
-  {"ru":"Современная мантика","en":"Modern divination"},
-  {"ru":"Психологическое состояние","en":"Psychological state"},
-  {"ru":"Духовное значение","en":"Spiritual meaning"},
-  {"ru":"Прямое и перевёрнутое положение","en":"Upright and reversed positions"},
-  {"ru":"Отличия трактовок разных школ","en":"Differences between schools"},
-  {"ru":"Итог ситуации","en":"Outcome"},
-  {"ru":"Положительное проявление","en":"Positive expression"},
-  {"ru":"Негативное проявление","en":"Negative expression"},
-  {"ru":"Мантические значения относятся к современной рунической практике.","en":"These divinatory meanings belong to modern runic practice."},
-  {"ru":"Руна как характеристика человека","en":"Rune as a description of a person"},
-  {"ru":"Это современная эзотерическая практика, а не исторически подтверждённая традиция.","en":"This is modern esoteric practice, not a historically attested tradition."},
-  {"ru":"Современное магическое значение","en":"Modern magical meaning"},
-  {"ru":"Руна в формулах и ставах","en":"Rune in formulas and staves"},
-  {"ru":"В современной эзотерической трактовке","en":"In modern esoteric interpretation"},
-  {"ru":"Возможное бытовое объяснение","en":"Possible everyday explanation"},
-  {"ru":"Альтернативное объяснение","en":"Alternative explanation"},
-  {"ru":"Характерные сочетания","en":"Characteristic combinations"},
-  {"ru":"Ключевые значения","en":"Key meanings"},
-  {"ru":"Сферы жизни","en":"Areas of life"},
-  {"ru":"Эзотерическая трактовка","en":"Esoteric interpretation"},
-  {"ru":"Диагностика","en":"Diagnostics"},
-  {"ru":"Сочетания","en":"Combinations"},
-  {"ru":"Значение","en":"Meaning"},
-  {"ru":"Финансы","en":"Finances"},
-  {"ru":"Работа","en":"Work"},
-  {"ru":"Отношения","en":"Relationships"},
-  {"ru":"Семья и быт","en":"Family and home"},
-  {"ru":"Мысли","en":"Thoughts"},
-  {"ru":"Чувства","en":"Feelings"},
-  {"ru":"Действия","en":"Actions"},
-  {"ru":"Совет","en":"Advice"},
-  {"ru":"Предупреждение","en":"Warning"},
-  {"ru":"Итог","en":"Summary"},
-  {"ru":"Магия","en":"Magic"},
-  {"ru":"Все руны","en":"All runes"},
-  {"ru":"Разделы руны","en":"Rune sections"},
-  {"ru":"Навигация по рунам","en":"Rune navigation"},
-  {"ru":" · звук «","en":" · sound ‘"},
-  {"ru":"» · ","en":"’ · "},
-  {"ru":") — значение руны | Справочник","en":") — Rune Meaning | Reference"},
-  {"ru":"Расклады","en":"Casts"},
-  {"ru":"и сводная таблица","en":"and summary table"},
-  {"ru":"Диагностика · шпаргалка по 24 рунам · магический функционал","en":"Diagnostics · 24-rune reference table · magical functions"},
-  {"ru":"Сводная таблица","en":"Summary table"},
-  {"ru":"Магия по категориям","en":"Magic by category"},
-  {"ru":"Источники","en":"Sources"},
-  {"ru":"Разделы","en":"Sections"},
-  {"ru":"Навигация","en":"Navigation"},
-  {"ru":"Руны · Старший Футарк — справочник значений","en":"Runes · Elder Futhark — meaning reference"}
+  {
+    "ru": "Старший Футарк",
+    "en": "Elder Futhark"
+  },
+  {
+    "ru": "Все",
+    "en": "All"
+  },
+  {
+    "ru": "Материалы носят справочный и развлекательный характер",
+    "en": "The material is for reference and entertainment"
+  },
+  {
+    "ru": "Руны — Старший Футарк · Справочник значений",
+    "en": "Runes — Elder Futhark · Meaning Reference"
+  },
+  {
+    "ru": "Справочник всех 24 рун Старшего Футарка: значение, историческая основа, мантика, магия, сочетания и диагностика.",
+    "en": "A reference to all 24 Elder Futhark runes: meanings, historical basis, divination, magic, combinations, and diagnostics."
+  },
+  {
+    "ru": "Расклады и сводная таблица рун | Справочник Старшего Футарка",
+    "en": "Rune Casts and Summary Table | Elder Futhark Reference"
+  },
+  {
+    "ru": "Руническая диагностика: расклады на одну, три и семь рун, сводная таблица 24 рун, магический функционал по категориям, источники и методология.",
+    "en": "Runic diagnostics: one-, three-, and seven-rune casts, a table of all 24 runes, magical functions by category, sources, and methodology."
+  },
+  {
+    "ru": "Мантические, магические и диагностические значения относятся к современной рунической практике. Историческая часть опирается на рунические поэмы и эпиграфику. Материалы носят справочный и развлекательный характер.",
+    "en": "Divinatory, magical, and diagnostic meanings belong to modern runic practice. The historical section draws on rune poems and epigraphy. The material is for reference and entertainment."
+  },
+  {
+    "ru": "Описанное — современная эзотерическая практика и справочный материал, а не исторически подтверждённая система древних германцев. Материалы носят справочный и развлекательный характер.",
+    "en": "The practices described are modern esoteric and reference material, not a historically attested system of the ancient Germanic peoples. The material is for reference and entertainment."
+  },
+  {
+    "ru": "24 руны · значение, мантика, магия, диагностика",
+    "en": "24 runes · meanings, divination, magic, and diagnostics"
+  },
+  {
+    "ru": "Поиск: деньги, защита, дорога, конфликт…",
+    "en": "Search: money, protection, journey, conflict…"
+  },
+  {
+    "ru": "Фильтр по аттам",
+    "en": "Filter by aett"
+  },
+  {
+    "ru": "I атт · Фрейя",
+    "en": "First aett · Freyja"
+  },
+  {
+    "ru": "II атт · Хагаль",
+    "en": "Second aett · Hagal"
+  },
+  {
+    "ru": "III атт · Тюр",
+    "en": "Third aett · Tyr"
+  },
+  {
+    "ru": "I атт",
+    "en": "First aett"
+  },
+  {
+    "ru": "II атт",
+    "en": "Second aett"
+  },
+  {
+    "ru": "III атт",
+    "en": "Third aett"
+  },
+  {
+    "ru": "Расклады и таблица",
+    "en": "Casts and table"
+  },
+  {
+    "ru": "диагностика на 1/3/7 рун, сводная шпаргалка, магия по категориям",
+    "en": "one-, three-, and seven-rune diagnostics, summary guide, and magic by category"
+  },
+  {
+    "ru": "Ничего не найдено. Попробуйте другое слово.",
+    "en": "Nothing found. Try another word."
+  },
+  {
+    "ru": "Руна ",
+    "en": "Rune "
+  },
+  {
+    "ru": " — мистическая иллюстрация",
+    "en": " — mystical illustration"
+  },
+  {
+    "ru": "Краткая суть",
+    "en": "Core meaning"
+  },
+  {
+    "ru": "Историческая традиция",
+    "en": "Historical tradition"
+  },
+  {
+    "ru": "Современная мантика",
+    "en": "Modern divination"
+  },
+  {
+    "ru": "Психологическое состояние",
+    "en": "Psychological state"
+  },
+  {
+    "ru": "Духовное значение",
+    "en": "Spiritual meaning"
+  },
+  {
+    "ru": "Прямое и перевёрнутое положение",
+    "en": "Upright and reversed positions"
+  },
+  {
+    "ru": "Отличия трактовок разных школ",
+    "en": "Differences between schools"
+  },
+  {
+    "ru": "Итог ситуации",
+    "en": "Outcome"
+  },
+  {
+    "ru": "Положительное проявление",
+    "en": "Positive expression"
+  },
+  {
+    "ru": "Негативное проявление",
+    "en": "Negative expression"
+  },
+  {
+    "ru": "Мантические значения относятся к современной рунической практике.",
+    "en": "These divinatory meanings belong to modern runic practice."
+  },
+  {
+    "ru": "Руна как характеристика человека",
+    "en": "Rune as a description of a person"
+  },
+  {
+    "ru": "Это современная эзотерическая практика, а не исторически подтверждённая традиция.",
+    "en": "This is modern esoteric practice, not a historically attested tradition."
+  },
+  {
+    "ru": "Современное магическое значение",
+    "en": "Modern magical meaning"
+  },
+  {
+    "ru": "Руна в формулах и ставах",
+    "en": "Rune in formulas and staves"
+  },
+  {
+    "ru": "В современной эзотерической трактовке",
+    "en": "In modern esoteric interpretation"
+  },
+  {
+    "ru": "Возможное бытовое объяснение",
+    "en": "Possible everyday explanation"
+  },
+  {
+    "ru": "Альтернативное объяснение",
+    "en": "Alternative explanation"
+  },
+  {
+    "ru": "Характерные сочетания",
+    "en": "Characteristic combinations"
+  },
+  {
+    "ru": "Ключевые значения",
+    "en": "Key meanings"
+  },
+  {
+    "ru": "Сферы жизни",
+    "en": "Areas of life"
+  },
+  {
+    "ru": "Эзотерическая трактовка",
+    "en": "Esoteric interpretation"
+  },
+  {
+    "ru": "Диагностика",
+    "en": "Diagnostics"
+  },
+  {
+    "ru": "Сочетания",
+    "en": "Combinations"
+  },
+  {
+    "ru": "Значение",
+    "en": "Meaning"
+  },
+  {
+    "ru": "Финансы",
+    "en": "Finances"
+  },
+  {
+    "ru": "Работа",
+    "en": "Work"
+  },
+  {
+    "ru": "Отношения",
+    "en": "Relationships"
+  },
+  {
+    "ru": "Семья и быт",
+    "en": "Family and home"
+  },
+  {
+    "ru": "Мысли",
+    "en": "Thoughts"
+  },
+  {
+    "ru": "Чувства",
+    "en": "Feelings"
+  },
+  {
+    "ru": "Действия",
+    "en": "Actions"
+  },
+  {
+    "ru": "Совет",
+    "en": "Advice"
+  },
+  {
+    "ru": "Предупреждение",
+    "en": "Warning"
+  },
+  {
+    "ru": "Итог",
+    "en": "Summary"
+  },
+  {
+    "ru": "Магия",
+    "en": "Magic"
+  },
+  {
+    "ru": "Все руны",
+    "en": "All runes"
+  },
+  {
+    "ru": "Разделы руны",
+    "en": "Rune sections"
+  },
+  {
+    "ru": "Навигация по рунам",
+    "en": "Rune navigation"
+  },
+  {
+    "ru": " · звук «",
+    "en": " · sound ‘"
+  },
+  {
+    "ru": "» · ",
+    "en": "’ · "
+  },
+  {
+    "ru": ") — значение руны | Справочник",
+    "en": ") — Rune Meaning | Reference"
+  },
+  {
+    "ru": "Расклады",
+    "en": "Casts"
+  },
+  {
+    "ru": "и сводная таблица",
+    "en": "and summary table"
+  },
+  {
+    "ru": "Диагностика · шпаргалка по 24 рунам · магический функционал",
+    "en": "Diagnostics · 24-rune reference table · magical functions"
+  },
+  {
+    "ru": "Сводная таблица",
+    "en": "Summary table"
+  },
+  {
+    "ru": "Магия по категориям",
+    "en": "Magic by category"
+  },
+  {
+    "ru": "Источники",
+    "en": "Sources"
+  },
+  {
+    "ru": "Разделы",
+    "en": "Sections"
+  },
+  {
+    "ru": "Навигация",
+    "en": "Navigation"
+  },
+  {
+    "ru": "Руны · Старший Футарк — справочник значений",
+    "en": "Runes · Elder Futhark — meaning reference"
+  },
+  {
+    "ru": "Рунические ставы",
+    "en": "Runic staves"
+  },
+  {
+    "ru": "каталог формул по категориям: защита, финансы, отношения и др.",
+    "en": "a catalogue of formulas by category: protection, finances, relationships, and more."
+  },
+  {
+    "ru": "диагностика на 1/3/7 рун, сводная шпаргалка",
+    "en": "one-, three-, and seven-rune diagnostics, summary guide"
+  }
 ]

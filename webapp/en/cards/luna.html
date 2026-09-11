@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Moon — Meaning and Interpretation | Tarot Guide</title>
+<meta name="description" content="The Moon: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<link rel="canonical" href="https://taro.jetserg.top/en/cards/luna.html">
+<meta property="og:title" content="The Moon — Meaning and Interpretation | Tarot Guide">
+<meta property="og:description" content="The Moon: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taro.jetserg.top/en/cards/luna.html">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/major-18-moon.webp">
+<link rel="stylesheet" href="../../css/style.css?v=4.0">
+<link rel="stylesheet" href="../../css/astrology.css?v=4.0">
+<style>
+.main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
+.card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
+.card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
+.card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
+.card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── School of Modern Tarot ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
+.card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
+.card-pagination a:last-child { text-align: right; }
+.card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
+@media (max-width: 480px) {
+  .main-nav { padding: 12px 12px 0; }
+  .main-nav a { padding: 8px 12px; font-size: .9rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
+  .card-pagination { gap: 10px; }
+  .card-pagination a { padding: 16px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Moon — Meaning and Interpretation | Tarot Guide",
+  "description": "The Moon: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.",
+  "url": "https://taro.jetserg.top/en/cards/luna.html",
+  "inLanguage": "en"
+}
+</script>
+<!-- Microsoft Clarity -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yejlmmd6nr");
+</script>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+<nav class="main-nav" aria-label="Sections">
+  <div class="main-nav-inner">
+    <a href="../taro/index.html">Tarot</a>
+    <a href="index.html" class="mn-active" style="display:none" aria-hidden="true">Cards</a>
+    <a href="../astrology/index.html">Astrology</a>
+    <a href="../lenormand/index.html">Lenormand</a>
+    <a href="../runes/index.html">Runes</a>
+    <a href="../../spreads.html">Spreads</a>
+  <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> About the project</a>
+  </div>
+</nav>
+<main class="card-page">
+<nav class="card-crumbs" aria-label="Breadcrumbs"><a href="../taro/index.html">Tarot</a> / <span aria-current="page">The Moon</span></nav>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="../../img/cards/major-18-moon.webp" alt="The Moon — Universal Waite Tarot card" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Major Arcana · XVIII</p>
+<h1 class="m-title"><span class="card-number">XVIII</span>The Moon</h1>
+<p class="m-en"></p>
+<p class="m-meta">Element: <b>Water</b> &nbsp;·&nbsp; Astrology: <b>Fish</b></p>
+</div>
+</header>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Card positions">
+<label class="pos-tab" for="pos-upright">Upright position</label>
+<label class="pos-tab" for="pos-reversed">Reversed position</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">School of Modern Tarot</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">illusion</span><span class="kw">anxiety</span><span class="kw">subconscious</span><span class="kw">intuition</span><span class="kw">uncertainty</span><span class="kw">dream</span></div>
+<p class="short-value">A night where the light is only half yours: intuition is sharpened, but fog hides the contours.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>The moon only lights up the path in part: there&#x27;s a road between the two towers, and how much you can see is an open question, and cancer is creeping out of the pond, and consciousness is just beginning to rise from the depths, and this is the subconscious territory, where fears live without a name and desire without an address.</p>
+<p>And the card says, something in the situation is not what it seems. You don&#x27;t have to be fooled, you can be fooled into drawing the missing with fear or with a dream. Facts are few, anxiety is many.</p>
+<p>But the moon is not only a dark one. It&#x27;s a night navigation organ: where logic is blind, there&#x27;s a sensitive intuition, and the fishy nature of the arcanum asks you not to turn on the high beam, you go slowly and listen.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>It&#x27;s a foggy day, the information is contradictory, people don&#x27;t agree everything, and you want to decide immediately and without reason. Wait in the morning, it&#x27;s usually clearer. Write down your dreams and anxious thoughts: they look smaller on paper. Trust the persistent feeling of &quot;something is wrong&quot; - it&#x27;s data, not suspicion.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>The work is murky: promises are beautiful, documents are at odds with words, a colleague smiles too broadly. Check the details, record the agreements in writing, avoid vague projects. There are rumors and behind-the-scenes games — respond with facts and restraint. Big financial decisions are best postponed until clear.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>Relationships smell of understatement: jealousy whispers, imagination draws, partner keeps silent about his. Before you start an inquest, separate the facts from the fears — often the storm is internal. Sometimes the card honestly warns: there is a secret. Single — charm, like a projection: look at the person for longer than three dates.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>Symptoms are blurred, diagnoses are inaccurate, health is jumping — a typical moonshot. The main focus is on the psyche: anxiety, insomnia, vivid dreams, old fears on the surface. Sleep patterns, restriction of news and stimulants, support of a psychologist. The body can &quot;dream&quot; a disease that is not: check calmly, without twisting.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>The moon is a lark of initiation into the subconscious: working with dreams, active imagination, lunar cycles. It increases divinatory sensitivity and requires grounding at the same time: practices without support on this card are dangerous. The road between the towers is the route of the night wanderer: you can go, you can not run. The element teaches respect for the unenlightened.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">clarification</span><span class="kw">fear-out</span><span class="kw">lie-out</span><span class="kw">quiz</span><span class="kw">let-off</span><span class="kw">landing</span></div>
+<p class="short-value">The fog thins: fears lose scale, the hidden surfaces, the road gradually manifests itself.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>The upside down moon is the dawn after a long night of doubt, what seemed like a monster in the dark turns out to be a bush by the road in the light, fears lose their power, they are dispelled by facts - or they are just tired of holding on.</p>
+<p>Often the card captures the moment of unpacking: the secret becomes apparent, the intrigue is revealed, and even though the truth is unpleasant, it is easier than the unknown, the voice of intuition is again distinguished from the voice of anxiety.</p>
+<p>There is also a shadowy version, which is the opposite of immersion: the person hides in fantasy from reality, and the suppressed anxiety settles in the body, then the arcana advises you to pull the fears out into the light with your hands, one at a time.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>Solutions day: a confusing case unravels, a misunderstanding is explained in two sentences, anxiety recedes for no apparent reason. Good time for honest conversations that have been delayed. Take apart the rubble on the table and in the drawers - order now works like a spell of clarity. The evening promises a calmer sleep than usual.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>The work fog dissipates: the true state of projects is revealed, the reasons for delays and the motives of partners are revealed, the lack of information is filled, often from an unexpected source, negotiations are more honest, conditions can be revised, decisions are made on facts, not on feelings, and they will be accurate.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>Distrust is replaced by clarity: a conversation that has been feared for months is simple: if there has been a deception, it will open up itself, without detective work, and it will liberate both. In healthy couples, calm intimacy returns and good dreams. Single people will end their years of falling in love with the image: a place is made free for the real person.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>The anxiety symptoms recede: the tests bounce back, sleep recovers, fear of illness loses grip. If the therapy is wrong, it will now be found right. The psyche stabilizes -- fix the sleep hygiene result with fewer stimulants. The body shows where stress lived for years.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>In practice, an inverted arcana means a way out of the dark: the mist that is induced subsides, the suggestions of others are lost; dreams become fruitful, instead of the dance of images, clear answers come; it is beneficial to cleanse space and regain your strength from fears.</p></div>
+</div>
+<div class="pos-pane pane-roman roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> In brief</h3>
+<div class="info-section"><h3>The main idea</h3><p>The moon is reflected light, so it shows a situation in which it is difficult to know what is real and what is only a reflection.</p></div>
+<div class="info-section"><h3>How it manifests</h3><p>Fear, intuition, hidden desires, diplomacy, caution, the need to act carefully.</p></div>
+<div class="info-section"><h3>Work and money</h3><p>Hidden sources of income, unobvious circumstances, the need to take into account risks that cannot be fully calculated.</p></div>
+<div class="info-section"><h3>In a relationship</h3><p>It&#x27;s a very emotional card, and it can show feelings that are hard to express in words, longing, moodiness, hidden desires.</p></div>
+<div class="info-section"><h3>Self-development</h3><p>Working with fears and the subconscious.</p></div>
+<div class="info-section"><h3>The shadow side</h3><p>Deception, self-deception, duplicity, fraud, panic fear.</p></div>
+<div class="info-section"><h3>Feature of the school</h3><p>The main task of the card is to pass between fears, without falling into either recklessness or panic.</p></div>
+<div class="roman-astro"><span class="ra-label">✷ School astrology</span><b>XI House · Aquarius</b><span class="ra-sep">·</span>Uranus; &quot;No Moon in the Zodiac Circle&quot;, Cancer = 4th House<div class="ra-classic">In the Waite tradition: Fish</div></div>
+<h3 class="roman-subtitle"><span>📜</span> In detail — lecture extracts</h3>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">✧</span> Essence of the card</summary><div class="rd-body"><p>The moon is the &quot;wrong light&quot;: it does not shine, it only reflects alien (sun) light, so its basic meaning is deception, lies, a murky wrong light in which &quot;it is difficult to make out who is a friend and who is an enemy.&quot; The core of the card is a movement into the unknown: after the Star, a person comes out of the &quot;quiet swamp&quot; and walks between two dangers to the new in reflected light. Everything that happens is accompanied by fear - wild (wolf) and tamed (dog), but the lecturer constantly emphasizes: &quot;this is a good card, all the cards are not good and not bad,&quot; and one is in the middle of the card.&quot;</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Upright position</summary><div class="rd-body"><ul class="st-list"><li>On the card, the rising moon is a favorable phase: replenishing energy reserves, starting new business, ambitious projects, moving relationships to a more serious level (house 11 - youth), but you need to go “carefully, carefully, with fear”, aware of your fears.</li><li>Society. Artificial personality: people are afraid to show their true face, build a mask (like a sphinx in a chariot creates character), &quot;you can&#x27;t believe - you can act carefully and carefully.&quot; The reverse side of the moon is better not to show; animal desires do not show - instead they are polite and neat compliment.</li><li>Hidden sources of income — “what you can’t show the state”: part-time, tax evasion, saving without attracting attention. Non-obvious financial factors = two towers / risks that can’t be considered beforehand (“man assumes, God disposes”) — always put the stock in the calculation. You need diplomacy: you have to talk to someone you don’t want, carefully choosing words.</li><li>Self-development: Admitting your fears to yourself and to people (&quot;If you&#x27;re always afraid, you can be a dumb creature like this cancer&quot;); Intuition, &quot;silent knowledge&quot; that comes out of the deep like cancer on a shallow shore; giving up extremes and temptations, working with the subconscious: psychotherapy, hypnosis, psychoanalysis; professions - psychologist/psychotherapist, &quot;shaman in trance and taking him into trance,&quot; priests.</li><li>A very feminine card: emotions that are hard to express (dogs howl at the moon — longing), unconscious emotional behavior, submission to a situation where you can not give full force. Shows true desires: in the position of &quot;what a woman wants&quot; — what she openly manifests, she really wants. Caprices as &quot;tidal currents&quot;: I want, I don&#x27;t want. Practically indicated pregnancy (link to the female cycle).</li><li>- Away from recovery: Sleep rejuvenates &quot;especially by the rising moon.&quot;</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Negative meaning</summary><div class="rd-body"><p>The main principle: negative value = change the point of view of the client for whom the card does not meet expectations; then the rising moon becomes waning, and from it you explain what the client should not start. In addition: duplicity, concealment of true desires; financial deception, cheating, cheating, intimidation for the sake of savings; fear of future actions, self-deception, weakness, panic &quot;unconscious, silent as cancer&quot; fear; &quot;rejection of ambition&quot; - felt unprepared, waved his tail and went to the bottom (retreating instead of the path).</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> School emphases and distinctive points</summary><div class="rd-body"><ul class="st-list"><li>White is quoted in detail: the moon in the mercy side, 16 major and 16 minor rays, the life of the imagination, the dog and the wolf are the fears of the natural mind, the reflected light is not able to illuminate the unknown.</li><li>Symbolism of animals: the wolf is an innate fear (death, hunger, injury), the dog is a domesticated fear of a civilized person (losing a job, keys, offending); in fact, “it is just a domesticated fear, which is still wild in the depths”; the man delegated the dog to fear for himself.</li><li>Cancer is a chthonic creature: it lives in a hole under water, crawls out of its comfort zone (4th house) outward; it dives back when frightened. Chthonic deities: Poseidon, ousted by Zeus; scoundrels and flock birds (Hitchcock Birds!) as their messengers; Apollo, who defeated Pethon, = consciousness conquers the animal principle; George the Victorious, the Christian equivalent; &quot;the dream of reason breeds monsters.&quot; The modern version is Cthulhu Lovecraft as the product of Victorian Jones&#x27;s desires; the Devikts suppressed by Davikts.</li><li>- The tides: the moon rules the water (its tidal force is 2.17 times that of the sun); the tide exposes unknown creatures - hence the fear of a new path; the tide rhythm = falling asleep and going back.</li><li>- School astrology: the correspondence of the XI house (Aquarius, Uranus) - the future, groups, youth; movement towards the new; emphasis on &quot;there is no moon in the zodiac circle&quot;, and the meaning is. Cancer = 4th house. It works through the solar sign; fictitious planets Chiron (ruler of Libra) and Proserpine (Virgin), Lilith does not use; lunar days do not particularly do. Mutable signs are &quot;signs of transformation&quot;; Absalom Submarine advises.</li><li>Mythology: Selena (= in late antiquity Artemis and Hecate); Endymion myth - eternal youth in eternal sleep → card of sleep and lucid dreams (Laberg recommends), Sleeping Beauty. Artemis / Diana: eternally young hunter, bow-crescent, deer as caution, patroness of Amazons, childbirth and female activity; Action, who has been spying on the mystery, &quot;you can not peek.&quot; Hecate - the gods cross between the wild (&quot; Harbillas) (&quot;Shid) (&quot;Shiding the wild ones).</li><li>The middle path of the Buddha (Little Buddha Bertolucci): the golden mean between asceticism and pleasure; passing along the fine line &quot;step left, step right - wrong.&quot;</li><li>- Kolobok: a fairy tale about a chthonic creature, clutched &quot;from the farthest lower corner of the barn&quot; (subconscious); all the animals were frightening - not terrible, but a direct deception ate the fox: &quot;fear has big eyes, but it is worth fearing direct deception.&quot; Kolobok - lunar archetype (pancake/san - solar).</li><li>- Cinema as an illustration of the archetype: Coppola&#x27;s Dracula (Gary Oldman) Two heroines = the light/dark side of the moon silverware - lunar metal; Dracula does not manipulate, but shows people their deepest desires. &quot;She&quot; Children overcome their own fears. school-house &quot;Harry Potter and the Prisoner of Azkaban&quot; Boggart, werewolf Lupin (a wolf afraid of the moon) against dog-animaga Sirius, taming fear with the Beak-wing; World War Z and The Book of Eli - the path through dangers; Gone with Ghosts by Miyazaki Oriental cinema is lunar in itself. &quot;Walk&quot; - a real tightrope walker between the twin towers: The whole image of the card (the way, two towers, bow, fear).</li><li>Composition: two triangles (moon + dog + wolf; two towers + cancer) - the prototype of the six-pointed star of the next arcanum; where people could stand - there is a wolf and a dog.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Keywords</summary><div class="rd-body"><ul class="st-list"><li>The rising moon · fear (wolf and dog) · deception, murky reflected light · chthonic deity / being · middle way · &quot;carefully, cautiously, with fear&quot; · hidden desires and incomes · artificial personality · intuition, &quot;silent knowledge&quot; · movement into the unknown.</li><li>---</li></ul></div></details>
+</div>
+<nav class="card-pagination" aria-label="Previous and next card">
+<a rel="prev" href="zvezda.html"><span>← Previous card</span>The Star</a>
+<a rel="next" href="solnce.html"><span>Next card →</span>The Sun</a>
+</nav>
+</article>
+</main>
+<footer class="site-footer">
+  <p>Tarot · Card Meaning Guide</p>
+  <p class="footer-note">The material is for reference and entertainment</p>
+
+<div class="footer-contact">
+  <p class="fc-lead">For questions, collaboration or advertising enquiries, write to me — I reply personally:</p>
+  <div class="fc-links">
+    <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+    <span class="fc-sep" aria-hidden="true">·</span>
+    <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+  </div>
+  <p class="fc-lead">I keep this project going through enthusiasm, without advertising or visitor fees. If you find it useful, a contribution of any size helps me develop the guide further.</p>
+  <div class="fc-links fc-donate">
+    <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Donatello (UA-friendly)</a>
+    <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+  </div>
+</div>
+</footer>
+<!-- Модалка «About the project» -->
+<div class="about-backdrop" id="aboutModal" aria-hidden="true">
+  <div class="about-dialog" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+    <button class="about-close" type="button" aria-label="Close">&times;</button>
+    <h2 id="aboutTitle"><span class="title-star">✦</span> About the project</h2>
+    <p>I put this personal guide to Tarot, Lenormand, runes and astrology together on my own, with no team, office or investors. It runs on enthusiasm, without intrusive advertising, registration or paid subscriptions. All the material is freely accessible.</p>
+    <p>Creating and maintaining the guide takes hundreds of hours: writing, translating interpretations, designing pages and looking after the server. If it has helped you, a contribution is a welcome thank-you and supports new sections, cards, combinations and spreads.</p>
+    <div class="about-donate">
+      <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Support via Donatello (UA-friendly)</a>
+      <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+    </div>
+    <p class="about-contact">Questions, collaboration ideas or advertising enquiries? Write to me — I reply personally:</p>
+    <div class="about-links">
+      <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+      <span aria-hidden="true">·</span>
+      <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('aboutBtn'), m=document.getElementById('aboutModal');
+  if(!btn||!m) return;
+  function open(e){e.preventDefault();m.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){m.classList.remove('open');document.body.style.overflow='';}
+  btn.addEventListener('click',open);
+  m.querySelector('.about-close').addEventListener('click',close);
+  m.addEventListener('click',function(e){if(e.target===m)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+</body>
+</html>

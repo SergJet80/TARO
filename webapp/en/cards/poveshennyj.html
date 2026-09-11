@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Hanged Man — Meaning and Interpretation | Tarot Guide</title>
+<meta name="description" content="The Hanged Man: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<link rel="canonical" href="https://taro.jetserg.top/en/cards/poveshennyj.html">
+<meta property="og:title" content="The Hanged Man — Meaning and Interpretation | Tarot Guide">
+<meta property="og:description" content="The Hanged Man: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taro.jetserg.top/en/cards/poveshennyj.html">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/major-12-hanged-man.webp">
+<link rel="stylesheet" href="../../css/style.css?v=4.0">
+<link rel="stylesheet" href="../../css/astrology.css?v=4.0">
+<style>
+.main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
+.card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
+.card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
+.card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
+.card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── School of Modern Tarot ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
+.card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
+.card-pagination a:last-child { text-align: right; }
+.card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
+@media (max-width: 480px) {
+  .main-nav { padding: 12px 12px 0; }
+  .main-nav a { padding: 8px 12px; font-size: .9rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
+  .card-pagination { gap: 10px; }
+  .card-pagination a { padding: 16px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Hanged Man — Meaning and Interpretation | Tarot Guide",
+  "description": "The Hanged Man: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.",
+  "url": "https://taro.jetserg.top/en/cards/poveshennyj.html",
+  "inLanguage": "en"
+}
+</script>
+<!-- Microsoft Clarity -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yejlmmd6nr");
+</script>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+<nav class="main-nav" aria-label="Sections">
+  <div class="main-nav-inner">
+    <a href="../taro/index.html">Tarot</a>
+    <a href="index.html" class="mn-active" style="display:none" aria-hidden="true">Cards</a>
+    <a href="../astrology/index.html">Astrology</a>
+    <a href="../lenormand/index.html">Lenormand</a>
+    <a href="../runes/index.html">Runes</a>
+    <a href="../../spreads.html">Spreads</a>
+  <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> About the project</a>
+  </div>
+</nav>
+<main class="card-page">
+<nav class="card-crumbs" aria-label="Breadcrumbs"><a href="../taro/index.html">Tarot</a> / <span aria-current="page">The Hanged Man</span></nav>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="../../img/cards/major-12-hanged-man.webp" alt="The Hanged Man — Universal Waite Tarot card" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Major Arcana · XII</p>
+<h1 class="m-title"><span class="card-number">XII</span>The Hanged Man</h1>
+<p class="m-en"></p>
+<p class="m-meta">Element: <b>Water</b> &nbsp;·&nbsp; Astrology: <b>Neptune</b></p>
+</div>
+</header>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Card positions">
+<label class="pos-tab" for="pos-upright">Upright position</label>
+<label class="pos-tab" for="pos-reversed">Reversed position</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">School of Modern Tarot</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">pause</span><span class="kw">new-look</span><span class="kw">let-off</span><span class="kw">sacrifice</span><span class="kw">suspension</span><span class="kw">enlightenment</span></div>
+<p class="short-value">A voluntary pause that changes everything: the world viewed upside down is a very different place.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>The hanged man hangs from the living tree calmly and almost blissfully, of his own choosing, not as a punishment, but as a stop for insight: while life is frozen, the eye learns to see the upside down as straight.</p>
+<p>In the scenario, the card says, it&#x27;s useless and harmful to force events, and it&#x27;s not about action that you need to change your optics, and sometimes you just need to flip the problem so that the answer becomes obvious, and the pause is not a waste of time, but an investment of time.</p>
+<p>Arcana is connected with the subject of voluntary sacrifice: stepping back for two, giving up the small for the main, and whoever can hang in the uncertainty without panic comes out with a gift that is not accessible to the horny.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>The day asks you to slow down: move an important purchase, don&#x27;t send a written heated letter, let the situation persist. It&#x27;s good to take a break from the usual route - a walk, the other end of the city, someone else&#x27;s hobby refreshes your eyes. What in the morning seemed like a problem, by the evening may be just an unfortunate angle.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>The project is stalled, the partners are silent, the results are not moving, and the card suggests that we take a pause -- rethink the approach, gather the missing information, do what was postponed, and an active assault now will yield less than patient retraining.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>Relationships need a break, not a revolution: stop demanding immediate answers and look at the partner from the outside with their circumstances, their fears, their love language. Sometimes a sincere concession, even the sacrifice of time and comfort, melts the ice faster than the clarification. The lonely card hints that while you are in love with your own script, the real person passes by unnoticed.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>Your body asks for a recovery mode: sleep, water, slowing down. Chronic stress is not treated with heroic exercise, but with relaxation — yoga, massage, swimming are good. Diagnosis may require rechecking: take your first test, the picture will clear up later.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>At a deep level, it&#x27;s the initiatory arcana, the initiate suspended between heaven and earth to see the world from the inside out. Yoga, meditation in inverted postures, the practice of mindful pause between inhalation and exhalation, all have the same effect -- shifting perspective. The Isa Rune and the principle of standing in the flow are close to his spirit: strength is born from stillness.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">entanglement</span><span class="kw">sacrifice</span><span class="kw">resistance</span><span class="kw">martyrdom</span><span class="kw">hesitation</span><span class="kw">stagnation</span></div>
+<p class="short-value">The hanging was prolonged: the pause from fruitful turned into a swamp, and the sacrifice into a vain one.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>The upside down Hanged Man is the one who hangs not by choice but by inertia. The pause, conceived as a strategy, has become a way of hiding from the decision; the person waits for life to take him off the tree.</p>
+<p>The second facet is ostentatious sacrifice: to suffer on display, to collect gratitude for something that no one asked for, a martyr of this kind does not want an outlet because the role feeds him attention.</p>
+<p>Arcan warns that the world has changed its perspective, and you look the old way. Until the extra is released, the new does not enter - suspension without a purpose turns into emptiness.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>The day falls into procrastination, with things hanging for weeks, little things swelling into rubble, see if you&#x27;re doing too much for those who are used to taking it in silence, unload the task list to three points and do it -- any movement down to the ground is now more healing than a beautiful hanging.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>At work, you&#x27;re making it a strategy: projects don&#x27;t move because no one wants to make a decision, and you might be making sacrifices for someone else&#x27;s outcome -- overwork, other people&#x27;s tasks, promises that they&#x27;ll appreciate later -- and the card tells you to say the price of your patience out loud or get out of the hang.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>The relationship is stuck in a perpetual waiting: the partner is not ready, the conversation is postponed, you live in a pause that no one wants, sacrifice is not a virtue, but a way to avoid the honest question of whether you really need this relationship, and if you give more than you get, and be proud of it, the card suggests taking the halo and talking straight.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>The long-term waiting pattern is hitting the body: lethargy, swelling, stagnant sedentary behavior, exacerbations that last for months, treatment rushes halfway through, it&#x27;s assigned, it&#x27;s abandoned, it takes the discipline of simple actions: moving daily, the course of therapy to the end, not heroic jerks through force.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>In a mystical sense, inverting is a blocked initiation: a person is afraid of letting go, without which there is no transition, and clings to an old person; practitioners can slip, a gift can feel stolen; completion techniques and earthy practices are useful, walking, bodywork, bringing back into the flow.</p></div>
+</div>
+<div class="pos-pane pane-roman roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> In brief</h3>
+<div class="info-section"><h3>The main idea</h3><p>Hanging is a condition where the usual look no longer works.
+The person is literally “upside down” and forced to look at the situation from the other side.</p></div>
+<div class="info-section"><h3>How it manifests</h3><p>Compromise, altruism, empathy, promise, and the ability to voluntarily limit yourself for something more important.</p></div>
+<div class="info-section"><h3>Work and money</h3><p>Related funds, debts, liabilities, frozen money.</p></div>
+<div class="info-section"><h3>In a relationship</h3><p>The ability to take into account the interests of the partner and accept the limitations that arise within the union.</p></div>
+<div class="info-section"><h3>The shadow side</h3><p>The sacrifice becomes excessive, the person forgets his own goals and begins to save those who were not asked to save.</p></div>
+<div class="info-section"><h3>Feature of the school</h3><p>The hanged man is associated with Libra and the VII House, and his key mythological image is the One who hung on the world tree for the sake of knowledge.</p></div>
+<div class="roman-astro"><span class="ra-label">✷ School astrology</span><b>VII House · Libra</b><span class="ra-sep">·</span>Venus (&quot;Enlightened&quot;) + Chiron; true Neptune - further, in Pisces<div class="ra-classic">In the Waite tradition: Neptune</div></div>
+<h3 class="roman-subtitle"><span>📜</span> In detail — lecture extracts</h3>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">✧</span> Essence of the card</summary><div class="rd-body"><p>The hanged person is Venus, the one who has seen: the halo means new vision, but by nature it is Venus of the 7th house on Libra; the true Neptune with sacrifice for all is further away in Pisces; the core of the card is the sense of suspension: a person must take into account not only his own interests, like the Magician, but the interests of the opposite side. Formula Odin: &quot;If you want to acquire something, part with something,&quot; the sacrifice is made to himself.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Upright position</summary><div class="rd-body"><p>Society and desire. An altruist who stands upside down and looks at things from a new perspective; an innovator who brings a fresh stream; social constraints are inconveniences that we endure because it is not accepted. The continuation of the Justice card is a social contract: &quot;It is fair that you sacrifice something for another in the hope that another person will sacrifice something for you too.&quot; Promises are what we &quot;bind ourselves&quot; with, even when the execution is uncomfortable.</p>
+<p>Time and position. Hanging, no-go-go, a card of stiffness and tightness. Often plays just like time: slow, too long, &quot;the situation is frozen in the air.&quot; Plus waiting: did a good thing, you have to wait for an answer.</p>
+<p>Work, finance. Money is in circulation -- money is in business, tied, &quot;you&#x27;re in a bind.&quot; Debt: debt, risked money and peace; financial obligations constrain freedom of action; stagnation, the same salary, &quot;everything is frozen, hanging.&quot;</p>
+<p>Personal life (7th house: marriage, marriage terms, divorce and marriage rates, contracts, unions, compromise, opponents and enemies) Self-reliance: one decides what to sacrifice. Empathy through the living of someone else&#x27;s limitation: you want to understand the blind man - blindfolded day. The cons of the band are emotional stiffness, promises made on emotions (&quot;What is written with a pen, you can&#x27;t knock out an axe&quot;).</p>
+<p>Self-development. Airy theme: unusual look, creativity; ideas come from the world of Chiron with insight; it includes yoga, music, altered states.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Negative meaning</summary><div class="rd-body"><ul class="st-list"><li>The school formula: Hanged in the negative is the same Hanged as the straight, only &quot;in a negative sense.&quot;</li><li>Self-sacrifice has become too deep: a deep emotional attachment, a person forgets his goals for the sake of the goals of another.</li><li>- Imposed help with self-interest: &quot;Come on, come on, it&#x27;s not difficult for me&quot; - drags across the road &quot;old woman, who is a hundred years old does not need&quot;, clearly pursuing their goals.</li><li>Obsession, mental instability is a rare narrow meaning; more often, simply a suspended state.</li><li>- Squeezed views: does not recognize another point of view, blames others for everything, without seeing his guilt.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> School emphases and distinctive points</summary><div class="rd-body"><ul class="st-list"><li>His astrology on top of European mythology: the 7th house / Libra, the rulers of Venus (love for all neighbors) and Chiron – “half-man-half-knight”, the teacher of heroes, a walker to the “other big world”; his sign is the key, “that golden key of Buratino”, the key to the spiritual world.</li><li>- About Neptune: the halo = the enlightened Venus, her highest hypostasis, but the true Hanged Neptune is further - the one who in Pisces sacrifices himself for everyone; Christ is not a card to be called. Golden Dawn corrects: she called the card &quot;drowned&quot; - &quot;not everything that Golden Dawn believed is true.&quot;</li><li>Waite quotes: the figure forms a cross with the letter T; the face “expresses a deep trance, but not suffering – therefore it is not a martyr”; the living tree, the green leaves – the World Tree; not the card of death (the skeleton hanging by the neck is a mistaken image); hidden “the relationship between the divine principle and the universe”, the mystery of death and resurrection – a hint of Jesus, who then could not be called directly.</li><li>The shearing of the lecture is Yggdrasil: the roots are weaved from the past of all people, the trunk is the present, the branches are the future; the dragon Nidhoegg chews the roots - so desires &quot;gnaw us&quot; from the subconscious; the eagle at the top is consciousness; the squirrel Ratatosk is Hermes-herald. Three roots: the source of Norns (Urd, Verdandi, Skuld), the Mimir well (for the throat of One gave the right eye) and the boiling Hvergelmir (water is the element of emotions).</li><li>- One nine days hung &quot;neither alive nor dead&quot; and learned runes through the spear Gunnir. a bunch of houses: runes - fire (Mars, first house), Tarot - water, about the senses of the world; &quot;left and right hand.&quot; To understand little - you have to go do.</li><li>An example of the pupils “pioneer and old woman” (the sharpness of Ranevskaya): the pioneer drags an old woman by force across the road, which does not need it, for the right to consider herself good; all good returns, the system is closed.</li><li>The apostle Peter, hanging upside down, thought himself unworthy of execution as Christ; “number two is always Libra, inferior to the one who needs it most.” The first Pope, the holder of the keys to the Kingdom of Heaven, is a roll call with the Hierophant; three times denied, repented, forgiven, the “right traitor”; the wrong one is Judas, hanged by the neck (the image of the dark Fish). The yellow and blue on the card are the sun of illumination above the sky.</li><li>- Rites of initiation: hanging upside down, jumping with a vine, scarring - near death (followed by Death; next Anubis - the guard of the scales at the trial of Osiris) a person is visited by visions; hence the meaning of the card: bringing yourself into an uncomfortable position, acting in a new way - &quot;and find a new one.&quot;</li><li>Not the most spiritual card: the maximum spirituality is the World; the Hanged only &quot;touched the edge of his eye&quot; when he saw the smallness of the problems in the face of death. Advice: &quot;no need to hang long&quot; - Buddha rose from under the tree and went to live. According to the Shanskaya method: 12 in the date of birth - &quot;a straight line with God.&quot;</li><li>- Movie of self-sacrifice: Ron in the magical chess &quot;Harry Potter&quot;; &quot;Bodyguard&quot;; &quot;Titanic&quot; (Dicaprio - &quot;perfect spouses&quot;); Gandalf &quot;You shall not pass!&quot;; Arwen, who gave immortality for love; &quot;Armageddon&quot; (Bruce Willis); &quot;Constantin&quot; - Keanu Reeves gives his soul (Aries-Libras work in pair); &quot;Saving Private Ryan&quot;; &quot;Interstellar&quot; - father sacrifices years of life for children; &quot;Avatartar&quot; - Radioparation&quot; (Avatar)</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Keywords</summary><div class="rd-body"><ul class="st-list"><li>Suspended state • self-sacrifice • new angle (insight) • promises and obligations • funds in circulation • debts • prolonged time, stagnation • compromise • social constraints • &quot;to receive - give&quot;</li><li>---</li></ul></div></details>
+</div>
+<nav class="card-pagination" aria-label="Previous and next card">
+<a rel="prev" href="spravedlivost.html"><span>← Previous card</span>Justice</a>
+<a rel="next" href="smert.html"><span>Next card →</span>Death</a>
+</nav>
+</article>
+</main>
+<footer class="site-footer">
+  <p>Tarot · Card Meaning Guide</p>
+  <p class="footer-note">The material is for reference and entertainment</p>
+
+<div class="footer-contact">
+  <p class="fc-lead">For questions, collaboration or advertising enquiries, write to me — I reply personally:</p>
+  <div class="fc-links">
+    <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+    <span class="fc-sep" aria-hidden="true">·</span>
+    <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+  </div>
+  <p class="fc-lead">I keep this project going through enthusiasm, without advertising or visitor fees. If you find it useful, a contribution of any size helps me develop the guide further.</p>
+  <div class="fc-links fc-donate">
+    <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Donatello (UA-friendly)</a>
+    <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+  </div>
+</div>
+</footer>
+<!-- Модалка «About the project» -->
+<div class="about-backdrop" id="aboutModal" aria-hidden="true">
+  <div class="about-dialog" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+    <button class="about-close" type="button" aria-label="Close">&times;</button>
+    <h2 id="aboutTitle"><span class="title-star">✦</span> About the project</h2>
+    <p>I put this personal guide to Tarot, Lenormand, runes and astrology together on my own, with no team, office or investors. It runs on enthusiasm, without intrusive advertising, registration or paid subscriptions. All the material is freely accessible.</p>
+    <p>Creating and maintaining the guide takes hundreds of hours: writing, translating interpretations, designing pages and looking after the server. If it has helped you, a contribution is a welcome thank-you and supports new sections, cards, combinations and spreads.</p>
+    <div class="about-donate">
+      <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Support via Donatello (UA-friendly)</a>
+      <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+    </div>
+    <p class="about-contact">Questions, collaboration ideas or advertising enquiries? Write to me — I reply personally:</p>
+    <div class="about-links">
+      <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+      <span aria-hidden="true">·</span>
+      <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('aboutBtn'), m=document.getElementById('aboutModal');
+  if(!btn||!m) return;
+  function open(e){e.preventDefault();m.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){m.classList.remove('open');document.body.style.overflow='';}
+  btn.addEventListener('click',open);
+  m.querySelector('.about-close').addEventListener('click',close);
+  m.addEventListener('click',function(e){if(e.target===m)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+</body>
+</html>

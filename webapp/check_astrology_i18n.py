@@ -71,6 +71,8 @@ def check():
         errors.append(f"Astrology: expected 28 ready routes, found {len(routes)}")
         return errors
     route_targets = {(ROOT / route["ru_file"]).resolve(): (ROOT / route["en_file"]).resolve() for route in routes}
+    # EN-таро готово (78 карт): ссылки «Таро» в EN-наве указывают на /en/taro/
+    route_targets[(ROOT / "index.html").resolve()] = (ROOT / "en/taro/index.html").resolve()
     special_targets = {
         (ROOT / "astrology/js/wheel-data.js").resolve(): (ROOT / "en/astrology/js/wheel-data.js").resolve(),
         (ROOT / "astrology/js/wheel.js").resolve(): (ROOT / "en/astrology/js/wheel.js").resolve(),

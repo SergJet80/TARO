@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Tower — Meaning and Interpretation | Tarot Guide</title>
+<meta name="description" content="The Tower: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<link rel="canonical" href="https://taro.jetserg.top/en/cards/bashnya.html">
+<meta property="og:title" content="The Tower — Meaning and Interpretation | Tarot Guide">
+<meta property="og:description" content="The Tower: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taro.jetserg.top/en/cards/bashnya.html">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/major-16-tower.webp">
+<link rel="stylesheet" href="../../css/style.css?v=4.0">
+<link rel="stylesheet" href="../../css/astrology.css?v=4.0">
+<style>
+.main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
+.card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
+.card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
+.card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
+.card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── School of Modern Tarot ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
+.card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
+.card-pagination a:last-child { text-align: right; }
+.card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
+@media (max-width: 480px) {
+  .main-nav { padding: 12px 12px 0; }
+  .main-nav a { padding: 8px 12px; font-size: .9rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
+  .card-pagination { gap: 10px; }
+  .card-pagination a { padding: 16px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Tower — Meaning and Interpretation | Tarot Guide",
+  "description": "The Tower: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.",
+  "url": "https://taro.jetserg.top/en/cards/bashnya.html",
+  "inLanguage": "en"
+}
+</script>
+<!-- Microsoft Clarity -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yejlmmd6nr");
+</script>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+<nav class="main-nav" aria-label="Sections">
+  <div class="main-nav-inner">
+    <a href="../taro/index.html">Tarot</a>
+    <a href="index.html" class="mn-active" style="display:none" aria-hidden="true">Cards</a>
+    <a href="../astrology/index.html">Astrology</a>
+    <a href="../lenormand/index.html">Lenormand</a>
+    <a href="../runes/index.html">Runes</a>
+    <a href="../../spreads.html">Spreads</a>
+  <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> About the project</a>
+  </div>
+</nav>
+<main class="card-page">
+<nav class="card-crumbs" aria-label="Breadcrumbs"><a href="../taro/index.html">Tarot</a> / <span aria-current="page">The Tower</span></nav>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="../../img/cards/major-16-tower.webp" alt="The Tower — Universal Waite Tarot card" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Major Arcana · XVI</p>
+<h1 class="m-title"><span class="card-number">XVI</span>The Tower</h1>
+<p class="m-en"></p>
+<p class="m-meta">Element: <b>Fire</b> &nbsp;·&nbsp; Astrology: <b>Mars</b></p>
+</div>
+</header>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Card positions">
+<label class="pos-tab" for="pos-upright">Upright position</label>
+<label class="pos-tab" for="pos-reversed">Reversed position</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">School of Modern Tarot</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">collapse</span><span class="kw">suddenness</span><span class="kw">revelation</span><span class="kw">release</span><span class="kw">crisis</span><span class="kw">truth</span></div>
+<p class="short-value">Lightning strikes at the foundation: the false collapses suddenly - and precisely because it was false.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>The tower built on the sand has endured years, to one loud blow. The lightning on the card is not an accident, but an audit: anything that is held on self-deception does not withstand contact with the truth. The crown flies from the top, vanity always falls first.</p>
+<p>The tower arrangement promises not trouble at all, but the dismantling of concrete constructs: relationships based on illusions, careers based on talents, reputation-facade, destruction is swift and painful, but it releases what has been walled up alive.</p>
+<p>And after the fall, the amazing thing is that the land is closer than it seemed from the top floor window. The Arcana of Mars is not about punishment, but about forced honesty, the fastest form of growth.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>A day of surprises: technology breaks down, plans break down, news comes in without warning. Don&#x27;t cling to the script - the restructuring goes faster without resistance. It&#x27;s good to acknowledge aloud what was clear long ago: an acknowledged problem explodes quietly. By evening there is usually a strange relief.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>Professional thunder: layoffs, project failures, team breakdowns, public failure of a beautiful strategy. If your design was fair, the blow will only hurt extra. Don&#x27;t rebuild the collapsed one -- build lower, wider and with your materials.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>The relationship was in crisis-exposure: the secret came out, the unsubscribed came out, &quot;we&#x27;re fine&quot; ended. It&#x27;s not necessarily a break-up — sometimes it&#x27;s the only way a couple sees each other for real for the first time. The union on an honest foundation will survive the storm and grow stronger; the facade relationship will collapse, freeing both. It hurts and cleanses.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>The acute states: exacerbation, trauma, fever, sudden diagnosis — the body screams where you haven&#x27;t listened to a whisper in years. The card requires immediate response and complete honesty with the doctors. Often, an acute crisis turns out to be a turning point: correctly treated, it removes the entire chronic background.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>The tower is a card of illumination by force: an awakening that was not asked for, a destruction of ego constructs by lightning from above, used in magic to break enchanted circles and remove old negativity — the image works loudly and requires respect. The main lesson of the arcana is not to be attached to forms even the most beautiful.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">delayed crisis</span><span class="kw">fear</span><span class="kw">blast</span><span class="kw">drag-down</span><span class="kw">evasion</span><span class="kw">discharge</span></div>
+<p class="short-value">The storm hangs in the air or has already passed the side: the tension requires an exit - planned or spontaneous.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>The inverted tower is a thunderstorm that somehow doesn&#x27;t start. Everybody feels the pressure, everybody&#x27;s waiting for the explosion, and it&#x27;s delayed, and it&#x27;s getting more expensive every day. It&#x27;s a card of slow dismantling, the walls cracking for months, and nobody dares to start a serious analysis.</p>
+<p>The other sense is the catastrophe inside: everything is held on the outside, and the inside is already collapsing - sleep, nerves, faith in what is happening, a person supports his face at the cost of health and sincerity.</p>
+<p>There is also a favorable option: lightning struck nearby, the debris passed by, then the card says briefly - the terrible is over, it&#x27;s time to get out of under the table and calmly dismantle the blockage.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>Getting excited: little things get upset, the equipment breaks down in turn, the house slides into conflict. Make it a regular exercise, talk, tears, or it will happen on its own and not where it is convenient. Check the fuses literally and figuratively: where the tension accumulates, it eventually breaks.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>The crisis is smoldering: the organization is cracking, but officially &quot;everything is under control&quot;; cuts are whispered, strategy is falling apart; don&#x27;t wait for official letters - update your resume, warm up your connections, put valuables in your portfolio; if you&#x27;re cooking the blast yourself, lay the foundation in advance: cutting is hotly expensive.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>The relationship hangs over the breakup: both know it&#x27;s over or it&#x27;s about to change, but it&#x27;s the same play, and it&#x27;s broken through by domestic breakdowns and grievances, silence about the big stuff eats away at intimacy from within, and the only safe way to tell the truth is to tell it yourself before life tells it for you.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>The harbingers are there: pressure, panic waves, insomnia, the body prepares its thunder if you keep pulling. Chronic stress has already picked a weak spot and works on it. Planned discharge — vacation, therapy, examination — is always cheaper than emergency. After the experience of shock, apathy is possible: it is repair, give it a deadline.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>In practice, the inverted tower warns of accumulated negativity in space or body: cleansing is necessary, but gradual, otherwise it will whip at once. The letting techniques work better than the power ones. Sometimes the card reports a preventative blow: the defense worked, thank you and reconsider your lifestyle. The lesson is to relieve tension in small portions without bringing to lightning.</p></div>
+</div>
+<div class="pos-pane pane-roman roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> In brief</h3>
+<div class="info-section"><h3>The main idea</h3><p>The tower is a sharp transition from one state to another.
+Unlike Moderation, where change is gradual, the factor of surprise appears.</p></div>
+<div class="info-section"><h3>How it manifests</h3><p>The collapse of the old, sudden restructuring, force majeure, unexpected events, the destruction of the usual scenario.</p></div>
+<div class="info-section"><h3>Work.</h3><p>Career restructuring, change of profession, the need to change the working model.</p></div>
+<div class="info-section"><h3>In a relationship</h3><p>Even a stable union requires repair and renewal, and if you don&#x27;t change anything for years, a relationship can collapse suddenly.</p></div>
+<div class="info-section"><h3>Finance.</h3><p>Risks, the need to have a reserve, change the form of investments and think in advance about force majeure.</p></div>
+<div class="info-section"><h3>The shadow side</h3><p>The tower is especially unpleasant for those who did not want to change anything.</p></div>
+<div class="info-section"><h3>Feature of the school</h3><p>The tower is connected to Capricorn, X House, Saturn and Uranus, and an important principle of the card is that the crown always falls from the tower. If power is not transferred in time, it will be thrown off itself.</p></div>
+<div class="roman-astro"><span class="ra-label">✷ School astrology</span><b>X house · Capricorn</b><span class="ra-sep">·</span>Saturn/Kronos + Uranus<div class="ra-classic">In the Waite tradition: Mars</div></div>
+<h3 class="roman-subtitle"><span>📜</span> In detail — lecture extracts</h3>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">✧</span> Essence of the card</summary><div class="rd-body"><p>The tower is feared by customers (&quot;everything is lost, everything is bad&quot;), which is &quot;a perfectly normal natural process in anyone&#x27;s life,&quot; unpleasant but necessary. The core of the card is the transition from one state to another: if Moderation gives a qualitative transition, then the Tower is a sharp transition with the factor of suddenness. And &quot;something must be done&quot;: &quot;man assumes, God disposes.&quot;</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Upright position</summary><div class="rd-body"><p>Interpreting through his astrological system: the tenth house, Capricorn, Saturn/Kronos + Uranus (Yuri Khan system). cards are placed on the house in a &quot;gradient&quot;: Capricorn partially &quot;climbs&quot; into the Devil and the Star. Tower - external protection (building itself in the big world); Chariot (opposite 4th house) - the inner, &quot;small safety harbor&quot; of the family.</p>
+<p>Work/career: you have a careerist building a career and an image; straight-forward, carefully preparing for the challenges. School example: a tarologist has to remodel his tower online — those who haven&#x27;t had time, &quot;fall off it.&quot;
+Relationships/family: family hearth – the chariot given by parents; the tower – the cell of society (marriage) that needs to be “renovated, updated and rebuilt”, otherwise it will collapse suddenly (“some mistress or lover”). A man’s interest falls if you live “on the same flight of stairs” for years – plan to please your partner “in a year, two, five”.
+Self-development/plans: the higher the tower (dominoes require &quot;knitting&quot;), the more precise the action: Direct - there is a plan B and supplies, lightning &quot;does not drop the hat&quot;; force majeure to prescribe in contracts, breaking patterns and rebuilding the personality in time - otherwise time will hit the crown (Nokia in the age of iPhones).
+Finance: savings are held in case of siege; risks are the same lightning. Change the form of investments in time - bank → real estate, dollar → bitcoin (&quot;the same bricks are shifted differently&quot;). Fear as an instrument of power (the ring of Saturn) does not last long - the rate chart falls.
+I also saw that retirement (change of generations; a reference to the Ten Pentacles) may not bring what you expected.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Negative meaning</summary><div class="rd-body"><p>The formulas are scattered throughout the lecture: sudden accidents to leave plans; careerists can &quot;go on their heads,&quot; &quot;you can expect any nasty things&quot;; risks in investments are not taken into account; hopes are ruined - built &quot;the nonsense that falls from any storm&quot;; raising a child in the old way - &quot;the tower will throw off.&quot; The general principle of the school is neutral - &quot;there is nothing eternal under the moon,&quot; who rebuilds and transfers power in time, &quot;that tower will not be thrown down.&quot;</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> School emphases and distinctive points</summary><div class="rd-body"><ul class="st-list"><li>Waite&#x27;s quotes: &quot;crash in all its aspects&quot;; &quot;the word made flesh&quot; - man builds a tower in the same way that God makes the world in miniature, not the fall of Adam; &quot;the ruin of the mind that dared to penetrate the mystery of God&quot;; &quot;if the Lord does not build houses, the labors of builders are in vain&quot; - a shade of just retribution. A bunch of neighboring cards: the devil - a fall into an animal state, the tower - the collapse of an intellect that is proud.</li><li>About Mars from other authors: “on the fence, too, write.”</li><li>Tower of Babel: the motive &quot;to make a name for yourself&quot; = the tenth house; God mixed languages - the factor of surprise; lightning = chance: &quot;When God wants to speak incognito, he signs the name of chance&quot;; &quot;the lightning rod should be put up.&quot;</li><li>Zigkurats (Etemenanki, “the house where heaven and earth meet”): destruction and reconstruction are inseparable from the image; the stones of the ziggurat dismantled by Macedonian went to the theater – “nothing was wasted.”</li><li>- Medieval siege tower (in the lecture caught historical reconstruction): high point - &quot;from above you predict events&quot;; stocks for siege; ring of siege = ring of Saturn; landlord and hereditary power; spiral steps - &quot;each floor - the next generation.&quot; &quot;The crown always falls from the tower&quot;: power is either transferred to the heir on time or thrown off suddenly (the example of Yeltsin).</li><li>Uranus and Kronos: Uranus is the progenitor of the gods, the &quot;population of ideas&quot;, new ideas come &quot;according to Uranus&quot;; Kronos has shifted his father, the sickle is bent down - &quot;the fall of power.&quot; Eating children is an agrarian logic: you raise, then cut weak animals.</li><li>Saturnalia 17-20 December: gentlemen and servants change places, return to the &quot;golden age&quot; of hunter-gatherers; hence the New Year and the Slavic series: caroling, goat skins and horns, gifts to good children and punishment of bad = natural selection.</li><li>Pan is an analogue of Capricorn: he brought panic terror to the Titans for the sake of Zeus; panic fear comes “from the moon”, conscious fear of norms – “from Saturn”; from Typhon fell into the Nile – a fish tail.</li><li>- David and Goliath: Goliath - a descendant of the Rephaim (giants or dead ancestors); David removed armor - only the truth defeats the accumulated structure; Goliath opened from emotions and received a pebble in the forehead; hyperemotional Cancer against the granite of Capricorn - his image is easy to destroy his own emotions.</li><li>Twin Towers (9/11) – a sign of the transition of the Pisces era to Aquarius (“Coincidence? I don’t think... I’m not a conspiracy theorist”).</li><li>Cardinal earth: granite, monuments, “thought carved in granite”, diamonds as extremely concentrated matter (tambourines = diamonds).</li><li>- Images in the cinema: &quot;I&#x27;m enough&quot; / &quot;Falling down&quot; (Michael Douglas) - endured and broke, &quot;cut off the roof&quot; of the mind; &quot;Zombieland&quot; (Woody Harrelson with a pickaxe) - post-apocalypse as the collapse of the familiar world, bricks of life experience will be useful in the new reality (tears a box of money); &quot;People in black&quot; - the picture of the world collapsed overnight, learn from each other; &quot;Downton Abbey&quot; - owners and servants with changing films; &quot;Tapodashityatrophyskatsya&quot; - people are created by the world&quot; (&quot; by the radio), &quot;Tatrophyskatyatrophyskats) - &quot;people are created by the &quot;ttas&quot; (&quot;</li><li>- The little thing about the decor: in Lovers, the man on the right, the woman on the left, in the Tower, they change places, &quot;only in the Jester everything falls into place.&quot; The Amber Chronicles of Zelazna led him to the Tarot.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Keywords</summary><div class="rd-body"><ul class="st-list"><li>factor of surprise · lightning-accident · safety outwards · generational change, power transfer · “the crown always falls from the tower” · career and respect (image) · stocks and plan B · tower rebuilding · Saturn ring · break patterns, exit from the comfort zone</li><li>---</li></ul></div></details>
+</div>
+<nav class="card-pagination" aria-label="Previous and next card">
+<a rel="prev" href="dyavol.html"><span>← Previous card</span>The Devil</a>
+<a rel="next" href="zvezda.html"><span>Next card →</span>The Star</a>
+</nav>
+</article>
+</main>
+<footer class="site-footer">
+  <p>Tarot · Card Meaning Guide</p>
+  <p class="footer-note">The material is for reference and entertainment</p>
+
+<div class="footer-contact">
+  <p class="fc-lead">For questions, collaboration or advertising enquiries, write to me — I reply personally:</p>
+  <div class="fc-links">
+    <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+    <span class="fc-sep" aria-hidden="true">·</span>
+    <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+  </div>
+  <p class="fc-lead">I keep this project going through enthusiasm, without advertising or visitor fees. If you find it useful, a contribution of any size helps me develop the guide further.</p>
+  <div class="fc-links fc-donate">
+    <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Donatello (UA-friendly)</a>
+    <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+  </div>
+</div>
+</footer>
+<!-- Модалка «About the project» -->
+<div class="about-backdrop" id="aboutModal" aria-hidden="true">
+  <div class="about-dialog" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+    <button class="about-close" type="button" aria-label="Close">&times;</button>
+    <h2 id="aboutTitle"><span class="title-star">✦</span> About the project</h2>
+    <p>I put this personal guide to Tarot, Lenormand, runes and astrology together on my own, with no team, office or investors. It runs on enthusiasm, without intrusive advertising, registration or paid subscriptions. All the material is freely accessible.</p>
+    <p>Creating and maintaining the guide takes hundreds of hours: writing, translating interpretations, designing pages and looking after the server. If it has helped you, a contribution is a welcome thank-you and supports new sections, cards, combinations and spreads.</p>
+    <div class="about-donate">
+      <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Support via Donatello (UA-friendly)</a>
+      <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+    </div>
+    <p class="about-contact">Questions, collaboration ideas or advertising enquiries? Write to me — I reply personally:</p>
+    <div class="about-links">
+      <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+      <span aria-hidden="true">·</span>
+      <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('aboutBtn'), m=document.getElementById('aboutModal');
+  if(!btn||!m) return;
+  function open(e){e.preventDefault();m.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){m.classList.remove('open');document.body.style.overflow='';}
+  btn.addEventListener('click',open);
+  m.querySelector('.about-close').addEventListener('click',close);
+  m.addEventListener('click',function(e){if(e.target===m)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+</body>
+</html>

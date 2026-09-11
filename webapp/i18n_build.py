@@ -75,7 +75,11 @@ def english_refs(text,ru_path):
         old=posixpath.normpath(posixpath.join(posixpath.dirname(ru_path),unquote(parts.path)))
         if parts.path.startswith('/'): old=parts.path.lstrip('/')
         if (ROOT/old).is_dir():old=old.rstrip('/')+'/index.html'
-        target='en/'+old if old in available else old
+        if old=='index.html':old='taro/index.html'  # EN таро живёт в /en/taro/ (SPA)
+        if old.startswith('en/'):
+            target=old  # ссылка уже указывает на EN-файл (языковой переключатель в RU-теле)
+        else:
+            target='en/'+old if old in available or old=='taro/index.html' else old
         local=posixpath.relpath(target,posixpath.dirname(en_path))
         result=urlunsplit(('', '', local,parts.query,parts.fragment))
         return m['prefix']+escape(result,quote=True)+m['quote']
@@ -103,14 +107,42 @@ def add_seo(text,ru_path,lang):
     text=text.replace('</head>','<!-- i18n:seo -->\n'+links+'\n<!-- /i18n:seo -->\n</head>',1)
     return text
 
-def finalize(text,ru_path,lang,template=False,english_disclaimer=True):
+def finalize(text,ru_path,lang,template=False,english_disclaimer=True,other_sections_ru=False,section_prefix=None):
+    # other_sections_ru: GPT-stage flag; in EN nav, section links point back to RU sections
+    # that have no EN pages of their own yet (kept as-is since translate_ui handles paths).
+    def english_resources(text,ru_path):
+        # Поправить пути статических ресурсов (css/js/fonts/img) относительно en/, не трогая ссылки на страницы.
+        import posixpath as pp
+        en_path='en/'+ru_path
+        def res(m):
+            ref=unescape(m['url'])
+            if ref.startswith(('data:','#','http')) or '${' in ref: return m.group()
+            clean=ref.split('?')[0].split('#')[0]
+            ext=pp.splitext(pp.basename(clean))[1].lower()
+            old=pp.normpath(pp.join(pp.dirname(ru_path),clean))
+            if ext=='.html' and old!=ru_path:
+                # other_sections_ru: страницы соседних разделов остаются RU — путь от en/<dir>
+                # (кроме самой страницы-источника: она идёт в en/)
+                local=pp.relpath(old,pp.dirname('en/'+ru_path))
+                return m['prefix']+escape(local,quote=True)+m['quote']
+            if ext not in ('.css','.js','.woff2','.woff','.ttf','.webp','.jpg','.png','.svg','.ico'): return m.group()
+            from urllib.parse import urlsplit, urlunsplit
+            parts2=urlsplit(ref)
+            local=pp.relpath(old,pp.dirname(en_path))
+            return m['prefix']+escape(urlunsplit(('', '', local,parts2.query,parts2.fragment)),quote=True)+m['quote']
+        return re.sub(r'''(?P<prefix>\b(?:href|src)\s*=\s*(?P<quote>["']))(?P<url>.*?)(?P=quote)''',res,text,flags=re.I)
     if lang=='en':
         if not template: text=translate_ui(text)
-        text=english_refs(text,ru_path)
+        if other_sections_ru:
+            # путь-нормализация ресурсов и RU-ссылок относительно en/<dir> (GPT-stage semantic)
+            text=english_resources(text,ru_path)
+        else:
+            text=english_refs(text,ru_path)
+        # other_sections_ru=True (GPT-stage semantic): ссылки на соседние разделы остаются на RU-версии
+        # (проверка numerology_localize.check() требует «links to other sections target RU»).
         # Localisation of a string argument; the trainer algorithm is unchanged.
         text=text.replace("toLocaleLowerCase('ru')","toLocaleLowerCase('en')")
-        kofi='<a href="https://ko-fi.com/jetjarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Ko-fi</a>\n'
-        text=re.sub(r'(<div class="(?:fc-links fc-donate|about-donate)">)',lambda m:m.group()+'\n'+kofi,text)
+        # Ko-fi удалён по решению (PLAN_POST_I18N п.2): Donatello+Privat24 (UA-friendly) уже в RU-базе.
         text=re.sub(r'(<a\b[^>]*href="https://(?:donatello\.to|www\.privat24\.ua)/[^>]*>)(.*?)(</a>)',r'\1\2 (UA-friendly)\3',text)
         if english_disclaimer:
             disclaimer='<p class="ln-note">For reference, reflection and entertainment. Card readings do not establish facts, diagnose illness or predict an inevitable future. This is not medical, legal, financial or investment advice; seek qualified help for decisions in those areas.</p>'

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The World — Meaning and Interpretation | Tarot Guide</title>
+<meta name="description" content="The World: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<link rel="canonical" href="https://taro.jetserg.top/en/cards/mir.html">
+<meta property="og:title" content="The World — Meaning and Interpretation | Tarot Guide">
+<meta property="og:description" content="The World: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taro.jetserg.top/en/cards/mir.html">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/major-21-world.webp">
+<link rel="stylesheet" href="../../css/style.css?v=4.0">
+<link rel="stylesheet" href="../../css/astrology.css?v=4.0">
+<style>
+.main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
+.card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
+.card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
+.card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
+.card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── School of Modern Tarot ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
+.card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
+.card-pagination a:last-child { text-align: right; }
+.card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
+@media (max-width: 480px) {
+  .main-nav { padding: 12px 12px 0; }
+  .main-nav a { padding: 8px 12px; font-size: .9rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
+  .card-pagination { gap: 10px; }
+  .card-pagination a { padding: 16px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The World — Meaning and Interpretation | Tarot Guide",
+  "description": "The World: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.",
+  "url": "https://taro.jetserg.top/en/cards/mir.html",
+  "inLanguage": "en"
+}
+</script>
+<!-- Microsoft Clarity -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yejlmmd6nr");
+</script>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+<nav class="main-nav" aria-label="Sections">
+  <div class="main-nav-inner">
+    <a href="../taro/index.html">Tarot</a>
+    <a href="index.html" class="mn-active" style="display:none" aria-hidden="true">Cards</a>
+    <a href="../astrology/index.html">Astrology</a>
+    <a href="../lenormand/index.html">Lenormand</a>
+    <a href="../runes/index.html">Runes</a>
+    <a href="../../spreads.html">Spreads</a>
+  <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> About the project</a>
+  </div>
+</nav>
+<main class="card-page">
+<nav class="card-crumbs" aria-label="Breadcrumbs"><a href="../taro/index.html">Tarot</a> / <span aria-current="page">The World</span></nav>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="../../img/cards/major-21-world.webp" alt="The World — Universal Waite Tarot card" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Major Arcana · XXI</p>
+<h1 class="m-title"><span class="card-number">XXI</span>The World</h1>
+<p class="m-en"></p>
+<p class="m-meta">Element: <b>Earth</b> &nbsp;·&nbsp; Astrology: <b>Saturn</b></p>
+</div>
+</header>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Card positions">
+<label class="pos-tab" for="pos-upright">Upright position</label>
+<label class="pos-tab" for="pos-reversed">Reversed position</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">School of Modern Tarot</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">completion</span><span class="kw">integrity</span><span class="kw">accomplishment</span><span class="kw">execution</span><span class="kw">journey</span><span class="kw">recognition</span></div>
+<p class="short-value">The final chord sounds like the beginning: the cycle is completed, the experience is collected, the dance inside the wreath continues.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>The world is closed by the Major Arcana, a dancing figure in a laurel wreath, and at the corners there are four elements that have passed with you all the way. The magician began with one rod; here there are two, and both are in their hands freely, without effort.</p>
+<p>In the layout, the card announces the completion of a big cycle: diploma, house, project, stage of life — the whole thing is done and done. It&#x27;s not the finish line, it&#x27;s the exit to orbit: after one is finished, the person sees the next one from a height.</p>
+<p>Saturn here is not a rigorous examiner, but a contented builder: the limitations you&#x27;ve been through have turned out to be the framework of the whole. The main gift of the arcana is integrity: the disparate pieces of life are first put together into a pattern.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>Closed gestalt day: final touch, final cleaning, delivery of a long-bought gift. Finish everything that has hung for months, each closed question adds to the ease. It&#x27;s good to take stock and plan the next season: the horizon is far away.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>A major achievement: the project is completed, the goal is taken, the level is officially recognized, the card favors protection, releases, signing long-term contracts and awards, a great moment for going international or long-distance work trip.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>Relationships are experiencing their &quot;world&quot; -- an anniversary, a wedding, a home, or just a deep sense of &quot;we made it&quot; -- lessons learned are not wasted, they are the foundation of our current intimacy. A single card tells you that the cycle of loneliness is complete, you&#x27;ve come out of it as a person ready for a big thing, you may meet on a journey or with a person from afar.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>The body is in harmony: systems work together, recovery from disease is complete, without residual effects. It&#x27;s a good time to establish healthy habits - they lie in fertile soil. Travel and activity in nature are especially healing. Preventive examinations are carried out calmly: the body has nothing to hide.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>The world is the end of the Great Work: the four elements dance around the wreath, and none argues with the others. In practice, the card is used to close magical cycles, thank you rites and initiation to a new level. The wreath is not a cage, but the frame of the picture: the dance continues within the form that protects.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">unfinishedness</span><span class="kw">delay</span><span class="kw">formalization</span><span class="kw">perfectionism</span><span class="kw">fear of a new cycle</span><span class="kw">lack</span></div>
+<p class="short-value">Nearly finished: there is one step left before the end, which for some reason is not done.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>The Upside Down World is a dance that stops a step before the final: diploma unprotected, book nine-tenths completed, move hovering on boxes, almost everything done, and that&#x27;s what &quot;almost&quot; deprives the reward.</p>
+<p>Sometimes the card shows the finale as a formal one: the seal is standing, the inside is empty, the person ran the wrong way, and triumph doesn&#x27;t smell like triumph, the closing is complete. It hurts more than a simple lapse.</p>
+<p>The third sense is the fear of the end of the cycle: it&#x27;s scary to let the finished thing out into the world, because after that you have to become the one who is already unapologetically &quot;ready,&quot; Arcana gently reminds us that a wreath is not a ceiling; behind it begins the sky.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>The house is full of months of finishing touches: one shelf, one call, one document. Finish something today, ease is guaranteed. See if you&#x27;re dropping ninety percent for fear of judging the outcome. A little evening ending is the best sleeping pill.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>Projects are stalled at the finish line: approvals are delayed, the client is delayed, the release is postponed for the fourth time. Check if everything is really ready on your part, sometimes the delay is created by your own perfectionism. Don&#x27;t cut the last stages &quot;for speed&quot;: unsatisfaction will return to a rework. Celebrating early, throwing ridiculously, the finish is closer than it seems.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>The relationship is almost in a close relationship, almost introducing it to its parents, almost talking about the future, someone pulling the finale out of fear of responsibility or loss of freedom, and another story is possible: the form of life together has developed, but there is no dance in it.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>Treatment is abandoned at the last stage: &quot;better, why next,&quot; and the disease goes around. Rehabilitation requires a full course, not half: untreated stories accumulate with interest. Listen to the general feeling of &quot;life passes by&quot; - bodily lethargy often reflects unclosed life cycles. Finish it: the body will thank the energy.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>An inverted arcana indicates an unclosed initiation: learning is interrupted, rite is not completed, and power is not built into life. The practice is many, and there is no integrity - knowledge lies piled up, not gathering into a pattern. Go back and finish: a completed ritual, a completed book, a duty given to tradition.</p></div>
+</div>
+<div class="pos-pane pane-roman roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> In brief</h3>
+<div class="info-section"><h3>The main idea</h3><p>Peace is the completeness and completeness of a situation.
+But ending here doesn&#x27;t mean stopping at all. The world and the Fool are connected as the beginning and end of the same spiral.</p></div>
+<div class="info-section"><h3>How it manifests</h3><p>Closing the project, ending the relationship in its former capacity, completing the financial cycle, paying back the debt, completing the training.</p></div>
+<div class="info-section"><h3>Work.</h3><p>The project is finished — how it turned out, how it turned out. Now the next one begins.</p></div>
+<div class="info-section"><h3>Finance.</h3><p>Debt paid, deposit worked, money returned, loan closed.</p></div>
+<div class="info-section"><h3>In a relationship</h3><p>Relationships reach a full-fledged form and move to a new level – or fully end.</p></div>
+<div class="info-section"><h3>The shadow side</h3><p>Things are logical, but the result may not be liked.</p></div>
+<div class="info-section"><h3>Feature of the school</h3><p>The world is the last point of the spiral, and the Fool is the beginning of the next one, and the end of one cycle is the beginning of the next.
+The main message of the card is, &quot;This stage is complete. Now we can move on.&quot;</p></div>
+<div class="roman-astro"><span class="ra-label">✷ School astrology</span><b>house-wheel</b><span class="ra-sep">·</span>Joose and Mir - alpha and omega coil spiral, above the houses<div class="ra-classic">In the Waite tradition: Saturn</div></div>
+<h3 class="roman-subtitle"><span>📜</span> In detail — lecture extracts</h3>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">✧</span> Essence of the card</summary><div class="rd-body"><p>He takes the world with a lecture with the Jester: both &quot;do not fit&quot; into his system of astrological correspondences - in the 12th house of the struggle of Jupiter and Neptune, the third card is not to be shoved into the third card, the Joke is superfluous in Aries. The core is &quot;the sense of completeness of the situation&quot;: the spiral round is over, gives the way to the next level. The joke and the world - &quot;alpha and omega&quot;, the beginning and end of the same spring, &quot;ess in essence the same.&quot;</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Upright position</summary><div class="rd-body"><ul class="st-list"><li>The meanings are traditionally arranged in four elements; from the physical - only &quot;general well-being.&quot;</li><li>- General series: the end of the cycle - annual, quarterly, financial report, project completion; &quot;nothing can be added&quot;; understanding the form and essence of the phenomenon; objectivity (as opposed to the subjective specificity of Virgo); acceptance of the team as it is - &quot;understood, entered or got involved&quot;; pacification; travel, expanding horizons and markets; often falls on the Internet - &quot;the ideal platform for feeling fullness.&quot;</li><li>Work: the product is produced &quot;as is, so is&quot;, albeit with errors - the cycle is closed, the next project is waiting.</li><li>Finance: the contribution worked - you can withdraw interest; money returned, the debt was given; go to zero, all over - profit and a new turnover; exemption from debts and payments, fully paid mortgage; growth limit - &quot;how much worked, so earned&quot;; on the question from the chat allows reading the wreath as the end of life.</li><li>Self-development: self-esteem through involvement is part of the process, “not above or below” the world; inspiration to create or the desire to dissolve; the wheel of samsara – souls come to “breathe life fully”, the Zen learner chooses a new role of play or leaving higher.</li><li>Relationships: the final relationship is “logical, full-fledged, full-fledged”, leading to continuation in a new quality; the candy-bouquet period is harmonized, there is nothing to add → registry office, joint life, child, divorce or relocation, if it is close; each new round of relations starts with this card.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Negative meaning</summary><div class="rd-body"><p>There is no separate block, the formula is straight: “it will take on all the same meanings only in the negative aspect.” Understanding the form and essence of events remains, but “it will hardly be liked”: “the understanding of this will not become less, but may not be so pleasant.” The specifics of the lecture: the Internet with the surveillance of the algorithms of Facebook and Google — information about you is available to everyone; the journey you will have to experience; the actions have a logical result, but harmony — “against you” along the way throws away the everyday move “the world is round, however you turn it”: you change your point of view — it considers superficial.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> School emphases and distinctive points</summary><div class="rd-body"><ul class="st-list"><li>- Astro-logic system: senior arcana entirely on the wheels of houses are not placed, the younger and at all &quot;tended on the globe&quot; - systematizes only 22; refers to Yuri Khan (the court cards of that go on the last houses).</li><li>- Spiral, not a ring: spring, winding, spiral staircase - step-arcano immediately end of the span, the floor and the start of the next; &quot;the season of the series is over - pull up the first series of the next.&quot;</li><li>Kabbalistic framework: the combination of the first and last letters (alef-tav) gives the truth; Christ – “alpha and omega”; the deck collapses into one point.</li><li>Two readings of evolution: either the World – a joker who has grown to the highest wisdom, or Crowley’s version – the soul is born closest to God and all life separates to reject the material, “to be crowned with a joke” (in school this version is considered “rough”).</li><li>- The interpretation of the character according to Waite: the figure is not Truth (the whole one is naked on the Star), but the soul / consciousness in harmony; “the real truth always leaves a shade of unknowability”; the state of grace, illumination, insight, enlightenment of the Buddha.</li><li>The purple scarf is the color of the highest incomprehensible truths: the upper limit of the rainbow, the duckweed of kings and popes, the most expensive pigment.</li><li>A tetramorph without books (there were books in the Wheel of Fortune): there was nothing to write down - don Juan laughed at the writing Carlitos; the students the same thing: understand the meaning of the card.</li><li>The wreath of leaves = uroboros: the eternal snake bites its tail, cycles of creation and destruction; the analogue is the swastika (movement in a circle); Saturn with a sickle and a ring; according to Jung, the archetype carries “darkness and self-destruction”, Neumann is the early stage of personality development; Thor never defeated the world snake.</li><li>- New Year: Saturnalia → Sol Invictus → Christmas; Santa = the symbolism of the time of Saturn; Santa remembers not only gifts, but also punishments (Morozko: &quot;Whether it is warm for you, maid&quot;), weak cattle were cut in winter - &quot;sad fairy tale&quot; of the cycle of the year; Soviet postcard with a change of years: Peace - the end of the year, Jester - the beginning.</li><li>Two sticks against one in the Magician - his hypothesis: the cross of material life (Jesus nailed to matter), gluing of duality yin-yang; the caveat: &quot;These are my theories.&quot;</li><li>Zen and humility are the eastern and western forms of the same fullness: enso-ring, emptiness = fullness containing the universe, the garden of stones; “he who understands life, does not laugh in the circus”; Eckhart Tolle about the moment “now”; humility – “to be equal to the whole world” (Mowgli), the cat climbs to stroke during meditation – a true Zen Buddhist strokes and prays; children on the lap’s lap are received with humility.</li><li>- Cinema: &quot;The Hobbit, or There and Back Again&quot; - a ring composition of great works, Bilbo returns the same, but revealed; &quot;Mad Max: Fury Road&quot; - a hero with a heroine as a spirit and body, paradise is found in himself; &quot;Jupiter Ascension&quot; - &quot;matrix for girls&quot; Wachowski sisters: battered toilets Mila Kunis inherits the universe, remaining to live in the family; &quot;Groundhog Day&quot; - the most chic movie of this card, the path of humility through a looped day; &quot;Peaceful warrior&quot; - Juan - a mechanician.</li><li>Banzkhaf does not quote at all; he rejects numerology (&quot;I am not a numerologist&quot;, 21→3 he breeds through the third house and the triplet); the dance of the figure simplifies: not the goddess of dance, just &quot;joyful&quot;.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Keywords</summary><div class="rd-body"><ul class="st-list"><li>completeness · completion of the turn · reaching a new level · “as is, so is” · harmony rather than truth · peace · humility · objectivity · finality opening a new cycle · alpha and omega</li><li>---</li></ul></div></details>
+</div>
+<nav class="card-pagination" aria-label="Previous and next card">
+<a rel="prev" href="sud.html"><span>← Previous card</span>Judgement</a>
+<a rel="next" href="wands-ace.html"><span>Next card →</span>Ace of Wands</a>
+</nav>
+</article>
+</main>
+<footer class="site-footer">
+  <p>Tarot · Card Meaning Guide</p>
+  <p class="footer-note">The material is for reference and entertainment</p>
+
+<div class="footer-contact">
+  <p class="fc-lead">For questions, collaboration or advertising enquiries, write to me — I reply personally:</p>
+  <div class="fc-links">
+    <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+    <span class="fc-sep" aria-hidden="true">·</span>
+    <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+  </div>
+  <p class="fc-lead">I keep this project going through enthusiasm, without advertising or visitor fees. If you find it useful, a contribution of any size helps me develop the guide further.</p>
+  <div class="fc-links fc-donate">
+    <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Donatello (UA-friendly)</a>
+    <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+  </div>
+</div>
+</footer>
+<!-- Модалка «About the project» -->
+<div class="about-backdrop" id="aboutModal" aria-hidden="true">
+  <div class="about-dialog" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+    <button class="about-close" type="button" aria-label="Close">&times;</button>
+    <h2 id="aboutTitle"><span class="title-star">✦</span> About the project</h2>
+    <p>I put this personal guide to Tarot, Lenormand, runes and astrology together on my own, with no team, office or investors. It runs on enthusiasm, without intrusive advertising, registration or paid subscriptions. All the material is freely accessible.</p>
+    <p>Creating and maintaining the guide takes hundreds of hours: writing, translating interpretations, designing pages and looking after the server. If it has helped you, a contribution is a welcome thank-you and supports new sections, cards, combinations and spreads.</p>
+    <div class="about-donate">
+      <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Support via Donatello (UA-friendly)</a>
+      <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+    </div>
+    <p class="about-contact">Questions, collaboration ideas or advertising enquiries? Write to me — I reply personally:</p>
+    <div class="about-links">
+      <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+      <span aria-hidden="true">·</span>
+      <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('aboutBtn'), m=document.getElementById('aboutModal');
+  if(!btn||!m) return;
+  function open(e){e.preventDefault();m.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){m.classList.remove('open');document.body.style.overflow='';}
+  btn.addEventListener('click',open);
+  m.querySelector('.about-close').addEventListener('click',close);
+  m.addEventListener('click',function(e){if(e.target===m)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+</body>
+</html>

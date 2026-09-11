@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Chariot — Meaning and Interpretation | Tarot Guide</title>
+<meta name="description" content="The Chariot: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<link rel="canonical" href="https://taro.jetserg.top/en/cards/kolesnica.html">
+<meta property="og:title" content="The Chariot — Meaning and Interpretation | Tarot Guide">
+<meta property="og:description" content="The Chariot: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taro.jetserg.top/en/cards/kolesnica.html">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/major-07-chariot.webp">
+<link rel="stylesheet" href="../../css/style.css?v=4.0">
+<link rel="stylesheet" href="../../css/astrology.css?v=4.0">
+<style>
+.main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
+.card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
+.card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
+.card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
+.card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── School of Modern Tarot ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
+.card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
+.card-pagination a:last-child { text-align: right; }
+.card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
+@media (max-width: 480px) {
+  .main-nav { padding: 12px 12px 0; }
+  .main-nav a { padding: 8px 12px; font-size: .9rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
+  .card-pagination { gap: 10px; }
+  .card-pagination a { padding: 16px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Chariot — Meaning and Interpretation | Tarot Guide",
+  "description": "The Chariot: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.",
+  "url": "https://taro.jetserg.top/en/cards/kolesnica.html",
+  "inLanguage": "en"
+}
+</script>
+<!-- Microsoft Clarity -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yejlmmd6nr");
+</script>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+<nav class="main-nav" aria-label="Sections">
+  <div class="main-nav-inner">
+    <a href="../taro/index.html">Tarot</a>
+    <a href="index.html" class="mn-active" style="display:none" aria-hidden="true">Cards</a>
+    <a href="../astrology/index.html">Astrology</a>
+    <a href="../lenormand/index.html">Lenormand</a>
+    <a href="../runes/index.html">Runes</a>
+    <a href="../../spreads.html">Spreads</a>
+  <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> About the project</a>
+  </div>
+</nav>
+<main class="card-page">
+<nav class="card-crumbs" aria-label="Breadcrumbs"><a href="../taro/index.html">Tarot</a> / <span aria-current="page">The Chariot</span></nav>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="../../img/cards/major-07-chariot.webp" alt="The Chariot — Universal Waite Tarot card" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Major Arcana · VII</p>
+<h1 class="m-title"><span class="card-number">VII</span>The Chariot</h1>
+<p class="m-en"></p>
+<p class="m-meta">Element: <b>Water</b> &nbsp;·&nbsp; Astrology: <b>Cancer</b></p>
+</div>
+</header>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Card positions">
+<label class="pos-tab" for="pos-upright">Upright position</label>
+<label class="pos-tab" for="pos-reversed">Reversed position</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">School of Modern Tarot</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">victory</span><span class="kw">will</span><span class="kw">control</span><span class="kw">forward</span><span class="kw">ambition</span><span class="kw">self-control</span><span class="kw">triumph</span></div>
+<p class="short-value">Will has ridden opposites: confident movement to victory where you hold the steering wheel; concentration, discipline and noble pressure lead to success faster than blind luck.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>The chariot stands under a stellar canopy; the chariot in a crown with a laurel and eight-pointed stars holds not the reins — there are none at all — but the scepter. Two sphinxes, black and white, he maintains the balance of his will: opposites pull apart exactly until the driver becomes a single center.</p>
+<p>This is the lark of offensive energy after the Lovers&#x27; internal choice: direction taken, now speed. The card means victories achieved by concentration, not luck: the city is taken because no one from within has interfered with movement. Cancer nature adds a motive of defense - Chariot most often rushes forward for those whom it loves.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>Traffic day: travel, business meetings, transportation decisions -- all the arguments, if you&#x27;re driving literally and figuratively. It&#x27;s good to start things that require pressure: a call you&#x27;ve been avoiding, a conversation you&#x27;ve been honest with, a training session you&#x27;ve been working on. Plan your route in advance -- rushing to this card is dangerously fraught.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>The arcana is the career leap: a project where you set the pace; a contest, a tender, a new market. Victory is achievable, but not for nothing; the chariot requires total concentration and no spraying. Lead hard, but fair: the team must know the route and the reward. Great expansion times — business trips, branches, foreign cities. And watch your opponents: the victory card is not liked by everyone.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>In relationships, Chariot gives you the dynamic: a stormy romance, joint roads, couples who move, build and conquer - together and quickly. The card promises single people familiarity in motion: the road, the gym, the airport, a friend&#x27;s car. In a couple, it is important to synchronize the steering wheels: if one pulls into the city and the other into the mountains, quarrels become regular.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>The energy is powerful, but it&#x27;s shocking: you can get hurt from rushing, stretching, you can get clamps in your back from the steering wheel and the office chair. The card is good for the sport of achievement -- races, competitions, body-to-season -- the goal disciplines better than persuasion. Cancer controls your stomach: in stressful races, keep digestion safe, eat regularly, not on the run. Good recovery time from injuries -- schedule movement brings you back into shape faster than you expect.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>The Heth Way, the &quot;fences,&quot; connects Bina and Gebura: the will that shields the field of victory from chaos. The two sphinxes, the light and the dark, make the Chariot a card of hermetic equilibrium: power flows through someone who does not identify with either of the opposites. The stars on the canopy are a celestial mandate: the victory is given more easily by the top.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">loss of control</span><span class="kw">aggression</span><span class="kw">forcefulness</span><span class="kw">slip-up</span><span class="kw">resistance</span><span class="kw">goalless</span></div>
+<p class="short-value">Horses have suffered or stood up: there is a lot of energy, there is no direction, aggression burns fuel in vain, and circumstances, rivals or their own raging emotions have taken control of the situation.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>Inverted Chariot: Horses are carried or standing up. Energy is there, no direction: throwing between targets, aggression on the ground, a road spent bypassing traffic jams of his own character. In another version, towing: the person has learned, gathered, announced the start - and does not move, because fear runs from the inside.</p>
+<p>The card also warns of a loss of control over a situation they thought they were: competitors, circumstances, or their own emotions have seized the reins; the advice of the arcana is to return to the center: less gas, more steering wheel; sometimes the winning action today is to stop and fix the chariot, rather than prove speed with a broken axle.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>In everyday life, you&#x27;re running around, you&#x27;re getting annoyed by traffic jams, you&#x27;re getting hurt by loved ones, and in the evening you can&#x27;t remember where the day went, and there&#x27;s a high cost of rushing -- fines, bruises, broken things -- and the opposite is possible: paralysis before a case that&#x27;s long overdue is a &quot;time to start&quot; -- camping without leaving. The best strategy is one direction for a day and deliberately slow pace: speed will return when management returns.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>At work, the card draws a campaign without strategy: maximum activity, minimum results; the department fights with the next department, and the client goes to the one who is calm; you can intercept control - the project is taken away, the team is reassigned, your rules of the game have been changed without warning. Aggressive pressure is now harmful: force without direction reads like panic.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>In a relationship, an inverted Chariot is a race and a braking act at the same time: the partner pushes, rushes events, makes checks with jealousy, or, on the contrary, the union stalls on the spot - talk about moving goes on for years. The card advises single people to cool down: desperate hunting scares away those who are interesting. In a couple, a fight for the wheel is dangerous: two drivers in the same car break twice as fast. Hand the steering wheel to where you have competence, agree on the route - and remove your elbows.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>The body signals overheating of the system: pressure surges, insomnia from overexcitation, exacerbation of gastritis and ulcers — the stomach suffers first from racing and repressed anger. There are injuries from rushing and sports to wear out: ligaments do not keep up with ambition. When towing — the reverse picture: stagnation, swelling, weight gain from sedentary anxiety. Treatment — rhythm: regularity instead of records, eating in peace, sports with pleasure, sleep as a strategic task.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>The spiritually inverted Heth is a fence without gates or gates without fences: the force is either locked in fear or dissolved without a channel. The card indicates a struggle with oneself, disguised as a struggle with the world: external enemies are a projection of the internal split of the Sphinxes. In practice, it warns of afterburning: accelerated techniques taken without preparation break the channel, not advance.</p></div>
+</div>
+<div class="pos-pane pane-roman roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> In brief</h3>
+<div class="info-section"><h3>The main idea</h3><p>The chariot is one of the most unusual interpretations of the school.
+It is not so much a rapid movement forward as a tool that allows a person to move where he could not get himself.</p></div>
+<div class="info-section"><h3>How it manifests</h3><p>The chariot is the social shell of a person. At work, we put on one role, at home another.</p></div>
+<div class="info-section"><h3>In a relationship</h3><p>A conscious choice of a partner and the transition of the relationship to a stable form.</p></div>
+<div class="info-section"><h3>Work.</h3><p>Tools received from the previous generation: education, profession, technology, inheritance, skills.</p></div>
+<div class="info-section"><h3>The shadow side</h3><p>The problem arises when a person uses a tool without understanding its nature.</p></div>
+<div class="info-section"><h3>Feature of the school</h3><p>The chariot is associated with Cancer, the Moon and the Fourth House, hence the father&#x27;s home, inheritance, nostalgia and sense of security.</p></div>
+<div class="roman-astro"><span class="ra-label">✷ School astrology</span><b>IV House Cancer</b><span class="ra-sep">·</span>The Moon (Purple Armour Shell)<div class="ra-classic">In the Waite tradition: Cancer</div></div>
+<h3 class="roman-subtitle"><span>📜</span> In detail — lecture extracts</h3>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">✧</span> Essence of the card</summary><div class="rd-body"><p>His chariot is a &quot;controversial card&quot;: everyone is used to it being an action, but his version is &quot;more logical&quot; - a calm card in the drawing (&quot;the sphinxes are on the relaxation&quot;; &quot;either he hasn&#x27;t yet gone or has already arrived&quot; - judging from the city behind him, he has arrived). The main character of the card is not the chariot, but the chariot itself; to call the hero the archetype a &quot;huge mistake&quot; The cart is a tool with which a person does what he can not do: donated, transferred or inherited from the gods and parents. The result of the movement is the car, even when the car is running, and the car is already there is a rest.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Upright position</summary><div class="rd-body"><p>Personality, social. Character: the protective shell you put on when you step into an apartment (the function of &quot;business director, taxi driver, teacher&quot;). It&#x27;s not a natural soul, but a social tool; it turns on unconsciously, &quot;the chariot rides itself.&quot; At home, the shell is removed. Cancer metaphor: outside, hard armor, inside soft.</p>
+<p>Relationships, family. The choice of contenders is a Gemini theme; the chariot is a conscious choice of partner: &quot;put on a permanent track,&quot; start a family, ride like a tram to the depot - to the usual, safe. You don&#x27;t have to climb into the mechanism of love - &quot;it is by nature done right,&quot; steer carefully. On the moon - sexuality as &quot;wanted,&quot; not conscious desire.</p>
+<p>Work, money. Legacy is first: tools that came before you (laptop, Forex exchange); personal transportation is a possible value, but it&#x27;s a primitive thing from Instagram girls; it&#x27;s the result of someone else&#x27;s labor; real estate is neat, &quot;natural real estate laws&quot;; housing here is a sense of security, a father&#x27;s home.</p>
+<p>Self-development. You&#x27;re on a path that&#x27;s predefined by being born before you&#x27;re 28. &quot;The right path is the endpoint path&quot;: the house-work-home-work cyclical track. Many people, by the time they&#x27;re 27, are done as individuals and have their whole lives spinning in that wheel (plant is an allegory, too with an IT student); the key is to take advantage of the strong traits and keep the weak out, turn on the right or left sphinx in time: &quot;right is on time.&quot;</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Negative meaning</summary><div class="rd-body"><p>The card is situationally interpreted. &quot;A bad taste&quot; follows: the use of a gifted instrument without understanding - &quot;until you know the secrets of the Sphinx, they will go when they want and wherever they want&quot;; life-obsession, from which you did not come (not moved beyond the cart); the prohibition to dig where you do not understand (&quot;if you work, do not climb, you can not change the traits of character&quot;) Plus the myth-warning of Atalanta and Hippomena: forgot to thank the gods, violated the rule of the temple - you will be turned into a lion and pull someone else&#x27;s chariot; the wrong doctor always chooses.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> School emphases and distinctive points</summary><div class="rd-body"><ul class="st-list"><li>- Author&#x27;s astrology: according to Yuri Khan - 4th house, Luna, Cancer (a curative armor shell, a reference to his experience of historical reconstruction; moonlights on shoulder pads, a crescent, a dark sky in the canopy). 4th house: parents, small homeland and nostalgia, real estate (house, cottage, garage), heredity &quot;in genes and property&quot;, protection, where &quot;you can freely exhale.&quot; Protection - like the body of a car after a motorcycle; armor gives &quot;euphoria: it seems, nothing is scary now.&quot;</li><li>The central thesis is that Schumacher is fast not because he&#x27;s cool, but because he&#x27;s a car; you don&#x27;t have to fix the cogs of the motor, you can only drive the steering wheel: forces that pull (the laws of nature, character) are not subject to it, they are used.</li><li>Waite: criticism (&quot;I can&#x27;t see the sword&quot; - on the card of the rod), the story about the discontent of the Golden Dawn and the murky book that begins to read it is not recommended. Urim and Thumim on the chest - the secret lot of the clergy: black and white pebbles = black and white sphinxes, diametrically opposed forces (mind/intuition, anima/animus, right/left hand).</li><li>The winged disc is the Harry Potter Snitch: the sun in the eclipse, the symbol of Egypt, Mesopotamia, Persia; the scarab of Khepri, rebirth, perpetual movement; painted on machines. This ego is the &quot;carriage-screen for the ego.&quot; Lingam-yoni: the unity of Shiva and Shakti, the producing force of life; the stupa and the pestle.</li><li>Cybele, the emanations of the force of nature (Cybele Fountain in Madrid, lions). Atalanta and Hippomenus with golden apples, for sacrilege in the temple, turned into lions and harnessed into a Cybele wagon: the continuation of twin myths about right/wrong choice. Triptole: Demeter&#x27;s gift is a chariot with dragons and grains; agriculture = exit from paradise of gathering into sedentity; soldiers conquer, bread-pawns, the Cybele&#x27;s carts, the God-kidahs, the God-gods, the hero.</li><li>- Slavic row: Emelya on the stove - the stove is driven by the force of the pike, &quot;daughter of the sea king&quot; (the underwater power of emotions that you get by diving deep into yourself). Baba Yaga in the stupa (the same bowl-yoni) gives Ivan a ball: the elder gives the youngest stupid way.</li><li>- Movie/literature: Tolkien is a great tale that must end in a return (&quot;The Hobbit, or There and Back Again&quot;). &quot;Star Wars&quot;: Falcon Han Solo&#x27;s Millennial, &quot;Chuey, We&#x27;re Home,&quot; safety on the move. &quot;The Matrix: Neo&#x27;s ship is a mobile family hearth. &quot;Supernatural&quot;: The Winchester Brothers&#x27; 67 Chevrolet Impala is a father-inherited home; two characters = two sphinxes; a soldier in an ashtray and a LEGO in a furnace as a nostal: &quot;The ship that I don&#x27;t use a father&quot; (&quot;); &quot;I don&#x27;t make a brothrower by a brothrower): &quot;I&#x27;s a father-wit make a stell.&quot;</li><li>- Method: TARO is primarily about feeling and emotion, &quot;I give more importance to emotions,&quot; a good tarologist understands his emotions with his head. The reference image of the card: an empty evening tram shines with windows - it&#x27;s warm, cozy inside, it takes a person home.</li><li>Age scheme: the first third of the zodiac is closed by the 4th house; by the age of 28 - the result of the absorbed, then the watershed of the Moon → The sun and &quot;his&quot; - this is already Leo.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Keywords</summary><div class="rd-body"><ul class="st-list"><li>Cart-gift; safety and security; settled, house; inheritance and property; intuition (Urim and Tumim); guise / armor of character; conscious choice of path; movement in a circle (tram on the rails); stopped - the engine works; rest after conquest.</li><li>---</li></ul></div></details>
+</div>
+<nav class="card-pagination" aria-label="Previous and next card">
+<a rel="prev" href="vlyublyonnye.html"><span>← Previous card</span>The Lovers</a>
+<a rel="next" href="sila.html"><span>Next card →</span>Strength</a>
+</nav>
+</article>
+</main>
+<footer class="site-footer">
+  <p>Tarot · Card Meaning Guide</p>
+  <p class="footer-note">The material is for reference and entertainment</p>
+
+<div class="footer-contact">
+  <p class="fc-lead">For questions, collaboration or advertising enquiries, write to me — I reply personally:</p>
+  <div class="fc-links">
+    <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+    <span class="fc-sep" aria-hidden="true">·</span>
+    <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+  </div>
+  <p class="fc-lead">I keep this project going through enthusiasm, without advertising or visitor fees. If you find it useful, a contribution of any size helps me develop the guide further.</p>
+  <div class="fc-links fc-donate">
+    <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Donatello (UA-friendly)</a>
+    <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+  </div>
+</div>
+</footer>
+<!-- Модалка «About the project» -->
+<div class="about-backdrop" id="aboutModal" aria-hidden="true">
+  <div class="about-dialog" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+    <button class="about-close" type="button" aria-label="Close">&times;</button>
+    <h2 id="aboutTitle"><span class="title-star">✦</span> About the project</h2>
+    <p>I put this personal guide to Tarot, Lenormand, runes and astrology together on my own, with no team, office or investors. It runs on enthusiasm, without intrusive advertising, registration or paid subscriptions. All the material is freely accessible.</p>
+    <p>Creating and maintaining the guide takes hundreds of hours: writing, translating interpretations, designing pages and looking after the server. If it has helped you, a contribution is a welcome thank-you and supports new sections, cards, combinations and spreads.</p>
+    <div class="about-donate">
+      <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Support via Donatello (UA-friendly)</a>
+      <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+    </div>
+    <p class="about-contact">Questions, collaboration ideas or advertising enquiries? Write to me — I reply personally:</p>
+    <div class="about-links">
+      <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+      <span aria-hidden="true">·</span>
+      <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('aboutBtn'), m=document.getElementById('aboutModal');
+  if(!btn||!m) return;
+  function open(e){e.preventDefault();m.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){m.classList.remove('open');document.body.style.overflow='';}
+  btn.addEventListener('click',open);
+  m.querySelector('.about-close').addEventListener('click',close);
+  m.addEventListener('click',function(e){if(e.target===m)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+</body>
+</html>

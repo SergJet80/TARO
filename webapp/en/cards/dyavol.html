@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Devil — Meaning and Interpretation | Tarot Guide</title>
+<meta name="description" content="The Devil: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<link rel="canonical" href="https://taro.jetserg.top/en/cards/dyavol.html">
+<meta property="og:title" content="The Devil — Meaning and Interpretation | Tarot Guide">
+<meta property="og:description" content="The Devil: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taro.jetserg.top/en/cards/dyavol.html">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/major-15-devil.webp">
+<link rel="stylesheet" href="../../css/style.css?v=4.0">
+<link rel="stylesheet" href="../../css/astrology.css?v=4.0">
+<style>
+.main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
+.card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
+.card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
+.card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
+.card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── School of Modern Tarot ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
+.card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
+.card-pagination a:last-child { text-align: right; }
+.card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
+@media (max-width: 480px) {
+  .main-nav { padding: 12px 12px 0; }
+  .main-nav a { padding: 8px 12px; font-size: .9rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
+  .card-pagination { gap: 10px; }
+  .card-pagination a { padding: 16px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Devil — Meaning and Interpretation | Tarot Guide",
+  "description": "The Devil: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.",
+  "url": "https://taro.jetserg.top/en/cards/dyavol.html",
+  "inLanguage": "en"
+}
+</script>
+<!-- Microsoft Clarity -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yejlmmd6nr");
+</script>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+<nav class="main-nav" aria-label="Sections">
+  <div class="main-nav-inner">
+    <a href="../taro/index.html">Tarot</a>
+    <a href="index.html" class="mn-active" style="display:none" aria-hidden="true">Cards</a>
+    <a href="../astrology/index.html">Astrology</a>
+    <a href="../lenormand/index.html">Lenormand</a>
+    <a href="../runes/index.html">Runes</a>
+    <a href="../../spreads.html">Spreads</a>
+  <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> About the project</a>
+  </div>
+</nav>
+<main class="card-page">
+<nav class="card-crumbs" aria-label="Breadcrumbs"><a href="../taro/index.html">Tarot</a> / <span aria-current="page">The Devil</span></nav>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="../../img/cards/major-15-devil.webp" alt="The Devil — Universal Waite Tarot card" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Major Arcana · XV</p>
+<h1 class="m-title"><span class="card-number">XV</span>The Devil</h1>
+<p class="m-en"></p>
+<p class="m-meta">Element: <b>Earth</b> &nbsp;·&nbsp; Astrology: <b>Capricorn</b></p>
+</div>
+</header>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Card positions">
+<label class="pos-tab" for="pos-upright">Upright position</label>
+<label class="pos-tab" for="pos-reversed">Reversed position</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">School of Modern Tarot</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">attachment</span><span class="kw">dependence</span><span class="kw">temptation</span><span class="kw">shadow-side</span><span class="kw">materialism</span><span class="kw">passion</span><span class="kw">control</span></div>
+<p class="short-value">The chains we call necessity: a card of attachments, shadow desires, and the power of matter.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>The devil is sitting on a pedestal, but look at this: the chains on the captives at the foot are long and loose, you can take them off at any time. That&#x27;s the whole point of the arcana: the cage is not kept locked, but by the habit of wearing it.</p>
+<p>The card describes everything that our weak side possesses: passion that is passed off as love, work that eats personality, substance, money, status, approval. It doesn&#x27;t forbid wanting, it invites us to look desires in the eye and ask who uses whom.</p>
+<p>The shadow part of the arcana is honest, like a surgeon: it shows the material from which freedom is made; the acknowledged fear loses power over actions; the aloud desire loses its fever; therefore, the devil, contrary to reputation, is not evil, but sober.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>Temptation day: sales, delicious, &quot;another episode.&quot; Check your budget and refrigerator against your real needs. There&#x27;s a little blackmail, maybe, with guilt, favor, old debt; notice where you&#x27;re being held and where you&#x27;re holding yourself. One honest look at your chains weakens them by half.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>Businesses smell like hard play: manipulation, gray schemes, a tyrant boss or a conditional partner, and you can count honestly what you get for your loyalty and what you pay in return. Work can be money-based and it can be strangling, and it goes up, and you can refrain from questionable deals: exit is always more expensive than entry.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>Passion with a cage-like flavor: jealousy, possessiveness, a bond that has long been displeased but holds — habit, money, fear of emptiness. The card doesn&#x27;t necessarily portend a break: it demands honesty of desire. If the union is built on control, ask yourself what you fear.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>The arcanum zone is all kinds of addictions: sugar, nicotine, alcohol, endless scrolling. The body signals overstrain where you artificially turn yourself on. There are problems of an intimate nature and purely psychosomatic reactions from the unspoken.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>The devil is the master of the material plane and the guardian of the initiation: the one who has not met his own shadows remains his driver. In practice, the arcana is used to work with subconscious programs, remove attachments and money blocks, recognize other people&#x27;s manipulations. His lesson is harsh: force through the denial of desires is false; the real comes through their subordination to the spirit.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">release</span><span class="kw">looseness</span><span class="kw">manipulation</span><span class="kw">return</span><span class="kw">detox</span><span class="kw">borderline</span></div>
+<p class="short-value">The chains are unbuttoned: the dependence is seen from the outside, and the hand has already found the clasp.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>The inverted Devil captures the moment when the prisoner blinked: enough. The chains still ring, but the clasp is found. It&#x27;s a card out of toxic bonds, codependent relationships and habits that were held only on inattention.</p>
+<p>Often it captures the epiphany itself, and you can see who is pulling the strings and how, and that very appearance is a disinfectionate puppeteer, and healthy anger is healing when it turns into action, not a new way of biting yourself.</p>
+<p>The shadow of the arcana is a liberating display: quit smoking and started to get stuck, went from tyrant to controller, true freedom is tested by time, not by declaration.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>A good day to unload: cancel your obligations, pay back your debt, throw away the trash that eats up space, say it out loud to one person for weeks, but out loud, and the manipulations that you see today by your salespeople, your family and your colleagues won&#x27;t work again: knowledge makes them helpless.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>The work bond is weakening: you can refuse a toxic customer, get out of a swamp project, demand a review of the terms and get consent. Release comes through documents and facts, not through the stage. Beware of demonstrative gestures: going nowhere out of pride is the same trap, only now your own.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>The separation period: the couple breaks out of the circle of jealousy-guilt-forgiveness or breaks up completely; the return of control looks unusually quiet — no wars, just boundaries appear; perhaps a farewell to the dependence on someone else&#x27;s approval: for the first time, likes not the abstract &quot;someone&quot;, but yourself; the bonds held on fear lose the magnet.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>Detox time in every sense: the body willingly lets go of the accumulated, if you help with water, movement and sleep. Addictions are treatable — especially with the support of loved ones and professionals. Set success in the environment: fewer triggers around, more alive instead of surrogates.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>A magically inverted arcana is a sign of a successful exorcism of one&#x27;s own shadow: programs are recognized and discharged. Liberation practices, from birth ties to financial curses, work only when one changes behavior, not just candles. Force returns through simple acts of will: said no, and did not change his mind by morning.</p></div>
+</div>
+<div class="pos-pane pane-roman roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> In brief</h3>
+<div class="info-section"><h3>The main idea</h3><p>The devil is a concentrated desire.
+The desire that a person has given a specific goal to becomes a huge driving force, and the problem begins when a person stops controlling his desire and becomes controlled by it.</p></div>
+<div class="info-section"><h3>How it manifests</h3><p>Charisma, strong motivation, ability to engage others, protest against traditions, desire to get material results.</p></div>
+<div class="info-section"><h3>Work and money</h3><p>Marketing, advertising, politics, influence, money, loans, mortgages, and other forms of attachment.</p></div>
+<div class="info-section"><h3>In a relationship</h3><p>Strong sexual attraction, addiction, shared desires, strong emotional or physical attachment.</p></div>
+<div class="info-section"><h3>The shadow side</h3><p>Manipulation. Man can no longer distinguish his own desire from the desire that has been imposed upon him.</p></div>
+<div class="info-section"><h3>Feature of the school</h3><p>The devil is connected to Sagittarius and the Ninth House, and he asks, &quot;Why should I live like this?&quot;</p></div>
+<div class="roman-astro"><span class="ra-label">✷ School astrology</span><b>Ninth House · Sagittarius</b><span class="ra-sep">·</span>Jupiter + Neptune (dissolve and condense)<div class="ra-classic">In the Waite tradition: Capricorn</div></div>
+<h3 class="roman-subtitle"><span>📜</span> In detail — lecture extracts</h3>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">✧</span> Essence of the card</summary><div class="rd-body"><p>The devil is a &quot;concentrated desire&quot; expressed in a goal that moves people forward: &quot;the devil is a desire that moves people constantly forward to some goal.&quot; He is the master of material life: people are chained to the fleshly essence - &quot;however you desire something sublime, you are still chained to the desires of your body.&quot; The card is not as bad as it seems: &quot;there are no bad and good Tarot cards&quot;; it is seated by two brothers from IX house - Jupiter and Neptune (light and dark), and the bright side of XV is called the warrior, the &quot;arrowman&quot; Michael, the &quot;the previous player.&quot;</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Upright position</summary><div class="rd-body"><p>There is no separate block of “value by provisions” in the lecture – the list goes on in a solid way (he brings the practice of layouts to closed courses).</p>
+<p>Society and desires. The charismatic person who is charismatic is &quot;the same Lenin from the armored car&quot;: he wants others to do it for him. The preacher-leader and missionaries with torches follow their passion fire.</p>
+<p>The V-VI Arcana (Hierophant, Lovers) is opposed to XV: &quot;traditionally it is, but for myself I want it very differently.&quot; The devil is an oppositionist, a sectarian, a Protestant; any opposition figure follows this card.</p>
+<p>The difficulty of subordination: you do what your boss wants and you forget your desire; or you act as the Devil of the Opposition (&quot;the girls in accounting go to demand a job before five&quot;) - &quot;It&#x27;s Zeus and the brothers going to Kronos.&quot;</p>
+<p>Finance and property. Marketing and advertising: buy our elephants, happy people in commercials impose other people&#x27;s wishes, social advertising is &quot;the same devil, only good&quot;, a variant of the archangel Michael. Payroll dependence; voluntary attachments - loans, mortgages: we are sold this attachment.</p>
+<p>Psyche and self-development. Habits, weaknesses, true desire. Naked figures of the card are truth in their pure form (clothes hide, like the High Priestess): this is your true desire. Character is heated by reason (cards of the Sun and Power), and the animal climbs on XV: &quot;I want - and all here.&quot; You can win only by the power of reason - knowledge, Hermes / Mercury (Sword Perseus received from Hermes).</p>
+<p>Emotions and personal life. A person&#x27;s real desire and character: if your &quot;what I like&quot; matches the others, you&#x27;re lucky, otherwise you&#x27;ll be an outcast; so a true desire to show is not always worth it. Dependence on the partner: two are tied to the same stud, &quot;husband and wife are one Satan&quot;; shared desire makes the couple right. Sexual practices: perversion is a matter of third-house morality; &quot;everything is natural is not ugly&quot; - if both like it, the card is rather good. Manipulation by a full-lengthing partner; in damage tests, a celibacy crown, a third-side magic meaning.</p>
+<p>Addictions: alcoholism, gambling, drug addiction - a mechanism of habit that chains to the physical body.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Negative meaning</summary><div class="rd-body"><p>The negative meaning is manifested in two positions: work is “the feeling that you are being manipulated”, when in fact the boss is simply paying money for what he needs; and fraud is played with and deceived by your desires. The neutrality formula: “you should not take any side – for the tarologist it is important to feel the card”, and the feeling is moving forward from something wrong; everything depends on the goals of the person (Jeanne d’Arc, which was the Archangel Michael, the material embodiment of the same force).</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> School emphases and distinctive points</summary><div class="rd-body"><ul class="st-list"><li>- System astrology: XV = Sagittarius, IX house, Jupiter + Neptune. On Baphomet Levi&#x27;s motto &quot;dissolve and thicken&quot; - Neptune dissolves, Jupiter thickens. VI arcana (Twins / III house) stands opposite XV - &quot;a gross parody of Lovers&quot;: before the Fall Adam and Eve are still &quot;twins without separation of sexes&quot;.</li><li>Three fires: Aries - cardinal (lightning to the hunter), Leo - fixed (the hearth in the cave, the child watching it), Sagittarius - mutable (slash-and-fire agriculture, forest fire). The devil - the third fire: politics, an idea that burns the masses.</li><li>- Goat and azazel: the ritual of a scapegoat with a red cloth - the sins of the family are taken to the desert to approach the Supreme; hence the bright side of the card. The goat is bolder than a ram and leads the herd - it is easier to manage (manipulator, boss, politician shepherd).</li><li>Lucifer: literally &quot;light-bearing&quot;, the morning star Venus; the fallen angel only became from the late Middle Ages. Zeus is the same rebel against Cronus: the generational change of gods is deeper revealed in the X house - Tower. Danko and Prometheus are the light Lucifer.</li><li>Andromeda and Perseus: the card&#x27;s chained figures; the monster, the chthon (the crocodile of the Egyptians); victory, the sword of Hermes, i.e., intelligence and knowledge; Princess Leia in Jabba - &quot;one in one Andromeda&quot;.</li><li>Eros with a torch set his heart on fire and led him wherever he wanted; only Aphrodite and Saturn could clip his wings - the love desire fades from time to time, a hint of the next card.</li><li>Waite&#x27;s doorkeeper is the key: &quot;Wait says the card is not so bad&quot; → Archangel Michael, Archistratig; exile from paradise = expulsion of the scapegoat.</li><li>Opposition vs. service: Sakharov, Navalny, Guy Fox (Victorian Navalny); Osho and Crowley as false guru (Do what you want; Crowley is the ancestor of modern Satanism, which I congratulate you on).</li><li>The inverted pentagram and raised hand are a parody of the Middle Ages to the blessing of the Hierophant; the Templars were accused of worshipping Baphomet (the image resurrected by Eliphas Levi).</li><li>The magician vs. the devil: the magician is the doer and leader, he does himself; the devil does nothing himself - concentrates the desires of the crowd, and &quot;for him others do everything.&quot;</li><li>- Cinema as textbooks of the archetype: &quot;Devil&#x27;s Advocate&quot; (manipulation textbook), John Connor from &quot;The Terminator&quot; (right to lead), Agent Smith from &quot;The Matrix&quot; (true manipulator devil vs. Neo-Zeus, collecting people&#x27;s desires), Immorthan Joe from &quot;Mad Max&quot; (sect and Valhalla), &quot;Star Wars&quot; (Lucas reread Castaned after the accident; the fall of Anakin), &quot;V means Vendetta&quot;, &quot;Dune of Neo-Zeus, collecting people&#x27;s desires), &quot;Imorda&quot; Imorras-Hollywood - &quot;60&quot; in general &quot;the big Armads.&quot;</li><li>- Colleagues: advises reading Banzhaf (&quot;normal good correct tarologist&quot;), respects Yuri Khan for astrology, criticizes Sklyarova&#x27;s marketing and superficiality of Savchenko. The &quot;two eyes&quot; method: additional discipline (astrology, numerology, Kabbalah) gives stereoscopic vision of cards.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Keywords</summary><div class="rd-body"><ul class="st-list"><li>Desire; movement towards the goal; charismatic leader; individualism and opposition; manipulation; temptation and temptation; attachment and dependence; habit (animal nature); expansion (IX house, Sagittarius); the true desire of the “naked soul”.</li><li>---</li></ul></div></details>
+</div>
+<nav class="card-pagination" aria-label="Previous and next card">
+<a rel="prev" href="umerennost.html"><span>← Previous card</span>Temperance</a>
+<a rel="next" href="bashnya.html"><span>Next card →</span>The Tower</a>
+</nav>
+</article>
+</main>
+<footer class="site-footer">
+  <p>Tarot · Card Meaning Guide</p>
+  <p class="footer-note">The material is for reference and entertainment</p>
+
+<div class="footer-contact">
+  <p class="fc-lead">For questions, collaboration or advertising enquiries, write to me — I reply personally:</p>
+  <div class="fc-links">
+    <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+    <span class="fc-sep" aria-hidden="true">·</span>
+    <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+  </div>
+  <p class="fc-lead">I keep this project going through enthusiasm, without advertising or visitor fees. If you find it useful, a contribution of any size helps me develop the guide further.</p>
+  <div class="fc-links fc-donate">
+    <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Donatello (UA-friendly)</a>
+    <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+  </div>
+</div>
+</footer>
+<!-- Модалка «About the project» -->
+<div class="about-backdrop" id="aboutModal" aria-hidden="true">
+  <div class="about-dialog" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+    <button class="about-close" type="button" aria-label="Close">&times;</button>
+    <h2 id="aboutTitle"><span class="title-star">✦</span> About the project</h2>
+    <p>I put this personal guide to Tarot, Lenormand, runes and astrology together on my own, with no team, office or investors. It runs on enthusiasm, without intrusive advertising, registration or paid subscriptions. All the material is freely accessible.</p>
+    <p>Creating and maintaining the guide takes hundreds of hours: writing, translating interpretations, designing pages and looking after the server. If it has helped you, a contribution is a welcome thank-you and supports new sections, cards, combinations and spreads.</p>
+    <div class="about-donate">
+      <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Support via Donatello (UA-friendly)</a>
+      <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+    </div>
+    <p class="about-contact">Questions, collaboration ideas or advertising enquiries? Write to me — I reply personally:</p>
+    <div class="about-links">
+      <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+      <span aria-hidden="true">·</span>
+      <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('aboutBtn'), m=document.getElementById('aboutModal');
+  if(!btn||!m) return;
+  function open(e){e.preventDefault();m.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){m.classList.remove('open');document.body.style.overflow='';}
+  btn.addEventListener('click',open);
+  m.querySelector('.about-close').addEventListener('click',close);
+  m.addEventListener('click',function(e){if(e.target===m)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+</body>
+</html>

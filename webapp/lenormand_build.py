@@ -414,6 +414,12 @@ def main() -> int:
     if len(pages) != 37:
         raise ValueError(f"ожидалось 37 страниц, получено {len(pages)}")
     for rel, html in pages.items():
+        # RU-страницы — готовая пара (routes.json): i18n-маркеры (hreflang + switch) обязательны
+        try:
+            import i18n_build
+            html = i18n_build.finalize(html, f"lenormand/{rel}", "ru", english_disclaimer=False)
+        except Exception:
+            pass
         path = OUT / rel
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(html, encoding="utf-8", newline="\n")

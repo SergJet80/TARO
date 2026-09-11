@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Judgement — Meaning and Interpretation | Tarot Guide</title>
+<meta name="description" content="Judgement: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<link rel="canonical" href="https://taro.jetserg.top/en/cards/sud.html">
+<meta property="og:title" content="Judgement — Meaning and Interpretation | Tarot Guide">
+<meta property="og:description" content="Judgement: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taro.jetserg.top/en/cards/sud.html">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/major-20-judgement.webp">
+<link rel="stylesheet" href="../../css/style.css?v=4.0">
+<link rel="stylesheet" href="../../css/astrology.css?v=4.0">
+<style>
+.main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
+.card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
+.card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
+.card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
+.card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── School of Modern Tarot ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
+.card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
+.card-pagination a:last-child { text-align: right; }
+.card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
+@media (max-width: 480px) {
+  .main-nav { padding: 12px 12px 0; }
+  .main-nav a { padding: 8px 12px; font-size: .9rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
+  .card-pagination { gap: 10px; }
+  .card-pagination a { padding: 16px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Judgement — Meaning and Interpretation | Tarot Guide",
+  "description": "Judgement: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.",
+  "url": "https://taro.jetserg.top/en/cards/sud.html",
+  "inLanguage": "en"
+}
+</script>
+<!-- Microsoft Clarity -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yejlmmd6nr");
+</script>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+<nav class="main-nav" aria-label="Sections">
+  <div class="main-nav-inner">
+    <a href="../taro/index.html">Tarot</a>
+    <a href="index.html" class="mn-active" style="display:none" aria-hidden="true">Cards</a>
+    <a href="../astrology/index.html">Astrology</a>
+    <a href="../lenormand/index.html">Lenormand</a>
+    <a href="../runes/index.html">Runes</a>
+    <a href="../../spreads.html">Spreads</a>
+  <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> About the project</a>
+  </div>
+</nav>
+<main class="card-page">
+<nav class="card-crumbs" aria-label="Breadcrumbs"><a href="../taro/index.html">Tarot</a> / <span aria-current="page">Judgement</span></nav>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="../../img/cards/major-20-judgement.webp" alt="Judgement — Universal Waite Tarot card" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Major Arcana · XX</p>
+<h1 class="m-title"><span class="card-number">XX</span>Judgement</h1>
+<p class="m-en"></p>
+<p class="m-meta">Element: <b>Fire</b> &nbsp;·&nbsp; Astrology: <b>Pluto</b></p>
+</div>
+</header>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Card positions">
+<label class="pos-tab" for="pos-upright">Upright position</label>
+<label class="pos-tab" for="pos-reversed">Reversed position</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">School of Modern Tarot</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">wake-up</span><span class="kw">call</span><span class="kw">revaluation</span><span class="kw">revival</span><span class="kw">atonement</span><span class="kw">second-hand</span></div>
+<p class="short-value">The trumpet of the archangel calls to rise: a time of honest reassessment of life and second birth.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>On the card, the sleepers rise from their graves after hearing the trumpet of the archangel. It&#x27;s not a sentence, it&#x27;s an invitation: life asks for an account -- not before the judge, but before the present. What is the next thing we&#x27;ve lived, and what remains in the ground?</p>
+<p>In the case of Judgment, it means waking up after a long sleep: suddenly it becomes clear who you were supposed to be. The call comes through chance, a book, illness, conversation - but it is instantly known: it is mine.</p>
+<p>Arcana is also forgiveness: old guilt that you&#x27;ve been dragging around like a sack for years is absolved -- not an excuse, but a let-down. You can&#x27;t have a rebirth with the burden of the former. Pluto&#x27;s nature makes the process profound and irreversible.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>Call day from the past: a message from an old friend, a message that changes plans, an offer that beats your heart. Answer it&#x27;s not an accident, it&#x27;s a schedule. It&#x27;s good to close the eternal family matters: call your parents, end an old quarrel. The case started today promises to update more than planned.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>The call for change of the professional scale: the experience suddenly adds up to a new role — promotion, business, vocation. Past mistakes are no longer a stigma: partners and employers are willing to give a second chance. Don&#x27;t reject the call out of convenience — the rejected comes back louder. It&#x27;s good to go back to the old project on new terms.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>Relationships are judged by conscience: who was right is no longer important; whether they are both ready to start over by other people matters: the past is for real, not &quot;okay, forget&quot;; the return of a significant person is possible - not a repeat of the old circle, but a new chapter with it. The lonely card promises to awaken a feeling that was believed to be buried.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>Recovery after a long streak: the body hears the command &quot;up&quot; - the strength returns, the chronicle recedes. A good period for decisive steps: surgery that was postponed, a course that changes the quality of life. The emotional part is also important: let go of resentment relieves half of the symptoms. The body now speaks the truth directly - listen the first time.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>The court is the lap of the grand call: every tradition has a trumpet that wakes the sleepers; in practice, it opens up work with purpose and tribal memory, helps you hear your real name; meditation on sound — the bell, the gong, the voice — brings you to the depths.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">call-out</span><span class="kw">self-flagellation</span><span class="kw">delay</span><span class="kw">fear</span><span class="kw">long-standing</span><span class="kw">stagnation</span></div>
+<p class="short-value">The trumpet sounds and you pretend to be asleep: the call is postponed, self-criticism replaces action.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>The upside down Court is a man who pretends not to hear, and the call has been long and persistent: change jobs, end relationships, start treatment, go, and he finds a hundred good reasons to stay.</p>
+<p>The other face of the arcana is the judge turning inward: a perpetual trial of himself without the right to appeal. These people are not wrong, they are &quot;just terrible,&quot; and this formula is more reliable than any jailer.</p>
+<p>And the opposite happens: the sentence is passed on to others and not appealable, a resentment that has become a worldview, and until the case is reopened, no new housing can be built in the old prison.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>Deferred Decision Day: Unanswered letters, later calls, a question that needs to be resolved yesterday, notice where you pretend you haven&#x27;t heard, and one call made today will take off the load of a whole week.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>Self-defeating stagnation: it&#x27;s time to change a role or a place, but it&#x27;s not the time. You may have recently given up an opportunity out of fear of scale, see if it&#x27;s back in another way. Self-exploration after failure eats up more energy than failure itself.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>The relationship is on hold because of the unsentenced sentence: someone continues to punish a partner for a long history — or is guilty as a cross himself. Forgiveness was offered; you did not accept it. Fear of intimacy after a painful experience is possible: the past judges the present. One honest decision allows you to move forward is to forgive or let go.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>Health suffers from long-term decisions: the exam is delayed for the third month, the course is thrown in the middle, &quot;it will pass&quot; has become the main diagnosis. Self-flagellation adds its own: immunity is the first to lose ground. Set yourself a day of decisive action for health - and spend it. A patient body is waiting for your &quot;yes&quot;, but keeps counting.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>Mystically upside down, the Court is deaf to the call of the soul: the practice is formal, the destination is stomping, the gifts lie unpacked, the birth program of condemnation will be passed on until someone breaks the chain, start with a small ritual of forgiveness - yourself, your parents, the abuser. Until the sentences are burned, the trumpet will sound again: it does not get tired.</p></div>
+</div>
+<div class="pos-pane pane-roman roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> In brief</h3>
+<div class="info-section"><h3>The main idea</h3><p>The court is, above all, liberation.
+Not punishment or condemnation, but a way out of the tight confines in which a person was previously.</p></div>
+<div class="info-section"><h3>How it manifests</h3><p>Relieving yourself from an old role, dismissal, vacation, divorce, debt repayment, admitting mistakes, giving up limiting habits.</p></div>
+<div class="info-section"><h3>Work and money</h3><p>Closing a loan, receiving money from a deposit, releasing from obligations, dismissal or changing activities.</p></div>
+<div class="info-section"><h3>In a relationship</h3><p>Very often, the card shows divorce as liberation, and it can also be a way out of a role that one has long played for others.</p></div>
+<div class="info-section"><h3>The shadow side</h3><p>A man wanted to keep his job, but he got fired, wanted to keep his marriage, and he was free.</p></div>
+<div class="info-section"><h3>Feature of the school</h3><p>The court is about Pisces and the XII House, and its most important theme is to break the boundaries, to redeem and to return to one&#x27;s own nature.</p></div>
+<div class="roman-astro"><span class="ra-label">✷ School astrology</span><b>XII House · Fish</b><span class="ra-sep">·</span>cliff-house<div class="ra-classic">In the Waite tradition: Pluto</div></div>
+<h3 class="roman-subtitle"><span>📜</span> In detail — lecture extracts</h3>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">✧</span> Essence of the card</summary><div class="rd-body"><p>The common name “the terrible judgment” gives only a flat meaning (“some condemnation of oneself from the outside or from one’s own personal side”) – the essence is deeper: it is the liberation from the tight tight boxes (square coffins of material existence) into spiritual life. From the darkness, from the chthonic base, people rise in response to the call (the trumpet voice of an angel), experiencing “astonishment, admiration and admiration” – as Waite puts it. The main sense of the card is “going out of these clamped sensations into something more free, more filled with material air” (the card is associated with eternal life).</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Upright position</summary><div class="rd-body"><ul class="st-list"><li>He does not give a separate structure &quot;sphere by sphere&quot;, but lists four themes of the equations:</li><li>Communication/society</li><li>Internal freedom: to free yourself from the framework and boldly tell a person what you think; but it is not always useful to leave social agreements — the truth will add difficulties in communicating with ordinary people who are trapped in this very framework.</li><li>Informal communication: instead of “Hello Ivan Ivanovich / respected professor” – a lively personal contact with the essence of a person, not with his role.</li><li>Innovation, freeing yourself from delusions: “walking around the square of your usual actions and suddenly finding a new way,” more freedom and opportunity; rejecting norms for the sake of sincerity helps cooperation.</li><li>Work/finance/work/finance/</li><li>- Vacation or dismissal as a way out of the tight confines of work in the space of rest. Good - only for those who are tired; workaholic freedom is anguish. dismissal by force (reduced) - is already a negative.</li><li>- Open information, insider information; money with interest, withdrawal of money, withdrawal of deposit early, withdrawal from the stash.</li><li>- Final payment of the mortgage / loan - release from obligations (&quot;jump off the trident&quot;); removal of restrictions and conditions (inheritance upon reaching the age of 18).</li><li>Atonement and repentance: “the sword does not cross the guilty head” – confessed, forgiven himself – released.</li><li>Self-development</li><li>- Out of the comfort zone: habits work on the machine (driving on mechanics), save consciousness, but sometimes you need to get out with new conscious actions; admitting your mistakes.</li><li>Insight, illumination: knowledge comes from somewhere above - &quot;hear the voice of God, the trumpet of the Archangel&quot; and suddenly realize; awareness = liberation from the errors in which they were &quot;as in this narrow tomb.&quot;</li><li>In the extreme sense, death is the long-awaited liberation of the soul from the square frame of the body.</li><li>Personal life</li><li>Most often, his card fell out on divorce: partners are burdened with life together. Direct - divorce that frees (&quot;woman feels free&quot;).</li><li>Awareness of mistakes and forgiveness of oneself; coming out as a long-awaited exit from the true self &quot;from the false case where you played a role.&quot;</li><li>Diseases and tendencies inherited through genes are mentioned only in the subject of connection with the genus.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Negative meaning</summary><div class="rd-body"><ul class="st-list"><li>It does not have a separate block; the values are scattered in the text:</li><li>Judgment in the negative does not mean enslavement, it means liberation that you do not need: dismissal when you wanted to stay; freedom that you do not know what to do.</li><li>Same divorce, but you feel abandoned, thrown out of marriage; the school joke is, &quot;a free woman and an abandoned woman are the same woman, but with different moods.&quot;</li><li>- The opposite is coming out: the truth was brought out against will, the truth that could harm was revealed.</li><li>For a workaholic, liberation is terror and torment.</li><li>Approximate to the questions of death is the premature release of the physical body from the soul.</li><li>Pregnancy → childbirth is possible if the mother is heavy and wants to be released – but “dive too deep into this cough – sometimes it is very difficult to emerge.”</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> School emphases and distinctive points</summary><div class="rd-body"><ul class="st-list"><li>- Astrology: 12th house, Pisces, the abode of Jupiter and Neptune; &quot;it is impossible to place these cards on another basis&quot;, agrees with the system of Yuri Khan. Jester and Mir are just above houses (alpha and omega turns of the spiral). 12th house: isolation (monastery, ashram, prison, long-distance voyage, expedition, hospital, mental hospital), secret knowledge, esoteric, karma. Jupiter is a bright god, Neptune is a dark chthonic: passions fight against good intentions.</li><li>Angel: Israphilos (a trumpeted voice before the end of the world, taking souls); consonant with Azrael and Raphael, the archangel-healer, guide to the spiritual world, patron of sailors (pictured with a fish); parallel with Hermes Trismegistus; Raphael brought Solomon a ring with a six-pointed star &quot;to subdue demons&quot; - to fight his inner demons.</li><li>Magendavid: two different triangles - the struggle of light and dark, macrocosm and microcosm; Shiva and Kali in Hinduism; the middle path of the Buddha between the extremes of the spiritual and material.</li><li>- Chthonic beings: Poseidon (originally underground), Hades, Demeter, Persephone (grain: born - dies), Hecate, hecatoneheir (essences), Tiamat (ocean of chaos, dragon of seven heads), Marduk - the god of order, judge of the gods, the artisan of healing (= Jupiter), who created the sky and the earth from the body of Tiamat; double trident as a hint at Neptune; fishing hook = habits and addictions, which can not jump downwards. - Höngri Krgnato, today - natural deities.</li><li>Slavic: Baba Yaga as a force of nature and dead ancestors - if you communicate politely, give a glomerulus, a gray wolf or a well-mannered horse; the connection with the family - genes, body, instilled habits.</li><li>- Square vs triangle: the material world was painted with a square (square coffins), the spiritual - with a triangle with the eye of God; Christ rises from a square coffin with a white flag - but Jesus on the Tarot cards was impossible to draw, so allegorical Masonic symbolism.</li><li>- Red Cross on a white background: not a medical cross, but the flag of England - St. George/Yuri/George (one name): a great martyr who was tortured and executed many times, and by the end of the day he was healed; the Christian version of Tammuz/Dumuzi - a dying and resurrecting god like Adonis and Osiris (&quot;Osiris is green - because it grows like grass&quot;). Yuriev Day (November 26): the transition of peasants, &quot;Here&#x27;s your grandmother and yuryev day&quot; - liberation from the pressing one.</li><li>- Film/literature: Avatar (transition of the soul from a stunted body to a strong present); Pandora&#x27;s chthonna saves), The Matrix (Keanu Reeves&#x27; three exits from the capsule/frame/merge with the world), Nolan&#x27;s &quot;Inception&quot; (conditionally), Aronofsky&#x27;s &quot;Fountain&quot; (&quot;Death&quot;) It is the road to awe.” Favorite Director, “The Shawshank Escape” The key to the card in the word redemption: Redemption, redemption, redemption, redemption, redemption; The rain washes away the past and sins, the “Island” of Lungin (three ways to God). Mamonov died on the day of the recording of the lecture - &quot;released.&quot; Recipe: tarot Pictures from our lives, like shots from a movie.</li><li>- Admission: logic is only used to frame feelings with words; intuition and emotions are primary. Example of a student: The judgment of &quot;what will teach me tarot&quot; - an entry into a new level of spiritual development.</li><li>- Banzhaf is not quoting.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Keywords</summary><div class="rd-body"><ul class="st-list"><li>Liberation · inner freedom · going out of tight confines into space · redemption, repentance · chthon (natural base, habits) · resurrection · trumpet voice, call · insight, insight, awareness · sincerity, informality · divorce-liberation / abandonment</li><li>---</li></ul></div></details>
+</div>
+<nav class="card-pagination" aria-label="Previous and next card">
+<a rel="prev" href="solnce.html"><span>← Previous card</span>The Sun</a>
+<a rel="next" href="mir.html"><span>Next card →</span>The World</a>
+</nav>
+</article>
+</main>
+<footer class="site-footer">
+  <p>Tarot · Card Meaning Guide</p>
+  <p class="footer-note">The material is for reference and entertainment</p>
+
+<div class="footer-contact">
+  <p class="fc-lead">For questions, collaboration or advertising enquiries, write to me — I reply personally:</p>
+  <div class="fc-links">
+    <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+    <span class="fc-sep" aria-hidden="true">·</span>
+    <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+  </div>
+  <p class="fc-lead">I keep this project going through enthusiasm, without advertising or visitor fees. If you find it useful, a contribution of any size helps me develop the guide further.</p>
+  <div class="fc-links fc-donate">
+    <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Donatello (UA-friendly)</a>
+    <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+  </div>
+</div>
+</footer>
+<!-- Модалка «About the project» -->
+<div class="about-backdrop" id="aboutModal" aria-hidden="true">
+  <div class="about-dialog" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+    <button class="about-close" type="button" aria-label="Close">&times;</button>
+    <h2 id="aboutTitle"><span class="title-star">✦</span> About the project</h2>
+    <p>I put this personal guide to Tarot, Lenormand, runes and astrology together on my own, with no team, office or investors. It runs on enthusiasm, without intrusive advertising, registration or paid subscriptions. All the material is freely accessible.</p>
+    <p>Creating and maintaining the guide takes hundreds of hours: writing, translating interpretations, designing pages and looking after the server. If it has helped you, a contribution is a welcome thank-you and supports new sections, cards, combinations and spreads.</p>
+    <div class="about-donate">
+      <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Support via Donatello (UA-friendly)</a>
+      <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+    </div>
+    <p class="about-contact">Questions, collaboration ideas or advertising enquiries? Write to me — I reply personally:</p>
+    <div class="about-links">
+      <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+      <span aria-hidden="true">·</span>
+      <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('aboutBtn'), m=document.getElementById('aboutModal');
+  if(!btn||!m) return;
+  function open(e){e.preventDefault();m.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){m.classList.remove('open');document.body.style.overflow='';}
+  btn.addEventListener('click',open);
+  m.querySelector('.about-close').addEventListener('click',close);
+  m.addEventListener('click',function(e){if(e.target===m)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+</body>
+</html>

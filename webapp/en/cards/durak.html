@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Fool — Meaning and Interpretation | Tarot Guide</title>
+<meta name="description" content="The Fool: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<link rel="canonical" href="https://taro.jetserg.top/en/cards/durak.html">
+<meta property="og:title" content="The Fool — Meaning and Interpretation | Tarot Guide">
+<meta property="og:description" content="The Fool: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taro.jetserg.top/en/cards/durak.html">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/major-00-fool.webp">
+<link rel="stylesheet" href="../../css/style.css?v=4.0">
+<link rel="stylesheet" href="../../css/astrology.css?v=4.0">
+<style>
+.main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
+.card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
+.card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
+.card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
+.card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── School of Modern Tarot ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
+.card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
+.card-pagination a:last-child { text-align: right; }
+.card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
+@media (max-width: 480px) {
+  .main-nav { padding: 12px 12px 0; }
+  .main-nav a { padding: 8px 12px; font-size: .9rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
+  .card-pagination { gap: 10px; }
+  .card-pagination a { padding: 16px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Fool — Meaning and Interpretation | Tarot Guide",
+  "description": "The Fool: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.",
+  "url": "https://taro.jetserg.top/en/cards/durak.html",
+  "inLanguage": "en"
+}
+</script>
+<!-- Microsoft Clarity -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yejlmmd6nr");
+</script>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+<nav class="main-nav" aria-label="Sections">
+  <div class="main-nav-inner">
+    <a href="../taro/index.html">Tarot</a>
+    <a href="index.html" class="mn-active" style="display:none" aria-hidden="true">Cards</a>
+    <a href="../astrology/index.html">Astrology</a>
+    <a href="../lenormand/index.html">Lenormand</a>
+    <a href="../runes/index.html">Runes</a>
+    <a href="../../spreads.html">Spreads</a>
+  <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> About the project</a>
+  </div>
+</nav>
+<main class="card-page">
+<nav class="card-crumbs" aria-label="Breadcrumbs"><a href="../taro/index.html">Tarot</a> / <span aria-current="page">The Fool</span></nav>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="../../img/cards/major-00-fool.webp" alt="The Fool — Universal Waite Tarot card" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Major Arcana · 0</p>
+<h1 class="m-title"><span class="card-number">0</span>The Fool</h1>
+<p class="m-en"></p>
+<p class="m-meta">Element: <b>Air</b> &nbsp;·&nbsp; Astrology: <b>Uranus</b></p>
+</div>
+</header>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Card positions">
+<label class="pos-tab" for="pos-upright">Upright position</label>
+<label class="pos-tab" for="pos-reversed">Reversed position</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">School of Modern Tarot</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">beginning</span><span class="kw">spontaneity</span><span class="kw">life-belief</span><span class="kw">liberty</span><span class="kw">innocence</span><span class="kw">new horizons</span><span class="kw">risk</span></div>
+<p class="short-value">The beginning of a journey without guarantees: a clean slate, lightness and trust in life as it calls you beyond familiar territory—and the arcana asks only whether you will step into the unknown.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>arcana Zero is out of order: it is both the beginning of the journey and its eternal possibility. A fool is a young man on the edge of a cliff with a flower in his teeth and a look up to the sky; he does not know what is down there, and that is why he can step. In Waite&#x27;s tradition, innocence is not as ignorance, but as unobstructed: a consciousness without the weight of past defeats, able to see in the stranger not a threat, but an invitation.</p>
+<p>The card describes the state of a clean start -- a new project, a move, a confession of feeling, the first page. It says, trust is now more important than calculation, details can be refined on the road. The fool reminds us that every master has once been a beginner, and freedom begins where the need for guarantees ends. In the case of the equation, his advice is usually simple and bold: walk.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>The typical Fool&#x27;s day is spontaneous: going where you didn&#x27;t plan to go, having a conversation with a stranger, starting what you put off &quot;Monday,&quot; a good time of travel and experimentation -- but check that you have your documents, your wallet and your common sense. The day is favorable for undertakings that don&#x27;t need preparatory bureaucracy.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>In work, a card means a new project, a change of field, a startup, or a first task in unfamiliar territory, and there is not enough experience, but there are no templates to prevent a fresh solution from being seen, and customers often value this view. The fool supports the initiative from the bottom: suggest, try, make mistakes quickly and cheaply.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>In a relationship, it&#x27;s the unsafe phase of falling in love: lightness, flirting, wanting to break off the two of you on a no-route trip. For singles, it&#x27;s a sign that the encounter will come unexpectedly and not be like the usual scenario at all. In an established union, the card calls to bring back the game and try together what you both feared.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>The energy is high, the body is asking for movement: walking, sports, changing environments are better than tonics. The card is good for starting a new program - training, eating, sleeping patterns. The weak spot is inattention: rushing on the road, extreme tricks, missed first symptoms.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>On the Tree of Life, the arcana lies between Hokma and Keter, the path of the Aleph, the ox, the element of air: pure impulse of the spirit before any design. Uranus gives the card the qualities of surprise and awakening; meditation on the Fool helps to let go of control and enter the flow. In practice, it is the best arcana for initiations, the beginning of learning and the first meeting with the teacher.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">recklessness</span><span class="kw">naivety</span><span class="kw">negligence</span><span class="kw">first-step fear</span><span class="kw">stagnation</span><span class="kw">frivolity</span></div>
+<p class="short-value">Leaping without wings: impulsivity and naivety turn into risk and irresponsibility – or, conversely, the fear of the first step keeps a person on the edge until the window of opportunity closes completely.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>In an inverted position, the jump remains, but the choice disappears: the person falls, not flies. It is impulsiveness, which is mistaken for courage, naivety, which is used by other people&#x27;s interests, adventure without a reserve parachute. Classical interpreters agree: an inverted Fool is a risk without looking back, stupidity, disguised as freedom, or childish helplessness in a situation that requires an adult decision.</p>
+<p>The card can also show the second extreme, the stupor at the edge, the conditions are ripe, and the person checks and weighs and postpones everything until the window of opportunity closes. The arcana question is: where does healthy carelessness end and irresponsibility begin, and do you honestly call cowardice caution?</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>In everyday life, an upside-down Fool is a day of distraction: lost keys, double-paid bill, late for the bus you were chasing. Bend to the proven routes and don&#x27;t start big things: they won&#x27;t have your attention. Beware of &quot;profitable&quot; offers from persistent people - the card classically points to simpletons who are riding. If you feel cornered by indecision, start with the smallest step: it will relieve half the fear.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>Professionally, it&#x27;s risk without assessment: unsigned contracts, work on a word of honor, projects started on emotions and left in the middle. There&#x27;s also a possible reverse drawing of a talented employee who has been preparing for months for a promotion and never submits it. The card warns against adventurous schemes and promises of quick money.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>In a relationship, the inverted Fool is immaturity: one of the two plays lightly, avoiding any responsibility, or, on the contrary, afraid of the first step for fear of looking stupid. The romantic scenario of “happened by itself” often turns into chaos without obligations, where no one owes anything to anyone. For couples, the card is a warning against rash decisions made on courage. The adult conclusion of the arcana: freedom in love creates reliability, not the absence of promises.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>The main risks are inattention: domestic injuries, sprains in the &quot;drive&quot; training, the consequences of small symptoms that are neglected. The card also indicates a lack of system — treatment is rushed halfway, prescriptions are taken somehow, hence prolonged malaise. Put in the basic order: appointment to the doctor, taking the alarm clock, avoiding extreme extremes until better times. The body now needs not feat, but accuracy and a little regime.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>In a spiritual sense, the inverted Aleph is an impulse that has not found its way: practices are started out of curiosity and abandoned, teachers are replaced as podcasts, and the free way turns into wandering. The card warns of pseudoteachers selling someone else&#x27;s naivety, and of spiritual materialism - collecting experiences without depth. Working with it requires honesty: pick one door and enter.</p></div>
+</div>
+<div class="pos-pane pane-roman roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> In brief</h3>
+<div class="info-section"><h3>The main idea</h3><p>The fool in School of Modern Tarot is, first of all, the readiness for something new. It is not an action, but a state in which a person is already ready to take the first step. On the card, the figure is in motion, but it seems that for a moment it stopped: the decision is ripe, but the action is still ahead.
+And the fool doesn&#x27;t mean stupid, he becomes a fool because he&#x27;s in a completely new situation, he&#x27;s a newcomer who doesn&#x27;t have experience on that particular road, but he has all the previous experiences of life, the baggage he carries behind him.
+So zero is not a void here. It&#x27;s the beginning of a new cycle. One life phase has ended and the next one begins. The old experience doesn&#x27;t disappear, but it has to be re-interpreted and applied in other circumstances.</p></div>
+<div class="info-section"><h3>How it manifests</h3><p>The fool brings the enthusiasm of the beginner, the desire to try new things, the feeling of freedom and the ability to go where an experienced person might not dare to go.
+But enthusiasm is not enough. Old knowledge cannot simply be mechanically transferred to a new situation; it must be reformatted. The first-time father finds, for example, that life and the usual solutions now require a completely different approach.</p></div>
+<div class="info-section"><h3>In a relationship</h3><p>The card often speaks of a new level of relationship: a first date, the beginning of a life together, marriage, conception, the birth of a child or any other experience that a person encounters for the first time.
+In a good situation, it is a willingness to get to know your partner again, discover new sides of the relationship, and change for the sake of the other person.
+In an unfavorable manifestation, trust turns into naivety, and the desire for a new one into an attempt to simply escape from the old life.</p></div>
+<div class="info-section"><h3>Work and money</h3><p>A new workplace, a promising beginner, the first management experience, the beginning of your own project or startup.
+But enthusiasm alone is not enough. If knowledge and experience are lacking, the Fool easily becomes a person who takes up the task, completely unaware of what he is doing.</p></div>
+<div class="info-section"><h3>The shadow side</h3><p>The shadow side of the Fool is movement without direction, there&#x27;s a lot of energy, and there&#x27;s no idea where to put it.
+Fearlessness becomes recklessness, trust becomes trust, freedom becomes flight from reality, and a new path becomes another attempt to disengage from the past.</p></div>
+<div class="info-section"><h3>Feature of the school</h3><p>The idea here is not to learn the fool so much as to feel it, it&#x27;s a state of inner stagnation where the flow of thought is subdued for a moment, and the more you learn, the more you understand how much you don&#x27;t know.</p></div>
+<div class="roman-astro"><span class="ra-label">✷ School astrology</span><b>The Fool and The World stand outside the wheel of houses</b><span class="ra-sep">·</span>the school deliberately does not place the Fool in Aries<div class="ra-classic">In the Waite tradition: Uranus</div></div>
+<h3 class="roman-subtitle"><span>📜</span> In detail — lecture extracts</h3>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">✧</span> Essence of the card</summary><div class="rd-body"><p>A fool is an initiative and a desire to do something new: to do what you think is right for yourself. It is not a card of action, but of readiness to act: the figure is shown in motion, but has frozen — the idea you want to do has not yet become an action. The person has entered a new situation for the first time (a prince from another world, wandering in ours), so he is not a fool, but a beginner, zero without a stick: there is no experience of this situation, but in the purse there is all the previous life experience. Zeroboros: the beginning of an endless path of development, a new turn: a new one situation is the beginning.</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Upright position</summary><div class="rd-body"><ul class="st-list"><li>The card was not deliberately divided into “positive” and “negative” – the meanings were understood from two sides at once:</li><li>Potential: the desire to do something, moving forward, an interesting road.</li><li>Enthusiasm: the energy of a beginner, but “you can’t go far on bare enthusiasm” – without reason (the next card carrying consciousness) nonsense comes out.</li><li>Fearlessness: the hero is calm before what should be frightening; the healthy option is the confidence that they will insure: the sun as a higher consciousness and an all-seeing eye, a dog as subconscious warnings.</li><li>Reformatting the experience: the old experience can not be applied in the old way - it must be packaged under a new situation (for example, a 40-year-old first-born father in a store needs diapers, not the usual beer with nuts).</li><li>The fool’s “luck”: intuitively finds himself in the right place at the right time, without showing “signs of reason”; he has consciously done it – no longer luck.</li><li>By spheres:</li><li>Relationships are the main thing: a new level in any sense: first date, first sex, moving to a partner, marriage, conception and the birth of a child (more often the first child - with the second one already has experience), pluses: new facets of the partner, trusting the situation and intuition, willingness to learn again, trying to become better for the other. Cons: awkwardness, excessive credulity (&quot;a fool is easy to cheat&quot; - deceit and self-deception), fatalism (&quot;will be as it will be&quot;), selfishness and inability to stop in time; divorce as a situation where you are a fool; &quot;a new reality&quot; good only for one of one of the partners.</li><li>- Work and society: a new workplace, a promising newcomer, the first promotion (yesterday tea was drunk - today I give orders), the birth of a startup (sell vacuum cleaners - open a service for their repair). Minus - hastily taken stupid or inexperienced employee, &quot;he is zero.&quot;</li><li>Self-development/philosophy: accepting yourself as I am (&quot;I want to be a vegetarian, I accept myself with pros and cons&quot;), the old knowledge suddenly adds up to a new level of puzzles, the feeling that the forces will look at you from above, the ability to listen to your &quot;dog&quot;; the more you learn, the wider the spaces and the more stupid you feel - although in fact you grow.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Negative meaning</summary><div class="rd-body"><ul class="st-list"><li>The formula for the school is, &quot;The same thing, but with a bad taste for you.&quot;</li><li>Never means “smart” – a fool who acts stupidly to the detriment of himself and the situation.</li><li>potential without a vector: rushes, “runs on walls” – energy is there, where to apply – unknown;</li><li>- stupid act, unprofessionalism, insecurity (raised - and you feel like an impostor);</li><li>- opening a project with a lack of knowledge (sold vacuum cleaners - you climb to repair iPhones, &quot;you are absolutely zero in this&quot;); launching &quot;for good luck&quot; without market research;</li><li>- denial of difficulties; recklessness as an extreme degree of fearlessness;</li><li>Burning bridges when leaving the past situation is a trait of the “wrong fool”: you can not pretend that nothing happened, you must remember your mistakes.</li><li>- in self-development: mindless escape from reality into a &quot;new reality&quot; (religion, sects, selling a house), discarding previous experience;</li><li>complexes and unclosed gestalts: left the situation without closing it, - you pull the load in the backpack further; haste, incompleteness;</li><li>- a distorted sense of being a puppet of higher powers.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> School emphases and distinctive points</summary><div class="rd-body"><ul class="st-list"><li>- Analysis of the lines of Waite&#x27;s description from the Illustrated Key: &quot;the earth&#x27;s firmament is not able to hold him&quot; (intention, persuasion does not work), the face &quot;glows with intelligence and dreaminess&quot; (approach the plan intelligently and purposefully), &quot;will return in another way many days later&quot; (a hint of zero-uroboros).</li><li>The main method of the school is to catch not memorized values, but the feeling from the card (Wait separated the arcana from the games with ready-made answers).</li><li>Symbolism: dog - subconscious and animal reflexes (call with the dogs of the Moon); white rose - joy, peace, good intentions (return in the card Death - advises to study separately); staff - movement, fire; handbag / backpack - accumulated experience.</li><li>- Joker line: two wild card jokers left in the playing deck from the senior lassas; &quot;a fool can become anything, he is still at the beginning of a fairy tale.&quot;</li><li>Mythology: Ivan the fool (name-amulet; &quot;stay in the fool&quot; = beggar with a staff and a bag; strategy of action on a guess, bringing success), Prince Myshkin, Hamlet, Forrest Gump (buyed Apple shares because of the logo - got rich).</li><li>Cases: a man after clinical death received a Fool (a relative - a negative meaning) - dropped complexes, healed &quot;like Forrest Gump&quot;, for him it is internal freedom. Another interlocutor described the posthumous sensation - &quot;stand at the edge of the abyss, life below is swarming with ants, fall easily and even interesting&quot;; This is an accurate description of the atmosphere of the card.</li><li>The final feeling of the card: the cessation of internal dialogue, “lack of thought”, meditative state.</li><li>The card’s advice (according to the tarologist Bantsakh he quoted): try a new one, go ahead carelessly, trust your instincts – they will save you in danger.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Keywords</summary><div class="rd-body"><ul class="st-list"><li>initiative; readiness for action (not yet action); new situation, beginner; enthusiasm; potential without vector; reformatting experience; backpack (former experience); uroboros / new round of life.</li><li>---</li></ul></div></details>
+</div>
+<nav class="card-pagination" aria-label="Previous and next card">
+<a rel="prev" href="pentacles-king.html"><span>← Previous card</span>King of Pentacles</a>
+<a rel="next" href="mag.html"><span>Next card →</span>The Magician</a>
+</nav>
+</article>
+</main>
+<footer class="site-footer">
+  <p>Tarot · Card Meaning Guide</p>
+  <p class="footer-note">The material is for reference and entertainment</p>
+
+<div class="footer-contact">
+  <p class="fc-lead">For questions, collaboration or advertising enquiries, write to me — I reply personally:</p>
+  <div class="fc-links">
+    <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+    <span class="fc-sep" aria-hidden="true">·</span>
+    <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+  </div>
+  <p class="fc-lead">I keep this project going through enthusiasm, without advertising or visitor fees. If you find it useful, a contribution of any size helps me develop the guide further.</p>
+  <div class="fc-links fc-donate">
+    <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Donatello (UA-friendly)</a>
+    <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+  </div>
+</div>
+</footer>
+<!-- Модалка «About the project» -->
+<div class="about-backdrop" id="aboutModal" aria-hidden="true">
+  <div class="about-dialog" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+    <button class="about-close" type="button" aria-label="Close">&times;</button>
+    <h2 id="aboutTitle"><span class="title-star">✦</span> About the project</h2>
+    <p>I put this personal guide to Tarot, Lenormand, runes and astrology together on my own, with no team, office or investors. It runs on enthusiasm, without intrusive advertising, registration or paid subscriptions. All the material is freely accessible.</p>
+    <p>Creating and maintaining the guide takes hundreds of hours: writing, translating interpretations, designing pages and looking after the server. If it has helped you, a contribution is a welcome thank-you and supports new sections, cards, combinations and spreads.</p>
+    <div class="about-donate">
+      <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Support via Donatello (UA-friendly)</a>
+      <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+    </div>
+    <p class="about-contact">Questions, collaboration ideas or advertising enquiries? Write to me — I reply personally:</p>
+    <div class="about-links">
+      <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+      <span aria-hidden="true">·</span>
+      <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('aboutBtn'), m=document.getElementById('aboutModal');
+  if(!btn||!m) return;
+  function open(e){e.preventDefault();m.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){m.classList.remove('open');document.body.style.overflow='';}
+  btn.addEventListener('click',open);
+  m.querySelector('.about-close').addEventListener('click',close);
+  m.addEventListener('click',function(e){if(e.target===m)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+</body>
+</html>

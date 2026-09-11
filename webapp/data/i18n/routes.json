@@ -229,7 +229,7 @@
     "ru_url": "https://taro.jetserg.top/cards/bashnya.html",
     "en_url": "https://taro.jetserg.top/en/cards/bashnya.html",
     "x_default": "https://taro.jetserg.top/cards/bashnya.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/cups-ace.html",
@@ -237,7 +237,7 @@
     "ru_url": "https://taro.jetserg.top/cards/cups-ace.html",
     "en_url": "https://taro.jetserg.top/en/cards/cups-ace.html",
     "x_default": "https://taro.jetserg.top/cards/cups-ace.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/cups-eight.html",
@@ -245,7 +245,7 @@
     "ru_url": "https://taro.jetserg.top/cards/cups-eight.html",
     "en_url": "https://taro.jetserg.top/en/cards/cups-eight.html",
     "x_default": "https://taro.jetserg.top/cards/cups-eight.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/cups-five.html",
@@ -253,7 +253,7 @@
     "ru_url": "https://taro.jetserg.top/cards/cups-five.html",
     "en_url": "https://taro.jetserg.top/en/cards/cups-five.html",
     "x_default": "https://taro.jetserg.top/cards/cups-five.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/cups-four.html",
@@ -261,7 +261,7 @@
     "ru_url": "https://taro.jetserg.top/cards/cups-four.html",
     "en_url": "https://taro.jetserg.top/en/cards/cups-four.html",
     "x_default": "https://taro.jetserg.top/cards/cups-four.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/cups-king.html",
@@ -269,7 +269,7 @@
     "ru_url": "https://taro.jetserg.top/cards/cups-king.html",
     "en_url": "https://taro.jetserg.top/en/cards/cups-king.html",
     "x_default": "https://taro.jetserg.top/cards/cups-king.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/cups-knight.html",
@@ -277,7 +277,7 @@
     "ru_url": "https://taro.jetserg.top/cards/cups-knight.html",
     "en_url": "https://taro.jetserg.top/en/cards/cups-knight.html",
     "x_default": "https://taro.jetserg.top/cards/cups-knight.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/cups-nine.html",
@@ -285,7 +285,7 @@
     "ru_url": "https://taro.jetserg.top/cards/cups-nine.html",
     "en_url": "https://taro.jetserg.top/en/cards/cups-nine.html",
     "x_default": "https://taro.jetserg.top/cards/cups-nine.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/cups-page.html",
@@ -293,7 +293,7 @@
     "ru_url": "https://taro.jetserg.top/cards/cups-page.html",
     "en_url": "https://taro.jetserg.top/en/cards/cups-page.html",
     "x_default": "https://taro.jetserg.top/cards/cups-page.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/cups-queen.html",
@@ -301,7 +301,7 @@
     "ru_url": "https://taro.jetserg.top/cards/cups-queen.html",
     "en_url": "https://taro.jetserg.top/en/cards/cups-queen.html",
     "x_default": "https://taro.jetserg.top/cards/cups-queen.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/cups-seven.html",
@@ -309,7 +309,7 @@
     "ru_url": "https://taro.jetserg.top/cards/cups-seven.html",
     "en_url": "https://taro.jetserg.top/en/cards/cups-seven.html",
     "x_default": "https://taro.jetserg.top/cards/cups-seven.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/cups-six.html",
@@ -317,7 +317,7 @@
     "ru_url": "https://taro.jetserg.top/cards/cups-six.html",
     "en_url": "https://taro.jetserg.top/en/cards/cups-six.html",
     "x_default": "https://taro.jetserg.top/cards/cups-six.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/cups-ten.html",
@@ -325,7 +325,7 @@
     "ru_url": "https://taro.jetserg.top/cards/cups-ten.html",
     "en_url": "https://taro.jetserg.top/en/cards/cups-ten.html",
     "x_default": "https://taro.jetserg.top/cards/cups-ten.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/cups-three.html",
@@ -333,7 +333,7 @@
     "ru_url": "https://taro.jetserg.top/cards/cups-three.html",
     "en_url": "https://taro.jetserg.top/en/cards/cups-three.html",
     "x_default": "https://taro.jetserg.top/cards/cups-three.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/cups-two.html",
@@ -341,7 +341,7 @@
     "ru_url": "https://taro.jetserg.top/cards/cups-two.html",
     "en_url": "https://taro.jetserg.top/en/cards/cups-two.html",
     "x_default": "https://taro.jetserg.top/cards/cups-two.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/durak.html",
@@ -349,7 +349,7 @@
     "ru_url": "https://taro.jetserg.top/cards/durak.html",
     "en_url": "https://taro.jetserg.top/en/cards/durak.html",
     "x_default": "https://taro.jetserg.top/cards/durak.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/dyavol.html",
@@ -357,7 +357,7 @@
     "ru_url": "https://taro.jetserg.top/cards/dyavol.html",
     "en_url": "https://taro.jetserg.top/en/cards/dyavol.html",
     "x_default": "https://taro.jetserg.top/cards/dyavol.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/ierofant.html",
@@ -365,7 +365,7 @@
     "ru_url": "https://taro.jetserg.top/cards/ierofant.html",
     "en_url": "https://taro.jetserg.top/en/cards/ierofant.html",
     "x_default": "https://taro.jetserg.top/cards/ierofant.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/imperator.html",
@@ -373,7 +373,7 @@
     "ru_url": "https://taro.jetserg.top/cards/imperator.html",
     "en_url": "https://taro.jetserg.top/en/cards/imperator.html",
     "x_default": "https://taro.jetserg.top/cards/imperator.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/imperatrica.html",
@@ -381,7 +381,7 @@
     "ru_url": "https://taro.jetserg.top/cards/imperatrica.html",
     "en_url": "https://taro.jetserg.top/en/cards/imperatrica.html",
     "x_default": "https://taro.jetserg.top/cards/imperatrica.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/index.html",
@@ -389,7 +389,7 @@
     "ru_url": "https://taro.jetserg.top/cards/",
     "en_url": "https://taro.jetserg.top/en/cards/",
     "x_default": "https://taro.jetserg.top/cards/",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/kolesnica.html",
@@ -397,7 +397,7 @@
     "ru_url": "https://taro.jetserg.top/cards/kolesnica.html",
     "en_url": "https://taro.jetserg.top/en/cards/kolesnica.html",
     "x_default": "https://taro.jetserg.top/cards/kolesnica.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/koleso-fortuny.html",
@@ -405,7 +405,7 @@
     "ru_url": "https://taro.jetserg.top/cards/koleso-fortuny.html",
     "en_url": "https://taro.jetserg.top/en/cards/koleso-fortuny.html",
     "x_default": "https://taro.jetserg.top/cards/koleso-fortuny.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/luna.html",
@@ -413,7 +413,7 @@
     "ru_url": "https://taro.jetserg.top/cards/luna.html",
     "en_url": "https://taro.jetserg.top/en/cards/luna.html",
     "x_default": "https://taro.jetserg.top/cards/luna.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/mag.html",
@@ -421,7 +421,7 @@
     "ru_url": "https://taro.jetserg.top/cards/mag.html",
     "en_url": "https://taro.jetserg.top/en/cards/mag.html",
     "x_default": "https://taro.jetserg.top/cards/mag.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/mir.html",
@@ -429,7 +429,7 @@
     "ru_url": "https://taro.jetserg.top/cards/mir.html",
     "en_url": "https://taro.jetserg.top/en/cards/mir.html",
     "x_default": "https://taro.jetserg.top/cards/mir.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/otshelnik.html",
@@ -437,7 +437,7 @@
     "ru_url": "https://taro.jetserg.top/cards/otshelnik.html",
     "en_url": "https://taro.jetserg.top/en/cards/otshelnik.html",
     "x_default": "https://taro.jetserg.top/cards/otshelnik.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/pentacles-ace.html",
@@ -445,7 +445,7 @@
     "ru_url": "https://taro.jetserg.top/cards/pentacles-ace.html",
     "en_url": "https://taro.jetserg.top/en/cards/pentacles-ace.html",
     "x_default": "https://taro.jetserg.top/cards/pentacles-ace.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/pentacles-eight.html",
@@ -453,7 +453,7 @@
     "ru_url": "https://taro.jetserg.top/cards/pentacles-eight.html",
     "en_url": "https://taro.jetserg.top/en/cards/pentacles-eight.html",
     "x_default": "https://taro.jetserg.top/cards/pentacles-eight.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/pentacles-five.html",
@@ -461,7 +461,7 @@
     "ru_url": "https://taro.jetserg.top/cards/pentacles-five.html",
     "en_url": "https://taro.jetserg.top/en/cards/pentacles-five.html",
     "x_default": "https://taro.jetserg.top/cards/pentacles-five.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/pentacles-four.html",
@@ -469,7 +469,7 @@
     "ru_url": "https://taro.jetserg.top/cards/pentacles-four.html",
     "en_url": "https://taro.jetserg.top/en/cards/pentacles-four.html",
     "x_default": "https://taro.jetserg.top/cards/pentacles-four.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/pentacles-king.html",
@@ -477,7 +477,7 @@
     "ru_url": "https://taro.jetserg.top/cards/pentacles-king.html",
     "en_url": "https://taro.jetserg.top/en/cards/pentacles-king.html",
     "x_default": "https://taro.jetserg.top/cards/pentacles-king.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/pentacles-knight.html",
@@ -485,7 +485,7 @@
     "ru_url": "https://taro.jetserg.top/cards/pentacles-knight.html",
     "en_url": "https://taro.jetserg.top/en/cards/pentacles-knight.html",
     "x_default": "https://taro.jetserg.top/cards/pentacles-knight.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/pentacles-nine.html",
@@ -493,7 +493,7 @@
     "ru_url": "https://taro.jetserg.top/cards/pentacles-nine.html",
     "en_url": "https://taro.jetserg.top/en/cards/pentacles-nine.html",
     "x_default": "https://taro.jetserg.top/cards/pentacles-nine.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/pentacles-page.html",
@@ -501,7 +501,7 @@
     "ru_url": "https://taro.jetserg.top/cards/pentacles-page.html",
     "en_url": "https://taro.jetserg.top/en/cards/pentacles-page.html",
     "x_default": "https://taro.jetserg.top/cards/pentacles-page.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/pentacles-queen.html",
@@ -509,7 +509,7 @@
     "ru_url": "https://taro.jetserg.top/cards/pentacles-queen.html",
     "en_url": "https://taro.jetserg.top/en/cards/pentacles-queen.html",
     "x_default": "https://taro.jetserg.top/cards/pentacles-queen.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/pentacles-seven.html",
@@ -517,7 +517,7 @@
     "ru_url": "https://taro.jetserg.top/cards/pentacles-seven.html",
     "en_url": "https://taro.jetserg.top/en/cards/pentacles-seven.html",
     "x_default": "https://taro.jetserg.top/cards/pentacles-seven.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/pentacles-six.html",
@@ -525,7 +525,7 @@
     "ru_url": "https://taro.jetserg.top/cards/pentacles-six.html",
     "en_url": "https://taro.jetserg.top/en/cards/pentacles-six.html",
     "x_default": "https://taro.jetserg.top/cards/pentacles-six.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/pentacles-ten.html",
@@ -533,7 +533,7 @@
     "ru_url": "https://taro.jetserg.top/cards/pentacles-ten.html",
     "en_url": "https://taro.jetserg.top/en/cards/pentacles-ten.html",
     "x_default": "https://taro.jetserg.top/cards/pentacles-ten.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/pentacles-three.html",
@@ -541,7 +541,7 @@
     "ru_url": "https://taro.jetserg.top/cards/pentacles-three.html",
     "en_url": "https://taro.jetserg.top/en/cards/pentacles-three.html",
     "x_default": "https://taro.jetserg.top/cards/pentacles-three.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/pentacles-two.html",
@@ -549,7 +549,7 @@
     "ru_url": "https://taro.jetserg.top/cards/pentacles-two.html",
     "en_url": "https://taro.jetserg.top/en/cards/pentacles-two.html",
     "x_default": "https://taro.jetserg.top/cards/pentacles-two.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/poveshennyj.html",
@@ -557,7 +557,7 @@
     "ru_url": "https://taro.jetserg.top/cards/poveshennyj.html",
     "en_url": "https://taro.jetserg.top/en/cards/poveshennyj.html",
     "x_default": "https://taro.jetserg.top/cards/poveshennyj.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/sila.html",
@@ -565,7 +565,7 @@
     "ru_url": "https://taro.jetserg.top/cards/sila.html",
     "en_url": "https://taro.jetserg.top/en/cards/sila.html",
     "x_default": "https://taro.jetserg.top/cards/sila.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/smert.html",
@@ -573,7 +573,7 @@
     "ru_url": "https://taro.jetserg.top/cards/smert.html",
     "en_url": "https://taro.jetserg.top/en/cards/smert.html",
     "x_default": "https://taro.jetserg.top/cards/smert.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/solnce.html",
@@ -581,7 +581,7 @@
     "ru_url": "https://taro.jetserg.top/cards/solnce.html",
     "en_url": "https://taro.jetserg.top/en/cards/solnce.html",
     "x_default": "https://taro.jetserg.top/cards/solnce.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/spravedlivost.html",
@@ -589,7 +589,7 @@
     "ru_url": "https://taro.jetserg.top/cards/spravedlivost.html",
     "en_url": "https://taro.jetserg.top/en/cards/spravedlivost.html",
     "x_default": "https://taro.jetserg.top/cards/spravedlivost.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/sud.html",
@@ -597,7 +597,7 @@
     "ru_url": "https://taro.jetserg.top/cards/sud.html",
     "en_url": "https://taro.jetserg.top/en/cards/sud.html",
     "x_default": "https://taro.jetserg.top/cards/sud.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/swords-ace.html",
@@ -605,7 +605,7 @@
     "ru_url": "https://taro.jetserg.top/cards/swords-ace.html",
     "en_url": "https://taro.jetserg.top/en/cards/swords-ace.html",
     "x_default": "https://taro.jetserg.top/cards/swords-ace.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/swords-eight.html",
@@ -613,7 +613,7 @@
     "ru_url": "https://taro.jetserg.top/cards/swords-eight.html",
     "en_url": "https://taro.jetserg.top/en/cards/swords-eight.html",
     "x_default": "https://taro.jetserg.top/cards/swords-eight.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/swords-five.html",
@@ -621,7 +621,7 @@
     "ru_url": "https://taro.jetserg.top/cards/swords-five.html",
     "en_url": "https://taro.jetserg.top/en/cards/swords-five.html",
     "x_default": "https://taro.jetserg.top/cards/swords-five.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/swords-four.html",
@@ -629,7 +629,7 @@
     "ru_url": "https://taro.jetserg.top/cards/swords-four.html",
     "en_url": "https://taro.jetserg.top/en/cards/swords-four.html",
     "x_default": "https://taro.jetserg.top/cards/swords-four.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/swords-king.html",
@@ -637,7 +637,7 @@
     "ru_url": "https://taro.jetserg.top/cards/swords-king.html",
     "en_url": "https://taro.jetserg.top/en/cards/swords-king.html",
     "x_default": "https://taro.jetserg.top/cards/swords-king.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/swords-knight.html",
@@ -645,7 +645,7 @@
     "ru_url": "https://taro.jetserg.top/cards/swords-knight.html",
     "en_url": "https://taro.jetserg.top/en/cards/swords-knight.html",
     "x_default": "https://taro.jetserg.top/cards/swords-knight.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/swords-nine.html",
@@ -653,7 +653,7 @@
     "ru_url": "https://taro.jetserg.top/cards/swords-nine.html",
     "en_url": "https://taro.jetserg.top/en/cards/swords-nine.html",
     "x_default": "https://taro.jetserg.top/cards/swords-nine.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/swords-page.html",
@@ -661,7 +661,7 @@
     "ru_url": "https://taro.jetserg.top/cards/swords-page.html",
     "en_url": "https://taro.jetserg.top/en/cards/swords-page.html",
     "x_default": "https://taro.jetserg.top/cards/swords-page.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/swords-queen.html",
@@ -669,7 +669,7 @@
     "ru_url": "https://taro.jetserg.top/cards/swords-queen.html",
     "en_url": "https://taro.jetserg.top/en/cards/swords-queen.html",
     "x_default": "https://taro.jetserg.top/cards/swords-queen.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/swords-seven.html",
@@ -677,7 +677,7 @@
     "ru_url": "https://taro.jetserg.top/cards/swords-seven.html",
     "en_url": "https://taro.jetserg.top/en/cards/swords-seven.html",
     "x_default": "https://taro.jetserg.top/cards/swords-seven.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/swords-six.html",
@@ -685,7 +685,7 @@
     "ru_url": "https://taro.jetserg.top/cards/swords-six.html",
     "en_url": "https://taro.jetserg.top/en/cards/swords-six.html",
     "x_default": "https://taro.jetserg.top/cards/swords-six.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/swords-ten.html",
@@ -693,7 +693,7 @@
     "ru_url": "https://taro.jetserg.top/cards/swords-ten.html",
     "en_url": "https://taro.jetserg.top/en/cards/swords-ten.html",
     "x_default": "https://taro.jetserg.top/cards/swords-ten.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/swords-three.html",
@@ -701,7 +701,7 @@
     "ru_url": "https://taro.jetserg.top/cards/swords-three.html",
     "en_url": "https://taro.jetserg.top/en/cards/swords-three.html",
     "x_default": "https://taro.jetserg.top/cards/swords-three.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/swords-two.html",
@@ -709,7 +709,7 @@
     "ru_url": "https://taro.jetserg.top/cards/swords-two.html",
     "en_url": "https://taro.jetserg.top/en/cards/swords-two.html",
     "x_default": "https://taro.jetserg.top/cards/swords-two.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/umerennost.html",
@@ -717,7 +717,7 @@
     "ru_url": "https://taro.jetserg.top/cards/umerennost.html",
     "en_url": "https://taro.jetserg.top/en/cards/umerennost.html",
     "x_default": "https://taro.jetserg.top/cards/umerennost.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/vlyublyonnye.html",
@@ -725,7 +725,7 @@
     "ru_url": "https://taro.jetserg.top/cards/vlyublyonnye.html",
     "en_url": "https://taro.jetserg.top/en/cards/vlyublyonnye.html",
     "x_default": "https://taro.jetserg.top/cards/vlyublyonnye.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/wands-ace.html",
@@ -733,7 +733,7 @@
     "ru_url": "https://taro.jetserg.top/cards/wands-ace.html",
     "en_url": "https://taro.jetserg.top/en/cards/wands-ace.html",
     "x_default": "https://taro.jetserg.top/cards/wands-ace.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/wands-eight.html",
@@ -741,7 +741,7 @@
     "ru_url": "https://taro.jetserg.top/cards/wands-eight.html",
     "en_url": "https://taro.jetserg.top/en/cards/wands-eight.html",
     "x_default": "https://taro.jetserg.top/cards/wands-eight.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/wands-five.html",
@@ -749,7 +749,7 @@
     "ru_url": "https://taro.jetserg.top/cards/wands-five.html",
     "en_url": "https://taro.jetserg.top/en/cards/wands-five.html",
     "x_default": "https://taro.jetserg.top/cards/wands-five.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/wands-four.html",
@@ -757,7 +757,7 @@
     "ru_url": "https://taro.jetserg.top/cards/wands-four.html",
     "en_url": "https://taro.jetserg.top/en/cards/wands-four.html",
     "x_default": "https://taro.jetserg.top/cards/wands-four.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/wands-king.html",
@@ -765,7 +765,7 @@
     "ru_url": "https://taro.jetserg.top/cards/wands-king.html",
     "en_url": "https://taro.jetserg.top/en/cards/wands-king.html",
     "x_default": "https://taro.jetserg.top/cards/wands-king.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/wands-knight.html",
@@ -773,7 +773,7 @@
     "ru_url": "https://taro.jetserg.top/cards/wands-knight.html",
     "en_url": "https://taro.jetserg.top/en/cards/wands-knight.html",
     "x_default": "https://taro.jetserg.top/cards/wands-knight.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/wands-nine.html",
@@ -781,7 +781,7 @@
     "ru_url": "https://taro.jetserg.top/cards/wands-nine.html",
     "en_url": "https://taro.jetserg.top/en/cards/wands-nine.html",
     "x_default": "https://taro.jetserg.top/cards/wands-nine.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/wands-page.html",
@@ -789,7 +789,7 @@
     "ru_url": "https://taro.jetserg.top/cards/wands-page.html",
     "en_url": "https://taro.jetserg.top/en/cards/wands-page.html",
     "x_default": "https://taro.jetserg.top/cards/wands-page.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/wands-queen.html",
@@ -797,7 +797,7 @@
     "ru_url": "https://taro.jetserg.top/cards/wands-queen.html",
     "en_url": "https://taro.jetserg.top/en/cards/wands-queen.html",
     "x_default": "https://taro.jetserg.top/cards/wands-queen.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/wands-seven.html",
@@ -805,7 +805,7 @@
     "ru_url": "https://taro.jetserg.top/cards/wands-seven.html",
     "en_url": "https://taro.jetserg.top/en/cards/wands-seven.html",
     "x_default": "https://taro.jetserg.top/cards/wands-seven.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/wands-six.html",
@@ -813,7 +813,7 @@
     "ru_url": "https://taro.jetserg.top/cards/wands-six.html",
     "en_url": "https://taro.jetserg.top/en/cards/wands-six.html",
     "x_default": "https://taro.jetserg.top/cards/wands-six.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/wands-ten.html",
@@ -821,7 +821,7 @@
     "ru_url": "https://taro.jetserg.top/cards/wands-ten.html",
     "en_url": "https://taro.jetserg.top/en/cards/wands-ten.html",
     "x_default": "https://taro.jetserg.top/cards/wands-ten.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/wands-three.html",
@@ -829,7 +829,7 @@
     "ru_url": "https://taro.jetserg.top/cards/wands-three.html",
     "en_url": "https://taro.jetserg.top/en/cards/wands-three.html",
     "x_default": "https://taro.jetserg.top/cards/wands-three.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/wands-two.html",
@@ -837,7 +837,7 @@
     "ru_url": "https://taro.jetserg.top/cards/wands-two.html",
     "en_url": "https://taro.jetserg.top/en/cards/wands-two.html",
     "x_default": "https://taro.jetserg.top/cards/wands-two.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/zhrefca.html",
@@ -845,7 +845,7 @@
     "ru_url": "https://taro.jetserg.top/cards/zhrefca.html",
     "en_url": "https://taro.jetserg.top/en/cards/zhrefca.html",
     "x_default": "https://taro.jetserg.top/cards/zhrefca.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "cards/zvezda.html",
@@ -853,15 +853,15 @@
     "ru_url": "https://taro.jetserg.top/cards/zvezda.html",
     "en_url": "https://taro.jetserg.top/en/cards/zvezda.html",
     "x_default": "https://taro.jetserg.top/cards/zvezda.html",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "index.html",
-    "en_file": "en/index.html",
+    "en_file": "en/taro/index.html",
     "ru_url": "https://taro.jetserg.top/",
-    "en_url": "https://taro.jetserg.top/en/",
+    "en_url": "https://taro.jetserg.top/en/taro/",
     "x_default": "https://taro.jetserg.top/",
-    "status": "planned"
+    "status": "hidden"
   },
   {
     "ru_file": "lenormand/01-vsadnik/index.html",

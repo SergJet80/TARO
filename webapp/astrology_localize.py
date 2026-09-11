@@ -208,6 +208,21 @@ def main() -> int:
         if relative == "astrology/wheel.html":
             english = english.replace('src="../../astrology/js/wheel-data.js', 'src="js/wheel-data.js')
             english = english.replace('src="../../astrology/js/wheel.js', 'src="js/wheel.js')
+        # Переключатель на EN-колесо в RU-исходнике ('../en/astrology/wheel.html') в EN-копии
+        # должен указывать на тот же файл (/../en/astrology/wheel.html от en/astrology/)
+        english = english.replace('href="../../astrology/wheel.html"', 'href="../../astrology/wheel.html"')  # RU-колесо: тот же путь валиден от en/astrology (up2 = webapp)
+        # Соседние разделы (lenormand/runes/numerology) в EN-астрологии остаются ссылками на RU
+        # (чекер требует «links to other sections target RU»). Глубина EN = глубина RU + 1:
+        # считаем вверх от текущей EN-страницы до корня webapp и ставим абсолютный префикс.
+        en_rel = 'en/' + relative
+        en_dir = en_rel.rsplit('/', 1)[0]
+        def _ru_neighbor(m):
+            # цель: ROOT/<section>/ → относительный путь от каталога EN-страницы
+            depth = en_dir.count('/') + 1  # en/astrology/X → 3 сегмента → 3 up до webapp
+            section = re.search(r'(lenormand|runes|numerology)/', m.group()).group(1)
+            return 'href="' + '../' * depth + section + '/'
+        english = re.sub(r'href="(?:\.\./)+(?:lenormand|runes|numerology)/', _ru_neighbor, english)
+
         pending[ROOT / "en" / relative] = english
 
     errors = check_pending(pending)

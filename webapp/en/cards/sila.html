@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strength — Meaning and Interpretation | Tarot Guide</title>
+<meta name="description" content="Strength: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<link rel="canonical" href="https://taro.jetserg.top/en/cards/sila.html">
+<meta property="og:title" content="Strength — Meaning and Interpretation | Tarot Guide">
+<meta property="og:description" content="Strength: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taro.jetserg.top/en/cards/sila.html">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/major-08-strength.webp">
+<link rel="stylesheet" href="../../css/style.css?v=4.0">
+<link rel="stylesheet" href="../../css/astrology.css?v=4.0">
+<style>
+.main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
+.card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
+.card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
+.card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
+.card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── School of Modern Tarot ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
+.card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
+.card-pagination a:last-child { text-align: right; }
+.card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
+@media (max-width: 480px) {
+  .main-nav { padding: 12px 12px 0; }
+  .main-nav a { padding: 8px 12px; font-size: .9rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
+  .card-pagination { gap: 10px; }
+  .card-pagination a { padding: 16px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Strength — Meaning and Interpretation | Tarot Guide",
+  "description": "Strength: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.",
+  "url": "https://taro.jetserg.top/en/cards/sila.html",
+  "inLanguage": "en"
+}
+</script>
+<!-- Microsoft Clarity -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yejlmmd6nr");
+</script>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+<nav class="main-nav" aria-label="Sections">
+  <div class="main-nav-inner">
+    <a href="../taro/index.html">Tarot</a>
+    <a href="index.html" class="mn-active" style="display:none" aria-hidden="true">Cards</a>
+    <a href="../astrology/index.html">Astrology</a>
+    <a href="../lenormand/index.html">Lenormand</a>
+    <a href="../runes/index.html">Runes</a>
+    <a href="../../spreads.html">Spreads</a>
+  <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> About the project</a>
+  </div>
+</nav>
+<main class="card-page">
+<nav class="card-crumbs" aria-label="Breadcrumbs"><a href="../taro/index.html">Tarot</a> / <span aria-current="page">Strength</span></nav>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="../../img/cards/major-08-strength.webp" alt="Strength — Universal Waite Tarot card" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Major Arcana · VIII</p>
+<h1 class="m-title"><span class="card-number">VIII</span>Strength</h1>
+<p class="m-en"></p>
+<p class="m-meta">Element: <b>Fire</b> &nbsp;·&nbsp; Astrology: <b>Lev Lev</b></p>
+</div>
+</header>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Card positions">
+<label class="pos-tab" for="pos-upright">Upright position</label>
+<label class="pos-tab" for="pos-reversed">Reversed position</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">School of Modern Tarot</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">inner</span><span class="kw">softness</span><span class="kw">patience</span><span class="kw">passion-taming</span><span class="kw">courage</span><span class="kw">self-control</span><span class="kw">compassion</span></div>
+<p class="short-value">The real power is soft: the beast is tamed not by whiplash, but by calm breathing and patience; endurance, self-control and compassion take what the hardest pressure would not take.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>A woman in a wreath of roses effortlessly closes the lion&#x27;s mouth; the infinity sign above her head says that the source of this power is not muscles. The lion is our passions, instincts and fears; they are tamed not by prohibition, but by tame: the beast gives strength to those who do not fear or humiliate him.</p>
+<p>After the victory chariot, the arcana teaches the next level of skill: to win without fighting. It&#x27;s the resilience of long-term tension, the ability to withstand the anger of others without responding in kind, to remain calm where the fists would be easier. The card promises that gentleness in this story is not weakness, but the highest form of control.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>A day when the little things are annoying: traffic jams, queues, other people&#x27;s slowness — the card offers a training of self-control instead of a flashback. There are things that require patience: long conversations with children and the elderly, monotonous work, caring for animals and plants. A great day to apologize first or to extinguish an incipient quarrel with a smile. In the evening — physical discharge: accumulated in a day will find a way out of itself, if not helped.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>At work, arcana means a situation where the result is not pressure, but influence: a complex client, a capricious manager, a conflicting colleague — everyone copes with a calm, consistent tone. Favorable time for painstaking tasks that require endurance: long negotiations, training newcomers, quietly correcting other people&#x27;s mistakes without public confrontation. But do not confuse patience with endless compliance: mark boundaries quietly and firmly.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>In relationships, Strength is the art of taking a partner alive: with a character, habits and moods, without trying to rewrite him to yourself. The card is good for couples in turbulence: tenderness and humor extinguish quarrels more effectively than judging who is right. For single people, she advises you to look at restrained adults next to you, not spectacular lions: passion is tested for years, not the first date. Shadow is to endure the unacceptable: to tame the beast does not mean to live in a moat.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>The card is about the heart and the spine, which is what rocks and holds: back exercises and soft cardio in joyful mode are useful. The emotional component is more important than stress: chronic suppression of anger hits the heart and blood pressure more noticeable than fatty foods. A good period for dealing with addictions: daily soft struggle with habit wins jerks and breaks.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>The way of Tet, the snakes, connects Gebura and Hesed: a force flowing between severity and mercy, like a snake between stones. The lion and the infinity sign make the arcana a card of working with fire energy: breathing practices, working with instincts, everything where power requires tame, not locking.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">self-doubt</span><span class="kw">breakdown</span><span class="kw">emotion-suppression</span><span class="kw">exhaustion</span><span class="kw">uncertainty</span><span class="kw">rawness</span></div>
+<p class="short-value">Failure to control the beast: outbursts of anger and rash actions, for which then shame, or suppressed emotions, self-doubt and resource, exhausted to the bottom.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>The reversed Force is a malfunction of the beast. The first scenario is that the lion has broken out -- outbursts of anger, breakdowns, rash acts that are then shameful. The second is that the lion is on chains -- emotions are crushed, desires are forbidden, the person lives on pain-relieving wills and calls it calm.</p>
+<p>Often, the card speaks of a compromised confidence: the eternal comparison of oneself with others, the imposter syndrome, the fear of appearing weak, which is masked by rudeness and painful acquiescence. Energyly, this exhaustion is a resource that has been taken on credit for too long. Arkan advises against heroizing survival: recovery is also a work of strength, sometimes the most difficult.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>In everyday life, the day of low brightness: everything is infuriating, any &quot;no&quot; is perceived as a personal insult, and there is no strength to restrain yourself, hence the breakdowns on cashiers and loved ones. Or vice versa: apathy, when even the series watch laziness, and desires are silent. The first means is to slow down before it breaks: sleep, food, water, no important conversations on the hungry nerve. The second is a small honest pleasure without excuses: it brings to life faster than self-flage.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>At work, the inverted Force is a resource at zero: tasks that were easy yesterday are annoying today, mistakes are falling over loss of concentration; there may be a crisis of confidence after public failure: criticism beats harder than usual, and hands drop; dangerous and the reverse strategy is to push, scream, push: short-term work, long-term burns the team and you.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>In relationships, the card shows two damages: flashes and humiliations, after which the loved one walks quietly, or complete numbness of feelings when both live as neighbors. Jealousy and possessiveness are typical masks of fear of “I’m not good enough.” And there is also fatigue from patience: for years, the corners were smoothed out, and today the cup is overflowing.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>Bodily suppressed or raging elements hit the heart, blood vessels and hormonal system: panic attacks, tremors, lumps in the throat, appetite swings. Chronic self-repression is a known factor of hypertension and digestive problems: the body continues to scream until it is heard. Immunity decreases - everything that was dormant worsens. The arcana recipe: daily gentle discharge of anger - sports, paper, screaming in the car - full sleep and abandoning the role of the eternal hero: recovery begins with permission to be tired.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>The spiritually upside down Tet is a snake biting its tail: energy locked in fear or released unconscious. The card indicates a fear of its own power: a person feels the beast in himself and therefore keeps him hungry, and a hungry beast sooner or later tears the chain. In practice, it warns of violent awakening techniques — forced work with fire burns.</p></div>
+</div>
+<div class="pos-pane pane-roman roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> In brief</h3>
+<div class="info-section"><h3>The main idea</h3><p>Force is not suppression or violence; it&#x27;s the ability to negotiate with your own power.
+The lion doesn&#x27;t have to growl all the time. Real power comes from being able to control your desires calmly.</p></div>
+<div class="info-section"><h3>How it manifests</h3><p>Charisma, courage, sexuality, naturalness, creative fire, the desire to do things because they really like it.</p></div>
+<div class="info-section"><h3>Work.</h3><p>A bright leader who is able to engage others with his own energy.</p></div>
+<div class="info-section"><h3>In a relationship</h3><p>Sincere desire, sexuality, courage to be yourself.</p></div>
+<div class="info-section"><h3>The shadow side</h3><p>Passion gets out of control: greed, lust, impulsivity, attention, star disease.</p></div>
+<div class="info-section"><h3>Feature of the school</h3><p>The Force is connected with the Lion and the V House, and the main task is not to suppress your lion and not let it eat you.</p></div>
+<div class="roman-astro"><span class="ra-label">✷ School astrology</span><b>V House - Lion</b><span class="ra-sep">·</span>Sunshine<div class="ra-classic">In the Waite tradition: Lev Lev</div></div>
+<h3 class="roman-subtitle"><span>📜</span> In detail — lecture extracts</h3>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">✧</span> Essence of the card</summary><div class="rd-body"><p>Force is not muscles, but action applied to something: “There is no force unattached anywhere”; any action is an effect on another person. The main character of the card is not a lion or a girl, but the force itself in the interaction of the consciousness-sun and natural human passions. The girl “closes the lion’s mouth” rather than tearing it up like Hercules or the Marseilles Tarot, acts by the force of calming, the leash is the garland of flowers. From Waite he deduces the key the the the thesis of the school: the lion is our passions, and the Force is “the most difficult to do without them”; “the expression of force is often to do it; it is much more difficult to do without them.”</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Upright position</summary><div class="rd-body"><ul class="st-list"><li>There is no separate list of meanings in the lecture – the card is given through four themes-elements (social / personal, work / home) and “the feeling of the fifth home”.</li><li>- Work, society: a bright charismatic personality who does &quot;as he likes.&quot; Contrast with the Chariot: a realtor on the Chariot works according to the established standard scheme, and on the Force - is burning with desire, puts his soul (&quot;let&#x27;s repaint this wall - the apartment will sell better&quot;). The principle of power = the principle of management: the solar &quot;lion boss&quot; is passionate (&quot;let&#x27;s all we can together&quot;), but &quot;the lion roars not for someone to listen, but because he wants to grunt.&quot;</li><li>- Field of the fifth house: activities &quot;in the focus of others&quot; - public speaking, self-demonstration, acting (personal experience of the student theater), teaching, sports (sport = fun, &quot;for sport&quot;), hobbies, obsession with the opposite sex (&quot;shooting eyes so that men fit into the pile&quot;), children, games, gambling, trading.</li><li>Finance, property: gold is the traditional meaning of the sun and the lion, &quot;contained potential&quot;: money decides everything. Real estate is the hidden value that is revealed at the decisive moment (a glossy apartment after the show &quot;will play&quot;, the center of Moscow is better to hold) Sell at the right moment: &quot;If you really want to sell the apartment, sell cheap.&quot;</li><li>Emotions, personal life: courage, courage, naturalness, sexuality; sincere manifestation of desires; lion is a pride animal, takes into account the opinion of his own.</li><li>Self-development: disclosure of talent, creativity, self-expression -- throwing wood into the fire of desire, you can&#x27;t stop. The age focus of school: at 28 years old, work and family, at the transition of 28→30 people look for themselves and rethink skills in interaction with others.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Negative meaning</summary><div class="rd-body"><p>Negatives are adjectively defined as &quot;it is, if it is in the negative, it is lust.&quot;</p>
+<p>Passions lose control: greed (&quot;the left wants more and more all the time&quot;), impulsive &quot;wanted - done.&quot;
+Star disease is the “cause of the lion’s problems”: working for the public for the sake of fame in itself (celebrity is only a side effect of the matter to the liking); the flip side of appearance is the desire to hide: “you do not always want to be in sight.”
+Excessive desire puts pressure on the situation: the apartment was sold cheaply because “I wanted to quickly”.
+The over-extending of a stick (the example of the school is Crowley) and the opposite extreme is the medieval mortification of the flesh by torture; both extremes depart from the school principle of “to negotiate with one’s lion amicably.”</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> School emphases and distinctive points</summary><div class="rd-body"><ul class="st-list"><li>The Middle Ages are the Age of Power, Justice = the Right of the Strong; Waite painted the deck at the turning point of the ages, when the manifestation of strength is “more weakness.” The school supports Waite and the development chain Chariot → Power → Hermit → Justice on XI (it requires an analysis of the mechanism of the world – the Wheel of Fortune).</li><li>- Astrology of his system (Western, &quot;not author&#x27;s, just logical&quot;): VIII larcana = V house + Leo; solar freedom against the lunar cycles of the Chariot (&quot;house-work-borscht-slippers&quot;). Anecdote: &quot;I&#x27;m not a real welder&quot;, I&#x27;m not an astrologer.</li><li>Lemniscata overhead - an endless cycle of development (the same in the Magician / I house; encrypted - in the angel with bowls during the transition Scorpio → Sagittarius); the entrance to the second third of the zodiac - the stage of formation.</li><li>Mythology: Inanna/Ishtar is the goddess on the lion (fertility + war, patroness of temple prostitutes, &quot;courtisan of the gods&quot;), parallel to Venus/Aphrodite; &quot;female power is in weakness, beauty, ability to seduce.&quot; Leo is the main beast of the bestiaries, a symbol of power: the thrones of Solomon, French kings, bishops; Tetramorph is the evangelist Mark; the dark line is the symbol of the Antichrist, the chthonic roar.</li><li>Crowley is the main antithesis: Lust&#x27;s arcana, the seven-headed beast, the Babylonian whore; thelema grew out of Rabelais (&quot;Do what you will&quot;), true will = calling. Biography explains the deck: his mother called him &quot;the child of the Antichrist,&quot; hence the conclusion of the school is to bring up children softer. Own formula: the perfect card of the Force is the middle between Waite and Crowley (Waite - &quot;pink snot&quot;, Crowley - &quot;toothrowley - &quot;t&#x27;s too Babylonian whoree&quot;).</li><li>Sol Invictus / Mithras / Helios: the invincible sun of Aurelian (274), which competed with Christianity; attribute - a golden chariot (link with the past arcana); Dürer painted justice riding on a lion; Christ = reborn Helios (Zeus became God-Father); the Church rethought solar festivals (analogue of Maslenitsa in Russia); Helios raised from the bottom the island of Rhodes (Coloss) - the the the the theme of the development of his civilization.</li><li>Alchemy and children&#x27;s literature: green lion of Marseille Tarot - universal solvent, &quot;our mercury&quot;, biting the sun (Rosarium philosophorum; gratitude: Arzamas website, Sergey Zotov); green crocodile Chukovsky reads as passions, absorbing the consciousness of the sun.</li><li>- &quot;Second Fire&quot;: the first fire of Aries/Maga is an accidental lightning bolt for one; the second, lion fire is a fire brought into a cave for the sake of family and tribe, requiring night watch ⇒ profession, specialization, conscious understanding of their business.</li><li>- Slavic series: &quot;Ivan Tsarevich and the Grey Wolf&quot; - the archetype of the helper-beast: threat with weapons → &quot;I still need to come in handy&quot;; the ability to negotiate with a wild beast = a real hero (Hercules kills - &quot;the force according to Crowley&quot;). Dead water, then living - a hint of the opposite house of Aquarius.</li><li>Modern images: comics as a continuation of the lubricant and storytelling; Hulk, Jekyll and Hyde; Superman and Batman - Chariot card (hereditary power, double personality), but Tony Stark - &quot;true lion&quot;: goes public - &quot;Iron Man is me&quot;, pride in the fact that he created himself: &quot;my superpower - mind, it can not be taken away from me&quot;; Kirkorov - &quot;more lion&quot;, Rastorguev closer to the Chariot.</li><li>Practice: understand parents, only becoming them; the power to apply calmly - &quot;calm children, not punish with a belt&quot;; Sun / Ascendant in Leo - not an indicator of celebrity, fame is only a side effect.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Keywords</summary><div class="rd-body"><ul class="st-list"><li>The power of calming; second fire; restrained potential; action in the spotlight; self-demonstration; pride; garland of flowers; hidden cost; naturalness; star disease; &quot;do what&#x27;s high.&quot;</li><li>---</li></ul></div></details>
+</div>
+<nav class="card-pagination" aria-label="Previous and next card">
+<a rel="prev" href="kolesnica.html"><span>← Previous card</span>The Chariot</a>
+<a rel="next" href="otshelnik.html"><span>Next card →</span>The Hermit</a>
+</nav>
+</article>
+</main>
+<footer class="site-footer">
+  <p>Tarot · Card Meaning Guide</p>
+  <p class="footer-note">The material is for reference and entertainment</p>
+
+<div class="footer-contact">
+  <p class="fc-lead">For questions, collaboration or advertising enquiries, write to me — I reply personally:</p>
+  <div class="fc-links">
+    <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+    <span class="fc-sep" aria-hidden="true">·</span>
+    <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+  </div>
+  <p class="fc-lead">I keep this project going through enthusiasm, without advertising or visitor fees. If you find it useful, a contribution of any size helps me develop the guide further.</p>
+  <div class="fc-links fc-donate">
+    <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Donatello (UA-friendly)</a>
+    <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+  </div>
+</div>
+</footer>
+<!-- Модалка «About the project» -->
+<div class="about-backdrop" id="aboutModal" aria-hidden="true">
+  <div class="about-dialog" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+    <button class="about-close" type="button" aria-label="Close">&times;</button>
+    <h2 id="aboutTitle"><span class="title-star">✦</span> About the project</h2>
+    <p>I put this personal guide to Tarot, Lenormand, runes and astrology together on my own, with no team, office or investors. It runs on enthusiasm, without intrusive advertising, registration or paid subscriptions. All the material is freely accessible.</p>
+    <p>Creating and maintaining the guide takes hundreds of hours: writing, translating interpretations, designing pages and looking after the server. If it has helped you, a contribution is a welcome thank-you and supports new sections, cards, combinations and spreads.</p>
+    <div class="about-donate">
+      <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Support via Donatello (UA-friendly)</a>
+      <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+    </div>
+    <p class="about-contact">Questions, collaboration ideas or advertising enquiries? Write to me — I reply personally:</p>
+    <div class="about-links">
+      <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+      <span aria-hidden="true">·</span>
+      <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('aboutBtn'), m=document.getElementById('aboutModal');
+  if(!btn||!m) return;
+  function open(e){e.preventDefault();m.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){m.classList.remove('open');document.body.style.overflow='';}
+  btn.addEventListener('click',open);
+  m.querySelector('.about-close').addEventListener('click',close);
+  m.addEventListener('click',function(e){if(e.target===m)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Magician — Meaning and Interpretation | Tarot Guide</title>
+<meta name="description" content="The Magician: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<link rel="canonical" href="https://taro.jetserg.top/en/cards/mag.html">
+<meta property="og:title" content="The Magician — Meaning and Interpretation | Tarot Guide">
+<meta property="og:description" content="The Magician: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taro.jetserg.top/en/cards/mag.html">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/major-01-magician.webp">
+<link rel="stylesheet" href="../../css/style.css?v=4.0">
+<link rel="stylesheet" href="../../css/astrology.css?v=4.0">
+<style>
+.main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
+.card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
+.card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
+.card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
+.card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── School of Modern Tarot ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
+.card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
+.card-pagination a:last-child { text-align: right; }
+.card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
+@media (max-width: 480px) {
+  .main-nav { padding: 12px 12px 0; }
+  .main-nav a { padding: 8px 12px; font-size: .9rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
+  .card-pagination { gap: 10px; }
+  .card-pagination a { padding: 16px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Magician — Meaning and Interpretation | Tarot Guide",
+  "description": "The Magician: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.",
+  "url": "https://taro.jetserg.top/en/cards/mag.html",
+  "inLanguage": "en"
+}
+</script>
+<!-- Microsoft Clarity -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yejlmmd6nr");
+</script>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+<nav class="main-nav" aria-label="Sections">
+  <div class="main-nav-inner">
+    <a href="../taro/index.html">Tarot</a>
+    <a href="index.html" class="mn-active" style="display:none" aria-hidden="true">Cards</a>
+    <a href="../astrology/index.html">Astrology</a>
+    <a href="../lenormand/index.html">Lenormand</a>
+    <a href="../runes/index.html">Runes</a>
+    <a href="../../spreads.html">Spreads</a>
+  <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> About the project</a>
+  </div>
+</nav>
+<main class="card-page">
+<nav class="card-crumbs" aria-label="Breadcrumbs"><a href="../taro/index.html">Tarot</a> / <span aria-current="page">The Magician</span></nav>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="../../img/cards/major-01-magician.webp" alt="The Magician — Universal Waite Tarot card" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Major Arcana · I</p>
+<h1 class="m-title"><span class="card-number">I</span>The Magician</h1>
+<p class="m-en"></p>
+<p class="m-meta">Element: <b>Air</b> &nbsp;·&nbsp; Astrology: <b>mercury</b></p>
+</div>
+</header>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Card positions">
+<label class="pos-tab" for="pos-upright">Upright position</label>
+<label class="pos-tab" for="pos-reversed">Reversed position</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">School of Modern Tarot</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">will</span><span class="kw">mastery</span><span class="kw">concentration</span><span class="kw">initiative</span><span class="kw">manifestation</span><span class="kw">guile</span><span class="kw">resource</span></div>
+<p class="short-value">All the power is in your hands: the will, the concentration and the ability to connect the plan with the work; there comes a moment when you can, know and know exactly where to start moving towards the goal.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>The magician stands at a table with tools of all stripes -- a wand, a cup, a sword, and a pentacle -- all available to him at the same time, one hand raised to the sky, the other lowered to the ground, the classic &quot;up above, down&quot; formula acting through him, is the first arcana of conscious will after innocent zero: the design that found the hands.</p>
+<p>The card represents the moment when understanding, eloquence and determination coincide. You don&#x27;t just want to, you can and you know where to start. Mercurian nature gives you the flexibility of the mind, the trading vein, the talent to translate complex into understandable. Magician is the arc of self-actualization: the world responds to someone who articulates intent and reinforces it with action.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>The day is good for negotiation, shopping, paperwork, and everything that needs to be clear and quick to think. You can do several things at once — Mercurian energy likes multitasking — but keep a list so that nothing gets lost. It&#x27;s good to start learning something new or apply a skill that was idle. In the evening, re-read the message: on these days it&#x27;s easy to promise too much or write to the wrong recipient.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>Direct Magic is a professional card: the project requires your competencies, and you know it. Great time for presentations, interviews, deals and defense of ideas; the negotiator reads the interlocutor with such energy and gently leads to the decision. The leader gives authority without pressure — you are listened to because they understand. Watch the temptation to turn work into a show: the focus should end with the result, not applause.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>In love, the Magician is a period of attraction when words and gestures are targeted: courtships are inventive, deep conversations, expressive pauses. The single card promises to meet a person of bright mind, often from social circle, study or work contacts. It is useful for a couple to start a common cause - from repair to an English course: joint action unites more than confessions. The shadow of the arcanum is beautiful speech without action: if the relationship is held only on them, it is time to test them with business.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>The card is connected to the nervous system and the conductive channels of the body: energy is invigorating, but it can be &quot;overdry.&quot; Well, things are going well that require coordination and fine motor skills; diagnostic procedures during this period are accurate, specialists&#x27; hands are confident. Careful with caffeine, stimulants and lack of sleep - the Mercurian race drains nerves quietly.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>The way of Beth, the &quot;home,&quot; connects Keter and Bina: the will that builds its dwelling in matter. Mercury makes the Magus the patron of the Hermetic arts, from astrology to the art of memory; his main instrument is the word spoken with force. In the ritual, the arcana corresponds to the concentration of intention before any work begins: first to collect attention in a point, then to act.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">manipulation</span><span class="kw">trickery</span><span class="kw">impostorship</span><span class="kw">squandered</span><span class="kw">fuzziness</span><span class="kw">blurred</span></div>
+<p class="short-value">Power flows through your fingers: talent is wasted on small things, words diverge from deeds, and confidence covers the void – there may be a dexterous manipulator or his own inner imposterity.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>The inverted Magician is the same magician, but the table is turned to the public, not to the cause. The will is scattered into a dozen small undertakings, promises outpace opportunities, and confidence masks emptiness. In the worst case, the card points to a manipulator: a person who deliberately uses trust to sell the illusion of competence, from a miracle seller to a colleague who appropriates other people&#x27;s ideas.</p>
+<p>More often, however, the arcana talks about inner imposterity: ability is there, but fear of exposure causes them to hide or simulate activity instead of activity. The simple and unpleasant way is to pick one goal and make it work, checking each statement against fact. Until that is done, any charisma is a cheap trick.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>In everyday life, there&#x27;s no end to the bustle: ten things started, no completed ones, mixed records, lost time on &quot;important&quot; calls. You&#x27;re at increased risk of cheating -- check check checks, change, subscription terms, don&#x27;t be rushed. Defer major purchases and decisions: today they&#x27;re made out of excitement, not necessity.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>At work, an inverted Magician is a smeared focus: meetings instead of decisions, reports instead of a product, three projects instead of one completed. The card warns of unscrupulous partners and the temptation to embellish reporting — reputation caught inaccuracy is the slowest to appreciate. There is also a crisis of competence: the task has grown, and the skill has remained the same. The honest answer is to learn or delegate, not to nod understanding.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>In relationships, the arcana points to play: misunderstandings, double lives, manipulation of guilt or jealousy as a way to keep it together. Sometimes it&#x27;s just chatter -- promises of golden mountains instead of specifics that make the partner feel warm and anxious. For singles, the card advises you to test words with your hands: a brilliant storyteller is not always a reliable person.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>Energy is depleted through nerves: insomnia, tics, stuttering, exacerbation of chronic stress reactions are typical markers of this period. Symptoms can get confused and flash, making it difficult to diagnose: write them down so you don&#x27;t confuse the doctor with blurry descriptions. Beware of self-medicating through advertising - the inverted Magician trades wonderful pills. Helps reduce stimulation: fewer screens and caffeine, more water, sleep and measured walks.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>In a spiritual sense, inverted Beth is a word detached from meaning: conspiracies without understanding, techniques without ethics, the magic of impression instead of the magic of change. The card warns of the substitution of the goal by means — collecting tools instead of one completed work. It also indicates a drain of power: promises made lightly continue to act and draw energy. The practical cure is silence and one completed ritual: small, executed precisely, restores the channel.</p></div>
+</div>
+<div class="pos-pane pane-roman roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> In brief</h3>
+<div class="info-section"><h3>The main idea</h3><p>If the Fool is only ready to take a step, the Magician has already decided what he wants and begins to act.
+The will of the Magician is not just a desire, but a desire that has been given direction, an idea that is realized, thought through, and gradually embodied in the material world, and the four elements on the table become the tools by which thought becomes action.</p></div>
+<div class="info-section"><h3>How it manifests</h3><p>The main quality of the card is concentration. The magician does not spray on dozens of desires. His will is like the tip of a spear: there is one goal, and the energy is directed there.
+And that&#x27;s why he&#x27;s so determined, so planning, so ingenuity, and so persuasive, that a true leader of the Magician doesn&#x27;t necessarily make others follow him, he&#x27;s so passionate about his own idea that people around him believe in it.</p></div>
+<div class="info-section"><h3>In a relationship</h3><p>Sorcerer is initiative, flirtation, confidence, sympathy, not just interest, but planning.</p></div>
+<div class="info-section"><h3>Work.</h3><p>A smart, energetic professional who can find a way out of a difficult situation, and a magician who is especially good is one who needs to create something out of almost nothing: to assemble a working project from limited resources.</p></div>
+<div class="info-section"><h3>The shadow side</h3><p>When concentration becomes excessive, the Magician becomes a person who goes ahead.
+Rationality becomes an attempt to control everything, leadership becomes a desire to subdue others, and resourcefulness becomes manipulation.</p></div>
+<div class="info-section"><h3>Feature of the school</h3><p>In School of Modern Tarot, the Magician is not connected with Mercury, but with Mars and the image of Athena: thought must not only exist, but be embodied.</p></div>
+<div class="roman-astro"><span class="ra-label">✷ School astrology</span><b>I house · Aries</b><span class="ra-sep">·</span>Mars and especially Athena (not Mercury: he only gets the transmission of an idea)<div class="ra-classic">In the Waite tradition: mercury</div></div>
+<h3 class="roman-subtitle"><span>📜</span> In detail — lecture extracts</h3>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">✧</span> Essence of the card</summary><div class="rd-body"><p>The magician is the personification of the will and the conscious desire of man: the idea comes from above, he realizes it, plans and begins to implement it in the material world through the four elements on the table. The gesture &quot;up above, then below&quot; - the understanding that the same laws operate in the macrocosm and in the microcosm; the magician takes the higher ideas and unfolds them at our level, while it is the &quot;manifestation of the will to release from unity with what is above&quot;: the ego separates man from God. The magician is not a finished action, the transition from thought to action, the beginning of the path (the first card after the Jester).</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Upright position</summary><div class="rd-body"><ul class="st-list"><li>The core is the will as concentration on one clearly expressed desire (&quot;the sharpness of a spear, not the cutting edge of a sword&quot;):</li><li>- Determination and willingness to act.</li><li>Planning: The beginning of an action consists in a reasonable understanding of the action.</li><li>Leadership: the magician does not control anyone - infects people with the brilliance of his idea, and they follow him themselves.</li><li>- Mindfulness, reasonable approach to business, dexterity, cunning.</li><li>The image of “Bruce Almighty”: a person has already realized that he can implement any idea, but has not yet mastered the forces completely.</li><li>Relationships: fascination with an idea — a confident person clearly shows sympathy, flirts, wit, makes promises and believes in them; the initiative to start a relationship (including &quot;combat Athena&quot; is an active woman); To the question &quot;what he thinks / is going to do something,&quot; the Magician answers: actions are planned, conscious, purposeful. A good lover is a smart lover: candles, champagne and rose petals are not accidental, everything is planned.</li><li>Work: energetic smart specialist, enthusiast, calculating professional; leader-head who does not force, but shows how to do it; competitiveness, resourcefulness (&quot;mastering from shit and sticks&quot;), persuasiveness in negotiations; ideal in startups: &quot;ideas and will in bulk - give the fourth element, money.&quot;</li><li>Self-development: the intelligent approach is to choose schools and tools consciously, with a goal in mind; the sense of uniqueness is to develop yourself, not a template (“you don’t develop yoga, you develop yourself”); to be a creator is to put theory into practice. In the school system, the Magician refers to Mars, and Mars is the ego, “I want.”</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Negative meaning</summary><div class="rd-body"><ul class="st-list"><li>The negative value is about as much as the direct value, and the school works with direct cards: there are always all the meanings in the card — when you squeeze it, the magician breaks; for beginners, working with inverted cards takes away responsibility.</li><li>Manic: Concentrating on one desire turns into an obsession, a movement on the break.</li><li>- Unrestrained uncontrolled activity, restlessness.</li><li>Excessive rationalization: dissect every idea, go into detail – the magician “slows down”.</li><li>The desire to subordinate others to one’s will, the denial of other people’s ideas, insensitivity to other people’s desires.</li><li>- Negative magician -- Loki, trickster, magician, who passes off sleight of hand for real magic.</li><li>Relationships: manipulation, obsession, rudeness (“everything pokes a stick, not seeing that it cornies your eyes”); deception and self-deception; a situation he planned that you do not like – “he brought you there in advance”; denial of intuition, incorrect calculation; treason / divorce – planned (“you do not accidentally get into the sauna”); deliberately hidden plans.</li><li>Work: stealing someone else&#x27;s idea with the impersonation of his own; fraud; boss-timid (&quot;today forward, tomorrow back&quot;); star disease, incorrect calculation of their own strength, irresponsible leaders; unfair competition (&quot;corporate warriors do not bring good&quot;).</li><li>Self-development: selfishness as the reverse side of the feeling of being chosen; inability to stop – “eat more than the stomach can hold”, grab the Tarot, runes and everything at once; mind that does not turn off; search for evidence where you just need to try yourself.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> School emphases and distinctive points</summary><div class="rd-body"><ul class="st-list"><li>The main heresy of the school: the Magician is not Mercury, but Mars and especially Athena (Mercury only gets the transmission of an idea), not Ares with blind rage, but civilized Mars; the best image is Athena: Zeus&#x27; thought carried out in action.</li><li>Spear vs Sword: Spear is a concentrated stabbing point (one wish), sword is a stretched cutting line.</li><li>In the hand - a magic wand (gift, uniting the elements), not a wand: suits lie separately on the table; a square table - the material world (square = matter, triangle = spirit).</li><li>Limniscata overhead and snake on the belt - one sign: infinity, rebirth, cycles, transition to the next level (then on the Wheel of Fortune and Force).</li><li>Red cloak - passionate desire; white toga and bandage - purity of intentions; golden background - noble thoughts; flowers at the feet - &quot;it&#x27;s only flowers&quot;, future fruits.</li><li>- Slavic series: Magician - Ivan Tsarevich, not a Fool (he has strength, intelligence and skill); of the heroes - Alyosha Popovich (power of wisdom); Gray wolf and lion - already the Power card.</li><li>Modern imagery: Luke Skywalker, Neo, a politician who sits at the helm to show what he can (a magician is the opposite of an emperor).</li><li>Magician = Magician in Negative: The Illusion of Magic instead of Real Skill.</li><li>Advice from beloved author Hayo Banzhaf: take initiative, give way to the movement, solve and cope with problems.</li><li>Methodology: “Tarot cards are human emotions”, the card must be felt, not only know the meaning.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Keywords</summary><div class="rd-body"><ul class="st-list"><li>Will · conscious desire · concentration on one goal · purpose · planning · initiative · leadership followed by · “up, down” · materialization of the idea, creator · energy of Mars / Athena · magician-trickster (negative).</li><li>---</li></ul></div></details>
+</div>
+<nav class="card-pagination" aria-label="Previous and next card">
+<a rel="prev" href="durak.html"><span>← Previous card</span>The Fool</a>
+<a rel="next" href="zhrefca.html"><span>Next card →</span>The High Priestess</a>
+</nav>
+</article>
+</main>
+<footer class="site-footer">
+  <p>Tarot · Card Meaning Guide</p>
+  <p class="footer-note">The material is for reference and entertainment</p>
+
+<div class="footer-contact">
+  <p class="fc-lead">For questions, collaboration or advertising enquiries, write to me — I reply personally:</p>
+  <div class="fc-links">
+    <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+    <span class="fc-sep" aria-hidden="true">·</span>
+    <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+  </div>
+  <p class="fc-lead">I keep this project going through enthusiasm, without advertising or visitor fees. If you find it useful, a contribution of any size helps me develop the guide further.</p>
+  <div class="fc-links fc-donate">
+    <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Donatello (UA-friendly)</a>
+    <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+  </div>
+</div>
+</footer>
+<!-- Модалка «About the project» -->
+<div class="about-backdrop" id="aboutModal" aria-hidden="true">
+  <div class="about-dialog" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+    <button class="about-close" type="button" aria-label="Close">&times;</button>
+    <h2 id="aboutTitle"><span class="title-star">✦</span> About the project</h2>
+    <p>I put this personal guide to Tarot, Lenormand, runes and astrology together on my own, with no team, office or investors. It runs on enthusiasm, without intrusive advertising, registration or paid subscriptions. All the material is freely accessible.</p>
+    <p>Creating and maintaining the guide takes hundreds of hours: writing, translating interpretations, designing pages and looking after the server. If it has helped you, a contribution is a welcome thank-you and supports new sections, cards, combinations and spreads.</p>
+    <div class="about-donate">
+      <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Support via Donatello (UA-friendly)</a>
+      <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+    </div>
+    <p class="about-contact">Questions, collaboration ideas or advertising enquiries? Write to me — I reply personally:</p>
+    <div class="about-links">
+      <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+      <span aria-hidden="true">·</span>
+      <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('aboutBtn'), m=document.getElementById('aboutModal');
+  if(!btn||!m) return;
+  function open(e){e.preventDefault();m.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){m.classList.remove('open');document.body.style.overflow='';}
+  btn.addEventListener('click',open);
+  m.querySelector('.about-close').addEventListener('click',close);
+  m.addEventListener('click',function(e){if(e.target===m)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+</body>
+</html>

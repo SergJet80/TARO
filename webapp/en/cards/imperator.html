@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Emperor — Meaning and Interpretation | Tarot Guide</title>
+<meta name="description" content="The Emperor: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<link rel="canonical" href="https://taro.jetserg.top/en/cards/imperator.html">
+<meta property="og:title" content="The Emperor — Meaning and Interpretation | Tarot Guide">
+<meta property="og:description" content="The Emperor: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taro.jetserg.top/en/cards/imperator.html">
+<meta property="og:image" content="https://taro.jetserg.top/img/cards/major-04-emperor.webp">
+<link rel="stylesheet" href="../../css/style.css?v=4.0">
+<link rel="stylesheet" href="../../css/astrology.css?v=4.0">
+<style>
+.main-nav-inner { flex-wrap: wrap; justify-content: center; border-radius: 24px; }
+.card-page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 24px 48px; }
+.card-page a { color: var(--gold-bright); text-underline-offset: .2em; }
+.card-page a:focus-visible, .main-nav a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
+.card-crumbs { color: var(--text-dim); font-size: .9rem; margin-bottom: 28px; }
+/* ── Лист карты в дизайне модалки ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--bg-panel), #120e24);
+  border: 1px solid rgba(212,175,55,.28); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow), 0 0 60px rgba(124,92,191,.15); }
+.tarot-sheet .modal-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.tarot-sheet .card-scene { flex-shrink: 0; }
+.tarot-sheet .card-scene img { width: 132px; aspect-ratio: 400/640; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--gold-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--gold-bright); line-height: 1.15; }
+.card-number { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
+.m-en { color: var(--text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--text-dim); }
+.m-meta b { color: var(--text); font-weight: 500; }
+/* ── Вкладки положений: radio + :checked, работают без JS ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid rgba(212,175,55,.18); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--text); }
+.tarot-sheet .pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-tabs label[for="pos-upright"],
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-tabs label[for="pos-reversed"] {
+  color: var(--gold-bright); border-bottom-color: var(--gold); text-shadow: 0 0 12px rgba(212,175,55,.4); }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-tabs label[for="pos-roman"] {
+  color: #cdbef0; border-bottom-color: var(--accent-purple); text-shadow: 0 0 12px rgba(124,92,191,.55); }
+.pos-pane { display: none; animation: sheet-fade .3s ease; }
+.tarot-sheet .pos-state.s-upright:checked ~ .pos-pane.pane-upright { display: block; }
+.tarot-sheet .pos-state.s-reversed:checked ~ .pos-pane.pane-reversed { display: block; }
+.tarot-sheet .pos-state.s-roman:checked ~ .pos-pane.pane-roman { display: block; }
+@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Контент позиции (общие классы из style.css) ── */
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--gold-bright); padding: 12px 18px; border-left: 3px solid var(--gold);
+  background: rgba(212,175,55,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.gd-block { padding: 16px 18px; border: 1px solid rgba(240,201,79,.5); border-left: 5px solid var(--gold-bright);
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(124,92,191,.12));
+  border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text);
+  box-shadow: inset 0 0 24px rgba(212,175,55,.08), 0 7px 22px rgba(0,0,0,.2); }
+.gd-head { font-size: .86rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--gold-bright); margin-bottom: 8px; }
+.gd-symbol { display: inline-block; margin-right: 5px; }
+.gd-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600;
+  font-style: italic; color: var(--gold-bright); margin-bottom: 7px; }
+.gd-why { font-size: .98rem; color: #f1ebf7; line-height: 1.6; }
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--gold); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--text); font-size: .98rem; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(124,92,191,.16);
+  border: 1px solid rgba(124,92,191,.4); color: #cdbef0; font-size: .85rem; }
+/* ── School of Modern Tarot ── */
+.roman-subtitle { display: flex; align-items: center; gap: 9px; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.28rem; font-weight: 600; letter-spacing: .04em; color: #cdbef0; margin: 22px 0 4px; }
+.roman-subtitle::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124,92,191,.45), transparent); }
+.roman-content .info-section h3, .pane-roman .info-section h3 { color: #b7a5e8; font-size: 1.08rem; }
+.roman-details { border: 1px solid rgba(124,92,191,.3); border-radius: 10px; margin-bottom: 10px;
+  background: rgba(124,92,191,.07); overflow: hidden; }
+.roman-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600;
+  letter-spacing: .03em; color: #cdbef0; user-select: none; transition: background .2s; }
+.roman-details summary::-webkit-details-marker { display: none; }
+.roman-details summary::after { content: '▾'; margin-left: auto; color: var(--accent-purple); transition: transform .25s; flex-shrink: 0; }
+.roman-details[open] summary::after { transform: rotate(180deg); }
+.roman-details summary:hover { background: rgba(124,92,191,.12); }
+.rd-icon { width: 1.2em; text-align: center; color: var(--accent-purple); }
+.rd-body { padding: 4px 16px 14px; border-top: 1px solid rgba(124,92,191,.18); }
+.rd-body p { white-space: normal; color: var(--text); font-size: .95rem; line-height: 1.6; margin-top: 10px; }
+.rd-body p:first-child { margin-top: 8px; }
+.roman-astro { margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid rgba(124,92,191,.3); background: rgba(124,92,191,.1);
+  font-size: .9rem; color: var(--text); line-height: 1.55; }
+.ra-label { display: block; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent-purple); margin-bottom: 3px; }
+.roman-astro b { color: #cdbef0; font-weight: 600; }
+.ra-sep { margin: 0 7px; color: var(--accent-purple); }
+.ra-classic { margin-top: 6px; padding-top: 6px; border-top: 1px dashed rgba(124,92,191,.3);
+  border-top: 1px dashed rgba(124,92,191,.3); font-size: .82rem; color: var(--text-dim); }
+/* ── Каталог ── */
+.suit-title, .card-catalog h2 { color: var(--gold-bright); font-family: Georgia, serif; font-weight: 500;
+  font-size: 1.6rem; margin: 34px 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; list-style: none; }
+.card-grid li { min-width: 0; }
+.card-tile { display: flex; flex-direction: column; align-items: center; height: 100%; padding: 16px 12px;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-panel);
+  text-decoration: none; text-align: center; }
+.card-tile img { width: 100%; max-width: 120px; aspect-ratio: 400/640; object-fit: cover; border-radius: 8px;
+  border: 1px solid var(--gold-dim); }
+.card-tile-number { color: var(--text-dim); font-size: .8rem; margin: 12px 0 4px; }
+.card-tile strong { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--gold-bright); }
+.card-tile:hover { background: var(--bg-hover); border-color: var(--gold); }
+.card-pagination { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.card-pagination a { padding: 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius);
+  text-decoration: none; background: var(--bg-panel); }
+.card-pagination a:last-child { text-align: right; }
+.card-pagination span { display: block; font-size: .8rem; color: var(--text-dim); margin-bottom: 6px; }
+.card-pagination a:hover { background: var(--bg-hover); border-color: var(--gold); }
+@media (max-width: 480px) {
+  .main-nav { padding: 12px 12px 0; }
+  .main-nav a { padding: 8px 12px; font-size: .9rem; }
+  .card-page { padding: 22px 12px 36px; }
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .tarot-sheet .modal-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .tarot-sheet .card-scene img { width: 96px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-school { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 12px; }
+  .card-pagination { gap: 10px; }
+  .card-pagination a { padding: 16px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .stars2 { animation: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Emperor — Meaning and Interpretation | Tarot Guide",
+  "description": "The Emperor: upright and reversed Tarot card meanings for relationships, career, health, daily life and spiritual practice, with the School of Modern Tarot.",
+  "url": "https://taro.jetserg.top/en/cards/imperator.html",
+  "inLanguage": "en"
+}
+</script>
+<!-- Microsoft Clarity -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yejlmmd6nr");
+</script>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+<nav class="main-nav" aria-label="Sections">
+  <div class="main-nav-inner">
+    <a href="../taro/index.html">Tarot</a>
+    <a href="index.html" class="mn-active" style="display:none" aria-hidden="true">Cards</a>
+    <a href="../astrology/index.html">Astrology</a>
+    <a href="../lenormand/index.html">Lenormand</a>
+    <a href="../runes/index.html">Runes</a>
+    <a href="../../spreads.html">Spreads</a>
+  <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> About the project</a>
+  </div>
+</nav>
+<main class="card-page">
+<nav class="card-crumbs" aria-label="Breadcrumbs"><a href="../taro/index.html">Tarot</a> / <span aria-current="page">The Emperor</span></nav>
+<article class="tarot-sheet">
+<header class="modal-head">
+<div class="card-scene"><img src="../../img/cards/major-04-emperor.webp" alt="The Emperor — Universal Waite Tarot card" width="132" height="211"></div>
+<div class="head-info">
+<p class="m-arcana">Major Arcana · IV</p>
+<h1 class="m-title"><span class="card-number">IV</span>The Emperor</h1>
+<p class="m-en"></p>
+<p class="m-meta">Element: <b>Fire</b> &nbsp;·&nbsp; Astrology: <b>Aries.</b></p>
+</div>
+</header>
+<input class="pos-state s-upright" type="radio" name="pos" id="pos-upright" checked>
+<input class="pos-state s-reversed" type="radio" name="pos" id="pos-reversed">
+<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">
+<div class="pos-tabs" role="tablist" aria-label="Card positions">
+<label class="pos-tab" for="pos-upright">Upright position</label>
+<label class="pos-tab" for="pos-reversed">Reversed position</label>
+<label class="pos-tab pos-tab-school" for="pos-roman">School of Modern Tarot</label>
+</div>
+<div class="pos-pane pane-upright" id="pane-upright" role="tabpanel">
+<div class="kw-row"><span class="kw">power</span><span class="kw">structure</span><span class="kw">routine</span><span class="kw">responsibility</span><span class="kw">stability</span><span class="kw">paternalism</span><span class="kw">discipline</span></div>
+<p class="short-value">Structure conquers chaos: the power, order, and responsibility of the one who holds the frame; the result comes through discipline, clear rules, and the word that is kept no matter what.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>The emperor sits on a stone throne with the heads of rams, a sign of the connection with Aries and Mars, and holds the ankh and the power: power over life and the world is given to the one who can withstand the weight. Behind him are bare rocks: order begins where convenience ends. It is the lap of law - not external coercion, but an inner axis around which you can build.</p>
+<p>In the context, it means a period when discipline brings results: rules, boundaries, direct conversations, signed commitments. The emperor is the father of the deck: protects, provides and demands to grow up. His strength is not in screaming, but in immutability - he is today what he was yesterday, and therefore he can be trusted with the future.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>Order day: take out the papers, put the system in the closet and budget, negotiate with the household about the rules. It&#x27;s good to schedule, pay bills, deal with legal matters — the routine under this arcana is easy and productive. Meeting with older people — parents, mentors — requires respectful tone, even if you argue.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>Direct Emperor is a time of management decisions: process building, regulations writing, responsibility taking. The bosses are in this period of fact and numbers, not emotion — come with a plan, not a complaint. The card is favorable for working with government agencies, documents, real estate, building a business on solid foundation. Ask for a raise with reason: your stable value is visible and ready to pay.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>In relationships, the arcana gives you trustworthiness: the partner who holds the house, clear agreements, protecting the family as a matter of honor. The male energy here expresses love in deeds — security, presence, problems solved; the female card gives you the right to demand consistency instead of promises; The shadow is turning the union into a charter: if romance is reduced to schedule and control, add to the design of a window of freedom. Parents are reminded to guide, not suppress, and educate, not follow.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>Aries fire is associated with head and muscle strength: neck strains, migraines from responsibility pressures, pressure surges from chronic &quot;I have to do it myself.&quot; The card recommends regular exercise - the regime trains blood vessels and nervous system better than one-off feats. A good period for routine treatment, operations with a clear protocol, disciplined rehabilitation: the organization of the patient directly affects the outcome. And do not carry the whole world on your shoulders alone - ask for help in time.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>The Way of Hay, the window, connects Hokma and Tiferet: light enters the world through an ordered frame. The Martial Fire of Aries makes the Emperor the patron of all forms that hold power, from the circle of ritual to the law of the state. In practice, the arcana corresponds to the altar and the boundaries of the circle: before calling for a force, make sure that there is someone to say stop.</p></div>
+</div>
+<div class="pos-pane pane-reversed" id="pane-reversed" role="tabpanel">
+<div class="kw-row"><span class="kw">tyranny</span><span class="kw">rigidity</span><span class="kw">abuse</span><span class="kw">weakness</span><span class="kw">loss of control</span><span class="kw">stubbornness</span></div>
+<p class="short-value">Power that has lost its footing: tyranny and control for control’s sake – or the crown without will, where no one makes decisions and everything hangs on the moods, habits and clues of others.</p>
+<div class="info-section"><h3><span aria-hidden="true">✧</span> Archetype and core meaning</h3><p>The inverted Emperor is a throne that has lost its foundation. The first option is tyranny: control for control, orders instead of arguments, &quot;because I said so,&quot; power that requires submission instead of trust. The second is the reverse extreme: a man in a crown but without will -- no decisions are made, duties sag, a house or department lives by mood and other people&#x27;s clues.</p>
+<p>The card often points to conflict with the power figure -- the boss, the father, the state -- or to one&#x27;s own rigidity, where the rules that saved yesterday stifle today. Arkan asks a direct question: does the structure serve you or do you serve the structure? The healthy answer is to review the laws, remaining the author of your system, not its hostage.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🏠</span> Daily life</h3><p>In everyday life, the day when order turns into despotism: picking on trifles, scandal over the wrong hanging of a towel, the household walks on the strings. Or vice versa, the economy is on its own: bills are overdue, repairs are suspended, no one is responsible for anything. Find the middle: three really important rules that are respected by everyone, including you. Strength training today is better replaced by stretching, too, the body asks not for pressure, but flexibility.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">💼</span> Work and career</h3><p>At work, the card warns of toxic leadership, whether it&#x27;s yours or yours: humiliation of subordinates, decisions by force, a cult of &quot;toughness&quot; under which incompetence hides. There may be a crisis of structure: regulations are outdated, the system is stalled, and it&#x27;s scary to change. The good move is to document what&#x27;s happening and build a legal footing: the inverted Emperor retreats to facts and paper. Owners are audited by control: where you push, people stop thinking.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">❤</span> Relationships</h3><p>In a relationship, the arcana paints two ills: a domestic tyranny where love is measured by obedience, and a power vacuum where no one wants to take responsibility even for a vacation. Partnership turns into either a barracks or a communal room for two guests. Jealousy and surveillance are common markers of this card.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🌿</span> Health</h3><p>The body is the first to report tyranny or chaos: hypertension, neck and jaw cramps, stomach problems from constant fist-gathering. The suppressed anger settles into the muscles and blood vessels -- there are safe ways to release it: sports, pear fighting, frank conversation. At the reverse pole, lethargy, excess weight, &quot;hampered&quot; health plans: basic discipline returns, and form returns. Pressure, pulse and sleep are three numbers that should be followed especially during this period.</p></div>
+<div class="info-section"><h3><span aria-hidden="true">🔮</span> Spiritual meaning</h3><p>Hay&#x27;s spiritually inverted window is a frame that has become a cage: a form that was designed to protect the light has shut it down. The card indicates the abuse of power in practice -- hard methods, self-inflicted violence, authority built on the fear of students -- and the opposite: promiscuity without any framework. The test is healthy: after your discipline, people have more life or less?</p></div>
+</div>
+<div class="pos-pane pane-roman roman-content" id="pane-roman" role="tabpanel">
+<h3 class="roman-subtitle"><span>🌿</span> In brief</h3>
+<div class="info-section"><h3>The main idea</h3><p>The Emperor is law and order.
+He is not a conqueror or a warrior, a warrior fighting for power, and the Emperor already owns it and is responsible for keeping the system that has been created working.</p></div>
+<div class="info-section"><h3>How it manifests</h3><p>The emperor sets the rules, protects those under his authority, and ensures that everyone fulfills his role.</p></div>
+<div class="info-section"><h3>In a relationship</h3><p>A mature man who is able to take responsibility for his decisions and give a sense of security.</p></div>
+<div class="info-section"><h3>Work and money</h3><p>The chief, the head, the state structures, documents, accounting, property, assets and everything that belongs to the person by right.</p></div>
+<div class="info-section"><h3>The shadow side</h3><p>Order becomes dogma.
+A person begins to follow rules simply because they exist, even if a particular situation requires a different solution.</p></div>
+<div class="info-section"><h3>Feature of the school</h3><p>In School of Modern Tarot, the Emperor is connected to Taurus and the second house, and the central mythological image is Hephaestus: the power that takes natural material and turns chaos into a useful form.</p></div>
+<div class="roman-astro"><span class="ra-label">✷ School astrology</span><b>House II Taurus</b><span class="ra-sep">·</span>Venus + Chiron; key myth - Hephaestus (not Aries)<div class="ra-classic">In the Waite tradition: Aries.</div></div>
+<h3 class="roman-subtitle"><span>📜</span> In detail — lecture extracts</h3>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">✧</span> Essence of the card</summary><div class="rd-body"><p>The emperor is law and order, ruler, not conqueror: he does not wag his sword like Mars, he already owns, and legally (&quot;crowned by right,&quot; inherits and transmits). In his system, the Emperor is not Aries, but Taurus, II House (Venus + Chiron); the key image is Hephaestus / Vulcan, the god of earthly fire, taking the gifts of nature (chaos, ore) and reforging them into useful and human by rule. This is the archetype of the father, the head of the family: &quot;Mother loves, Dad educates.&quot; - If the Emperor is the emperor, &quot;nature is the emperor, he is the ruler, he is not the ruler?&quot; - &quot;nary, nature is the emperor, he is the emperor, he is the emperor, the emperor is the ruler.&quot;</p></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☀</span> Upright position</summary><div class="rd-body"><ul class="st-list"><li>He does not have division into “positive / negative” – the card spreads out on the spheres: society and desires, finance and property, actions and self-development, emotions and personal life.</li><li>- Society: management, patronage (&quot;any boss should patronize, help, protect&quot;), rules and laws, morality as the basic law of mankind (social laws + unwritten norms of decency), state, corporateness (community of people under a general rule - form, charter: &quot;Mars - warrior, emperor - charter&quot;), careerism as the desire to write rules, hierarchy.</li><li>Finance: practicality, prudence, ownership of what is yours by right (assets, “what you can take, touch with your hands”), the ability to “give money the right growth”, accounting; tax and exchange as “the law is harsh, but it is the law”.</li><li>- Actions, self-development: ordering of life - the daily routine, rules for oneself and relationships; practicality (&quot;without meaning there is no use, without use there is no sense&quot;); habits as a procedure of action; physical development of the body (II house - body): physical culture as actions in a certain order for the benefit of the body.</li><li>- Emotions, personal life: “such a man”: experienced, graybearded, confidently does, is responsible for his actions, gives a guarantee of feelings; patronage and “stone wall” (the Empress hides behind the stone throne); traditional family (I am the main one), respect for parents and experience; form as a symbol of order – men like men in uniform, and they like women in uniform: “the combination of femininity and order gives the relationship a sharpness.”</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">☾</span> Negative meaning</summary><div class="rd-body"><ul class="st-list"><li>The disadvantages give the same qualities &quot;with too much&quot;:</li><li>- Society: blinkeredness, too rigid adherence to corporate rules to the detriment of emotionality, kindness and useful qualities; dogma; state above personal (“it is more the East famous – China, Japan”).</li><li>Actions: template of thinking (the framework of law and morality interfere with development); moralizing (&quot;should - eat, not should - do not climb&quot;), loss of vitality: &quot;nature will a little fuck if there are solid fences around&quot;; dryness and soullessness - &quot;too many laws, too little naturalness.&quot;</li><li>Habits: sometimes the order does not fit the situation - habits must be removed; an example is a cigarette: smoking as a procedure of action calms, returns &quot;to a safe past&quot;; &quot;clips&quot; - that which holds together, but freezes.</li><li>Personal life: excessive dryness and adherence to traditions (“it is very difficult to cut a grey beard”, “we were eating and we will also be like this”), outdated experience of fathers (“how to set up a black and white TV – you do not need”).</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">★</span> School emphases and distinctive points</summary><div class="rd-body"><ul class="st-list"><li>- The main thesis: Emperor = Taurus / II house, not Aries. Lamb heads are an &quot;inconvenient&quot; detail: everyone sees them, but tries not to notice that &quot;the card by nature does not coincide with Aries absolutely&quot;, which makes it difficult to guess - the feeling of the card is not energetic. Waite either did not dare to break with tradition, or showed that &quot;the power of the law rests on desires&quot; (he jokes about &quot;owl on the globe&quot;).</li><li>Hephaestus/Vulcano: a lame blacksmith, thrown by the Hero from Olympus and forged his own iron legs - that is why the Emperor&#x27;s feet are iron; sits on the anvil, builder of Olympus, maker of lightning and armor of the gods - &quot;the hands of the gods in the material world&quot;, ruler of matter, the implementation of ideas into matter.</li><li>Hephaestus&#x27;s golden net: he caught Aphrodite with Ares - the image of the right right rightful husband against Ares (&quot;I want and take&quot;). &quot;May be loved, may not be loved, but he is the law.&quot;</li><li>Volcano = Taurus: long patience - then explosion; red card, hot earth.</li><li>Grain breeding: seed selection is the rule, crop varieties are the image of domesticating wildlife. Ore → armor; line = &quot;dots in a certain order.&quot;</li><li>The Law Ladder (favorite demonstration of the card principle): father in the family → director of the firm → tax → government / president → moral and religious norms → physical laws → God (“everyone has his own system, his own order – and all this is one card”).</li><li>Chiron (the second planet of the second house): the duality of the centaur is a loving father at home, a wild warrior outside, a &quot;Viking who loves his children but can kill anyone for gold&quot;; a planet of materialization of subtle plans.</li><li>King Arthur: power by birthright (sword), a round table of 12 knights - as 12 equal signs of the zodiac, the Emperor - &quot;first among equals&quot;; Aries - leader (Achilles), Emperor - king, sending heroes to war.</li><li>Modern imagery: Judge Dredd (Stallon) - the radical &quot;I am the law&quot; that a psychic girl softens; Robocop; a men&#x27;s bath every Friday as &quot;law&quot;; ironed jacket with a tie.</li><li>- Russian series: fair, but stupid king of fairy tales; Vladimir Red Sun - the king-hero; &quot;he who is strong, he and the king&quot; - hence the confusion of Aries with the Emperor; &quot;the severity of Russian laws is mitigated by the non-compulsoryness of their implementation.&quot;</li><li>According to Waite: “monarch crowned by right”, scepter – ankh, stone cube, “male strength and power” (without a word about will), “government, implementation and earthly power”; prophetic meanings: stability, power, protection, implementation, reason, conviction (at the “stability of Mars” laughs).</li><li>- Card-pair with the Empress (archetypal family couple); teaching function goes to Hierophant; &quot;tarot cards are an infinite spiral cut into symbols&quot; Astrolay connects with the author Yuri Khan (o)m, who &quot;takes a lot&quot;; advice Banzhaf does not quote; works with the decks of Waite and Monara.</li></ul></div></details>
+<details class="roman-details"><summary><span class="rd-icon" aria-hidden="true">🗝</span> Keywords</summary><div class="rd-body"><ul class="st-list"><li>law and order; ruler, not warrior; possession by right; crowned by right; father, head of the family; patronage; morality and statute; prudence; Hephaestus/Vulcan; tradition and &quot;clips&quot;; hierarchy; stone wall.</li><li>---</li></ul></div></details>
+</div>
+<nav class="card-pagination" aria-label="Previous and next card">
+<a rel="prev" href="imperatrica.html"><span>← Previous card</span>The Empress</a>
+<a rel="next" href="ierofant.html"><span>Next card →</span>The Hierophant</a>
+</nav>
+</article>
+</main>
+<footer class="site-footer">
+  <p>Tarot · Card Meaning Guide</p>
+  <p class="footer-note">The material is for reference and entertainment</p>
+
+<div class="footer-contact">
+  <p class="fc-lead">For questions, collaboration or advertising enquiries, write to me — I reply personally:</p>
+  <div class="fc-links">
+    <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+    <span class="fc-sep" aria-hidden="true">·</span>
+    <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+  </div>
+  <p class="fc-lead">I keep this project going through enthusiasm, without advertising or visitor fees. If you find it useful, a contribution of any size helps me develop the guide further.</p>
+  <div class="fc-links fc-donate">
+    <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Donatello (UA-friendly)</a>
+    <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+  </div>
+</div>
+</footer>
+<!-- Модалка «About the project» -->
+<div class="about-backdrop" id="aboutModal" aria-hidden="true">
+  <div class="about-dialog" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+    <button class="about-close" type="button" aria-label="Close">&times;</button>
+    <h2 id="aboutTitle"><span class="title-star">✦</span> About the project</h2>
+    <p>I put this personal guide to Tarot, Lenormand, runes and astrology together on my own, with no team, office or investors. It runs on enthusiasm, without intrusive advertising, registration or paid subscriptions. All the material is freely accessible.</p>
+    <p>Creating and maintaining the guide takes hundreds of hours: writing, translating interpretations, designing pages and looking after the server. If it has helped you, a contribution is a welcome thank-you and supports new sections, cards, combinations and spreads.</p>
+    <div class="about-donate">
+      <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Support via Donatello (UA-friendly)</a>
+      <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+    </div>
+    <p class="about-contact">Questions, collaboration ideas or advertising enquiries? Write to me — I reply personally:</p>
+    <div class="about-links">
+      <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+      <span aria-hidden="true">·</span>
+      <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('aboutBtn'), m=document.getElementById('aboutModal');
+  if(!btn||!m) return;
+  function open(e){e.preventDefault();m.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){m.classList.remove('open');document.body.style.overflow='';}
+  btn.addEventListener('click',open);
+  m.querySelector('.about-close').addEventListener('click',close);
+  m.addEventListener('click',function(e){if(e.target===m)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+</body>
+</html>

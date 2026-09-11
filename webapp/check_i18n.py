@@ -63,11 +63,14 @@ def check():
     errors=[]
     routes=load_json('routes.json')
     ready=[r for r in routes if r['status']=='ready']
-    expected_ready={r['ru_file'] for r in routes if r['ru_file'].startswith(('lenormand/','runes/'))}
-    if len(routes)!=175 or len(ready)!=65 or {r['ru_file'] for r in ready}!=expected_ready:
-        errors.append(f'Route manifest: expected 65 ready Lenormand/Runes pairs, found {len(ready)}/{len(routes)}')
+    hidden=[r for r in routes if r['status']=='hidden']
+    built=ready+hidden
+    expected_ready={r['ru_file'] for r in routes if r['ru_file'].startswith(('lenormand/','runes/','numerology/','astrology/'))}
+    expected_hidden={r['ru_file'] for r in routes if r['ru_file']=='index.html' or r['ru_file'].startswith('cards/')}
+    if len(routes)!=175 or len(ready)!=94 or {r['ru_file'] for r in ready}!=expected_ready or len(hidden)!=80 or {r['ru_file'] for r in hidden}!=expected_hidden:
+        errors.append(f'Route manifest: expected 94 public and 80 hidden accepted pairs, found {len(ready)} public/{len(hidden)} hidden/{len(routes)} total')
     pages={}
-    for r in ready:
+    for r in built:
         for key in ('ru_file','en_file'):
             p=ROOT/r[key]
             if not p.is_file():errors.append(f'Missing paired page: {r[key]}')
@@ -94,11 +97,18 @@ def check():
                 if 'fc-donate' in pages[path]:
                     for body in re.findall(r'<div class="(?:fc-links fc-donate|about-donate)">(.*?)</div>',pages[path],re.S):
                         urls=re.findall(r'href="([^"]+)"',body)
-                        if not urls or urls[0]!='https://ko-fi.com/jetjarret':errors.append(f'{r[key]}: Ko-fi is not first')
+                        if urls!=['https://donatello.to/JeTJarret','https://www.privat24.ua/send/4x8ww'] or body.count('(UA-friendly)')!=2:errors.append(f'{r[key]}: donation links or UA-friendly labels differ')
+                if 'ko-fi.com' in pages[path]:errors.append(f'{r[key]}: removed Ko-fi link restored')
     actual_en={p.relative_to(ROOT).as_posix() for p in (ROOT/'en').rglob('*.html')}
-    if actual_en!={r['en_file'] for r in ready}:errors.append('Unexpected or missing English pages for the accepted stage')
+    if actual_en!={r['en_file'] for r in built}:errors.append('Unexpected or missing English pages for the accepted stage')
     from check_runes_i18n import check as check_runes
     errors.extend(check_runes())
+    from numerology_localize import check as check_numerology
+    errors.extend(check_numerology())
+    from check_astrology_i18n import check as check_astrology
+    errors.extend(check_astrology())
+    from check_tarot_i18n import check as check_tarot
+    errors.extend(check_tarot())
     try:
         d=load_json('lenormand.json');en=select(d,'en');ru=select(d,'ru')
         original=json.loads((ROOT/'data'/'lenormand.json').read_text(encoding='utf-8'))
@@ -135,5 +145,12 @@ def check():
         for body,path in scripts.items():
             result=subprocess.run([node,'--check'],input=body,encoding='utf-8',capture_output=True)
             if result.returncode:errors.append(f'{path.relative_to(ROOT)}: inline JavaScript: {result.stderr.strip()}')
-    if not errors:print(f'OK i18n: {len(ready)} RU/EN pairs; translations, reciprocal SEO, original content and assets preserved')
+    if not errors:print(f'OK i18n: {len(ready)} public + {len(hidden)} hidden RU/EN pairs; translations, SEO, original content and assets preserved')
     return errors
+
+if __name__=='__main__':
+    import sys
+    sys.stdout.reconfigure(encoding='utf-8')
+    errors=check()
+    print('\n'.join(errors))
+    raise SystemExit(bool(errors))

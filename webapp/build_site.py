@@ -34,7 +34,7 @@ def main() -> int:
     # Legacy generators are kept for the original site but are not called here:
     # they would remove the permitted language switch and hreflang additions.
     bilingual = (ROOT / 'data' / 'i18n' / 'routes.json').exists()
-    steps = ['lenormand_build.py', 'runes_localize.py', 'check_site.py'] if bilingual else STEPS
+    steps = ['lenormand_build.py', 'runes_localize.py', 'astrology_localize.py', 'numerology_localize.py', 'taro_build.py', 'check_site.py'] if bilingual else STEPS
     for script in steps:
         print(f"\n[{script}]", flush=True)
         subprocess.run([sys.executable, str(ROOT / script)], cwd=ROOT, env=env, check=True)
