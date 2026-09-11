@@ -29,10 +29,16 @@ if hasattr(sys.stderr, "reconfigure"):
 def main() -> int:
     env = os.environ.copy()
     env["PYTHONIOENCODING"] = "utf-8"
-    for script in STEPS:
+    env["PYTHONDONTWRITEBYTECODE"] = "1"
+    # The v5 migration builds both languages from the canonical source data.
+    # Legacy generators are kept for the original site but are not called here:
+    # they would remove the permitted language switch and hreflang additions.
+    bilingual = (ROOT / 'data' / 'i18n' / 'routes.json').exists()
+    steps = ['lenormand_build.py', 'runes_localize.py', 'check_site.py'] if bilingual else STEPS
+    for script in steps:
         print(f"\n[{script}]", flush=True)
         subprocess.run([sys.executable, str(ROOT / script)], cwd=ROOT, env=env, check=True)
-    print("\nOK: сайт полностью собран и проверен")
+    print("\nOK: accepted bilingual stages were built and checked" if bilingual else "\nOK: сайт полностью собран и проверен")
     return 0
 
 

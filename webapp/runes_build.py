@@ -209,7 +209,12 @@ def build_index():
 
   <a class="wheel-banner" href="rasclady/index.html">
     <span class="wb-icon">🎲</span>
-    <span class="wb-text"><strong>Расклады и таблица</strong> — диагностика на 1/3/7 рун, сводная шпаргалка, магия по категориям</span>
+    <span class="wb-text"><strong>Расклады и таблица</strong> — диагностика на 1/3/7 рун, сводная шпаргалка</span>
+    <span class="wb-arrow">→</span>
+  </a>
+  <a class="wheel-banner" href="staves.html">
+    <span class="wb-icon">🧿</span>
+    <span class="wb-text"><strong>Рунические ставы</strong> — каталог формул по категориям: защита, финансы, отношения и др.</span>
     <span class="wb-arrow">→</span>
   </a>
 

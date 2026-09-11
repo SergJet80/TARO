@@ -1,0 +1,3738 @@
+[
+  {
+    "ru": "Подробный офлайн-справочник Ленорман: основы, расклады, Гранд Табло, интерактивные схемы и учебные примеры.",
+    "en": "An in-depth offline Lenormand guide: foundations, spreads, the Grand Tableau, interactive layouts and worked examples."
+  },
+  {
+    "ru": "Расклады Ленорман — интерактивный справочник",
+    "en": "Lenormand Spreads — An Interactive Guide"
+  },
+  {
+    "ru": "Разделы",
+    "en": "Sections"
+  },
+  {
+    "ru": "Таро",
+    "en": "Tarot"
+  },
+  {
+    "ru": "Астрология",
+    "en": "Astrology"
+  },
+  {
+    "ru": "Руны",
+    "en": "Runes"
+  },
+  {
+    "ru": "Ленорман",
+    "en": "Lenormand"
+  },
+  {
+    "ru": "Нумерология",
+    "en": "Numerology"
+  },
+  {
+    "ru": "О проекте",
+    "en": "About the project"
+  },
+  {
+    "ru": "Расклады Ленорман",
+    "en": "Lenormand Spreads"
+  },
+  {
+    "ru": "Поиск",
+    "en": "Search"
+  },
+  {
+    "ru": "Например: цепочка домов",
+    "en": "For example: house chain"
+  },
+  {
+    "ru": "Светлая тема",
+    "en": "Light theme"
+  },
+  {
+    "ru": "Оглавление",
+    "en": "Contents"
+  },
+  {
+    "ru": "Разделы справочника",
+    "en": "Guide sections"
+  },
+  {
+    "ru": "С чего начать",
+    "en": "Getting started"
+  },
+  {
+    "ru": "Подготовка и вопрос",
+    "en": "Preparation and the question"
+  },
+  {
+    "ru": "Как читать связку карт",
+    "en": "Reading cards in combination"
+  },
+  {
+    "ru": "36 карт и 36 домов",
+    "en": "36 cards and 36 houses"
+  },
+  {
+    "ru": "Каталог малых раскладов",
+    "en": "Small spread catalogue"
+  },
+  {
+    "ru": "Гранд Табло: устройство и порядок чтения",
+    "en": "The Grand Tableau: layout and reading order"
+  },
+  {
+    "ru": "Сигнификатор, окружение и расстояние",
+    "en": "The significator, surroundings and distance"
+  },
+  {
+    "ru": "Линии, диагонали, углы и нижняя четвёрка",
+    "en": "Lines, diagonals, corners and the bottom four"
+  },
+  {
+    "ru": "Дома: область и её содержание",
+    "en": "Houses: the area and what occupies it"
+  },
+  {
+    "ru": "Зеркала, ходы конём и цепочки домов",
+    "en": "Mirroring, knighting and house chains"
+  },
+  {
+    "ru": "Различия подходов и спорные правила",
+    "en": "Different approaches and disputed rules"
+  },
+  {
+    "ru": "Как читать отдельные бытовые темы",
+    "en": "Reading everyday topics"
+  },
+  {
+    "ru": "Интерактивное поле Гранд Табло",
+    "en": "Interactive Grand Tableau board"
+  },
+  {
+    "ru": "Гранд Табло: полный учебный разбор",
+    "en": "Grand Tableau: a complete worked example"
+  },
+  {
+    "ru": "Практика, ошибки и записи",
+    "en": "Practice, mistakes and notes"
+  },
+  {
+    "ru": "Источники и границы исследования",
+    "en": "Sources and the limits of this guide"
+  },
+  {
+    "ru": "Ленорман — язык коротких сочетаний. Сначала научитесь связывать две карты в одну мысль, затем читать линию и квадрат. Гранд Табло собирает эти навыки на поле из 36 карт.",
+    "en": "Lenormand is a language of short combinations. First learn to bring two cards together into one thought, then read a line and a square. The Grand Tableau brings these skills together across all 36 cards."
+  },
+  {
+    "ru": "Этот справочник посвящён",
+    "en": "This guide covers"
+  },
+  {
+    "ru": "Малой Ленорман (Petit Lenormand), 36 картам",
+    "en": "the 36-card Petit Lenormand"
+  },
+  {
+    "ru": ". Большая колода Grand Jeu на 54 карты — другая система; её правила сюда не переносятся. Здесь изложены практики чтения, а не доказанный способ узнавать будущее или чужие мысли. Все разборы — специально составленные учебные примеры.",
+    "en": ". The 54-card Grand Jeu is a different system; its rules do not transfer here. These are reading practices, not a proven way to discover the future or another person’s thoughts. All interpretations are specially constructed teaching examples, offered for reference, reflection and entertainment."
+  },
+  {
+    "ru": "1. Язык сочетаний",
+    "en": "1. The language of combinations"
+  },
+  {
+    "ru": "2. Малые расклады",
+    "en": "2. Small spreads"
+  },
+  {
+    "ru": "3. Гранд Табло",
+    "en": "3. The Grand Tableau"
+  },
+  {
+    "ru": "4. Интерактивное поле",
+    "en": "4. Interactive board"
+  },
+  {
+    "ru": "Как пользоваться",
+    "en": "How to use this guide"
+  },
+  {
+    "ru": "Читайте главы последовательно или находите нужный термин поиском. В каталоге раскладов нажимайте на позиции: появятся вопрос и подсказка. В поле Гранд Табло можно переключать формат, выбирать карту и подсвечивать связи. «Учебный пример» соответствует подробному разбору ниже. Можно также ввести собственный порядок 36 карт.",
+    "en": "Read the chapters in order or search for a term. In the spread catalogue, select a position to see its question and guidance. On the Grand Tableau board, switch formats, choose a card and highlight its connections. The teaching example matches the detailed reading below. You can also enter your own order of 36 cards."
+  },
+  {
+    "ru": "Три уровня утверждений",
+    "en": "Three kinds of statement"
+  },
+  {
+    "ru": "Тип",
+    "en": "Type"
+  },
+  {
+    "ru": "Что он означает",
+    "en": "What it means"
+  },
+  {
+    "ru": "Исторические сведения",
+    "en": "Historical information"
+  },
+  {
+    "ru": "Данные об изданиях и происхождении колоды, проверяемые по документам.",
+    "en": "Information about editions and the deck’s origins that can be checked against documents."
+  },
+  {
+    "ru": "Практика автора / школы",
+    "en": "An author’s or school’s practice"
+  },
+  {
+    "ru": "Договорённость о чтении карты или позиции; другие авторы могут использовать другую.",
+    "en": "A convention for reading a card or position; other authors may use a different one."
+  },
+  {
+    "ru": "Учебная интерпретация",
+    "en": "Teaching interpretation"
+  },
+  {
+    "ru": "Пример того, как связать символы с вопросом. Он не устанавливает фактов о реальных людях.",
+    "en": "An example of relating symbols to a question. It does not establish facts about real people."
+  },
+  {
+    "ru": "Немного истории",
+    "en": "A little history"
+  },
+  {
+    "ru": "Предшественником Малой Ленорман считается «Игра надежды» Иоганна Каспара Хехтеля, опубликованная около 1799 года. Название Ленорман закрепилось за последующими изданиями после смерти знаменитой французской гадательницы. Поэтому формулировка «личная колода, созданная мадам Ленорман» вводит в заблуждение. Исследовательница Мэри К. Грир рассматривает историю этих изданий отдельно от биографии гадательницы.",
+    "en": "Johann Kaspar Hechtel’s Game of Hope, published around 1799, is considered a precursor to the Petit Lenormand. Later editions adopted Lenormand’s name after the famous French fortune-teller’s death. Calling it Madame Lenormand’s personally created deck is therefore misleading. Researcher Mary K. Greer considers the history of these editions separately from the fortune-teller’s biography."
+  },
+  {
+    "ru": "Не существует одного общепринятого набора всех современных техник. Например, Anna K прямо описывает свой вариант чтения домов как адаптацию, а не строго традиционный канон. Это причина заранее выбирать правила, а не менять их после выпадения карт.",
+    "en": "There is no single universally accepted collection of modern techniques. Anna K, for example, explicitly describes her approach to houses as an adaptation rather than a strictly traditional canon. This is a reason to choose your rules beforehand, not change them after the cards are drawn."
+  },
+  {
+    "ru": "Для начала нужна обычная колода из 36 карт с читаемыми номерами. Если в наборе есть дополнительные персонажи, Мост, Маска, Часы или другие авторские карты, отложите их. В стандартном Гранд Табло каждой из 36 карт соответствует ровно один дом; добавление карт меняет структуру.",
+    "en": "Begin with an ordinary 36-card deck with readable numbers. Set aside additional people, the Bridge, Mask, Clock or other author-created cards. In a standard Grand Tableau, each of the 36 cards has exactly one house; adding cards changes the structure."
+  },
+  {
+    "ru": "Запишите вопрос, срок и исходные факты. Вместо «Что у меня вообще?» спросите «Какие обстоятельства будут важны для поиска заказчиков в ближайший месяц?». Вместо «Он точно меня обманывает?» — «Что в нашем взаимодействии требует прояснения?». В первом случае вы задаёте направление исследования, во втором заранее навязываете подозрение.",
+    "en": "Write down the question, time frame and known facts. Instead of asking what is happening in your life generally, ask which circumstances may matter when seeking clients over the next month. Instead of asking whether someone is definitely deceiving you, ask what needs clarifying in your interaction. An open question sets a direction for reflection; a leading one builds suspicion into the premise."
+  },
+  {
+    "ru": "Практик Emily Rose ставит формулировку вопроса перед вытягиванием карт: именно вопрос ограничивает возможные значения сочетаний. Это полезный рабочий принцип, даже если вы используете карты исключительно для размышления.",
+    "en": "Practitioner Emily Rose places the question before the draw: it is the question that limits a combination’s possible meanings. This is a useful working principle even if you use the cards only for reflection."
+  },
+  {
+    "ru": "Перемешайте карты удобным способом, при желании снимите колоду и разложите верхние карты в заранее выбранном порядке. Требования снимать только левой рукой, обязательно зажигать свечу или ждать определённой фазы Луны не нужны для освоения описанной методики. Можно соблюдать личный ритуал, но он не заменяет ясного вопроса.",
+    "en": "Shuffle in a way that suits you, cut the deck if you wish and lay out the top cards in an order chosen beforehand. Cutting only with the left hand, lighting a candle or waiting for a particular Moon phase is unnecessary for learning this method. A personal ritual is fine, but cannot replace a clear question."
+  },
+  {
+    "ru": "В этом курсе все карты читаются прямо. Перевёрнутое положение не добавляет отдельного значения. Сложности передаются самими картами, соседством и контекстом. Если вы привыкли к перевёрнутым картам Таро, сначала уберите эту привычку из практики Ленорман; отдельную авторскую систему переворотов следует изучать отдельно.",
+    "en": "In this course, all cards are read upright. Reversals do not add a separate meaning. Difficulties come through the cards themselves, their neighbours and context. If you use Tarot reversals, set that habit aside while learning Lenormand; any author’s reversal system should be studied separately."
+  },
+  {
+    "ru": "Сигнификатор — карта, заранее обозначающая человека или предмет вопроса. Традиционные номера: 28 — Мужчина, 29 — Женщина. Выберите персонажа по договорённости с человеком, для которого читаете; не определяйте его личность по случайно выпавшему полу персонажа. Для темы можно выбрать Дом, Кольцо, Рыб, Книгу и т. д.",
+    "en": "A significator is a card chosen beforehand to represent a person or the subject of the question. Traditionally, 28 is the Man and 29 the Woman. Agree on the person card with whoever the reading is for; do not infer their identity from the gender of a randomly drawn figure. The House, Ring, Fish, Book and other cards can represent topics."
+  },
+  {
+    "ru": "Различайте два режима: сигнификатор заранее кладётся в центр, а остальные карты вытягиваются вокруг; или вся колода перемешивается и сигнификатор обнаруживается уже в раскладе. В первом случае центр задан вами и не является случайным ответом. В обычном Гранд Табло используется второй режим.",
+    "en": "Distinguish two methods: placing the significator in the centre first and drawing around it, or shuffling the whole deck and finding the significator within the spread. In the first method, you assigned the centre; it is not a random answer. A standard Grand Tableau uses the second method."
+  },
+  {
+    "ru": "Если читаете по фотографии, прежде трактовки перепишите все карты по позициям: ряд 1, ряд 2 и так далее, затем нижние четыре. Уточните размытые карты, не угадывайте их. Убедитесь, что каждый номер встречается один раз. Ошибка в одном номере меняет не только соседство, но и цепочку домов.",
+    "en": "When reading from a photograph, first record every card by position: row 1, row 2 and so on, then the bottom four. Clarify blurred cards instead of guessing. Check that each number occurs once. A wrong number changes house chains as well as neighbouring cards."
+  },
+  {
+    "ru": "До расклада решите: какой формат; что означает направление времени; учитываете ли взгляд персонажей; как читаете нижние четыре карты. После расклада сохраните правила вместе с записью. Период «месяц» относится ко всему вопросу; не превращайте отдельную карту в точную дату без заранее выбранной системы.",
+    "en": "Before dealing, choose the format, the direction of time, whether facing direction matters and how you will read the bottom four. Save these rules with your notes. A month applies to the whole question; do not turn a single card into an exact date without a timing system chosen beforehand."
+  },
+  {
+    "ru": "Общий принцип Ленорман — читать сочетания, а не выдавать отдельную характеристику каждой карте. Мэри К. Грир подчёркивает роль устойчивых значений и комбинаций; совпадающие названия с Таро не означают совпадения смысла. Например, Башня Ленорман не обязана означать катастрофу, а Луна — обман.",
+    "en": "A general Lenormand principle is to read combinations rather than give each card a separate character description. Mary K. Greer emphasises consistent meanings and combinations; a shared name with Tarot does not imply a shared meaning. The Lenormand Tower need not mean catastrophe, nor the Moon deception."
+  },
+  {
+    "ru": "Шаг 1. Назовите предмет и уточнение",
+    "en": "Step 1. Identify the subject and its modifier"
+  },
+  {
+    "ru": "Удобная начальная модель: первая карта задаёт предмет, следующая его описывает. Это учебная грамматика, а не закон, который запрещает другие способы чтения. Такой подход к существительному и модификатору описывает Labyrinthos.",
+    "en": "A useful starting model is that the first card sets the subject and the next describes it. This is teaching grammar, not a law forbidding other readings. Labyrinthos describes this noun-and-modifier approach."
+  },
+  {
+    "ru": "Связка",
+    "en": "Combination"
+  },
+  {
+    "ru": "Учебное чтение",
+    "en": "Teaching interpretation"
+  },
+  {
+    "ru": "Почему",
+    "en": "Why"
+  },
+  {
+    "ru": "Письмо + Гора",
+    "en": "Letter + Mountain"
+  },
+  {
+    "ru": "Задержка ответа или препятствие в оформлении.",
+    "en": "A delayed reply or an obstacle to completing paperwork."
+  },
+  {
+    "ru": "Тема сообщения получает характеристику блокировки.",
+    "en": "The message theme is modified by blockage."
+  },
+  {
+    "ru": "Гора + Письмо",
+    "en": "Mountain + Letter"
+  },
+  {
+    "ru": "Препятствие, связанное с документом или сообщением.",
+    "en": "An obstacle connected with a document or message."
+  },
+  {
+    "ru": "Главный предмет — проблема; документ уточняет её форму.",
+    "en": "The problem is the subject; the document clarifies its form."
+  },
+  {
+    "ru": "Собака + Ключ",
+    "en": "Dog + Key"
+  },
+  {
+    "ru": "Помощь надёжного человека оказывается значимой.",
+    "en": "Help from a reliable person proves significant."
+  },
+  {
+    "ru": "Поддержка соединяется с доступом или решением.",
+    "en": "Support connects with access or a solution."
+  },
+  {
+    "ru": "Ключ + Собака",
+    "en": "Key + Dog"
+  },
+  {
+    "ru": "Решение ищется через сотрудничество или доверие.",
+    "en": "A solution is sought through cooperation or trust."
+  },
+  {
+    "ru": "В центре уже способ решения.",
+    "en": "The method of resolving the matter is now central."
+  },
+  {
+    "ru": "Не нужно искусственно делать обратные пары совершенно разными. Иногда обе описывают одну ситуацию с разным акцентом. Порядок важен настолько, насколько он помогает ответить на вопрос.",
+    "en": "There is no need to force reversed pairs to mean entirely different things. Sometimes they describe the same situation with a different emphasis. Order matters insofar as it helps answer the question."
+  },
+  {
+    "ru": "Шаг 2. Добавьте действие и контекст",
+    "en": "Step 2. Add action and context"
+  },
+  {
+    "ru": "Корабль + Письмо",
+    "en": "Ship + Letter"
+  },
+  {
+    "ru": "в вопросе о доставке — уведомление о перевозке; в вопросе о трудоустройстве за рубежом — переписка по поездке. Вы не обязаны одновременно говорить о путешествии, эмиграции, торговле и тоске. Выберите тот смысл, который относится к предмету вопроса и подтверждается соседями.",
+    "en": "in a delivery question might suggest a shipping notification; in a question about working abroad, correspondence about travel. You do not have to mention travel, emigration, trade and longing all at once. Choose the meaning that fits the question and is supported by neighbouring cards."
+  },
+  {
+    "ru": "Лиса + Письмо + Ключ",
+    "en": "Fox + Letter + Key"
+  },
+  {
+    "ru": "в учебном вопросе «Что учитывать в предложении заказчика?» можно прочитать так: важную деталь предложения нужно внимательно проверить; ясность придёт через текст условий. Это не основание объявлять заказчика мошенником. Альтернатива: предложение требует профессиональной смекалки, если в выбранной школе Лиса обозначает работу.",
+    "en": "in a teaching question about a client’s offer might suggest checking an important detail carefully, with clarity coming through the written terms. This is no basis for calling the client a fraudster. Alternatively, the offer may call for professional resourcefulness if your chosen school reads the Fox as work."
+  },
+  {
+    "ru": "Шаг 3. Соберите предложение",
+    "en": "Step 3. Build a sentence"
+  },
+  {
+    "ru": "В триплете",
+    "en": "The three-card line"
+  },
+  {
+    "ru": "Всадник + Кольцо + Солнце",
+    "en": "Rider + Ring + Sun"
+  },
+  {
+    "ru": "есть сообщение, договорённость и благоприятная ясность. Связный ответ: «Обсуждение может перейти к понятной договорённости». Затем уточните, что именно изображает каждая карта. Не добавляйте сумму, день недели и личность отправителя: этих сведений в связке нет.",
+    "en": "contains a message, an agreement and favourable clarity. A connected answer might be: discussion could lead to a clear agreement. Then clarify what each card represents. Do not add an amount, weekday or sender’s identity: the combination does not supply those details."
+  },
+  {
+    "ru": "Шаг 4. Сверьте начало, середину и конец",
+    "en": "Step 4. Compare the beginning, middle and end"
+  },
+  {
+    "ru": "В",
+    "en": "In"
+  },
+  {
+    "ru": "Рыбы + Мыши + Якорь",
+    "en": "Fish + Mice + Anchor"
+  },
+  {
+    "ru": "денежная тема сопровождается потерями или утечками, которые могут закрепиться. Якорь не обязан «спасти» две предыдущие карты: он способен удерживать и неудобную ситуацию. В",
+    "en": "the money theme is accompanied by losses or leaks that may become established. The Anchor need not rescue the first two cards: it can hold an uncomfortable situation in place. In"
+  },
+  {
+    "ru": "Рыбы + Якорь + Мыши",
+    "en": "Fish + Anchor + Mice"
+  },
+  {
+    "ru": "акцент другой — стабильный денежный порядок подтачивается мелкими расходами.",
+    "en": "the emphasis shifts: a stable financial arrangement is eroded by small expenses."
+  },
+  {
+    "ru": "Когда смыслов слишком много",
+    "en": "When there are too many meanings"
+  },
+  {
+    "ru": "Запишите не более двух версий. Для каждой укажите основание: вопрос, базовое значение, соседняя карта. Затем сформулируйте проверяемый бытовой вопрос: «Есть ли регулярные мелкие списания?». Если обе версии требуют выдумать незнакомого врага, скрытый роман или неизбежное бедствие, вернитесь к более простому чтению.",
+    "en": "Write down no more than two interpretations. State the basis for each: the question, core meaning and neighbouring card. Then frame an everyday question that can be checked, such as whether small regular charges are occurring. If both readings require an invented enemy, secret romance or inevitable disaster, return to a simpler reading."
+  },
+  {
+    "ru": "Не подсчитывайте «положительные» и «отрицательные» карты как голоса. Гроб может завершать неприятный процесс, Коса — отделять лишнее, Кольцо — закреплять нежелательное обязательство. Сначала определите,",
+    "en": "Do not count positive and negative cards as votes. The Coffin can end an unpleasant process, the Scythe remove something unnecessary, and the Ring secure an unwanted obligation. First establish"
+  },
+  {
+    "ru": "что",
+    "en": "what"
+  },
+  {
+    "ru": "заканчивается, отсекается или повторяется.",
+    "en": "is ending, being cut away or repeating."
+  },
+  {
+    "ru": "Это краткий рабочий словарь, а не список всех возможных сочетаний. Ключевые слова — общеупотребительное ядро; формулировки примеров и предостережений составлены для этого курса. Для сравнения значений см. общий список Labyrinthos; для Лилий Anna K отдельно разбирает чувственность и добродетель.",
+    "en": "This is a brief working vocabulary, not every possible combination. Keywords reflect commonly used core meanings; examples and cautions were written for this course. Compare the general Labyrinthos list; Anna K discusses sensuality and virtue separately for the Lilies."
+  },
+  {
+    "ru": "Дом — постоянная тема позиции; карта — то, что оказалось в этой теме. Нажмите название, чтобы открыть пояснение. В поиске по справочнику находятся и скрытые описания.",
+    "en": "A house is the position’s fixed topic; the card is what occupies that topic. Select a name to open its explanation. Search also finds descriptions that are currently collapsed."
+  },
+  {
+    "ru": "Всадник",
+    "en": "The Rider"
+  },
+  {
+    "ru": "Ядро:",
+    "en": "Core:"
+  },
+  {
+    "ru": "весть, прибытие, движение.",
+    "en": "news, arrival, movement."
+  },
+  {
+    "ru": "Дом 1:",
+    "en": "House 1:"
+  },
+  {
+    "ru": "новости и то, что приближается.",
+    "en": "news and what is approaching."
+  },
+  {
+    "ru": "Учебная пара — Письмо: новость в переписке.",
+    "en": "Practice pair — Letter: news in correspondence."
+  },
+  {
+    "ru": "Не обещает конкретного молодого мужчину.",
+    "en": "Does not promise a particular young man."
+  },
+  {
+    "ru": "Клевер",
+    "en": "The Clover"
+  },
+  {
+    "ru": "небольшой шанс, лёгкость, короткая удача.",
+    "en": "a small opportunity, ease, brief luck."
+  },
+  {
+    "ru": "Дом 2:",
+    "en": "House 2:"
+  },
+  {
+    "ru": "доступные возможности.",
+    "en": "available opportunities."
+  },
+  {
+    "ru": "Учебная пара — Ключ: удобный шанс разобраться.",
+    "en": "Practice pair — Key: a convenient chance to understand."
+  },
+  {
+    "ru": "Малый шанс не равен гарантированному выигрышу.",
+    "en": "A small opportunity is not a guaranteed win."
+  },
+  {
+    "ru": "Корабль",
+    "en": "The Ship"
+  },
+  {
+    "ru": "поездка, дальнее, обмен, движение.",
+    "en": "travel, distant places, exchange, movement."
+  },
+  {
+    "ru": "Дом 3:",
+    "en": "House 3:"
+  },
+  {
+    "ru": "путешествия и расширение.",
+    "en": "travel and expansion."
+  },
+  {
+    "ru": "Учебная пара — Книга: обучение вдали или исследование нового.",
+    "en": "Practice pair — Book: learning away from home or exploring something new."
+  },
+  {
+    "ru": "Не каждая карта Корабля означает эмиграцию.",
+    "en": "The Ship does not always mean emigration."
+  },
+  {
+    "ru": "Дом",
+    "en": "The House"
+  },
+  {
+    "ru": "жилище, семья, привычный порядок.",
+    "en": "home, family, familiar routines."
+  },
+  {
+    "ru": "Дом 4:",
+    "en": "House 4:"
+  },
+  {
+    "ru": "домашняя среда и опора.",
+    "en": "home environment and support."
+  },
+  {
+    "ru": "Учебная пара — Письмо: домашние документы.",
+    "en": "Practice pair — Letter: household documents."
+  },
+  {
+    "ru": "Дом может быть буквальным зданием.",
+    "en": "The House can be a literal building."
+  },
+  {
+    "ru": "Дерево",
+    "en": "The Tree"
+  },
+  {
+    "ru": "рост, укоренённость, длительный процесс.",
+    "en": "growth, rootedness, a long process."
+  },
+  {
+    "ru": "Дом 5:",
+    "en": "House 5:"
+  },
+  {
+    "ru": "то, что развивается постепенно.",
+    "en": "what develops gradually."
+  },
+  {
+    "ru": "Учебная пара — Книга: медленное накопление знаний.",
+    "en": "Practice pair — Book: slowly accumulating knowledge."
+  },
+  {
+    "ru": "Не используйте для диагностики болезней.",
+    "en": "Do not use it to diagnose illness."
+  },
+  {
+    "ru": "Тучи",
+    "en": "The Clouds"
+  },
+  {
+    "ru": "неясность, сомнение, путаница.",
+    "en": "uncertainty, doubt, confusion."
+  },
+  {
+    "ru": "Дом 6:",
+    "en": "House 6:"
+  },
+  {
+    "ru": "область неопределённости.",
+    "en": "an area of uncertainty."
+  },
+  {
+    "ru": "Учебная пара — Кольцо: неясные условия союза.",
+    "en": "Practice pair — Ring: unclear terms in a partnership."
+  },
+  {
+    "ru": "Неопределённость ещё не означает ложь.",
+    "en": "Uncertainty does not itself mean dishonesty."
+  },
+  {
+    "ru": "Змея",
+    "en": "The Snake"
+  },
+  {
+    "ru": "усложнение, обходной путь, хитрость.",
+    "en": "complication, an indirect route, cunning."
+  },
+  {
+    "ru": "Дом 7:",
+    "en": "House 7:"
+  },
+  {
+    "ru": "сложные маршруты и противоречия.",
+    "en": "complicated routes and contradictions."
+  },
+  {
+    "ru": "Учебная пара — Письмо: запутанная переписка.",
+    "en": "Practice pair — Letter: tangled correspondence."
+  },
+  {
+    "ru": "Не назначайте соперницу без оснований.",
+    "en": "Do not invent a romantic rival without grounds."
+  },
+  {
+    "ru": "Гроб",
+    "en": "The Coffin"
+  },
+  {
+    "ru": "завершение, остановка, угасание.",
+    "en": "ending, stopping, fading away."
+  },
+  {
+    "ru": "Дом 8:",
+    "en": "House 8:"
+  },
+  {
+    "ru": "то, что завершается или не движется.",
+    "en": "what is ending or no longer moving."
+  },
+  {
+    "ru": "Учебная пара — Кольцо: прекращение обязательства.",
+    "en": "Practice pair — Ring: an obligation ending."
+  },
+  {
+    "ru": "Не вывод о чьей-либо смерти.",
+    "en": "Not a conclusion about someone’s death."
+  },
+  {
+    "ru": "Букет",
+    "en": "The Bouquet"
+  },
+  {
+    "ru": "приятность, подарок, приглашение.",
+    "en": "pleasure, gift, invitation."
+  },
+  {
+    "ru": "Дом 9:",
+    "en": "House 9:"
+  },
+  {
+    "ru": "признательность и приятные события.",
+    "en": "appreciation and pleasant events."
+  },
+  {
+    "ru": "Учебная пара — Сад: приглашение на встречу.",
+    "en": "Practice pair — Garden: an invitation to a gathering."
+  },
+  {
+    "ru": "Приятное впечатление не гарантирует надёжность.",
+    "en": "A pleasant impression does not guarantee reliability."
+  },
+  {
+    "ru": "Коса",
+    "en": "The Scythe"
+  },
+  {
+    "ru": "резкое отделение, сокращение, решение.",
+    "en": "sudden separation, reduction, decision."
+  },
+  {
+    "ru": "Дом 10:",
+    "en": "House 10:"
+  },
+  {
+    "ru": "то, что требует отсечения.",
+    "en": "what needs cutting away."
+  },
+  {
+    "ru": "Учебная пара — Письмо: короткий резкий ответ.",
+    "en": "Practice pair — Letter: a brief, sharp reply."
+  },
+  {
+    "ru": "Направление лезвия зависит от рисунка.",
+    "en": "The blade’s direction depends on the artwork."
+  },
+  {
+    "ru": "Метла / Плеть",
+    "en": "The Whip / Broom"
+  },
+  {
+    "ru": "спор, повторение, напряжённое обсуждение.",
+    "en": "argument, repetition, tense discussion."
+  },
+  {
+    "ru": "Дом 11:",
+    "en": "House 11:"
+  },
+  {
+    "ru": "конфликты и повторяющиеся действия.",
+    "en": "conflicts and repeated actions."
+  },
+  {
+    "ru": "Учебная пара — Птицы: спорный разговор.",
+    "en": "Practice pair — Birds: a contentious conversation."
+  },
+  {
+    "ru": "Повторение может быть тренировкой, а не ссорой.",
+    "en": "Repetition can be training rather than an argument."
+  },
+  {
+    "ru": "Птицы / Совы",
+    "en": "The Birds / Owls"
+  },
+  {
+    "ru": "разговоры, волнение, суета.",
+    "en": "conversations, nervousness, bustle."
+  },
+  {
+    "ru": "Дом 12:",
+    "en": "House 12:"
+  },
+  {
+    "ru": "обсуждения и беспокойство.",
+    "en": "discussions and worry."
+  },
+  {
+    "ru": "Учебная пара — Письмо: обсуждение сообщения.",
+    "en": "Practice pair — Letter: discussing a message."
+  },
+  {
+    "ru": "Совы в разных колодах имеют авторские оттенки.",
+    "en": "The Owls take on different nuances in different decks."
+  },
+  {
+    "ru": "Ребёнок",
+    "en": "The Child"
+  },
+  {
+    "ru": "начало, малое, неопытность.",
+    "en": "beginning, smallness, inexperience."
+  },
+  {
+    "ru": "Дом 13:",
+    "en": "House 13:"
+  },
+  {
+    "ru": "новое и ещё незрелое.",
+    "en": "what is new and not yet mature."
+  },
+  {
+    "ru": "Учебная пара — Якорь: небольшой устойчивый старт.",
+    "en": "Practice pair — Anchor: a modest but stable start."
+  },
+  {
+    "ru": "Не автоматическое указание на беременность.",
+    "en": "Not an automatic indication of pregnancy."
+  },
+  {
+    "ru": "Лиса",
+    "en": "The Fox"
+  },
+  {
+    "ru": "осторожность, собственная выгода, уловка.",
+    "en": "caution, self-interest, a trick."
+  },
+  {
+    "ru": "Дом 14:",
+    "en": "House 14:"
+  },
+  {
+    "ru": "проверка интересов и тактики.",
+    "en": "checking interests and tactics."
+  },
+  {
+    "ru": "Учебная пара — Книга: внимательное изучение деталей.",
+    "en": "Practice pair — Book: a careful study of details."
+  },
+  {
+    "ru": "Работа — значение части школ, а не единственное.",
+    "en": "Work is one school-dependent meaning, not the only one."
+  },
+  {
+    "ru": "Медведь",
+    "en": "The Bear"
+  },
+  {
+    "ru": "сила, влияние, ресурс, покровительство.",
+    "en": "strength, influence, resources, patronage."
+  },
+  {
+    "ru": "Дом 15:",
+    "en": "House 15:"
+  },
+  {
+    "ru": "власть и крупные ресурсы.",
+    "en": "power and substantial resources."
+  },
+  {
+    "ru": "Учебная пара — Рыбы: контроль денежных ресурсов.",
+    "en": "Practice pair — Fish: control of financial resources."
+  },
+  {
+    "ru": "Не всегда конкретный начальник или мать.",
+    "en": "Not always a particular boss or mother."
+  },
+  {
+    "ru": "Звёзды",
+    "en": "The Stars"
+  },
+  {
+    "ru": "ориентир, надежда, ясное направление.",
+    "en": "a guide, hope, a clear direction."
+  },
+  {
+    "ru": "Дом 16:",
+    "en": "House 16:"
+  },
+  {
+    "ru": "планы и ориентиры.",
+    "en": "plans and guiding points."
+  },
+  {
+    "ru": "Учебная пара — Сад: сеть контактов, в современном чтении.",
+    "en": "Practice pair — Garden: a network of contacts in a contemporary reading."
+  },
+  {
+    "ru": "Интернет — современная адаптация символа.",
+    "en": "The internet is a modern adaptation of the symbol."
+  },
+  {
+    "ru": "Аисты",
+    "en": "The Stork"
+  },
+  {
+    "ru": "перемена, переход, обновление.",
+    "en": "change, transition, renewal."
+  },
+  {
+    "ru": "Дом 17:",
+    "en": "House 17:"
+  },
+  {
+    "ru": "что меняется.",
+    "en": "what is changing."
+  },
+  {
+    "ru": "Учебная пара — Дом: изменение быта или переезд.",
+    "en": "Practice pair — House: a change at home or a move."
+  },
+  {
+    "ru": "Перемена может быть небольшой.",
+    "en": "The change may be small."
+  },
+  {
+    "ru": "Собака",
+    "en": "The Dog"
+  },
+  {
+    "ru": "дружба, помощь, надёжность.",
+    "en": "friendship, help, reliability."
+  },
+  {
+    "ru": "Дом 18:",
+    "en": "House 18:"
+  },
+  {
+    "ru": "союзники и поддержка.",
+    "en": "allies and support."
+  },
+  {
+    "ru": "Учебная пара — Письмо: сообщение от знакомого.",
+    "en": "Practice pair — Letter: a message from someone you know."
+  },
+  {
+    "ru": "Лояльность проверяется поступками.",
+    "en": "Loyalty is tested through actions."
+  },
+  {
+    "ru": "Башня",
+    "en": "The Tower"
+  },
+  {
+    "ru": "учреждение, граница, самостоятельность.",
+    "en": "institution, boundary, independence."
+  },
+  {
+    "ru": "Дом 19:",
+    "en": "House 19:"
+  },
+  {
+    "ru": "официальные структуры и дистанция.",
+    "en": "official structures and distance."
+  },
+  {
+    "ru": "Учебная пара — Книга: организация обучения.",
+    "en": "Practice pair — Book: an educational organisation."
+  },
+  {
+    "ru": "Не переносите разрушение Башни из Таро.",
+    "en": "Do not import the Tarot Tower’s destruction."
+  },
+  {
+    "ru": "Сад",
+    "en": "The Garden"
+  },
+  {
+    "ru": "общество, встреча, публичность.",
+    "en": "society, meeting, publicity."
+  },
+  {
+    "ru": "Дом 20:",
+    "en": "House 20:"
+  },
+  {
+    "ru": "контакты и общественная среда.",
+    "en": "contacts and social surroundings."
+  },
+  {
+    "ru": "Учебная пара — Букет: приятное мероприятие.",
+    "en": "Practice pair — Bouquet: an enjoyable event."
+  },
+  {
+    "ru": "Это может быть аудитория, а не буквальный парк.",
+    "en": "This may be an audience rather than a literal park."
+  },
+  {
+    "ru": "Гора",
+    "en": "The Mountain"
+  },
+  {
+    "ru": "барьер, задержка, труднодоступность.",
+    "en": "barrier, delay, inaccessibility."
+  },
+  {
+    "ru": "Дом 21:",
+    "en": "House 21:"
+  },
+  {
+    "ru": "препятствия и дистанция.",
+    "en": "obstacles and distance."
+  },
+  {
+    "ru": "Учебная пара — Корабль: задержка поездки.",
+    "en": "Practice pair — Ship: a delayed journey."
+  },
+  {
+    "ru": "Не всякая задержка непреодолима.",
+    "en": "Not every delay is insurmountable."
+  },
+  {
+    "ru": "Развилка",
+    "en": "The Crossroads"
+  },
+  {
+    "ru": "выбор, несколько путей, альтернатива.",
+    "en": "choice, several paths, an alternative."
+  },
+  {
+    "ru": "Дом 22:",
+    "en": "House 22:"
+  },
+  {
+    "ru": "решения и варианты.",
+    "en": "decisions and options."
+  },
+  {
+    "ru": "Учебная пара — Кольцо: выбор обязательств.",
+    "en": "Practice pair — Ring: choosing commitments."
+  },
+  {
+    "ru": "Две возможности не доказывают неверность.",
+    "en": "Two possibilities do not prove infidelity."
+  },
+  {
+    "ru": "Мыши / Крысы",
+    "en": "The Mice / Rats"
+  },
+  {
+    "ru": "убыль, износ, мелкие потери.",
+    "en": "depletion, wear, small losses."
+  },
+  {
+    "ru": "Дом 23:",
+    "en": "House 23:"
+  },
+  {
+    "ru": "что расходуется и подтачивается.",
+    "en": "what is being spent or worn away."
+  },
+  {
+    "ru": "Учебная пара — Дом: бытовые потери или износ.",
+    "en": "Practice pair — House: household losses or wear."
+  },
+  {
+    "ru": "Начните с обычных расходов, не с обвинений.",
+    "en": "Begin with ordinary expenses, not accusations."
+  },
+  {
+    "ru": "Сердце",
+    "en": "The Heart"
+  },
+  {
+    "ru": "симпатия, любовь, сердечный интерес.",
+    "en": "affection, love, heartfelt interest."
+  },
+  {
+    "ru": "Дом 24:",
+    "en": "House 24:"
+  },
+  {
+    "ru": "эмоциональная вовлечённость.",
+    "en": "emotional involvement."
+  },
+  {
+    "ru": "Учебная пара — Кольцо: привязанность в союзе.",
+    "en": "Practice pair — Ring: attachment within a union."
+  },
+  {
+    "ru": "Не обещает взаимности само по себе.",
+    "en": "Does not promise reciprocated feelings by itself."
+  },
+  {
+    "ru": "Кольцо",
+    "en": "The Ring"
+  },
+  {
+    "ru": "союз, договор, обязательство, цикл.",
+    "en": "union, agreement, obligation, cycle."
+  },
+  {
+    "ru": "Дом 25:",
+    "en": "House 25:"
+  },
+  {
+    "ru": "связи и договорённости.",
+    "en": "connections and agreements."
+  },
+  {
+    "ru": "Учебная пара — Якорь: длительное обязательство.",
+    "en": "Practice pair — Anchor: a lasting commitment."
+  },
+  {
+    "ru": "Связывать может и неудобный договор.",
+    "en": "An uncomfortable contract can also bind."
+  },
+  {
+    "ru": "Книга",
+    "en": "The Book"
+  },
+  {
+    "ru": "знание, обучение, неизвестная информация.",
+    "en": "knowledge, learning, unknown information."
+  },
+  {
+    "ru": "Дом 26:",
+    "en": "House 26:"
+  },
+  {
+    "ru": "что нужно узнать или изучить.",
+    "en": "what needs to be learned or studied."
+  },
+  {
+    "ru": "Учебная пара — Ключ: найденное понимание.",
+    "en": "Practice pair — Key: understanding found."
+  },
+  {
+    "ru": "Неизвестное вам не обязательно скрывают намеренно.",
+    "en": "Something unknown to you is not necessarily being deliberately hidden."
+  },
+  {
+    "ru": "Письмо",
+    "en": "The Letter"
+  },
+  {
+    "ru": "текст, документ, уведомление.",
+    "en": "text, document, notification."
+  },
+  {
+    "ru": "Дом 27:",
+    "en": "House 27:"
+  },
+  {
+    "ru": "переписка и оформление.",
+    "en": "correspondence and paperwork."
+  },
+  {
+    "ru": "Учебная пара — Солнце: понятный ответ.",
+    "en": "Practice pair — Sun: a clear answer."
+  },
+  {
+    "ru": "Письмо не тождественно подписанному договору.",
+    "en": "The Letter is not the same as a signed contract."
+  },
+  {
+    "ru": "Мужчина",
+    "en": "The Man"
+  },
+  {
+    "ru": "выбранный персонаж.",
+    "en": "the chosen person."
+  },
+  {
+    "ru": "Дом 28:",
+    "en": "House 28:"
+  },
+  {
+    "ru": "сфера этого персонажа.",
+    "en": "this person’s sphere."
+  },
+  {
+    "ru": "Учебная пара — Книга: человек учится или мало известен.",
+    "en": "Practice pair — Book: someone studying or not well known."
+  },
+  {
+    "ru": "Роль назначается до расклада.",
+    "en": "Assign the role before the spread."
+  },
+  {
+    "ru": "Женщина",
+    "en": "The Woman"
+  },
+  {
+    "ru": "Дом 29:",
+    "en": "House 29:"
+  },
+  {
+    "ru": "Учебная пара — Ключ: участие человека в решении.",
+    "en": "Practice pair — Key: a person involved in the solution."
+  },
+  {
+    "ru": "Не требуется делать её романтическим партнёром.",
+    "en": "She need not represent a romantic partner."
+  },
+  {
+    "ru": "Лилии",
+    "en": "The Lilies"
+  },
+  {
+    "ru": "зрелость, покой, гармония.",
+    "en": "maturity, peace, harmony."
+  },
+  {
+    "ru": "Дом 30:",
+    "en": "House 30:"
+  },
+  {
+    "ru": "зрелость и спокойный порядок.",
+    "en": "maturity and a peaceful order."
+  },
+  {
+    "ru": "Учебная пара — Дом: тихая домашняя обстановка.",
+    "en": "Practice pair — House: a quiet home environment."
+  },
+  {
+    "ru": "Чувственность и добродетель различаются по школам.",
+    "en": "Schools differ on sensuality and virtue."
+  },
+  {
+    "ru": "Солнце",
+    "en": "The Sun"
+  },
+  {
+    "ru": "ясность, успех, энергия.",
+    "en": "clarity, success, energy."
+  },
+  {
+    "ru": "Дом 31:",
+    "en": "House 31:"
+  },
+  {
+    "ru": "где легче действовать и проявляться.",
+    "en": "where acting and expressing yourself comes more easily."
+  },
+  {
+    "ru": "Учебная пара — Всадник: обнадёживающая весть.",
+    "en": "Practice pair — Rider: encouraging news."
+  },
+  {
+    "ru": "Благоприятная карта не отменяет все трудности.",
+    "en": "A favourable card does not erase every difficulty."
+  },
+  {
+    "ru": "Луна",
+    "en": "The Moon"
+  },
+  {
+    "ru": "чувства, впечатление, признание.",
+    "en": "feelings, impressions, recognition."
+  },
+  {
+    "ru": "Дом 32:",
+    "en": "House 32:"
+  },
+  {
+    "ru": "эмоциональный отклик и репутация.",
+    "en": "emotional response and reputation."
+  },
+  {
+    "ru": "Учебная пара — Букет: приятное признание.",
+    "en": "Practice pair — Bouquet: welcome recognition."
+  },
+  {
+    "ru": "Не сводите её к иллюзии Таро.",
+    "en": "Do not reduce it to the Tarot theme of illusion."
+  },
+  {
+    "ru": "Ключ",
+    "en": "The Key"
+  },
+  {
+    "ru": "решение, доступ, значимость.",
+    "en": "solution, access, significance."
+  },
+  {
+    "ru": "Дом 33:",
+    "en": "House 33:"
+  },
+  {
+    "ru": "что открывает возможность.",
+    "en": "what opens an opportunity."
+  },
+  {
+    "ru": "Учебная пара — Книга: понимание важного материала.",
+    "en": "Practice pair — Book: understanding important material."
+  },
+  {
+    "ru": "Показывает тему решения, не магическую гарантию.",
+    "en": "Suggests a theme of resolution, not a magical guarantee."
+  },
+  {
+    "ru": "Рыбы",
+    "en": "The Fish"
+  },
+  {
+    "ru": "деньги, оборот, ресурсы.",
+    "en": "money, turnover, resources."
+  },
+  {
+    "ru": "Дом 34:",
+    "en": "House 34:"
+  },
+  {
+    "ru": "финансовые потоки.",
+    "en": "financial flows."
+  },
+  {
+    "ru": "Учебная пара — Кольцо: регулярные платежи по соглашению.",
+    "en": "Practice pair — Ring: regular payments under an agreement."
+  },
+  {
+    "ru": "Размер суммы по карте не определяется.",
+    "en": "A card cannot determine an amount of money."
+  },
+  {
+    "ru": "Якорь",
+    "en": "The Anchor"
+  },
+  {
+    "ru": "устойчивость, закрепление, работа.",
+    "en": "stability, securing, work."
+  },
+  {
+    "ru": "Дом 35:",
+    "en": "House 35:"
+  },
+  {
+    "ru": "долгосрочная опора и занятость.",
+    "en": "long-term support and employment."
+  },
+  {
+    "ru": "Учебная пара — Гора: затянувшийся застой.",
+    "en": "Practice pair — Mountain: prolonged stagnation."
+  },
+  {
+    "ru": "Стабильность бывает полезной и неудобной.",
+    "en": "Stability can be helpful or uncomfortable."
+  },
+  {
+    "ru": "Крест",
+    "en": "The Cross"
+  },
+  {
+    "ru": "бремя, обязанность, тяжёлая тема.",
+    "en": "burden, obligation, a difficult theme."
+  },
+  {
+    "ru": "Дом 36:",
+    "en": "House 36:"
+  },
+  {
+    "ru": "что воспринимается как нагрузка.",
+    "en": "what is experienced as a burden."
+  },
+  {
+    "ru": "Учебная пара — Кольцо: обременительное обязательство.",
+    "en": "Practice pair — Ring: a burdensome obligation."
+  },
+  {
+    "ru": "Не доказательство порчи или наказания.",
+    "en": "Not evidence of a curse or punishment."
+  },
+  {
+    "ru": "Ниже восемь схем. Линии и квадрат — распространённые формы обучения Ленорман; крест, выбор и взаимодействие здесь представлены как явно обозначенные учебные адаптации. Название не делает схему «древней» или обязательной. Для начала выберите один вопрос и минимальный достаточный размер.",
+    "en": "Below are eight layouts. Lines and the square are common ways to learn Lenormand; the cross, choice and interaction spreads here are explicitly labelled teaching adaptations. A name does not make a layout ancient or compulsory. Begin with one question and the smallest sufficient spread."
+  },
+  {
+    "ru": "Гранд Табло — расклад всей колоды. Он позволяет рассматривать несколько связанных тем на одном поле, но не требует трактовать каждую возможную связь.",
+    "en": "The Grand Tableau uses the whole deck. It allows several related topics to be considered on one board, without requiring you to interpret every possible connection."
+  },
+  {
+    "ru": "Два распространённых формата: четыре ряда по девять карт (",
+    "en": "Two common formats are four rows of nine cards ("
+  },
+  {
+    "ru": ") и четыре ряда по восемь с четырьмя внизу (",
+    "en": ") and four rows of eight with four below ("
+  },
+  {
+    "ru": "). Оба описаны у Anna K. В этом курсе основной учебный пример использует второй формат.",
+    "en": "). Anna K describes both. The main worked example in this course uses the second format."
+  },
+  {
+    "ru": "Нумерация без путаницы",
+    "en": "Keeping the numbers clear"
+  },
+  {
+    "ru": "В формате 8 × 4 + 4 первый ряд содержит позиции 1–8, второй 9–16, третий 17–24, четвёртый 25–32. Позиции 33–36 стоят в пятом ряду по центру — под столбцами 3–6. В формате 9 × 4 ряды: 1–9, 10–18, 19–27, 28–36. Номер позиции — это номер дома, а не номер лежащей карты.",
+    "en": "In 8 × 4 + 4, the rows contain positions 1–8, 9–16, 17–24 and 25–32. Positions 33–36 form a centred fifth row below columns 3–6. In 9 × 4, the rows are 1–9, 10–18, 19–27 and 28–36. A position number is the house number, not the number of the card occupying it."
+  },
+  {
+    "ru": "Например, в позиции 14 может лежать карта 28. Тогда это",
+    "en": "For example, card 28 might occupy position 14. This is"
+  },
+  {
+    "ru": "Мужчина в доме Лисы",
+    "en": "the Man in the house of the Fox"
+  },
+  {
+    "ru": ". Сам дом Мужчины остаётся позицией 28, и в нём лежит другая карта. Даже если рядом напечатаны два номера, они отвечают на разные вопросы.",
+    "en": ". The Man’s own house remains position 28, occupied by another card. Even when two numbers appear together, they answer different questions."
+  },
+  {
+    "ru": "Подготовка большого расклада",
+    "en": "Preparing the full spread"
+  },
+  {
+    "ru": "Определите общий период и не более трёх основных тем, например работа, общение и домашние дела.",
+    "en": "Set an overall time frame and no more than three main themes, such as work, communication and home life."
+  },
+  {
+    "ru": "Выберите карту человека и тематические карты; запишите неоднозначные значения Лисы, Луны, Лилий.",
+    "en": "Choose the person card and topic cards; record the potentially ambiguous meanings of the Fox, Moon and Lilies."
+  },
+  {
+    "ru": "Перемешайте все 36 карт, раздайте по рядам. Не вынимайте сигнификатор заранее для стандартного режима.",
+    "en": "Shuffle all 36 cards and deal in rows. In the standard method, do not remove the significator first."
+  },
+  {
+    "ru": "Перепишите номера. При чтении по фото сначала проверьте распознавание.",
+    "en": "Record the numbers. When using a photograph, verify the card identification first."
+  },
+  {
+    "ru": "Сначала сформулируйте общий сюжет, а затем проверяйте детали. Не начинайте с самого пугающего символа.",
+    "en": "Form an overall story before checking details. Do not begin with the most frightening symbol."
+  },
+  {
+    "ru": "Маршрут первого чтения",
+    "en": "A route through your first reading"
+  },
+  {
+    "ru": "Этап",
+    "en": "Stage"
+  },
+  {
+    "ru": "Что сделать",
+    "en": "What to do"
+  },
+  {
+    "ru": "Что записать",
+    "en": "What to record"
+  },
+  {
+    "ru": "1. Рамка",
+    "en": "1. Frame"
+  },
+  {
+    "ru": "Посмотреть углы основного прямоугольника и центральную область.",
+    "en": "Look at the main rectangle’s corners and central area."
+  },
+  {
+    "ru": "Две-три общие темы, без событийных подробностей.",
+    "en": "Two or three general themes, without event details."
+  },
+  {
+    "ru": "2. Человек",
+    "en": "2. Person"
+  },
+  {
+    "ru": "Найти сигнификатор, его дом и ближайшее окружение.",
+    "en": "Find the significator, its house and nearest neighbours."
+  },
+  {
+    "ru": "В какой ситуации человек изображён сейчас.",
+    "en": "The situation in which the person is depicted now."
+  },
+  {
+    "ru": "3. Линии",
+    "en": "3. Lines"
+  },
+  {
+    "ru": "Прочитать его строку, столбец, при необходимости диагонали.",
+    "en": "Read their row, column and, if needed, diagonals."
+  },
+  {
+    "ru": "Как связаны обстоятельства и куда разворачивается история.",
+    "en": "How circumstances connect and how the story develops."
+  },
+  {
+    "ru": "4. Темы",
+    "en": "4. Topics"
+  },
+  {
+    "ru": "Найти выбранные карты темы и их окружение.",
+    "en": "Find the chosen topic cards and their surroundings."
+  },
+  {
+    "ru": "По одному абзацу на каждый вопрос.",
+    "en": "One paragraph for each question."
+  },
+  {
+    "ru": "5. Дома",
+    "en": "5. Houses"
+  },
+  {
+    "ru": "Сопоставить карту темы с её домом и содержимым тематического дома.",
+    "en": "Compare the topic card’s current house with the card in that topic’s own house."
+  },
+  {
+    "ru": "Уточнение области и условий.",
+    "en": "Clarification of the area and conditions."
+  },
+  {
+    "ru": "6. Дополнительная техника",
+    "en": "6. Additional technique"
+  },
+  {
+    "ru": "Выбрать зеркало, ход конём или одну цепочку для оставшегося вопроса.",
+    "en": "Choose mirroring, knighting or one chain for an unresolved question."
+  },
+  {
+    "ru": "Одно уточнение, а не новый независимый прогноз.",
+    "en": "One clarification, not a new independent forecast."
+  },
+  {
+    "ru": "7. Синтез",
+    "en": "7. Synthesis"
+  },
+  {
+    "ru": "Сопоставить главную тему, ресурс, препятствие и тенденцию.",
+    "en": "Bring together the main theme, resource, obstacle and tendency."
+  },
+  {
+    "ru": "Короткий ответ и то, что стоит проверить в жизни.",
+    "en": "A short answer and something to check in everyday life."
+  },
+  {
+    "ru": "Эта последовательность — учебная организация материала, а не приписываемый одной школе ритуал. Обзор Labyrinthos включает сигнификатор, окружение, направления, углы, тематические карты и дополнительные слои; он также подчёркивает, что все техники одновременно не обязательны.",
+    "en": "This sequence organises the teaching material; it is not a ritual attributed to one school. The Labyrinthos overview includes the significator, surroundings, directions, corners, topic cards and additional layers, while emphasising that you need not use every technique at once."
+  },
+  {
+    "ru": "Два формата — разные геометрические связи",
+    "en": "Two formats, different geometric connections"
+  },
+  {
+    "ru": "В 8 × 4 основной прямоугольник имеет четыре центральные позиции:",
+    "en": "The 8 × 4 rectangle has four central positions:"
+  },
+  {
+    "ru": "; углы —",
+    "en": "; its corners are"
+  },
+  {
+    "ru": ". В 9 × 4 центральный столбец пятый, две наиболее центральные клетки —",
+    "en": ". In 9 × 4, the fifth column is central, with the two most central cells at"
+  },
+  {
+    "ru": "14 и 23",
+    "en": "14 and 23"
+  },
+  {
+    "ru": ". Нельзя автоматически переносить «центральную четвёрку» с восьми столбцов на девять.",
+    "en": ". Do not automatically transfer the central group of four from eight columns to nine."
+  },
+  {
+    "ru": "Не перекладывайте уже прочитанное 8 × 4 + 4 в 9 × 4 ради более приятных связей. Дома по порядку останутся теми же, но соседство, зеркала и ходы конём изменятся. В тренажёре переключение служит сравнению геометрии, а не получению второго прогноза.",
+    "en": "Do not rearrange a completed 8 × 4 + 4 reading into 9 × 4 to obtain more pleasant connections. House order stays the same, but neighbours, mirrors and knight moves change. Switching here compares geometry; it does not provide a second forecast."
+  },
+  {
+    "ru": "Найдите выбранную карту человека. Посмотрите, в каком ряду и столбце она стоит, сколько карт находится вокруг и какие темы представлены непосредственно рядом. На первом проходе используйте соседние клетки: до восьми карт вокруг центра. Если персонаж у края, соседей меньше — отсутствующие позиции не нужно дополнять.",
+    "en": "Find the chosen person card. Note its row, column, number of neighbours and the themes immediately nearby. Begin with adjoining cells: up to eight around a central card. At an edge there are fewer neighbours; do not invent missing positions."
+  },
+  {
+    "ru": "Учебный пример: слева от персонажа Письмо, справа Якорь, над ним Книга, под ним Гора. Краткая история — человек связан с перепиской и задачей закрепиться, но нуждается в информации и сталкивается с барьером. Это исходная формулировка; только затем уточняйте, относится ли она к работе, учёбе или договорённости.",
+    "en": "Teaching example: the Letter is left of the person, the Anchor right, the Book above and the Mountain below. A brief story might connect the person with correspondence and a need to become established, while lacking information and facing a barrier. Only then decide whether this relates to work, study or an agreement."
+  },
+  {
+    "ru": "Не объявляйте карту сверху буквальными тайными мыслями. В разных подходах верх читается как осознаваемое, внешние влияния или то, что «над человеком»; низ — как основа, практическая сторона либо то, что под контролем. Эти назначения не тождественны. В учебном режиме здесь верх и низ рассматриваются как окружающие условия, без претензии определить подсознание.",
+    "en": "Do not treat the card above as literal secret thoughts. Different approaches read above as awareness, outside influence or what is over someone; below as foundations, practical matters or what is under control. These are different conventions. Here, above and below describe surrounding conditions without claiming to reveal the subconscious."
+  },
+  {
+    "ru": "Расстояние — отдельный принцип традиционных чтений. Он может влиять не только на силу, но и на характер значения конкретной карты. Издатель Prisma Visions приводит метод близости и дополнительные геометрические техники. Не сводите все варианты к формуле «далеко = ничего не значит».",
+    "en": "Distance is a separate principle in traditional readings. It can affect both the strength and the nature of a card’s meaning. Publisher Prisma Visions describes proximity and additional geometric techniques. Do not reduce all variations to the idea that a distant card means nothing."
+  },
+  {
+    "ru": "В нашем учебном режиме близкие карты получают приоритет как непосредственно связанные обстоятельства; удалённые рассматриваются через тему и выбранную линию. Мы не устанавливаем универсальный радиус в сантиметрах. Если хотите практиковать исторический метод близко/далеко, используйте инструкцию конкретного издания и заранее определите границу близости.",
+    "en": "In this teaching mode, nearby cards take priority as directly related circumstances; distant cards are considered through their topic and a chosen line. We set no universal radius in centimetres. To practise a historical near/far method, follow a specific edition’s instructions and define the proximity boundary beforehand."
+  },
+  {
+    "ru": "Сигнификатор на краю не означает, что «будущего нет». Слева просто может оказаться мало карт для выбранной временной линии. Читайте окружение, тематические карты и дома. Не переносите человека в центр после раздачи.",
+    "en": "A significator at the edge does not mean there is no future. There may simply be few cards to its left for your chosen time line. Read the surroundings, topic cards and houses. Do not move the person to the centre after dealing."
+  },
+  {
+    "ru": "В 8 × 4 + 4 персонаж может попасть в нижнюю четвёрку. В этой версии курса её четыре карты читаются как отдельная завершающая линия; геометрическое окружение основного прямоугольника для них не рассчитывается. Дом персонажа и цепочка домов остаются доступны. Это заранее установленное ограничение учебной модели, а не запрет других школ.",
+    "en": "In 8 × 4 + 4, the person may land among the bottom four. Here these are read as a separate closing line; geometric neighbours within the main rectangle are not calculated for them. The person’s house and house chain remain available. This is a stated limit of the teaching model, not a ban on other schools’ methods."
+  },
+  {
+    "ru": "Строка",
+    "en": "Row"
+  },
+  {
+    "ru": "Найдите строку сигнификатора и прочитайте её как линию. Удобно сначала взять ближайшую пару слева и справа, затем расширить чтение до края. Если используете фиксированное время, слева условно предыстория, справа развитие; «условно» означает правило схемы, а не измеренную хронологию.",
+    "en": "Find the significator’s row and read it as a line. Begin with the nearest cards to the left and right, then extend to the edges. If using fixed time, the left conventionally represents background and the right development. This is a layout convention, not measured chronology."
+  },
+  {
+    "ru": "В варианте чтения по взгляду пространство перед лицом персонажа связывают с направлением его внимания или будущим, за спиной — с прошлым. Не смешивайте этот режим с фиксированным «право = будущее», если персонаж смотрит влево. Здесь тренажёр использует фиксированную геометрию и не определяет взгляд.",
+    "en": "In readings based on facing direction, the space before a figure can represent attention or the future, and the space behind the past. Do not mix that with a fixed right-equals-future rule when the figure faces left. This trainer uses fixed geometry and does not infer facing direction."
+  },
+  {
+    "ru": "Столбец",
+    "en": "Column"
+  },
+  {
+    "ru": "Читайте карты сверху вниз как вертикальную связку, соединяя их с предметом вопроса. Например, Книга — Письмо — Кольцо — Якорь: знание оформляется в текст, затем в договорённость и устойчивый порядок. Это образ процесса, а не требование назначить каждому ряду месяц.",
+    "en": "Read from top to bottom as a vertical combination related to the question. For example, Book — Letter — Ring — Anchor can suggest knowledge taking written form, becoming an agreement and then an established routine. It depicts a process; it does not require assigning a month to each row."
+  },
+  {
+    "ru": "Диагонали",
+    "en": "Diagonals"
+  },
+  {
+    "ru": "От выбранной карты двигайтесь по одной клетке вверх-влево, вверх-вправо, вниз-влево и вниз-вправо до края. Каждая ветвь — отдельная линия; не перескакивайте через край и не склеивайте все найденные карты в произвольном порядке. Сначала спросите, какой аспект нужно уточнить: ресурс, задержку, участие другого человека.",
+    "en": "From the selected card, move one cell at a time up-left, up-right, down-left and down-right to the edge. Each branch is a separate line. Do not cross an edge or combine the cards in arbitrary order. First identify what needs clarification: a resource, delay or another person’s involvement."
+  },
+  {
+    "ru": "В учебном поле подсвечиваются все четыре ветви, а в подписи указаны позиции. Подсветка доказывает только геометрическую связь. Она не доказывает причинность или наличие скрытой угрозы.",
+    "en": "The teaching board highlights all four branches and lists their positions. Highlighting establishes only a geometric connection. It proves neither causation nor a hidden threat."
+  },
+  {
+    "ru": "Углы как рамка",
+    "en": "Corners as a frame"
+  },
+  {
+    "ru": "Для 8 × 4 + 4 возьмите 1+8 и 25+32, затем при необходимости 1+32 и 8+25. Для 9 × 4 — соответственно 1+9 и 28+36, затем 1+36 и 9+28. Сформулируйте общий мотив. Не назначайте углам четыре отдельных события без отдельной схемы. Чтение углов парами входит и в программу обучения Мэри К. Грир.",
+    "en": "For 8 × 4 + 4, take 1+8 and 25+32, then 1+32 and 8+25 if needed. For 9 × 4, use 1+9 and 28+36, then 1+36 and 9+28. Formulate a general theme. Do not assign four separate events to the corners without a separate scheme. Mary K. Greer’s teaching programme also includes reading corners in pairs."
+  },
+  {
+    "ru": "Центральная область",
+    "en": "Central area"
+  },
+  {
+    "ru": "В восьмистолбцовом прямоугольнике прочитайте 12–13 и 20–21, затем 12–20 и 13–21. Это позволяет увидеть повторяющуюся тему. В девятистолбцовом формате используйте две центральные карты 14 и 23 либо заранее выбранную расширенную область. Выбранный вариант нужно обозначить.",
+    "en": "In the eight-column rectangle, read 12–13 and 20–21, then 12–20 and 13–21 to find recurring themes. In the nine-column format, use the central cards 14 and 23 or a larger area chosen beforehand. State which version you use."
+  },
+  {
+    "ru": "Четыре карты внизу",
+    "en": "The bottom four cards"
+  },
+  {
+    "ru": "Позиции 33–36 нередко называют «линией судьбы». Само название не делает их неизбежным приговором. Здесь они читаются как завершающий комментарий ко всему заданному периоду: 33+34, 34+35, 35+36, затем одна фраза.",
+    "en": "Positions 33–36 are often called the fate line. The name does not make them an unavoidable verdict. Here they form a closing comment on the chosen period: 33+34, 34+35 and 35+36, followed by one sentence."
+  },
+  {
+    "ru": "Встречаются трактовки как дальнейшего развития, особо значимой темы или фиксированного срока. Например, Labyrinthos предлагает интервал 8–12 недель; это частное правило публикации, а не универсальный срок любого Гранд Табло. В этом справочнике автоматически добавлять его к месячному вопросу не следует.",
+    "en": "Other interpretations treat them as further developments, an especially important topic or a fixed period. Labyrinthos, for instance, suggests 8–12 weeks; that is the publication’s particular rule, not a universal Grand Tableau time frame. Do not automatically add it to a monthly question in this guide."
+  },
+  {
+    "ru": "Геометрия нижней строки зависит от выравнивания и школы. Чтобы не выдавать частное решение за канон, наш тренажёр не включает позиции 33–36 в диагонали, зеркала и ходы конём основного прямоугольника. Для них доступны дома, отдельная линия и цепочки. В формате 9 × 4 все 36 карт участвуют в геометрических связях.",
+    "en": "The bottom row’s geometry depends on alignment and school. This trainer excludes positions 33–36 from the main rectangle’s diagonals, mirrors and knight moves to avoid presenting one choice as canon. Their houses, separate line and chains remain available. All 36 cards participate in geometric connections in 9 × 4."
+  },
+  {
+    "ru": "Дом отвечает «в какой области?», карта в нём — «что там происходит?». Соседство отвечает на другой вопрос: «с чем это связано рядом на поле?».",
+    "en": "The house asks which area; the card asks what is happening there. Neighbouring cards answer a different question: what is connected nearby on the board?"
+  },
+  {
+    "ru": "Представьте неподвижную подложку с картами по порядку от 1 до 36. Поверх неё ложится перемешанная колода. Подложка остаётся прежней: первый дом всегда Всадника, второй Клевера, последний Креста. Принцип карты на тематической позиции описан в руководстве TarotQuest.",
+    "en": "Imagine a fixed underlay with cards numbered 1–36 in order, then a shuffled deck placed over it. The underlay stays unchanged: house 1 always belongs to the Rider, house 2 to the Clover and house 36 to the Cross. TarotQuest describes placing cards on thematic positions."
+  },
+  {
+    "ru": "Два вопроса к одной теме",
+    "en": "Two questions about one topic"
+  },
+  {
+    "ru": "Где лежат Рыбы?",
+    "en": "Where are the Fish?"
+  },
+  {
+    "ru": "Найдите карту 34 и название дома под ней: это условия, в которых проявляется денежная тема.",
+    "en": "Find card 34 and the house beneath it: these are the conditions surrounding the money theme."
+  },
+  {
+    "ru": "Что лежит в доме Рыб?",
+    "en": "What is in the house of the Fish?"
+  },
+  {
+    "ru": "Посмотрите позицию 34: это характеристика области денег. Эти ответы связаны, но не взаимозаменяемы.",
+    "en": "Look at position 34: this describes the area of money. The two answers are related but not interchangeable."
+  },
+  {
+    "ru": "В учебном поле Рыбы стоят в позиции 22: денежная тема связана с выбором и разветвлением. В позиции 34 лежит Развилка: область денег тоже описывается выбором. Здесь образовалась взаимная пара — Рыбы в доме Развилки и Развилка в доме Рыб. Это усиливает мотив выбора в нашей интерпретации, но не даёт два независимых подтверждения будущего события.",
+    "en": "In the teaching board, the Fish occupy position 22, linking money with choices and branching paths. Position 34 contains the Crossroads, also describing money through choice. This is a reciprocal pair: Fish in the Crossroads’ house and Crossroads in the Fish’s house. It emphasises choice in our reading without providing two independent confirmations of a future event."
+  },
+  {
+    "ru": "Как составить фразу",
+    "en": "Building a sentence"
+  },
+  {
+    "ru": "Назовите тему дома обычным языком.",
+    "en": "Name the house’s topic in everyday language."
+  },
+  {
+    "ru": "Опишите выпавшую карту в рамках этой темы.",
+    "en": "Describe the card within that topic."
+  },
+  {
+    "ru": "Посмотрите, что из этого относится к вопросу.",
+    "en": "Decide which part relates to the question."
+  },
+  {
+    "ru": "Проверьте по ближайшему окружению карты темы; при противоречии сохраните обе стороны.",
+    "en": "Check against the topic card’s nearest neighbours; if they conflict, retain both sides."
+  },
+  {
+    "ru": "Примеры:",
+    "en": "Examples:"
+  },
+  {
+    "ru": "Письмо в доме Кольца — текстовые условия соглашения. Гора в доме Письма — задержка ответа. Букет в доме Сада — приятное публичное взаимодействие. Ни одно из этих сочетаний не требует буквального подарка, горы или парка.",
+    "en": "Letter in the Ring’s house: written terms of an agreement. Mountain in the Letter’s house: a delayed reply. Bouquet in the Garden’s house: pleasant public interaction. None requires a literal gift, mountain or park."
+  },
+  {
+    "ru": "Карта в собственном доме",
+    "en": "A card in its own house"
+  },
+  {
+    "ru": "Кольцо в позиции 25 можно понимать как особенно явную тему обязательств или повторяющийся цикл. Это не обязательно «идеальный брак». Вопрос «что закреплено?» полезнее общей оценки «всё хорошо». В цепочке собственный дом образует петлю из одного элемента, поэтому переходить дальше некуда.",
+    "en": "The Ring in position 25 may suggest an especially clear theme of commitment or a recurring cycle. It need not mean a perfect marriage. Asking what is being secured is more useful than declaring everything good. In a chain, a card in its own house forms a one-element loop with nowhere further to go."
+  },
+  {
+    "ru": "Взаимный обмен",
+    "en": "Reciprocal exchange"
+  },
+  {
+    "ru": "Если Собака лежит в доме Ключа, а Ключ в доме Собаки, две темы взаимно указывают друг на друга. Учебный смысл — поддержка и решение тесно соединены. Не объявляйте этого человека спасителем: реальная роль проверяется по поступкам.",
+    "en": "If the Dog is in the Key’s house and the Key in the Dog’s, the two topics point to one another. A teaching reading connects support closely with a solution. Do not declare the person a saviour: their real role is tested through actions."
+  },
+  {
+    "ru": "Сколько домов читать",
+    "en": "How many houses to read"
+  },
+  {
+    "ru": "Для первого Гранд Табло достаточно дома человека и двух-трёх тематических домов. Чтение всех 36 подряд часто превращает ответ в перечень, в котором теряется исходный вопрос. Anna K также предлагает выбирать дома, относящиеся к важным темам, а не обязательно перечислять каждый.",
+    "en": "For a first Grand Tableau, the person’s house and two or three topic houses are enough. Reading all 36 often turns the answer into a list that loses the question. Anna K also suggests selecting houses relevant to important topics instead of necessarily covering every one."
+  },
+  {
+    "ru": "Таблица в главе «36 карт и 36 домов» использует дом как продолжение значения соответствующей карты. Встречаются и другие исторические или авторские таблицы. Например, Camelia Elias публикует отдельные соответствия карты, дома и игральной вставки, которые местами расходятся с таким упрощением. Эти таблицы не следует незаметно смешивать.",
+    "en": "The 36 cards and 36 houses chapter extends each card’s meaning into its house. Other historical and author-specific tables exist. Camelia Elias, for example, publishes card, house and playing-card correspondences that sometimes differ from this simplification. Do not mix these tables without making that choice explicit."
+  },
+  {
+    "ru": "Зеркала: сопоставление симметричных мест",
+    "en": "Mirroring: comparing symmetrical positions"
+  },
+  {
+    "ru": "Представьте, что прямоугольник складывается пополам. Горизонтальное зеркало меняет левый и правый край местами в одной строке. Вертикальное — верхний и нижний в одном столбце. Двойное отражение делает оба действия. Эти техники описываются среди дополнительных способов чтения; они не обязательны для связного ответа.",
+    "en": "Imagine folding the rectangle in half. Horizontal mirroring swaps left and right within a row; vertical mirroring swaps top and bottom within a column. Double mirroring does both. These are supplementary techniques, not requirements for a coherent answer."
+  },
+  {
+    "ru": "В 8 × 4 позиция 14 (ряд 2, столбец 6) отражается горизонтально в 11, вертикально в 22, двойным отражением в 19. В 9 × 4 та же позиция 14 находится в центральном столбце: горизонтальное отражение совпадает с ней, вертикальное ведёт в 23. Саму себя повторно читать как новую карту не нужно.",
+    "en": "In 8 × 4, position 14, row 2 column 6, mirrors horizontally to 11, vertically to 22 and doubly to 19. In 9 × 4, position 14 is in the central column: its horizontal mirror is itself and its vertical mirror is 23. Do not read the same card again as though it were new."
+  },
+  {
+    "ru": "Пример:",
+    "en": "Example:"
+  },
+  {
+    "ru": "персонаж отражается в Рыбы. Дополнительный вопрос — как денежная тема связана с его ситуацией? Это повод посмотреть Рыб и их окружение, а не заключить «он богат». Зеркало может отвести внимание к значимой теме, но не устанавливает тайный факт.",
+    "en": "the person mirrors to the Fish. Ask how the money theme relates to their situation. This invites looking at the Fish and their neighbours, not concluding that the person is wealthy. A mirror can direct attention to a topic without establishing a hidden fact."
+  },
+  {
+    "ru": "Ход конём: две клетки и одна",
+    "en": "Knighting: two cells and one"
+  },
+  {
+    "ru": "Из позиции переместитесь на две клетки по горизонтали и одну по вертикали либо наоборот. Между началом и концом есть изгиб, как у шахматного коня. Промежуточные карты в сам ход не входят. Вне поля карт нет, «оборачивания» через край тоже нет. Labyrinthos отдельно описывает эту технику как дополнение к Гранд Табло.",
+    "en": "Move two cells horizontally and one vertically, or the reverse, in an L shape like a chess knight. Intermediate cards are not part of the move. There are no cards outside the board and no wrapping around its edges. Labyrinthos describes this as an additional Grand Tableau technique."
+  },
+  {
+    "ru": "Для позиции 14 в прямоугольнике 8 × 4 доступны позиции",
+    "en": "From position 14 in the 8 × 4 rectangle, the available positions are"
+  },
+  {
+    "ru": ". Геометрия даёт шесть карт вместо максимально возможных восьми, потому что часть ходов выходит за край. В учебном поле нажмите «Ход конём», чтобы увидеть это.",
+    "en": ". There are six rather than the maximum eight because some moves leave the board. Select Knighting in the trainer to see this."
+  },
+  {
+    "ru": "Выберите конкретный вопрос: «Какая дополнительная тема поможет понять затруднение?». Прочитайте выбранную карту с одной из карт хода, затем сверьте с основной историей. Нельзя объявлять каждую из шести карт самостоятельной причиной или скрытым врагом.",
+    "en": "Choose a specific question, such as which additional topic might clarify the difficulty. Read the selected card with one of its knight-move cards, then compare with the main story. Do not make each of the six an independent cause or hidden enemy."
+  },
+  {
+    "ru": "Цепочка домов: два встречных алгоритма",
+    "en": "House chains: two opposite algorithms"
+  },
+  {
+    "ru": "В литературе и практике встречаются разные направления переходов. Даже слово «цепочка» бывает названием просто линии карт между двумя персонажами; форумное обсуждение показывает эту терминологическую неоднозначность. Анонс курса Мэри К. Грир отдельно включает chaining как продвинутую технику. Полный платный курс для этого справочника не использовался.",
+    "en": "Literature and practice use different directions of movement. Even chaining can mean a simple line between two people; the forum discussion illustrates this ambiguity. Mary K. Greer’s course announcement separately includes chaining as an advanced technique. The full paid course was not used for this guide."
+  },
+  {
+    "ru": "Чтобы исключить неоднозначность, тренажёр использует явно определённый алгоритм",
+    "en": "To avoid ambiguity, the trainer uses the explicit algorithm"
+  },
+  {
+    "ru": "«карта → её текущий дом → карта с номером этого дома»",
+    "en": "card → its current house → the card numbered after that house"
+  },
+  {
+    "ru": ". Это учебная операционализация направления, а не утверждение, что все школы ходят именно так.",
+    "en": ". This defines the direction for teaching; it does not claim every school follows it."
+  },
+  {
+    "ru": "Выберите стартовую карту, например Мужчину, 28.",
+    "en": "Choose a starting card, for example the Man, 28."
+  },
+  {
+    "ru": "Найдите, в каком доме она лежит. В примере это 14, дом Лисы.",
+    "en": "Find its current house. In the example, this is 14, the Fox’s house."
+  },
+  {
+    "ru": "Найдите теперь саму Лису, карту 14. Она лежит в доме 27, Письма.",
+    "en": "Now find the Fox, card 14. It is in house 27, the Letter’s."
+  },
+  {
+    "ru": "Найдите Письмо, карту 27. Оно лежит в доме 18, Собаки.",
+    "en": "Find the Letter, card 27. It is in house 18, the Dog’s."
+  },
+  {
+    "ru": "Найдите Собаку, карту 18. Она лежит в доме 28, Мужчины.",
+    "en": "Find the Dog, card 18. It is in house 28, the Man’s."
+  },
+  {
+    "ru": "Вы вернулись к стартовому номеру. Цикл замкнулся; остановитесь.",
+    "en": "You have returned to the starting number. The cycle is closed; stop."
+  },
+  {
+    "ru": "Запись:",
+    "en": "Record:"
+  },
+  {
+    "ru": "Мужчина → Лиса → Письмо → Собака → Мужчина. Чтение в вопросе о проекте: человек действует осторожно и учитывает интересы, это выводит на переписку и роль знакомого. Проверьте договорённости и реальную помощь. Здесь нельзя утверждать, что «друг лжёт»: осторожность и коммуникация дают более простую версию.",
+    "en": "Man → Fox → Letter → Dog → Man. For a project question: the person acts cautiously and considers interests, leading to correspondence and an acquaintance’s role. Check agreements and actual help. Do not conclude that a friend is lying: caution and communication offer a simpler reading."
+  },
+  {
+    "ru": "Обратный вариант:",
+    "en": "The reverse method:"
+  },
+  {
+    "ru": "начните с дома 28 и посмотрите, какая карта в нём лежит; это Собака. Затем смотрите дом 18, в котором Письмо; затем дом 27, в котором Лиса; затем дом 14, в котором Мужчина. Получается обратный обход того же цикла: 28 → 18 → 27 → 14 → 28. Состав группы совпадает, порядок рассказа — другой.",
+    "en": "start at house 28 and look at its card, the Dog. Then house 18 contains the Letter, house 27 the Fox and house 14 the Man. This follows the same cycle backwards: 28 → 18 → 27 → 14 → 28. The group is identical; the story’s order differs."
+  },
+  {
+    "ru": "При колоде без дублей оба перехода задают перестановку из 36 элементов. Поэтому полная цепочка неизбежно замыкается и не может бесконечно продолжаться. Длинная цепочка не делает её толкование точнее. Для рассказа можно ограничиться несколькими звеньями, но отметьте, что остановились раньше замыкания. Тренажёр показывает полный цикл, максимум 36 уникальных элементов.",
+    "en": "With no duplicates, both directions define a permutation of 36 elements. A complete chain must therefore close; it cannot continue indefinitely. A longer chain does not make an interpretation more accurate. You may tell a story using only a few links, but record that you stopped before closure. The trainer shows the complete cycle, up to 36 unique elements."
+  },
+  {
+    "ru": "Чего цепочка не делает:",
+    "en": "What a chain cannot do:"
+  },
+  {
+    "ru": "не устанавливает паспортную личность друга, не доказывает виновность, не измеряет вероятность исхода. Она связывает выбранные темы внутри символической системы. Читайте её в контексте стартовой карты, иначе она превратится в произвольную историю обо всём.",
+    "en": "identify a friend by their legal identity, prove guilt or measure the likelihood of an outcome. It links chosen topics within a symbolic system. Keep the starting card’s context in view, or the chain becomes an arbitrary story about everything."
+  },
+  {
+    "ru": "Названия «французская», «немецкая», «русская» школа часто используются слишком широко. Надёжнее назвать конкретного автора, колоду и правило. Ниже — практические развилки, которые действительно меняют чтение.",
+    "en": "Labels such as French, German and Russian school are often used too broadly. Naming a specific author, deck and rule is more reliable. The distinctions below genuinely change how a reading is approached."
+  },
+  {
+    "ru": "Вопрос",
+    "en": "Question"
+  },
+  {
+    "ru": "Встречающиеся подходы",
+    "en": "Approaches in use"
+  },
+  {
+    "ru": "Выбор в этом курсе",
+    "en": "Choice in this course"
+  },
+  {
+    "ru": "Дома",
+    "en": "Houses"
+  },
+  {
+    "ru": "Тема одноимённой карты; специальные таблицы домов.",
+    "en": "The topic of the corresponding card; specialised house tables."
+  },
+  {
+    "ru": "Тема карты с тем же номером. Другие таблицы изучаются отдельно.",
+    "en": "The topic of the card with the same number. Other tables are studied separately."
+  },
+  {
+    "ru": "Время",
+    "en": "Time"
+  },
+  {
+    "ru": "Слева направо; относительно взгляда; календарные позиции.",
+    "en": "Left to right; relative to facing direction; calendar positions."
+  },
+  {
+    "ru": "Слева направо только при заранее заданном временном режиме.",
+    "en": "Left to right only when a time-based reading was chosen beforehand."
+  },
+  {
+    "ru": "Верх и низ",
+    "en": "Above and below"
+  },
+  {
+    "ru": "Мысли/основа; внешнее/подконтрольное; без специальных ролей.",
+    "en": "Thoughts/foundations; external/under control; no special roles."
+  },
+  {
+    "ru": "Связанные условия; психологические роли не назначаются автоматически.",
+    "en": "Related conditions; psychological roles are not assigned automatically."
+  },
+  {
+    "ru": "Нижние четыре",
+    "en": "The bottom four"
+  },
+  {
+    "ru": "Общий вывод; дальнейшее развитие; «судьба»; особый срок.",
+    "en": "Overall conclusion; later developments; fate; a special time frame."
+  },
+  {
+    "ru": "Завершающий комментарий в пределах исходного периода.",
+    "en": "Closing commentary within the original time frame."
+  },
+  {
+    "ru": "Хитрость и выгода; осторожность; работа в части методов.",
+    "en": "Cunning and self-interest; caution; work in some methods."
+  },
+  {
+    "ru": "Осторожность и интересы; рабочее значение только с оговоркой.",
+    "en": "Caution and interests; a work meaning only when explicitly stated."
+  },
+  {
+    "ru": "Признание и репутация; чувства и впечатления.",
+    "en": "Recognition and reputation; feelings and impressions."
+  },
+  {
+    "ru": "Выбор значения по вопросу; не автоматический обман.",
+    "en": "Choose according to the question; not automatic deception."
+  },
+  {
+    "ru": "Покой, зрелость; добродетель; чувственность.",
+    "en": "Peace, maturity; virtue; sensuality."
+  },
+  {
+    "ru": "Базово зрелость и покой, другие смыслы — по теме и школе.",
+    "en": "Maturity and peace as the baseline; other meanings depend on topic and school."
+  },
+  {
+    "ru": "Направление рисунка",
+    "en": "Direction in the artwork"
+  },
+  {
+    "ru": "Взгляд персонажа, лезвие Косы, светлая сторона Туч, открытая сторона Книги.",
+    "en": "A figure’s gaze, the Scythe’s blade, the Clouds’ light side, the Book’s open side."
+  },
+  {
+    "ru": "Только при наличии такого рисунка и заранее выбранного правила.",
+    "en": "Only when the artwork supports it and a rule was chosen beforehand."
+  },
+  {
+    "ru": "Игральные вставки",
+    "en": "Playing-card insets"
+  },
+  {
+    "ru": "Самостоятельный дополнительный слой.",
+    "en": "A separate additional layer."
+  },
+  {
+    "ru": "Не используются в базовом курсе.",
+    "en": "Not used in the basic course."
+  },
+  {
+    "ru": "Перевороты",
+    "en": "Reversals"
+  },
+  {
+    "ru": "Обычно без отдельного значения; есть авторские варианты.",
+    "en": "Usually no separate meaning; some author-specific systems exist."
+  },
+  {
+    "ru": "Только прямые карты.",
+    "en": "Upright cards only."
+  },
+  {
+    "ru": "Сравнение основано на открытых материалах Anna K, Labyrinthos, Camelia Elias и Мэри К. Грир; это не формальная классификация национальных школ. Для направлений и домов особенно полезно сопоставлять описание метода и конкретную иллюстрацию, потому что даже популярные статьи содержат опечатки.",
+    "en": "This comparison draws on publicly accessible material by Anna K, Labyrinthos, Camelia Elias and Mary K. Greer; it is not a formal classification of national schools. For directions and houses, compare the written method with the illustration: even popular articles contain errors."
+  },
+  {
+    "ru": "«Теневая карта» и дно колоды",
+    "en": "The shadow card and the bottom of the deck"
+  },
+  {
+    "ru": "Термин «тень» не имеет единственного определения: им могут называть дно колоды, расчётную карту, скрытый мотив или дополнительную позицию. В полном Гранд Табло вся колода уже выложена; отдельной неиспользованной карты на дне нет. Последняя карта — позиция 36, и нельзя незаметно посчитать её ещё одним независимым свидетельством.",
+    "en": "Shadow has no single definition: it may mean the bottom card, a calculated card, hidden motive or extra position. In a full Grand Tableau, the entire deck is already laid out; no unused bottom card remains. The last card is position 36 and must not quietly be counted again as independent evidence."
+  },
+  {
+    "ru": "Если складываете номера и приводите сумму к диапазону 1–36, это дополнительная нумерологическая процедура. Её способ вычисления и смысл нужно указать заранее; в этом справочнике такие карты не рассчитываются, чтобы не смешивать пространственный расклад с другой системой.",
+    "en": "Adding card numbers and reducing the sum to 1–36 is an additional numerological procedure. State its calculation and meaning in advance. This guide does not calculate these cards, keeping the spatial spread separate from another system."
+  },
+  {
+    "ru": "Уточняющие карты",
+    "en": "Clarifying cards"
+  },
+  {
+    "ru": "В малой схеме можно заранее задать уточнение «какой аспект этой карты имеется в виду?». Сначала зафиксируйте исходное чтение. Не добирайте карты без конкретного вопроса и не вытягивайте их, пока неприятная карта не станет приятной. Формат «что означает / чего не означает» является отдельной позиционной договорённостью, а не свойством колоды.",
+    "en": "In a small spread, you can agree beforehand to clarify which aspect of a card is meant. First record the original reading. Do not draw extras without a specific question or keep drawing until an unpleasant card becomes pleasant. A means/does-not-mean pair of positions is a separate convention, not an inherent property of the deck."
+  },
+  {
+    "ru": "В Гранд Табло дополнительных карт из той же колоды уже нет. Для уточнения сначала используйте дом, окружение и одну подходящую связь. Второй расклад — новая процедура, её нужно отделить от первого, а не тайно подменять им исходный ответ.",
+    "en": "In a Grand Tableau there are no extra cards left in the same deck. First use the house, neighbours and one relevant connection. A second spread is a new procedure: distinguish it from the first instead of quietly replacing the original answer."
+  },
+  {
+    "ru": "Перед раздачей выберите тематическую карту. Если значений несколько, запишите решение. Затем используйте один и тот же маршрут: карта темы → дом под ней → ближайшие соседи → содержание тематического дома → связь с сигнификатором. Геометрические связи выбираются по вопросу, не все сразу.",
+    "en": "Choose a topic card before dealing. If its meanings vary, record your choice. Use the same route: topic card → house beneath it → nearest neighbours → card in its own house → connection with the significator. Choose geometric links according to the question, not all at once."
+  },
+  {
+    "ru": "Проект, работа и учёба",
+    "en": "Projects, work and study"
+  },
+  {
+    "ru": "Для устойчивой занятости подходит Якорь; для обучения — Книга; для публичного продвижения — Сад. Лиса как работа допустима в тех подходах, где это установлено заранее. Не назначайте одновременно пять «главных карт проекта», чтобы любая комбинация подошла.",
+    "en": "The Anchor suits stable employment, the Book learning and the Garden public promotion. The Fox can mean work where this was established beforehand. Do not appoint five main project cards so that any combination will fit."
+  },
+  {
+    "ru": "Учебная связка: Книга — Письмо — Сад.",
+    "en": "Practice combination: Book — Letter — Garden."
+  },
+  {
+    "ru": "Материал становится текстом и выходит к аудитории. Для справочника или портфолио это понятная тема подготовки и публикации. При Горе рядом с Письмом уточните узкое место: недостаток информации, оформление или задержка обратной связи?",
+    "en": "Material becomes text and reaches an audience. For a guide or portfolio, this is a clear theme of preparation and publication. If the Mountain is beside the Letter, clarify the bottleneck: missing information, presentation or delayed feedback?"
+  },
+  {
+    "ru": "Деньги и ресурсы",
+    "en": "Money and resources"
+  },
+  {
+    "ru": "Рыбы обозначают денежный поток; Медведь может уточнять крупный ресурс или управление; Кольцо — обязательства и регулярность. Мыши рядом с Рыбами в учебном чтении ставят вопрос об утечках, мелких платежах и расходовании ресурсов. Сама комбинация не устанавливает ни воровства, ни размер убытка.",
+    "en": "The Fish represent cash flow; the Bear may clarify major resources or management, and the Ring obligations and regularity. Mice beside Fish raise questions about leaks, small payments and resource use in a teaching reading. The combination establishes neither theft nor an amount lost."
+  },
+  {
+    "ru": "Полезная форма вывода: «Символическая тема — рассеивание средств; проверка — посмотреть реальные регулярные списания». Нельзя переводить число благоприятных карт в процент вероятности прибыли или давать финансовое решение только по раскладу.",
+    "en": "A useful conclusion is: the symbolic theme is scattered spending; the real-world check is to review recurring charges. Do not turn favourable cards into a percentage chance of profit or make financial decisions solely from a spread. This material is not financial or investment advice."
+  },
+  {
+    "ru": "Отношения и общение",
+    "en": "Relationships and communication"
+  },
+  {
+    "ru": "Сердце — вовлечённость, Кольцо — форма союза или договорённости, Собака — дружеская поддержка. Разделяйте чувства, статус связи и поведение: это не одно и то же. Дистанция между персонажами на поле — символическая деталь, не измерение любви.",
+    "en": "The Heart is involvement, the Ring the form of a union or agreement, and the Dog friendly support. Distinguish feelings, relationship status and behaviour: they are different. Distance between people on the board is a symbolic detail, not a measurement of love."
+  },
+  {
+    "ru": "Если между персонажами по одной строке лежат Письмо и Гора, можно обсудить затруднение переписки. Если прямой строки нет, не соединяйте персонажей случайной извилистой дорожкой. Выберите заранее понятный способ: окружение, зеркала или дома.",
+    "en": "If the Letter and Mountain lie between two people in one row, you might consider difficulty in correspondence. If there is no straight row, do not connect them through a random winding path. Choose a clear method beforehand: surroundings, mirrors or houses."
+  },
+  {
+    "ru": "Дом и семейные дела",
+    "en": "Home and family matters"
+  },
+  {
+    "ru": "Дом — жилище и уклад; Аисты могут показывать перестройку привычного, Башня — учреждение, Письмо — документы. В связке Дом — Аисты — Письмо можно увидеть изменение бытовых условий, которое требует оформления. «Переезд уже гарантирован» — более сильное утверждение, которого такая интерпретация не обосновывает.",
+    "en": "The House is home and routine, the Stork a change to the familiar, the Tower an institution and the Letter documents. House — Stork — Letter can suggest a domestic change needing paperwork. Claiming that a move is guaranteed goes beyond what that interpretation supports."
+  },
+  {
+    "ru": "Поездка",
+    "en": "Travel"
+  },
+  {
+    "ru": "Корабль удобно выбрать темой дальнего перемещения. Гора рядом — образ задержки, Развилка — альтернативного маршрута, Письмо — сообщения о планах. Реальные билеты, ограничения и безопасность маршрута проверяются по актуальной информации; расклад их не устанавливает.",
+    "en": "The Ship is a convenient topic card for long-distance travel. A nearby Mountain suggests delay, Crossroads an alternative route and Letter a message about plans. Actual tickets, restrictions and route safety must be checked through current information; a spread cannot establish them."
+  },
+  {
+    "ru": "Друг рядом с сигнификатором",
+    "en": "A friend beside the significator"
+  },
+  {
+    "ru": "Не начинайте с угадывания имени. Прочитайте Собаку как функцию поддержки: что с ней соседствует, в каком доме она лежит, что находится в доме 18? Затем сформулируйте роль — «помогает с перепиской», «связан с работой», «участвует в выборе». Несколько знакомых могут подходить к этому описанию. Карты не позволяют надёжно идентифицировать человека.",
+    "en": "Do not start by guessing a name. Read the Dog as a supportive role: its neighbours, current house and the card in house 18. Then describe the role, such as helping with correspondence, being connected with work or taking part in a choice. Several acquaintances might fit. Cards cannot reliably identify a person."
+  },
+  {
+    "ru": "Выберите режим связи и нажмите карту. Крупный номер относится к карте, подпись «Дом» — к позиции. Это инструмент изучения схемы: он вычисляет связи, но не выдаёт автоматический прогноз.",
+    "en": "Choose a connection mode and select a card. The large number identifies the card; House labels the position. This is a tool for learning the layout: it calculates connections, not automatic predictions."
+  },
+  {
+    "ru": "Формат",
+    "en": "Format"
+  },
+  {
+    "ru": "Связь",
+    "en": "Connection"
+  },
+  {
+    "ru": "Окружение",
+    "en": "Neighbours"
+  },
+  {
+    "ru": "Зеркала",
+    "en": "Mirrors"
+  },
+  {
+    "ru": "Ход конём",
+    "en": "Knighting"
+  },
+  {
+    "ru": "Цепочка домов",
+    "en": "House chain"
+  },
+  {
+    "ru": "Углы",
+    "en": "Corners"
+  },
+  {
+    "ru": "Центр",
+    "en": "Centre"
+  },
+  {
+    "ru": "Найти карту",
+    "en": "Find a card"
+  },
+  {
+    "ru": "Учебный пример",
+    "en": "Teaching example"
+  },
+  {
+    "ru": "Карты по порядку",
+    "en": "Cards in order"
+  },
+  {
+    "ru": "Выбранная карта — тёмная заливка; связанные позиции — цветная рамка и метка «связь». Для 8 × 4 + 4 геометрические связи рассчитываются только в основном прямоугольнике. Нижняя четвёрка читается отдельно; цепочки домов охватывают все 36 позиций.",
+    "en": "The selected card has a dark fill; connected positions have a coloured border and a linked marker. In 8 × 4 + 4, geometric connections use only the main rectangle. The bottom four form a separate line; house chains cover all 36 positions."
+  },
+  {
+    "ru": "Ввести свой расклад",
+    "en": "Enter your own spread"
+  },
+  {
+    "ru": "Введите 36 номеров карт в порядке раздачи: слева направо, ряд за рядом; в 8 × 4 + 4 нижние четыре — последними. Разделяйте пробелами, запятыми или точкой с запятой. Например, номер 1 означает Всадника, 36 — Крест. Дубликаты и пропуски не принимаются.",
+    "en": "Enter 36 card numbers in dealing order, left to right, row by row; the bottom four come last in 8 × 4 + 4. Separate numbers with spaces, commas or semicolons. Number 1 is the Rider and 36 the Cross. Duplicates and omissions are rejected."
+  },
+  {
+    "ru": "Номера карт",
+    "en": "Card numbers"
+  },
+  {
+    "ru": "Применить порядок",
+    "en": "Apply order"
+  },
+  {
+    "ru": "Условная ситуация:",
+    "en": "Imagined situation:"
+  },
+  {
+    "ru": "человек развивает небольшой обучающий проект, ищет устойчивый рабочий режим и хочет понять роль общения и денежных ограничений.",
+    "en": "someone is developing a small educational project, seeking a sustainable work routine and considering the role of communication and financial constraints."
+  },
+  {
+    "ru": "Период:",
+    "en": "Time frame:"
+  },
+  {
+    "ru": "ближайший месяц.",
+    "en": "the coming month."
+  },
+  {
+    "ru": "Сигнификатор:",
+    "en": "Significator:"
+  },
+  {
+    "ru": "Мужчина, 28.",
+    "en": "the Man, 28."
+  },
+  {
+    "ru": "Тема проекта:",
+    "en": "Project topic:"
+  },
+  {
+    "ru": "Якорь, 35; деньги — Рыбы, 34; поддержка — Собака, 18.",
+    "en": "the Anchor, 35; money — Fish, 34; support — Dog, 18."
+  },
+  {
+    "ru": "Это специально сконструированный учебный набор с короткими цепочками и наглядным окружением. Значительная часть карт стоит в собственных домах, чтобы было легче проверить номера. Он не изображает чьё-либо реальное будущее и не является случайной раздачей.",
+    "en": "This teaching arrangement was constructed to give short chains and clear surroundings. Many cards occupy their own houses so the numbers are easy to check. It depicts no real person’s future and is not a random deal."
+  },
+  {
+    "ru": "Показать на поле",
+    "en": "Show on the board"
+  },
+  {
+    "ru": "Ряд / позиции",
+    "en": "Row / positions"
+  },
+  {
+    "ru": "Карты в порядке слева направо",
+    "en": "Cards from left to right"
+  },
+  {
+    "ru": "13 Ребёнок · 2 Клевер · 3 Корабль · 4 Дом · 5 Дерево · 26 Книга · 7 Змея · 8 Гроб",
+    "en": "13 Child · 2 Clover · 3 Ship · 4 House · 5 Tree · 26 Book · 7 Snake · 8 Coffin"
+  },
+  {
+    "ru": "9 Букет · 10 Коса · 11 Метла / Плеть · 20 Сад · 1 Всадник · 28 Мужчина · 35 Якорь · 16 Звёзды",
+    "en": "9 Bouquet · 10 Scythe · 11 Whip / Broom · 20 Garden · 1 Rider · 28 Man · 35 Anchor · 16 Stars"
+  },
+  {
+    "ru": "17 Аисты · 27 Письмо · 19 Башня · 12 Птицы / Совы · 33 Ключ · 34 Рыбы · 23 Мыши / Крысы · 24 Сердце",
+    "en": "17 Stork · 27 Letter · 19 Tower · 12 Birds / Owls · 33 Key · 34 Fish · 23 Mice / Rats · 24 Heart"
+  },
+  {
+    "ru": "25 Кольцо · 6 Тучи · 14 Лиса · 18 Собака · 29 Женщина · 30 Лилии · 31 Солнце · 32 Луна",
+    "en": "25 Ring · 6 Clouds · 14 Fox · 18 Dog · 29 Woman · 30 Lilies · 31 Sun · 32 Moon"
+  },
+  {
+    "ru": "21 Гора · 22 Развилка · 15 Медведь · 36 Крест",
+    "en": "21 Mountain · 22 Crossroads · 15 Bear · 36 Cross"
+  },
+  {
+    "ru": "1. Сначала общая история",
+    "en": "1. Start with the overall story"
+  },
+  {
+    "ru": "Предварительный сюжет: новый замысел требует обучения, контактов и осторожного согласования; человеку важно закрепить работу, при этом деньги связаны с выбором, а поддержка — с перепиской. Главный вопрос не «получится ли всё вообще?», а «какие условия помогут сделать деятельность устойчивой?». Далее проверим, на каких картах стоит каждое утверждение.",
+    "en": "Initial story: a new idea calls for learning, contacts and careful agreement; the person wants to establish their work, while money is linked to choice and support to correspondence. The key question is which conditions could make the activity sustainable, rather than whether absolutely everything will work out. Next, check which cards support each statement."
+  },
+  {
+    "ru": "2. Углы и центр",
+    "en": "2. Corners and centre"
+  },
+  {
+    "ru": "Углы 1, 8, 25, 32: Ребёнок — Гроб — Кольцо — Луна. Пара Ребёнок + Гроб допускает остановку нового или завершение начального этапа; Кольцо + Луна — связь обязательств с впечатлением и признанием. Рамка неоднозначна: нельзя сразу объявить проект закрытым. Сохраняем вопрос о том, что должно завершиться или оформиться.",
+    "en": "Corners 1, 8, 25 and 32: Child — Coffin — Ring — Moon. Child + Coffin may suggest a new venture stopping or an initial phase ending; Ring + Moon connects obligations with impressions and recognition. The frame is ambiguous: do not immediately declare the project closed. Keep the question of what needs to end or take shape."
+  },
+  {
+    "ru": "Центр 12,13,20,21: Сад — Всадник — Птицы — Ключ. Верхняя пара связывает контакты с новостями; нижняя — разговор с прояснением. Это ресурс взаимодействия: общий мотив говорит, что уточнение через общение может быть полезнее изолированных догадок. Это ещё не обещание внешней помощи.",
+    "en": "Centre 12, 13, 20 and 21: Garden — Rider — Birds — Key. The upper pair connects contacts with news, the lower conversation with clarification. This offers a theme of interaction: clarifying things through communication may be more useful than guessing alone. It does not yet promise outside help."
+  },
+  {
+    "ru": "3. Человек и ближайшие восемь",
+    "en": "3. The person and the nearest eight"
+  },
+  {
+    "ru": "Мужчина в позиции 14, доме Лисы: для ситуации актуальны осторожность, тактика и собственные интересы. Вокруг по строкам: Дерево — Книга — Змея / Всадник — Мужчина — Якорь / Ключ — Рыбы — Мыши.",
+    "en": "The Man occupies position 14, the Fox’s house: caution, tactics and personal interests are relevant. Around him, row by row: Tree — Book — Snake / Rider — Man — Anchor / Key — Fish — Mice."
+  },
+  {
+    "ru": "Книга сверху добавляет тему недостающего знания; Змея — усложнений, Дерево — постепенности. Всадник и Якорь по бокам соединяют движение и потребность закрепиться. Нижняя тройка связывает решение с денежным потоком и его расходованием. Общая формулировка: «Нужно разбираться в деталях и выстраивать устойчивую работу, учитывая ограниченность ресурсов».",
+    "en": "The Book above adds missing knowledge, the Snake complications and the Tree gradual development. Rider and Anchor at the sides connect movement with the need to become established. The lower trio connects a solution with money and its use. A broad reading: understand the details and build steady work while accounting for limited resources."
+  },
+  {
+    "ru": "Не делаем скачок «Змея — конкретная женщина-враг». Здесь есть более простой смысл сложной задачи. Не превращаем Мышей в доказательство кражи: в вопросе о небольшом проекте расход времени или денег — естественная альтернатива.",
+    "en": "Do not jump to a particular female enemy for the Snake; a complicated task is a simpler reading. Nor do the Mice prove theft: spending time or money is a natural alternative in a small-project question."
+  },
+  {
+    "ru": "4. Строка и столбец человека",
+    "en": "4. The person’s row and column"
+  },
+  {
+    "ru": "Строка 9–16: Букет — Коса — Метла — Сад — Всадник — Мужчина — Якорь — Звёзды. Если заранее использовать временное чтение, слева можно увидеть привлекательное начало, отсечение и обсуждение перед контактом; справа — стремление закрепиться и обрести ориентир. Это не восемь обязательных событий. Важнее центральная тройка: новость или движение соотносятся с человеком и его работой.",
+    "en": "Row 9–16: Bouquet — Scythe — Whip — Garden — Rider — Man — Anchor — Stars. With a time convention chosen beforehand, the left may suggest an attractive beginning, a cut and discussion before contact; the right, a wish to become established and find direction. These are not eight compulsory events. The central trio matters more: news or movement relates to the person and their work."
+  },
+  {
+    "ru": "Столбец 6,14,22,30: Книга — Мужчина — Рыбы — Лилии. Учёба, человек, ресурсы и спокойный зрелый порядок соединены вертикальной линией. Вывод для вопроса: полезно перевести новые знания в понятный режим распоряжения ресурсами. Не приписываем верхней карте реальное содержание мыслей человека.",
+    "en": "Column 6, 14, 22 and 30: Book — Man — Fish — Lilies. Learning, the person, resources and a calm mature order connect vertically. For this question, turning new knowledge into a clear way of managing resources may be useful. Do not claim the upper card reveals the person’s actual thoughts."
+  },
+  {
+    "ru": "5. Проект через Якорь",
+    "en": "5. The project through the Anchor"
+  },
+  {
+    "ru": "Якорь находится в позиции 15, доме Медведя: устойчивость проекта связана с ресурсом, влиянием или управлением. В доме Якоря, позиции 35, лежит Медведь: получился взаимный обмен. Он поддерживает тему управления, но математически это одна и та же пара, а не два независимых признака.",
+    "en": "The Anchor is at position 15, the Bear’s house: project stability connects with resources, influence or management. The Anchor’s house, position 35, holds the Bear, creating a reciprocal exchange. This supports a management theme but is mathematically one pair, not two independent signs."
+  },
+  {
+    "ru": "Непосредственно слева Мужчина, справа Звёзды; внизу по соседству Рыбы, Мыши и Сердце. Рабочая устойчивость связана с личным участием, направлением и интересом, но требует учитывать расход ресурсов. Возможное действие вне расклада — задать небольшой регулярный объём работы и проверить, сколько времени он фактически занимает.",
+    "en": "The Man is immediately left and the Stars right; nearby below are Fish, Mice and Heart. Stable work connects with personal involvement, direction and interest, while calling for attention to resource use. A practical step is to set a small regular workload and measure how much time it actually takes."
+  },
+  {
+    "ru": "6. Деньги через Рыб",
+    "en": "6. Money through the Fish"
+  },
+  {
+    "ru": "Рыбы стоят в доме Развилки (22), Развилка — в доме Рыб (34). В этой учебной системе денежная тема упирается в распределение между вариантами. Слева Ключ, справа Мыши: поиск решения соприкасается с потерями. Сверху Мужчина, снизу Лилии: вопрос входит в личную ситуацию и требует спокойного порядка.",
+    "en": "The Fish occupy the Crossroads’ house, 22, and the Crossroads occupy the Fish’s, 34. In this teaching system, money turns on allocating resources between options. The Key left and Mice right bring a search for solutions alongside losses. The Man above and Lilies below place the question in a personal situation calling for calm order."
+  },
+  {
+    "ru": "Символический вывод: важен осознанный выбор расходов и способов использования ресурсов. Фактические вопросы для проверки: какие расходы регулярны, какие необязательны, что можно сравнить до покупки? Карты не сообщают остаток на счёте и не гарантируют доход.",
+    "en": "Symbolic conclusion: choose expenses and uses of resources deliberately. Real-world checks include which costs recur, which are optional and what can be compared before buying. Cards reveal neither a bank balance nor guaranteed income."
+  },
+  {
+    "ru": "7. Роль знакомого",
+    "en": "7. An acquaintance’s role"
+  },
+  {
+    "ru": "Собака находится в позиции 28, доме Мужчины; в доме Собаки (18) лежит Письмо. Поддержка связана с человеком и перепиской. Цепочка от Мужчины: 28 → 14 → 27 → 18 → 28. Связная версия — осторожно согласованные сообщения и участие знакомого возвращаются к личной задаче.",
+    "en": "The Dog is at position 28, the Man’s house; the Dog’s house, 18, contains the Letter. Support connects with the person and correspondence. The Man’s chain is 28 → 14 → 27 → 18 → 28. A coherent interpretation brings carefully agreed messages and an acquaintance’s involvement back to the personal task."
+  },
+  {
+    "ru": "Какая роль может подойти? Дать обратную связь, уточнить договорённость, помочь с контактом. Кто это по имени — из расклада не следует. Собака в доме человека не гарантирует бескорыстия каждого знакомого; Лиса в цепочке не доказывает предательство.",
+    "en": "Possible roles include feedback, clarifying an agreement or helping make contact. The spread does not provide a name. The Dog in a person’s house does not guarantee every acquaintance is selfless; the Fox in a chain does not prove betrayal."
+  },
+  {
+    "ru": "8. Одно дополнительное уточнение",
+    "en": "8. One additional clarification"
+  },
+  {
+    "ru": "Выберем зеркала Мужчины в позиции 14. Горизонтальное ведёт в 11 — Метла; вертикальное в 22 — Рыбы; двойное в 19 — Башня. Эти связи позволяют поставить вопросы об обсуждении, ресурсах и организационных границах. Не будем добавлять все ходы конём: для исходного вопроса уже есть достаточно связный материал.",
+    "en": "Choose the Man’s mirrors from position 14: horizontally 11, the Whip; vertically 22, the Fish; doubly 19, the Tower. These raise questions about discussion, resources and organisational boundaries. We will not add every knight move: the original question already has enough connected material."
+  },
+  {
+    "ru": "9. Нижние четыре",
+    "en": "9. The bottom four"
+  },
+  {
+    "ru": "Позиции 33–36: Гора — Развилка — Медведь — Крест. Завершающий комментарий: препятствие ставит перед выбором, который связан с управлением ресурсом и нагрузкой. Это удерживает нас от слишком радужного вывода по Ключу и Звёздам. Но не отменяет возможность полезного общения, показанную центром.",
+    "en": "Positions 33–36: Mountain — Crossroads — Bear — Cross. Closing comment: an obstacle calls for a choice involving resource management and workload. This tempers an overly sunny reading of the Key and Stars without cancelling the useful communication suggested by the centre."
+  },
+  {
+    "ru": "10. Итог без словарной россыпи",
+    "en": "10. A connected conclusion"
+  },
+  {
+    "ru": "Связный ответ:",
+    "en": "Coherent answer:"
+  },
+  {
+    "ru": "«Условный месяц выглядит как этап настройки проекта. Движение поддерживают обучение, сообщения и обсуждение с людьми; устойчивость зависит от управления ресурсами. Основная трудность — выбор под нагрузкой и расходование небольших запасов времени или денег. Поддержка знакомого может быть связана с перепиской и прояснением условий. Следующий разумный шаг — ограничить объём задач и согласовать конкретную помощь».",
+    "en": "This imagined month looks like a period of adjusting the project. Learning, messages and discussion support movement; stability depends on managing resources. The main difficulty is choosing under pressure while spending limited time or money. An acquaintance’s support may involve correspondence and clarifying terms. A sensible next step is to limit the workload and agree on specific help."
+  },
+  {
+    "ru": "Оставшаяся неопределённость:",
+    "en": "Remaining uncertainty:"
+  },
+  {
+    "ru": "остановится ли проект или завершится только его начальная стадия? Углы допускают обе версии. Не нужно искусственно снимать это противоречие. Дальнейшие реальные действия и наблюдения дадут больше информации, чем ещё одна произвольная комбинация.",
+    "en": "will the project stop, or will only its initial stage end? The corners allow both readings. There is no need to force away this contradiction. Real actions and observations will provide more information than another arbitrary combination."
+  },
+  {
+    "ru": "План освоения",
+    "en": "A learning path"
+  },
+  {
+    "ru": "Первые занятия:",
+    "en": "First sessions:"
+  },
+  {
+    "ru": "по две карты, один бытовой вопрос, одно предложение. Проверяйте, не добавляете ли детали, которых нет в значениях.",
+    "en": "two cards, one everyday question, one sentence. Check whether you are adding details absent from the meanings."
+  },
+  {
+    "ru": "Следующий этап:",
+    "en": "Next stage:"
+  },
+  {
+    "ru": "три карты. Записывайте соседние пары и общий рассказ. Пробуйте два разных вопроса к одной учебной связке, чтобы увидеть роль контекста.",
+    "en": "three cards. Record adjacent pairs and the overall story. Try two questions for the same practice combination to see how context matters."
+  },
+  {
+    "ru": "Затем:",
+    "en": "Then:"
+  },
+  {
+    "ru": "линия из пяти и квадрат 3 × 3. Добавляйте зеркала только после основного чтения.",
+    "en": "a five-card line and a 3 × 3 square. Add mirrors only after the main reading."
+  },
+  {
+    "ru": "Первое Гранд Табло:",
+    "en": "First Grand Tableau:"
+  },
+  {
+    "ru": "человек, окружение и две темы. Не используйте сразу все продвинутые методы.",
+    "en": "the person, surroundings and two topics. Do not use every advanced method at once."
+  },
+  {
+    "ru": "После уверенного чтения:",
+    "en": "Once comfortable:"
+  },
+  {
+    "ru": "добавляйте дома, затем по одной геометрической технике. Оценивайте, стало ли объяснение яснее, а не длиннее.",
+    "en": "add houses, then one geometric technique at a time. Ask whether the explanation became clearer, not longer."
+  },
+  {
+    "ru": "Проверьте понимание",
+    "en": "Check your understanding"
+  },
+  {
+    "ru": "В позиции 14 лежит карта 28. Где дом Мужчины?",
+    "en": "Card 28 is at position 14. Where is the Man’s house?"
+  },
+  {
+    "ru": "Дом Мужчины — позиция 28. Карта Мужчина сейчас находится в доме 14, Лисы. Карта и дом — разные слои.",
+    "en": "The Man’s house is position 28. The Man card currently occupies house 14, the Fox’s. Card and house are different layers."
+  },
+  {
+    "ru": "Кольцо в позиции 25: это обязательно счастливый союз?",
+    "en": "Does the Ring at position 25 necessarily mean a happy union?"
+  },
+  {
+    "ru": "Нет. Собственный дом подчёркивает тему связи или цикла, но не определяет её качество без вопроса и окружения.",
+    "en": "No. Its own house emphasises connection or a cycle, but does not determine quality without the question and surroundings."
+  },
+  {
+    "ru": "В 8 × 4 + 4 персонаж оказался в позиции 36. Будущего нет?",
+    "en": "In 8 × 4 + 4, the person is at position 36. Is there no future?"
+  },
+  {
+    "ru": "Нет. В учебной модели читайте нижнюю линию, дом персонажа, содержание его собственного дома и тематические карты. Ограничение геометрии не является фактом о жизни человека.",
+    "en": "No. In this teaching model, read the bottom line, the person’s current house, the contents of their own house and topic cards. A geometric restriction is not a fact about someone’s life."
+  },
+  {
+    "ru": "Почему два взаимных дома — не два независимых подтверждения?",
+    "en": "Why are reciprocal houses not two independent confirmations?"
+  },
+  {
+    "ru": "Потому что оба утверждения описывают одну перестановку: А в доме Б и Б в доме А. Смысловая повторяемость может быть полезной, но статистическую уверенность она не измеряет.",
+    "en": "Both describe one permutation: A in B’s house and B in A’s. Repeated meaning may be useful, but does not measure statistical confidence."
+  },
+  {
+    "ru": "Тучи в вопросе об ответе заказчика: что проверить?",
+    "en": "Clouds in a question about a client’s reply: what should you check?"
+  },
+  {
+    "ru": "Уточнить, какие условия остались непонятными и был ли получен однозначный ответ. Не начинать с обвинения во лжи.",
+    "en": "Clarify which terms remain uncertain and whether an unambiguous reply arrived. Do not begin by accusing someone of lying."
+  },
+  {
+    "ru": "Типичные ошибки",
+    "en": "Common mistakes"
+  },
+  {
+    "ru": "Ошибка",
+    "en": "Mistake"
+  },
+  {
+    "ru": "Как исправить",
+    "en": "How to correct it"
+  },
+  {
+    "ru": "Расклад как 36 отдельных пророчеств.",
+    "en": "Treating a spread as 36 separate prophecies."
+  },
+  {
+    "ru": "Сначала сформулировать общий сюжет, затем уточнять его.",
+    "en": "Form the overall story first, then refine it."
+  },
+  {
+    "ru": "Назначение роли после выпадения.",
+    "en": "Assigning a role after drawing."
+  },
+  {
+    "ru": "Записывать сигнификаторы и правила до раздачи.",
+    "en": "Record significators and rules before dealing."
+  },
+  {
+    "ru": "Любой пугающий символ читается буквально.",
+    "en": "Reading every frightening symbol literally."
+  },
+  {
+    "ru": "Начать с бытового значения, относящегося к вопросу.",
+    "en": "Start with an everyday meaning relevant to the question."
+  },
+  {
+    "ru": "Поиск приятного ответа среди десятков связей.",
+    "en": "Searching dozens of connections for a pleasant answer."
+  },
+  {
+    "ru": "Ограничить техники и сохранить неудобную часть чтения.",
+    "en": "Limit the techniques and retain the uncomfortable part of the reading."
+  },
+  {
+    "ru": "Школьное правило объявляется универсальным.",
+    "en": "Declaring a school’s rule universal."
+  },
+  {
+    "ru": "Указать автора или явно назвать свою договорённость.",
+    "en": "Name the author or explicitly state your own convention."
+  },
+  {
+    "ru": "Срок автоматически вычисляется из номера.",
+    "en": "Automatically deriving timing from a number."
+  },
+  {
+    "ru": "Задавать период вопросом; не обещать точность, которой метод не обосновывает.",
+    "en": "Set the period through the question; do not promise unsupported precision."
+  },
+  {
+    "ru": "Совпадения записываются, промахи забываются.",
+    "en": "Recording matches while forgetting misses."
+  },
+  {
+    "ru": "Хранить исходную формулировку и отмечать оба результата.",
+    "en": "Keep the original wording and record both outcomes."
+  },
+  {
+    "ru": "Дневник чтения",
+    "en": "Reading journal"
+  },
+  {
+    "ru": "Запишите дату, вопрос, срок, факты до расклада, формат, роли карт, порядок раздачи, применённые правила, исходную интерпретацию и альтернативу. После периода отдельно внесите наблюдения: что произошло, что не произошло, что вы изменили своими действиями.",
+    "en": "Record the date, question, time frame, facts known beforehand, format, card roles, deal order, rules, initial interpretation and an alternative. Afterwards, separately record what happened, what did not and what your own actions changed."
+  },
+  {
+    "ru": "Ниже можно подготовить запись и скачать её текстом. Текст не сохраняется автоматически: перед закрытием страницы используйте кнопку скачивания. В файл попадёт и текущий порядок карт интерактивного поля. Изменение поля не заменяет уже скачанную запись.",
+    "en": "Prepare a note below and download it as text. It is not saved automatically: download before closing the page. The file includes the board’s current card order. Changing the board does not update an already downloaded note."
+  },
+  {
+    "ru": "Запись",
+    "en": "Entry"
+  },
+  {
+    "ru": "Дата:",
+    "en": "Date:"
+  },
+  {
+    "ru": "Вопрос и период:",
+    "en": "Question and time frame:"
+  },
+  {
+    "ru": "Исходные факты:",
+    "en": "Known facts:"
+  },
+  {
+    "ru": "Сигнификаторы и правила:",
+    "en": "Significators and rules:"
+  },
+  {
+    "ru": "Основная интерпретация:",
+    "en": "Main interpretation:"
+  },
+  {
+    "ru": "Альтернативная версия:",
+    "en": "Alternative interpretation:"
+  },
+  {
+    "ru": "Что проверить или сделать:",
+    "en": "What to check or do:"
+  },
+  {
+    "ru": "Наблюдения после периода:",
+    "en": "Observations afterwards:"
+  },
+  {
+    "ru": "Что не совпало:",
+    "en": "What did not match:"
+  },
+  {
+    "ru": "Скачать запись .txt",
+    "en": "Download notes .txt"
+  },
+  {
+    "ru": "Как работать с «да / нет» и сроками",
+    "en": "Yes/no questions and timing"
+  },
+  {
+    "ru": "Бинарные и временные методы встречаются у практиков, но не дают статистически обоснованной вероятности. Для начинающего полезнее вопрос о ходе процесса и условиях. Вместо «80% успеха» напишите «в выбранном символическом чтении преобладает тема продвижения, при таком-то препятствии».",
+    "en": "Practitioners use binary and timing methods, but these do not provide statistically grounded probabilities. Beginners often benefit more from questions about a process and its conditions. Instead of claiming an 80% chance of success, describe the theme of progress in your chosen symbolic reading and the obstacle alongside it."
+  },
+  {
+    "ru": "Если исследуете конкретную авторскую систему сроков, проверяйте её отдельно и фиксируйте промахи. Нельзя одновременно считать число карты днями, расстояние неделями, а нижний ряд месяцами — и выбрать то, что случайно совпало.",
+    "en": "If exploring a particular author’s timing system, test it separately and record misses. Do not simultaneously count the card number as days, distance as weeks and the bottom row as months, then choose whichever happens to fit."
+  },
+  {
+    "ru": "Основу составляют авторские руководства практиков и исследователей истории колоды. Это источники о традициях трактовки, а не научные подтверждения предсказательных способностей. Современные примеры, последовательность обучения и три адаптированных расклада составлены специально для справочника.",
+    "en": "This guide draws on practitioners’ guides and research into deck history. They document interpretive traditions, not scientific evidence of predictive abilities. Contemporary examples, the learning sequence and three adapted spreads were created for this guide."
+  },
+  {
+    "ru": "Материал не является переводом одной книги. При расхождениях указаны варианты; часть правил точно определена как учебная договорённость. Ссылки ведут к использованным страницам; полный текст курса доступен офлайн, внешние страницы — при подключении к интернету.",
+    "en": "The material is not a translation of a single book. Differences are identified, and some rules are explicitly defined as teaching conventions. Links lead to the pages used; the full course text works offline, while external pages require internet access."
+  },
+  {
+    "ru": "Историческая преемственность «Игры надежды» и Малой Ленорман.",
+    "en": "Historical continuity between the Game of Hope and Petit Lenormand."
+  },
+  {
+    "ru": ". без даты.",
+    "en": ". Undated."
+  },
+  {
+    "ru": "Форматы поля, авторская адаптация домов, выбор тематических областей.",
+    "en": "Board formats, the author’s house adaptation and selecting topic areas."
+  },
+  {
+    "ru": "Вопрос как контекст и начальная практика триплета.",
+    "en": "The question as context and introductory three-card practice."
+  },
+  {
+    "ru": "Специфика системы, сочетания и отличие от Таро.",
+    "en": "The system’s character, combinations and differences from Tarot."
+  },
+  {
+    "ru": "Предмет и модификатор как учебная грамматика.",
+    "en": "Subject and modifier as teaching grammar."
+  },
+  {
+    "ru": ". без единой даты.",
+    "en": ". No single publication date."
+  },
+  {
+    "ru": "Сопоставление краткого ядра значений 36 карт.",
+    "en": "Comparison of the 36 cards’ core meanings."
+  },
+  {
+    "ru": "Пример чувственной линии значений Лилий.",
+    "en": "An example of the Lilies’ sensual meanings."
+  },
+  {
+    "ru": "Пример отдельной трактовки добродетели.",
+    "en": "An example of a separate reading through virtue."
+  },
+  {
+    "ru": "Линейное чтение, центр и сопоставление карт.",
+    "en": "Linear reading, the centre and comparing cards."
+  },
+  {
+    "ru": "Квадрат 3 × 3 как соединение коротких линий.",
+    "en": "The 3 × 3 square as a combination of short lines."
+  },
+  {
+    "ru": "Вариант временных столбцов и чтения квадрата.",
+    "en": "One approach to time columns and reading the square."
+  },
+  {
+    "ru": "Обзор методов; пример частного правила срока нижней четвёрки.",
+    "en": "Overview of methods; one publication’s timing rule for the bottom four."
+  },
+  {
+    "ru": "Дополнительные техники и подход к близости карт.",
+    "en": "Additional techniques and an approach to proximity."
+  },
+  {
+    "ru": "Открытая программа: пары, углы, дневник. Не полный курс.",
+    "en": "Public syllabus: pairs, corners and journalling. Not the full course."
+  },
+  {
+    "ru": "Дома как тематическая подложка и их сочетание с картой.",
+    "en": "Houses as a thematic underlay combined with cards."
+  },
+  {
+    "ru": "Сравнение разных слоёв соответствий. Медицинские трактовки не используются.",
+    "en": "Comparison of correspondence layers. Medical interpretations are not used."
+  },
+  {
+    "ru": "Геометрия шахматного хода и чтение пар.",
+    "en": "The geometry of a chess knight’s move and reading pairs."
+  },
+  {
+    "ru": ". 07.04.2021 и ответы.",
+    "en": ". 7 April 2021 and replies."
+  },
+  {
+    "ru": "Только свидетельство неоднозначного употребления термина; не авторитет для установления канона.",
+    "en": "Evidence only of ambiguous terminology, not an authority for establishing canon."
+  },
+  {
+    "ru": ". без надёжно установленной даты.",
+    "en": ". No reliably established date."
+  },
+  {
+    "ru": "Открытый анонс подтверждает наличие chaining в курсе; содержание платного занятия не пересказывается.",
+    "en": "The public announcement confirms chaining is included; the paid lesson’s content is not reproduced."
+  },
+  {
+    "ru": "Ограничения проверки",
+    "en": "Limits of source checking"
+  },
+  {
+    "ru": "Каталожная запись Британского музея 1896,0501.495 найдена в поиске, но её полная страница не открылась; точную датировку музейного экземпляра отсюда не выводим. Исторический абзац опирается на публикацию Мэри К. Грир [1]. Платные курсы, полные книги и закрытые материалы не исследованы. Глубина справочника относится к описанным открытым методам Малой Ленорман, а не к исчерпывающему перечню всех авторских раскладов.",
+    "en": "The original guide’s research located British Museum catalogue entry 1896,0501.495 in search, but could not open the full page; no exact date for that museum copy is inferred here. The historical paragraph relies on Mary K. Greer’s publication [1]. Paid courses, complete books and restricted materials were not examined. The guide’s depth concerns the open Petit Lenormand methods described here, not every author-created spread."
+  },
+  {
+    "ru": "В популярных публикациях встречаются неточности: например, статья [12] повторяет название левой диагонали там, где по геометрии нужна правая. В схемах этого справочника направления и номера определены напрямую по строкам и столбцам. Подписи 28 и 29 сохранены в обычной нумерации Мужчина / Женщина.",
+    "en": "Popular publications contain errors: article [12], for example, repeats the name of the left diagonal where the geometry requires the right. This guide derives directions and numbers directly from rows and columns. Labels 28 and 29 retain the usual Man/Woman numbering."
+  },
+  {
+    "ru": "весть, прибытие, движение",
+    "en": "news, arrival, movement"
+  },
+  {
+    "ru": "новости и то, что приближается",
+    "en": "news and what is approaching"
+  },
+  {
+    "ru": "Письмо: новость в переписке",
+    "en": "Letter: news in correspondence"
+  },
+  {
+    "ru": "небольшой шанс, лёгкость, короткая удача",
+    "en": "a small opportunity, ease, brief luck"
+  },
+  {
+    "ru": "доступные возможности",
+    "en": "available opportunities"
+  },
+  {
+    "ru": "Ключ: удобный шанс разобраться",
+    "en": "Key: a convenient chance to understand"
+  },
+  {
+    "ru": "поездка, дальнее, обмен, движение",
+    "en": "travel, distant places, exchange, movement"
+  },
+  {
+    "ru": "путешествия и расширение",
+    "en": "travel and expansion"
+  },
+  {
+    "ru": "Книга: обучение вдали или исследование нового",
+    "en": "Book: learning away from home or exploring something new"
+  },
+  {
+    "ru": "жилище, семья, привычный порядок",
+    "en": "home, family, familiar routines"
+  },
+  {
+    "ru": "домашняя среда и опора",
+    "en": "home environment and support"
+  },
+  {
+    "ru": "Письмо: домашние документы",
+    "en": "Letter: household documents"
+  },
+  {
+    "ru": "рост, укоренённость, длительный процесс",
+    "en": "growth, rootedness, a long process"
+  },
+  {
+    "ru": "то, что развивается постепенно",
+    "en": "what develops gradually"
+  },
+  {
+    "ru": "Книга: медленное накопление знаний",
+    "en": "Book: slowly accumulating knowledge"
+  },
+  {
+    "ru": "неясность, сомнение, путаница",
+    "en": "uncertainty, doubt, confusion"
+  },
+  {
+    "ru": "область неопределённости",
+    "en": "an area of uncertainty"
+  },
+  {
+    "ru": "Кольцо: неясные условия союза",
+    "en": "Ring: unclear terms in a partnership"
+  },
+  {
+    "ru": "усложнение, обходной путь, хитрость",
+    "en": "complication, an indirect route, cunning"
+  },
+  {
+    "ru": "сложные маршруты и противоречия",
+    "en": "complicated routes and contradictions"
+  },
+  {
+    "ru": "Письмо: запутанная переписка",
+    "en": "Letter: tangled correspondence"
+  },
+  {
+    "ru": "завершение, остановка, угасание",
+    "en": "ending, stopping, fading away"
+  },
+  {
+    "ru": "то, что завершается или не движется",
+    "en": "what is ending or no longer moving"
+  },
+  {
+    "ru": "Кольцо: прекращение обязательства",
+    "en": "Ring: an obligation ending"
+  },
+  {
+    "ru": "приятность, подарок, приглашение",
+    "en": "pleasure, gift, invitation"
+  },
+  {
+    "ru": "признательность и приятные события",
+    "en": "appreciation and pleasant events"
+  },
+  {
+    "ru": "Сад: приглашение на встречу",
+    "en": "Garden: an invitation to a gathering"
+  },
+  {
+    "ru": "резкое отделение, сокращение, решение",
+    "en": "sudden separation, reduction, decision"
+  },
+  {
+    "ru": "то, что требует отсечения",
+    "en": "what needs cutting away"
+  },
+  {
+    "ru": "Письмо: короткий резкий ответ",
+    "en": "Letter: a brief, sharp reply"
+  },
+  {
+    "ru": "спор, повторение, напряжённое обсуждение",
+    "en": "argument, repetition, tense discussion"
+  },
+  {
+    "ru": "конфликты и повторяющиеся действия",
+    "en": "conflicts and repeated actions"
+  },
+  {
+    "ru": "Птицы: спорный разговор",
+    "en": "Birds: a contentious conversation"
+  },
+  {
+    "ru": "разговоры, волнение, суета",
+    "en": "conversations, nervousness, bustle"
+  },
+  {
+    "ru": "обсуждения и беспокойство",
+    "en": "discussions and worry"
+  },
+  {
+    "ru": "Письмо: обсуждение сообщения",
+    "en": "Letter: discussing a message"
+  },
+  {
+    "ru": "начало, малое, неопытность",
+    "en": "beginning, smallness, inexperience"
+  },
+  {
+    "ru": "новое и ещё незрелое",
+    "en": "what is new and not yet mature"
+  },
+  {
+    "ru": "Якорь: небольшой устойчивый старт",
+    "en": "Anchor: a modest but stable start"
+  },
+  {
+    "ru": "осторожность, собственная выгода, уловка",
+    "en": "caution, self-interest, a trick"
+  },
+  {
+    "ru": "проверка интересов и тактики",
+    "en": "checking interests and tactics"
+  },
+  {
+    "ru": "Книга: внимательное изучение деталей",
+    "en": "Book: a careful study of details"
+  },
+  {
+    "ru": "сила, влияние, ресурс, покровительство",
+    "en": "strength, influence, resources, patronage"
+  },
+  {
+    "ru": "власть и крупные ресурсы",
+    "en": "power and substantial resources"
+  },
+  {
+    "ru": "Рыбы: контроль денежных ресурсов",
+    "en": "Fish: control of financial resources"
+  },
+  {
+    "ru": "ориентир, надежда, ясное направление",
+    "en": "a guide, hope, a clear direction"
+  },
+  {
+    "ru": "планы и ориентиры",
+    "en": "plans and guiding points"
+  },
+  {
+    "ru": "Сад: сеть контактов, в современном чтении",
+    "en": "Garden: a network of contacts in a contemporary reading"
+  },
+  {
+    "ru": "перемена, переход, обновление",
+    "en": "change, transition, renewal"
+  },
+  {
+    "ru": "что меняется",
+    "en": "what is changing"
+  },
+  {
+    "ru": "Дом: изменение быта или переезд",
+    "en": "House: a change at home or a move"
+  },
+  {
+    "ru": "дружба, помощь, надёжность",
+    "en": "friendship, help, reliability"
+  },
+  {
+    "ru": "союзники и поддержка",
+    "en": "allies and support"
+  },
+  {
+    "ru": "Письмо: сообщение от знакомого",
+    "en": "Letter: a message from someone you know"
+  },
+  {
+    "ru": "учреждение, граница, самостоятельность",
+    "en": "institution, boundary, independence"
+  },
+  {
+    "ru": "официальные структуры и дистанция",
+    "en": "official structures and distance"
+  },
+  {
+    "ru": "Книга: организация обучения",
+    "en": "Book: an educational organisation"
+  },
+  {
+    "ru": "общество, встреча, публичность",
+    "en": "society, meeting, publicity"
+  },
+  {
+    "ru": "контакты и общественная среда",
+    "en": "contacts and social surroundings"
+  },
+  {
+    "ru": "Букет: приятное мероприятие",
+    "en": "Bouquet: an enjoyable event"
+  },
+  {
+    "ru": "барьер, задержка, труднодоступность",
+    "en": "barrier, delay, inaccessibility"
+  },
+  {
+    "ru": "препятствия и дистанция",
+    "en": "obstacles and distance"
+  },
+  {
+    "ru": "Корабль: задержка поездки",
+    "en": "Ship: a delayed journey"
+  },
+  {
+    "ru": "выбор, несколько путей, альтернатива",
+    "en": "choice, several paths, an alternative"
+  },
+  {
+    "ru": "решения и варианты",
+    "en": "decisions and options"
+  },
+  {
+    "ru": "Кольцо: выбор обязательств",
+    "en": "Ring: choosing commitments"
+  },
+  {
+    "ru": "убыль, износ, мелкие потери",
+    "en": "depletion, wear, small losses"
+  },
+  {
+    "ru": "что расходуется и подтачивается",
+    "en": "what is being spent or worn away"
+  },
+  {
+    "ru": "Дом: бытовые потери или износ",
+    "en": "House: household losses or wear"
+  },
+  {
+    "ru": "симпатия, любовь, сердечный интерес",
+    "en": "affection, love, heartfelt interest"
+  },
+  {
+    "ru": "эмоциональная вовлечённость",
+    "en": "emotional involvement"
+  },
+  {
+    "ru": "Кольцо: привязанность в союзе",
+    "en": "Ring: attachment within a union"
+  },
+  {
+    "ru": "союз, договор, обязательство, цикл",
+    "en": "union, agreement, obligation, cycle"
+  },
+  {
+    "ru": "связи и договорённости",
+    "en": "connections and agreements"
+  },
+  {
+    "ru": "Якорь: длительное обязательство",
+    "en": "Anchor: a lasting commitment"
+  },
+  {
+    "ru": "знание, обучение, неизвестная информация",
+    "en": "knowledge, learning, unknown information"
+  },
+  {
+    "ru": "что нужно узнать или изучить",
+    "en": "what needs to be learned or studied"
+  },
+  {
+    "ru": "Ключ: найденное понимание",
+    "en": "Key: understanding found"
+  },
+  {
+    "ru": "текст, документ, уведомление",
+    "en": "text, document, notification"
+  },
+  {
+    "ru": "переписка и оформление",
+    "en": "correspondence and paperwork"
+  },
+  {
+    "ru": "Солнце: понятный ответ",
+    "en": "Sun: a clear answer"
+  },
+  {
+    "ru": "выбранный персонаж",
+    "en": "the chosen person"
+  },
+  {
+    "ru": "сфера этого персонажа",
+    "en": "this person’s sphere"
+  },
+  {
+    "ru": "Книга: человек учится или мало известен",
+    "en": "Book: someone studying or not well known"
+  },
+  {
+    "ru": "Ключ: участие человека в решении",
+    "en": "Key: a person involved in the solution"
+  },
+  {
+    "ru": "зрелость, покой, гармония",
+    "en": "maturity, peace, harmony"
+  },
+  {
+    "ru": "зрелость и спокойный порядок",
+    "en": "maturity and a peaceful order"
+  },
+  {
+    "ru": "Дом: тихая домашняя обстановка",
+    "en": "House: a quiet home environment"
+  },
+  {
+    "ru": "ясность, успех, энергия",
+    "en": "clarity, success, energy"
+  },
+  {
+    "ru": "где легче действовать и проявляться",
+    "en": "where acting and expressing yourself comes more easily"
+  },
+  {
+    "ru": "Всадник: обнадёживающая весть",
+    "en": "Rider: encouraging news"
+  },
+  {
+    "ru": "чувства, впечатление, признание",
+    "en": "feelings, impressions, recognition"
+  },
+  {
+    "ru": "эмоциональный отклик и репутация",
+    "en": "emotional response and reputation"
+  },
+  {
+    "ru": "Букет: приятное признание",
+    "en": "Bouquet: welcome recognition"
+  },
+  {
+    "ru": "решение, доступ, значимость",
+    "en": "solution, access, significance"
+  },
+  {
+    "ru": "что открывает возможность",
+    "en": "what opens an opportunity"
+  },
+  {
+    "ru": "Книга: понимание важного материала",
+    "en": "Book: understanding important material"
+  },
+  {
+    "ru": "деньги, оборот, ресурсы",
+    "en": "money, turnover, resources"
+  },
+  {
+    "ru": "финансовые потоки",
+    "en": "financial flows"
+  },
+  {
+    "ru": "Кольцо: регулярные платежи по соглашению",
+    "en": "Ring: regular payments under an agreement"
+  },
+  {
+    "ru": "устойчивость, закрепление, работа",
+    "en": "stability, securing, work"
+  },
+  {
+    "ru": "долгосрочная опора и занятость",
+    "en": "long-term support and employment"
+  },
+  {
+    "ru": "Гора: затянувшийся застой",
+    "en": "Mountain: prolonged stagnation"
+  },
+  {
+    "ru": "бремя, обязанность, тяжёлая тема",
+    "en": "burden, obligation, a difficult theme"
+  },
+  {
+    "ru": "что воспринимается как нагрузка",
+    "en": "what is experienced as a burden"
+  },
+  {
+    "ru": "Кольцо: обременительное обязательство",
+    "en": "Ring: a burdensome obligation"
+  },
+  {
+    "ru": "Две карты: предмет и уточнение",
+    "en": "Two cards: subject and modifier"
+  },
+  {
+    "ru": "Предмет ответа. Выберите относящееся к вопросу базовое значение.",
+    "en": "The subject of the answer. Choose a core meaning relevant to the question."
+  },
+  {
+    "ru": "Уточнение. Как выглядит, развивается или проявляется первая карта?",
+    "en": "The modifier. How does the first card appear, develop or express itself?"
+  },
+  {
+    "ru": "Когда:",
+    "en": "When:"
+  },
+  {
+    "ru": "ежедневная практика, короткий вопрос, тренировка сочетаний.",
+    "en": "daily practice, a short question, learning combinations."
+  },
+  {
+    "ru": "Вопрос:",
+    "en": "Question:"
+  },
+  {
+    "ru": "«Что учитывать при сегодняшней переписке?». Вытяните две карты слева направо.",
+    "en": "What should I keep in mind in today’s correspondence? Draw two cards from left to right."
+  },
+  {
+    "ru": "Как читать:",
+    "en": "How to read:"
+  },
+  {
+    "ru": "назовите первую карту одним словом, добавьте ко второй глагол или характеристику. Полученную фразу соотнесите с вопросом. Затем проверьте, не звучит ли она слишком широко.",
+    "en": "name the first card in one word, then add an action or quality from the second. Relate the phrase to your question and check that it is not too broad."
+  },
+  {
+    "ru": "Пример: Письмо + Тучи.",
+    "en": "Example: Letter + Clouds."
+  },
+  {
+    "ru": "«В переписке остаётся неясность». Возможный практический вывод — уточнить непонятный пункт. Не нужно достраивать сюжет о сознательном обмане. Если вторая карта лишь повторяет первую, например Всадник + Письмо, зафиксируйте усиление темы сообщения.",
+    "en": "There is uncertainty in the correspondence. A possible practical step is to clarify an unclear point. Do not invent a story of deliberate deception. If the second card repeats the first, as in Rider + Letter, note the reinforced message theme."
+  },
+  {
+    "ru": "Ошибка:",
+    "en": "Mistake:"
+  },
+  {
+    "ru": "читать первую карту как утро, вторую как вечер без предварительной договорённости. В этой схеме временных позиций нет.",
+    "en": "reading the first card as morning and the second as evening without agreeing to that beforehand. This layout has no time positions."
+  },
+  {
+    "ru": "Три карты: короткая история",
+    "en": "Three cards: a short story"
+  },
+  {
+    "ru": "Начало высказывания. Что входит в ситуацию?",
+    "en": "The opening. What enters the situation?"
+  },
+  {
+    "ru": "Смысловой узел. Как связаны соседние карты?",
+    "en": "The central connection. How do the neighbouring cards relate?"
+  },
+  {
+    "ru": "Продолжение или направление. Чем уточняется история?",
+    "en": "Continuation or direction. What clarifies the story?"
+  },
+  {
+    "ru": "один конкретный вопрос на день, встречу или ближайший этап.",
+    "en": "one specific question for a day, meeting or next stage."
+  },
+  {
+    "ru": "«Как может развиваться обсуждение нового заказа в течение недели?». Выложите три карты в ряд. Базовый режим — единая фраза, а не обязательное «прошлое — настоящее — будущее». Практика короткой линии описана у Emily Rose.",
+    "en": "How might discussion of a new commission develop over the week? Lay three cards in a row. The basic mode is one connected phrase, not an obligatory past-present-future sequence. Emily Rose describes short-line practice."
+  },
+  {
+    "ru": "Порядок:",
+    "en": "Order:"
+  },
+  {
+    "ru": "1+2, затем 2+3, потом все три вместе. Середина помогает удерживать тему. Дополнительно можно прочитать 1+3 как рамку, но не как замену линии.",
+    "en": "1+2, then 2+3, then all three. The centre keeps the topic in view. You may also read 1+3 as a frame, but not as a replacement for the line."
+  },
+  {
+    "ru": "Пример: Всадник + Кольцо + Гора.",
+    "en": "Example: Rider + Ring + Mountain."
+  },
+  {
+    "ru": "Новость приводит к обсуждению соглашения, но на этапе договорённости возникает задержка. Ответ относится к ходу переговоров; он не утверждает, что работа навсегда сорвётся. Рамка Всадник + Гора повторяет тему заторможенного движения.",
+    "en": "News leads to discussion of an agreement, but a delay arises at the agreement stage. This concerns the course of negotiations, not a claim that the work is lost forever. Rider + Mountain reinforces delayed movement."
+  },
+  {
+    "ru": "Позиционный вариант:",
+    "en": "Positional variation:"
+  },
+  {
+    "ru": "если заранее задать «предыстория — состояние — тенденция», каждая карта сначала отвечает на свой вопрос, затем соседние связываются. Не меняйте режим в середине чтения.",
+    "en": "if you assign background, current state and tendency beforehand, each card first answers its position’s question, then combines with its neighbours. Do not switch modes midway."
+  },
+  {
+    "ru": "объявить третью карту абсолютным итогом на всю жизнь. Она действует в пределах поставленного вопроса и срока.",
+    "en": "declaring the third card an absolute lifetime outcome. It applies within the question and time frame."
+  },
+  {
+    "ru": "Пять карт: линия с центром",
+    "en": "Five cards: a line with a centre"
+  },
+  {
+    "ru": "Вход в историю. Вместе с 2 — предпосылки.",
+    "en": "The opening. Together with 2, the background."
+  },
+  {
+    "ru": "Подводит к центру. С чем связана главная тема?",
+    "en": "Leads to the centre. What connects with the main topic?"
+  },
+  {
+    "ru": "Центральная тема, если вы заранее выбрали этот режим.",
+    "en": "The central topic, if you chose this mode beforehand."
+  },
+  {
+    "ru": "Развитие центральной темы.",
+    "en": "Development of the central topic."
+  },
+  {
+    "ru": "Завершение линии в пределах вопроса.",
+    "en": "The line’s conclusion within the question."
+  },
+  {
+    "ru": "три карты дают слишком общий ответ, но большой расклад пока не нужен.",
+    "en": "three cards are too broad, but a large spread is not yet needed."
+  },
+  {
+    "ru": "«Что будет важно в поиске новых заказчиков в этом месяце?». Раздайте пять карт слева направо.",
+    "en": "What will matter when looking for new clients this month? Deal five cards from left to right."
+  },
+  {
+    "ru": "сначала вся линия; затем центр 3; пары 1+2 и 4+5; затем зеркала 1+5 и 2+4. Зеркала — дополнительное сопоставление краёв. Линейное чтение и несколько способов связывания пяти и семи карт описывает Labyrinthos.",
+    "en": "the whole line first, then centre 3, pairs 1+2 and 4+5, then mirrors 1+5 and 2+4. Mirrors add a comparison of the ends. Labyrinthos describes linear reading and several ways to combine five and seven cards."
+  },
+  {
+    "ru": "Пример: Сад + Письмо + Кольцо + Гора + Ключ.",
+    "en": "Example: Garden + Letter + Ring + Mountain + Key."
+  },
+  {
+    "ru": "Контакты и переписка ведут к обсуждению условий; договорённость задерживается, но появляется тема решения. Центр Кольцо удерживает фокус на согласовании, а не на популярности. Зеркало Сад + Ключ: возможность может открыться через общение. Письмо + Гора: уточните, не завис ли ответ.",
+    "en": "Contacts and correspondence lead to discussing terms; the agreement is delayed, but a solution becomes a theme. The central Ring keeps the focus on agreement rather than popularity. Garden + Key suggests opportunity through communication. Letter + Mountain invites checking whether a reply has stalled."
+  },
+  {
+    "ru": "Итог:",
+    "en": "Conclusion:"
+  },
+  {
+    "ru": "«Внимание стоит направить на переписку и условия; затруднение требует конкретного прояснения». Это условная интерпретация, не обещание оплаченного заказа.",
+    "en": "Focus on correspondence and terms; the difficulty calls for specific clarification. This is a possible interpretation, not a promise of a paid commission."
+  },
+  {
+    "ru": "использовать зеркала, чтобы отменить неудобную центральную связку Кольцо + Гора.",
+    "en": "using mirrors to cancel the uncomfortable central Ring + Mountain combination."
+  },
+  {
+    "ru": "Семь карт: развёрнутая линия",
+    "en": "Seven cards: an extended line"
+  },
+  {
+    "ru": "Первый элемент входного блока 1–3.",
+    "en": "First element of the opening group, 1–3."
+  },
+  {
+    "ru": "Уточнение предпосылок.",
+    "en": "Clarifies the background."
+  },
+  {
+    "ru": "Подход к центральному узлу.",
+    "en": "Approach to the central point."
+  },
+  {
+    "ru": "Главная тема линии в выбранном режиме.",
+    "en": "The line’s main topic in the chosen mode."
+  },
+  {
+    "ru": "Первое развитие после центра.",
+    "en": "First development after the centre."
+  },
+  {
+    "ru": "Уточнение развития.",
+    "en": "Clarifies that development."
+  },
+  {
+    "ru": "Конец рассказа в заданном периоде.",
+    "en": "The story’s end within the chosen period."
+  },
+  {
+    "ru": "нужно проследить процесс с несколькими звеньями.",
+    "en": "you want to follow a process through several steps."
+  },
+  {
+    "ru": "«Как будет складываться подготовка поездки в ближайшие две недели?». Семь карт — не автоматически семь дней; календарный режим нужно объявлять отдельно.",
+    "en": "How will preparation for a trip develop over the next two weeks? Seven cards do not automatically mean seven days; a calendar mode must be stated separately."
+  },
+  {
+    "ru": "прочитайте соседние пары, соберите фразу, выделите центр 4. Сопоставьте блоки 1–3 и 5–7. В конце, если остаётся вопрос, проверьте зеркала 1+7, 2+6 и 3+5. Не превращайте каждую пару в отдельное событие.",
+    "en": "read adjacent pairs, form a sentence and identify centre 4. Compare groups 1–3 and 5–7. If a question remains, check mirrors 1+7, 2+6 and 3+5. Do not make every pair a separate event."
+  },
+  {
+    "ru": "Пример: Корабль + Письмо + Тучи + Развилка + Ключ + Кольцо + Якорь.",
+    "en": "Example: Ship + Letter + Clouds + Crossroads + Key + Ring + Anchor."
+  },
+  {
+    "ru": "Подготовка поездки зависит от непрояснённой переписки, из-за чего приходится выбирать вариант; после уточнения становится возможным закрепить план. Развилка — основной узел, а не доказательство двух поездок.",
+    "en": "Travel preparations depend on unclear correspondence, prompting a choice; clarification then makes it possible to secure a plan. The Crossroads are the main decision point, not proof of two trips."
+  },
+  {
+    "ru": "назначать каждой карте точное число дней по её номеру. В этой схеме порядок смысловой, а не календарный.",
+    "en": "assigning each card an exact number of days from its number. The order here is thematic, not calendrical."
+  },
+  {
+    "ru": "Девять карт: квадрат 3 × 3",
+    "en": "Nine cards: the 3 × 3 square"
+  },
+  {
+    "ru": "Верхний левый угол. Начало верхней строки; часть рамки.",
+    "en": "Upper left corner. Opens the top row and forms part of the frame."
+  },
+  {
+    "ru": "Верхняя середина. Связь с центром по вертикали.",
+    "en": "Upper middle. Connects vertically with the centre."
+  },
+  {
+    "ru": "Верхний правый угол. Завершает верхнюю строку.",
+    "en": "Upper right corner. Closes the top row."
+  },
+  {
+    "ru": "Средняя левая. Подводит к центральной теме.",
+    "en": "Middle left. Leads into the central topic."
+  },
+  {
+    "ru": "Центр. Смысловой узел либо заранее выбранный сигнификатор.",
+    "en": "Centre. Main theme or significator chosen beforehand."
+  },
+  {
+    "ru": "Средняя правая. Продолжает центральную тему.",
+    "en": "Middle right. Continues the central topic."
+  },
+  {
+    "ru": "Нижний левый угол. Начало нижней строки.",
+    "en": "Lower left corner. Opens the bottom row."
+  },
+  {
+    "ru": "Нижняя середина. Нижняя связь с центром.",
+    "en": "Lower middle. Connects with the centre from below."
+  },
+  {
+    "ru": "Нижний правый угол. Завершение нижней строки.",
+    "en": "Lower right corner. Closes the bottom row."
+  },
+  {
+    "ru": "нужен объёмный взгляд на одну ситуацию.",
+    "en": "you need a fuller view of one situation."
+  },
+  {
+    "ru": "«Какие обстоятельства влияют на развитие моего учебного проекта в этом месяце?». Раздайте карты по рядам 1–3, 4–6, 7–9. Названия «Портрет», «Коробка», «Квадрат» обычно обозначают эту геометрию.",
+    "en": "Which circumstances affect my educational project’s development this month? Deal rows 1–3, 4–6 and 7–9. Portrait, Box and Square usually refer to this geometry."
+  },
+  {
+    "ru": "Учебный порядок:",
+    "en": "Teaching sequence:"
+  },
+  {
+    "ru": "центр 5 → строка 4–5–6 → столбец 2–5–8 → верхняя и нижняя строки → остальные столбцы → диагонали 1–5–9 и 3–5–7 → углы 1,3,7,9. На первом чтении достаточно центра и трёх строк; остальные связи добавляйте для конкретного уточнения.",
+    "en": "centre 5 → row 4–5–6 → column 2–5–8 → top and bottom rows → remaining columns → diagonals 1–5–9 and 3–5–7 → corners 1, 3, 7 and 9. For a first reading, the centre and three rows are enough; add other links for specific clarification."
+  },
+  {
+    "ru": "Варианты позиций:",
+    "en": "Positional variations:"
+  },
+  {
+    "ru": "некоторые авторы назначают столбцам прошлое, настоящее и будущее; Labyrinthos показывает именно такой режим. Это не свойство самого квадрата. Можно заранее задать строкам «подготовка — взаимодействие — практические последствия», но тогда их нужно читать как позиционную схему.",
+    "en": "some authors assign past, present and future to the columns; Labyrinthos demonstrates this mode. It is not inherent to the square. You may assign preparation, interaction and practical consequences to the rows beforehand, but then read them as a positional spread."
+  },
+  {
+    "ru": "Учебный набор по строкам:",
+    "en": "Practice cards by row:"
+  },
+  {
+    "ru": "Книга — Письмо — Сад / Гора — Якорь — Ключ / Мыши — Кольцо — Солнце. Центр Якорь — закрепление работы. Средняя строка говорит о поиске решения застоя; верхняя — об учёбе, сообщениях и контактах; нижняя — о затратах при оформлении договорённостей и желании ясности.",
+    "en": "Book — Letter — Garden / Mountain — Anchor — Key / Mice — Ring — Sun. The central Anchor is establishing work. The middle row suggests seeking a way out of stagnation; the top learning, messages and contacts; the bottom costs while formalising agreements and a wish for clarity."
+  },
+  {
+    "ru": "проекту нужна устойчивая практика, но продвижение упирается в барьер; ресурс — в обучении и обратной связи, а условия сотрудничества стоит прояснять, чтобы не расходовать силы по мелочам. Не считайте нижний правый угол единственным итогом: Солнце завершает одну строку, но Гора остаётся частью картины.",
+    "en": "the project needs consistent practice, but a barrier slows progress; learning and feedback are resources, and terms of cooperation need clarity to avoid wasting effort on small matters. Do not treat the lower right corner as the sole outcome: the Sun ends one row, while the Mountain remains in the picture."
+  },
+  {
+    "ru": "получить девять отдельных предсказаний и затем ещё десятки новых из всех пар. Каждая дополнительная связь должна уточнять уже сформулированную тему.",
+    "en": "producing nine separate predictions, then dozens more from every pair. Each additional connection should clarify a theme already identified."
+  },
+  {
+    "ru": "Пять карт: крест ситуации",
+    "en": "Five cards: the situation cross"
+  },
+  {
+    "ru": "Центр — что происходит в ситуации?",
+    "en": "Centre — what is happening in the situation?"
+  },
+  {
+    "ru": "Слева — что поддерживает проблему или создаёт препятствие?",
+    "en": "Left — what sustains the problem or creates an obstacle?"
+  },
+  {
+    "ru": "Сверху — что нужно понять?",
+    "en": "Above — what needs to be understood?"
+  },
+  {
+    "ru": "Справа — доступный ресурс или действие?",
+    "en": "Right — what resource or action is available?"
+  },
+  {
+    "ru": "Снизу — тенденция при сохранении текущего подхода?",
+    "en": "Below — what is the tendency if the current approach continues?"
+  },
+  {
+    "ru": "Авторская учебная адаптация.",
+    "en": "An original teaching adaptation."
+  },
+  {
+    "ru": "Это позиционный крест для карт Ленорман, не универсальный старинный канон. Кладите сначала центр, потом левую, верхнюю, правую и нижнюю карты.",
+    "en": "This is a positional cross for Lenormand, not a universal ancient canon. Place the centre first, then left, above, right and below."
+  },
+  {
+    "ru": "«Что поможет наладить подготовку портфолио?».",
+    "en": "What could help get portfolio preparation on track?"
+  },
+  {
+    "ru": "сначала 1 с каждой соседней картой, затем горизонталь 2–1–4 и вертикаль 3–1–5. Приоритет имеют назначенные вопросы, а не время слева направо.",
+    "en": "read 1 with each neighbour, then horizontal 2–1–4 and vertical 3–1–5. The assigned questions take priority over left-to-right time."
+  },
+  {
+    "ru": "Пример по номерам:",
+    "en": "Example in position order:"
+  },
+  {
+    "ru": "Книга, Гора, Письмо, Собака, Якорь. Работа с материалом застопорилась; полезно понять, что именно должно быть написано, и привлечь знакомого для обратной связи. Возможная тенденция — закрепление практики, если выбранный подход действительно внедряется.",
+    "en": "Book, Mountain, Letter, Dog, Anchor. Work on the material has stalled; clarify what needs writing and involve an acquaintance for feedback. A possible tendency is a settled practice, if the approach is actually put into use."
+  },
+  {
+    "ru": "воспринимать карту в позиции «препятствие» только как плохую. Солнце там может описывать завышенные ожидания успеха — но такую версию нужно сверить с ситуацией.",
+    "en": "treating a card in the obstacle position as simply bad. The Sun there could suggest inflated expectations of success, but check that interpretation against the situation."
+  },
+  {
+    "ru": "Выбор: два пути, семь карт",
+    "en": "Choice: two paths, seven cards"
+  },
+  {
+    "ru": "Общее условие выбора. Что объединяет оба варианта?",
+    "en": "The shared condition. What connects both options?"
+  },
+  {
+    "ru": "Путь А: первые действия или условия.",
+    "en": "Path A: first actions or conditions."
+  },
+  {
+    "ru": "Путь А: развитие процесса.",
+    "en": "Path A: development of the process."
+  },
+  {
+    "ru": "Путь А: тенденция в выбранном сроке.",
+    "en": "Path A: tendency within the chosen period."
+  },
+  {
+    "ru": "Путь Б: первые действия или условия.",
+    "en": "Path B: first actions or conditions."
+  },
+  {
+    "ru": "Путь Б: развитие процесса.",
+    "en": "Path B: development of the process."
+  },
+  {
+    "ru": "Путь Б: тенденция в том же сроке.",
+    "en": "Path B: tendency within the same period."
+  },
+  {
+    "ru": "До вытягивания запишите конкретные варианты и одинаковый срок. Например: А — искать заказы через знакомых; Б — публиковать предложения на открытых площадках; период — месяц. «Делать что-нибудь» и «ничего не менять» слишком расплывчаты.",
+    "en": "Before drawing, write down specific options and an identical time frame. For example, A: seek commissions through acquaintances; B: publish offers on open platforms; period: one month. Doing something and changing nothing are too vague."
+  },
+  {
+    "ru": "прочитайте общее условие 1, затем отдельными триплетами 2–3–4 и 5–6–7. Сравните не количество приятных карт, а требования, препятствия и возможную пользу каждого пути.",
+    "en": "read shared condition 1, then the separate trios 2–3–4 and 5–6–7. Compare requirements, obstacles and potential benefits, not the number of pleasant cards."
+  },
+  {
+    "ru": "центр Развилка; А: Собака — Письмо — Кольцо; Б: Сад — Птицы — Мыши. Путь А символически связан с личной рекомендацией и согласованием; Б — с большим количеством общения и расходом внимания. Нельзя заключить, что второй путь объективно убыточен: деньги не измерены, условия неизвестны.",
+    "en": "centre Crossroads; A: Dog — Letter — Ring; B: Garden — Birds — Mice. A symbolically connects with a personal recommendation and agreement; B with extensive communication and spent attention. This does not prove B is financially unprofitable: no money has been measured and the terms are unknown."
+  },
+  {
+    "ru": "Практический итог:",
+    "en": "Practical conclusion:"
+  },
+  {
+    "ru": "сравните реальную затрату времени и качество откликов после небольшого пробного периода. Расклад помогает сформулировать критерии, но не заменяет проверку.",
+    "en": "compare actual time spent and response quality after a short trial. The spread can help formulate criteria, but cannot replace checking them."
+  },
+  {
+    "ru": "повторно раскладывать «неудачный» путь до получения приятных карт или сравнивать пути на разных временных горизонтах.",
+    "en": "dealing the unsuccessful path repeatedly until pleasant cards appear, or comparing paths over different time frames."
+  },
+  {
+    "ru": "Взаимодействие: две стороны, семь карт",
+    "en": "Interaction: two sides, seven cards"
+  },
+  {
+    "ru": "Ваша позиция: что вы привносите в общение?",
+    "en": "Your position: what do you bring to communication?"
+  },
+  {
+    "ru": "Ваша позиция: что проявляете во взаимодействии?",
+    "en": "Your position: what do you express in the interaction?"
+  },
+  {
+    "ru": "Ваша позиция: ваш вероятный способ действовать?",
+    "en": "Your position: how are you likely to act?"
+  },
+  {
+    "ru": "Позиция второй стороны: какой образ возникает в раскладе?",
+    "en": "The other side: what image appears in the spread?"
+  },
+  {
+    "ru": "Позиция второй стороны: как символически описано взаимодействие?",
+    "en": "The other side: how is the interaction symbolically described?"
+  },
+  {
+    "ru": "Позиция второй стороны: какой способ действий предполагается?",
+    "en": "The other side: what way of acting is suggested?"
+  },
+  {
+    "ru": "Общая динамика связи в заданный срок.",
+    "en": "The connection’s overall dynamics during the chosen period."
+  },
+  {
+    "ru": "Два столбца по три карты и общая карта между ними. Можно заранее назначить уровни «мысли — чувства — действия», но это заимствованный позиционный подход; он не превращает карты в доступ к чужим мыслям.",
+    "en": "Two columns of three cards with a shared card between them. You may assign thoughts, feelings and actions beforehand, but this is a borrowed positional approach; it does not grant access to someone else’s mind."
+  },
+  {
+    "ru": "прочитайте каждый столбец как триплет, затем сопоставьте горизонтальные пары 1+4, 2+5, 3+6. Общую карту 7 связывайте с обеими сторонами, а не считайте окончательным приговором отношениям.",
+    "en": "read each column as a trio, then compare horizontal pairs 1+4, 2+5 and 3+6. Relate shared card 7 to both sides rather than treating it as a final verdict on the relationship."
+  },
+  {
+    "ru": "слева Собака — Сердце — Письмо; справа Башня — Книга — Якорь; общая Птицы. Первая сторона тянется к тёплому контакту и переписке; вторая в символическом описании держит дистанцию и привычный порядок. Общая тема — разговор, возможно волнение. Разумный следующий шаг — согласовать удобный формат общения, а не обвинять человека в тайнах.",
+    "en": "left: Dog — Heart — Letter; right: Tower — Book — Anchor; shared: Birds. One side seeks warm contact and correspondence; the other is symbolically depicted as maintaining distance and familiar routines. The shared theme is conversation, perhaps nervousness. Agreeing on a comfortable way to communicate is more sensible than accusing someone of secrets."
+  },
+  {
+    "ru": "отождествлять Книгу с обманом и Башню с отсутствием чувств. Внешняя сдержанность может иметь много причин, которые узнаются разговором.",
+    "en": "equating the Book with deception and the Tower with a lack of feeling. Outward reserve may have many causes, best explored through conversation."
+  },
+  {
+    "ru": "Нет доступных позиций в выбранной геометрии.",
+    "en": "No positions are available in the selected geometry."
+  },
+  {
+    "ru": "Позиция $",
+    "en": "Position $"
+  },
+  {
+    "ru": ", дом $",
+    "en": ", house $"
+  },
+  {
+    "ru": ", карта $",
+    "en": ", card $"
+  },
+  {
+    "ru": "выбрана",
+    "en": "selected"
+  },
+  {
+    "ru": "связь",
+    "en": "linked"
+  },
+  {
+    "ru": "Дом $",
+    "en": "House $"
+  },
+  {
+    "ru": "— в доме $",
+    "en": "— in house $"
+  },
+  {
+    "ru": "Карта:",
+    "en": "Card:"
+  },
+  {
+    "ru": "Область дома:",
+    "en": "House topic:"
+  },
+  {
+    "ru": "В собственном доме этой карты (позиция $",
+    "en": "In this card’s own house (position $"
+  },
+  {
+    "ru": "Направление:",
+    "en": "Direction:"
+  },
+  {
+    "ru": "карта → номер её текущего дома → следующая карта.",
+    "en": "card → its current house number → the next card."
+  },
+  {
+    "ru": ") лежит в доме $",
+    "en": ") occupies house $"
+  },
+  {
+    "ru": "Возврат к карте $",
+    "en": "Return to card $"
+  },
+  {
+    "ru": ". Цикл: $",
+    "en": ". Cycle: $"
+  },
+  {
+    "ru": "уникальных карт.",
+    "en": "unique cards."
+  },
+  {
+    "ru": "— позиции:",
+    "en": "— positions:"
+  },
+  {
+    "ru": "Вверх-влево",
+    "en": "Up-left"
+  },
+  {
+    "ru": "Вверх-вправо",
+    "en": "Up-right"
+  },
+  {
+    "ru": "Вниз-влево",
+    "en": "Down-left"
+  },
+  {
+    "ru": "Вниз-вправо",
+    "en": "Down-right"
+  },
+  {
+    "ru": "Выбрана нижняя четвёрка. Здесь геометрические связи с основным полем не используются; выберите строку или цепочку домов.",
+    "en": "A bottom-four card is selected. Geometric links with the main board are not used here; choose Row or House chain."
+  },
+  {
+    "ru": "Прочитайте найденные карты в контексте вопроса. Геометрическая связь сама по себе не задаёт готового значения.",
+    "en": "Read the connected cards in the question’s context. Geometry alone does not supply a ready-made meaning."
+  },
+  {
+    "ru": "Загружен учебный пример.",
+    "en": "Teaching example loaded."
+  },
+  {
+    "ru": "Карты по порядку: каждая в своём доме.",
+    "en": "Cards in order: each is in its own house."
+  },
+  {
+    "ru": "Нужно 36 номеров; введено $",
+    "en": "36 numbers are required; entered $"
+  },
+  {
+    "ru": "Допустимы только целые номера от 1 до 36.",
+    "en": "Only whole numbers from 1 to 36 are allowed."
+  },
+  {
+    "ru": "Каждый номер должен быть от 1 до 36.",
+    "en": "Each number must be between 1 and 36."
+  },
+  {
+    "ru": "Повторяются номера: $",
+    "en": "Repeated numbers: $"
+  },
+  {
+    "ru": ". Каждый нужен один раз.",
+    "en": ". Each is needed once."
+  },
+  {
+    "ru": "Порядок принят: 36 карт без повторов.",
+    "en": "Order accepted: 36 cards without duplicates."
+  },
+  {
+    "ru": "Нажмите номер позиции, чтобы прочитать её назначение.",
+    "en": "Select a position number to read its purpose."
+  },
+  {
+    "ru": "Ничего не найдено. Попробуйте часть слова: «зеркал», «цепоч», «деньг».",
+    "en": "Nothing found. Try part of a word: mirror, chain or money."
+  },
+  {
+    "ru": "Тёмная тема",
+    "en": "Dark theme"
+  },
+  {
+    "ru": "\\n\\nФормат:",
+    "en": "\\n\\nFormat:"
+  },
+  {
+    "ru": "\\nКарты по позициям:\\n",
+    "en": "\\nCards by position:\\n"
+  },
+  {
+    "ru": "Личный справочник · не официальный доклад и не исследовательская статья · JeT",
+    "en": "A personal reference guide · not an official report or research article · JeT"
+  },
+  {
+    "ru": "По всем вопросам, предложениям о сотрудничестве и рекламе — пишите, я отвечаю лично:",
+    "en": "For questions, collaboration or advertising enquiries, write to me — I reply personally:"
+  },
+  {
+    "ru": "Проект живёт на чистом энтузиазме — без рекламы и комиссии с посетителей. Если он вам полезен, поддержите его: любая сумма помогает развивать справочник дальше.",
+    "en": "I keep this project going through enthusiasm, without advertising or visitor fees. If you find it useful, a contribution of any size helps me develop the guide further."
+  },
+  {
+    "ru": "Закрыть",
+    "en": "Close"
+  },
+  {
+    "ru": "Это личный справочник по Таро, Ленорман, рунам и астрологии, собранный одним человеком — без команды, без офиса и без инвесторов. Проект живёт на чистом энтузиазме: без навязчивой рекламы, регистрации и платных подписок — все материалы открыты полностью.",
+    "en": "I put this personal guide to Tarot, Lenormand, runes and astrology together on my own, with no team, office or investors. It runs on enthusiasm, without intrusive advertising, registration or paid subscriptions. All the material is freely accessible."
+  },
+  {
+    "ru": "Создание и поддержка такого справочника — это сотни часов работы: тексты, переводы трактовок, вёрстка, сервер. Если материалы сайта были вам полезны, поддержка — лучший способ сказать «спасибо» и помочь развитию: новые разделы, карты, сочетания и расклады.",
+    "en": "Creating and maintaining the guide takes hundreds of hours: writing, translating interpretations, designing pages and looking after the server. If it has helped you, a contribution is a welcome thank-you and supports new sections, cards, combinations and spreads."
+  },
+  {
+    "ru": "♥ Поддержать через Donatello",
+    "en": "♥ Support via Donatello"
+  },
+  {
+    "ru": "Есть вопросы, предложения о сотрудничестве или хотите разместить рекламу? Пишите — я отвечаю лично:",
+    "en": "Questions, collaboration ideas or advertising enquiries? Write to me — I reply personally:"
+  },
+  {
+    "ru": "Ленорман — значения 36 карт оракула",
+    "en": "Lenormand Card Meanings — All 36 Cards and Combinations"
+  },
+  {
+    "ru": "Значения всех 36 карт оракула Ленорман: по сферам жизни, сигнификаторы, полярность, время и 1260 сочетаний пар.",
+    "en": "Explore all 36 Lenormand cards: meanings for everyday life, significators, polarity, timing and 1,260 directional card combinations."
+  },
+  {
+    "ru": "Оракулы Ленорман — это уникальные колоды карт, которые берут своё начало в XVIII веке, и обязаны своей популярностью знаменитой французской гадалке Марии Ленорман. Она использовала карты для предсказаний судьбоносных событий и давала консультации известным личностям своего времени. Стандартная колода Ленорман состоит из 36 карт, каждая из которых содержит символы, легко интерпретируемые даже теми, кто только начинает знакомство с миром гадания. Эти символы — Лиса, Корабль, Солнце, Дерево и другие — представляют собой архетипические образы, связанные с повседневной жизнью. Карты Ленорман отличаются своей доступностью и прямолинейностью: в отличие от более сложных систем, таких как Таро, они дают быстрые и точные ответы, фокусируясь на реальных событиях и практических советах.",
+    "en": "Lenormand decks have roots in the eighteenth century and owe their name and enduring appeal to the celebrated French fortune-teller Marie Lenormand, who read cards for prominent figures of her time. The familiar Petit Lenormand has 36 cards with recognisable everyday symbols: the Fox, Ship, Sun, Tree and others. Their direct imagery makes an approachable starting point for learning card reading. Compared with more elaborate systems such as Tarot, Lenormand readings tend to focus on concrete situations and practical questions. Readers may seek quick, clear answers, but the cards do not establish facts or reliably predict events. The historical relationship between the deck and its namesake is explained in the interactive guide."
+  },
+  {
+    "ru": "Оракул · 36 карт",
+    "en": "Oracle · 36 cards"
+  },
+  {
+    "ru": "значения по сферам · время · 1260 сочетаний пар",
+    "en": "meanings by area of life · timing · 1,260 combinations"
+  },
+  {
+    "ru": "Полярность карт — рабочая подсказка, а не приговор: соседние карты и вопрос меняют тон прочтения.",
+    "en": "Card polarity is a working guide, not a verdict: neighbouring cards and the question shape the tone of a reading."
+  },
+  {
+    "ru": " — связки карт, малые расклады, Гранд Табло с тренажёром",
+    "en": " — card combinations, small spreads and an interactive Grand Tableau trainer"
+  },
+  {
+    "ru": " — карта Ленорман №",
+    "en": " — Lenormand Card "
+  },
+  {
+    "ru": ": значение и сочетания",
+    "en": ": Meanings and Combinations"
+  },
+  {
+    "ru": "Карта Ленорман №",
+    "en": "Lenormand card "
+  },
+  {
+    "ru": "Карта Ленорман ",
+    "en": "Lenormand card "
+  },
+  {
+    "ru": "): значения по сферам жизни, сигнификатор, время и 35 сочетаний с другими картами оракула.",
+    "en": "): meanings for everyday life, significator, timing and 35 combinations with the other cards."
+  },
+  {
+    "ru": "Ключевые значения",
+    "en": "Key meanings"
+  },
+  {
+    "ru": "Игральная карта и факты",
+    "en": "Playing-card inset and details"
+  },
+  {
+    "ru": "Полярность:",
+    "en": "Polarity:"
+  },
+  {
+    "ru": "Время:",
+    "en": "Timing:"
+  },
+  {
+    "ru": "Люди:",
+    "en": "People:"
+  },
+  {
+    "ru": " задаёт тему, вторая карта уточняет её. Всего 35 направленных сочетаний; пары «",
+    "en": " sets the topic and the second card refines it. These 35 directional combinations read from left to right; “"
+  },
+  {
+    "ru": "» и «",
+    "en": "” and “"
+  },
+  {
+    "ru": "» могут читаться по-разному.",
+    "en": "” may be read differently."
+  },
+  {
+    "ru": "Хлебные крошки",
+    "en": "Breadcrumbs"
+  },
+  {
+    "ru": "Оракул Ленорман · карта №",
+    "en": "Lenormand Oracle · Card "
+  },
+  {
+    "ru": "Разделы карты",
+    "en": "Card sections"
+  },
+  {
+    "ru": "Значения",
+    "en": "Meanings"
+  },
+  {
+    "ru": "Сферы жизни",
+    "en": "Areas of life"
+  },
+  {
+    "ru": "Сочетания (35)",
+    "en": "Combinations (35)"
+  },
+  {
+    "ru": "Навигация по картам",
+    "en": "Card navigation"
+  }
+]

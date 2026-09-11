@@ -1,0 +1,236 @@
+{
+  "terms": [
+    {
+      "ru": "червей",
+      "en": "Hearts"
+    },
+    {
+      "ru": "бубен",
+      "en": "Diamonds"
+    },
+    {
+      "ru": "пик",
+      "en": "Spades"
+    },
+    {
+      "ru": "треф",
+      "en": "Clubs"
+    },
+    {
+      "ru": "король",
+      "en": "King"
+    },
+    {
+      "ru": "дама",
+      "en": "Queen"
+    },
+    {
+      "ru": "валет",
+      "en": "Jack"
+    },
+    {
+      "ru": "туз",
+      "en": "Ace"
+    },
+    {
+      "ru": "положительная",
+      "en": "positive"
+    },
+    {
+      "ru": "нейтральная",
+      "en": "neutral"
+    },
+    {
+      "ru": "негативная",
+      "en": "negative"
+    },
+    {
+      "ru": "отрицательная",
+      "en": "negative"
+    },
+    {
+      "ru": "Всадник",
+      "en": "The Rider"
+    },
+    {
+      "ru": "Клевер",
+      "en": "The Clover"
+    },
+    {
+      "ru": "Корабль",
+      "en": "The Ship"
+    },
+    {
+      "ru": "Дом",
+      "en": "The House"
+    },
+    {
+      "ru": "Дерево",
+      "en": "The Tree"
+    },
+    {
+      "ru": "Тучи",
+      "en": "The Clouds"
+    },
+    {
+      "ru": "Змея",
+      "en": "The Snake"
+    },
+    {
+      "ru": "Гроб",
+      "en": "The Coffin"
+    },
+    {
+      "ru": "Букет",
+      "en": "The Bouquet"
+    },
+    {
+      "ru": "Коса",
+      "en": "The Scythe"
+    },
+    {
+      "ru": "Метла",
+      "en": "The Whip"
+    },
+    {
+      "ru": "Совы",
+      "en": "The Birds"
+    },
+    {
+      "ru": "Ребенок",
+      "en": "The Child"
+    },
+    {
+      "ru": "Лиса",
+      "en": "The Fox"
+    },
+    {
+      "ru": "Медведь",
+      "en": "The Bear"
+    },
+    {
+      "ru": "Звезды",
+      "en": "The Stars"
+    },
+    {
+      "ru": "Аист",
+      "en": "The Stork"
+    },
+    {
+      "ru": "Собака",
+      "en": "The Dog"
+    },
+    {
+      "ru": "Башня",
+      "en": "The Tower"
+    },
+    {
+      "ru": "Сад",
+      "en": "The Garden"
+    },
+    {
+      "ru": "Гора",
+      "en": "The Mountain"
+    },
+    {
+      "ru": "Развилка",
+      "en": "The Crossroads"
+    },
+    {
+      "ru": "Мыши",
+      "en": "The Mice"
+    },
+    {
+      "ru": "Сердце",
+      "en": "The Heart"
+    },
+    {
+      "ru": "Кольцо",
+      "en": "The Ring"
+    },
+    {
+      "ru": "Книга",
+      "en": "The Book"
+    },
+    {
+      "ru": "Письмо",
+      "en": "The Letter"
+    },
+    {
+      "ru": "Мужчина",
+      "en": "The Man"
+    },
+    {
+      "ru": "Женщина",
+      "en": "The Woman"
+    },
+    {
+      "ru": "Лилии",
+      "en": "The Lilies"
+    },
+    {
+      "ru": "Солнце",
+      "en": "The Sun"
+    },
+    {
+      "ru": "Луна",
+      "en": "The Moon"
+    },
+    {
+      "ru": "Ключ",
+      "en": "The Key"
+    },
+    {
+      "ru": "Рыбы",
+      "en": "The Fish"
+    },
+    {
+      "ru": "Якорь",
+      "en": "The Anchor"
+    },
+    {
+      "ru": "Крест",
+      "en": "The Cross"
+    },
+    {
+      "ru": "Стандартное",
+      "en": "Core meaning"
+    },
+    {
+      "ru": "В быту",
+      "en": "Everyday life"
+    },
+    {
+      "ru": "Работа и бизнес",
+      "en": "Work and business"
+    },
+    {
+      "ru": "Отношения",
+      "en": "Relationships"
+    },
+    {
+      "ru": "Характеристика личности",
+      "en": "Personality"
+    },
+    {
+      "ru": "Предметы и места",
+      "en": "Objects and places"
+    },
+    {
+      "ru": "Необычные и буквальные проявления",
+      "en": "Unusual and literal expressions"
+    },
+    {
+      "ru": "Теневая сторона",
+      "en": "Shadow side"
+    },
+    {
+      "ru": "Практический совет",
+      "en": "Practical advice"
+    },
+    {
+      "ru": "Примечание по времени",
+      "en": "Timing note"
+    }
+  ]
+}

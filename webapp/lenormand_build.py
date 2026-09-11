@@ -16,7 +16,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "lenormand"
-DATA = Path("/home/serg/projects/lenormand/lenormand.json")
+DATA = Path(__file__).parent / "data" / "lenormand.json"
 SITE = "https://taro.jetserg.top"
 CSS_V = "1.5"   # lenormand.css (в whitelist чекера)
 SITE_V = "4.0"  # общий style.css
@@ -322,7 +322,7 @@ def render_card(card: dict, cards: list[dict], pairs: list[dict]) -> str:
                   f'<ul class="pair-list">{"".join(li)}</ul>')
 
     body = f"""<main class="ln-wrap ln-card-page">
-<nav class="card-crumbs" aria-label="Хлебные крошки"><a href="../">Ленорман</a> / <span aria-current="page">{esc(name)}</span></nav>
+<nav class="card-crumbs" aria-label="Хлебные крошки"><a href="../index.html">Ленорман</a> / <span aria-current="page">{esc(name)}</span></nav>
 <article class="tarot-sheet">
 <header class="sheet-head">
 <div class="card-scene"><img src="../img/{img_name}" alt="Карта Ленорман №{n} {esc(name)}" width="150" height="264"></div>
@@ -351,8 +351,8 @@ def render_card(card: dict, cards: list[dict], pairs: list[dict]) -> str:
 {pairs_html}
 </div>
 <nav class="ln-pag" aria-label="Навигация по картам">
-  <a href="../{int(prev['n']):02d}-{prev['slug']}/">← {int(prev['n']):02d} {esc(prev['name'])}</a>
-  <a href="../{int(nxt['n']):02d}-{nxt['slug']}/">{int(nxt['n']):02d} {esc(nxt['name'])} →</a>
+  <a href="../{int(prev['n']):02d}-{prev['slug']}/index.html">← {int(prev['n']):02d} {esc(prev['name'])}</a>
+  <a href="../{int(nxt['n']):02d}-{nxt['slug']}/index.html">{int(nxt['n']):02d} {esc(nxt['name'])} →</a>
 </nav>
 </article>
 </main>"""
@@ -365,7 +365,7 @@ def render_index(cards: list[dict]) -> str:
         n = int(c["n"])
         pol = POL_CLASS.get(c.get("polarity", ""), "pol-neu")
         tiles.append(
-            f'<li><a class="ln-tile {pol}" href="{n:02d}-{c["slug"]}/">'
+            f'<li><a class="ln-tile {pol}" href="{n:02d}-{c["slug"]}/index.html">'
             f'<img src="img/{n:02d}-{c["slug"]}.webp" alt="Карта Ленорман {n:02d} {esc(c["name"])}" loading="lazy">'
             f'<span class="ln-tile-num">{n:02d}</span>'
             f'<span class="ln-tile-name">{esc(c["name"])}</span></a></li>')

@@ -364,10 +364,10 @@ def render_card(card: dict, cards: list[dict], roman: dict[str, dict]) -> str:
         if roman_data else "")
     roman_input = ('<input class="pos-state s-roman" type="radio" name="pos" id="pos-roman">\n' if roman_data else "")
     body = f"""<main class="card-page">
-<nav class="card-crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/cards/">Карты</a> / <span aria-current="page">{escape(name)}</span></nav>
+<nav class="card-crumbs" aria-label="Хлебные крошки"><a href="../index.html">Главная</a> / <a href="index.html">Карты</a> / <span aria-current="page">{escape(name)}</span></nav>
 <article class="tarot-sheet">
 <header class="modal-head">
-<div class="card-scene"><img src="/img/cards/{escape(card['img'])}" alt="{escape(name)} — карта Таро Уэйта" width="132" height="211"></div>
+<div class="card-scene"><img src="../img/cards/{escape(card['img'])}" alt="{escape(name)} — карта Таро Уэйта" width="132" height="211"></div>
 <div class="head-info">
 <p class="m-arcana">{escape(eyebrow_for(card))}</p>
 <h1 class="m-title">{hero_title(card)}</h1>
@@ -405,13 +405,13 @@ def render_index(cards: list[dict], roman: dict[str, dict]) -> str:
             rank_label = ROMAN[card["number"]] if card["type"] == "major" else RANK_ROMAN[card["id"].rsplit("-", 1)[1]]
             tiles.append(
                 f"<li><a class=\"card-tile\" href=\"{slug}.html\">"
-                f"<img src=\"/img/cards/{escape(card['img'])}\" alt=\"{escape(card['name_ru'])}\" loading=\"lazy\" width=\"132\" height=\"211\">"
+                f"<img src=\"../img/cards/{escape(card['img'])}\" alt=\"{escape(card['name_ru'])}\" loading=\"lazy\" width=\"132\" height=\"211\">"
                 f"<span class=\"card-tile-number\">{rank_label}</span>"
                 f"<strong>{escape(card['name_ru'])}</strong></a></li>")
         groups.append(f"<h2 class=\"suit-title\">{escape(label)}</h2>\n<ol class=\"card-grid\" aria-label=\"{escape(label)}\">\n"
                       + "\n".join(tiles) + "\n</ol>")
     body = """<main class="card-page card-catalog">
-<nav class="card-crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <span aria-current="page">Карты</span></nav>
+<nav class="card-crumbs" aria-label="Хлебные крошки"><a href="../index.html">Главная</a> / <span aria-current="page">Карты</span></nav>
 <header class="card-hero">
 <span class="card-symbol" aria-hidden="true">✦</span>
 <p class="card-eyebrow">Все 78 карт колоды Уэйта</p>
@@ -548,12 +548,12 @@ STYLE = """
 
 NAV = """<nav class="main-nav" aria-label="Разделы">
   <div class="main-nav-inner">
-    <a href="/">Главная</a>
-    <a href="/cards/" class="mn-active">Карты</a>
-    <a href="/astrology/">Астрология</a>
-    <a href="/lenormand/">Ленорман</a>
-    <a href="/runes/">Руны</a>
-    <a href="/spreads.html">Расклады</a>
+    <a href="../index.html">Главная</a>
+    <a href="index.html" class="mn-active">Карты</a>
+    <a href="../astrology/index.html">Астрология</a>
+    <a href="../lenormand/index.html">Ленорман</a>
+    <a href="../runes/index.html">Руны</a>
+    <a href="../spreads.html">Расклады</a>
   <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> О проекте</a>
   </div>
 </nav>"""
@@ -582,8 +582,8 @@ def document(title: str, description: str, url: str, body: str, article: bool, o
 <meta property="og:type" content="{'article' if article else 'website'}">
 <meta property="og:url" content="{escape(url, quote=True)}">
 {f'<meta property="og:image" content="{SITE}/img/cards/{escape(og_img, quote=True)}">' if og_img else ''}
-<link rel="stylesheet" href="/css/style.css?v=4.0">
-<link rel="stylesheet" href="/css/astrology.css?v=4.0">
+<link rel="stylesheet" href="../css/style.css?v=4.0">
+<link rel="stylesheet" href="../css/astrology.css?v=4.0">
 <style>{STYLE}</style>
 <script type="application/ld+json">
 {schema}

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lenormand Card Meanings — All 36 Cards and Combinations</title>
+<meta name="description" content="Explore all 36 Lenormand cards: meanings for everyday life, significators, polarity, timing and 1,260 directional card combinations.">
+
+<meta property="og:title" content="Lenormand Card Meanings — All 36 Cards and Combinations">
+<meta property="og:description" content="Explore all 36 Lenormand cards: meanings for everyday life, significators, polarity, timing and 1,260 directional card combinations.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://taro.jetserg.top/en/lenormand/">
+<link rel="stylesheet" href="../../fonts/fonts.css?v=4.0">
+<link rel="stylesheet" href="../../css/style.css?v=4.0">
+<link rel="stylesheet" href="../../lenormand/css/lenormand.css?v=1.5">
+<style>
+/* ── v2: карточный лист в духе Таро ── */
+.tarot-sheet { max-width: 760px; margin: 0 auto; background: linear-gradient(170deg, var(--ln-bg-card), #1b101d);
+  border: 1px solid var(--ln-accent-dim); border-radius: 20px; padding: 26px 22px 30px;
+  box-shadow: 0 18px 50px rgba(0,0,0,.45), 0 0 60px rgba(217,138,166,.1); }
+.sheet-head { display: flex; gap: 24px; align-items: center; margin-bottom: 20px; }
+.sheet-head .card-scene { flex-shrink: 0; }
+.sheet-head .card-scene img { width: 150px; aspect-ratio: 516/909; object-fit: cover; display: block;
+  border-radius: 10px; border: 1px solid var(--ln-accent-dim); box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+.head-info { min-width: 0; }
+.m-arcana { font-size: .8rem; letter-spacing: .25em; text-transform: uppercase; color: var(--ln-accent); margin-bottom: 4px; }
+.m-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 2.3rem); color: var(--ln-accent-bright); line-height: 1.15; margin: 0; }
+.card-number { display: block; font-size: 1.9rem; color: var(--ln-accent); margin-bottom: 4px; }
+.m-en { color: var(--ln-text-dim); font-style: italic; margin: 2px 0 8px; }
+.m-meta { font-size: .92rem; color: var(--ln-text-dim); margin: 0; }
+.m-meta b { color: var(--ln-text); font-weight: 500; }
+/* ── Вкладки (radio, без JS) ── */
+.pos-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid var(--ln-accent-dim); margin-bottom: 18px; }
+.pos-tab { padding: 10px 20px; border: none; border-bottom: 2px solid transparent; color: var(--ln-text-dim);
+  font-family: inherit; font-size: 1rem; cursor: pointer; transition: all .25s; background: none; display: block; }
+.pos-tab:hover { color: var(--ln-text); }
+.pos-state { position: absolute; opacity: 0; pointer-events: none; }
+.pos-state.s-vals:checked ~ .pos-tabs label[for="ln-vals"],
+.pos-state.s-sph:checked ~ .pos-tabs label[for="ln-sph"] {
+  color: var(--ln-accent-bright); border-bottom-color: var(--ln-accent); text-shadow: 0 0 12px rgba(217,138,166,.4); }
+.pos-state.s-pairs:checked ~ .pos-tabs label[for="ln-pairs"] {
+  color: var(--ln-accent-bright); border-bottom-color: var(--ln-accent); text-shadow: 0 0 12px rgba(217,138,166,.4); }
+.pos-pane { display: none; animation: ln-fade .3s ease; }
+.pos-state.s-vals:checked ~ .pos-pane.pane-vals { display: block; }
+.pos-state.s-sph:checked ~ .pos-pane.pane-sph { display: block; }
+.pos-state.s-pairs:checked ~ .pos-pane.pane-pairs { display: block; }
+@keyframes ln-fade { from { opacity: 0; } to { opacity: 1; } }
+/* ── Секции внутри вкладок ── */
+.info-section { margin-bottom: 20px; }
+.info-section h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-weight: 600;
+  letter-spacing: .04em; color: var(--ln-accent); margin-bottom: 7px; display: flex; align-items: center; gap: 9px; }
+.info-section h3::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--ln-accent-dim), transparent); }
+.info-section p { white-space: pre-line; color: var(--ln-text); font-size: .98rem; line-height: 1.65; margin: 0; }
+.kw-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.kw { padding: 5px 14px; border-radius: 999px; background: rgba(217,138,166,.12);
+  border: 1px solid var(--ln-accent-dim); color: var(--ln-accent-bright); font-size: .85rem; }
+.short-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-style: italic;
+  color: var(--ln-accent-bright); padding: 12px 18px; border-left: 3px solid var(--ln-accent);
+  background: rgba(217,138,166,.06); border-radius: 0 10px 10px 0; margin-bottom: 20px; line-height: 1.5; }
+.sig-note { color: var(--ln-text-dim); font-size: .95rem; line-height: 1.6; margin: 0 0 16px; }
+.sig-note b { color: var(--ln-accent); font-weight: 600; }
+/* ── Сочетания ── */
+.pair-note { color: var(--ln-text-dim); font-size: .93rem; line-height: 1.6; margin: 0 0 14px; }
+.pair-list { list-style: none; padding: 0; margin: 0; }
+.pair-list li { padding: 12px 4px; border-top: 1px solid rgba(217,138,166,.14);
+  line-height: 1.6; color: var(--ln-text); font-size: .95rem; }
+.pair-list li:first-child { border-top: none; }
+.pair-list strong { color: var(--ln-accent-bright); font-weight: 600; }
+.pair-people { color: var(--ln-accent); }
+/* ── Каталог ── */
+.ln-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 16px; list-style: none; padding: 0; }
+.ln-grid li { min-width: 0; }
+/* ── Адаптив ── */
+@media (max-width: 640px) {
+  .tarot-sheet { padding: 20px 14px 24px; }
+  .sheet-head { flex-wrap: nowrap; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .sheet-head .card-scene img { width: 104px; }
+  .pos-tab { padding: 9px 12px; font-size: .9rem; }
+  .pos-tab-tab3 { flex-basis: 100%; }
+  .ln-grid { grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 10px; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Lenormand Card Meanings — All 36 Cards and Combinations",
+  "description": "Explore all 36 Lenormand cards: meanings for everyday life, significators, polarity, timing and 1,260 directional card combinations.",
+  "url": "https://taro.jetserg.top/en/lenormand/",
+  "inLanguage": "en"
+}
+</script>
+<!-- Microsoft Clarity -->
+<script>
+    (function(c,l,a,r,i,t,y){{
+        c[a]=c[a]||function(){{(c[a].q=c[a].q||[]).push(arguments)}};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    }})(window, document, "clarity", "script", "yejlmmd6nr");
+</script>
+<link rel="canonical" href="https://taro.jetserg.top/en/lenormand/">
+
+<!-- i18n:seo -->
+<link rel="alternate" hreflang="ru" href="https://taro.jetserg.top/lenormand/">
+<link rel="alternate" hreflang="en" href="https://taro.jetserg.top/en/lenormand/">
+<link rel="alternate" hreflang="x-default" href="https://taro.jetserg.top/lenormand/">
+<!-- /i18n:seo -->
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="stars stars2" aria-hidden="true"></div>
+<nav class="main-nav" aria-label="Sections">
+  <div class="main-nav-inner">
+    <a href="../../index.html"><span class="mn-icon">✦</span> Tarot</a>
+    <a href="../astrology/index.html"><span class="mn-icon">♄</span> Astrology</a>
+    <a href="../runes/index.html"><span class="mn-icon">ᚠ</span> Runes</a>
+    <a href="index.html" class="mn-active"><span class="mn-icon">🂠</span> Lenormand</a>
+    <a href="../numerology/index.html"><span class="mn-icon">❿</span> Numerology</a>
+    <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> About the project</a>
+  <!-- i18n:switch --><a class="mn-language" href="../../lenormand/index.html" hreflang="ru" lang="ru" aria-label="Switch to Russian" style="color:var(--ln-accent,var(--gold));border:1px solid var(--ln-accent-dim,var(--gold));border-radius:6px;padding:6px 10px;white-space:nowrap">RU | EN</a><!-- /i18n:switch --></div>
+</nav>
+<main class="ln-wrap">
+<header class="site-header">
+  <div class="header-inner">
+    <h1 class="site-title"><span class="title-star">🂠</span> Lenormand <span class="title-sub">Oracle · 36 cards</span></h1>
+    <p class="site-tagline">meanings by area of life · timing · 1,260 combinations</p>
+    <p class="ln-intro">Lenormand decks have roots in the eighteenth century and owe their name and enduring appeal to the celebrated French fortune-teller Marie Lenormand, who read cards for prominent figures of her time. The familiar Petit Lenormand has 36 cards with recognisable everyday symbols: the Fox, Ship, Sun, Tree and others. Their direct imagery makes an approachable starting point for learning card reading. Compared with more elaborate systems such as Tarot, Lenormand readings tend to focus on concrete situations and practical questions. Readers may seek quick, clear answers, but the cards do not establish facts or reliably predict events. The historical relationship between the deck and its namesake is explained in the interactive guide.</p>
+  </div>
+</header>
+<p class="ln-note">Card polarity is a working guide, not a verdict: neighbouring cards and the question shape the tone of a reading.</p>
+<a class="wheel-banner ln-banner" href="guide.html">
+  <span class="wb-icon">📖</span>
+  <span class="wb-text"><strong>Lenormand Spreads — An Interactive Guide</strong> — card combinations, small spreads and an interactive Grand Tableau trainer</span>
+  <span class="wb-arrow">→</span>
+</a>
+<ol class="ln-grid">
+<li><a class="ln-tile pol-pos" href="01-vsadnik/index.html"><img src="../../lenormand/img/01-vsadnik.webp" alt="Lenormand card 01 The Rider" loading="lazy"><span class="ln-tile-num">01</span><span class="ln-tile-name">The Rider</span></a></li>
+<li><a class="ln-tile pol-pos" href="02-klever/index.html"><img src="../../lenormand/img/02-klever.webp" alt="Lenormand card 02 The Clover" loading="lazy"><span class="ln-tile-num">02</span><span class="ln-tile-name">The Clover</span></a></li>
+<li><a class="ln-tile pol-neu" href="03-korabl/index.html"><img src="../../lenormand/img/03-korabl.webp" alt="Lenormand card 03 The Ship" loading="lazy"><span class="ln-tile-num">03</span><span class="ln-tile-name">The Ship</span></a></li>
+<li><a class="ln-tile pol-pos" href="04-dom/index.html"><img src="../../lenormand/img/04-dom.webp" alt="Lenormand card 04 The House" loading="lazy"><span class="ln-tile-num">04</span><span class="ln-tile-name">The House</span></a></li>
+<li><a class="ln-tile pol-pos" href="05-derevo/index.html"><img src="../../lenormand/img/05-derevo.webp" alt="Lenormand card 05 The Tree" loading="lazy"><span class="ln-tile-num">05</span><span class="ln-tile-name">The Tree</span></a></li>
+<li><a class="ln-tile pol-neg" href="06-tuchi/index.html"><img src="../../lenormand/img/06-tuchi.webp" alt="Lenormand card 06 The Clouds" loading="lazy"><span class="ln-tile-num">06</span><span class="ln-tile-name">The Clouds</span></a></li>
+<li><a class="ln-tile pol-neg" href="07-zmeya/index.html"><img src="../../lenormand/img/07-zmeya.webp" alt="Lenormand card 07 The Snake" loading="lazy"><span class="ln-tile-num">07</span><span class="ln-tile-name">The Snake</span></a></li>
+<li><a class="ln-tile pol-neg" href="08-grob/index.html"><img src="../../lenormand/img/08-grob.webp" alt="Lenormand card 08 The Coffin" loading="lazy"><span class="ln-tile-num">08</span><span class="ln-tile-name">The Coffin</span></a></li>
+<li><a class="ln-tile pol-pos" href="09-buket/index.html"><img src="../../lenormand/img/09-buket.webp" alt="Lenormand card 09 The Bouquet" loading="lazy"><span class="ln-tile-num">09</span><span class="ln-tile-name">The Bouquet</span></a></li>
+<li><a class="ln-tile pol-neg" href="10-kosa/index.html"><img src="../../lenormand/img/10-kosa.webp" alt="Lenormand card 10 The Scythe" loading="lazy"><span class="ln-tile-num">10</span><span class="ln-tile-name">The Scythe</span></a></li>
+<li><a class="ln-tile pol-neg" href="11-metla/index.html"><img src="../../lenormand/img/11-metla.webp" alt="Lenormand card 11 The Whip" loading="lazy"><span class="ln-tile-num">11</span><span class="ln-tile-name">The Whip</span></a></li>
+<li><a class="ln-tile pol-neu" href="12-sovy/index.html"><img src="../../lenormand/img/12-sovy.webp" alt="Lenormand card 12 The Birds" loading="lazy"><span class="ln-tile-num">12</span><span class="ln-tile-name">The Birds</span></a></li>
+<li><a class="ln-tile pol-neu" href="13-rebenok/index.html"><img src="../../lenormand/img/13-rebenok.webp" alt="Lenormand card 13 The Child" loading="lazy"><span class="ln-tile-num">13</span><span class="ln-tile-name">The Child</span></a></li>
+<li><a class="ln-tile pol-neg" href="14-lisa/index.html"><img src="../../lenormand/img/14-lisa.webp" alt="Lenormand card 14 The Fox" loading="lazy"><span class="ln-tile-num">14</span><span class="ln-tile-name">The Fox</span></a></li>
+<li><a class="ln-tile pol-neu" href="15-medved/index.html"><img src="../../lenormand/img/15-medved.webp" alt="Lenormand card 15 The Bear" loading="lazy"><span class="ln-tile-num">15</span><span class="ln-tile-name">The Bear</span></a></li>
+<li><a class="ln-tile pol-pos" href="16-zvezda/index.html"><img src="../../lenormand/img/16-zvezda.webp" alt="Lenormand card 16 The Stars" loading="lazy"><span class="ln-tile-num">16</span><span class="ln-tile-name">The Stars</span></a></li>
+<li><a class="ln-tile pol-pos" href="17-aist/index.html"><img src="../../lenormand/img/17-aist.webp" alt="Lenormand card 17 The Stork" loading="lazy"><span class="ln-tile-num">17</span><span class="ln-tile-name">The Stork</span></a></li>
+<li><a class="ln-tile pol-pos" href="18-sobaka/index.html"><img src="../../lenormand/img/18-sobaka.webp" alt="Lenormand card 18 The Dog" loading="lazy"><span class="ln-tile-num">18</span><span class="ln-tile-name">The Dog</span></a></li>
+<li><a class="ln-tile pol-neu" href="19-bashnya/index.html"><img src="../../lenormand/img/19-bashnya.webp" alt="Lenormand card 19 The Tower" loading="lazy"><span class="ln-tile-num">19</span><span class="ln-tile-name">The Tower</span></a></li>
+<li><a class="ln-tile pol-pos" href="20-sad/index.html"><img src="../../lenormand/img/20-sad.webp" alt="Lenormand card 20 The Garden" loading="lazy"><span class="ln-tile-num">20</span><span class="ln-tile-name">The Garden</span></a></li>
+<li><a class="ln-tile pol-neg" href="21-gora/index.html"><img src="../../lenormand/img/21-gora.webp" alt="Lenormand card 21 The Mountain" loading="lazy"><span class="ln-tile-num">21</span><span class="ln-tile-name">The Mountain</span></a></li>
+<li><a class="ln-tile pol-neu" href="22-razvilka/index.html"><img src="../../lenormand/img/22-razvilka.webp" alt="Lenormand card 22 The Crossroads" loading="lazy"><span class="ln-tile-num">22</span><span class="ln-tile-name">The Crossroads</span></a></li>
+<li><a class="ln-tile pol-neg" href="23-mishi/index.html"><img src="../../lenormand/img/23-mishi.webp" alt="Lenormand card 23 The Mice" loading="lazy"><span class="ln-tile-num">23</span><span class="ln-tile-name">The Mice</span></a></li>
+<li><a class="ln-tile pol-pos" href="24-serdce/index.html"><img src="../../lenormand/img/24-serdce.webp" alt="Lenormand card 24 The Heart" loading="lazy"><span class="ln-tile-num">24</span><span class="ln-tile-name">The Heart</span></a></li>
+<li><a class="ln-tile pol-neu" href="25-kolco/index.html"><img src="../../lenormand/img/25-kolco.webp" alt="Lenormand card 25 The Ring" loading="lazy"><span class="ln-tile-num">25</span><span class="ln-tile-name">The Ring</span></a></li>
+<li><a class="ln-tile pol-neu" href="26-kniga/index.html"><img src="../../lenormand/img/26-kniga.webp" alt="Lenormand card 26 The Book" loading="lazy"><span class="ln-tile-num">26</span><span class="ln-tile-name">The Book</span></a></li>
+<li><a class="ln-tile pol-neu" href="27-pismo/index.html"><img src="../../lenormand/img/27-pismo.webp" alt="Lenormand card 27 The Letter" loading="lazy"><span class="ln-tile-num">27</span><span class="ln-tile-name">The Letter</span></a></li>
+<li><a class="ln-tile pol-neu" href="28-muzhchina/index.html"><img src="../../lenormand/img/28-muzhchina.webp" alt="Lenormand card 28 The Man" loading="lazy"><span class="ln-tile-num">28</span><span class="ln-tile-name">The Man</span></a></li>
+<li><a class="ln-tile pol-neu" href="29-zhenshina/index.html"><img src="../../lenormand/img/29-zhenshina.webp" alt="Lenormand card 29 The Woman" loading="lazy"><span class="ln-tile-num">29</span><span class="ln-tile-name">The Woman</span></a></li>
+<li><a class="ln-tile pol-neu" href="30-lilii/index.html"><img src="../../lenormand/img/30-lilii.webp" alt="Lenormand card 30 The Lilies" loading="lazy"><span class="ln-tile-num">30</span><span class="ln-tile-name">The Lilies</span></a></li>
+<li><a class="ln-tile pol-pos" href="31-solnce/index.html"><img src="../../lenormand/img/31-solnce.webp" alt="Lenormand card 31 The Sun" loading="lazy"><span class="ln-tile-num">31</span><span class="ln-tile-name">The Sun</span></a></li>
+<li><a class="ln-tile pol-neu" href="32-luna/index.html"><img src="../../lenormand/img/32-luna.webp" alt="Lenormand card 32 The Moon" loading="lazy"><span class="ln-tile-num">32</span><span class="ln-tile-name">The Moon</span></a></li>
+<li><a class="ln-tile pol-pos" href="33-klyuch/index.html"><img src="../../lenormand/img/33-klyuch.webp" alt="Lenormand card 33 The Key" loading="lazy"><span class="ln-tile-num">33</span><span class="ln-tile-name">The Key</span></a></li>
+<li><a class="ln-tile pol-pos" href="34-ryby/index.html"><img src="../../lenormand/img/34-ryby.webp" alt="Lenormand card 34 The Fish" loading="lazy"><span class="ln-tile-num">34</span><span class="ln-tile-name">The Fish</span></a></li>
+<li><a class="ln-tile pol-pos" href="35-yakor/index.html"><img src="../../lenormand/img/35-yakor.webp" alt="Lenormand card 35 The Anchor" loading="lazy"><span class="ln-tile-num">35</span><span class="ln-tile-name">The Anchor</span></a></li>
+<li><a class="ln-tile pol-neg" href="36-krest/index.html"><img src="../../lenormand/img/36-krest.webp" alt="Lenormand card 36 The Cross" loading="lazy"><span class="ln-tile-num">36</span><span class="ln-tile-name">The Cross</span></a></li>
+</ol>
+</main>
+<footer class="site-footer">
+<p class="ln-note">For reference, reflection and entertainment. Card readings do not establish facts, diagnose illness or predict an inevitable future. This is not medical, legal, financial or investment advice; seek qualified help for decisions in those areas.</p>
+  <p>A personal reference guide · not an official report or research article · JeT</p>
+
+<div class="footer-contact">
+  <p class="fc-lead">For questions, collaboration or advertising enquiries, write to me — I reply personally:</p>
+  <div class="fc-links">
+    <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+    <span class="fc-sep" aria-hidden="true">·</span>
+    <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+  </div>
+  <p class="fc-lead">I keep this project going through enthusiasm, without advertising or visitor fees. If you find it useful, a contribution of any size helps me develop the guide further.</p>
+  <div class="fc-links fc-donate">
+    <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Donatello (UA-friendly)</a>
+    <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+  </div>
+</div>
+</footer>
+<!-- Модалка «О проекте» -->
+<div class="about-backdrop" id="aboutModal" aria-hidden="true">
+  <div class="about-dialog" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+    <button class="about-close" type="button" aria-label="Close">&times;</button>
+    <h2 id="aboutTitle"><span class="title-star">✦</span> About the project</h2>
+    <p>I put this personal guide to Tarot, Lenormand, runes and astrology together on my own, with no team, office or investors. It runs on enthusiasm, without intrusive advertising, registration or paid subscriptions. All the material is freely accessible.</p>
+    <p>Creating and maintaining the guide takes hundreds of hours: writing, translating interpretations, designing pages and looking after the server. If it has helped you, a contribution is a welcome thank-you and supports new sections, cards, combinations and spreads.</p>
+    <div class="about-donate">
+      <a href="https://donatello.to/JeTJarret" target="_blank" rel="noopener" class="fc-donate-btn">♥ Support via Donatello (UA-friendly)</a>
+      <a href="https://www.privat24.ua/send/4x8ww" target="_blank" rel="noopener" class="fc-donate-btn">♥ Privat24 (UA-friendly)</a>
+    </div>
+    <p class="about-contact">Questions, collaboration ideas or advertising enquiries? Write to me — I reply personally:</p>
+    <div class="about-links">
+      <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+      <span aria-hidden="true">·</span>
+      <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.email-link').forEach(function(a){
+        var e=a.dataset.u+'@'+a.dataset.d;
+        a.href='mailto:'+e;
+        a.textContent='E-mail: '+e;
+      });
+    })();
+    </script>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('aboutBtn'), m=document.getElementById('aboutModal');
+  if(!btn||!m) return;
+  function open(e){e.preventDefault();m.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){m.classList.remove('open');document.body.style.overflow='';}
+  btn.addEventListener('click',open);
+  m.querySelector('.about-close').addEventListener('click',close);
+  m.addEventListener('click',function(e){if(e.target===m)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+</body>
+</html>

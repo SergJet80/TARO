@@ -1,0 +1,1548 @@
+{
+  "source": "numerology/index.html",
+  "policy": {
+    "other_sections": "ru",
+    "cultural_note": "(A feature of the Eastern European esoteric tradition.)",
+    "practice_terms": [
+      "spiritual practice",
+      "modern spiritual schools",
+      "contemporary practice"
+    ],
+    "donations": [
+      "Donatello (UA-friendly)",
+      "Privat24 (UA-friendly)"
+    ]
+  },
+  "strings": [
+    {
+      "id": "0",
+      "ru": "Нумерология и масти Таро — системное чтение Младших Арканов | Справочник",
+      "en": "Numerology and Tarot Suits — Reading the Minor Arcana as a System | Reference Guide"
+    },
+    {
+      "id": "1",
+      "ru": "Как читать 40 числовых Младших Арканов как систему: число задаёт этап, масть — сферу. Цикл из 10 этапов, 4 масти, шпаргалка 10×4 и алгоритм чтения без зубрёжки.",
+      "en": "Read the 40 numbered Minor Arcana as a system: the number gives the stage, the suit the area of life. Ten stages, four suits, a 10×4 reference table, and a method without rote memorization."
+    },
+    {
+      "id": "2",
+      "ru": "Разделы",
+      "en": "Sections"
+    },
+    {
+      "id": "3",
+      "ru": "Таро",
+      "en": "Tarot"
+    },
+    {
+      "id": "4",
+      "ru": "Астрология",
+      "en": "Astrology"
+    },
+    {
+      "id": "5",
+      "ru": "Руны",
+      "en": "Runes"
+    },
+    {
+      "id": "6",
+      "ru": "Ленорман",
+      "en": "Lenormand"
+    },
+    {
+      "id": "7",
+      "ru": "Нумерология",
+      "en": "Numerology"
+    },
+    {
+      "id": "8",
+      "ru": "О проекте",
+      "en": "About the project"
+    },
+    {
+      "id": "9",
+      "ru": "и масти Таро",
+      "en": "and Tarot suits"
+    },
+    {
+      "id": "10",
+      "ru": "Системное чтение числовых Младших Арканов: 10 этапов × 4 сферы = 40 карт",
+      "en": "Reading the numbered Minor Arcana as a system: 10 stages × 4 areas of life = 40 cards"
+    },
+    {
+      "id": "11",
+      "ru": "✦ Система",
+      "en": "✦ The system"
+    },
+    {
+      "id": "12",
+      "ru": "❿ Числа 1–10",
+      "en": "❿ Numbers 1–10"
+    },
+    {
+      "id": "13",
+      "ru": "▦ Шпаргалка",
+      "en": "▦ Quick reference"
+    },
+    {
+      "id": "14",
+      "ru": "☾ Старшие и итоги",
+      "en": "☾ Major Arcana and conclusions"
+    },
+    {
+      "id": "15",
+      "ru": "Системное чтение числовых Младших Арканов",
+      "en": "Reading the numbered Minor Arcana as a system"
+    },
+    {
+      "id": "16",
+      "ru": "НУМЕРОЛОГИЯ И МАСТИ ТАРО",
+      "en": "NUMEROLOGY AND TAROT SUITS"
+    },
+    {
+      "id": "17",
+      "ru": "Системный принцип чтения числовых Младших Арканов",
+      "en": "A systematic approach to reading the numbered Minor Arcana"
+    },
+    {
+      "id": "18",
+      "ru": "От Туза до Десятки: число задаёт этап развития ситуации, масть — сферу, в которой этот этап проявляется",
+      "en": "From Ace to Ten: the number gives the stage of a situation’s development; the suit gives the area in which that stage unfolds"
+    },
+    {
+      "id": "19",
+      "ru": "Учебная статья для справочника по Таро",
+      "en": "An educational article for a Tarot reference guide"
+    },
+    {
+      "id": "20",
+      "ru": "Основа: логика лекции по системным значениям числовых арканов; недостающие фрагменты реконструированы и сверены с традицией Rider–Waite–Smith и современными учебными источниками.",
+      "en": "Basis: the logic of a lecture on the systematic meanings of the numbered Arcana; missing passages have been reconstructed and checked against the Rider–Waite–Smith tradition and contemporary teaching sources."
+    },
+    {
+      "id": "21",
+      "ru": "Ключевая формула",
+      "en": "The key formula"
+    },
+    {
+      "id": "22",
+      "ru": "ЗНАЧЕНИЕ КАРТЫ = ЧИСЛО × МАСТЬ × КОНТЕКСТ СЮЖЕТА",
+      "en": "CARD MEANING = NUMBER × SUIT × CONTEXT OF THE SCENE"
+    },
+    {
+      "id": "23",
+      "ru": "Формула не является математическим умножением — это способ соединить два слоя смысла.",
+      "en": "The formula is not mathematical multiplication — it is a way to combine two layers of meaning."
+    },
+    {
+      "id": "24",
+      "ru": "Формула не является математическим умножением. Это способ соединить два слоя смысла.",
+      "en": "The formula is not mathematical multiplication. It is a way to combine two layers of meaning."
+    },
+    {
+      "id": "25",
+      "ru": "Число отвечает на вопрос: «Что происходит с ситуацией как с процессом?» — она зарождается, выбирает направление, развивается, закрепляется, переживает кризис, восстанавливается, проходит испытание, входит в закономерный процесс, подводит итог или завершается.",
+      "en": "The number answers the question: ‘What is happening to the situation as a process?’ It begins, chooses a direction, develops, consolidates, encounters a crisis, recovers, faces a test, enters a predictable process, reaches an outcome, or comes to a close."
+    },
+    {
+      "id": "26",
+      "ru": "Масть отвечает на вопрос: «С чем именно это происходит?» — с волей и действием, с мыслями и решениями, с чувствами и отношениями или с материальными ресурсами.",
+      "en": "The suit answers the question: ‘What exactly is this happening to?’ Will and action, thoughts and decisions, feelings and relationships, or material resources."
+    },
+    {
+      "id": "27",
+      "ru": "Сюжет карты уточняет, какой именно оттенок приобрело соединение числа и масти. Поэтому одинаковое число может выглядеть благоприятно в одной масти и тяжело в другой.",
+      "en": "The card’s scene clarifies the particular nuance taken on by the combination of number and suit. This is why the same number can look favorable in one suit and difficult in another."
+    },
+    {
+      "id": "28",
+      "ru": "Эта идея хорошо согласуется с самим А. Э. Уэйтом: описывая Младшие Арканы, он подчёркивал, что их символика зависит от конкретного значения числа в соединении с конкретной мастью. Современные системные школы Таро также используют числовые паттерны как средство понимания и запоминания карт.",
+      "en": "This idea is consistent with A. E. Waite himself: in describing the Minor Arcana, he emphasized that their symbolism depends on the particular significance of a number combined with a particular suit. Contemporary systematic Tarot schools also use numerical patterns to help people understand and remember the cards."
+    },
+    {
+      "id": "29",
+      "ru": "Зачем нужна нумерология Младших Арканов",
+      "en": "Why use numerology for the Minor Arcana?"
+    },
+    {
+      "id": "30",
+      "ru": "У начинающего таролога есть понятная проблема: сорок числовых карт Младших Арканов кажутся сорока отдельными значениями, которые нужно заучить. Но их можно читать как систему. В основе этой статьи лежит именно такой подход: число показывает, на каком этапе находится ситуация, а масть — в какой сфере жизни этот этап разворачивается.",
+      "en": "A beginning Tarot reader faces an understandable problem: the forty numbered Minor Arcana seem like forty separate meanings to memorize. Yet they can be read as a system. This article takes precisely that approach: the number shows the stage the situation has reached, while the suit shows the area of life in which that stage unfolds."
+    },
+    {
+      "id": "31",
+      "ru": "Такой способ не отменяет классические значения карт и не заменяет изображение. Он объясняет, почему карта имеет именно такое значение. Вместо механической памяти появляется логика: если понятны десять числовых принципов и четыре масти, большинство трактовок можно восстановить даже без справочника.",
+      "en": "This method does not discard the classic card meanings or replace the image. It explains why a card has its particular meaning. Logic takes the place of rote memory: once the ten numerical principles and four suits are understood, most interpretations can be reconstructed even without a reference guide."
+    },
+    {
+      "id": "32",
+      "ru": "Четыре масти как четыре сферы жизни",
+      "en": "Four suits as four areas of life"
+    },
+    {
+      "id": "33",
+      "ru": "Масть",
+      "en": "Suit"
+    },
+    {
+      "id": "34",
+      "ru": "Стихия",
+      "en": "Element"
+    },
+    {
+      "id": "35",
+      "ru": "Главная сфера",
+      "en": "Main area"
+    },
+    {
+      "id": "36",
+      "ru": "Ключевой вопрос",
+      "en": "Key question"
+    },
+    {
+      "id": "37",
+      "ru": "Динамика",
+      "en": "Dynamics"
+    },
+    {
+      "id": "38",
+      "ru": "Жезлы",
+      "en": "Wands"
+    },
+    {
+      "id": "39",
+      "ru": "Огонь",
+      "en": "Fire"
+    },
+    {
+      "id": "40",
+      "ru": "воля, действие, энергия, амбиции, самопроявление, творчество, сексуальный импульс",
+      "en": "will, action, energy, ambition, self-expression, creativity, sexual impulse"
+    },
+    {
+      "id": "41",
+      "ru": "Чего я хочу и что я делаю?",
+      "en": "What do I want, and what am I doing?"
+    },
+    {
+      "id": "42",
+      "ru": "активная, наружу",
+      "en": "active, outward"
+    },
+    {
+      "id": "43",
+      "ru": "Мечи",
+      "en": "Swords"
+    },
+    {
+      "id": "44",
+      "ru": "Воздух",
+      "en": "Air"
+    },
+    {
+      "id": "45",
+      "ru": "мышление, решения, информация, конфликт, границы, истина",
+      "en": "thinking, decisions, information, conflict, boundaries, truth"
+    },
+    {
+      "id": "46",
+      "ru": "Что я понимаю, решаю или отсекаю?",
+      "en": "What do I understand, decide, or cut away?"
+    },
+    {
+      "id": "47",
+      "ru": "активная, ментальная",
+      "en": "active, mental"
+    },
+    {
+      "id": "48",
+      "ru": "Кубки",
+      "en": "Cups"
+    },
+    {
+      "id": "49",
+      "ru": "Вода",
+      "en": "Water"
+    },
+    {
+      "id": "50",
+      "ru": "эмоции, отношения, привязанность, удовольствие, переживание",
+      "en": "emotions, relationships, attachment, pleasure, experience"
+    },
+    {
+      "id": "51",
+      "ru": "Что я чувствую и к чему эмоционально вовлечён?",
+      "en": "What do I feel, and what am I emotionally involved in?"
+    },
+    {
+      "id": "52",
+      "ru": "воспринимающая, внутрь",
+      "en": "receptive, inward"
+    },
+    {
+      "id": "53",
+      "ru": "Пентакли",
+      "en": "Pentacles"
+    },
+    {
+      "id": "54",
+      "ru": "Земля",
+      "en": "Earth"
+    },
+    {
+      "id": "55",
+      "ru": "деньги, работа, тело, здоровье как ресурс, имущество, безопасность, практический результат",
+      "en": "money, work, the body, health as a resource, property, security, practical results"
+    },
+    {
+      "id": "56",
+      "ru": "Чем я располагаю и что могу воплотить?",
+      "en": "What do I have available, and what can I bring into being?"
+    },
+    {
+      "id": "57",
+      "ru": "воспринимающая, материальная",
+      "en": "receptive, material"
+    },
+    {
+      "id": "58",
+      "ru": "В логике лекции Жезлы и Мечи рассматриваются как более «мужские» или активные масти: их энергия требует инициативы, действия, давления, решения. Кубки и Пентакли — как более «женские» или принимающие: здесь важны способность воспринять, удержать, наполниться и сохранить. Это особенно выразительно показано на Тузах: Жезл и Меч удерживаются рукой, а Кубок и Пентакль словно подаются на открытой ладони.",
+      "en": "Within the lecture’s framework, Wands and Swords are considered more ‘masculine’ or active suits: their energy calls for initiative, action, pressure, and decisions. Cups and Pentacles are more ‘feminine’ or receptive: the ability to receive, hold, become filled, and preserve matters here. This is especially vivid in the Aces: a hand grips the Wand and Sword, while the Cup and Pentacle seem to be offered on an open palm."
+    },
+    {
+      "id": "59",
+      "ru": "Примечание. Такие категории относятся к символическому языку эзотерической традиции, а не к биологическому полу. Упоминание здоровья в масти Пентаклей означает телесный/ресурсный слой символики карты и не заменяет медицинскую оценку.",
+      "en": "Note. These categories belong to the symbolic language of an esoteric tradition, rather than biological sex. References to health in the suit of Pentacles concern the bodily/resource layer of the card’s symbolism and do not replace medical assessment."
+    },
+    {
+      "id": "60",
+      "ru": "Десять чисел как один жизненный цикл",
+      "en": "Ten numbers as one life cycle"
+    },
+    {
+      "id": "61",
+      "ru": "импульс → выбор → развитие → закрепление → кризис → восстановление → испытание → закономерный процесс → итог → завершение",
+      "en": "impulse → choice → development → consolidation → crisis → recovery → test → predictable process → outcome → completion"
+    },
+    {
+      "id": "62",
+      "ru": "Число",
+      "en": "Number"
+    },
+    {
+      "id": "63",
+      "ru": "Этап",
+      "en": "Stage"
+    },
+    {
+      "id": "64",
+      "ru": "Смысл",
+      "en": "Meaning"
+    },
+    {
+      "id": "65",
+      "ru": "Туз / 1",
+      "en": "Ace / 1"
+    },
+    {
+      "id": "66",
+      "ru": "Импульс",
+      "en": "Impulse"
+    },
+    {
+      "id": "67",
+      "ru": "Возникновение чистой энергии масти, возможность, толчок.",
+      "en": "The emergence of the suit’s pure energy: an opportunity, an impetus."
+    },
+    {
+      "id": "68",
+      "ru": "Выбор и подготовка",
+      "en": "Choice and preparation"
+    },
+    {
+      "id": "69",
+      "ru": "Дуальность, соотнесение двух полюсов, план, баланс, первый шаг к осуществлению.",
+      "en": "Duality, relating two poles, a plan, balance, the first step toward realization."
+    },
+    {
+      "id": "70",
+      "ru": "Проявление и развитие",
+      "en": "Manifestation and development"
+    },
+    {
+      "id": "71",
+      "ru": "Энергия выходит наружу: появляется первый заметный результат, расширение, взаимодействие.",
+      "en": "Energy moves outward: the first visible result, expansion, and interaction appear."
+    },
+    {
+      "id": "72",
+      "ru": "Стабилизация и фиксация",
+      "en": "Stabilization and consolidation"
+    },
+    {
+      "id": "73",
+      "ru": "Полученное закрепляется, создаются границы и форма; стабильность может превратиться в застой.",
+      "en": "What has been gained is consolidated; boundaries and form are established. Stability can become stagnation."
+    },
+    {
+      "id": "74",
+      "ru": "Кризис и перелом",
+      "en": "Crisis and a turning point"
+    },
+    {
+      "id": "75",
+      "ru": "Стабильность нарушается; появляется дефицит, конфликт или испытание, заставляющее меняться.",
+      "en": "Stability is disrupted; a shortage, conflict, or test appears and demands change."
+    },
+    {
+      "id": "76",
+      "ru": "Восстановление и гармонизация",
+      "en": "Recovery and harmonization"
+    },
+    {
+      "id": "77",
+      "ru": "После кризиса возникает помощь, обмен, примирение, движение к более ровному состоянию.",
+      "en": "After a crisis come help, exchange, reconciliation, and movement toward a more balanced state."
+    },
+    {
+      "id": "78",
+      "ru": "Испытание и самостоятельность",
+      "en": "A test and independence"
+    },
+    {
+      "id": "79",
+      "ru": "Гармония снова нарушается: человек должен выработать собственную реакцию и пройти проверку.",
+      "en": "Harmony is disrupted again: a person must develop their own response and meet the test."
+    },
+    {
+      "id": "80",
+      "ru": "Закон процесса и равновесие",
+      "en": "The law of the process and balance"
+    },
+    {
+      "id": "81",
+      "ru": "Ситуация входит в поток последствий: меньше сопротивления, больше принятия закономерности и правильного действия.",
+      "en": "The situation enters a flow of consequences: less resistance, more acceptance of the underlying pattern and appropriate action."
+    },
+    {
+      "id": "82",
+      "ru": "Кульминация и личный итог",
+      "en": "Culmination and a personal outcome"
+    },
+    {
+      "id": "83",
+      "ru": "Энергия масти достигает зрелости; результат уже почти сформирован и переживается в значительной мере индивидуально.",
+      "en": "The suit’s energy reaches maturity; the result has almost taken shape and is experienced largely on an individual level."
+    },
+    {
+      "id": "84",
+      "ru": "Завершение и предел",
+      "en": "Completion and a limit"
+    },
+    {
+      "id": "85",
+      "ru": "Цикл доводится до логического конца; энергия масти либо становится полнотой, либо перегружается собственным избытком.",
+      "en": "The cycle reaches its logical conclusion; the suit’s energy either becomes fullness or is overloaded by its own excess."
+    },
+    {
+      "id": "86",
+      "ru": "1. Туз — чистый импульс масти",
+      "en": "1. The Ace — the suit’s pure impulse"
+    },
+    {
+      "id": "87",
+      "ru": "Туз — не готовый результат, а концентрированная возможность. Это энергия масти до того, как она получила устойчивую форму. В лекции Тузы описаны как толчок, «взрыв» энергии, момент, когда что-то становится возможным и требует дальнейшего пути.",
+      "en": "An Ace is a concentrated possibility, rather than a finished result. It is the suit’s energy before it has taken a stable form. The lecture describes Aces as an impetus, a ‘burst’ of energy, the moment when something becomes possible and calls for a path forward."
+    },
+    {
+      "id": "88",
+      "ru": "Туз Жезлов",
+      "en": "Ace of Wands"
+    },
+    {
+      "id": "89",
+      "ru": "«Я хочу». Воля, энтузиазм, сексуальная и творческая энергия, сильное желание начать. Это импульс, который просит действия: идея ещё не реализована, но топлива уже много.",
+      "en": "‘I want.’ Will, enthusiasm, sexual and creative energy, a strong desire to begin. This impulse calls for action: the idea has not yet been realized, but there is already plenty of fuel."
+    },
+    {
+      "id": "90",
+      "ru": "Туз Мечей",
+      "en": "Ace of Swords"
+    },
+    {
+      "id": "91",
+      "ru": "«Я знаю». Озарение, ясная мысль, решение, постановка цели, интеллектуальный прорыв. Меч отсекает прежнее и задаёт новое направление; поэтому карта может обозначать жёсткую определённость или ультиматум.",
+      "en": "‘I know.’ Insight, a clear thought, a decision, setting a goal, an intellectual breakthrough. The Sword cuts away what came before and sets a new direction; the card can therefore indicate firm certainty or an ultimatum."
+    },
+    {
+      "id": "92",
+      "ru": "Туз Кубков",
+      "en": "Ace of Cups"
+    },
+    {
+      "id": "93",
+      "ru": "«Я чувствую». Эмоции переполняют сосуд: радость, вдохновение, влюблённость, душевный подъём, открытость переживанию. Это не гарантия длительных отношений, а мощное начало эмоционального потока.",
+      "en": "‘I feel.’ Emotions overflow the vessel: joy, inspiration, falling in love, uplift, openness to experience. This is a powerful beginning of an emotional flow, rather than a guarantee of a lasting relationship."
+    },
+    {
+      "id": "94",
+      "ru": "Туз Пентаклей",
+      "en": "Ace of Pentacles"
+    },
+    {
+      "id": "95",
+      "ru": "«Мне дан ресурс». Возможность процветания, практический шанс, деньги, работа, тело и здоровье как запас сил, полезное приобретение. Важно не путать дар с готовым достижением: на карте есть путь к арке и горе — ресурс получен, но вершину ещё предстоит пройти.",
+      "en": "‘I am given a resource.’ The possibility of prosperity, a practical opening, money, work, the body and health as a reserve of strength, a useful acquisition. It is essential to distinguish a gift from a completed achievement: the card shows a path toward an arch and a mountain — the resource has been received, but the summit still lies ahead."
+    },
+    {
+      "id": "96",
+      "ru": "Как запомнить: Туз даёт сырой потенциал: масть показывает, чем именно можно воспользоваться",
+      "en": "Memory aid: the Ace gives raw potential; the suit shows exactly what can be put to use"
+    },
+    {
+      "id": "97",
+      "ru": "2. Двойка — дуальность, выбор и первый шаг к осуществлению",
+      "en": "2. The Two — duality, choice, and the first step toward realization"
+    },
+    {
+      "id": "98",
+      "ru": "После чистого импульса появляется второй полюс. Теперь нужно соотнести «хочу» с реальностью, себя — с другим человеком, один вариант — с другим. Поэтому двойки несут парность, выбор, баланс, планирование и временами остановку: движение ещё не набрало силу.",
+      "en": "After the pure impulse, a second pole appears. Now ‘I want’ must be related to reality, oneself to another person, and one option to another. Twos therefore bring pairing, choice, balance, planning, and sometimes a pause: movement has not yet gathered strength."
+    },
+    {
+      "id": "99",
+      "ru": "Двойка Жезлов",
+      "en": "Two of Wands"
+    },
+    {
+      "id": "100",
+      "ru": "Воля начинает смотреть вперёд. Человек уже располагает некоторой силой, но оценивает горизонты, сравнивает варианты и строит планы. Это расширение намерения без полноценного старта.",
+      "en": "Will begins to look ahead. A person already has some power at their disposal but is assessing horizons, comparing options, and making plans. Intention expands without a full start."
+    },
+    {
+      "id": "101",
+      "ru": "Двойка Мечей",
+      "en": "Two of Swords"
+    },
+    {
+      "id": "102",
+      "ru": "Разум удерживает два противоположных решения. Конфликт временно заморожен, эмоции взяты под контроль, а окончательный выбор отложен. Это не мир как глубокое согласие, а управляемое равновесие: «лучше плохой мир, чем хорошая война».",
+      "en": "The mind holds two opposing decisions. Conflict is temporarily frozen, emotions are under control, and the final choice is postponed. This is managed equilibrium rather than peace as deep agreement: ‘a bad peace is better than a good war.’"
+    },
+    {
+      "id": "103",
+      "ru": "Двойка Кубков",
+      "en": "Two of Cups"
+    },
+    {
+      "id": "104",
+      "ru": "Эмоциональная энергия Туза встречает другого человека. Возникают взаимность, симпатия, союз, договорённость, притяжение. Двойка здесь проявляется буквально как пара: чувства получают ответ и начинают строить связь.",
+      "en": "The Ace’s emotional energy meets another person. Reciprocity, affection, union, agreement, and attraction arise. The Two appears here literally as a pair: feelings are returned and begin to form a connection."
+    },
+    {
+      "id": "105",
+      "ru": "Двойка Пентаклей",
+      "en": "Two of Pentacles"
+    },
+    {
+      "id": "106",
+      "ru": "Два материальных потока приходится удерживать одновременно. Отсюда баланс бюджета, задач, ресурсов и обязанностей, необходимость приспосабливаться к изменчивым обстоятельствам. Это ещё не стабильность, а искусство не уронить ни один из двух пентаклей.",
+      "en": "Two material flows must be kept going at once. Hence the balancing of budgets, tasks, resources, and responsibilities, and the need to adapt to changing circumstances. This is not yet stability, but the art of dropping neither pentacle."
+    },
+    {
+      "id": "107",
+      "ru": "Как запомнить: Двойка ставит рядом два полюса: нужно соединить, сравнить, выбрать или удержать баланс",
+      "en": "Memory aid: the Two places two poles side by side; they must be joined, compared, chosen between, or kept in balance"
+    },
+    {
+      "id": "108",
+      "ru": "3. Тройка — проявление, развитие и первый видимый результат",
+      "en": "3. The Three — manifestation, development, and the first visible result"
+    },
+    {
+      "id": "109",
+      "ru": "Тройка выводит процесс из внутренней подготовки во внешний мир. Если в двойке ситуация сравнивалась и выбирала направление, то в тройке выбранное начинает проявляться. Это число роста, развития, взаимодействия и первого результата. Но характер результата зависит от масти.",
+      "en": "The Three brings the process out of internal preparation and into the world. While the situation weighed options and chose a direction in the Two, the chosen course begins to manifest in the Three. This is the number of growth, development, interaction, and the first result. The nature of that result, however, depends on the suit."
+    },
+    {
+      "id": "110",
+      "ru": "Тройка Жезлов",
+      "en": "Three of Wands"
+    },
+    {
+      "id": "111",
+      "ru": "Планы Двойки Жезлов начинают расширяться в реальном мире. Это предприятие, торговля, развитие, выход за прежние границы, ожидание отдачи от уже запущенного процесса. Герой смотрит на корабли: действие совершено, теперь появляется перспектива роста.",
+      "en": "The plans of the Two of Wands begin to expand in the real world. This is enterprise, trade, development, moving beyond former boundaries, and waiting for a return from a process already under way. The figure looks at ships: action has been taken, and the prospect of growth now appears."
+    },
+    {
+      "id": "112",
+      "ru": "Тройка Мечей",
+      "en": "Three of Swords"
+    },
+    {
+      "id": "113",
+      "ru": "Мыслительный конфликт перестаёт быть абстрактным и становится пережитой реальностью. Разделение, неприятная правда, разрыв, боль от осознания — мысль «пронзает сердце». В системной логике это проявление ментального противоречия на уровне факта.",
+      "en": "A conflict in thought ceases to be abstract and becomes lived reality. Separation, an unwelcome truth, a breakup, the pain of realization — a thought ‘pierces the heart.’ In this systematic framework, a mental contradiction becomes an actual event."
+    },
+    {
+      "id": "114",
+      "ru": "Тройка Кубков",
+      "en": "Three of Cups"
+    },
+    {
+      "id": "115",
+      "ru": "Чувство выходит за пределы пары и становится общим эмоциональным пространством: дружбой, праздником, поддержкой, радостью в кругу людей. Это эмоция, которой можно поделиться.",
+      "en": "Feeling extends beyond a couple and becomes a shared emotional space: friendship, celebration, support, and joy among people. This is an emotion that can be shared."
+    },
+    {
+      "id": "116",
+      "ru": "Тройка Пентаклей",
+      "en": "Three of Pentacles"
+    },
+    {
+      "id": "117",
+      "ru": "Ресурс превращается в мастерство и конкретную работу. Появляются профессиональное взаимодействие, обучение, совместное строительство результата, признание качества. Материальная энергия становится видимым делом.",
+      "en": "A resource becomes skill and concrete work. Professional cooperation, learning, building a result together, and recognition of quality appear. Material energy becomes visible work."
+    },
+    {
+      "id": "118",
+      "ru": "Как запомнить: Тройка делает внутреннее внешним: выбранное направление начинает проявляться",
+      "en": "Memory aid: the Three makes the internal external; the chosen direction begins to manifest"
+    },
+    {
+      "id": "119",
+      "ru": "4. Четвёрка — стабильность, форма и фиксация",
+      "en": "4. The Four — stability, form, and consolidation"
+    },
+    {
+      "id": "120",
+      "ru": "Четвёрка строит форму. После роста Тройки возникает необходимость закрепить результат, установить границы и сохранить достигнутое. Поэтому четвёрки несут стабильность, защищённость и порядок — но именно здесь появляется риск застыть, закрыться или слишком крепко держаться за существующее.",
+      "en": "The Four builds form. After the Three’s growth comes a need to consolidate the result, establish boundaries, and preserve what has been achieved. Fours therefore bring stability, protection, and order — but this is also where the risk of becoming stuck, shutting down, or holding too tightly to what exists appears."
+    },
+    {
+      "id": "121",
+      "ru": "Четвёрка Жезлов",
+      "en": "Four of Wands"
+    },
+    {
+      "id": "122",
+      "ru": "Энергия получает устойчивую площадку: дом, территория, завершённый этап, праздник результата, чувство «мы здесь закрепились». Это наиболее лёгкая форма четвёрочной стабильности.",
+      "en": "Energy gains a stable base: a home, territory, a completed stage, celebrating a result, a sense that ‘we have established ourselves here.’ This is the lightest expression of the Four’s stability."
+    },
+    {
+      "id": "123",
+      "ru": "Четвёрка Мечей",
+      "en": "Four of Swords"
+    },
+    {
+      "id": "124",
+      "ru": "Разум останавливается. После напряжения нужен перерыв, тишина, отступление, восстановление, размышление. Стабильность Мечей выглядит как прекращение активного конфликта и ментальная неподвижность.",
+      "en": "The mind stops. After tension, a pause, silence, retreat, recovery, and reflection are needed. Stability in Swords looks like the end of active conflict and mental stillness."
+    },
+    {
+      "id": "125",
+      "ru": "Четвёрка Кубков",
+      "en": "Four of Cups"
+    },
+    {
+      "id": "126",
+      "ru": "Эмоциональная сфера фиксируется настолько, что перестаёт откликаться на новое. Пресыщение, скука, закрытость, недовольство: человек уже находится внутри привычного эмоционального состояния и не принимает предлагаемый ему новый кубок.",
+      "en": "The emotional sphere becomes so fixed that it no longer responds to anything new. Satiety, boredom, withdrawal, dissatisfaction: a person is already enclosed within a familiar emotional state and does not accept the new cup being offered."
+    },
+    {
+      "id": "127",
+      "ru": "Четвёрка Пентаклей",
+      "en": "Four of Pentacles"
+    },
+    {
+      "id": "128",
+      "ru": "Материальная стабильность превращается в удержание. Накопления, контроль, собственность, безопасность, желание сохранить достигнутое. В плюсе — разумная защита ресурсов; в тени — страх потерять и чрезмерная зажатость.",
+      "en": "Material stability becomes holding on. Savings, control, ownership, security, a wish to preserve what has been achieved. At its best, sensible protection of resources; in its shadow, fear of loss and excessive rigidity."
+    },
+    {
+      "id": "129",
+      "ru": "Как запомнить: Четвёрка закрепляет: в плюсе — опора, в минусе — застой и чрезмерная фиксация",
+      "en": "Memory aid: the Four consolidates; at its best, support; at its worst, stagnation and excessive fixation"
+    },
+    {
+      "id": "130",
+      "ru": "5. Пятёрка — кризис и разрушение прежнего равновесия",
+      "en": "5. The Five — crisis and the breakdown of the previous balance"
+    },
+    {
+      "id": "131",
+      "ru": "Пятёрка находится в середине десятичного цикла и ломает устойчивость Четвёрки. Её задача — вывести ситуацию из зоны комфорта. В разных мастях кризис переживается по-разному: через борьбу, поражение, горе или нехватку ресурса.",
+      "en": "The Five stands at the midpoint of the ten-stage cycle and breaks the Four’s stability. Its task is to move the situation out of its comfort zone. The crisis is experienced differently in each suit: through struggle, defeat, grief, or a shortage of resources."
+    },
+    {
+      "id": "132",
+      "ru": "Пятёрка Жезлов",
+      "en": "Five of Wands"
+    },
+    {
+      "id": "133",
+      "ru": "Кризис энергии проявляется как конкуренция и хаотичная борьба. Несколько воль сталкиваются друг с другом: спор, соревнование, конфликт интересов, необходимость доказать своё право на место.",
+      "en": "The crisis of energy appears as competition and chaotic struggle. Several wills collide: an argument, a contest, conflicting interests, a need to prove one’s right to a place."
+    },
+    {
+      "id": "134",
+      "ru": "Пятёрка Мечей",
+      "en": "Five of Swords"
+    },
+    {
+      "id": "135",
+      "ru": "Кризис мысли и конфликта становится жёстким: поражение, разрушение отношений, унижение, победа слишком высокой ценой, потеря уважения. В логике лекции это одна из самых тяжёлых пятёрок, потому что кризисное число соединяется с самой конфликтной мастью.",
+      "en": "The crisis of thought and conflict becomes severe: defeat, broken relationships, humiliation, victory at too high a price, loss of respect. In the lecture’s framework, this is one of the hardest Fives because the number of crisis meets the suit most associated with conflict."
+    },
+    {
+      "id": "136",
+      "ru": "Пятёрка Кубков",
+      "en": "Five of Cups"
+    },
+    {
+      "id": "137",
+      "ru": "Кризис чувств переживается как утрата и разочарование. Внимание захвачено перевёрнутыми кубками, поэтому оставшийся эмоциональный ресурс временно не замечается. Важно: карта говорит не только о потере, но и о сужении восприятия из-за горя.",
+      "en": "The crisis of feeling is experienced as loss and disappointment. Attention is captured by the overturned cups, so the remaining emotional resource temporarily goes unnoticed. The card concerns not only loss but also the narrowing of perception through grief."
+    },
+    {
+      "id": "138",
+      "ru": "Пятёрка Пентаклей",
+      "en": "Five of Pentacles"
+    },
+    {
+      "id": "139",
+      "ru": "Кризис материи — это нехватка. Денег, здоровья как ресурса, поддержки, устойчивости, тепла, времени или других практических средств. Масштаб не задан: суть карты именно в ощущении дефицита и выпадении из прежней безопасности.",
+      "en": "A material crisis means a shortage: of money, health as a resource, support, stability, warmth, time, or other practical means. No scale is specified: the essence of the card is the sense of lack and the loss of former security."
+    },
+    {
+      "id": "140",
+      "ru": "Как запомнить: Пятёрка ломает прежнюю устойчивость и заставляет меняться",
+      "en": "Memory aid: the Five breaks the previous stability and demands change"
+    },
+    {
+      "id": "141",
+      "ru": "6. Шестёрка — восстановление, обмен и выход из кризиса",
+      "en": "6. The Six — recovery, exchange, and a way out of crisis"
+    },
+    {
+      "id": "142",
+      "ru": "Шестёрка следует за разрушением Пятёрки и стремится собрать систему заново. В исходной лекции подчёркивается взаимодействие между людьми: шестёрки редко существуют в полной изоляции. Это число помощи, согласования, обмена и более гармоничного движения.",
+      "en": "The Six follows the Five’s disruption and seeks to put the system back together. The original lecture emphasizes interaction between people: Sixes rarely exist in complete isolation. This is the number of help, coordination, exchange, and more harmonious movement."
+    },
+    {
+      "id": "143",
+      "ru": "Шестёрка Жезлов",
+      "en": "Six of Wands"
+    },
+    {
+      "id": "144",
+      "ru": "После конкуренции Пятёрки появляется победитель и признание. Энергия собирается в одном направлении, усилия получают общественный отклик, человек видит подтверждение своей силы.",
+      "en": "After the Five’s competition, a winner and recognition emerge. Energy comes together in one direction, efforts receive a public response, and a person sees their strength affirmed."
+    },
+    {
+      "id": "145",
+      "ru": "Шестёрка Мечей",
+      "en": "Six of Swords"
+    },
+    {
+      "id": "146",
+      "ru": "Разум ищет не победу в конфликте, а выход из него. Дипломатия, переход, уход от острого противостояния, помощь в переправе, дорога. Это способность не рубить дальше, а переместиться в более спокойное пространство.",
+      "en": "The mind seeks a way out of conflict rather than victory within it. Diplomacy, transition, leaving acute confrontation, help with a crossing, a journey. This is the ability to stop cutting and move into calmer territory."
+    },
+    {
+      "id": "147",
+      "ru": "Шестёрка Кубков",
+      "en": "Six of Cups"
+    },
+    {
+      "id": "148",
+      "ru": "Эмоции восстанавливаются через тепло, память, знакомое чувство, заботу и обмен. Отсюда ностальгия, доброжелательность, поддержка, возвращение к тому, что наполняет душевный ресурс.",
+      "en": "Emotions recover through warmth, memory, familiar feelings, care, and exchange. Hence nostalgia, goodwill, support, and a return to what replenishes emotional resources."
+    },
+    {
+      "id": "149",
+      "ru": "Шестёрка Пентаклей",
+      "en": "Six of Pentacles"
+    },
+    {
+      "id": "150",
+      "ru": "Материальный кризис Пятёрки сменяется распределением ресурса. Помощь, подарок, оплата, поддержка, благотворительность, баланс «дать — получить». При этом весы напоминают: ресурс распределяется не бесконечно, а по мере и условиям.",
+      "en": "The Five’s material crisis gives way to the distribution of resources. Help, a gift, payment, support, charity, the balance of ‘give and receive.’ The scales are a reminder that resources are distributed within limits and conditions, rather than without end."
+    },
+    {
+      "id": "151",
+      "ru": "Как запомнить: Шестёрка собирает систему после кризиса через помощь, обмен и согласование",
+      "en": "Memory aid: the Six rebuilds the system after a crisis through help, exchange, and coordination"
+    },
+    {
+      "id": "152",
+      "ru": "7. Семёрка — испытание, индивидуальный путь и собственная реакция",
+      "en": "7. The Seven — a test, an individual path, and one’s own response"
+    },
+    {
+      "id": "153",
+      "ru": "Шестёрка дала относительное равновесие, но Семёрка снова нарушает его. Теперь проблема не просто случается — человек должен показать, как он умеет действовать самостоятельно. В лекции проводится параллель с Колесницей: свой путь, собственная задача, необходимость удерживать направление.",
+      "en": "The Six offered relative equilibrium, but the Seven disrupts it again. Now a problem does more than simply occur — a person must show how well they can act independently. The lecture draws a parallel with the Chariot: one’s own path, one’s own task, the need to maintain direction."
+    },
+    {
+      "id": "154",
+      "ru": "Семёрка Жезлов",
+      "en": "Seven of Wands"
+    },
+    {
+      "id": "155",
+      "ru": "Испытание воли: нужно защищать завоёванное, стоять на своём, выдерживать давление. Позиция героя выгодна, но её всё равно приходится отстаивать.",
+      "en": "A test of will: one must defend what has been won, stand firm, and withstand pressure. The figure holds an advantageous position, but must still defend it."
+    },
+    {
+      "id": "156",
+      "ru": "Семёрка Мечей",
+      "en": "Seven of Swords"
+    },
+    {
+      "id": "157",
+      "ru": "Испытание ума: прямой путь может быть закрыт, поэтому включаются смекалка, обходной манёвр, стратегия, хитрость. Решение может выглядеть сомнительным с точки зрения окружающих; главное в системной трактовке — попытка выйти из проблемы нестандартно.",
+      "en": "A test of the mind: the direct route may be blocked, bringing ingenuity, an indirect maneuver, strategy, and cunning into play. The solution may look questionable to others; the key to the systematic interpretation is the attempt to resolve a problem in an unconventional way."
+    },
+    {
+      "id": "158",
+      "ru": "Семёрка Кубков",
+      "en": "Seven of Cups"
+    },
+    {
+      "id": "159",
+      "ru": "Испытание чувств: вариантов и желаний слишком много. Фантазии, соблазны, эмоциональная путаница и сложность отличить реальное желание от привлекательного образа.",
+      "en": "A test of feeling: there are too many options and desires. Fantasies, temptations, emotional confusion, and difficulty distinguishing a real desire from an appealing image."
+    },
+    {
+      "id": "160",
+      "ru": "Семёрка Пентаклей",
+      "en": "Seven of Pentacles"
+    },
+    {
+      "id": "161",
+      "ru": "Испытание терпения: труд вложен, но желаемый материальный результат ещё не созрел. Ресурс не потерян — он находится в процессе роста. Задача — не уничтожить результат нетерпением.",
+      "en": "A test of patience: work has been invested, but the desired material result has not yet ripened. The resource is not lost — it is still growing. The task is to avoid destroying the result through impatience."
+    },
+    {
+      "id": "162",
+      "ru": "Как запомнить: Семёрка проверяет личную стратегию: как именно человек справится с задачей",
+      "en": "Memory aid: the Seven tests personal strategy — exactly how a person will handle the task"
+    },
+    {
+      "id": "163",
+      "ru": "8. Восьмёрка — закон последствий, равновесие и движение в потоке",
+      "en": "8. The Eight — the law of consequences, balance, and moving with the flow"
+    },
+    {
+      "id": "164",
+      "ru": "В логике автора Восьмёрка противопоставлена Семёрке. В Семёрке человек активно сопротивлялся и искал собственный способ пройти испытание; в Восьмёрке многое уже задано последствиями предыдущих действий. Задача — увидеть закономерность, принять рамки ситуации и действовать в соответствии с ними. Слово «карма» здесь полезнее понимать не как мистический приговор, а как принцип причины и следствия.",
+      "en": "In the author’s framework, the Eight contrasts with the Seven. In the Seven, a person actively resisted and sought their own way through a test; in the Eight, much is already determined by the consequences of previous actions. The task is to see the pattern, accept the situation’s constraints, and act accordingly. ‘Karma’ is more usefully understood here as the principle of cause and effect than as a mystical verdict."
+    },
+    {
+      "id": "165",
+      "ru": "Восьмёрка Жезлов",
+      "en": "Eight of Wands"
+    },
+    {
+      "id": "166",
+      "ru": "Энергия уже разогналась. События быстро движутся, возникает поток сообщений, поездок, действий и возможностей. Главное — вовремя отреагировать и не пытаться затормозить то, что уже вошло в движение.",
+      "en": "Energy has already gathered speed. Events move quickly, creating a flow of messages, journeys, actions, and opportunities. The key is to respond in time and avoid trying to slow down what is already in motion."
+    },
+    {
+      "id": "167",
+      "ru": "Восьмёрка Мечей",
+      "en": "Eight of Swords"
+    },
+    {
+      "id": "168",
+      "ru": "Последствия ментальных установок превращаются в ограничение. Человек связан представлениями, страхом, дефицитом информации или внешними рамками. Важный оттенок: часть тюрьмы может поддерживаться собственным убеждением, что выхода нет.",
+      "en": "The consequences of mental attitudes become restrictions. A person is bound by ideas, fear, lack of information, or external constraints. One significant nuance: part of the prison may be sustained by their own belief that there is no way out."
+    },
+    {
+      "id": "169",
+      "ru": "Восьмёрка Кубков",
+      "en": "Eight of Cups"
+    },
+    {
+      "id": "170",
+      "ru": "Эмоциональный цикл требует ухода. Человек сам оставляет то, что раньше приносило удовлетворение, потому что продолжение больше не соответствует внутреннему состоянию. Это добровольный отказ и переход дальше.",
+      "en": "The emotional cycle calls for departure. A person willingly leaves behind what once brought satisfaction because continuing no longer fits their inner state. This is a voluntary renunciation and a move onward."
+    },
+    {
+      "id": "171",
+      "ru": "Восьмёрка Пентаклей",
+      "en": "Eight of Pentacles"
+    },
+    {
+      "id": "172",
+      "ru": "Материальный закон прост: результат складывается из повторяемого труда. Ремесло, дисциплина, практика, оттачивание навыка, работа до автоматизма. Не нужно каждую минуту проверять результат — нужно правильно выполнять процесс.",
+      "en": "The material rule is simple: results are built through repeated work. Craft, discipline, practice, honing a skill, working until it becomes automatic. There is no need to check the result every minute — the process needs to be carried out correctly."
+    },
+    {
+      "id": "173",
+      "ru": "Как запомнить: Восьмёрка показывает закономерный процесс и последствия: меньше борьбы, больше правильного движения внутри сложившихся условий",
+      "en": "Memory aid: the Eight shows a predictable process and its consequences — less struggle, more appropriate movement within established conditions"
+    },
+    {
+      "id": "174",
+      "ru": "9. Девятка — кульминация масти и личный итог",
+      "en": "9. The Nine — the suit’s culmination and a personal outcome"
+    },
+    {
+      "id": "175",
+      "ru": "Девятка — последняя ступень перед завершением. Энергия масти уже созрела, и человек в значительной степени остаётся один на один с тем, что накопил. В исходной лекции проводится параллель с Отшельником: на иллюстрациях девяток заметна тема отделённости, автономности или внутреннего переживания результата.",
+      "en": "The Nine is the final step before completion. The suit’s energy has matured, and a person is largely left face to face with what they have accumulated. The original lecture draws a parallel with the Hermit: the illustrations of the Nines show a theme of separateness, autonomy, or an inward experience of the result."
+    },
+    {
+      "id": "176",
+      "ru": "Девятка Жезлов",
+      "en": "Nine of Wands"
+    },
+    {
+      "id": "177",
+      "ru": "Кульминация опыта действия. Человек знает, что нападение или трудность возможны, поэтому заранее держит оборону. Опыт становится защитой, но вместе с ним может появиться повышенная настороженность.",
+      "en": "The culmination of experience gained through action. A person knows that an attack or difficulty is possible and prepares their defenses in advance. Experience becomes protection, but may also bring heightened vigilance."
+    },
+    {
+      "id": "178",
+      "ru": "Девятка Мечей",
+      "en": "Nine of Swords"
+    },
+    {
+      "id": "179",
+      "ru": "Кульминация ментальной масти проявляется как перегрузка сознания: тревога, страх, ночные мысли, чувство отчаяния, многократное прокручивание проблемы. Здесь разум достиг предела собственной болезненной активности.",
+      "en": "The mental suit culminates in an overloaded mind: anxiety, fear, thoughts at night, despair, repeatedly going over a problem. Here the mind has reached the limit of its own painful activity."
+    },
+    {
+      "id": "180",
+      "ru": "Девятка Кубков",
+      "en": "Nine of Cups"
+    },
+    {
+      "id": "181",
+      "ru": "Кульминация чувств — удовлетворённость, удовольствие, эмоциональная сытость, исполненное желание. Человек сидит перед своими кубками как перед уже собранным запасом удовольствия. Теневая сторона — самодовольство или замыкание на собственном комфорте.",
+      "en": "The culmination of feelings is satisfaction, pleasure, emotional fullness, a fulfilled wish. The figure sits before their cups as though before a store of pleasure already gathered. The shadow is complacency or retreating into personal comfort."
+    },
+    {
+      "id": "182",
+      "ru": "Девятка Пентаклей",
+      "en": "Nine of Pentacles"
+    },
+    {
+      "id": "183",
+      "ru": "Кульминация материальной масти — самостоятельность, достаток, комфорт, способность пользоваться плодами труда. Это ресурс, который уже принадлежит человеку и позволяет не зависеть от немедленной помощи окружающих.",
+      "en": "The material suit culminates in independence, prosperity, comfort, and the ability to enjoy the fruits of one’s work. This resource already belongs to the person and frees them from dependence on immediate help from others."
+    },
+    {
+      "id": "184",
+      "ru": "Как запомнить: Девятка — почти готовый итог масти, который человек уже ощущает как свой личный результат",
+      "en": "Memory aid: the Nine is the suit’s nearly completed outcome, already experienced as one’s personal result"
+    },
+    {
+      "id": "185",
+      "ru": "10. Десятка — завершение, полнота и предел энергии масти",
+      "en": "10. The Ten — completion, fullness, and the limit of the suit’s energy"
+    },
+    {
+      "id": "186",
+      "ru": "Десятка доводит начатое Тузом до логического конца. Поэтому это одновременно результат и порог нового цикла. В благоприятных мастях полнота выглядит как завершённое счастье или устойчивое наследие; в напряжённых — как перегрузка или окончательное разрушение. Смысл один: дальше развивать ситуацию в прежней форме уже почти невозможно.",
+      "en": "The Ten brings what the Ace began to its logical conclusion. It is therefore both a result and the threshold of a new cycle. In favorable suits, fullness looks like complete happiness or a lasting legacy; in tense suits, it looks like overload or final destruction. The meaning is the same: developing the situation further in its previous form is almost impossible."
+    },
+    {
+      "id": "187",
+      "ru": "Десятка Жезлов",
+      "en": "Ten of Wands"
+    },
+    {
+      "id": "188",
+      "ru": "Энергии и задач стало слишком много. Человек действительно многое получил и несёт результат собственных усилий, но успех превращается в груз обязанностей. Это предел огня: «я могу» становится «я тащу всё на себе».",
+      "en": "There is too much energy and too many tasks. The person has indeed gained much and carries the result of their own efforts, but success becomes a burden of responsibilities. This is the limit of fire: ‘I can’ becomes ‘I carry everything myself.’"
+    },
+    {
+      "id": "189",
+      "ru": "Десятка Мечей",
+      "en": "Ten of Swords"
+    },
+    {
+      "id": "190",
+      "ru": "Конфликт и ментальное напряжение доходят до точки, после которой продолжать прежний сценарий нельзя. Болезненный конец, крах идеи, окончательное поражение или признание того, что этап завершён. Парадокс карты в том, что дно одновременно прекращает дальнейшее падение.",
+      "en": "Conflict and mental tension reach a point beyond which the old scenario cannot continue. A painful ending, the collapse of an idea, final defeat, or the recognition that a stage is over. The card’s paradox is that hitting bottom also puts an end to further falling."
+    },
+    {
+      "id": "191",
+      "ru": "Десятка Кубков",
+      "en": "Ten of Cups"
+    },
+    {
+      "id": "192",
+      "ru": "Эмоциональная энергия достигает полноты: гармония, любовь, семейное или групповое чувство принадлежности, удовлетворённость отношениями. Это уже не личное удовольствие Девятки, а эмоциональная система, в которую включены другие люди.",
+      "en": "Emotional energy reaches fullness: harmony, love, a sense of belonging within a family or group, satisfaction in relationships. This is no longer the Nine’s personal pleasure but an emotional system that includes other people."
+    },
+    {
+      "id": "193",
+      "ru": "Десятка Пентаклей",
+      "en": "Ten of Pentacles"
+    },
+    {
+      "id": "194",
+      "ru": "Материальный результат становится устойчивой системой: дом, семья, имущество, наследие, капитал, традиция, долгосрочная безопасность. Ресурс выходит за рамки одного человека и может передаваться дальше.",
+      "en": "A material result becomes a lasting system: home, family, property, legacy, capital, tradition, long-term security. The resource extends beyond one person and can be passed on."
+    },
+    {
+      "id": "195",
+      "ru": "Как запомнить: Десятка доводит масть до предела и закрывает цикл, готовя переход к следующему",
+      "en": "Memory aid: the Ten takes the suit to its limit and closes the cycle, preparing the transition to the next one"
+    },
+    {
+      "id": "196",
+      "ru": "Шпаргалка: 40 карт через одну систему",
+      "en": "Quick reference: 40 cards through one system"
+    },
+    {
+      "id": "197",
+      "ru": "Скелет значения, который легко восстановить в памяти. Не заменяет подробные трактовки.",
+      "en": "An outline of meaning that is easy to recall. It does not replace detailed interpretations."
+    },
+    {
+      "id": "198",
+      "ru": "Принцип",
+      "en": "Principle"
+    },
+    {
+      "id": "199",
+      "ru": "Туз",
+      "en": "Ace"
+    },
+    {
+      "id": "200",
+      "ru": "импульс",
+      "en": "impulse"
+    },
+    {
+      "id": "201",
+      "ru": "Жезлы: желание, старт, энергия",
+      "en": "Wands: desire, a start, energy"
+    },
+    {
+      "id": "202",
+      "ru": "Мечи: идея, ясность, решение",
+      "en": "Swords: an idea, clarity, a decision"
+    },
+    {
+      "id": "203",
+      "ru": "Кубки: эмоциональный подъём",
+      "en": "Cups: emotional uplift"
+    },
+    {
+      "id": "204",
+      "ru": "Пентакли: шанс, ресурс, возможность",
+      "en": "Pentacles: a chance, a resource, an opportunity"
+    },
+    {
+      "id": "205",
+      "ru": "выбор / баланс",
+      "en": "choice / balance"
+    },
+    {
+      "id": "206",
+      "ru": "планы, горизонты",
+      "en": "plans, horizons"
+    },
+    {
+      "id": "207",
+      "ru": "пауза между решениями",
+      "en": "a pause between decisions"
+    },
+    {
+      "id": "208",
+      "ru": "союз, взаимность",
+      "en": "union, reciprocity"
+    },
+    {
+      "id": "209",
+      "ru": "баланс ресурсов",
+      "en": "balancing resources"
+    },
+    {
+      "id": "210",
+      "ru": "проявление / рост",
+      "en": "manifestation / growth"
+    },
+    {
+      "id": "211",
+      "ru": "расширение, предприятие",
+      "en": "expansion, enterprise"
+    },
+    {
+      "id": "212",
+      "ru": "болезненная правда, разделение",
+      "en": "painful truth, separation"
+    },
+    {
+      "id": "213",
+      "ru": "праздник, дружба",
+      "en": "celebration, friendship"
+    },
+    {
+      "id": "214",
+      "ru": "мастерство, совместная работа",
+      "en": "skill, working together"
+    },
+    {
+      "id": "215",
+      "ru": "стабильность / фиксация",
+      "en": "stability / consolidation"
+    },
+    {
+      "id": "216",
+      "ru": "закреплённый успех, дом",
+      "en": "consolidated success, home"
+    },
+    {
+      "id": "217",
+      "ru": "покой, отступление",
+      "en": "rest, retreat"
+    },
+    {
+      "id": "218",
+      "ru": "пресыщение, закрытость",
+      "en": "satiety, withdrawal"
+    },
+    {
+      "id": "219",
+      "ru": "удержание, безопасность",
+      "en": "holding on, security"
+    },
+    {
+      "id": "220",
+      "ru": "кризис",
+      "en": "crisis"
+    },
+    {
+      "id": "221",
+      "ru": "конкуренция, спор",
+      "en": "competition, an argument"
+    },
+    {
+      "id": "222",
+      "ru": "поражение, жёсткий конфликт",
+      "en": "defeat, severe conflict"
+    },
+    {
+      "id": "223",
+      "ru": "утрата, разочарование",
+      "en": "loss, disappointment"
+    },
+    {
+      "id": "224",
+      "ru": "нехватка ресурса",
+      "en": "a shortage of resources"
+    },
+    {
+      "id": "225",
+      "ru": "восстановление",
+      "en": "recovery"
+    },
+    {
+      "id": "226",
+      "ru": "победа, признание",
+      "en": "victory, recognition"
+    },
+    {
+      "id": "227",
+      "ru": "переход, дипломатия",
+      "en": "transition, diplomacy"
+    },
+    {
+      "id": "228",
+      "ru": "тепло, память, поддержка",
+      "en": "warmth, memory, support"
+    },
+    {
+      "id": "229",
+      "ru": "помощь, распределение",
+      "en": "help, distribution"
+    },
+    {
+      "id": "230",
+      "ru": "испытание",
+      "en": "a test"
+    },
+    {
+      "id": "231",
+      "ru": "оборона позиции",
+      "en": "defending a position"
+    },
+    {
+      "id": "232",
+      "ru": "хитрость, обходной путь",
+      "en": "cunning, an indirect route"
+    },
+    {
+      "id": "233",
+      "ru": "иллюзии, путаница желаний",
+      "en": "illusions, confused desires"
+    },
+    {
+      "id": "234",
+      "ru": "ожидание результата",
+      "en": "waiting for a result"
+    },
+    {
+      "id": "235",
+      "ru": "закон процесса",
+      "en": "the law of the process"
+    },
+    {
+      "id": "236",
+      "ru": "скорость, поток событий",
+      "en": "speed, a flow of events"
+    },
+    {
+      "id": "237",
+      "ru": "ограничение, ментальная тюрьма",
+      "en": "restriction, a mental prison"
+    },
+    {
+      "id": "238",
+      "ru": "добровольный уход",
+      "en": "voluntary departure"
+    },
+    {
+      "id": "239",
+      "ru": "дисциплина, ремесло",
+      "en": "discipline, craft"
+    },
+    {
+      "id": "240",
+      "ru": "кульминация",
+      "en": "culmination"
+    },
+    {
+      "id": "241",
+      "ru": "защита опытом",
+      "en": "protection through experience"
+    },
+    {
+      "id": "242",
+      "ru": "тревога, предел мыслей",
+      "en": "anxiety, the limit of thought"
+    },
+    {
+      "id": "243",
+      "ru": "удовлетворение",
+      "en": "satisfaction"
+    },
+    {
+      "id": "244",
+      "ru": "самостоятельный достаток",
+      "en": "independent prosperity"
+    },
+    {
+      "id": "245",
+      "ru": "завершение / предел",
+      "en": "completion / a limit"
+    },
+    {
+      "id": "246",
+      "ru": "бремя ответственности",
+      "en": "the burden of responsibility"
+    },
+    {
+      "id": "247",
+      "ru": "болезненный конец",
+      "en": "a painful ending"
+    },
+    {
+      "id": "248",
+      "ru": "эмоциональная полнота",
+      "en": "emotional fullness"
+    },
+    {
+      "id": "249",
+      "ru": "семья, наследие, устойчивость",
+      "en": "family, legacy, stability"
+    },
+    {
+      "id": "250",
+      "ru": "Практический алгоритм: значение без зубрёжки",
+      "en": "A practical method: meaning without rote memorization"
+    },
+    {
+      "id": "251",
+      "ru": "Назовите масть. Определите сферу: действие/воля, ум/решение, чувства/отношения или материальные ресурсы.",
+      "en": "Name the suit. Identify the area: action/will, mind/decision, feelings/relationships, or material resources."
+    },
+    {
+      "id": "252",
+      "ru": "Назовите число. Определите этап процесса по десятичному циклу.",
+      "en": "Name the number. Identify the stage of the process within the ten-stage cycle."
+    },
+    {
+      "id": "253",
+      "ru": "Соедините два слоя одной фразой. Например: «5 + Пентакли = кризис материального ресурса»; «4 + Кубки = эмоциональная фиксация»; «9 + Мечи = кульминация мыслительного напряжения».",
+      "en": "Combine the two layers in one phrase. For example: ‘5 + Pentacles = a crisis of material resources’; ‘4 + Cups = emotional fixation’; ‘9 + Swords = the culmination of mental tension.’"
+    },
+    {
+      "id": "254",
+      "ru": "Посмотрите на сюжет. Изображение уточняет форму: что делает герой, куда направлено движение, есть ли другие люди, что удерживается или теряется.",
+      "en": "Look at the scene. The image specifies the form: what the figure is doing, the direction of movement, whether other people are present, and what is being held or lost."
+    },
+    {
+      "id": "255",
+      "ru": "Верните карту в вопрос. Одна и та же карта по-разному звучит в вопросах о работе, отношениях, планах, внутреннем состоянии или сроках.",
+      "en": "Return the card to the question. The same card reads differently in questions about work, relationships, plans, one’s inner state, or timing."
+    },
+    {
+      "id": "256",
+      "ru": "Только потом добавляйте нюансы школы. Классические ключевые слова, перевёрнутое положение, соседние карты, стихии и другие системы должны уточнять базовую конструкцию, а не подменять её.",
+      "en": "Only then add the nuances of a particular school. Classic keywords, reversed positions, neighboring cards, elements, and other systems should refine the basic structure rather than replace it."
+    },
+    {
+      "id": "257",
+      "ru": "Примеры системного разбора",
+      "en": "Examples of systematic interpretation"
+    },
+    {
+      "id": "258",
+      "ru": "5 = кризис; Пентакли = ресурс. Получаем: кризис ресурса → нехватка денег, сил, здоровья как физического ресурса, поддержки или устойчивости.",
+      "en": "5 = crisis; Pentacles = a resource. This gives: a crisis of resources → a lack of money, strength, health as a physical resource, support, or stability."
+    },
+    {
+      "id": "259",
+      "ru": "3 = проявление и развитие; Кубки = чувства. Получаем: чувства выходят во внешний круг → совместная радость, дружба, праздник, эмоциональная поддержка.",
+      "en": "3 = manifestation and development; Cups = feelings. This gives: feelings extend into a wider circle → shared joy, friendship, celebration, emotional support."
+    },
+    {
+      "id": "260",
+      "ru": "4 = фиксация и остановка; Мечи = ум и конфликт. Получаем: остановка умственной/конфликтной активности → пауза, отступление, отдых, восстановление.",
+      "en": "4 = consolidation and a pause; Swords = mind and conflict. This gives: mental/conflict activity stops → a pause, retreat, rest, recovery."
+    },
+    {
+      "id": "261",
+      "ru": "7 = испытание; Пентакли = практический результат. Получаем: испытание материального процесса → результат ещё не созрел, нужно терпение и оценка вложенного труда.",
+      "en": "7 = a test; Pentacles = a practical result. This gives: a test of the material process → the result has not yet ripened; patience and an assessment of the work invested are needed."
+    },
+    {
+      "id": "262",
+      "ru": "10 = предел и завершение; Жезлы = действие и нагрузка. Получаем: действий и ответственности накоплено до предела → успех превращается в тяжёлую ношу.",
+      "en": "10 = a limit and completion; Wands = action and workload. This gives: action and responsibility have accumulated to their limit → success becomes a heavy burden."
+    },
+    {
+      "id": "263",
+      "ru": "Почему одинаковое число даёт разные карты",
+      "en": "Why the same number produces different cards"
+    },
+    {
+      "id": "264",
+      "ru": "Четвёрка стабилизирует. В Жезлах это может быть праздник закреплённого успеха, в Мечах — остановка и отдых, в Кубках — эмоциональное застывание, в Пентаклях — удержание имущества.",
+      "en": "The Four stabilizes. In Wands, this may be a celebration of consolidated success; in Swords, a pause and rest; in Cups, emotional stagnation; in Pentacles, holding on to property."
+    },
+    {
+      "id": "265",
+      "ru": "Девятка кульминирует. В Кубках это удовлетворение, в Пентаклях — независимость, в Жезлах — накопленный оборонительный опыт, а в Мечах — максимальная нагрузка тревожной мысли.",
+      "en": "The Nine brings culmination. In Cups, this is satisfaction; in Pentacles, independence; in Wands, accumulated defensive experience; in Swords, the maximum strain of anxious thought."
+    },
+    {
+      "id": "266",
+      "ru": "Десятка завершает. В Кубках полнота переживается как счастье, в Пентаклях — как устойчивое наследие, в Жезлах — как перегрузка достигнутым, в Мечах — как окончательный конец разрушительного сценария.",
+      "en": "The Ten completes. In Cups, fullness is experienced as happiness; in Pentacles, as a lasting legacy; in Wands, as being overloaded by what has been achieved; in Swords, as the definitive end of a destructive scenario."
+    },
+    {
+      "id": "267",
+      "ru": "Связь чисел со Старшими Арканами",
+      "en": "Connections between numbers and the Major Arcana"
+    },
+    {
+      "id": "268",
+      "ru": "Полезная ассоциация, но не жёсткое правило: Старший Аркан — общий архетип, числовая карта — его бытовое проявление в масти.",
+      "en": "A useful association rather than a strict rule: the Major Arcanum is a general archetype; the numbered card is its everyday expression within a suit."
+    },
+    {
+      "id": "269",
+      "ru": "III Императрица помогает запомнить Тройку как рост, плодотворность и проявление результата.",
+      "en": "III The Empress helps us remember the Three as growth, fruitfulness, and a result becoming visible."
+    },
+    {
+      "id": "270",
+      "ru": "IV Император хорошо поддерживает идею Четвёрки как структуры, границ и устойчивости.",
+      "en": "IV The Emperor supports the idea of the Four as structure, boundaries, and stability."
+    },
+    {
+      "id": "271",
+      "ru": "VI Влюблённые напоминают о теме соединения и согласования, которая особенно заметна в Шестёрках.",
+      "en": "VI The Lovers recalls the theme of joining and alignment that is especially apparent in the Sixes."
+    },
+    {
+      "id": "272",
+      "ru": "VII Колесница — движение своим путём, необходимость удерживать позицию и проходить испытание; эта ассоциация прямо присутствует в лекции.",
+      "en": "VII The Chariot represents moving along one’s own path, the need to hold a position, and meeting a test; this association is explicitly present in the lecture."
+    },
+    {
+      "id": "273",
+      "ru": "IX Отшельник — индивидуальное подведение итогов и отделённость; эта параллель также заявлена в лекции.",
+      "en": "IX The Hermit represents an individual assessment of results and separateness; this parallel is also stated in the lecture."
+    },
+    {
+      "id": "274",
+      "ru": "X Колесо Фортуны — завершённый оборот цикла и переход к следующему; поэтому Десятки читаются как итог и предел.",
+      "en": "X The Wheel of Fortune represents a completed turn of the cycle and a transition to the next; this is why Tens are read as an outcome and a limit."
+    },
+    {
+      "id": "275",
+      "ru": "В лекции Восьмёрка связана с кармой, справедливостью и равновесием. Это соответствует старой марсельской нумерации, где Справедливость — VIII. В Rider–Waite–Smith Уэйт переставил Силу и Справедливость: VIII стала Сила, а XI — Справедливость. Поэтому в этой статье восьмёрочный принцип сохранён по логике автора как принцип причины–следствия и равновесия, но не выдаётся за нумерацию именно колоды Уэйта.",
+      "en": "The lecture connects the Eight with karma, justice, and balance. This follows the older Marseille numbering, in which Justice is VIII. In Rider–Waite–Smith, Waite exchanged Strength and Justice: Strength became VIII and Justice XI. This article therefore preserves the author’s principle of Eight as cause and effect and balance, without presenting it as the numbering of the Waite deck itself."
+    },
+    {
+      "id": "276",
+      "ru": "Что даёт этот подход на практике",
+      "en": "What this approach offers in practice"
+    },
+    {
+      "id": "277",
+      "ru": "Значения перестают быть случайным набором ключевых слов. Вы понимаете происхождение трактовки.",
+      "en": "Meanings cease to be a random set of keywords. You understand where an interpretation comes from."
+    },
+    {
+      "id": "278",
+      "ru": "Проще читать незнакомую колоду: даже если художник изменил детали, число и масть продолжают давать базовый каркас.",
+      "en": "An unfamiliar deck becomes easier to read: even if the artist has changed the details, number and suit still provide the basic structure."
+    },
+    {
+      "id": "279",
+      "ru": "Легче видеть повторяющиеся паттерны в раскладе: несколько пятёрок усиливают тему кризиса, несколько шестёрок — восстановления и обмена, девятки — личного итога, десятки — завершения.",
+      "en": "Repeating patterns in a spread become easier to see: several Fives emphasize crisis; several Sixes, recovery and exchange; Nines, a personal outcome; Tens, completion."
+    },
+    {
+      "id": "280",
+      "ru": "Проще объяснять карты другому человеку. Вместо «эта карта означает X» можно показать ход мысли: «это число делает такую функцию, а масть переносит её в такую сферу».",
+      "en": "Explaining cards to another person becomes easier. Instead of ‘this card means X,’ you can show the reasoning: ‘this number performs this function, and the suit places it in this area of life.’"
+    },
+    {
+      "id": "281",
+      "ru": "Система уменьшает зависимость от зубрёжки, но оставляет место для изображения, контекста вопроса и интуитивного чтения.",
+      "en": "The system reduces reliance on rote memorization while leaving room for the image, the context of the question, and intuitive reading."
+    },
+    {
+      "id": "282",
+      "ru": "Источники и примечания",
+      "en": "Sources and notes"
+    },
+    {
+      "id": "283",
+      "ru": "Основной материал — систематизация лекции по числовым Младшим Арканам; реконструированные фрагменты сверены с перечисленными источниками.",
+      "en": "The core material organizes a lecture on the numbered Minor Arcana into a system; reconstructed passages have been checked against the listed sources."
+    },
+    {
+      "id": "284",
+      "ru": "Основной материал статьи: пользовательская выжимка лекции «Системные значения числовых арканов Таро» по видео YouTube. Прямо присутствующие в выжимке трактовки сохранены по смыслу; пропущенные части реконструированы редакционно в той же логике и сверены с перечисленными ниже источниками.",
+      "en": "The article’s core material is a user’s summary of the YouTube lecture ‘Systematic Meanings of the Numbered Tarot Arcana.’ Interpretations explicitly present in the summary retain their meaning; omitted portions were reconstructed editorially within the same framework and checked against the sources listed below."
+    },
+    {
+      "id": "285",
+      "ru": "1. Исходная лекция на YouTube. Логика «число × масть», Тузы, часть Двоек, Пятёрки–Восьмёрки, Девятка Жезлов, принцип Десяток.",
+      "en": "1. The original lecture on YouTube. The ‘number × suit’ framework, Aces, some Twos, Fives–Eights, the Nine of Wands, and the principle of Tens."
+    },
+    {
+      "id": "286",
+      "ru": "2. Arthur Edward Waite, The Pictorial Key to the Tarot (1911), Sacred Texts. Первичный источник по изображениям и дивинационным значениям Rider–Waite–Smith; особенно важен для реконструкции пропущенных карт.",
+      "en": "2. Arthur Edward Waite, The Pictorial Key to the Tarot (1911), Sacred Texts. A primary source for Rider–Waite–Smith imagery and divinatory meanings; especially relevant to reconstructing the omitted cards."
+    },
+    {
+      "id": "287",
+      "ru": "3. Joan Bunning, Learning the Tarot — Lesson 3: The Minor Arcana. Системное описание мастей и идея последовательного развития тем от Туза к Десятке.",
+      "en": "3. Joan Bunning, Learning the Tarot — Lesson 3: The Minor Arcana. A systematic description of the suits and the idea of themes developing sequentially from Ace to Ten."
+    },
+    {
+      "id": "288",
+      "ru": "4. Labyrinthos — Tarot and Numerology: Minor Arcana. Современная модель числовых паттернов Младших Арканов.",
+      "en": "4. Labyrinthos — Tarot and Numerology: Minor Arcana. A contemporary model of numerical patterns in the Minor Arcana."
+    },
+    {
+      "id": "289",
+      "ru": "5. Tarot.com — Meanings Behind the Number Cards. Сопоставление числовых принципов с четырьмя мастями.",
+      "en": "5. Tarot.com — Meanings Behind the Number Cards. A comparison of numerical principles across the four suits."
+    },
+    {
+      "id": "290",
+      "ru": "6. Biddy Tarot — Minor Arcana Tarot Card Meanings. Дополнительная проверка современных ключевых трактовок числовых карт.",
+      "en": "6. Biddy Tarot — Minor Arcana Tarot Card Meanings. An additional check of contemporary key interpretations of the numbered cards."
+    },
+    {
+      "id": "291",
+      "ru": "7. Llewellyn — материал о нумерации Strength/Justice в Golden Dawn и RWS. Историческая справка о перестановке VIII и XI, важная для пояснения авторской связи восьмёрок со Справедливостью.",
+      "en": "7. Llewellyn — material on Strength/Justice numbering in the Golden Dawn and RWS. Historical background on the exchange of VIII and XI, relevant to explaining the author’s connection between Eights and Justice."
+    },
+    {
+      "id": "292",
+      "ru": "Методологическая оговорка. Таро и нумерологические соответствия относятся к символическим и эзотерическим системам интерпретации. В статье они описываются как учебная традиция чтения карт, а не как научно подтверждённый способ предсказания будущего.",
+      "en": "Methodological note. Tarot and numerological correspondences belong to symbolic systems of interpretation within Western esotericism. This article describes them as a teaching tradition for reading cards, rather than a scientifically established way to predict the future."
+    },
+    {
+      "id": "293",
+      "ru": "Таро и нумерологические соответствия — символическая и эзотерическая традиция, описываемая как учебная система чтения карт, а не научно подтверждённый способ предсказания.",
+      "en": "Tarot and numerological correspondences form a symbolic tradition within Western esotericism, described here as a teaching system for reading cards rather than a scientifically established method of prediction."
+    },
+    {
+      "id": "294",
+      "ru": "Материал — учебная система чтения числовых Младших Арканов (традиция Rider–Waite–Smith и современные системные школы). Описанное — символическая традиция, а не научно подтверждённый способ предсказания. Материалы носят справочный и развлекательный характер.",
+      "en": "This material presents a teaching system for reading the numbered Minor Arcana (the Rider–Waite–Smith tradition and contemporary systematic schools). It describes a symbolic tradition, rather than a scientifically established method of prediction. The material is for reference and entertainment. Symbolism is not a diagnosis, a prediction, or financial advice."
+    },
+    {
+      "id": "295",
+      "ru": "Навигация",
+      "en": "Navigation"
+    },
+    {
+      "id": "296",
+      "ru": "✦ Все карты Таро",
+      "en": "✦ All Tarot cards"
+    },
+    {
+      "id": "297",
+      "ru": "Нумерология и масти Таро — системное чтение Младших Арканов",
+      "en": "Numerology and Tarot suits — reading the Minor Arcana as a system"
+    },
+    {
+      "id": "298",
+      "ru": "Материалы носят справочный и развлекательный характер",
+      "en": "The material is for reference and entertainment"
+    },
+    {
+      "id": "299",
+      "ru": "По всем вопросам, предложениям о сотрудничестве и рекламе — пишите, я отвечаю лично:",
+      "en": "For questions, collaboration or advertising enquiries, write to me — I reply personally:"
+    },
+    {
+      "id": "300",
+      "ru": "Проект живёт на чистом энтузиазме — без рекламы и комиссии с посетителей. Если он вам полезен, поддержите его: любая сумма помогает развивать справочник дальше.",
+      "en": "I keep this project going through enthusiasm, without advertising or visitor fees. If you find it useful, a contribution of any size helps me develop the guide further."
+    },
+    {
+      "id": "301",
+      "ru": "Закрыть",
+      "en": "Close"
+    },
+    {
+      "id": "302",
+      "ru": "Это личный справочник по Таро, Ленорман, рунам и астрологии, собранный одним человеком — без команды, без офиса и без инвесторов. Проект живёт на чистом энтузиазме: без навязчивой рекламы, регистрации и платных подписок — все материалы открыты полностью.",
+      "en": "I put this personal guide to Tarot, Lenormand, runes and astrology together on my own, with no team, office or investors. It runs on enthusiasm, without intrusive advertising, registration or paid subscriptions. All the material is freely accessible."
+    },
+    {
+      "id": "303",
+      "ru": "Создание и поддержка такого справочника — это сотни часов работы: тексты, переводы трактовок, вёрстка, сервер. Если материалы сайта были вам полезны, поддержка — лучший способ сказать «спасибо» и помочь развитию: новые разделы, карты, сочетания и расклады.",
+      "en": "Creating and maintaining the guide takes hundreds of hours: writing, translating interpretations, designing pages and looking after the server. If it has helped you, a contribution is a welcome thank-you and supports new sections, cards, combinations and spreads."
+    },
+    {
+      "id": "304",
+      "ru": "♥ Поддержать через Donatello",
+      "en": "♥ Support via Donatello"
+    },
+    {
+      "id": "305",
+      "ru": "Есть вопросы, предложения о сотрудничестве или хотите разместить рекламу? Пишите — я отвечаю лично:",
+      "en": "Questions, collaboration ideas or advertising enquiries? Write to me — I reply personally:"
+    }
+  ]
+}

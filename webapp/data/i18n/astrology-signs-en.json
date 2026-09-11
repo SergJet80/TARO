@@ -1,0 +1,175 @@
+{
+  "schema_version": "5.0",
+  "source": "existing astrology/*.html pages; stable IDs from astrology_build.py",
+  "section_titles": ["In brief", "What this person is like", "What drives them", "Strengths", "Weaknesses", "In relationships", "At work and with money", "When things go wrong", "Main inner conflict"],
+  "signs": {
+    "oven": {
+      "name": "Aries", "tagline": "Impulse, courage, beginnings",
+      "blocks": [
+        "‘I want it, so I need to act.’",
+        "Aries is the sign of beginnings. They see life as a space in which to act, rather than think endlessly. They find it easier to try and make a mistake than to spend months preparing. When they see a problem, they try to solve it. When they see injustice, they may intervene even if no one asked. They often become excited by an idea quickly and value initiative, directness, and a sense of movement.",
+        "The feeling that they choose their own direction. They struggle when they are constantly held back, when others decide for them, or when they are forced to live by someone else’s script.",
+        "Determination, courage, initiative, optimism, the ability to pull themselves together quickly in a difficult situation, honesty, and the ability to start over after failure.",
+        "Impatience, haste, bluntness, and a quick temper. They may begin before understanding all the consequences and lose interest once the initial excitement has passed.",
+        "They need vivid emotions, interest, and a sense of movement. Aries can love very generously and sincerely but responds poorly to constant control and prohibitions.",
+        "They thrive where initiative, independence, quick decisions, new project launches, and competition are needed. They tend to see money as a means to freedom and action rather than an end in itself.",
+        "They become confrontational and start fighting less for the goal than for the sake of the fight itself.",
+        "They want to be independent while also having a strong need for their actions to be recognized."
+      ]
+    },
+    "telec": {
+      "name": "Taurus", "tagline": "Stability, support, form",
+      "blocks": [
+        "‘It has to become real.’",
+        "Taurus experiences the world through practicality and stability. It is important to them not merely to imagine something but to create something reliable, comfortable, and durable. They are unhurried and patient, have a good sense of the material value of things, and usually dislike abrupt change without a clear reason.",
+        "A need for stability, security, and a firm foundation. Taurus gradually creates an understandable world around themselves: habits, possessions, people, a profession, and a way of life.",
+        "Patience, reliability, practicality, endurance, the ability to work toward a result for a long time, and the ability to preserve and strengthen what has been achieved.",
+        "Inertia and stubbornness. They may hold on to a relationship, job, or habit for too long simply because it is familiar.",
+        "They value reliability, physical closeness, comfort, and loyalty. They often express love through concrete actions: care, help, and comfort. The other side is possessiveness and jealousy.",
+        "They do well in material and practical tasks, know how to save and plan, and can build a stable enterprise. They like to see a concrete result.",
+        "They shut down, dig in their heels, and resist any change.",
+        "They seek to create security but sometimes turn that security into a cage."
+      ]
+    },
+    "bliznecy": {
+      "name": "Gemini", "tagline": "Contact, movement, information",
+      "blocks": [
+        "‘I need to understand what is happening around me.’",
+        "Gemini learns about the world through contact and information. Conversation, reading, news, travel, new acquaintances, and exchanging opinions help them feel alive. They learn quickly, switch easily, and often have several interests at once.",
+        "Interest. When they are interested, they grasp things instantly. When they are bored, holding their attention is difficult.",
+        "Curiosity, flexibility, sociability, quick adaptation, an ability to connect people and information, and the ability to explain difficult things in simple words.",
+        "Scattered attention, fussiness, lack of focus, and a habit of starting several things at once.",
+        "Conversation matters greatly. They need a partner with whom they can exchange thoughts, laugh, and keep discovering something new.",
+        "They suit fields involving information, education, trade, sales, mediation, languages, media, the internet, and negotiation.",
+        "They become restless, reach for fresh impressions, and use them to avoid dealing with a serious problem.",
+        "They want to know everything, but real depth requires setting aside at least some of their other interests for a while."
+      ]
+    },
+    "rak": {
+      "name": "Cancer", "tagline": "Feelings, home, inner depth",
+      "blocks": [
+        "‘What does this mean to me personally?’",
+        "Cancer experiences the world emotionally. What matters is not only what happened but also what they felt. They need protection, personal space, close people, and a sense of home. They often care for others well and are highly sensitive to the moods around them.",
+        "A need to create a safe space: a family, a home, a close circle, or an inner place where they can be themselves.",
+        "Empathy, care, memory, intuition, emotional depth, and an ability to support and preserve what matters.",
+        "Touchiness, anxiety, dependence on mood, and a tendency to keep painful memories for too long.",
+        "Closeness is serious to them. They need to feel not only love but also emotional safety, loyalty, and belonging to each other.",
+        "They do well in fields that require care, preservation, history, helping people, or work connected with home, land, family, or service.",
+        "They withdraw and wait for a loved one to guess what happened.",
+        "They deeply want closeness, yet fear of being hurt sometimes makes them shut it out first."
+      ]
+    },
+    "lev": {
+      "name": "Leo", "tagline": "Self-expression, strength, dignity",
+      "blocks": [
+        "‘I want to express myself.’",
+        "Leo needs to put themselves into what they do and feel that their presence matters. They seek vivid self-expression, creativity, leadership, and recognition. This does not always mean a literal stage, but it nearly always means a need to see the result of their own influence.",
+        "Self-realization and respect. It is important for them to be proud of themselves.",
+        "Creativity, confidence, generosity, leadership, magnanimity, and an ability to inspire and support others.",
+        "Pride, a painful response to being disregarded, a need for praise, and dramatizing situations.",
+        "They love vividly and generously, want to be proud of their partner, and need to feel respected.",
+        "They do well where they can create, lead, perform, organize, or take personal responsibility.",
+        "They begin to fight for attention and experience criticism as a blow to their dignity.",
+        "They want to be self-sufficient but often depend on other people’s response more than they are ready to admit."
+      ]
+    },
+    "deva": {
+      "name": "Virgo", "tagline": "Order, precision, practicality",
+      "blocks": [
+        "‘How does this work, and how can it be improved?’",
+        "Virgo notices details. They tend to analyze, sort, correct, and improve. Where others see something as ‘good enough,’ Virgo notices exactly what can be adjusted more precisely.",
+        "A desire to bring reality into working order.",
+        "Analytical ability, accuracy, practicality, observation, and the ability to break a complex task into clear parts.",
+        "Perfectionism, criticism, anxiety over details, and difficulty relaxing when something around them feels ‘wrong.’",
+        "They often show love through help, useful advice, and practical care.",
+        "They are especially strong where analysis, systematization, quality control, precision, and attention to detail are required.",
+        "They turn into a strict inner supervisor and begin criticizing themselves and others over every detail.",
+        "They want to make the world better but sometimes see flaws so clearly that they stop noticing the good already present."
+      ]
+    },
+    "vesy": {
+      "name": "Libra", "tagline": "Balance, partnership, harmony",
+      "blocks": [
+        "‘Let’s look at this from both sides.’",
+        "Libra naturally sees the opposing point of view. Partnership, fairness, exchanging opinions, harmony, and the possibility of finding a solution that considers both sides are important to them.",
+        "The search for equilibrium.",
+        "Diplomacy, negotiating ability, a sense of proportion, social sensitivity, aesthetics, and an ability to see several points of view.",
+        "Indecision and a tendency to weigh options for too long.",
+        "Partnership is one of their central themes. Libra often understands themselves better through relationships.",
+        "They are strong in negotiation, consulting, cooperation, the arts, and fields that require balancing interests.",
+        "They avoid making a decision to preserve outward peace, even as the problem continues to grow.",
+        "They want to consider another person’s view but must learn not to lose their own."
+      ]
+    },
+    "skorpion": {
+      "name": "Scorpio", "tagline": "Depth, power, transformation",
+      "blocks": [
+        "‘What is hidden beneath the surface?’",
+        "Scorpio has an intense inner life. They are interested in the hidden causes of events, people’s real motives, crises, power, attachment, and transformation. A superficial answer rarely satisfies them.",
+        "A need to reach the essence.",
+        "Psychological insight, resilience, the ability to withstand crises, depth of feeling, and an ability to rebuild themselves completely after a difficult experience.",
+        "Suspicion, jealousy, possessiveness, and a drive to control and verify.",
+        "Half-measures rarely satisfy them. Trust and closeness can run very deep, but broken trust is difficult to restore.",
+        "They do well where work involves complex, hidden, crisis-related, or investigative processes.",
+        "They try to control the situation at any price; jealousy, manipulation, and checking appear.",
+        "They seek absolute closeness, yet trusting another person may be the hardest thing of all."
+      ]
+    },
+    "strelec": {
+      "name": "Sagittarius", "tagline": "Meaning, a path, expanding horizons",
+      "blocks": [
+        "‘What lies beyond?’",
+        "Sagittarius seeks to move beyond the already known world. New knowledge, distant places, philosophical ideas, travel, and broad prospects attract them. They look not only for facts but also for meaning.",
+        "Expanding their horizon and understanding the larger picture.",
+        "Optimism, broad thinking, curiosity, an ability to inspire through an idea, and faith in possibilities.",
+        "Scattered effort, overestimating their strength, and a tendency to promise more than they can deliver.",
+        "They need freedom, development, and a feeling that a relationship expands life rather than limits it.",
+        "Education, international work, travel, promoting ideas, philosophy, and large projects suit them.",
+        "They escape from a real problem into a new grand idea.",
+        "They seek a greater truth but can become so absorbed in the horizon that they miss what is directly beneath their feet."
+      ]
+    },
+    "kozerog": {
+      "name": "Capricorn", "tagline": "Structure, goals, achievement",
+      "blocks": [
+        "‘A system needs to be built.’",
+        "Capricorn thinks in terms of results, structure, time, and responsibility. They have a good sense of hierarchy, can set long-term goals, and can give up today’s pleasure for a future achievement.",
+        "The need to achieve something and create a lasting result.",
+        "Responsibility, patience, discipline, strategic thinking, organization, and the ability to withstand heavy demands.",
+        "Excessive seriousness, pessimism, harshness toward themselves and others, and a habit of postponing life until ‘later.’",
+        "They value reliability and actions. Words matter less than evidence.",
+        "They are strong in management, organization, planning, building systems, careers, and long-term projects.",
+        "Life becomes an endless list of duties.",
+        "They want to reach the summit to feel stable, but each summit often becomes the beginning of the next ascent."
+      ]
+    },
+    "vodoley": {
+      "name": "Aquarius", "tagline": "Freedom, ideas, the future",
+      "blocks": [
+        "‘Why should it have to be this way at all?’",
+        "Aquarius tends to view familiar rules from the outside. New ideas, technology, social systems, the future, and freedom of thought attract them. They dislike following a rule merely because ‘that is how things are done.’",
+        "Freedom of thought and the ability to live by their own principles.",
+        "Independence, originality, inventiveness, the ability to see new options, and an interest in technology and social ideas.",
+        "Detachment, stubbornness, rebellion for its own sake, and difficulty with commitments.",
+        "Friendship, intellectual equality, and respect for each other’s freedom are essential.",
+        "They do well in technology, research, the internet, innovation, and social projects.",
+        "They start doing the opposite simply because something else is expected of them.",
+        "They want to be part of society while remaining completely independent of it."
+      ]
+    },
+    "ryby": {
+      "name": "Pisces", "tagline": "Intuition, compassion, mystery",
+      "blocks": [
+        "‘I feel that everything is connected.’",
+        "Pisces is highly receptive to the atmosphere, mood, and state of other people. They have a rich imagination, strong intuition, and the ability to understand what is difficult to explain logically. Compassion, fantasy, an artistic view of the world, and a tendency to see the larger picture behind individual events are characteristic of them.",
+        "A search for meaning beyond rational explanation and a wish to feel connected to people and the world.",
+        "Empathy, imagination, intuition, creativity, compassion, and an ability to sense other people.",
+        "Blurred boundaries, indecision, avoidance of unpleasant reality, and excessive self-sacrifice.",
+        "They can sense a partner very subtly, but it is important not to confuse love with rescuing or live only through another person’s emotions.",
+        "They do well where creativity, imagination, intuition, compassion, and work with images are needed.",
+        "Instead of solving a problem, they try not to notice it or retreat into fantasy.",
+        "They know how to dissolve into feelings, people, and ideas, but their task is not to lose themselves in the process."
+      ]
+    }
+  }
+}

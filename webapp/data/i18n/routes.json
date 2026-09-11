@@ -1,0 +1,1402 @@
+[
+  {
+    "ru_file": "astrology/bliznecy/index.html",
+    "en_file": "en/astrology/bliznecy/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/bliznecy/",
+    "en_url": "https://taro.jetserg.top/en/astrology/bliznecy/",
+    "x_default": "https://taro.jetserg.top/astrology/bliznecy/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/deva/index.html",
+    "en_file": "en/astrology/deva/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/deva/",
+    "en_url": "https://taro.jetserg.top/en/astrology/deva/",
+    "x_default": "https://taro.jetserg.top/astrology/deva/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/index.html",
+    "en_file": "en/astrology/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/",
+    "en_url": "https://taro.jetserg.top/en/astrology/",
+    "x_default": "https://taro.jetserg.top/astrology/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/kozerog/index.html",
+    "en_file": "en/astrology/kozerog/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/kozerog/",
+    "en_url": "https://taro.jetserg.top/en/astrology/kozerog/",
+    "x_default": "https://taro.jetserg.top/astrology/kozerog/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/lev/index.html",
+    "en_file": "en/astrology/lev/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/lev/",
+    "en_url": "https://taro.jetserg.top/en/astrology/lev/",
+    "x_default": "https://taro.jetserg.top/astrology/lev/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/oven/index.html",
+    "en_file": "en/astrology/oven/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/oven/",
+    "en_url": "https://taro.jetserg.top/en/astrology/oven/",
+    "x_default": "https://taro.jetserg.top/astrology/oven/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/planety/hiron/index.html",
+    "en_file": "en/astrology/planety/hiron/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/planety/hiron/",
+    "en_url": "https://taro.jetserg.top/en/astrology/planety/hiron/",
+    "x_default": "https://taro.jetserg.top/astrology/planety/hiron/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/planety/index.html",
+    "en_file": "en/astrology/planety/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/planety/",
+    "en_url": "https://taro.jetserg.top/en/astrology/planety/",
+    "x_default": "https://taro.jetserg.top/astrology/planety/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/planety/jupiter/index.html",
+    "en_file": "en/astrology/planety/jupiter/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/planety/jupiter/",
+    "en_url": "https://taro.jetserg.top/en/astrology/planety/jupiter/",
+    "x_default": "https://taro.jetserg.top/astrology/planety/jupiter/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/planety/luna/index.html",
+    "en_file": "en/astrology/planety/luna/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/planety/luna/",
+    "en_url": "https://taro.jetserg.top/en/astrology/planety/luna/",
+    "x_default": "https://taro.jetserg.top/astrology/planety/luna/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/planety/mars/index.html",
+    "en_file": "en/astrology/planety/mars/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/planety/mars/",
+    "en_url": "https://taro.jetserg.top/en/astrology/planety/mars/",
+    "x_default": "https://taro.jetserg.top/astrology/planety/mars/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/planety/merkurij/index.html",
+    "en_file": "en/astrology/planety/merkurij/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/planety/merkurij/",
+    "en_url": "https://taro.jetserg.top/en/astrology/planety/merkurij/",
+    "x_default": "https://taro.jetserg.top/astrology/planety/merkurij/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/planety/neptun/index.html",
+    "en_file": "en/astrology/planety/neptun/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/planety/neptun/",
+    "en_url": "https://taro.jetserg.top/en/astrology/planety/neptun/",
+    "x_default": "https://taro.jetserg.top/astrology/planety/neptun/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/planety/pluton/index.html",
+    "en_file": "en/astrology/planety/pluton/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/planety/pluton/",
+    "en_url": "https://taro.jetserg.top/en/astrology/planety/pluton/",
+    "x_default": "https://taro.jetserg.top/astrology/planety/pluton/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/planety/prozerpina/index.html",
+    "en_file": "en/astrology/planety/prozerpina/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/planety/prozerpina/",
+    "en_url": "https://taro.jetserg.top/en/astrology/planety/prozerpina/",
+    "x_default": "https://taro.jetserg.top/astrology/planety/prozerpina/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/planety/saturn/index.html",
+    "en_file": "en/astrology/planety/saturn/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/planety/saturn/",
+    "en_url": "https://taro.jetserg.top/en/astrology/planety/saturn/",
+    "x_default": "https://taro.jetserg.top/astrology/planety/saturn/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/planety/solnce/index.html",
+    "en_file": "en/astrology/planety/solnce/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/planety/solnce/",
+    "en_url": "https://taro.jetserg.top/en/astrology/planety/solnce/",
+    "x_default": "https://taro.jetserg.top/astrology/planety/solnce/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/planety/uran/index.html",
+    "en_file": "en/astrology/planety/uran/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/planety/uran/",
+    "en_url": "https://taro.jetserg.top/en/astrology/planety/uran/",
+    "x_default": "https://taro.jetserg.top/astrology/planety/uran/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/planety/venera/index.html",
+    "en_file": "en/astrology/planety/venera/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/planety/venera/",
+    "en_url": "https://taro.jetserg.top/en/astrology/planety/venera/",
+    "x_default": "https://taro.jetserg.top/astrology/planety/venera/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/planety/zemlja/index.html",
+    "en_file": "en/astrology/planety/zemlja/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/planety/zemlja/",
+    "en_url": "https://taro.jetserg.top/en/astrology/planety/zemlja/",
+    "x_default": "https://taro.jetserg.top/astrology/planety/zemlja/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/rak/index.html",
+    "en_file": "en/astrology/rak/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/rak/",
+    "en_url": "https://taro.jetserg.top/en/astrology/rak/",
+    "x_default": "https://taro.jetserg.top/astrology/rak/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/ryby/index.html",
+    "en_file": "en/astrology/ryby/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/ryby/",
+    "en_url": "https://taro.jetserg.top/en/astrology/ryby/",
+    "x_default": "https://taro.jetserg.top/astrology/ryby/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/skorpion/index.html",
+    "en_file": "en/astrology/skorpion/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/skorpion/",
+    "en_url": "https://taro.jetserg.top/en/astrology/skorpion/",
+    "x_default": "https://taro.jetserg.top/astrology/skorpion/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/strelec/index.html",
+    "en_file": "en/astrology/strelec/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/strelec/",
+    "en_url": "https://taro.jetserg.top/en/astrology/strelec/",
+    "x_default": "https://taro.jetserg.top/astrology/strelec/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/telec/index.html",
+    "en_file": "en/astrology/telec/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/telec/",
+    "en_url": "https://taro.jetserg.top/en/astrology/telec/",
+    "x_default": "https://taro.jetserg.top/astrology/telec/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/vesy/index.html",
+    "en_file": "en/astrology/vesy/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/vesy/",
+    "en_url": "https://taro.jetserg.top/en/astrology/vesy/",
+    "x_default": "https://taro.jetserg.top/astrology/vesy/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/vodoley/index.html",
+    "en_file": "en/astrology/vodoley/index.html",
+    "ru_url": "https://taro.jetserg.top/astrology/vodoley/",
+    "en_url": "https://taro.jetserg.top/en/astrology/vodoley/",
+    "x_default": "https://taro.jetserg.top/astrology/vodoley/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "astrology/wheel.html",
+    "en_file": "en/astrology/wheel.html",
+    "ru_url": "https://taro.jetserg.top/astrology/wheel.html",
+    "en_url": "https://taro.jetserg.top/en/astrology/wheel.html",
+    "x_default": "https://taro.jetserg.top/astrology/wheel.html",
+    "status": "ready"
+  },
+  {
+    "ru_file": "cards/bashnya.html",
+    "en_file": "en/cards/bashnya.html",
+    "ru_url": "https://taro.jetserg.top/cards/bashnya.html",
+    "en_url": "https://taro.jetserg.top/en/cards/bashnya.html",
+    "x_default": "https://taro.jetserg.top/cards/bashnya.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/cups-ace.html",
+    "en_file": "en/cards/cups-ace.html",
+    "ru_url": "https://taro.jetserg.top/cards/cups-ace.html",
+    "en_url": "https://taro.jetserg.top/en/cards/cups-ace.html",
+    "x_default": "https://taro.jetserg.top/cards/cups-ace.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/cups-eight.html",
+    "en_file": "en/cards/cups-eight.html",
+    "ru_url": "https://taro.jetserg.top/cards/cups-eight.html",
+    "en_url": "https://taro.jetserg.top/en/cards/cups-eight.html",
+    "x_default": "https://taro.jetserg.top/cards/cups-eight.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/cups-five.html",
+    "en_file": "en/cards/cups-five.html",
+    "ru_url": "https://taro.jetserg.top/cards/cups-five.html",
+    "en_url": "https://taro.jetserg.top/en/cards/cups-five.html",
+    "x_default": "https://taro.jetserg.top/cards/cups-five.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/cups-four.html",
+    "en_file": "en/cards/cups-four.html",
+    "ru_url": "https://taro.jetserg.top/cards/cups-four.html",
+    "en_url": "https://taro.jetserg.top/en/cards/cups-four.html",
+    "x_default": "https://taro.jetserg.top/cards/cups-four.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/cups-king.html",
+    "en_file": "en/cards/cups-king.html",
+    "ru_url": "https://taro.jetserg.top/cards/cups-king.html",
+    "en_url": "https://taro.jetserg.top/en/cards/cups-king.html",
+    "x_default": "https://taro.jetserg.top/cards/cups-king.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/cups-knight.html",
+    "en_file": "en/cards/cups-knight.html",
+    "ru_url": "https://taro.jetserg.top/cards/cups-knight.html",
+    "en_url": "https://taro.jetserg.top/en/cards/cups-knight.html",
+    "x_default": "https://taro.jetserg.top/cards/cups-knight.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/cups-nine.html",
+    "en_file": "en/cards/cups-nine.html",
+    "ru_url": "https://taro.jetserg.top/cards/cups-nine.html",
+    "en_url": "https://taro.jetserg.top/en/cards/cups-nine.html",
+    "x_default": "https://taro.jetserg.top/cards/cups-nine.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/cups-page.html",
+    "en_file": "en/cards/cups-page.html",
+    "ru_url": "https://taro.jetserg.top/cards/cups-page.html",
+    "en_url": "https://taro.jetserg.top/en/cards/cups-page.html",
+    "x_default": "https://taro.jetserg.top/cards/cups-page.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/cups-queen.html",
+    "en_file": "en/cards/cups-queen.html",
+    "ru_url": "https://taro.jetserg.top/cards/cups-queen.html",
+    "en_url": "https://taro.jetserg.top/en/cards/cups-queen.html",
+    "x_default": "https://taro.jetserg.top/cards/cups-queen.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/cups-seven.html",
+    "en_file": "en/cards/cups-seven.html",
+    "ru_url": "https://taro.jetserg.top/cards/cups-seven.html",
+    "en_url": "https://taro.jetserg.top/en/cards/cups-seven.html",
+    "x_default": "https://taro.jetserg.top/cards/cups-seven.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/cups-six.html",
+    "en_file": "en/cards/cups-six.html",
+    "ru_url": "https://taro.jetserg.top/cards/cups-six.html",
+    "en_url": "https://taro.jetserg.top/en/cards/cups-six.html",
+    "x_default": "https://taro.jetserg.top/cards/cups-six.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/cups-ten.html",
+    "en_file": "en/cards/cups-ten.html",
+    "ru_url": "https://taro.jetserg.top/cards/cups-ten.html",
+    "en_url": "https://taro.jetserg.top/en/cards/cups-ten.html",
+    "x_default": "https://taro.jetserg.top/cards/cups-ten.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/cups-three.html",
+    "en_file": "en/cards/cups-three.html",
+    "ru_url": "https://taro.jetserg.top/cards/cups-three.html",
+    "en_url": "https://taro.jetserg.top/en/cards/cups-three.html",
+    "x_default": "https://taro.jetserg.top/cards/cups-three.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/cups-two.html",
+    "en_file": "en/cards/cups-two.html",
+    "ru_url": "https://taro.jetserg.top/cards/cups-two.html",
+    "en_url": "https://taro.jetserg.top/en/cards/cups-two.html",
+    "x_default": "https://taro.jetserg.top/cards/cups-two.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/durak.html",
+    "en_file": "en/cards/durak.html",
+    "ru_url": "https://taro.jetserg.top/cards/durak.html",
+    "en_url": "https://taro.jetserg.top/en/cards/durak.html",
+    "x_default": "https://taro.jetserg.top/cards/durak.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/dyavol.html",
+    "en_file": "en/cards/dyavol.html",
+    "ru_url": "https://taro.jetserg.top/cards/dyavol.html",
+    "en_url": "https://taro.jetserg.top/en/cards/dyavol.html",
+    "x_default": "https://taro.jetserg.top/cards/dyavol.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/ierofant.html",
+    "en_file": "en/cards/ierofant.html",
+    "ru_url": "https://taro.jetserg.top/cards/ierofant.html",
+    "en_url": "https://taro.jetserg.top/en/cards/ierofant.html",
+    "x_default": "https://taro.jetserg.top/cards/ierofant.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/imperator.html",
+    "en_file": "en/cards/imperator.html",
+    "ru_url": "https://taro.jetserg.top/cards/imperator.html",
+    "en_url": "https://taro.jetserg.top/en/cards/imperator.html",
+    "x_default": "https://taro.jetserg.top/cards/imperator.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/imperatrica.html",
+    "en_file": "en/cards/imperatrica.html",
+    "ru_url": "https://taro.jetserg.top/cards/imperatrica.html",
+    "en_url": "https://taro.jetserg.top/en/cards/imperatrica.html",
+    "x_default": "https://taro.jetserg.top/cards/imperatrica.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/index.html",
+    "en_file": "en/cards/index.html",
+    "ru_url": "https://taro.jetserg.top/cards/",
+    "en_url": "https://taro.jetserg.top/en/cards/",
+    "x_default": "https://taro.jetserg.top/cards/",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/kolesnica.html",
+    "en_file": "en/cards/kolesnica.html",
+    "ru_url": "https://taro.jetserg.top/cards/kolesnica.html",
+    "en_url": "https://taro.jetserg.top/en/cards/kolesnica.html",
+    "x_default": "https://taro.jetserg.top/cards/kolesnica.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/koleso-fortuny.html",
+    "en_file": "en/cards/koleso-fortuny.html",
+    "ru_url": "https://taro.jetserg.top/cards/koleso-fortuny.html",
+    "en_url": "https://taro.jetserg.top/en/cards/koleso-fortuny.html",
+    "x_default": "https://taro.jetserg.top/cards/koleso-fortuny.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/luna.html",
+    "en_file": "en/cards/luna.html",
+    "ru_url": "https://taro.jetserg.top/cards/luna.html",
+    "en_url": "https://taro.jetserg.top/en/cards/luna.html",
+    "x_default": "https://taro.jetserg.top/cards/luna.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/mag.html",
+    "en_file": "en/cards/mag.html",
+    "ru_url": "https://taro.jetserg.top/cards/mag.html",
+    "en_url": "https://taro.jetserg.top/en/cards/mag.html",
+    "x_default": "https://taro.jetserg.top/cards/mag.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/mir.html",
+    "en_file": "en/cards/mir.html",
+    "ru_url": "https://taro.jetserg.top/cards/mir.html",
+    "en_url": "https://taro.jetserg.top/en/cards/mir.html",
+    "x_default": "https://taro.jetserg.top/cards/mir.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/otshelnik.html",
+    "en_file": "en/cards/otshelnik.html",
+    "ru_url": "https://taro.jetserg.top/cards/otshelnik.html",
+    "en_url": "https://taro.jetserg.top/en/cards/otshelnik.html",
+    "x_default": "https://taro.jetserg.top/cards/otshelnik.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/pentacles-ace.html",
+    "en_file": "en/cards/pentacles-ace.html",
+    "ru_url": "https://taro.jetserg.top/cards/pentacles-ace.html",
+    "en_url": "https://taro.jetserg.top/en/cards/pentacles-ace.html",
+    "x_default": "https://taro.jetserg.top/cards/pentacles-ace.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/pentacles-eight.html",
+    "en_file": "en/cards/pentacles-eight.html",
+    "ru_url": "https://taro.jetserg.top/cards/pentacles-eight.html",
+    "en_url": "https://taro.jetserg.top/en/cards/pentacles-eight.html",
+    "x_default": "https://taro.jetserg.top/cards/pentacles-eight.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/pentacles-five.html",
+    "en_file": "en/cards/pentacles-five.html",
+    "ru_url": "https://taro.jetserg.top/cards/pentacles-five.html",
+    "en_url": "https://taro.jetserg.top/en/cards/pentacles-five.html",
+    "x_default": "https://taro.jetserg.top/cards/pentacles-five.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/pentacles-four.html",
+    "en_file": "en/cards/pentacles-four.html",
+    "ru_url": "https://taro.jetserg.top/cards/pentacles-four.html",
+    "en_url": "https://taro.jetserg.top/en/cards/pentacles-four.html",
+    "x_default": "https://taro.jetserg.top/cards/pentacles-four.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/pentacles-king.html",
+    "en_file": "en/cards/pentacles-king.html",
+    "ru_url": "https://taro.jetserg.top/cards/pentacles-king.html",
+    "en_url": "https://taro.jetserg.top/en/cards/pentacles-king.html",
+    "x_default": "https://taro.jetserg.top/cards/pentacles-king.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/pentacles-knight.html",
+    "en_file": "en/cards/pentacles-knight.html",
+    "ru_url": "https://taro.jetserg.top/cards/pentacles-knight.html",
+    "en_url": "https://taro.jetserg.top/en/cards/pentacles-knight.html",
+    "x_default": "https://taro.jetserg.top/cards/pentacles-knight.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/pentacles-nine.html",
+    "en_file": "en/cards/pentacles-nine.html",
+    "ru_url": "https://taro.jetserg.top/cards/pentacles-nine.html",
+    "en_url": "https://taro.jetserg.top/en/cards/pentacles-nine.html",
+    "x_default": "https://taro.jetserg.top/cards/pentacles-nine.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/pentacles-page.html",
+    "en_file": "en/cards/pentacles-page.html",
+    "ru_url": "https://taro.jetserg.top/cards/pentacles-page.html",
+    "en_url": "https://taro.jetserg.top/en/cards/pentacles-page.html",
+    "x_default": "https://taro.jetserg.top/cards/pentacles-page.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/pentacles-queen.html",
+    "en_file": "en/cards/pentacles-queen.html",
+    "ru_url": "https://taro.jetserg.top/cards/pentacles-queen.html",
+    "en_url": "https://taro.jetserg.top/en/cards/pentacles-queen.html",
+    "x_default": "https://taro.jetserg.top/cards/pentacles-queen.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/pentacles-seven.html",
+    "en_file": "en/cards/pentacles-seven.html",
+    "ru_url": "https://taro.jetserg.top/cards/pentacles-seven.html",
+    "en_url": "https://taro.jetserg.top/en/cards/pentacles-seven.html",
+    "x_default": "https://taro.jetserg.top/cards/pentacles-seven.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/pentacles-six.html",
+    "en_file": "en/cards/pentacles-six.html",
+    "ru_url": "https://taro.jetserg.top/cards/pentacles-six.html",
+    "en_url": "https://taro.jetserg.top/en/cards/pentacles-six.html",
+    "x_default": "https://taro.jetserg.top/cards/pentacles-six.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/pentacles-ten.html",
+    "en_file": "en/cards/pentacles-ten.html",
+    "ru_url": "https://taro.jetserg.top/cards/pentacles-ten.html",
+    "en_url": "https://taro.jetserg.top/en/cards/pentacles-ten.html",
+    "x_default": "https://taro.jetserg.top/cards/pentacles-ten.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/pentacles-three.html",
+    "en_file": "en/cards/pentacles-three.html",
+    "ru_url": "https://taro.jetserg.top/cards/pentacles-three.html",
+    "en_url": "https://taro.jetserg.top/en/cards/pentacles-three.html",
+    "x_default": "https://taro.jetserg.top/cards/pentacles-three.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/pentacles-two.html",
+    "en_file": "en/cards/pentacles-two.html",
+    "ru_url": "https://taro.jetserg.top/cards/pentacles-two.html",
+    "en_url": "https://taro.jetserg.top/en/cards/pentacles-two.html",
+    "x_default": "https://taro.jetserg.top/cards/pentacles-two.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/poveshennyj.html",
+    "en_file": "en/cards/poveshennyj.html",
+    "ru_url": "https://taro.jetserg.top/cards/poveshennyj.html",
+    "en_url": "https://taro.jetserg.top/en/cards/poveshennyj.html",
+    "x_default": "https://taro.jetserg.top/cards/poveshennyj.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/sila.html",
+    "en_file": "en/cards/sila.html",
+    "ru_url": "https://taro.jetserg.top/cards/sila.html",
+    "en_url": "https://taro.jetserg.top/en/cards/sila.html",
+    "x_default": "https://taro.jetserg.top/cards/sila.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/smert.html",
+    "en_file": "en/cards/smert.html",
+    "ru_url": "https://taro.jetserg.top/cards/smert.html",
+    "en_url": "https://taro.jetserg.top/en/cards/smert.html",
+    "x_default": "https://taro.jetserg.top/cards/smert.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/solnce.html",
+    "en_file": "en/cards/solnce.html",
+    "ru_url": "https://taro.jetserg.top/cards/solnce.html",
+    "en_url": "https://taro.jetserg.top/en/cards/solnce.html",
+    "x_default": "https://taro.jetserg.top/cards/solnce.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/spravedlivost.html",
+    "en_file": "en/cards/spravedlivost.html",
+    "ru_url": "https://taro.jetserg.top/cards/spravedlivost.html",
+    "en_url": "https://taro.jetserg.top/en/cards/spravedlivost.html",
+    "x_default": "https://taro.jetserg.top/cards/spravedlivost.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/sud.html",
+    "en_file": "en/cards/sud.html",
+    "ru_url": "https://taro.jetserg.top/cards/sud.html",
+    "en_url": "https://taro.jetserg.top/en/cards/sud.html",
+    "x_default": "https://taro.jetserg.top/cards/sud.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/swords-ace.html",
+    "en_file": "en/cards/swords-ace.html",
+    "ru_url": "https://taro.jetserg.top/cards/swords-ace.html",
+    "en_url": "https://taro.jetserg.top/en/cards/swords-ace.html",
+    "x_default": "https://taro.jetserg.top/cards/swords-ace.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/swords-eight.html",
+    "en_file": "en/cards/swords-eight.html",
+    "ru_url": "https://taro.jetserg.top/cards/swords-eight.html",
+    "en_url": "https://taro.jetserg.top/en/cards/swords-eight.html",
+    "x_default": "https://taro.jetserg.top/cards/swords-eight.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/swords-five.html",
+    "en_file": "en/cards/swords-five.html",
+    "ru_url": "https://taro.jetserg.top/cards/swords-five.html",
+    "en_url": "https://taro.jetserg.top/en/cards/swords-five.html",
+    "x_default": "https://taro.jetserg.top/cards/swords-five.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/swords-four.html",
+    "en_file": "en/cards/swords-four.html",
+    "ru_url": "https://taro.jetserg.top/cards/swords-four.html",
+    "en_url": "https://taro.jetserg.top/en/cards/swords-four.html",
+    "x_default": "https://taro.jetserg.top/cards/swords-four.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/swords-king.html",
+    "en_file": "en/cards/swords-king.html",
+    "ru_url": "https://taro.jetserg.top/cards/swords-king.html",
+    "en_url": "https://taro.jetserg.top/en/cards/swords-king.html",
+    "x_default": "https://taro.jetserg.top/cards/swords-king.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/swords-knight.html",
+    "en_file": "en/cards/swords-knight.html",
+    "ru_url": "https://taro.jetserg.top/cards/swords-knight.html",
+    "en_url": "https://taro.jetserg.top/en/cards/swords-knight.html",
+    "x_default": "https://taro.jetserg.top/cards/swords-knight.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/swords-nine.html",
+    "en_file": "en/cards/swords-nine.html",
+    "ru_url": "https://taro.jetserg.top/cards/swords-nine.html",
+    "en_url": "https://taro.jetserg.top/en/cards/swords-nine.html",
+    "x_default": "https://taro.jetserg.top/cards/swords-nine.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/swords-page.html",
+    "en_file": "en/cards/swords-page.html",
+    "ru_url": "https://taro.jetserg.top/cards/swords-page.html",
+    "en_url": "https://taro.jetserg.top/en/cards/swords-page.html",
+    "x_default": "https://taro.jetserg.top/cards/swords-page.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/swords-queen.html",
+    "en_file": "en/cards/swords-queen.html",
+    "ru_url": "https://taro.jetserg.top/cards/swords-queen.html",
+    "en_url": "https://taro.jetserg.top/en/cards/swords-queen.html",
+    "x_default": "https://taro.jetserg.top/cards/swords-queen.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/swords-seven.html",
+    "en_file": "en/cards/swords-seven.html",
+    "ru_url": "https://taro.jetserg.top/cards/swords-seven.html",
+    "en_url": "https://taro.jetserg.top/en/cards/swords-seven.html",
+    "x_default": "https://taro.jetserg.top/cards/swords-seven.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/swords-six.html",
+    "en_file": "en/cards/swords-six.html",
+    "ru_url": "https://taro.jetserg.top/cards/swords-six.html",
+    "en_url": "https://taro.jetserg.top/en/cards/swords-six.html",
+    "x_default": "https://taro.jetserg.top/cards/swords-six.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/swords-ten.html",
+    "en_file": "en/cards/swords-ten.html",
+    "ru_url": "https://taro.jetserg.top/cards/swords-ten.html",
+    "en_url": "https://taro.jetserg.top/en/cards/swords-ten.html",
+    "x_default": "https://taro.jetserg.top/cards/swords-ten.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/swords-three.html",
+    "en_file": "en/cards/swords-three.html",
+    "ru_url": "https://taro.jetserg.top/cards/swords-three.html",
+    "en_url": "https://taro.jetserg.top/en/cards/swords-three.html",
+    "x_default": "https://taro.jetserg.top/cards/swords-three.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/swords-two.html",
+    "en_file": "en/cards/swords-two.html",
+    "ru_url": "https://taro.jetserg.top/cards/swords-two.html",
+    "en_url": "https://taro.jetserg.top/en/cards/swords-two.html",
+    "x_default": "https://taro.jetserg.top/cards/swords-two.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/umerennost.html",
+    "en_file": "en/cards/umerennost.html",
+    "ru_url": "https://taro.jetserg.top/cards/umerennost.html",
+    "en_url": "https://taro.jetserg.top/en/cards/umerennost.html",
+    "x_default": "https://taro.jetserg.top/cards/umerennost.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/vlyublyonnye.html",
+    "en_file": "en/cards/vlyublyonnye.html",
+    "ru_url": "https://taro.jetserg.top/cards/vlyublyonnye.html",
+    "en_url": "https://taro.jetserg.top/en/cards/vlyublyonnye.html",
+    "x_default": "https://taro.jetserg.top/cards/vlyublyonnye.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/wands-ace.html",
+    "en_file": "en/cards/wands-ace.html",
+    "ru_url": "https://taro.jetserg.top/cards/wands-ace.html",
+    "en_url": "https://taro.jetserg.top/en/cards/wands-ace.html",
+    "x_default": "https://taro.jetserg.top/cards/wands-ace.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/wands-eight.html",
+    "en_file": "en/cards/wands-eight.html",
+    "ru_url": "https://taro.jetserg.top/cards/wands-eight.html",
+    "en_url": "https://taro.jetserg.top/en/cards/wands-eight.html",
+    "x_default": "https://taro.jetserg.top/cards/wands-eight.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/wands-five.html",
+    "en_file": "en/cards/wands-five.html",
+    "ru_url": "https://taro.jetserg.top/cards/wands-five.html",
+    "en_url": "https://taro.jetserg.top/en/cards/wands-five.html",
+    "x_default": "https://taro.jetserg.top/cards/wands-five.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/wands-four.html",
+    "en_file": "en/cards/wands-four.html",
+    "ru_url": "https://taro.jetserg.top/cards/wands-four.html",
+    "en_url": "https://taro.jetserg.top/en/cards/wands-four.html",
+    "x_default": "https://taro.jetserg.top/cards/wands-four.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/wands-king.html",
+    "en_file": "en/cards/wands-king.html",
+    "ru_url": "https://taro.jetserg.top/cards/wands-king.html",
+    "en_url": "https://taro.jetserg.top/en/cards/wands-king.html",
+    "x_default": "https://taro.jetserg.top/cards/wands-king.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/wands-knight.html",
+    "en_file": "en/cards/wands-knight.html",
+    "ru_url": "https://taro.jetserg.top/cards/wands-knight.html",
+    "en_url": "https://taro.jetserg.top/en/cards/wands-knight.html",
+    "x_default": "https://taro.jetserg.top/cards/wands-knight.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/wands-nine.html",
+    "en_file": "en/cards/wands-nine.html",
+    "ru_url": "https://taro.jetserg.top/cards/wands-nine.html",
+    "en_url": "https://taro.jetserg.top/en/cards/wands-nine.html",
+    "x_default": "https://taro.jetserg.top/cards/wands-nine.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/wands-page.html",
+    "en_file": "en/cards/wands-page.html",
+    "ru_url": "https://taro.jetserg.top/cards/wands-page.html",
+    "en_url": "https://taro.jetserg.top/en/cards/wands-page.html",
+    "x_default": "https://taro.jetserg.top/cards/wands-page.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/wands-queen.html",
+    "en_file": "en/cards/wands-queen.html",
+    "ru_url": "https://taro.jetserg.top/cards/wands-queen.html",
+    "en_url": "https://taro.jetserg.top/en/cards/wands-queen.html",
+    "x_default": "https://taro.jetserg.top/cards/wands-queen.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/wands-seven.html",
+    "en_file": "en/cards/wands-seven.html",
+    "ru_url": "https://taro.jetserg.top/cards/wands-seven.html",
+    "en_url": "https://taro.jetserg.top/en/cards/wands-seven.html",
+    "x_default": "https://taro.jetserg.top/cards/wands-seven.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/wands-six.html",
+    "en_file": "en/cards/wands-six.html",
+    "ru_url": "https://taro.jetserg.top/cards/wands-six.html",
+    "en_url": "https://taro.jetserg.top/en/cards/wands-six.html",
+    "x_default": "https://taro.jetserg.top/cards/wands-six.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/wands-ten.html",
+    "en_file": "en/cards/wands-ten.html",
+    "ru_url": "https://taro.jetserg.top/cards/wands-ten.html",
+    "en_url": "https://taro.jetserg.top/en/cards/wands-ten.html",
+    "x_default": "https://taro.jetserg.top/cards/wands-ten.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/wands-three.html",
+    "en_file": "en/cards/wands-three.html",
+    "ru_url": "https://taro.jetserg.top/cards/wands-three.html",
+    "en_url": "https://taro.jetserg.top/en/cards/wands-three.html",
+    "x_default": "https://taro.jetserg.top/cards/wands-three.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/wands-two.html",
+    "en_file": "en/cards/wands-two.html",
+    "ru_url": "https://taro.jetserg.top/cards/wands-two.html",
+    "en_url": "https://taro.jetserg.top/en/cards/wands-two.html",
+    "x_default": "https://taro.jetserg.top/cards/wands-two.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/zhrefca.html",
+    "en_file": "en/cards/zhrefca.html",
+    "ru_url": "https://taro.jetserg.top/cards/zhrefca.html",
+    "en_url": "https://taro.jetserg.top/en/cards/zhrefca.html",
+    "x_default": "https://taro.jetserg.top/cards/zhrefca.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "cards/zvezda.html",
+    "en_file": "en/cards/zvezda.html",
+    "ru_url": "https://taro.jetserg.top/cards/zvezda.html",
+    "en_url": "https://taro.jetserg.top/en/cards/zvezda.html",
+    "x_default": "https://taro.jetserg.top/cards/zvezda.html",
+    "status": "planned"
+  },
+  {
+    "ru_file": "index.html",
+    "en_file": "en/index.html",
+    "ru_url": "https://taro.jetserg.top/",
+    "en_url": "https://taro.jetserg.top/en/",
+    "x_default": "https://taro.jetserg.top/",
+    "status": "planned"
+  },
+  {
+    "ru_file": "lenormand/01-vsadnik/index.html",
+    "en_file": "en/lenormand/01-vsadnik/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/01-vsadnik/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/01-vsadnik/",
+    "x_default": "https://taro.jetserg.top/lenormand/01-vsadnik/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/02-klever/index.html",
+    "en_file": "en/lenormand/02-klever/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/02-klever/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/02-klever/",
+    "x_default": "https://taro.jetserg.top/lenormand/02-klever/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/03-korabl/index.html",
+    "en_file": "en/lenormand/03-korabl/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/03-korabl/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/03-korabl/",
+    "x_default": "https://taro.jetserg.top/lenormand/03-korabl/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/04-dom/index.html",
+    "en_file": "en/lenormand/04-dom/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/04-dom/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/04-dom/",
+    "x_default": "https://taro.jetserg.top/lenormand/04-dom/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/05-derevo/index.html",
+    "en_file": "en/lenormand/05-derevo/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/05-derevo/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/05-derevo/",
+    "x_default": "https://taro.jetserg.top/lenormand/05-derevo/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/06-tuchi/index.html",
+    "en_file": "en/lenormand/06-tuchi/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/06-tuchi/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/06-tuchi/",
+    "x_default": "https://taro.jetserg.top/lenormand/06-tuchi/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/07-zmeya/index.html",
+    "en_file": "en/lenormand/07-zmeya/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/07-zmeya/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/07-zmeya/",
+    "x_default": "https://taro.jetserg.top/lenormand/07-zmeya/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/08-grob/index.html",
+    "en_file": "en/lenormand/08-grob/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/08-grob/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/08-grob/",
+    "x_default": "https://taro.jetserg.top/lenormand/08-grob/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/09-buket/index.html",
+    "en_file": "en/lenormand/09-buket/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/09-buket/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/09-buket/",
+    "x_default": "https://taro.jetserg.top/lenormand/09-buket/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/10-kosa/index.html",
+    "en_file": "en/lenormand/10-kosa/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/10-kosa/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/10-kosa/",
+    "x_default": "https://taro.jetserg.top/lenormand/10-kosa/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/11-metla/index.html",
+    "en_file": "en/lenormand/11-metla/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/11-metla/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/11-metla/",
+    "x_default": "https://taro.jetserg.top/lenormand/11-metla/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/12-sovy/index.html",
+    "en_file": "en/lenormand/12-sovy/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/12-sovy/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/12-sovy/",
+    "x_default": "https://taro.jetserg.top/lenormand/12-sovy/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/13-rebenok/index.html",
+    "en_file": "en/lenormand/13-rebenok/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/13-rebenok/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/13-rebenok/",
+    "x_default": "https://taro.jetserg.top/lenormand/13-rebenok/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/14-lisa/index.html",
+    "en_file": "en/lenormand/14-lisa/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/14-lisa/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/14-lisa/",
+    "x_default": "https://taro.jetserg.top/lenormand/14-lisa/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/15-medved/index.html",
+    "en_file": "en/lenormand/15-medved/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/15-medved/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/15-medved/",
+    "x_default": "https://taro.jetserg.top/lenormand/15-medved/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/16-zvezda/index.html",
+    "en_file": "en/lenormand/16-zvezda/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/16-zvezda/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/16-zvezda/",
+    "x_default": "https://taro.jetserg.top/lenormand/16-zvezda/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/17-aist/index.html",
+    "en_file": "en/lenormand/17-aist/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/17-aist/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/17-aist/",
+    "x_default": "https://taro.jetserg.top/lenormand/17-aist/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/18-sobaka/index.html",
+    "en_file": "en/lenormand/18-sobaka/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/18-sobaka/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/18-sobaka/",
+    "x_default": "https://taro.jetserg.top/lenormand/18-sobaka/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/19-bashnya/index.html",
+    "en_file": "en/lenormand/19-bashnya/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/19-bashnya/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/19-bashnya/",
+    "x_default": "https://taro.jetserg.top/lenormand/19-bashnya/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/20-sad/index.html",
+    "en_file": "en/lenormand/20-sad/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/20-sad/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/20-sad/",
+    "x_default": "https://taro.jetserg.top/lenormand/20-sad/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/21-gora/index.html",
+    "en_file": "en/lenormand/21-gora/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/21-gora/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/21-gora/",
+    "x_default": "https://taro.jetserg.top/lenormand/21-gora/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/22-razvilka/index.html",
+    "en_file": "en/lenormand/22-razvilka/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/22-razvilka/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/22-razvilka/",
+    "x_default": "https://taro.jetserg.top/lenormand/22-razvilka/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/23-mishi/index.html",
+    "en_file": "en/lenormand/23-mishi/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/23-mishi/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/23-mishi/",
+    "x_default": "https://taro.jetserg.top/lenormand/23-mishi/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/24-serdce/index.html",
+    "en_file": "en/lenormand/24-serdce/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/24-serdce/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/24-serdce/",
+    "x_default": "https://taro.jetserg.top/lenormand/24-serdce/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/25-kolco/index.html",
+    "en_file": "en/lenormand/25-kolco/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/25-kolco/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/25-kolco/",
+    "x_default": "https://taro.jetserg.top/lenormand/25-kolco/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/26-kniga/index.html",
+    "en_file": "en/lenormand/26-kniga/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/26-kniga/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/26-kniga/",
+    "x_default": "https://taro.jetserg.top/lenormand/26-kniga/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/27-pismo/index.html",
+    "en_file": "en/lenormand/27-pismo/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/27-pismo/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/27-pismo/",
+    "x_default": "https://taro.jetserg.top/lenormand/27-pismo/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/28-muzhchina/index.html",
+    "en_file": "en/lenormand/28-muzhchina/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/28-muzhchina/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/28-muzhchina/",
+    "x_default": "https://taro.jetserg.top/lenormand/28-muzhchina/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/29-zhenshina/index.html",
+    "en_file": "en/lenormand/29-zhenshina/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/29-zhenshina/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/29-zhenshina/",
+    "x_default": "https://taro.jetserg.top/lenormand/29-zhenshina/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/30-lilii/index.html",
+    "en_file": "en/lenormand/30-lilii/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/30-lilii/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/30-lilii/",
+    "x_default": "https://taro.jetserg.top/lenormand/30-lilii/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/31-solnce/index.html",
+    "en_file": "en/lenormand/31-solnce/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/31-solnce/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/31-solnce/",
+    "x_default": "https://taro.jetserg.top/lenormand/31-solnce/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/32-luna/index.html",
+    "en_file": "en/lenormand/32-luna/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/32-luna/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/32-luna/",
+    "x_default": "https://taro.jetserg.top/lenormand/32-luna/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/33-klyuch/index.html",
+    "en_file": "en/lenormand/33-klyuch/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/33-klyuch/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/33-klyuch/",
+    "x_default": "https://taro.jetserg.top/lenormand/33-klyuch/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/34-ryby/index.html",
+    "en_file": "en/lenormand/34-ryby/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/34-ryby/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/34-ryby/",
+    "x_default": "https://taro.jetserg.top/lenormand/34-ryby/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/35-yakor/index.html",
+    "en_file": "en/lenormand/35-yakor/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/35-yakor/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/35-yakor/",
+    "x_default": "https://taro.jetserg.top/lenormand/35-yakor/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/36-krest/index.html",
+    "en_file": "en/lenormand/36-krest/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/36-krest/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/36-krest/",
+    "x_default": "https://taro.jetserg.top/lenormand/36-krest/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/guide.html",
+    "en_file": "en/lenormand/guide.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/guide.html",
+    "en_url": "https://taro.jetserg.top/en/lenormand/guide.html",
+    "x_default": "https://taro.jetserg.top/lenormand/guide.html",
+    "status": "ready"
+  },
+  {
+    "ru_file": "lenormand/index.html",
+    "en_file": "en/lenormand/index.html",
+    "ru_url": "https://taro.jetserg.top/lenormand/",
+    "en_url": "https://taro.jetserg.top/en/lenormand/",
+    "x_default": "https://taro.jetserg.top/lenormand/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "numerology/index.html",
+    "en_file": "en/numerology/index.html",
+    "ru_url": "https://taro.jetserg.top/numerology/",
+    "en_url": "https://taro.jetserg.top/en/numerology/",
+    "x_default": "https://taro.jetserg.top/numerology/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/algiz/index.html",
+    "en_file": "en/runes/algiz/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/algiz/",
+    "en_url": "https://taro.jetserg.top/en/runes/algiz/",
+    "x_default": "https://taro.jetserg.top/runes/algiz/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/ansuz/index.html",
+    "en_file": "en/runes/ansuz/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/ansuz/",
+    "en_url": "https://taro.jetserg.top/en/runes/ansuz/",
+    "x_default": "https://taro.jetserg.top/runes/ansuz/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/berkano/index.html",
+    "en_file": "en/runes/berkano/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/berkano/",
+    "en_url": "https://taro.jetserg.top/en/runes/berkano/",
+    "x_default": "https://taro.jetserg.top/runes/berkano/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/dagaz/index.html",
+    "en_file": "en/runes/dagaz/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/dagaz/",
+    "en_url": "https://taro.jetserg.top/en/runes/dagaz/",
+    "x_default": "https://taro.jetserg.top/runes/dagaz/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/ehwaz/index.html",
+    "en_file": "en/runes/ehwaz/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/ehwaz/",
+    "en_url": "https://taro.jetserg.top/en/runes/ehwaz/",
+    "x_default": "https://taro.jetserg.top/runes/ehwaz/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/eihwaz/index.html",
+    "en_file": "en/runes/eihwaz/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/eihwaz/",
+    "en_url": "https://taro.jetserg.top/en/runes/eihwaz/",
+    "x_default": "https://taro.jetserg.top/runes/eihwaz/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/fehu/index.html",
+    "en_file": "en/runes/fehu/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/fehu/",
+    "en_url": "https://taro.jetserg.top/en/runes/fehu/",
+    "x_default": "https://taro.jetserg.top/runes/fehu/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/gebo/index.html",
+    "en_file": "en/runes/gebo/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/gebo/",
+    "en_url": "https://taro.jetserg.top/en/runes/gebo/",
+    "x_default": "https://taro.jetserg.top/runes/gebo/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/hagalaz/index.html",
+    "en_file": "en/runes/hagalaz/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/hagalaz/",
+    "en_url": "https://taro.jetserg.top/en/runes/hagalaz/",
+    "x_default": "https://taro.jetserg.top/runes/hagalaz/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/index.html",
+    "en_file": "en/runes/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/",
+    "en_url": "https://taro.jetserg.top/en/runes/",
+    "x_default": "https://taro.jetserg.top/runes/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/ingwaz/index.html",
+    "en_file": "en/runes/ingwaz/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/ingwaz/",
+    "en_url": "https://taro.jetserg.top/en/runes/ingwaz/",
+    "x_default": "https://taro.jetserg.top/runes/ingwaz/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/isa/index.html",
+    "en_file": "en/runes/isa/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/isa/",
+    "en_url": "https://taro.jetserg.top/en/runes/isa/",
+    "x_default": "https://taro.jetserg.top/runes/isa/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/jera/index.html",
+    "en_file": "en/runes/jera/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/jera/",
+    "en_url": "https://taro.jetserg.top/en/runes/jera/",
+    "x_default": "https://taro.jetserg.top/runes/jera/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/kenaz/index.html",
+    "en_file": "en/runes/kenaz/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/kenaz/",
+    "en_url": "https://taro.jetserg.top/en/runes/kenaz/",
+    "x_default": "https://taro.jetserg.top/runes/kenaz/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/laguz/index.html",
+    "en_file": "en/runes/laguz/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/laguz/",
+    "en_url": "https://taro.jetserg.top/en/runes/laguz/",
+    "x_default": "https://taro.jetserg.top/runes/laguz/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/mannaz/index.html",
+    "en_file": "en/runes/mannaz/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/mannaz/",
+    "en_url": "https://taro.jetserg.top/en/runes/mannaz/",
+    "x_default": "https://taro.jetserg.top/runes/mannaz/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/nauthiz/index.html",
+    "en_file": "en/runes/nauthiz/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/nauthiz/",
+    "en_url": "https://taro.jetserg.top/en/runes/nauthiz/",
+    "x_default": "https://taro.jetserg.top/runes/nauthiz/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/othala/index.html",
+    "en_file": "en/runes/othala/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/othala/",
+    "en_url": "https://taro.jetserg.top/en/runes/othala/",
+    "x_default": "https://taro.jetserg.top/runes/othala/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/perthro/index.html",
+    "en_file": "en/runes/perthro/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/perthro/",
+    "en_url": "https://taro.jetserg.top/en/runes/perthro/",
+    "x_default": "https://taro.jetserg.top/runes/perthro/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/raidho/index.html",
+    "en_file": "en/runes/raidho/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/raidho/",
+    "en_url": "https://taro.jetserg.top/en/runes/raidho/",
+    "x_default": "https://taro.jetserg.top/runes/raidho/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/rasclady/index.html",
+    "en_file": "en/runes/rasclady/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/rasclady/",
+    "en_url": "https://taro.jetserg.top/en/runes/rasclady/",
+    "x_default": "https://taro.jetserg.top/runes/rasclady/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/sowilo/index.html",
+    "en_file": "en/runes/sowilo/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/sowilo/",
+    "en_url": "https://taro.jetserg.top/en/runes/sowilo/",
+    "x_default": "https://taro.jetserg.top/runes/sowilo/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/staves.html",
+    "en_file": "en/runes/staves.html",
+    "ru_url": "https://taro.jetserg.top/runes/staves.html",
+    "en_url": "https://taro.jetserg.top/en/runes/staves.html",
+    "x_default": "https://taro.jetserg.top/runes/staves.html",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/thurisaz/index.html",
+    "en_file": "en/runes/thurisaz/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/thurisaz/",
+    "en_url": "https://taro.jetserg.top/en/runes/thurisaz/",
+    "x_default": "https://taro.jetserg.top/runes/thurisaz/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/tiwaz/index.html",
+    "en_file": "en/runes/tiwaz/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/tiwaz/",
+    "en_url": "https://taro.jetserg.top/en/runes/tiwaz/",
+    "x_default": "https://taro.jetserg.top/runes/tiwaz/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/uruz/index.html",
+    "en_file": "en/runes/uruz/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/uruz/",
+    "en_url": "https://taro.jetserg.top/en/runes/uruz/",
+    "x_default": "https://taro.jetserg.top/runes/uruz/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "runes/wunjo/index.html",
+    "en_file": "en/runes/wunjo/index.html",
+    "ru_url": "https://taro.jetserg.top/runes/wunjo/",
+    "en_url": "https://taro.jetserg.top/en/runes/wunjo/",
+    "x_default": "https://taro.jetserg.top/runes/wunjo/",
+    "status": "ready"
+  },
+  {
+    "ru_file": "spreads.html",
+    "en_file": "en/spreads.html",
+    "ru_url": "https://taro.jetserg.top/spreads.html",
+    "en_url": "https://taro.jetserg.top/en/spreads.html",
+    "x_default": "https://taro.jetserg.top/spreads.html",
+    "status": "planned"
+  }
+]
