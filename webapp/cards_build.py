@@ -583,8 +583,8 @@ def document(title: str, description: str, url: str, body: str, article: bool, o
 <meta property="og:type" content="{'article' if article else 'website'}">
 <meta property="og:url" content="{escape(url, quote=True)}">
 {f'<meta property="og:image" content="{SITE}/img/cards/{escape(og_img, quote=True)}">' if og_img else ''}
-<link rel="stylesheet" href="../css/style.css?v=4.0">
-<link rel="stylesheet" href="../css/astrology.css?v=4.0">
+<link rel="stylesheet" href="../css/style.css?v=5.0">
+<link rel="stylesheet" href="../css/astrology.css?v=5.0">
 <style>{STYLE}</style>
 <script type="application/ld+json">
 {schema}

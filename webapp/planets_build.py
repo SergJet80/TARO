@@ -138,7 +138,7 @@ DISCLAIMER_INDEX = ("Прозерпина — гипотетическая эз�
                     "однако в традиционной астрологии их условно объединяют с планетами как значимые факторы карты. "
                     "Описания носят символический характер и не являются научным объяснением личности или судьбы.")
 
-V = "?v=4.0"
+V = "?v=5.0"
 
 def cards_html(current_slug):
     out = []
@@ -180,6 +180,7 @@ INDEX_TMPL = """<!DOCTYPE html>
     <a href="../../lenormand/index.html"><span class="mn-icon">🂠</span> Ленорман</a>
     <a href="../../runes/index.html"><span class="mn-icon">ᚠ</span> Руны</a>
     <a href="../../numerology/index.html"><span class="mn-icon">❿</span> Нумерология</a>
+    <a href="../../eclipse/index.html"><span class="mn-icon">🌒</span> Затмение</a>
   </div>
 </nav>
 
@@ -238,6 +239,7 @@ PAGE_TMPL = """<!DOCTYPE html>
     <a href="../../../lenormand/index.html"><span class="mn-icon">🂠</span> Ленорман</a>
     <a href="../../../runes/index.html"><span class="mn-icon">ᚠ</span> Руны</a>
     <a href="../../../numerology/index.html"><span class="mn-icon">❿</span> Нумерология</a>
+    <a href="../../../eclipse/index.html"><span class="mn-icon">🌒</span> Затмение</a>
   </div>
 </nav>
 

@@ -13,7 +13,7 @@ import re
 
 WEBAPP = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(WEBAPP, 'data', 'numerology.json')
-CSS_V = '4.0'
+CSS_V = '5.0'
 
 with open(DATA, encoding='utf-8') as f:
     SRC = json.load(f)
@@ -205,6 +205,7 @@ def build_index():
     <a href="{'../'}runes/index.html"><span class="mn-icon">ᚠ</span> Руны</a>
     <a href="{'../'}lenormand/index.html"><span class="mn-icon">🂠</span> Ленорман</a>
     <a href="{'../'}numerology/index.html" class="mn-active"><span class="mn-icon">❿</span> Нумерология</a>
+    <a href="{'../'}eclipse/index.html" class="mn-active"><span class="mn-icon">🌒</span> Затмение</a>
   <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> О проекте</a>
   </div>
 </nav>

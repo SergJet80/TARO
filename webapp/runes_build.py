@@ -13,7 +13,7 @@ import re
 
 WEBAPP = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(WEBAPP, 'data', 'runes.json')
-CSS_V = '4.0'
+CSS_V = '5.0'
 
 with open(DATA, encoding='utf-8') as f:
     SRC = json.load(f)
@@ -93,6 +93,7 @@ def shell(title, desc, css_prefix, nav_prefix, active, body):
     <a href="{nav_prefix}lenormand/index.html"><span class="mn-icon">🂠</span> Ленорман</a>
     <a href="{nav_prefix}runes/index.html"{' class="mn-active"' if active == 'runes' else ''}><span class="mn-icon">ᚠ</span> Руны</a>
     <a href="{nav_prefix}numerology/index.html"><span class="mn-icon">❿</span> Нумерология</a>
+    <a href="{nav_prefix}eclipse/index.html"><span class="mn-icon">🌒</span> Затмение</a>
   <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> О проекте</a>
   </div>
 </nav>

@@ -7,7 +7,7 @@
 import os
 
 BASE = os.path.dirname(os.path.abspath(__file__))
-ASSET_VERSION = "4.0"
+ASSET_VERSION = "5.0"
 
 # ─── Данные знаков ───
 # slug, имя, символ, подпись для карточки, 9 текстовых блоков
@@ -188,6 +188,7 @@ def nav(root, active):
     <a href="{root}lenormand/index.html"><span class="mn-icon">🂠</span> Ленорман</a>
     <a href="{root}runes/index.html"><span class="mn-icon">ᚠ</span> Руны</a>
     <a href="{root}numerology/index.html"><span class="mn-icon">❿</span> Нумерология</a>
+    <a href="{root}eclipse/index.html"><span class="mn-icon">🌒</span> Затмение</a>
   <a href="#" class="mn-about" id="aboutBtn"><span class="mn-icon">✧</span> О проекте</a>
   </div>
 </nav>

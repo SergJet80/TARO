@@ -1543,6 +1543,11 @@
       "id": "305",
       "ru": "Есть вопросы, предложения о сотрудничестве или хотите разместить рекламу? Пишите — я отвечаю лично:",
       "en": "Questions, collaboration ideas or advertising enquiries? Write to me — I reply personally:"
+    },
+    {
+      "id": "306",
+      "ru": "Затмение",
+      "en": "Eclipse"
     }
   ]
 }

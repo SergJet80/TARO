@@ -19,7 +19,7 @@ OUT = ROOT / "lenormand"
 DATA = Path(__file__).parent / "data" / "lenormand.json"
 SITE = "https://taro.jetserg.top"
 CSS_V = "1.5"   # lenormand.css (в whitelist чекера)
-SITE_V = "4.0"  # общий style.css
+SITE_V = "5.0"  # общий style.css
 
 # Иконки сфер — порядок фиксирован (единый для всех карт).
 SPHERE_ICONS = {
@@ -75,6 +75,7 @@ def nav(rel: str, active: str) -> str:
         ("ᚠ", "Руны", f"{rel}runes/index.html", "runes"),
         ("🂠", "Ленорман", f"{rel}lenormand/index.html", "lenormand"),
         ("❿", "Нумерология", f"{rel}numerology/index.html", "numerology"),
+        ("🌒", "Затмение", f"{rel}eclipse/index.html", "eclipse"),
     ]
     rows = []
     for icon, label, href, key in items:

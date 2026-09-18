@@ -268,7 +268,7 @@ def build_main(cards: list[dict], roman: dict[str, dict], ui: dict) -> None:
     html = html.replace('</head>', seo_block(ui) + '\n</head>', 1)
     html = html.replace('href="fonts/', 'href="../../fonts/')
     html = html.replace('href="css/', 'href="../../css/')
-    for section in ("lenormand", "astrology", "runes", "numerology", "cards"):
+    for section in ("lenormand", "astrology", "runes", "numerology", "cards", "eclipse"):
         html = html.replace(f'href="{section}/', f'href="../{section}/')
     # EN spreads.html пока не переведён (planned) — ведём на RU-атлас
     html = html.replace('href="spreads.html"', 'href="../../spreads.html"')  # webapp/spreads.html (RU-атлас)
@@ -277,6 +277,8 @@ def build_main(cards: list[dict], roman: dict[str, dict], ui: dict) -> None:
     html = html.replace('aria-label="Switch to English"', 'aria-label="Switch to Russian"')
     html = html.replace('hreflang="en" lang="en"', 'hreflang="ru" lang="ru"')
     html = html.replace('>EN | RU<', '>RU | EN<')
+    # EN-версии «Затмения» нет — ссылка на RU-раздел
+    html = html.replace('href="../eclipse/', 'href="../../eclipse/')
     html = html.replace('src="js/data.js', 'src="js/data.js')
     write_text(MAIN_OUT / "index.html", html)
 
