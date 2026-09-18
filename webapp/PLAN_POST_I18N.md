@@ -1,32 +1,26 @@
-# План финальной доводки после завершения EN-версии (один заход)
+# План финальной доводки после завершения EN-версии
 
-Когда все разделы переведены (руны ✓, нумерология, астрология, таро) и слиты — прогнать одним заходом:
+## Сделано (11.09.2026)
+- [x] Ленорман EN ✓, Руны+ставы ✓, Нумерология ✓, Астрология ✓, Таро SPA+78 карт ✓
+- [x] Spreads (Атлас раскладов) EN задеплоен: en/spreads.html, 47 раскладов, routes → ready
+- [x] Переключатели EN | RU на всех 79 RU cards-страницах (→ ../en/cards/<файл>)
+- [x] hreflang ru/en/x-default на всех 158 cards-страницах (RU+EN)
+- [x] Версия ассетов 5.0 (?v=5.0 везде, check_site ASSET_VERSION=5.0, update_nav CSS_V=5.0)
+- [x] Чекеры обновлены: check_i18n (95 ready, spreads, strip-i18n сравнение), check_tarot_i18n (text_digest strip), regen_baseline
+- [x] Офлайн-архив tarot-guide-v5.0.zip (783 файла) — на VPS /home/serg/, отдан Сержу
+- [x] Ревизия места: почищены кэши uv/pip/electron/node-gyp, старые архивы (v4.2, task-зипы), i18n_audit/audit2, taro-en-review, crops. 8.8G → 8.2G
 
-## 1. Терминология "esoteric" (EN-версия)
-- 87 вхождений на 34 страницах EN (данные: grep 'esoteric' en/).
-- Правило: "esoteric" оставлять ТОЛЬКО в обозначениях традиций
-  ("Western esotericism", "Eastern European esoteric tradition" — сноски не трогать).
-- В текстах про практику/школы заменить на: "spiritual practice",
-  "modern spiritual schools", "contemporary practice".
-- Промт для GPT (уже передан): в новых разделах использовать
-  "spiritual practice / modern spiritual schools" для практики,
-  "esoteric" — только для традиций.
-
-## 2. Донаты (когда Серж даст ссылки)
-- Ko-fi удалён со всех 65 EN-страниц (был заглушкой).
-- Добавить PayPal + Patreon в футер и модалку About:
-  EN-версии и RU-версии. Места: *_build.py (RU) + данные i18n (EN).
-- Порядок в EN: Patreon, PayPal, Donatello (UA-friendly), Privat24 (UA-friendly).
-
-## 3. Мелочи по EN (копить по ходу)
-- "About the project" -> "About" в навигации EN (унификация с RU «О проекте»?)
-- Проверить спорные места из отчётов GPT (PILOT_REPORT раздел 5,
-  FINAL_REPORT раздел 5): Ship "disruption", Sun significator,
-  Крест-сочетания, Клевер+Крест, "Station for Two".
+## На потом
+- [ ] Раздел Кабала (новый раздел сайта)
+- [ ] Телеграм-бот (первым, до Кабалы)
+- [ ] Терминология "esoteric" ревизия по PLAN_POST_I18N п.1 (87 вхождений, уже частично по правилу)
+- [ ] Донаты: PayPal + Patreon в EN/RU футеры и модалку About (когда Серж даст ссылки)
+- [ ] Мелочи EN: "About the project" → "About"? Спорные места из отчётов GPT
 
 ## Статус разделов EN
 - [x] Ленорман (принят)
-- [x] Руны + ставы (принят, слит на прод 09.09.2026)
-- [ ] Нумерология (GPT в работе)
-- [ ] Астрология
-- [ ] Таро (последним: главная SPA, каталог, 78 карт)
+- [x] Руны + ставы (принят)
+- [x] Нумерология ✓
+- [x] Астрология ✓
+- [x] Таро ✓
+- [x] Spreads ✓
