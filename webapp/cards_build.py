@@ -583,8 +583,8 @@ def document(title: str, description: str, url: str, body: str, article: bool, o
 <meta property="og:type" content="{'article' if article else 'website'}">
 <meta property="og:url" content="{escape(url, quote=True)}">
 {f'<meta property="og:image" content="{SITE}/img/cards/{escape(og_img, quote=True)}">' if og_img else ''}
-<link rel="stylesheet" href="../css/style.css?v=5.0">
-<link rel="stylesheet" href="../css/astrology.css?v=5.0">
+<link rel="stylesheet" href="../css/style.css?v=5.1">
+<link rel="stylesheet" href="../css/astrology.css?v=5.1">
 <style>{STYLE}</style>
 <script type="application/ld+json">
 {schema}
@@ -610,7 +610,7 @@ def document(title: str, description: str, url: str, body: str, article: bool, o
 <div class="footer-contact">
   <p class="fc-lead">По всем вопросам, предложениям о сотрудничестве и рекламе — пишите, я отвечаю лично:</p>
   <div class="fc-links">
-    <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+    <a href="https://t.me/taro_spravochnik" target="_blank" rel="noopener">📢 Канал: @taro_spravochnik</a> <span aria-hidden="true">·</span> <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
     <span class="fc-sep" aria-hidden="true">·</span>
     <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
     <script>
@@ -643,7 +643,7 @@ def document(title: str, description: str, url: str, body: str, article: bool, o
     </div>
     <p class="about-contact">Есть вопросы, предложения о сотрудничестве или хотите разместить рекламу? Пишите — я отвечаю лично:</p>
     <div class="about-links">
-      <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+      <a href="https://t.me/taro_spravochnik" target="_blank" rel="noopener">📢 Канал: @taro_spravochnik</a> <span aria-hidden="true">·</span> <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
       <span aria-hidden="true">·</span>
       <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
     <script>

@@ -250,7 +250,7 @@ def build_index():
 <div class="footer-contact">
   <p class="fc-lead">По всем вопросам, предложениям о сотрудничестве и рекламе — пишите, я отвечаю лично:</p>
   <div class="fc-links">
-    <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+    <a href="https://t.me/taro_spravochnik" target="_blank" rel="noopener">📢 Канал: @taro_spravochnik</a> <span aria-hidden="true">·</span> <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
     <span class="fc-sep" aria-hidden="true">·</span>
     <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
     <script>
@@ -283,7 +283,7 @@ def build_index():
     </div>
     <p class="about-contact">Есть вопросы, предложения о сотрудничестве или хотите разместить рекламу? Пишите — я отвечаю лично:</p>
     <div class="about-links">
-      <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+      <a href="https://t.me/taro_spravochnik" target="_blank" rel="noopener">📢 Канал: @taro_spravochnik</a> <span aria-hidden="true">·</span> <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
       <span aria-hidden="true">·</span>
       <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
     <script>
@@ -376,7 +376,7 @@ def build_sign(idx, slug, name, sym, sub, blocks):
 <div class="footer-contact">
   <p class="fc-lead">По всем вопросам, предложениям о сотрудничестве и рекламе — пишите, я отвечаю лично:</p>
   <div class="fc-links">
-    <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+    <a href="https://t.me/taro_spravochnik" target="_blank" rel="noopener">📢 Канал: @taro_spravochnik</a> <span aria-hidden="true">·</span> <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
     <span class="fc-sep" aria-hidden="true">·</span>
     <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
     <script>
@@ -409,7 +409,7 @@ def build_sign(idx, slug, name, sym, sub, blocks):
     </div>
     <p class="about-contact">Есть вопросы, предложения о сотрудничестве или хотите разместить рекламу? Пишите — я отвечаю лично:</p>
     <div class="about-links">
-      <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
+      <a href="https://t.me/taro_spravochnik" target="_blank" rel="noopener">📢 Канал: @taro_spravochnik</a> <span aria-hidden="true">·</span> <a href="https://t.me/JetGres" target="_blank" rel="noopener">Telegram: @JetGres</a>
       <span aria-hidden="true">·</span>
       <a href="#" class="email-link" data-u="jetjarret" data-d="gmail.com">E-mail: jetjarret@gmail.com</a>
     <script>

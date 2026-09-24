@@ -734,3 +734,15 @@ body {
   .mn-about { margin-left: 0; }
   .about-donate { flex-direction: column; }
 }
+
+
+/* Telegram-канал баннер (в стиле .wheel-banner) */
+.tg-banner{display:flex;align-items:center;gap:14px;margin:18px auto 8px;padding:14px 18px;
+  max-width:760px;border:1px solid var(--gold);border-radius:12px;text-decoration:none;
+  background:rgba(255,215,130,.05);transition:background .2s}
+.tg-banner:hover{background:rgba(255,215,130,.12)}
+.tg-banner .wb-icon{font-size:1.6em}
+.tg-banner .wb-text{color:var(--text-dim);line-height:1.4;flex:1;text-align:left}
+.tg-banner .wb-text strong{color:var(--gold)}
+.tg-banner .wb-arrow{color:var(--gold);font-size:1.4em}
+@media (max-width:600px){.tg-banner{flex-direction:column;text-align:center}}
