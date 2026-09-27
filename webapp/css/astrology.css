@@ -245,8 +245,9 @@
 .tg-banner.wb-photo {
   display: block;
   width: 100%;
-  max-width: 760px;
+  max-width: 680px;
   padding: 0;
+  margin: 0 auto 12px;
   background: transparent;
   border: none;
 }
