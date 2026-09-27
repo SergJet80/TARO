@@ -240,3 +240,25 @@
   .signs-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .sign-name { font-size: 1.05rem; }
 }
+/* Банеры-картинки (wb-photo): ссылка-плашка целиком заменена изображением */
+.wheel-banner.wb-photo,
+.tg-banner.wb-photo {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+.wheel-banner.wb-photo img,
+.tg-banner.wb-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius, 12px);
+}
+.wheel-banner.wb-photo:hover,
+.tg-banner.wb-photo:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, .45), 0 0 20px rgba(212, 175, 55, .18);
+}
