@@ -261,6 +261,11 @@ def seo_block(ui: dict) -> str:
 def build_main(cards: list[dict], roman: dict[str, dict], ui: dict) -> None:
     html = (ROOT / "index.html").read_text(encoding="utf-8")
     html = apply_replacements(html, ui)
+    # TG-баннер в EN не включён — канал только на русском
+    html = re.sub(r'<a class="tg-banner[^>]*>.*?</a>\n', '', html, flags=re.S)
+    # Баннеры: EN-варианты картинок и глубина пути из en/taro/
+    html = html.replace('img/banners/banner-spreads.webp', '../../img/banners/banner-spreads-en.webp')
+    html = html.replace('img/banners/banner-eclipse.webp', '../../img/banners/banner-eclipse-en.webp')
     html = html.replace('<html lang="ru">', '<html lang="en">')
     html = re.sub(r"<title>.*?</title>", f'<title>{escape(ui["main"]["title"])}</title>', html, count=1)
     html = re.sub(r'<meta name="description" content="[^"]*">',
@@ -297,23 +302,10 @@ def build_main(cards: list[dict], roman: dict[str, dict], ui: dict) -> None:
     slug_declaration = re.search(r"const CARD_PAGE_SLUGS = \{.*?\};", app, re.S)
     if not slug_declaration:
         raise ValueError("Card-page slug table is missing from the Russian application")
-    app = app.replace(
-        "const COURT_ORDER = { page: 11, knight: 12, queen: 13, king: 14 };",
-        "const COURT_ORDER = { page: 11, knight: 12, queen: 13, king: 14 };\n\n" + slug_declaration.group(0),
-        1,
-    )
-    position_end = """  for (const [key, title, icon] of SECTION_META) {
-    html.push(`<div class=\"info-section\"><h3><span>${icon}</span> ${title}</h3><p>${p[key]}</p></div>`);
-  }
-  html.push(`<div class=\"card-page-link\"><a href=\"/en/cards/${CARD_PAGE_SLUGS[currentCard.id.replace('-', '')]}.html\" target=\"_blank\" rel=\"noopener\">${%s}${currentCard.name_ru}${%s}</a></div>`);
-  html.push(`</div>`);""" % (
-        json.dumps(ui["replacements"]["Подробнее о карте «"], ensure_ascii=False),
-        json.dumps(ui["replacements"]["» — отдельная страница →"], ensure_ascii=False),
-    )
-    app = app.replace("""  for (const [key, title, icon] of SECTION_META) {
-    html.push(`<div class=\"info-section\"><h3><span>${icon}</span> ${title}</h3><p>${p[key]}</p></div>`);
-  }
-  html.push(`</div>`);""", position_end, 1)
+    # CARD_PAGE_SLUGS объявлена глобально в RU-исходнике и наследуется как есть;
+    # ссылка на страницу карты в renderPosition переводится replacements + replace ниже.
+    if "card-page-link" not in app:
+        raise ValueError("Card-page link is missing from the Russian application")
     app = app.replace("let currentPos = 'upright';", "let currentPos = 'upright';\nlet lastFocusedCard = null;")
     app = app.replace("tile.addEventListener('click', () => openCard(c));", "tile.addEventListener('click', () => openCard(c, tile));")
     app = app.replace("function openCard(card) {", "function openCard(card, trigger) {\n  lastFocusedCard = trigger || document.activeElement;")

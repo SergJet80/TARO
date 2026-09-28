@@ -177,6 +177,8 @@ POSITION_SECTIONS = (
     ("love",      "❤", "Отношения"),
     ("health",    "🌿", "Здоровье"),
     ("esoteric",  "🔮", "Эзотерическое значение"),
+    ("card_day",  "🃏", "Карта дня"),
+    ("card_day_advice", "💡", "Совет карты"),
 )
 
 ROMAN_SECTIONS_FULL = (
@@ -221,7 +223,8 @@ def load_cards() -> list[dict]:
             for field in ("short", "keywords", "archetype"):
                 if position == "upright" or field != "keywords":
                     pass
-            for field in ("short", "archetype", "daily", "career", "love", "health", "esoteric"):
+            for field in ("short", "archetype", "daily", "career", "love", "health", "esoteric",
+                          "card_day", "card_day_advice"):
                 value = card[position].get(field)
                 if not isinstance(value, str) or not value.strip():
                     raise ValueError(f"{card['id']}: пустое поле {position}.{field}")
@@ -583,8 +586,8 @@ def document(title: str, description: str, url: str, body: str, article: bool, o
 <meta property="og:type" content="{'article' if article else 'website'}">
 <meta property="og:url" content="{escape(url, quote=True)}">
 {f'<meta property="og:image" content="{SITE}/img/cards/{escape(og_img, quote=True)}">' if og_img else ''}
-<link rel="stylesheet" href="../css/style.css?v=5.3">
-<link rel="stylesheet" href="../css/astrology.css?v=5.3">
+<link rel="stylesheet" href="../css/style.css?v=5.4">
+<link rel="stylesheet" href="../css/astrology.css?v=5.4">
 <style>{STYLE}</style>
 <script type="application/ld+json">
 {schema}

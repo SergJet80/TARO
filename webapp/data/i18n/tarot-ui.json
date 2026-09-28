@@ -35,7 +35,9 @@
     "career": "Work and career",
     "love": "Relationships",
     "health": "Health",
-    "esoteric": "Spiritual meaning"
+    "esoteric": "Spiritual meaning",
+    "card_day": "Card of the Day",
+    "card_day_advice": "Card’s Advice"
   },
   "roman_sections": {
     "Essence of the card": "Essence of the card",
@@ -144,6 +146,8 @@
     "Оракул «Затмение»": "The Eclipse Oracle",
     "новый раздел: 158 карт": "new section: 158 cards",
     "трактовки по сферам и 8 раскладов": "meanings by sphere and 8 spreads",
-    "магические": "magical"
+    "магические": "magical",
+    "Карта дня": "Card of the Day",
+    "Совет карты": "Card’s Advice"
   }
 }

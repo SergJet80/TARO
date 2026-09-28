@@ -13,6 +13,9 @@ const RANK_NUM = {
 };
 const COURT_ORDER = { page: 11, knight: 12, queen: 13, king: 14 };
 
+/* ─── Ссылка на статическую страницу карты (SEO) ─── */
+const CARD_PAGE_SLUGS = {major00:'durak',major01:'mag',major02:'zhrefca',major03:'imperatrica',major04:'imperator',major05:'ierofant',major06:'vlyublyonnye',major07:'kolesnica',major08:'sila',major09:'otshelnik',major10:'koleso-fortuny',major11:'spravedlivost',major12:'poveshennyj',major13:'smert',major14:'umerennost',major15:'dyavol',major16:'bashnya',major17:'zvezda',major18:'luna',major19:'solnce',major20:'sud',major21:'mir',wandsace:'wands-ace',wandstwo:'wands-two',wandsthree:'wands-three',wandsfour:'wands-four',wandsfive:'wands-five',wandssix:'wands-six',wandsseven:'wands-seven',wandseight:'wands-eight',wandsnine:'wands-nine',wandsten:'wands-ten',wandspage:'wands-page',wandsknight:'wands-knight',wandsqueen:'wands-queen',wandsking:'wands-king',cupsace:'cups-ace',cupstwo:'cups-two',cupsthree:'cups-three',cupsfour:'cups-four',cupsfive:'cups-five',cupssix:'cups-six',cupsseven:'cups-seven',cupseight:'cups-eight',cupsnine:'cups-nine',cupsten:'cups-ten',cupspage:'cups-page',cupsknight:'cups-knight',cupsqueen:'cups-queen',cupsking:'cups-king',swordsace:'swords-ace',swordstwo:'swords-two',swordsthree:'swords-three',swordsfour:'swords-four',swordsfive:'swords-five',swordssix:'swords-six',swordsseven:'swords-seven',swordseight:'swords-eight',swordsnine:'swords-nine',swordsten:'swords-ten',swordspage:'swords-page',swordsknight:'swords-knight',swordsqueen:'swords-queen',swordsking:'swords-king',pentaclesace:'pentacles-ace',pentaclestwo:'pentacles-two',pentaclesthree:'pentacles-three',pentaclesfour:'pentacles-four',pentaclesfive:'pentacles-five',pentaclessix:'pentacles-six',pentaclesseven:'pentacles-seven',pentacleseight:'pentacles-eight',pentaclesnine:'pentacles-nine',pentaclesten:'pentacles-ten',pentaclespage:'pentacles-page',pentaclesknight:'pentacles-knight',pentaclesqueen:'pentacles-queen',pentaclesking:'pentacles-king'};
+
 const SECTION_META = [
   ['archetype', 'Архетип и основное значение', '✧'],
   ['daily',     'В быту',                     '🏠'],
@@ -20,6 +23,8 @@ const SECTION_META = [
   ['love',      'Отношения',                  '❤'],
   ['health',    'Здоровье',                   '🌿'],
   ['esoteric',  'Эзотерическое значение',     '🔮'],
+  ['card_day',       'Карта дня',              '🃏'],
+  ['card_day_advice','Совет карты',            '💡'],
 ];
 
 const deck = document.getElementById('deck');
@@ -173,6 +178,10 @@ function renderPosition() {
   for (const [key, title, icon] of SECTION_META) {
     html.push(`<div class="info-section"><h3><span>${icon}</span> ${title}</h3><p>${p[key]}</p></div>`);
   }
+  const cardPage = CARD_PAGE_SLUGS[currentCard.id.replace('-','')];
+  if (cardPage) {
+    html.push(`<div class="card-page-link"><a href="/cards/${cardPage}.html" target="_blank" rel="noopener">Подробнее о карте «${currentCard.name_ru}» — отдельная страница →</a></div>`);
+  }
   html.push(`</div>`);
 
   document.getElementById('mContent').innerHTML = html.join('');
@@ -239,8 +248,7 @@ function renderRoman(card) {
     </details>`);
   }
 
-/* ─── Ссылка на статическую страницу карты (SEO) ─── */
-const CARD_PAGE_SLUGS = {major00:'durak',major01:'mag',major02:'zhrefca',major03:'imperatrica',major04:'imperator',major05:'ierofant',major06:'vlyublyonnye',major07:'kolesnica',major08:'sila',major09:'otshelnik',major10:'koleso-fortuny',major11:'spravedlivost',major12:'poveshennyj',major13:'smert',major14:'umerennost',major15:'dyavol',major16:'bashnya',major17:'zvezda',major18:'luna',major19:'solnce',major20:'sud',major21:'mir',wandsace:'wands-ace',wandstwo:'wands-two',wandsthree:'wands-three',wandsfour:'wands-four',wandsfive:'wands-five',wandssix:'wands-six',wandsseven:'wands-seven',wandseight:'wands-eight',wandsnine:'wands-nine',wandsten:'wands-ten',wandspage:'wands-page',wandsknight:'wands-knight',wandsqueen:'wands-queen',wandsking:'wands-king',cupsace:'cups-ace',cupstwo:'cups-two',cupsthree:'cups-three',cupsfour:'cups-four',cupsfive:'cups-five',cupssix:'cups-six',cupsseven:'cups-seven',cupseight:'cups-eight',cupsnine:'cups-nine',cupsten:'cups-ten',cupspage:'cups-page',cupsknight:'cups-knight',cupsqueen:'cups-queen',cupsking:'cups-king',swordsace:'swords-ace',swordstwo:'swords-two',swordsthree:'swords-three',swordsfour:'swords-four',swordsfive:'swords-five',swordssix:'swords-six',swordsseven:'swords-seven',swordseight:'swords-eight',swordsnine:'swords-nine',swordsten:'swords-ten',swordspage:'swords-page',swordsknight:'swords-knight',swordsqueen:'swords-queen',swordsking:'swords-king',pentaclesace:'pentacles-ace',pentaclestwo:'pentacles-two',pentaclesthree:'pentacles-three',pentaclesfour:'pentacles-four',pentaclesfive:'pentacles-five',pentaclessix:'pentacles-six',pentaclesseven:'pentacles-seven',pentacleseight:'pentacles-eight',pentaclesnine:'pentacles-nine',pentaclesten:'pentacles-ten',pentaclespage:'pentacles-page',pentaclesknight:'pentacles-knight',pentaclesqueen:'pentacles-queen',pentaclesking:'pentacles-king'};
+/* ─── Ссылка на статическую страницу карты (SEO): CARD_PAGE_SLUGS объявлена в шапке файла ─── */
 const cardPage = CARD_PAGE_SLUGS[currentCard.id.replace('-','')];
 if (cardPage) {
   html.push(`<div class="card-page-link"><a href="/cards/${cardPage}.html" target="_blank" rel="noopener">Подробнее о карте «${currentCard.name_ru}» — отдельная страница →</a></div>`);
